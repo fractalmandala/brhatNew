@@ -21,42 +21,46 @@ export async function brhatActionsSix(){
 }
 
 
-export async function BOLEssentials(){
+export async function BOLEssentials(limit:number){
 	const { data, error } = await supabase
 	.from('brhat-openlibrary')
 	.select()
 	.eq('Type','Essentials')
 	.order('id',{ascending: false})
+	.limit(limit)
 	if (error) throw new Error(error.message)
 	return data
 }
 
-export async function BOLBodhas(){
+export async function BOLBodhas(limit:number){
 	const { data, error } = await supabase
 	.from('brhat-openlibrary')
 	.select()
 	.eq('Type','Bodhas')
 	.order('id',{ascending: false})
+	.limit(limit)
 	if (error) throw new Error(error.message)
 	return data
 }
 
-export async function BOLIKS(){
+export async function BOLIKS(limit:number){
 	const { data, error } = await supabase
 	.from('brhat-openlibrary')
 	.select()
 	.eq('Type','IKS')
 	.order('id',{ascending: false})
+	.limit(limit)
 	if (error) throw new Error(error.message)
 	return data
 }
 
-export async function BOLROS(){
+export async function BOLROS(limit:number){
 	const { data, error } = await supabase
 	.from('brhat-openlibrary')
 	.select()
 	.eq('Type','Repository of Scripture')
 	.order('id',{ascending: false})
+	.limit(limit)
 	if (error) throw new Error(error.message)
 	return data
 }

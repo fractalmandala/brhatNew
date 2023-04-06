@@ -1,6 +1,7 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
+	import Lenis from '@studio-freight/lenis'
 	import { soaTales } from '$lib/utils/supapulls'
 	import { reveal } from 'svelte-reveal'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
@@ -9,6 +10,20 @@
 	let tales:string|any[]
 
 	onMount(async() => {
+		const lenis = new Lenis({
+			orientation: 'vertical',
+			duration: 1.0,
+			wheelMultiplier: 0.5,
+			infinite: false,
+			smoothWheel: true
+		})
+		lenis.on('scroll', (e: any) => {
+		})
+		function raf(time: any) {
+  		lenis.raf(time)
+  		requestAnimationFrame(raf)
+		}
+		requestAnimationFrame(raf)
 		tales = await soaTales()
 	})
 
@@ -87,15 +102,15 @@
 			<div class="gridof3">
 				<div class="card-c back" style="background-image: url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/midjourneyimages/chapter1/9.webp')">
 					<p>Chapter 1</p>
-					<h6>Kaśyapa's Lament</h6>
+					<h6><a href="/aryavarta/chapter/01" target="_self">Kaśyapa's Lament</a></h6>
 				</div>
 				<div class="card-c back" style="background-image: url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/midjourneyimages/chapter2/8.webp')">
 					<p>Chapter 2</p>
-					<h6>Sūta and Sudā</h6>
+					<h6><a href="/aryavarta/chapter/02" target="_self">Sūta and Sudā</a></h6>
 				</div>
 				<div class="card-c back" style="background-image: url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/midjourneyimages/nasadiya/2-4.webp')">
 					<p>Chapter 3</p>
-					<h6>Nasadīya Across Space and Time</h6>
+					<h6><a href="/aryavarta/chapter/03" target="_self">Nasadīya Across Space and Time</a></h6>
 				</div>
 			</div>
 		</div>
@@ -171,6 +186,9 @@
 			.card-c
 				height: 240px
 	@media screen and (max-width: 1023px)
+		.a-title
+			h4
+				padding-bottom: 128px
 		.gridof3
 			.card-c
 				height: 160px

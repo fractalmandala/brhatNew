@@ -29,10 +29,19 @@
 		<div class="spacer">
 			<DhitiLink></DhitiLink><br>
 			<OpenLibLink></OpenLibLink>
+			<BrhadMrdanga></BrhadMrdanga>
 		</div>
 		<div class="spacer">
 			<a class="mainlinks" href="/anveshi" target="_self">Bṛhat Anveṣī</a>
 			<AnveshiLinks></AnveshiLinks>
+		</div>
+		<div class="spacer">
+			<a class="mainlinks" href="/aryavarta" target="_self">Scrolls of Āryavarta</a>
+			<AryavartaLinks></AryavartaLinks>
+		</div>
+		<div class="spacer">
+			<a class="mainlinks" href="/mandala" target="_self">Fractal Maṇḍala</a>
+			<MandalaLinks></MandalaLinks>
 		</div>
 	</div>
 	<div class="footerbot"></div>
@@ -83,6 +92,7 @@
 		grid-template-areas: "footerlogo footerlogo" ". ." ". ." ". ."
 		padding-top: 32px
 		padding-bottom: 32px
+		row-gap: 32px
 		.footerlogo
 			grid-area: footerlogo
 			width: 50%
