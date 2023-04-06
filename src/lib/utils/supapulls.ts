@@ -383,6 +383,16 @@ export async function brhatHelper(){
 	return data
 }
 
+export async function soaTales(){
+	const { data, error } = await supabase
+	.from('soaTales')
+	.select()
+	.order('id')
+	.limit(36)
+	if (error) throw new Error(error.message)
+	return data
+}
+
 export async function soaChapter1(){
 	const { data, error } = await supabase
 	.from('soaChapter1')

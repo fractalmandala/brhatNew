@@ -291,6 +291,22 @@ button.redbutton
 	.bot
 		grid-area: bot
 
+.plain-two
+	display: grid
+	grid-auto-flow: row
+	grid-template-columns: 1fr
+	grid-template-rows: auto auto
+	grid-template-areas: "up" "down"
+	gap: 32px 0
+	.up
+		grid-area: up
+	.down
+		grid-area: down
+
+.plain-one
+	display: flex
+	flex-direction: column
+
 //***************************************************************************************
 //GRIDS
 
