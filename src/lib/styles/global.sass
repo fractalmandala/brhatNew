@@ -1,0 +1,301 @@
+body, html
+	margin: 0
+	box-sizing: border-box
+	font-family: 'Plus Jakarta Sans', sans-serif
+
+$spacer: 48px
+
+.bdr
+	border: 1px solid red
+
+*
+	box-sizing: border-box
+	--weg: 700
+	--cubea: cubic-bezier(0.995, 0.225, 0.750, 0.750)
+	--cubeb: cubic-bezier(0.995, 0.225, 0.000, 0.965)
+	--cubec: cubic-bezier(0.320, 0.760, 0.875, 0.490)
+	--cubed: cubic-bezier(0.000, 1.240, 0.875, 0.490)
+	--cubee: cubic-bezier(1.000, 0.005, 1.000, 0.005)
+	--snap: all 0.07s var(--cubea)
+	--red: #fe4a49
+	--strong: #B0413E
+	--ram: #3A8080
+	--white: #FFFFFF
+	--chambs: #e4a503
+	--drash: #2F7796
+	--blued: #004e89
+	--bol: #10446A
+	--tree: #0B6E4F
+	--aryan: #5A3261
+	--yellow: #FF9F1C
+	--news: #602C2D
+	--orange: #ff3d00
+	--green: #10D56E
+	--mand: #538733
+	--white: #ffffff
+	--greytyp: #474747
+	--beau: linear-gradient(132.9deg, rgba(23,23,23,1) 10.69%, rgba(24, 28, 30, 1) 84.91%)
+
+a
+	text-decoration: none
+	color: inherit
+	&:hover
+		color: inherit
+
+.back
+	background-size: cover
+	background-position: center center
+	background-repeat: no-repeat
+
+.box
+	display: flex
+	flex-direction: column
+	@media screen and (min-width: 1024px)
+		row-gap: 12px
+	@media screen and (max-width: 1023px)
+		row-gap: 8px
+
+.box.extra
+	row-gap: 24px
+
+.boxr
+	display: flex
+	flex-direction: row
+
+.card-a
+	display: flex
+	border-radius: 4px
+	.card-body
+		display: flex
+		flex-direction: column
+	@media screen and (min-width: 1024px)
+		flex-direction: column
+		row-gap: 12px
+		height: 100%
+		background: #fafafa
+		padding: 24px
+		transition: var(--snap)
+		&:hover
+			background: white
+			box-shadow: 4px 7px 12px #eaeaea, -5px -6px 9px #f7f7f7
+		.card-image
+			height: 200px
+			img
+				object-fit: cover
+				width: 100%
+				height: 100%
+		.card-body
+			row-gap: 12px
+			justify-content: space-between
+	@media screen and (max-width: 1023px)
+		flex-direction: row
+		column-gap: 24px
+		padding: 16px
+		background: #fafafa
+		.card-image
+			width: 30%
+			height: 96px
+			img
+				object-fit: cover
+				width: 100%
+				height: 100%
+		.card-body
+			width: calc(70% - 24px)
+			row-gap: 8px
+			justify-content: flex-start
+
+.card-b
+	display: flex
+	flex-direction: column
+	.card-body
+		display: flex
+		flex-direction: column
+	@media screen and (min-width: 1024px)
+		row-gap: 12px
+		height: 100%
+		background: #fafafa
+		padding: 24px
+		transition: var(--snap)
+		&:hover
+			background: white
+			box-shadow: 4px 7px 12px #eaeaea, -5px -6px 9px #f7f7f7
+		.card-image
+			height: 200px
+			img
+				object-fit: cover
+				width: 100%
+				height: 100%
+		.card-body
+			row-gap: 12px
+			justify-content: space-between
+			.card-meta
+				justify-content: space-between
+	@media screen and (max-width: 1023px)
+		row-gap: 8px
+		padding: 16px
+		background: #fafafa
+		.card-image
+			height: 160px
+			img
+				object-fit: cover
+				width: 100%
+				height: 100%
+		.card-body
+			row-gap: 8px
+			justify-content: space-between
+			.card-meta
+				justify-content: space-between
+
+.card-c
+	display: flex
+	flex-direction: column
+
+.card-video
+	display: flex
+	flex-direction: column
+	@media screen and (min-width: 1024px)
+		height: 180px
+		row-gap: 12px
+		iframe
+			height: 144px
+	@media screen and (max-width: 1023px)
+		height: 150px
+		row-gap: 8px
+		iframe
+			height: 120px
+
+.pads
+	@media screen and (min-width: 1024px)
+		padding-left: 6vw
+		padding-right: 6vw
+	@media screen and (max-width: 1023px)
+		padding-left: 6vw
+		padding-right: 6vw
+
+//******************************************************************************************
+
+.box-of-image img
+	object-fit: cover
+	width: 100%
+	height: 100%
+
+#menumain
+	transition: var(--snap)
+	cursor: pointer
+	&:hover
+		path
+			fill: #fe4a49
+
+.subheader
+	.sublogo
+		svg
+			object-fit: contain
+			height: 27px
+
+.sublinks
+	@media screen and (max-width: 1023px)
+		padding-top: 32px
+
+.sublinks a
+	text-transform: uppercase
+	font-weight: 500
+	@media screen and (min-width: 1024px)
+		font-size: 14px
+	@media screen and (max-width: 1023px)
+		text-align: right
+		font-size: 32px
+		padding: 4px 0
+		border-bottom: 1px solid #f1f1f1
+	
+
+#anveshilinks
+	a
+		&:hover
+			color: var(--yellow)
+
+button.redbutton
+	background: linear-gradient(95.05deg, #FE4A49 21.59%, #D5122A 71.29%)
+	border: none
+	width: max-content
+	padding: 8px 24px
+	border-radius: 2px
+	color: white
+	font-size: 16px
+	transition: var(--snap)
+	transform-origin: center center
+	&:hover
+		animation: redbuttoncolor 0.08s ease forwards
+		transform: scale(0.9)
+
+@keyframes redbuttoncolor
+	0%
+		background: linear-gradient(95.05deg, #FE4A49 21.59%, #D5122A 71.29%)
+	100%
+		background: linear-gradient(95.05deg, #D5122A 21.59%, #Fe4a49 71.29%)
+
+//******************************************************************************************
+//CONTAINERS
+
+.title-box
+	display: grid
+	grid-auto-flow: row
+	@media screen and (min-width: 1024px)
+		grid-template-rows: auto auto
+		grid-template-columns: 160px 1fr 1fr 1fr
+		grid-template-areas: "title . . ." ". box box box"
+		gap: 32px 64px
+		.a-title
+			grid-area: title
+		.a-box
+			grid-area: box
+	@media screen and (max-width: 1023px)
+		grid-template-rows: auto auto
+		grid-template-columns: 1fr
+		grid-template-areas: "title" "box"
+		gap: 32px 0
+		.a-title
+			grid-area: title
+		.a-box
+			grid-area: box
+
+//***************************************************************************************
+//GRIDS
+
+.gridof2
+	display: grid
+	grid-auto-flow: row
+	grid-template-rows: auto
+	@media screen and (min-width: 1024px)
+		grid-template-columns: 1fr 1fr
+		grid-template-areas: ". ."
+		gap: 32px 32px
+	@media screen and (max-width: 1023px)
+		grid-template-columns: 1fr
+		grid-template-areas: "." "."
+		gap: 32px 0
+
+.gridof3
+	display: grid
+	grid-auto-flow: row
+	grid-template-rows: auto
+	@media screen and (min-width: 1024px)
+		grid-template-columns: 1fr 1fr 1fr
+		grid-template-areas: ". . ."
+		gap: 32px 32px
+	@media screen and (max-width: 1023px)
+		grid-template-areas: "." "." "."
+		grid-template-columns: 1fr
+		gap: 32px 0
+
+.gridof4
+	display: grid
+	grid-auto-flow: row
+	grid-template-rows: auto
+	@media screen and (min-width: 1024px)
+		grid-template-columns: 1fr 1fr 1fr 1fr
+		grid-template-areas: ". . . ."
+		gap: 32px 32px
+	@media screen and (max-width: 1023px)
+		grid-template-columns: 1fr
+		grid-template-areas: "." "." "." "."
+		gap: 32px 0

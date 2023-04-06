@@ -1,0 +1,120 @@
+$md: 3
+$l2: 2.6
+$l3: 2
+$l4: 1.4
+
+p, small, cite, caption, h6, h5, h4, h3, h2, h1, pre
+	margin: 0
+
+pre
+	overflow-x: auto
+	box-sizing: border-box
+	white-space: pre-wrap
+	white-space: -moz-pre-wrap
+	white-space: -pre-wrap
+	white-space: -o-pre-wrap
+	word-wrap: break-word
+	word-break: break-word
+
+small
+	font-size: 12px
+
+.type
+	.card-b
+		small
+			text-transform: uppercase
+			font-weight: bold
+			font-size: 10px
+
+cite
+	font-size: 12px
+
+caption
+	font-size: 12px
+
+.type p, .type pre, .type small, .type cite, .type caption, .type h6, .type h5, .type h4, .type h3, .type h2, .type h1
+	font-family: 'Plus Jakarta Sans', sans-serif
+
+.type h1, .type h2
+	line-height: 1.1
+
+.type
+	h1
+		color: #474747
+	h5
+		color: #313131
+		font-weight: 600
+	h6
+		color: #272727
+		font-weight: 700
+	p, pre
+		color: #878787
+		line-height: 1.48
+	.a-title h3
+		text-transform: uppercase
+	.a-title h4
+		text-transform: uppercase
+	@media screen and (min-width: 1024px)
+		p, pre, li
+			font-size: 1vw
+		h6
+			font-size: 1.414vw
+		h5
+			font-size: 2vw
+		h4
+			font-size: 3.2vw
+		h3
+			font-size: 4vw
+		h2
+			font-size: 5.65vw
+		h1
+			font-size: 8vw
+			letter-spacing: -2px
+	@media screen and (min-width: 787px) and (max-width: 1023px)
+		p, pre, li
+			font-size: 1vw*$l3
+		h6
+			font-size: 1.414vw*$l4
+		h5
+			font-size: 2vw*$l4
+		h4
+			font-size: 3.2vw
+		h3
+			font-size: 4vw
+		h2
+			font-size: 5.65vw
+		h1
+			font-size: 8vw
+			letter-spacing: -2px
+	@media screen and (min-width: 576px) and (max-width: 786px)
+		p, pre, li
+			font-size: 1vw*$l2
+		h6
+			font-size: 1.414vw*$l3
+		h5
+			font-size: 2vw*$l3
+		h4
+			font-size: 2.8vw*$l3
+		h3
+			font-size: 4vw*$l3
+		h2
+			font-size: 5.65vw*$l3
+		h1
+			font-size: 8vw*1.75
+			letter-spacing: -1px		
+	@media screen and (max-width: 575px)
+		p, pre, li
+			font-size: 1vw*$md
+		h6
+			font-size: 1.414vw*$l2
+		h5
+			font-size: 2vw*2.4
+		h4
+			font-size: 2.8vw*$l3
+		h3
+			font-size: 4vw*$l3
+		h2
+			font-size: 5.65vw*$l3
+		h1
+			font-size: 8vw*1.75
+			letter-spacing: -1px
