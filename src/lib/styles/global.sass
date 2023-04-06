@@ -1,12 +1,17 @@
 body, html
 	margin: 0
 	box-sizing: border-box
-	font-family: 'Plus Jakarta Sans', sans-serif
+	font-family: 'Barlow', sans-serif
 
 $spacer: 48px
 
 .bdr
 	border: 1px solid red
+
+.fixed
+	position: fixed
+	top: 80px
+	left: 80px
 
 *
 	box-sizing: border-box
@@ -160,6 +165,36 @@ a
 			background: white
 			box-shadow: 4px 7px 12px #eaeaea, -5px -6px 9px #f7f7f7
 
+.card-nix
+	display: flex
+	flex-direction: column
+	row-gap: 24px
+	@media screen and (min-width: 1024px)
+		.card-image
+			height: 200px
+	@media screen and (max-width: 1023px)
+		.card-image
+			height: 144px
+
+.card-row
+	display: flex
+	flex-direction: row
+	row-gap: 24px
+	column-gap: 24px
+	@media screen and (min-width: 1024px)
+		.card-image
+			height: 120px
+			width: 120px
+		.card-body
+			width: calc(100% - 144px)
+	@media screen and (max-width: 1023px)
+		.card-image
+			height: 88px
+			width: 88px
+		.card-body
+			width: calc(100% - 112px)
+
+
 .card-book
 	display: flex
 	flex-direction: row
@@ -197,6 +232,16 @@ a
 
 .card-image
 	overflow: hidden
+
+.card-body
+	display: flex
+	flex-direction: column
+	row-gap: 16px
+
+.card-image img
+	object-fit: cover
+	width: 100%
+	height: 100%
 
 .card-video
 	display: flex
@@ -312,8 +357,10 @@ button.treebutton
 	@media screen and (min-width: 1024px)
 		grid-template-rows: auto auto
 		grid-template-columns: 160px 1fr 1fr 1fr
-		grid-template-areas: "title . . ." ". box box box"
+		grid-template-areas: "title title strip strip" ". box box box"
 		gap: 32px 64px
+		.strip
+			grid-area: strip
 		.a-title
 			grid-area: title
 		.a-box

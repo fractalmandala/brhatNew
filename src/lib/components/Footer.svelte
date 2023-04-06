@@ -30,10 +30,15 @@
 			<DhitiLink></DhitiLink><br>
 			<OpenLibLink></OpenLibLink>
 			<BrhadMrdanga></BrhadMrdanga>
+			<a class="mainlinks" href="/about" target="_self">About</a>
+			<AboutLinks></AboutLinks>
 		</div>
 		<div class="spacer">
 			<a class="mainlinks" href="/anveshi" target="_self">Bṛhat Anveṣī</a>
 			<AnveshiLinks></AnveshiLinks>
+			<div class="creategap"></div>
+			<a class="mainlinks" href="/drashta" target="_self">Bṛhat Draṣṭā</a>
+			<DrashtaLinks></DrashtaLinks>
 		</div>
 		<div class="spacer">
 			<a class="mainlinks" href="/aryavarta" target="_self">Scrolls of Āryavarta</a>
@@ -83,6 +88,7 @@
 		grid-template-rows: auto auto
 		grid-template-areas: "footerlogo footerlogo . . . ." ". . . . . ."
 		padding-top: 32px
+		gap: 0 32px
 		.footerlogo
 			grid-area: footerlogo
 			width: 50%
@@ -124,5 +130,8 @@
 .spacer
 	display: flex
 	flex-direction: column
+
+.creategap
+	height: 32px
 
 </style>

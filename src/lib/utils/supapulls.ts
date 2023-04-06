@@ -10,6 +10,18 @@ export async function createCurateConsult(){
 	return data
 }
 
+export async function threeConvictions(){
+	const { data, error } = await supabase
+	.from('brhat-about')
+	.select()
+	.eq('type','areas')
+	.order('sequence')
+	if (error) throw new Error(error.message)
+	return data
+}
+
+
+
 export async function brhatActionsSix(){
 	const { data, error } = await supabase
 	.from('brhat-actions')

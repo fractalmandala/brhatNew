@@ -58,19 +58,24 @@ caption
 	font-size: 12px
 
 .type p, .type pre, .type small, .type cite, .type caption, .type h6, .type h5, .type h4, .type h3, .type h2, .type h1
-	font-family: 'Plus Jakarta Sans', sans-serif
+	font-family: 'Barlow', sans-serif
 
 .type h1, .type h2
 	line-height: 1.1
 
+.type h4
+	line-height: 1.12
+
 .type
 	h1
-		color: #474747
+		color: #313131
+	h4, h3, h2
+		color: #313131
 	h5
 		color: #313131
 		font-weight: 600
 	h6
-		color: #272727
+		color: #313131
 		font-weight: 700
 	p, pre
 		color: #878787
@@ -88,14 +93,14 @@ caption
 		h5
 			font-size: 2vw
 		h4
-			font-size: 3.2vw
-			letter-spacing: -1px
+			font-size: 2.5vw
+			letter-spacing: -0.6px
 		h3
 			font-size: 4vw
 		h2
 			font-size: 5.65vw
 		h1
-			font-size: 8vw
+			font-size: 6.4vw
 			letter-spacing: -2px
 	@media screen and (min-width: 787px) and (max-width: 1023px)
 		p, pre, li
@@ -105,7 +110,7 @@ caption
 		h5
 			font-size: 2vw*$l4
 		h4
-			font-size: 3.2vw
+			font-size: 2.8vw*$l4
 		h3
 			font-size: 4vw
 		h2
@@ -137,6 +142,8 @@ caption
 		h5
 			font-size: 2vw*2.4
 		h4
+			font-size: 2.8vw*$l2
+		.onpagelinks h4
 			font-size: 2.8vw*$l3
 		h3
 			font-size: 4vw*$l3

@@ -1,6 +1,9 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
+	import Lenis from '@studio-freight/lenis'
+	import Animations from 'textify.js'
+	import HomeAccordion from '$lib/components/HomeAccordion.svelte'
 	import { createCurateConsult, brhatUpdates, latestVidsVar, BOLLatest } from '$lib/utils/supapulls'
 	import { latestDhitiSix } from '$lib/utils/localpulls'
 
@@ -11,6 +14,8 @@
 	let posts: string|any[]
 	let bollimit:number = 12
 	let books: string|any[]
+	let scy:number
+	let ouh:number
 
 	onMount(async() => {
 		threeactions = await createCurateConsult()
@@ -18,11 +23,45 @@
 		videos = await latestVidsVar(count)
 		posts = await latestDhitiSix()
 		books = await BOLLatest(bollimit)
+		const lenis = new Lenis({
+			orientation: 'vertical',
+			duration: 1.0,
+			wheelMultiplier: 0.5,
+			infinite: false,
+			smoothWheel: true
+		})
+		lenis.on('scroll', (e: any) => {
+		})
+		function raf(time: any) {
+  		lenis.raf(time)
+  		requestAnimationFrame(raf)
+		}
+		requestAnimationFrame(raf)
+		const { Textify } = Animations
+		new Textify({
+			selector: '.card-body h6',
+			duration: 600,
+			stagger: 200,
+			fade: false,
+			reveal: true,
+			threshold: 0.2,
+			once: false
+		})
+		new Textify({
+			selector: '.a-title h4',
+			duration: 500,
+			stagger: 50,
+			fade: false,
+			reveal: true,
+			once: false
+		})	
 	})	
 
 </script>
 
+<svelte:window bind:scrollY={scy} bind:outerHeight={ouh}/>
 <div class="type">
+	<HomeAccordion></HomeAccordion>
 	<div class="plain-three x1 pads">
 		<div class="top">
 			<h1>Bṛhat is a<br><span style="color: #fe4a49">culture engine</span></h1>
@@ -32,7 +71,7 @@
 				To power creatives, research and design rooted in the Indian civilizational consciousness. We
 				convert individual, institutional and collective intent into action, across 3 dimensions.
 			</h5>
-			<button class="redbutton"><a href="/">Know More</a></button>
+			<button class="redbutton"><a href="/about">Know More</a></button>
 		</div>
 		<div class="bot gridof3">
 			{#if threeactions && threeactions.length > 0}
@@ -69,6 +108,7 @@
 		<div class="a-title">
 			<h4>Explore Visual Content</h4>
 		</div>
+		<div class="strip"></div>
 		<div class="a-box box extra">
 			<h5>
 				Our visual content ranges from explorations of rasa and bhāva, to articulations of an
@@ -79,7 +119,7 @@
 					rel="noreferrer">YouTube channel</a
 				>
 			</h5>
-			<button class="redbutton"><a href="/">Visit Bṛhadmṛdaṅga</a></button>
+			<button class="redbutton"><a href="/mrdanga">Visit Bṛhadmṛdaṅga</a></button>
 			<div class="gridof4">
 				{#if videos && videos.length > 0}
 					{#each videos as item}
@@ -133,7 +173,7 @@
 			{#if books && books.length > 0}
 				{#each books as item}
 					<div class="card-c">
-						<h6>{item.Text}</h6>
+						<h6><a href="/openlibrary/books/{item.slug}">{item.Text}</a></h6>
 						<p>{item.author}</p>
 					</div>
 				{/each}
@@ -167,5 +207,18 @@
 	.card-meta
 		justify-self: flex-end
 		row-gap: 4px
+
+.x5
+	a
+		transition: var(--snap)
+		&:hover
+			color: var(--strong)
+	.card-c
+		row-gap: 8px
+
+.strip
+	height: 24px
+	width: 0%
+	background: #fe4a49
 
 </style>
