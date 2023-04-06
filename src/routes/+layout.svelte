@@ -2,6 +2,7 @@
 	import '$lib/styles/global.sass'
 	import '$lib/styles/types.sass'
 	import Header from '$lib/components/Header.svelte'
+	import Footer from '$lib/components/Footer.svelte'
 	import IconMenu from '$lib/icons/IconMenu.svelte'
 	import IconMenu2 from '$lib/icons/IconMenu.svelte'
 	import AboutLinks from '$lib/links/AboutLinks.svelte'
@@ -48,6 +49,7 @@
 		</div>
 	</Header>
 	<slot></slot>
+	<Footer></Footer>
 </div>
 
 <style lang="sass">
@@ -65,13 +67,19 @@
 	flex-direction: column
 
 .sidemenu.opened
-	width: 40%
+	@media screen and (min-width: 1024px)
+		width: 40%
+	@media screen and (max-width: 1023px)
+		width: 100vw
 
 #appbox
 	transition: 0.45s
 
 .pushed
-	margin-right: 40%
+	@media screen and (min-width: 1024px)
+		margin-right: 40%
+	@media screen and (max-width: 1023px)
+		margin-right: 100%
 
 .icontray
 	height: 64px

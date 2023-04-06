@@ -149,6 +149,18 @@ a
 .card-c
 	display: flex
 	flex-direction: column
+	@media screen and (min-width: 1024px)
+		padding: 24px
+		background: #fafafa
+		transition: var(--snap)
+		&:hover
+			background: white
+			box-shadow: 4px 7px 12px #eaeaea, -5px -6px 9px #f7f7f7
+
+		
+
+.card-image
+	overflow: hidden
 
 .card-video
 	display: flex
@@ -173,6 +185,13 @@ a
 		padding-right: 6vw
 
 //******************************************************************************************
+
+.wide60
+	width: 100%
+	@media screen and (min-width: 1024px)
+		width: 60%
+	@media screen and (min-width: 768px)
+		width: 85%
 
 .box-of-image img
 	object-fit: cover
@@ -257,6 +276,20 @@ button.redbutton
 			grid-area: title
 		.a-box
 			grid-area: box
+
+.plain-three
+	display: grid
+	grid-auto-flow: row
+	grid-template-columns: 1fr
+	grid-template-rows: auto auto auto
+	grid-template-areas: "top" "mid" "bot"
+	gap: 32px 0
+	.top
+		grid-area: top
+	.mid
+		grid-area: mid
+	.bot
+		grid-area: bot
 
 //***************************************************************************************
 //GRIDS
