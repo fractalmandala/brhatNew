@@ -277,8 +277,25 @@
 				border-bottom: 1px solid #ececec
 				padding-bottom: 16px
 
-.a-title h4
-	@media screen and (min-width: 1024px)
-		margin-top: -160px
+.x1
+	.gridof3
+		.box
+			pre
+				overflow: hidden
+
+.x2
+	.a-title h4
+		@media screen and (min-width: 1024px)
+			margin-top: -160px
+
+.x3
+	.a-title h4
+		@media screen and (min-width: 1024px)
+			margin-top: -160px
+
+.x4
+	.a-title h4
+		@media screen and (min-width: 1024px)
+			margin-top: -160px
 
 </style>

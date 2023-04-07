@@ -1,6 +1,7 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
+	import { fly } from 'svelte/transition'
 	import '$lib/styles/global.sass'
 	import '$lib/styles/types.sass'
 	import Header from '$lib/components/Header.svelte'
@@ -22,6 +23,12 @@
 		navopen = !navopen
 	}
 
+	function closeSidebar(){
+		if ( navopen === true ) {
+			navopen = false
+		}
+	}
+
 	function navKey(e: {code: string;}){
 		if ( e.code === "F1") {
 			navopen = !navopen
@@ -33,17 +40,62 @@
 <svelte:head>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/textify.js/dist/Textify.min.css" rel="stylesheet"/>
 </svelte:head>
 
-<div class="sidemenu" id="sidemenu" class:opened={navopen}>
-	<div class="box icontray">
-		<div class="box iconholder" on:click={openNav} on:keydown={navKey}>
-			<IconMenu2></IconMenu2>
-		</div>
+<div class="sidemenu type" id="sidemenu" class:opened={navopen} data-lenis-prevent on:mouseleave={closeSidebar}>
+	<div class="linkbox">
+		{#if navopen}
+			<h5 in:fly={{ duration: 300, delay: 100, x: 64, y: 0}}><a href="/dhiti" target="_self">Dhīti</a></h5>
+		{/if}
 	</div>
-	<div class="linkbox"></div>
+	<div class="linkbox">
+		{#if navopen}
+			<h5 in:fly={{ duration: 300, delay: 150, x: 64, y: 0}}><a href="/openlibrary" target="_self">Bṛhat Open Library</a></h5>
+		{/if}
+	</div>
+	<div class="linkbox">
+		{#if navopen}
+			<h5 in:fly={{ duration: 300, delay: 200, x: 64, y: 0}}><a href="/mrdanga" target="_self">Bṛhad Mṛdaṅga</a></h5>
+		{/if}
+	</div>
+	<div class="linkbox">
+		{#if navopen}
+			<h5 in:fly={{ duration: 300, delay: 250, x: 64, y: 0}}><a href="/anveshi" target="_self">Bṛhat Anveṣī</a></h5>
+			<AnveshiLinks></AnveshiLinks>
+		{/if}
+	</div>
+	<div class="linkbox">
+		{#if navopen}
+			<h5 in:fly={{ duration: 300, delay: 300, x: 64, y: 0}}><a href="/drashta" target="_self">Bṛhat Draṣṭā</a></h5>
+			<DrashtaLinks></DrashtaLinks>
+		{/if}
+	</div>
+	<div class="linkbox">
+		{#if navopen}
+			<h5 in:fly={{ duration: 300, delay: 350, x: 64, y: 0}}><a href="/mandala" target="_self">Fractal Maṇḍala</a></h5>
+			<MandalaLinks></MandalaLinks>
+		{/if}
+	</div>
+	<div class="linkbox">
+		{#if navopen}
+			<h5 in:fly={{ duration: 300, delay: 400, x: 64, y: 0}}><a href="/aryavarta" target="_self">Scrolls of Āryavarta</a></h5>
+			<AryavartaLinks></AryavartaLinks>
+		{/if}
+	</div>
+	<div class="linkbox">
+		{#if navopen}
+			<h5 in:fly={{ duration: 300, delay: 450, x: 64, y: 0}}><a href="/rta" target="_self">Ṛta in Design</a></h5>
+			<RtaLinks></RtaLinks>
+		{/if}
+	</div>
+	<div class="linkbox">
+		{#if navopen}
+			<h5 in:fly={{ duration: 300, delay: 500, x: 64, y: 0}}><a href="/about" target="_self">About Bṛhat</a></h5>
+			<AboutLinks></AboutLinks>
+		{/if}
+	</div>
 </div>
 
 <div id="appbox" class:pushed={navopen}>
@@ -69,34 +121,57 @@
 	transition: 0.45s
 	display: flex
 	flex-direction: column
+	overflow-y: scroll
+	z-index: 999
 
 .sidemenu.opened
+	overflow-y: scroll
+	z-index: 999
 	@media screen and (min-width: 1024px)
-		width: 40%
+		width: 32%
+		padding-right: 16px
+		padding-left: 32px
+		padding-top: 64px
 	@media screen and (max-width: 1023px)
 		width: 100vw
 
 #appbox
 	transition: 0.45s
 
-.pushed
-	@media screen and (min-width: 1024px)
-		margin-right: 40%
-	@media screen and (max-width: 1023px)
-		margin-right: 100%
-
-.icontray
-	height: 64px
-	align-items: flex-end
-	justify-content: center
-	padding-right: 16px
-
-.iconholder
-	width: 22px
-	height: 20px
-
 .linkbox
 	display: flex
 	flex-direction: column
+	margin-bottom: 32px
+
+
+.linkbox
+	h5
+		text-align: right
+		color: white
+		text-transform: uppercase
+		font-weight: 600
+		border-top: 1px solid #272727
+		padding-top: 16px
+		position: relative
+		&::after
+			position: absolute
+			top: 0
+			right: 0
+			content: ''
+			height: 1px
+			background: #fe4a49
+			width: 0
+		
+.linkbox
+	&:hover
+		h5
+			&::after
+				animation: boxlining 0.34s ease forwards
+
+@keyframes boxlining
+	0%
+		width: 0
+	100%
+		width: 100%
 
 </style>
