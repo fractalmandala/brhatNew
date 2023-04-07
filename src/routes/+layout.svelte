@@ -45,52 +45,52 @@
 </svelte:head>
 
 <div class="sidemenu type" id="sidemenu" class:opened={navopen} data-lenis-prevent on:mouseleave={closeSidebar}>
-	<div class="linkbox">
+	<div class="linkbox" on:click={closeSidebar} on:keydown={navKey}>
 		{#if navopen}
 			<h5 in:fly={{ duration: 300, delay: 100, x: 64, y: 0}}><a href="/dhiti" target="_self">Dhīti</a></h5>
 		{/if}
 	</div>
-	<div class="linkbox">
+	<div class="linkbox" on:click={closeSidebar} on:keydown={navKey}>
 		{#if navopen}
 			<h5 in:fly={{ duration: 300, delay: 150, x: 64, y: 0}}><a href="/openlibrary" target="_self">Bṛhat Open Library</a></h5>
 		{/if}
 	</div>
-	<div class="linkbox">
+	<div class="linkbox" on:click={closeSidebar} on:keydown={navKey}>
 		{#if navopen}
 			<h5 in:fly={{ duration: 300, delay: 200, x: 64, y: 0}}><a href="/mrdanga" target="_self">Bṛhad Mṛdaṅga</a></h5>
 		{/if}
 	</div>
-	<div class="linkbox">
+	<div class="linkbox" on:click={closeSidebar} on:keydown={navKey}>
 		{#if navopen}
 			<h5 in:fly={{ duration: 300, delay: 250, x: 64, y: 0}}><a href="/anveshi" target="_self">Bṛhat Anveṣī</a></h5>
 			<AnveshiLinks></AnveshiLinks>
 		{/if}
 	</div>
-	<div class="linkbox">
+	<div class="linkbox" on:click={closeSidebar} on:keydown={navKey}>
 		{#if navopen}
 			<h5 in:fly={{ duration: 300, delay: 300, x: 64, y: 0}}><a href="/drashta" target="_self">Bṛhat Draṣṭā</a></h5>
 			<DrashtaLinks></DrashtaLinks>
 		{/if}
 	</div>
-	<div class="linkbox">
+	<div class="linkbox" on:click={closeSidebar} on:keydown={navKey}>
 		{#if navopen}
 			<h5 in:fly={{ duration: 300, delay: 350, x: 64, y: 0}}><a href="/mandala" target="_self">Fractal Maṇḍala</a></h5>
 			<MandalaLinks></MandalaLinks>
 		{/if}
 	</div>
-	<div class="linkbox">
+	<div class="linkbox" on:click={closeSidebar} on:keydown={navKey}>
 		{#if navopen}
 			<h5 in:fly={{ duration: 300, delay: 400, x: 64, y: 0}}><a href="/aryavarta" target="_self">Scrolls of Āryavarta</a></h5>
 			<AryavartaLinks></AryavartaLinks>
 		{/if}
 	</div>
-	<div class="linkbox">
+	<div class="linkbox" on:click={closeSidebar} on:keydown={navKey}>
 		{#if navopen}
 			<h5 in:fly={{ duration: 300, delay: 450, x: 64, y: 0}}><a href="/rta" target="_self">Ṛta in Design</a></h5>
 			<RtaLinks></RtaLinks>
 		{/if}
 	</div>
-	<div class="linkbox">
+	<div class="linkbox" on:click={closeSidebar} on:keydown={navKey}>
 		{#if navopen}
 			<h5 in:fly={{ duration: 300, delay: 500, x: 64, y: 0}}><a href="/about" target="_self">About Bṛhat</a></h5>
 			<AboutLinks></AboutLinks>
@@ -134,6 +134,7 @@
 		padding-top: 64px
 	@media screen and (max-width: 1023px)
 		width: 100vw
+		padding: 64px 32px
 
 #appbox
 	transition: 0.45s
@@ -141,7 +142,10 @@
 .linkbox
 	display: flex
 	flex-direction: column
-	margin-bottom: 32px
+	@media screen and (min-width: 1024px)
+		margin-bottom: 32px
+	@media screen and (max-width: 1023px)
+		padding-bottom: 8px
 
 
 .linkbox

@@ -120,6 +120,9 @@
 			{/if}
 		</div>
 	</div>
+	<div class="rotatingmotif">
+		<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/02brhatlogos/motiffull.png" alt="motif" style="transform: translateX({scy/2}px) rotate({scy/5}deg)"/>
+	</div>
 	<div class="title-box x2 pads">
 		<div class="a-title">
 			<h4 style="transform: translateY({calib/6}px)">New and Recent</h4>
@@ -157,7 +160,7 @@
 				>
 			</h5>
 			<button class="redbutton"><a href="/mrdanga">Visit Bṛhadmṛdaṅga</a></button>
-			<div class="gridof4">
+			<div class="gridof4 by2">
 				{#if videos && videos.length > 0}
 					{#each videos as item, i}
 						<div class="card-video">
@@ -177,7 +180,7 @@
 		<div class="a-box gridof3">
 			{#if posts && posts.length > 0}
 				{#each posts as item, i}
-					<div class="card-b">
+					<div class="card-a">
 						<div class="card-image">
 							<img src={item.meta.image} alt={item.meta.title}/>
 						</div>
@@ -205,7 +208,7 @@
 	</div>
 	<div class="title-box x5 pads">
 		<div class="a-title">
-			<h4>Open Library</h4>
+			<h4><a href="/openlibrary" target="_self">Open Library</a></h4>
 		</div>
 		<div class="strip" bind:this={X}></div>
 		<div class="a-box gridof4">
@@ -222,6 +225,13 @@
 </div>
 
 <style lang="sass">
+
+.rotatingmotif
+	img
+		object-fit: contain
+		transform-origin: center center
+		width: 200px
+		height: 200px
 
 .x1, .x2, .x3, .x5
 	@media screen and (min-width: 1024px)
@@ -274,8 +284,8 @@
 		padding-top: 64px
 		.gridof3
 			.box
-				border-bottom: 1px solid #ececec
-				padding-bottom: 16px
+				border-top: 1px solid #ececec
+				padding-top: 16px
 
 .x1
 	.gridof3
@@ -297,5 +307,12 @@
 	.a-title h4
 		@media screen and (min-width: 1024px)
 			margin-top: -160px
+
+.x5
+	.gridof4
+		.card-c
+			@media screen and (max-width: 1023px)
+				border-bottom: 1px solid #ececec
+				padding-bottom: 8px
 
 </style>

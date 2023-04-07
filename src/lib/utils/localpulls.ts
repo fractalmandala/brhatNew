@@ -642,7 +642,7 @@ export const dhitiPaginated= async(currentPage:number, pageSize:number) => {
 }
 
 export const bolFiles = async() => {
-	const allPostFiles = import.meta.glob('/src/routes/openlibrary/synaptic/digital/*.md')
+	const allPostFiles = import.meta.glob('/src/routes/openlibrary/scripture/*.md')
 	const iterablePostFiles = Object.entries(allPostFiles)
 	const allPosts = await Promise.all(
 		iterablePostFiles.map(async ([path, resolver]) => {

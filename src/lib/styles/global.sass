@@ -74,15 +74,24 @@ a
 	a
 		text-align: right
 		color: #474747
-		font-size: 20px
 		&:hover
 			color: #fe4a49
 	h5
 		color: white
-		font-size: 2.4vw
 		a
 			color: white
+	@media screen and (min-width: 1024px)
+		a
+			font-size: 20px
+		h5
 			font-size: 2.4vw
+			a
+				font-size: 2.4vw
+	@media screen and (max-width: 1023px)
+		a
+			font-size: 18px
+		h5, h5 a
+			font-size: 6vw
 
 .card-a
 	display: flex
@@ -322,6 +331,8 @@ a
 		padding: 4px 0
 		border-bottom: 1px solid #f1f1f1
 	
+.inlinks p
+	text-transform: uppercase
 
 #anveshilinks
 	a
@@ -397,13 +408,16 @@ button.treebutton
 	grid-template-columns: 1fr
 	grid-template-rows: auto auto auto
 	grid-template-areas: "top" "mid" "bot"
-	gap: 32px 0
 	.top
 		grid-area: top
 	.mid
 		grid-area: mid
 	.bot
 		grid-area: bot
+	@media screen and (min-width: 1024px)
+		gap: 32px 0
+	@media screen and (max-width: 1023px)
+		gap: 24px 0
 
 .plain-two
 	display: grid
@@ -463,6 +477,19 @@ button.treebutton
 		grid-template-columns: 1fr
 		grid-template-areas: "." "." "." "."
 		gap: 32px 0
+
+.gridof4.by2
+	display: grid
+	grid-auto-flow: row
+	grid-template-rows: auto
+	@media screen and (min-width: 1024px)
+		grid-template-columns: 1fr 1fr 1fr 1fr
+		grid-template-areas: ". . . ."
+		gap: 32px 32px
+	@media screen and (max-width: 1023px)
+		grid-template-columns: 1fr 1fr
+		grid-template-areas: "." "."
+		gap: 32px 24px
 
 .gridof5
 	display: grid

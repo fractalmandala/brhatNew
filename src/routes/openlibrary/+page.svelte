@@ -136,7 +136,7 @@
 	<div class="title-box x3 pads">
 		<div class="a-title">
 			<h4>Special Section</h4>
-			<button class="treebutton"><a href="/openlibrary/reader" target="_self">Visit Now</a></button>
+			<button class="treebutton"><a href="/openlibrary/scripture" target="_self">Visit Now</a></button>
 		</div>
 		<div class="a-box box">
 			<h6 class="wide60">
@@ -184,7 +184,7 @@
 			<h6 class="wide60">
 				Here, at the Bṛhat Open Library, we build this dhārmika pool of our dreams. You are welcome to jump in.
 			</h6>
-			<button class="treebutton"><a href="/openlibrary/reader" target="_self">Visit Now</a></button>
+			<button class="treebutton"><a href="/openlibrary/scripture" target="_self">Visit Now</a></button>
 		</div>
 	</div>
 </div>
