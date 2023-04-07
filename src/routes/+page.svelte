@@ -2,10 +2,15 @@
 
 	import { onMount } from 'svelte'
 	import Lenis from '@studio-freight/lenis'
+	import { gsap } from 'gsap'
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger.js' 
+	import { reveal } from 'svelte-reveal'
 	import Animations from 'textify.js'
 	import HomeAccordion from '$lib/components/HomeAccordion.svelte'
 	import { createCurateConsult, brhatUpdates, latestVidsVar, BOLLatest } from '$lib/utils/supapulls'
 	import { latestDhitiSix } from '$lib/utils/localpulls'
+
+	gsap.registerPlugin(ScrollTrigger)
 
 	let threeactions: string|any[]
 	let updates: string|any[]
@@ -16,6 +21,36 @@
 	let books: string|any[]
 	let scy:number
 	let ouh:number
+	let X: HTMLElement
+	let innw:number
+	let calib:number
+
+	function initAnimation(){
+		const elements = document.querySelectorAll('.strip')
+		elements.forEach((element) => {
+		gsap.fromTo(
+			element,
+			{
+				width: 0,
+			},
+			{
+				width: '100%',
+				scrollTrigger: {
+					trigger: element as DOMTarget,
+					start: 'top bottom',
+					end: 'bottom top',
+					scrub: true
+				}
+			}
+		)
+	})
+	}
+
+	$: if ( innw <= 1023 ) {
+		calib = 6
+	} else {
+		calib = scy
+	}
 
 	onMount(async() => {
 		threeactions = await createCurateConsult()
@@ -23,10 +58,11 @@
 		videos = await latestVidsVar(count)
 		posts = await latestDhitiSix()
 		books = await BOLLatest(bollimit)
+		initAnimation()
 		const lenis = new Lenis({
 			orientation: 'vertical',
 			duration: 1.0,
-			wheelMultiplier: 0.5,
+			wheelMultiplier: 0.6,
 			infinite: false,
 			smoothWheel: true
 		})
@@ -49,7 +85,7 @@
 		})
 		new Textify({
 			selector: '.a-title h4',
-			duration: 500,
+			duration: 1200,
 			stagger: 50,
 			fade: false,
 			reveal: true,
@@ -59,12 +95,12 @@
 
 </script>
 
-<svelte:window bind:scrollY={scy} bind:outerHeight={ouh}/>
+<svelte:window bind:scrollY={scy} bind:outerHeight={ouh} bind:innerWidth={innw}/>
 <div class="type">
 	<HomeAccordion></HomeAccordion>
 	<div class="plain-three x1 pads">
 		<div class="top">
-			<h1>Bṛhat is a<br><span style="color: #fe4a49">culture engine</span></h1>
+			<h1 use:reveal>Bṛhat is a<br><span style="color: #fe4a49">culture engine</span></h1>
 		</div>
 		<div class="mid box">
 			<h5 class="wide60">
@@ -86,11 +122,12 @@
 	</div>
 	<div class="title-box x2 pads">
 		<div class="a-title">
-			<h4>New and Recent</h4>
+			<h4 style="transform: translateY({calib/6}px)">New and Recent</h4>
 		</div>
+		<div class="strip" bind:this={X}></div>
 		<div class="a-box gridof3">
 			{#if updates && updates.length > 0}
-				{#each updates as item}
+				{#each updates as item, i}
 					<div class="card-a">
 						<div class="card-image">
 							<img src={item.image} alt={item.id} />
@@ -106,9 +143,9 @@
 	</div>
 	<div class="title-box x3 pads">
 		<div class="a-title">
-			<h4>Explore Visual Content</h4>
+			<h4 style="transform: translateY({calib/6}px)">Explore Visual Content</h4>
 		</div>
-		<div class="strip"></div>
+		<div class="strip" bind:this={X}></div>
 		<div class="a-box box extra">
 			<h5>
 				Our visual content ranges from explorations of rasa and bhāva, to articulations of an
@@ -122,7 +159,7 @@
 			<button class="redbutton"><a href="/mrdanga">Visit Bṛhadmṛdaṅga</a></button>
 			<div class="gridof4">
 				{#if videos && videos.length > 0}
-					{#each videos as item}
+					{#each videos as item, i}
 						<div class="card-video">
 							<iframe width=100% height=100% loading="lazy" src="https://www.youtube.com/embed/{item.videoid}" title={item.name}></iframe>
 							<p>{item.name}</p>						
@@ -134,11 +171,12 @@
 	</div>
 	<div class="title-box x4 pads">
 		<div class="a-title">
-			<h4>Latest at Dhīti</h4>
+			<h4 style="transform: translateY({calib/6}px)">Latest at Dhīti</h4>
 		</div>
+		<div class="strip" bind:this={X}></div>
 		<div class="a-box gridof3">
 			{#if posts && posts.length > 0}
-				{#each posts as item}
+				{#each posts as item, i}
 					<div class="card-b">
 						<div class="card-image">
 							<img src={item.meta.image} alt={item.meta.title}/>
@@ -169,9 +207,10 @@
 		<div class="a-title">
 			<h4>Open Library</h4>
 		</div>
+		<div class="strip" bind:this={X}></div>
 		<div class="a-box gridof4">
 			{#if books && books.length > 0}
-				{#each books as item}
+				{#each books as item, i}
 					<div class="card-c">
 						<h6><a href="/openlibrary/books/{item.slug}">{item.Text}</a></h6>
 						<p>{item.author}</p>
@@ -208,6 +247,9 @@
 		justify-self: flex-end
 		row-gap: 4px
 
+.x4
+	overflow: hidden
+
 .x5
 	a
 		transition: var(--snap)
@@ -216,9 +258,27 @@
 	.card-c
 		row-gap: 8px
 
+
 .strip
-	height: 24px
+	height: 1px
 	width: 0%
 	background: #fe4a49
+
+.x1
+	.gridof3
+		.box h6
+			@media screen and (min-width: 1024px)
+				border-top: 1px solid #ececec
+				padding-top: 16px
+	@media screen and (max-width: 1023px)
+		padding-top: 64px
+		.gridof3
+			.box
+				border-bottom: 1px solid #ececec
+				padding-bottom: 16px
+
+.a-title h4
+	@media screen and (min-width: 1024px)
+		margin-top: -160px
 
 </style>

@@ -27,6 +27,8 @@
 	width: 100%
 	column-gap: 0
 	overflow: hidden
+	@media screen and (max-width: 1023px)
+		flex-wrap: wrap
 
 .panel
 	display: flex
@@ -36,13 +38,24 @@
 		height: 100%
 		width: 33.33%
 		border: 2px solid white
+	@media screen and (max-width: 1023px)
+		height: 33.33%
+		width: 100%
+		border: 2px solid white
 
 .accordion
-	&:hover
-		.panel
-			width: 25%
-			&:hover
-				width: 50%
+	@media screen and (min-width: 1024px)
+		&:hover
+			.panel
+				width: 25%
+				&:hover
+					width: 50%
+	@media screen and (max-width: 1023px)
+		&:hover
+			.panel
+				height: 25%
+				&:hover
+					height: 50%
 
 .panel img
 	filter: saturate(0.1)

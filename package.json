@@ -35,6 +35,7 @@
 	"dependencies": {
 		"@studio-freight/lenis": "^1.0.6",
 		"@supabase/supabase-js": "^2.14.0",
+		"gsap": "file:gsap-bonus.tgz",
 		"svelte-inview": "^4.0.0",
 		"svelte-legos": "^0.1.9",
 		"textify.js": "^2.4.3"
