@@ -60,8 +60,37 @@ caption
 .type p, .type pre, .type small, .type cite, .type caption, .type h6, .type h5, .type h4, .type h3, .type h2, .type h1
 	font-family: 'Vazirmatn', sans-serif
 
-.type.dhiti	h4, .type.dhiti h6, .type.dhiti h3
+.type.dhiti	h4, .type.dhiti h6, .type.dhiti h3, .type.dhiti h2
 	font-family: 'Playfair Display', serif
+
+.maincol, .maincol p
+	font-family: 'STIX Two Text', serif
+	color: #272727
+
+.type
+	.maincol
+		@media screen and (min-width: 1024px)
+			p
+				font-size: 18px
+				color: #272727
+				margin-bottom: 24px
+			h5
+				font-size: 27px
+				margin-bottom: 24px
+				padding-top: 16px
+				position: relative
+				font-weight: 600
+				color: #474747
+				&::after
+					position: absolute
+					top: 0
+					left: 0
+					content: ''
+					height: 4px
+					width: 16%
+					background: #fe4a49
+			h4
+				margin: 64px 0 24px 0
 
 .type h1, .type h2
 	line-height: 1.1

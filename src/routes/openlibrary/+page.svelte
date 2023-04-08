@@ -1,8 +1,8 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
-	import { BOLEssentials, BOLBodhas, BOLIKS, BOLROS, BOLOthers } from '$lib/utils/supapulls'
-	import { crossfade } from 'svelte/transition'
+	import { BOLEssentials, BOLBodhas, BOLIKS, BOLROS, BOLOthers, AryanIssue, AryanTag } from '$lib/utils/supapulls'
+	import { crossfade, fly } from 'svelte/transition'
 	import { circIn } from 'svelte/easing'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
 
@@ -11,9 +11,12 @@
 	let ikss:string|any[]
 	let ross:string|any[]
 	let others:string|any[]
+	let aryans:string|any[]
 	let limit:number = 160
 	let selectedCategory:boolean[] = Array(5).fill(false)
 	selectedCategory[1] = true
+	let tag:string = 'Core Material'
+	let fake:boolean = false
 
 	function toggleCategory(index:number) {
 		selectedCategory[index] = !selectedCategory[index]
@@ -22,6 +25,20 @@
 				selectedCategory[i] = false
 			}
 		}		
+	}
+
+	function setTag(newTag:string){
+		tag = newTag
+	}	
+
+	$: if (tag) {
+		(async() => {
+			aryans = await AryanTag(tag)
+		})()
+	}
+
+	function fauxfake(){
+		fake = !fake
 	}
 
 	const [send, receive] = crossfade({
@@ -36,6 +53,7 @@
 		ikss = await BOLIKS(limit)
 		ross = await BOLROS(limit)
 		others = await BOLOthers()
+		aryans = await AryanTag(tag)
 	})
 
 </script>
@@ -187,6 +205,31 @@
 			<button class="treebutton"><a href="/openlibrary/scripture" target="_self">Visit Now</a></button>
 		</div>
 	</div>
+	<div class="title-box x4 pads">
+		<div class="a-title">
+			<h4>The Āryan Issue</h4>
+		</div>
+		<div class="a-box">
+			<div class="boxr">
+				<h6>Core Material</h6>
+				<h6 on:click={() => setTag('Indology')} on:keydown={fauxfake}>Indology</h6>
+				<h6 on:click={() => setTag('Linguistics')} on:keydown={fauxfake}>Linguistics</h6>
+				<h6 on:click={() => setTag('History')} on:keydown={fauxfake}>History</h6>
+				<h6 on:click={() => setTag('Genetics')} on:keydown={fauxfake}>Genetics</h6>
+				<h6 on:click={() => setTag('Archaeology')} on:keydown={fauxfake}>Archaeology</h6>
+			</div>
+			<div class="gridof3">
+				{#if aryans && aryans.length > 0}
+					{#each aryans as item, i}
+						<div class="card-c" in:fly={{ duration: 300, delay: i*40, y: 120, x: 0, easing: circIn}} out:fly={{ duration: 150, y: 120, x: 0, easing: circIn}}>
+							<h6><a href={item.sourcelink} target="_blank" rel="noreferrer">{item.paper}</a></h6>
+							<p>{item.author}</p>
+						</div>
+					{/each}
+				{/if}
+			</div>
+		</div>
+	</div>
 </div>
 
 <style lang="sass">
@@ -238,5 +281,18 @@
 	padding-bottom: 64px
 	.a-title h4
 		margin-bottom: 24px
+
+.x4
+	padding-bottom: 64px
+	.boxr
+		border-bottom: 1px solid #ececec
+		gap: 16px
+		h6
+			text-transform: uppercase
+			cursor: pointer
+			&:hover
+				color: var(--tree)
+	.gridof3
+		margin-top: 32px
 
 </style>
