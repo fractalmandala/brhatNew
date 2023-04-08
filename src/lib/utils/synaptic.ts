@@ -173,3 +173,16 @@ export async function searchRV(inputword: string){
 	if (error) throw new Error(error.message)
 	return data
 }
+
+export async function padasofRamayana(kanda:string, sarga:string, verse:string, pada:string){
+		const { data, error} = await supabase
+		.from ('db-ramayana')
+		.select()
+		.eq('kanda',kanda)
+		.eq('sarga',sarga)
+		.eq('verse', verse)
+		.eq('pada', pada)
+		.order('id')
+		if (error) throw new Error(error.message)
+		return data
+	}
