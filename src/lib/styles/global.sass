@@ -76,6 +76,7 @@ $spacer: 48px
 	--news: #602C2D
 	--orange: #ff3d00
 	--green: #10D56E
+	--greenb: #10C56D
 	--mand: #538733
 	--white: #ffffff
 	--greytyp: #474747
@@ -417,6 +418,20 @@ button.redbutton
 		animation: redbuttoncolor 0.08s ease forwards
 		transform: scale(0.9)
 
+button.greenbutton
+	background: #10C56E
+	border: none
+	width: max-content
+	padding: 6px 24px
+	border-radius: 2px
+	color: white
+	font-size: 14px
+	transition: var(--snap)
+	transform-origin: center center
+	&:hover
+		animation: greenbuttoncolor 0.08s ease forwards
+		transform: scale(0.9)
+
 button.treebutton
 	background: var(--tree)
 	border: none
@@ -436,6 +451,12 @@ button.treebutton
 		background: linear-gradient(95.05deg, #FE4A49 21.59%, #D5122A 71.29%)
 	100%
 		background: linear-gradient(95.05deg, #D5122A 21.59%, #Fe4a49 71.29%)
+
+@keyframes greenbuttoncolor
+	0%
+		background: #10C56E
+	100%
+		background: #10D56C
 
 //******************************************************************************************
 //CONTAINERS
