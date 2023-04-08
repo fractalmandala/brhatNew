@@ -142,10 +142,7 @@
 .linkbox
 	display: flex
 	flex-direction: column
-	@media screen and (min-width: 1024px)
-		margin-bottom: 32px
-	@media screen and (max-width: 1023px)
-		padding-bottom: 8px
+	padding-bottom: 8px
 
 
 .linkbox

@@ -525,3 +525,23 @@ export async function events() {
 	return data
 }
 
+	export async function bucket(folder:string){
+		const { data, error } = await supabase
+		.storage
+		.from('brhatwebsite')
+  	.list(folder, {
+    	limit: 100,
+    	offset: 0,
+    	sortBy: { column: 'name', order: 'asc' },
+  	})
+		if (error) throw new Error(error.message)
+		return data
+	}
+
+	export async function getImage(link:string){
+		const { data } = await supabase
+		.storage
+		.from('brhatwebsite')
+		.getPublicUrl(link)
+		return data
+	}

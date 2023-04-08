@@ -1,6 +1,7 @@
 ---
 title: About Synaptic Reconnection
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/14bol/synaptic.webp
+tag: 'yes'
 ---
 
 #### We have a dream.

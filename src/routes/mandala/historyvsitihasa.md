@@ -1,10 +1,11 @@
 ---
-title: History is Ontic but Itihāsa is Ontologic – a Fractal Maṇḍala Essay
+title: History is Ontic but Itihāsa is Ontologic
 author: Amritanshu Pandey
 category: Svayambodha
 tags: civilizational consciousness, history, storytelling
 date: "2022-09-18"
 image: /images/dhitiheroes/60.webp
+tag: 'yes'
 ---
 
 At one point in the 1998 movie Pi, the protagonist’s professor shouts out- *“if you look for the number pi everywhere, you will find the number pi everywhere!”* We can understand the exasperation, for confirmation bias and recursive thinking are not unfamiliar in common experience. The reference is made here to preamble the following article, which may well be a similar case of ‘finding pi-s everywhere.’ Alternatively, it could be a relevant observation on itihāsa, or Indian civilisational memory. The latter proposition finds strength from previous notices of macro-historical memory in Indian itihāsa.
