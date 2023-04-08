@@ -174,7 +174,7 @@ export async function searchRV(inputword: string){
 	return data
 }
 
-export async function padasofRamayana(kanda:string, sarga:string, verse:string, pada:string){
+	export async function padasofRamayana(kanda:any, sarga:any, verse:any, pada:any){
 		const { data, error} = await supabase
 		.from ('db-ramayana')
 		.select()
@@ -182,6 +182,49 @@ export async function padasofRamayana(kanda:string, sarga:string, verse:string, 
 		.eq('sarga',sarga)
 		.eq('verse', verse)
 		.eq('pada', pada)
+		.order('id')
+		if (error) throw new Error(error.message)
+		return data
+	}
+
+	export async function versesofRamayana(kanda:any, sarga:any){
+		const { data, error} = await supabase
+		.from ('db-ramayana')
+		.select()
+		.eq('kanda',kanda)
+		.eq('sarga',sarga)
+		.order('id')
+		if (error) throw new Error(error.message)
+		return data
+	}
+
+	export async function sargasofRamayana(filteredKanda:any){
+		const { data, error} = await supabase
+		.from ('db-ramayanaindex')
+		.select()
+		.eq('kanda',filteredKanda)
+		.eq('type', 'kandasarga')
+		.order('id')
+		if (error) throw new Error(error.message)
+		return data
+	}
+
+	export async function kandasofRamayana(){
+		const { data, error} = await supabase
+		.from ('db-ramayanaindex')
+		.select()
+		.eq('type', 'kandakanda')
+		.order('id')
+		if (error) throw new Error(error.message)
+		return data
+	}
+
+	export async function entireRamayana(upperlimit:any, lowerlimit:any){
+		const { data, error} = await supabase
+		.from ('db-ramayana')
+		.select()
+		.lte('id',upperlimit)
+		.gte('id',lowerlimit)
 		.order('id')
 		if (error) throw new Error(error.message)
 		return data
