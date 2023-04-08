@@ -98,7 +98,7 @@
 		grid-template-areas: "footerlogo footerlogo" ". ." ". ." ". ."
 		padding-top: 32px
 		padding-bottom: 32px
-		row-gap: 32px
+		gap: 32px 32px
 		.footerlogo
 			grid-area: footerlogo
 			width: 50%

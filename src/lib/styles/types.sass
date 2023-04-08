@@ -67,6 +67,40 @@ caption
 	font-family: 'STIX Two Text', serif
 	color: #272727
 
+.type.aryatext p
+	font-family: 'STIX Two Text', serif
+	color: #272727
+
+.type.aryatext blockquote
+	font-style: italic
+	cite
+		font-style: normal
+		text-transform: uppercase
+		color: #b7b7b7
+
+.type.aryatext
+	@media screen and (min-width: 1024px)
+		p
+			font-size: 20px
+			line-height: 1.5
+			margin-bottom: 20px
+		blockquote
+			width: 80%
+			margin-left: 80px
+			border-bottom: 1px solid #ececec
+			padding-bottom: 32px
+			margin-bottom: 64px
+	@media screen and (max-width: 1023px)
+		p
+			font-size: 18px
+			line-height: 1.5
+			margin-bottom: 20px
+		blockquote
+			margin-left: 80px
+			border-bottom: 1px solid #ececec
+			padding-bottom: 32px
+			margin-bottom: 64px
+
 .type
 	.maincol
 		@media screen and (min-width: 1024px)
@@ -91,6 +125,29 @@ caption
 					background: #fe4a49
 			h4
 				margin: 64px 0 24px 0
+		@media screen and (max-width: 1023px)
+			padding-bottom: 64px
+			p
+				font-size: 18px
+				color: #272727
+				margin-bottom: 20px
+			h5
+				font-size: 22px
+				font-weight: 600
+				margin-bottom: 20px
+				position: relative
+				padding-top: 16px
+				&::after
+					relative: absolute
+					top: 0
+					left: 0
+					content: ''
+					height: 2px
+					width: 16%
+					background: #fe4a49
+			h4
+				margin: 48px 0 24px 0
+				font-size: 36px
 
 .type h1, .type h2
 	line-height: 1.1

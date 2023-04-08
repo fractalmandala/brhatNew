@@ -27,6 +27,7 @@
 	</div>
 </SubHeader>
 
+
 <slot></slot>
 
 
@@ -35,5 +36,10 @@
 .inlinks
 	gap: 16px
 	margin-right: 16px
+
+.boxr.inlinks
+	@media screen and (max-width: 1023px)
+		flex-direction: column
+		text-align: right
 
 </style>

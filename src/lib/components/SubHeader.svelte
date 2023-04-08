@@ -59,7 +59,7 @@
 	<div class="subicon" on:click={toggleSubMenu} on:keydown={subMenuKey}>
 		<IconSubMenu></IconSubMenu>
 	</div>
-	<div class="sublinks" class:mobileSubLinks={mobileVisibility}>
+	<div class="sublinks">
 		<slot name="links"></slot>
 	</div>
 	<div class="sublogo">
@@ -108,6 +108,16 @@
 			margin-top: 4px
 			cursor: pointer
 
+.subheader
+	.sublinks
+		@media screen and (max-width: 1023px)
+			display: none
+
+.subheader.expandedheader
+	.sublinks
+		@media screen and (max-width: 1023px)
+			display: block
+
 .transformedheader
 	transform: translateY(-64px)
 
@@ -119,15 +129,5 @@
 	height: calc(100vh - 32px)
 	overflow-y: hidden
 
-.mobileSubLinks
-	@media screen and (min-width: 1024px)
-		visibility: visible
-	@media screen and (max-width: 1023px)
-		visibility: hidden
-
-.expandedheader
-	.mobileSubLinks
-		@media screen and (max-width: 1023px)
-			visibility: visible
 
 </style>

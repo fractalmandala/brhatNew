@@ -33,6 +33,7 @@
 
 	onMount(async() => {
 		posts = await latestDhitiTen()
+		let url = $page.url.pathname
 		let text = data.title
 	})
 
@@ -110,8 +111,10 @@
 	overflow: hidden
 
 .x1
-	height: 100vh
-	justify-content: center
+	padding-top: 64px
+	@media screen and (min-width: 1024px)
+		height: 100vh
+		justify-content: center
 
 
 .x1 h6
@@ -145,10 +148,20 @@
 		&:hover
 			opacity: 1
 			filter: saturate(1.0)
+	@media screen and (max-width: 1023px)
+		padding-left: 6vw
+		padding-right: 6vw
+		.box
+			flex-direction: row
+			justify-content: space-between
+			width: 50%
 
 .maincol
 	@media screen and (min-width: 1024px)
 		padding-right: 120px
+	@media screen and (max-width: 1023px)
+		padding-left: 6vw
+		padding-right: 6vw
 
 .rightcol
 	display: flex
@@ -159,6 +172,14 @@
 		.card-body
 			h6
 				font-size: 18px
+	@media screen and (max-width: 1023px)
+		padding-left: 6vw
+		padding-right: 6vw
+		padding-top: 64px
+		border-top: 1px solid #ececec
+		.card-row
+			border-bottom: 1px solid #ececec
+			padding-bottom: 32px			
 
 .card-body
 	h6
