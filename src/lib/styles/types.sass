@@ -37,6 +37,8 @@ small
 			text-transform: uppercase
 			font-weight: bold
 			font-size: 10px
+		p
+			line-height: 1.2
 
 .type
 	.card-a
@@ -44,6 +46,8 @@ small
 			text-transform: uppercase
 			font-weight: bold
 			font-size: 10px
+		p
+			line-height: 1.2
 
 .type
 	.card-c
@@ -51,7 +55,13 @@ small
 			text-transform: uppercase
 			font-weight: bold
 			font-size: 10px
+		p
+			line-height: 1.2
 
+.type
+	.card-nix
+		p
+			line-height: 1.2
 		
 cite
 	font-size: 10px
@@ -190,7 +200,7 @@ caption
 		color: #313131
 	h5
 		color: #313131
-		font-weight: 600
+		font-weight: 400
 		letter-spacing: -0.4px
 		line-height: 1.2
 	h6
@@ -209,7 +219,7 @@ caption
 		p, pre, li
 			font-size: 1vw
 		h6
-			font-size: 1.414vw
+			font-size: 1.2vw
 		h5
 			font-size: 2vw
 		h4
@@ -220,7 +230,7 @@ caption
 		h2
 			font-size: 5.65vw
 		h1
-			font-size: 6.4vw
+			font-size: 8vw
 			letter-spacing: -2px
 	@media screen and (min-width: 787px) and (max-width: 1023px)
 		p, pre, li
@@ -279,10 +289,21 @@ caption
 .footermain
 	.mainlinks
 		color: white
-		font-weight: 500
+		font-weight: 400
 		font-size: 16px
-		margin-bottom: 16px
+		margin-bottom: 8px
+		margin-top: 16px
+		@media screen and (max-width: 1023px)
+			font-size: 15px
 
 .spacer
 	a
 		color: #474747
+		margin: 0 0 4px 0
+		padding: 0
+		line-height: 1.3
+		transition: var(--snap)
+		&:hover
+			color: #fe4a49
+		@media screen and (max-width: 1023px)
+			font-size: 15px

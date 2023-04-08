@@ -2,6 +2,7 @@
 
 	import { onMount } from 'svelte'
 	import Lenis from '@studio-freight/lenis'
+	import Header from '$lib/components/Header.svelte'
 	import { gsap } from 'gsap'
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger.js' 
 	import { reveal } from 'svelte-reveal'
@@ -36,7 +37,7 @@
 			{
 				width: '100%',
 				scrollTrigger: {
-					trigger: element as DOMTarget,
+					trigger: element as Element,
 					start: 'top bottom',
 					end: 'bottom top',
 					scrub: true
@@ -96,6 +97,9 @@
 </script>
 
 <svelte:window bind:scrollY={scy} bind:outerHeight={ouh} bind:innerWidth={innw}/>
+
+<Header>
+</Header>
 <div class="type">
 	<HomeAccordion></HomeAccordion>
 	<div class="plain-three x1 pads">
@@ -233,7 +237,11 @@
 		width: 200px
 		height: 200px
 
-.x1, .x2, .x3, .x5
+.x2
+	padding-bottom: 64px
+	align-content: center
+
+.x1, .x3, .x5
 	@media screen and (min-width: 1024px)
 		height: 100vh
 		align-content: center

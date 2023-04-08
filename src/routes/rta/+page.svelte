@@ -67,7 +67,10 @@
 	</div>
 	<div class="plain-one x4 pads">
 		<div class="onpagelinks">
+			<h4><a href="/rta/prologue">Prologue</a></h4>
+			<h4><a href="/rta/intro">Introduction</a></h4>
 			<h4><a href="/rta/dharmaisdesign">Dharma is Design</a></h4>
+			<h4><a href="/rta/designatbrhat">Design at Bṛhat</a></h4>
 		</div>
 	</div>
 </div>
@@ -126,5 +129,17 @@
 					h6
 						border-top: 1px solid #ececec
 						padding-top: 16px
+
+.x4
+	@media screen and (min-width: 1024px)
+		padding-bottom: 64px
+		h4
+			text-align: center
+
+.x4
+	h4
+		transition: var(--snap)
+		&:hover
+			color: var(--greenb)
 
 </style>
