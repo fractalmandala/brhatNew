@@ -677,3 +677,22 @@ export const mandalaAll = async() => {
 	const tagPosts = allPosts.filter((post) => post.meta.tag === "yes")
 	return tagPosts
 } 
+
+export const aboutAll = async() => {
+	const allPostFiles = import.meta.glob('/src/routes/mandala/*.md')
+	const iterablePostFiles = Object.entries(allPostFiles)
+	const allPosts = await Promise.all(
+		iterablePostFiles.map(async ([path, resolver]) => {
+			// @ts-ignore
+			const { metadata } = await resolver()
+			const postPath = path.slice(11,-3)
+			return {
+				meta: metadata,
+				path: postPath,
+			}
+		})
+	)
+	// @ts-ignore
+	const tagPosts = allPosts.filter((post) => post.meta.tag === "yes")
+	return tagPosts
+} 
