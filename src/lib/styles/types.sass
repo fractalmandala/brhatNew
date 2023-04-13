@@ -72,10 +72,10 @@ caption
 	font-size: 12px
 
 .type p, .type pre, .type small, .type cite, .type caption, .type h6, .type h5, .type h4, .type h3, .type h2, .type h1
-	font-family: 'Vazirmatn', sans-serif
+	font-family: 'Spline Sans', sans-serif
 
 .type.dhiti	h4, .type.dhiti h6, .type.dhiti h3, .type.dhiti h2
-	font-family: 'Playfair Display', serif
+	font-family: 'Spline Sans', sans-serif
 
 .maincol, .maincol p
 	font-family: 'STIX Two Text', serif
@@ -88,25 +88,29 @@ caption
 .type.mandalatext
 	.mainbar p
 		font-size: 17px
-		color: #272727
+		color: white
 		margin-bottom: 24px
+		line-height: 1.7
 	.mainbar h5
 		border-left: 4px solid #10D56C
 		padding-left: 16px
 		line-height: 1.12
 		margin-bottom: 24px
+		color: white
 	.mainbar h4
 		margin: 64px 0 24px 0
 		border-top: 2px solid #10D56C
 		padding-top: 24px
+		color: white
 	blockquote
 		font-style: italic
 		border-left: 4px solid #10D56C
 		padding-left: 16px
+		color: white
 
 
 .type.brhattext
-	.mainbar p
+	.mainbar p, .mainbar li
 		font-size: 17px
 		color: #171717
 		margin-bottom: 24px
@@ -118,7 +122,12 @@ caption
 	.mainbar h4
 		margin: 64px 0 24px 0
 		font-size: 32px
-	blockquote
+	.mainbar h3
+		margin: 64px 0 24px 0
+		font-size: 20px
+		font-style: italic
+		font-weight: 400
+	.mainbar blockquote
 		font-style: italic
 		border-left: 4px solid #fe4a49
 		padding-left: 16px
@@ -343,3 +352,31 @@ caption
 			color: #fe4a49
 		@media screen and (max-width: 1023px)
 			font-size: 15px
+
+.type.dhiti
+	@media screen and (min-width: 1024px)
+		.card-row h6
+			border-bottom: 1px solid #e1e1e1
+			padding-bottom: 8px
+		.maincol p
+			text-transform: none
+			color: #272727
+		
+
+
+.sidebar .box
+	p
+		font-size: 18px
+		text-transform: uppercase
+		font-weight: 400
+		letter-spacing: -0.5px
+		color: #979797
+		transition: var(--snap)
+		border-bottom: 1px solid #eaeaea
+
+.whitecard
+	h6
+		font-size: 21px
+		margin-bottom: 8px
+	p
+		color: #878787

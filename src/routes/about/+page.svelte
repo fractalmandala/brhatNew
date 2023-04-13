@@ -1,10 +1,10 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
+	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import Animations from 'textify.js'
 	import { reveal } from 'svelte-reveal'
 	import { elementVisibilityStore } from "svelte-legos"
-	import Lenis from '@studio-freight/lenis'
 	import { createCurateConsult, threeConvictions, brhatAdvisors, brhatTeam, brhatPartners } from '$lib/utils/supapulls'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
 
@@ -30,20 +30,6 @@
 		advisors = await brhatAdvisors()
 		partners = await brhatPartners()
 		team = await brhatTeam()
-		const lenis = new Lenis({
-			orientation: 'vertical',
-			duration: 1.0,
-			wheelMultiplier: 0.5,
-			infinite: false,
-			smoothWheel: true
-		})
-		lenis.on('scroll', (e: any) => {
-		})
-		function raf(time: any) {
-  		lenis.raf(time)
-  		requestAnimationFrame(raf)
-		}
-		requestAnimationFrame(raf)
 		const { Textify } = Animations
 		new Textify({
 			selector: '.card-body h6',
@@ -81,6 +67,11 @@
 
 </script>
 
+<svelte:head>
+	<HeadComponent>
+		About 
+	</HeadComponent>
+</svelte:head>
 
 <div class="type">
 	<div class="x0">
@@ -103,7 +94,7 @@
 						<div class="card-image">
 							<img src={item.image} alt={item.id}/>
 						</div>
-						<div class="card-body">
+						<div class="card-body firstcard">
 							<h6 data-textify>{item.name}</h6>
 							<p>{item.content}</p>
 						</div>
@@ -128,7 +119,7 @@
 						<div class="card-image">
 							<img src={item.image} alt={item.id}/>
 						</div>
-						<div class="card-body">
+						<div class="card-body firstcard">
 							<h6>{item.name}</h6>
 							<p class="wide60">{item.content}</p>
 						</div>
@@ -227,6 +218,10 @@
 
 <style lang="sass">
 
+.firstcard
+	@media screen and (min-width: 1024px)
+		width: 40%
+
 .x0
 	height: 100vh
 	overflow: hidden
@@ -302,7 +297,7 @@
 				flex-direction: column
 				align-items: center
 				img
-					width: 200px
+					width: 160px
 					margin-left: auto
 					margin-right: auto
 			@media screen and (max-width: 1023px)

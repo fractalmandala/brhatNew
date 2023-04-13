@@ -3,7 +3,6 @@
 	import { onMount } from 'svelte'
 	import { allCourses } from '$lib/utils/supapulls'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
-	import Modal from '$lib/components/Modal.svelte'
 
 	let courses:string|any[]
 
@@ -20,9 +19,9 @@
 	</div>
 	<div class="title-box x1 pads">
 		<div class="a-title">
-			<h3>Bṛhat Draṣṭā</h3>
+			<h2>Bṛhat Draṣṭā</h2>
 		</div>
-		<div class="a-box box extra">
+		<div class="a-box box extra secondlevel">
 			<h5>
 				is an offering in deep learning that extends courses on some of the greatest ancient and contemporary philosophers (draṣṭās) and schools of thoughts (darśanas).
 			</h5>
@@ -35,7 +34,7 @@
 		<div class="a-box gridof2">
 			{#if courses && courses.length > 0}
 				{#each courses as item}
-					<div class="card-b">
+					<div class="card-c">
 						<div class="card-image">
 							<img src={item.image} alt={item.id}/>
 						</div>
@@ -68,7 +67,6 @@
 			</div>
 		</div>
 	</div>
-	<Modal></Modal>
 </div>
 
 <style lang="sass">
@@ -95,6 +93,14 @@
 
 .x3
 	padding-bottom: 64px
+
+.x2
+	.gridof2
+		.card-c
+			row-gap: 16px
+			h6
+				font-size: 21px
+				text-transform: capitalize
 
 
 </style>

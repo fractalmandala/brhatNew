@@ -5,6 +5,8 @@
 	import { expoIn } from 'svelte/easing'
 	import { allChapters, allDiaryCards, allFaq, anveshiGeneral } from '$lib/utils/supapulls'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
+	import Anveshi from '$lib/anims/LogoAnveshi.svelte'
+	import WhiteCard from '$lib/components/WhiteCard.svelte'
 
 	let chapters:string|any[]
 	let cards:string|any[]
@@ -47,17 +49,19 @@
 	
 </script>
 
+
+
 <div class="type">
 	<div class="box x0">
 		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/brhatanveshi.webp')"></ParallaxImage>
 	</div>
 	<div class="title-box x1 pads">
 		<div class="a-title">
-			<h3>Bṛhat Anveṣī</h3>
+			<Anveshi></Anveshi>
 		</div>
-		<div class="a-box box extra">
+		<div class="a-box box extra secondlevel">
 			<h5>
-				is a travel program to contemporize ancient Indian tradition by guiding travel groups through hitherto rarely explored sacred kṣetras of India.
+			 A travel program to contemporize ancient Indian tradition by guiding travel groups through hitherto rarely explored sacred kṣetras of India.
 			</h5>
 			<p>
 				Each chapter of Bṛhat Anveṣī focuses on a specific area of India with dense concentrations of great temples and heritage centers. Anveṣī chapters are thrilling rides of three to four days, full of exploration of local cuisine, culture and heritage. Designed to satisfy both your wanderlust and curiosity, leaving you with an elevated taste of the cultural magic of India.
@@ -71,11 +75,9 @@
 		<div class="a-box gridof3">
 			{#if chapters && chapters.length > 0}
 				{#each chapters as item}
-					<div class="card-b">
-						<div class="card-image">
-							<img src={item.image} alt={item.id} />
-						</div>
-						<div class="card-body">
+					<WhiteCard>
+						<img slot="image" src={item.image} alt={item.id}/>
+						<div slot="body" class="cardboard"> 
 							<h6>
 								<a href="/anveshi/chapter/{item.chapter}">
 								{item.name}
@@ -84,7 +86,7 @@
 							<p>
 								{item.content.slice(0,300)}...<span style="color: var(--yellow); font-weight: bold"><a href="/anveshi/chapter/{item.chapter}">Know More</a></span>
 							</p>
-							<div class="boxr card-meta">
+							<div class="cardothers">
 								<small style="color: var(--yellow)">
 									{item.duration}
 								</small>
@@ -93,7 +95,7 @@
 								</small>
 							</div>
 						</div>
-					</div>
+					</WhiteCard>
 				{/each}
 			{/if}
 		</div>
@@ -124,7 +126,7 @@
 		<div class="a-box gridof2">
 			{#if faqs && faqs.length > 0}
 				{#each faqs as item, i}
-					<div class="card-b faqcard" on:click={() => toggleFaq(i)} on:keydown={() => toggleFaq(i)}>
+					<div class="card-c faqcard" on:click={() => toggleFaq(i)} on:keydown={() => toggleFaq(i)}>
 						<h6>{item.name}</h6>
 						{#if isFaqOpen[i]}
 							<p in:receive out:send>{item.content}</p>
@@ -136,12 +138,27 @@
 	</div>
 </div>
 
-<style lang="sass">
 
+<style lang="sass">
 .x0
 	overflow: hidden
 	@media screen and (min-width: 1024px)
 		height: 100vh
+
+.x3
+	.a-box
+		padding-left: 56px
+		padding-right: 32px
+
+.x4
+	.a-box
+		padding-left: 56px
+		padding-right: 32px
+
+.x2
+	.gridof3
+		padding-left: 48px
+		padding-right: 32px
 
 .x1, .x2, .x3
 	@media screen and (min-width: 1024px)
@@ -154,8 +171,8 @@
 .x1
 	padding-top: 64px
 
-
 .faqcard
 	cursor: pointer
+	row-gap: 8px
 
 </style>

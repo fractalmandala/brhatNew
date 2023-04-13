@@ -215,6 +215,9 @@
 			</svg>
 		</a>
 	</div>
+	<div class="freeslot">
+		<slot></slot>
+	</div>
 	<div class="iconbox">
 		<div class="box" on:click={openNav} on:keydown={navKey}>
 			<IconMenu></IconMenu>
@@ -223,6 +226,14 @@
 </div>
 
 <style lang="sass">
+
+.freeslot
+	display: flex
+	@media screen and (min-width: 1024px)
+		flex-direction: row
+		gap: 16px
+		height: 100%
+		width: 100%
 
 .head
 	width: 100vw

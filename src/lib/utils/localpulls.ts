@@ -33,7 +33,7 @@ export const latestDhitiThree = async() => {
 	)
 	// @ts-ignore
 	allPosts.sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date))
-	return allPosts.slice(1, 4)
+	return allPosts.slice(1, 7)
 } //latest posts 2, 3 and 4
 
 export const latestDhitiTen = async() => {
@@ -256,6 +256,27 @@ export const dhitiIKSTwo = async() => {
 	return featuredPosts.slice(0, 2)
 } //two posts in IKS category
 
+export const filterChosen = async(category:string) => {
+	const allPostFiles = import.meta.glob('/src/routes/dhiti/*.md')
+	const iterablePostFiles = Object.entries(allPostFiles)
+	const allPosts = await Promise.all(
+		iterablePostFiles.map(async ([path, resolver]) => {
+			// @ts-ignore
+			const { metadata } = await resolver()
+			const postPath = path.slice(11,-3)
+
+			return {
+				meta: metadata,
+				path: postPath
+			}
+		})
+	)
+	// @ts-ignore
+	allPosts.sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date))
+	const featuredPosts = allPosts.filter((post) => post.meta.category === category)
+	return featuredPosts
+} 
+
 export const authorPankaj = async() => {
 	const allPostFiles = import.meta.glob('/src/routes/dhiti/*.md')
 	const iterablePostFiles = Object.entries(allPostFiles)
@@ -393,6 +414,26 @@ export const authorAnshuman = async() => {
 	// @ts-ignore
 	allPosts.sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date))
 	const authorPosts = allPosts.filter((post) => post.meta.author === "Anshuman Panda" || post.meta.authortwo === "Anshuman Panda")
+	return authorPosts
+} 
+
+export const authorfiltered = async(author:string) => {
+	const allPostFiles = import.meta.glob('/src/routes/dhiti/*.md')
+	const iterablePostFiles = Object.entries(allPostFiles)
+	const allPosts = await Promise.all(
+		iterablePostFiles.map(async ([path, resolver]) => {
+			// @ts-ignore
+			const { metadata } = await resolver()
+			const postPath = path.slice(11,-3)
+			return {
+				meta: metadata,
+				path: postPath,
+			}
+		})
+	)
+	// @ts-ignore
+	allPosts.sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date))
+	const authorPosts = allPosts.filter((post) => post.meta.author === author || post.meta.authortwo === "Anshuman Panda")
 	return authorPosts
 } 
 

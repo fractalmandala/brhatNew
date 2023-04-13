@@ -3,7 +3,6 @@
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
 	import { onMount } from 'svelte'
 	import { reveal } from 'svelte-reveal'
-	import Lenis from '@studio-freight/lenis'
 	import Animations from 'textify.js'
 	import { fade } from 'svelte/transition'
 	let rot:number
@@ -40,20 +39,6 @@
 
 
 	onMount(() => {
-		const lenis = new Lenis({
-			orientation: 'vertical',
-			duration: 1.0,
-			wheelMultiplier: 0.5,
-			infinite: false,
-			smoothWheel: true
-		})
-		lenis.on('scroll', (e: any) => {
-		})
-		function raf(time: any) {
-  		lenis.raf(time)
-  		requestAnimationFrame(raf)
-		}
-		requestAnimationFrame(raf)
 		const { Textify, TextifyTitle } = Animations
 		new Textify({
 			selector: '.typetextifyaa',
@@ -87,10 +72,6 @@
 </script>
 
 <svelte:window bind:scrollY={rot}/>
-
-<div class="fixed" style="color: white">
-{rot}<br>{rota}
-</div>
 
 <div class="type">
 	<div class="x0">
@@ -148,28 +129,30 @@
 		<img class="rotatingmandala" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/10mandala/rotator.webp" alt="rotator" style="transform: rotate({rot/10}deg)" transition:fade/>
 		<div class="gridof2">
 			<div class="card-nix extra">
-				<h6>
+				<h4 style="color: #10D56C">
 					Fractal
-				</h6>
-				<p>
+				</h4>
+				<pre>
 					A curve or geometrical figure, each part of which has the same statistical character as the whole. Any of various extremely irregular curves or shapes for which any suitably chosen part is similar in shape to a given larger or smaller part.<br>
 					A fractal displays the same properties at any magnification level, ie., it is multi-level.
-				</p>
+				</pre>
 			</div>
 			<div class="card-nix extra">
-				<h6>
+				<h4 style="color: #10D56C">
 					Maṇḍala
-				</h6>
-				<p>
+				</h4>
+				<pre>
 					A circle or anything circular- globe, circumference, orbit of a celestial object, an array of troops. From the root √maṇḍ (मण्ड्) meaning satisfaction, adornment, wholeness, complete, satisfied (√bhūṣ, √hṛṣ, tuṣṭa, alaṅkāra).<br>
 					A circle- śūnya or pūrṇam- is where all constituents form a unified whole, ie., it is coherent.
-				</p>
+				</pre>
 			</div>
 		</div>
 	</div>
 	<div class="plain-one x6 pads">
 		<h3 class="wide60 typetextifybb" style="color: white">
-			the Fractal Maṇḍala is an exploration, study and articulation of the Indian civilizational consciousness
+			the Fractal Maṇḍala is an exploration, study and articulation of the </h3>
+		<h3 class="typetextifybb" style="color: #10D56C">
+		Indian civilizational consciousness
 		</h3>
 		<div class="onpagelinks dark">
 			<h4><a href="/mandala/macrohistoriccase" target="_self">the macrohistoric case</a></h4>
@@ -187,6 +170,31 @@
 
 <style lang="sass">
 
+.x5
+	.gridof2
+		.card-nix
+			border: 1px solid #272727
+			border-radius: 4px
+			padding: 48px
+			box-shadow: 16px 9px 18px #010101
+			background: #111111
+			background-color: hsla(0,2%,2%,1)
+			background-image: radial-gradient(at 80% 80%, hsla(101,3%,2%,1) 0px, transparent 50%), radial-gradient(at 40% 0%, hsla(126,75%,7%,1) 0px, transparent 50%)
+		@media screen and (min-width: 1024px)
+			padding-left: 10vw
+			padding-right: 10vw
+			.card-nix
+				pre
+					color: white
+					line-height: 1.8
+				h6
+					text-shadow: 2px 3px 12px #111111		
+
+
+.card-nix
+	pre
+		white-space: pre-line
+
 .x2
 	.box h5
 		transform-origin: left center
@@ -203,7 +211,8 @@
 	transition: all ease
 
 .type
-	background: var(--beau)
+	background-color: hsla(0,11%,3%,1)
+	background-image: radial-gradient(at 80% 25%, hsla(118,71%,10%,1) 0px, transparent 50%), radial-gradient(at 41% 34%, hsla(93,83%,2%,1) 0px, transparent 50%)
 	h6, p
 		color: white
 		font-weight: 300
@@ -288,7 +297,6 @@
 	padding-bottom: 64px
 	padding-top: 64px
 	@media screen and (min-width:1024px)
-		height: 100vh
 		justify-content: center
 
 .rotatingmandala

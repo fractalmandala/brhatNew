@@ -8,17 +8,42 @@
 <div class="accordion">
 	<div class="panel back" id="panel1">
 		<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/creative-culture-1024-1.webp" alt="cc"/>
+		<button class="accordionbutton"><a href="/about/culturecreatives">Culture Creatives</a></button>
 	</div>
 	<div class="panel back" id="panel2">
 		<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/research-policy-1024-1.webp" alt="pr"/>
+			<button class="accordionbutton"><a href="/about/policyresearch">Policy Research</a></button>
 	</div>
 	<div class="panel back" id="panel3">
 		<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/develop-leader-1024-1.webp" alt="ld"/>
+		<button class="accordionbutton"><a href="/about/leadershipdevelopment">Leadership Development</a></button>
 	</div>
 </div>
 
 
 <style lang="sass">
+
+button.accordionbutton
+	border: 1px solid white
+	padding: 5px 20px
+	color: white
+	border-radius: 2px
+	background: #171717
+	transform-origin: left center
+	transition: all 0.3s ease
+
+.accordionbutton
+	position: absolute
+	bottom: 64px
+	left: 32px
+
+.accordion .panel
+	&:hover
+		button.accordionbutton
+			background: #fe4a49
+			transform: scale(1.2) translateY(-32px)
+			&:hover
+				background: var(--strong)
 
 .accordion
 	display: flex
@@ -34,6 +59,7 @@
 	display: flex
 	flex-direction: column
 	transition: all 0.32s var(--cubea)
+	position: relative
 	@media screen and (min-width: 1024px)
 		height: 100%
 		width: 33.33%
@@ -42,6 +68,8 @@
 		height: 33.33%
 		width: 100%
 		border: 2px solid white
+
+
 
 .accordion
 	@media screen and (min-width: 1024px)

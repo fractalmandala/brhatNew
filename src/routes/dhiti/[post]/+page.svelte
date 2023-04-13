@@ -2,6 +2,7 @@
 
 	export let data
 	import { onMount } from 'svelte'
+	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import { page } from '$app/stores'
 	import Formatting from '$lib/components/Formatting.svelte'
 	import ReadingProgress from '$lib/components/ReadingProgress.svelte'
@@ -40,10 +41,12 @@
 </script>
 
 <svelte:head>
+	<HeadComponent>
+		{data.title} | Dhīti at
+	</HeadComponent>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-	<title>Dhīti - {data.title} | Bṛhat</title>
 </svelte:head>
 
 
@@ -54,8 +57,8 @@
 		</ParallaxImage>
 	</div>
 	<div class="plain-one x1 pads">
-		<p class="label">{data.category}</p>
-		<h1 style="font-family: 'Playfair Display', serif">{data.title}</h1>
+		<p style="color: white; background: var(--strong); width: max-content; padding: 6px; font-size: 16px">{data.category}</p>
+		<h2 style="font-family: 'Playfair Display', serif; font-weight: 700; letter-spacing: -3px">{data.title}</h2>
 		<h6 class="border-bottom pad16" style="font-family: 'Vazirmatn', sans-serif">{data.author}
 		{#if data.authortwo && data.authortwo.length > 0}
 			and {data.authortwo}

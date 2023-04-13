@@ -4,13 +4,14 @@
 	import { chapterItinerary } from '$lib/utils/supapulls'
 	import { crossfade } from 'svelte/transition'
 	import { quartOut } from 'svelte/easing'
-	export let data
+	import { chapterTemples } from '$lib/utils/supapulls'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
 
 	let p:number
 	let chapter:string 
 	let itins:string|any[]
 	let openedDay:boolean[] = Array(5).fill(false)
+	let temp:any
 
 	function toggleDay(index:number) {
 		openedDay[index] = !openedDay[index]
@@ -30,7 +31,10 @@
 	onMount(async() => {
 		chapter = data.chapter
 		itins = await chapterItinerary(chapter)
+		temp = await chapterTemples(chapter)
 	})
+
+	export let data
 
 </script>
 
@@ -48,8 +52,8 @@
 			<h6>{data.dates}</h6>
 			<h6>{data.price}</h6>
 		</div>
-		<div class="a-box">
-			<h5>
+		<div class="a-box secondlevel">
+			<h5 style="font-weight: 400; line-height: 1.3">
 				{data.content}
 			</h5>
 		</div>
@@ -58,10 +62,10 @@
 		<div class="a-title">
 			<h4>Itinerary</h4>
 		</div>
-		<div class="a-box">
+		<div class="a-box gridof3">
 			{#if itins && itins.length > 0}
 				{#each itins as item, i}
-					<div class="card-b" on:click={() => toggleDay(i)} on:keydown={() => toggleDay(i)}>
+					<div class="card-c" on:click={() => toggleDay(i)} on:keydown={() => toggleDay(i)}>
 						<div class="card-body">
 							<h6>{item.name}</h6>
 							{#if openedDay[i]}
@@ -73,9 +77,41 @@
 			{/if}
 		</div>
 	</div>
+	<div class="title-box x3 pads">
+		<div class="a-title">
+			<h4>Temples</h4>
+		</div>
+		<div class="a-box gridof2">
+			{#if temp && temp.length > 0}
+				{#each temp as item}
+					<div class="card-c">
+						<div class="imagecard">
+							<img src={item.image} alt={item.id}/>
+						</div>
+						<div class="bodyarea">
+							<p>{item.content}</p>
+						</div>
+					</div>
+				{/each}
+			{/if}
+		</div>
+	</div>
 </div>
 
 <style lang="sass">
+
+.x3
+	padding-bottom: 64px
+		
+
+.card-c
+	flex-shrink: 0
+	row-gap: 24px
+	img
+		object-fit: cover
+		width: 100%
+		height: 240px
+
 
 .x0
 	overflow: hidden
@@ -103,8 +139,11 @@
 .x2
 	padding-bottom: 64px
 	@media screen and (min-width: 1024px)
-		min-height: 100vh
+		height: 100vh
 		align-content: center
+		gap: 32px
+		.a-box
+			
 
 .x1
 	.a-title
@@ -115,12 +154,13 @@
 			padding: 8px
 			text-align: center
 
-.x2
-	.a-box
-		.card-b
-			height: max-content
-			cursor: pointer
-			margin-bottom: 32px
+.x1
+	.a-title
+		position: sticky
+		top: 0
+		padding-top: 80px
+
+
 
 
 </style>

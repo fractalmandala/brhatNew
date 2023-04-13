@@ -12,3 +12,13 @@
 	<div class="formatcolumn11 fc"></div>
 	<div class="formatcolumn12 fc"></div>
 </div>
+
+<style lang="sass">
+
+.formatting
+	z-index: 1000
+
+.fc
+	border: 1px solid #d7d7d7
+
+</style>

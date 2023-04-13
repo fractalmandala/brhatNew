@@ -1,8 +1,8 @@
 <script lang="ts">
 
-	export let data	
 	import { onMount } from 'svelte'
 	import { mandalaAll } from '$lib/utils/localpulls'
+	import HeadComponent from '$lib/components/HeadComponent.svelte'
 
 	let fractals:any
 	let wide:number
@@ -17,23 +17,23 @@
 	onMount(async() => {
 		fractals = await mandalaAll()
 	})
+
+	export let data	
+
 </script>
 
-
-<svelte:window bind:innerWidth={wide}/>
-
 <svelte:head>
+	<HeadComponent>
+		{data.title} at 
+	</HeadComponent>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
 </svelte:head>
 
+<svelte:window bind:innerWidth={wide}/>
+
 <div class="type brhattext">
-	<div class="plain-one x1 pads">
-		<h2>
-			{data.title}
-		</h2>
-	</div>
 	<div class="x2">
 		<div class="sidebar" class:mobileSidebar={mobileView}>
 			<div class="box">
@@ -48,6 +48,9 @@
 			</div>
 		</div>
 		<div class="mainbar">
+			<h2 style="letter-spacing: -2px; font-weight: 600">
+				{data.title}
+			</h2>
 			<svelte:component this={data.content}/>
 		</div>
 	</div>
@@ -55,9 +58,10 @@
 
 <style lang="sass">
 
+.type.brhattext
+	background-color: hsla(0,100%,97%,1)
+	background-image: radial-gradient(at 40% 20%, hsla(27,0%,100%,1) 0px, transparent 50%), radial-gradient(at 80% 78%, hsla(0,92%,58%,1) 0px, transparent 50%)
 
-.x1
-	padding-top: 64px
 
 .x2
 	display: grid
@@ -70,8 +74,14 @@
 	@media screen and (min-width: 1024px)
 		grid-template-columns: 280px 1fr
 		grid-template-areas: "sidebar mainbar"
-		padding: 64px 16vw 64px 4vw
+		padding: 0px 16vw 64px 4vw
 		gap: 0 8vw
+		.mainbar
+			padding-top: 80px
+			h2
+				padding-bottom: 32px
+				border-bottom: 1px solid #e1e1e1
+				margin-bottom: 64px
 	@media screen and (max-width: 1023px)
 		grid-template-columns: 1fr
 		grid-template-areas: "sidebar" "mainbar"
@@ -81,13 +91,12 @@
 .sidebar .box
 	height: max-content
 	position: sticky
-	top: 0
-	padding-top: 80px
+	top: 144px
+	padding-top: 24px
 	row-gap: 4px
 	p
-		transition: var(--snap)
 		&:hover
-			color: #10D56C
+			color: #fe4a49
 
 .sidebar.mobileSidebar
 	position: sticky
@@ -98,9 +107,5 @@
 	.box
 		padding-top: 8px
 
-
-.mainbar
-	padding-top: 80px
-	
 
 </style>

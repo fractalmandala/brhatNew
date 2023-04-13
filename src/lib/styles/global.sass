@@ -1,7 +1,8 @@
 body, html
 	margin: 0
 	box-sizing: border-box
-	font-family: 'Vazirmatn', sans-serif
+	font-family: 'Spline Sans', sans-serif
+
 
 $spacer: 48px
 
@@ -144,12 +145,8 @@ a
 		flex-direction: column
 		row-gap: 12px
 		height: 100%
-		background: #fafafa
 		padding: 24px
 		transition: var(--snap)
-		&:hover
-			background: white
-			box-shadow: 4px 7px 12px #eaeaea, -5px -6px 9px #f7f7f7
 		.card-image
 			height: 160px
 			img
@@ -185,12 +182,6 @@ a
 	@media screen and (min-width: 1024px)
 		row-gap: 12px
 		height: 100%
-		background: #fafafa
-		padding: 24px
-		transition: var(--snap)
-		&:hover
-			background: white
-			box-shadow: 4px 7px 12px #eaeaea, -5px -6px 9px #f7f7f7
 		.card-image
 			height: 160px
 			img
@@ -229,11 +220,12 @@ a
 	flex-direction: column
 	@media screen and (min-width: 1024px)
 		padding: 24px
-		background: #fafafa
-		transition: var(--snap)
+		transition: all 0.1s var(--cubec)
+		box-shadow: 7px 4px 7px #eaeaea, -5px -6px 9px #f7f7f7
+		border: 1px solid transparent
 		&:hover
-			background: white
-			box-shadow: 4px 7px 12px #eaeaea, -5px -6px 9px #f7f7f7
+			box-shadow: none
+			border: 1px solid #ececec
 
 .card-nix
 	display: flex
@@ -346,7 +338,7 @@ a
 .label
 	background: #fe4a49
 	text-transform: uppercase
-	font-size: 12px
+	font-size: 16px
 	color: white
 	padding: 4px 8px 2px 8px
 	width: max-content
@@ -467,7 +459,7 @@ button.treebutton
 	@media screen and (min-width: 1024px)
 		grid-template-rows: auto auto
 		grid-template-columns: 160px 1fr 1fr 1fr
-		grid-template-areas: "title strip strip strip" ". box box box"
+		grid-template-areas: "title strip strip strip" "title box box box"
 		gap: 32px 64px
 		.strip
 			grid-area: strip
@@ -544,7 +536,7 @@ button.treebutton
 	@media screen and (min-width: 1024px)
 		grid-template-columns: 1fr 1fr 1fr
 		grid-template-areas: ". . ."
-		gap: 32px 32px
+		gap: 32px 40px
 	@media screen and (max-width: 1023px)
 		grid-template-areas: "." "." "."
 		grid-template-columns: 1fr
@@ -589,3 +581,32 @@ button.treebutton
 		grid-template-areas: ". ." ". ." ". ."
 		gap: 32px 24px
 	
+
+.whitecard
+	.card-body h6
+		font-size: 24px
+
+
+.whitecard img
+	object-fit: cover
+	width: 100%
+
+.whitecard
+	.cardboard
+		@media screen and (min-width: 1024px)
+			padding-left: 8px
+			padding-right: 8px
+			.cardothers
+				display: flex
+				flex-direction: row
+				border-top: 1px solid #e1e1e1
+				padding-bottom: 16px
+				padding-top: 8px
+				margin-top: 16px
+				justify-content: space-between
+
+
+.secondlevel
+	@media screen and (min-width: 1024px)
+		padding-left: 56px	
+		padding-right: 128px
