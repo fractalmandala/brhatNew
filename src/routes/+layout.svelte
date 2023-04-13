@@ -14,7 +14,7 @@
 			duration: 1.2,
 			orientation: 'vertical',
 			gestureOrientation: 'vertical',
-			wheelMultiplier: 0.7,
+			wheelMultiplier: 0.6,
 			smoothWheel: true,
 			touchMultiplier: 1,
 			infinite: false,

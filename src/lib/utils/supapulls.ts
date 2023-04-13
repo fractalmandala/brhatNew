@@ -97,6 +97,16 @@ export async function BOLLatest(limit: number) {
 	return data;
 }
 
+export async function BOLSelect(selected:any) {
+	const { data, error } = await supabase
+		.from('brhat-openlibrary')
+		.select()
+		.eq('Type',selected)
+		.order('id', { ascending: false })
+	if (error) throw new Error(error.message);
+	return data
+}
+
 export async function AryanIssue(){
 	const { data, error } = await supabase
 	.from('brhat-aryanissue')

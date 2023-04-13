@@ -261,11 +261,13 @@ a
 	display: flex
 	flex-direction: row
 	padding: 16px
-	background: #fafafa
-	transition: var(--snap)
+	transition: all 0.1s var(--cubec)
+	box-shadow: 7px 4px 7px #eaeaea, -5px -6px 9px #f7f7f7
+	border: 1px solid transparent
+	border-radius: 4px
 	&:hover
-		background: white
-		box-shadow: 4px 7px 12px #eaeaea, -5px -6px 9px #f7f7f7
+		box-shadow: none
+		border: 1px solid #ececec
 	.card-image
 		img
 			object-fit: contain
@@ -274,10 +276,10 @@ a
 	@media screen and (min-width: 1024px)
 		column-gap: 32px
 		.card-image
-			width: 30%
-			height: 200px
+			width: 24%
+			height: 160px
 		.card-body
-			width: calc(70% - 32px)		
+			width: calc(76% - 32px)		
 			display: flex
 			flex-direction: column
 			row-gap: 16px
