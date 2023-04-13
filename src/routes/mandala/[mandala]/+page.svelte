@@ -50,8 +50,8 @@
 <style lang="sass">
 
 .mandalatext
-	background-color: hsla(0,11%,3%,1)
-	background-image: radial-gradient(at 42% 24%, hsla(118,90%,5%,1) 0px, transparent 50%), radial-gradient(at 65% 70%, hsla(222,84%,8%,1) 0px, transparent 50%)
+	background-color: hsla(0,0%,0%,1)
+	background-image: radial-gradient(at 28% 88%, hsla(15,82%,21%,0.34) 0px, transparent 50%), radial-gradient(at 76% 9%, hsla(25,93%,19%,0.52) 0px, transparent 50%)
 
 .x0
 	height: 100vh
@@ -63,8 +63,7 @@
 	padding-top: 64px
 	padding-bottom: 64px
 	h1
-		color: white
-		text-shadow: 6px 6px 13px #030303
+		color: #ff3d00
 
 .x2
 	display: grid
@@ -97,11 +96,11 @@
 	padding-top: 80px
 	row-gap: 4px
 	p
-		color: #b7b7b7
+		color: white
 		border: none
 		font-size: 16px
 		&:hover
-			color: #10D56C
+			color: #ff3d00
 
 .sidebar.mobileSidebar
 	position: sticky

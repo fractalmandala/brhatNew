@@ -35,28 +35,29 @@
 			</div>
 		</div>
 		<div class="spacer">
-			<a class="mainlinks" href="/dhiti" target="_self">Dhīti</a>
-			<a class="mainlinks" href="/openlibrary" target="_self">Bṛhat Open Library</a>
-			<a class="mainlinks" href="/mrdanga" target="_self">Bṛhad Mṛdaṅga</a>
-			<a class="mainlinks" href="/about" target="_self">About</a>
+			<p class="mainlinks">Contact Us</p>
+			<a class="mainlinks" href="/dhiti">Dhīti</a>
+			<a class="mainlinks" href="/openlibrary">Bṛhat Open Library</a>
+			<a class="mainlinks" href="/mrdanga">Bṛhad Mṛdaṅga</a>
+			<a class="mainlinks" href="/about">About</a>
 			<AboutLinks></AboutLinks>
 		</div>
 		<div class="spacer">
-			<a class="mainlinks" href="/anveshi" target="_self">Bṛhat Anveṣī</a>
+			<a class="mainlinks" href="/anveshi">Bṛhat Anveṣī</a>
 			<AnveshiLinks></AnveshiLinks>
 			<div class="creategap"></div>
-			<a class="mainlinks" href="/drashta" target="_self">Bṛhat Draṣṭā</a>
+			<a class="mainlinks" href="/drashta">Bṛhat Draṣṭā</a>
 			<DrashtaLinks></DrashtaLinks>
 		</div>
 		<div class="spacer">
-			<a class="mainlinks" href="/aryavarta" target="_self">Scrolls of Āryavarta</a>
+			<a class="mainlinks" href="/aryavarta">Scrolls of Āryavarta</a>
 			<AryavartaLinks></AryavartaLinks>
 			<div class="creategap"></div>
-			<a class="mainlinks" href="/rta" target="_self">Ṛta in Design</a>
+			<a class="mainlinks" href="/rta">Ṛta in Design</a>
 			<RtaLinks></RtaLinks>
 		</div>
 		<div class="spacer">
-			<a class="mainlinks" href="/mandala" target="_self">Fractal Maṇḍala</a>
+			<a class="mainlinks" href="/mandala">Fractal Maṇḍala</a>
 			<MandalaLinks></MandalaLinks>
 		</div>
 	</div>

@@ -2,8 +2,6 @@
 
 	import { onMount } from 'svelte'
 	import { chapterItinerary } from '$lib/utils/supapulls'
-	import { crossfade } from 'svelte/transition'
-	import { quartOut } from 'svelte/easing'
 	import { chapterTemples } from '$lib/utils/supapulls'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
 
@@ -21,12 +19,6 @@
 			}
 		}
 	}
-
-	const [send, receive] = crossfade({
-		duration: 450,
-		easing: quartOut,
-		delay: 50
-	})
 
 	onMount(async() => {
 		chapter = data.chapter
@@ -69,7 +61,7 @@
 						<div class="card-body">
 							<h6>{item.name}</h6>
 							{#if openedDay[i]}
-								<pre in:send out:receive>{item.content}</pre>
+								<pre>{item.content}</pre>
 							{/if}
 						</div>
 					</div>
@@ -142,7 +134,6 @@
 		height: 100vh
 		align-content: center
 		gap: 32px
-		.a-box
 			
 
 .x1

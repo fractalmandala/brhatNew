@@ -7,14 +7,15 @@
 	import '$lib/styles/global.sass'
 	import '$lib/styles/types.sass'
 	import Footer from '$lib/components/Footer.svelte'
+	import Tipper from '$lib/components/Tipper.svelte'
 
 	onMount(() => {
 		let url = $page.url.pathname
 		const lenis = new Lenis({
-			duration: 1.2,
+			duration: 1.5,
 			orientation: 'vertical',
 			gestureOrientation: 'vertical',
-			wheelMultiplier: 0.6,
+			wheelMultiplier: 0.4,
 			smoothWheel: true,
 			touchMultiplier: 1,
 			infinite: false,
@@ -44,4 +45,14 @@
 	<slot></slot>
 	<Footer></Footer>
 </div>
+<Tipper/>
+
+<style lang="sass">
+
+#appbox
+	width: 100vw
+	box-sizing: border-box
+	overflow-x: hidden
+
+</style>
 

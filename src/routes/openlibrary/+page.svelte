@@ -1,6 +1,7 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
+	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import { BOLEssentials, BOLBodhas, BOLIKS, BOLROS, BOLOthers, AryanIssue, AryanTag } from '$lib/utils/supapulls'
 	import { crossfade, fly, scale } from 'svelte/transition'
 	import { circIn } from 'svelte/easing'
@@ -59,6 +60,12 @@
 	})
 
 </script>
+
+<svelte:head>
+	<HeadComponent>
+		The Open Library at
+	</HeadComponent>
+</svelte:head>
 
 <div class="type">
 	<div class="x0">

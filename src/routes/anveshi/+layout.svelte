@@ -1,10 +1,17 @@
 <script lang="ts">
 
 	import AnveshiLinks from '$lib/links/AnveshiLinks.svelte'
+	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import SubHeader from '$lib/components/SubHeader.svelte'
 	import Logo from '$lib/anims/LogoAnveshi.svelte'
 
 </script>
+
+<svelte:head>
+	<HeadComponent>
+		Bṛhat Anveṣī at 
+	</HeadComponent>
+</svelte:head>
 
 <slot></slot>
 

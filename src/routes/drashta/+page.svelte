@@ -1,6 +1,7 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
+	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import { allCourses } from '$lib/utils/supapulls'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
 
@@ -11,6 +12,12 @@
 		courses = await allCourses()
 	})
 </script>
+
+<svelte:head>
+	<HeadComponent>
+		Bṛhat Draṣṭā at 
+	</HeadComponent>
+</svelte:head>
 
 
 <div class="type">

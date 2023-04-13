@@ -1,12 +1,20 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
+	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
 	let yy:number
 
 </script>
 
 <svelte:window bind:scrollY={yy}/>
+
+<svelte:head>
+	<HeadComponent>
+		Ṛta in Design at
+	</HeadComponent>
+</svelte:head>
+
 <div class="type">
 	<div class="x0">
 		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/12rid/infinitywall.webp')"></ParallaxImage>

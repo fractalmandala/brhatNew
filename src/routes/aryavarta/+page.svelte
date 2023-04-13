@@ -1,7 +1,7 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
-	import Lenis from '@studio-freight/lenis'
+	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import { soaTales } from '$lib/utils/supapulls'
 	import { reveal } from 'svelte-reveal'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
@@ -10,24 +10,16 @@
 	let tales:string|any[]
 
 	onMount(async() => {
-		const lenis = new Lenis({
-			orientation: 'vertical',
-			duration: 1.0,
-			wheelMultiplier: 0.5,
-			infinite: false,
-			smoothWheel: true
-		})
-		lenis.on('scroll', (e: any) => {
-		})
-		function raf(time: any) {
-  		lenis.raf(time)
-  		requestAnimationFrame(raf)
-		}
-		requestAnimationFrame(raf)
 		tales = await soaTales()
 	})
 
 </script>
+
+<svelte:head>
+	<HeadComponent>
+		Scroll of Āryavarta at
+	</HeadComponent>
+</svelte:head>
 
 <svelte:window bind:scrollY={sy}/>
 <div class="type">

@@ -1,6 +1,7 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
+	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import { allmrdVids, Shabdavali } from '$lib/utils/supapulls'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
 
@@ -27,6 +28,12 @@
 	})
 
 </script>
+
+<svelte:head>
+	<HeadComponent>
+		Bṛhadmṛdaṅga at
+	</HeadComponent>
+</svelte:head>
 
 <div class="type">
 	<div class="x0">
