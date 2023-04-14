@@ -169,14 +169,14 @@
 		Indian civilizational consciousness
 		</h3>
 		<div class="onpagelinks dark">
-			<h4><a href="/mandala/macrohistoriccase" target="_self">the macrohistoric case</a></h4>
-			<h4><a href="/mandala/aphorisms" target="_self">caturasūtra - 4 aphorisms</a></h4>
-			<h4><a href="/mandala/indiancivcon" target="_self">indian civilizational consciousness</a></h4>
-			<h4><a href="/mandala/rathaasbija" target="_self">ratha as a bīja</a></h4>
-			<h4><a href="/mandala/historyvsitihasa" target="_self">history is ontic, itihāsa ontologic</a></h4>
-			<h4><a href="/mandala/ancestors" target="_self">ancestors outside of time</a></h4>
-			<h4><a href="/mandala/ramasjourney" target="_self">the avatāra in you</a></h4>
-			<h4><a href="/mandala/synrec" target="_self">synaptic reconnection</a></h4>
+			<h4><a href="/mandala/macrohistoriccase">the macrohistoric case</a></h4>
+			<h4><a href="/mandala/aphorisms">caturasūtra - 4 aphorisms</a></h4>
+			<h4><a href="/mandala/indiancivcon">indian civilizational consciousness</a></h4>
+			<h4><a href="/mandala/rathaasbija">ratha as a bīja</a></h4>
+			<h4><a href="/mandala/historyvsitihasa">history is ontic, itihāsa ontologic</a></h4>
+			<h4><a href="/mandala/ancestors">ancestors outside of time</a></h4>
+			<h4><a href="/mandala/ramasjourney">the avatāra in you</a></h4>
+			<h4><a href="/mandala/synrec">synaptic reconnection</a></h4>
 		</div>
 		</div>
 </div>

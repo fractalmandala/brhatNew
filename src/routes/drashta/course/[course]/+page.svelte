@@ -22,39 +22,58 @@
 
 <svelte:window bind:scrollY={y}/>
 
-<div class="toppara type">
-	<div class="boxc">
-		<h2>
-			{data.name}
-		</h2>
+<div class="type">
+	<div class="x0">
+		<div class="boxc">
+			<h2>
+				{data.name}
+			</h2>
+		</div>
+		<div class="ground" style="transform: translateY({y/4}px); background-image: url('{data.image}')">
+		</div>
 	</div>
-	<div class="ground" style="transform: translateY({y/4}px); background-image: url('{data.image}')"></div>
-</div>
-<div class="plain-one x1 pads">
-	<h6>
-		{data.content}
-	</h6>
+	<div class="plain-one x1 pads">
+		<h5>
+			{data.content}
+		</h5>
+	</div>
 </div>
 
 
 <style lang="sass">
 
-.toppara
-	height: 100vh
-	overflow: hidden
+.x0
 	display: flex
-	flex-direction: row
-
-
+	overflow: hidden
+	.boxc h2
+		text-transform: capitalize
+	@media screen and (min-width: 1024px)
+		flex-direction: row
+		.boxc
+			width: 60%
+		.ground
+			width: 40%
+	@media screen and (max-width: 1023px)
+		flex-direction: column-reverse
+		.boxc
+			width: 100%
+			height: 40vh
+		.ground
+			width: 100%
+			height: 40vh
+	
 .x1
-	height: 100vh
+	min-height: 100vh
 	h6
-		font-size: 27px
 		font-weight: 400
-	padding-left: 20vw
-	padding-right: 24vw
-	padding-top: 64px
-	padding-bottom: 64px
+	@media screen and (min-width: 1024px)
+		padding-left: 20vw
+		padding-right: 24vw
+		padding-top: 64px
+		padding-bottom: 64px
+	@media screen and (max-width: 1023px)
+		padding-left: 6vw
+		padding-right: 6vw
 
 .ground
 	background-size: cover

@@ -106,7 +106,7 @@
 								<img src={item.imagelinker} alt={item.id}/>
 							</div>
 							<div class="card-body">
-								<h6><a href="/openlibrary/books/{item.slug}" target="_self">{item.Text}</a></h6>
+								<h6><a href="/openlibrary/books/{item.slug}">{item.Text}</a></h6>
 								<p>{item.Description}</p>
 								<small>{item.author}</small>
 							</div>
@@ -122,7 +122,7 @@
 								<img src={item.imagelinker} alt={item.id}/>
 							</div>
 							<div class="card-body">
-								<h6><a href="/openlibrary/books/{item.slug}" target="_self">{item.Text}</a></h6>
+								<h6><a href="/openlibrary/books/{item.slug}">{item.Text}</a></h6>
 								<p>{item.Description}</p>
 								<small>{item.author}</small>
 							</div>
@@ -138,7 +138,7 @@
 								<img src={item.imagelinker} alt={item.id}/>
 							</div>
 							<div class="card-body">
-								<h6><a href="/openlibrary/books/{item.slug}" target="_self">{item.Text}</a></h6>
+								<h6><a href="/openlibrary/books/{item.slug}">{item.Text}</a></h6>
 								<p>{item.Description}</p>
 								<small>{item.author}</small>
 							</div>
@@ -154,7 +154,7 @@
 								<img src={item.imagelinker} alt={item.id}/>
 							</div>
 							<div class="card-body">
-								<h6><a href="/openlibrary/books/{item.slug}" target="_self">{item.Text}</a></h6>
+								<h6><a href="/openlibrary/books/{item.slug}">{item.Text}</a></h6>
 								<p>{item.Description}</p>
 								<small>{item.author}</small>
 							</div>
@@ -210,7 +210,7 @@
 						<h6>
 							Here, at the Bṛhat Open Library, we build this dhārmika pool of our dreams. You are welcome to jump in.
 						</h6>
-						<ButtonOne><a href="/openlibrary/scripture" target="_self">Visit Now</a></ButtonOne>
+						<ButtonOne><a href="/openlibrary/learn">Visit Now</a></ButtonOne>
 					</div>
 				</div>
 			{/if}
@@ -316,6 +316,9 @@
 				cursor: pointer
 				text-transform: uppercase
 				padding: 4px 8px
+				&:hover
+					background: var(--tree)
+					color: white
 				@media screen and (max-width: 1023px)
 					font-size: 16px
 			h6.selected

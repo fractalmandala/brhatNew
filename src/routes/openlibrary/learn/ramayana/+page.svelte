@@ -60,8 +60,8 @@
 				<div class="card-ramayana">
 					<small style="text-transform: uppercase; color: #b7b7b7; font-size: 10px">{item.index}</small>
 					<p style="font-family: 'Martel', serif;">
-						<a href="/openlibrary/learn/ramayana/{item.kanda}/{item.sarga}/{item.verse}/{item.pada}" target="_self">
-							<span style="font-weight: 600; font-size: 20px">{item.devanagari}</span><br><span style="font-family: 'Vazirmatn', sans-serif; font-size: 16px; color: #878787">{item.iast}</span>
+						<a href="/openlibrary/learn/ramayana/{item.kanda}/{item.sarga}/{item.verse}/{item.pada}">
+							<span style="font-weight: 700; font-size: 20px">{item.devanagari}</span><br><span style="font-family: 'Spline Sans', sans-serif; font-size: 16px; color: #878787">{item.iast}</span>
 						</a>
 					</p>
 				</div>
@@ -85,6 +85,10 @@
 </div>
 
 <style lang="sass">
+
+.card-ramayana
+	p
+		color: #474747
 
 .plain-one.x3
 	row-gap: 16px

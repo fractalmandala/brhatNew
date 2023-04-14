@@ -1,1 +1,1 @@
-<a class="mainlinks" href="/openlibrary" target="_self">Bṛhat Open Library</a>
+<a class="mainlinks" href="/openlibrary">Bṛhat Open Library</a>

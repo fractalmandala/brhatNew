@@ -12,10 +12,10 @@
 	onMount(() => {
 		let url = $page.url.pathname
 		const lenis = new Lenis({
-			duration: 1.5,
+			duration: 1.2,
 			orientation: 'vertical',
 			gestureOrientation: 'vertical',
-			wheelMultiplier: 0.4,
+			wheelMultiplier: 0.65,
 			smoothWheel: true,
 			touchMultiplier: 1,
 			infinite: false,

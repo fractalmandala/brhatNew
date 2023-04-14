@@ -1,1 +1,1 @@
-<a class="mainlinks" href="/dhiti" target="_self">Dhīti</a>
+<a class="mainlinks" href="/dhiti">Dhīti</a>

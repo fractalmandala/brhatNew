@@ -46,7 +46,7 @@
 							<img src={item.image} alt={item.id}/>
 						</div>
 						<div class="card-body">
-							<h6><a href="/drashta/course/{item.course}" target="_self">{item.name}</a></h6>
+							<h6><a href="/drashta/course/{item.course}">{item.name}</a></h6>
 							<p>with {item.ins}</p>
 							<div class="card-meta boxr">
 								<small>{item.status}</small>

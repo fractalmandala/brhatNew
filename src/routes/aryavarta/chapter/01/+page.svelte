@@ -80,7 +80,7 @@
 		</div>
 		<div class="a-box">
 			<h2 style="color: white">Sūta and Sudā</h2>
-			<h5>or, return to <span style="color: #ff3d00"><a href="/aryavarta" target="_self"> Āryavarta</a></span>  main page.</h5>
+			<h5>or, return to <span style="color: #ff3d00"><a href="/aryavarta"> Āryavarta</a></span>  main page.</h5>
 		</div>
 	</div>
 </div>

@@ -7,7 +7,7 @@
 <div class="type">
 	<div class="plain-one x1 pads">
 		<h4 style="font-family: 'Old Standard TT', serif; font-weight: 700; letter-spacing: -2px">
-			Rāmāyaṇa
+			<a href="/openlibrary/learn/ramayana">Rāmāyaṇa</a>
 		</h4>
 	</div>
 	<div class="plain-one x2 pads">
@@ -25,10 +25,16 @@
 
 <style lang="sass">
 
+.x2
+	.box
+		padding: 0
+
 .x1
 	h4
 		border-bottom: 1px solid #ececec
 		padding-bottom: 8px
+		&:hover
+			color: var(--aryan)
 
 .x2
 	p

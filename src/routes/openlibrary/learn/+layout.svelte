@@ -33,8 +33,8 @@
 			</div>
 			<p><a href="/openlibrary" target="_self">Open Library</a></p>
 		</div>
-		<h2 style="font-family: 'Old Standard TT', serif; letter-spacing: -1px; text-transform: uppercase">
-			The Learning Center
+		<h2 style="letter-spacing: -1px; text-transform: uppercase">
+			<a href="/openlibrary/learn">The Learning Center</a>
 		</h2>
 		<div class="selector" class:selectoronexpansion={selectexpanded}>
 			<div class="visiblearea" on:click={toggleExpansion} on:keydown={fauxfake}>
@@ -47,9 +47,9 @@
 			</div>
 			<div class="researchbounds" class:onexpansion={selectexpanded}>
 				{#if selectexpanded}
-					<h6 class="researchlink" in:fly={{ duration: 150, delay: 20, x: -64, y: 0}} out:fly={{ duration: 150, delay: 20, x: -64, y: 0}}>Amarakośaḥ</h6>
+					<h6 class="researchlink" in:fly={{ duration: 150, delay: 20, x: -64, y: 0}} out:fly={{ duration: 150, delay: 20, x: -64, y: 0}}><a href="/openlibrary/learn/amarakosha">Amarakośaḥ</a></h6>
 					<h6 class="researchlink" in:fly={{ duration: 150, delay: 60, x: -64, y: 0}} out:fly={{ duration: 150, delay: 20, x: -64, y: 0}}>Dhātupāṭha</h6>
-					<h6 class="researchlink" in:fly={{ duration: 150, delay: 120, x: -64, y: 0}} out:fly={{ duration: 150, delay: 20, x: -64, y: 0}}><a href="/openlibrary/learn/ramayana" target="_self">Rāmāyaṇa</a></h6>
+					<h6 class="researchlink" in:fly={{ duration: 150, delay: 120, x: -64, y: 0}} out:fly={{ duration: 150, delay: 20, x: -64, y: 0}}><a href="/openlibrary/learn/ramayana">Rāmāyaṇa</a></h6>
 					<h6 class="researchlink" in:fly={{ duration: 150, delay: 150, x: -64, y: 0}} out:fly={{ duration: 150, delay: 20, x: -64, y: 0}}>Ṛgveda</h6>
 				{/if}
 			</div>
@@ -60,6 +60,10 @@
 <slot></slot>
 
 <style lang="sass">
+
+h2
+	&:hover
+		color: var(--aryan)
 
 
 .x1

@@ -55,7 +55,7 @@
 	<div class="box x0">
 		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/brhatanveshi.webp')"></ParallaxImage>
 	</div>
-	<div class="title-box x1 pads">
+	<div class="plain-one x1 pads">
 		<div class="a-title">
 			<Anveshi></Anveshi>
 		</div>
@@ -164,6 +164,7 @@
 	@media screen and (min-width: 1024px)
 		height: 100vh
 		align-content: center
+		justify-content: center
 
 .x1, .x2, .x3, .x4
 	padding-bottom: 64px
@@ -174,5 +175,10 @@
 .faqcard
 	cursor: pointer
 	row-gap: 8px
+
+.x4
+	.gridof2
+		align-items: start
+		align-content: start
 
 </style>

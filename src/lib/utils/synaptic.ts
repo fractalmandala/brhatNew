@@ -229,3 +229,23 @@ export async function searchRV(inputword: string){
 		if (error) throw new Error(error.message)
 		return data
 	}
+
+export async function vargaGroups(varga:any){
+	const { data, error } = await supabase
+	.from('db-amarakosha')
+	.select()
+	.eq('varga',varga)
+	.order('primvalue')
+	if ( error ) throw new Error(error.message)
+	return data
+}
+
+export async function dbDictionary(word:any){
+	const { data, error } = await supabase
+	.from('db-dictionary')
+	.select()
+	.eq('word',word)
+	.order('id')
+	if ( error ) throw new Error(error.message)
+	return data	
+}

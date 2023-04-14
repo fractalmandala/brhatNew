@@ -96,7 +96,7 @@
 	<p class="box6" on:click={() => filterKanda(6)} on:keydown={fauxfake}>6</p>
 	<p class="box7" on:click={() => filterKanda(7)} on:keydown={fauxfake}>7</p>
 </div>
-<div class="gridofeight">
+<div class="gridof7">
 	{#if visiblesargas && visiblesargas.length > 0}
 		{#each visiblesargas as item, i}
 			<div class="singlesarga" in:scale={{ delay: i * 5 }} out:scale={{ delay: 0, duration: 10}}>
@@ -121,6 +121,8 @@
 	grid-template-rows: auto
 	grid-template-areas: "box1 box2 box3 box4 box5 box6 box7"
 	justify-items: center
+	row-gap: 8px
+	padding-bottom: 8px
 	.box1
 		grid-area: box1
 	.box2
@@ -150,18 +152,14 @@
 		background: var(--aryan)
 		color: white
 
-.gridofeight
-	display: grid
-	grid-auto-flow: row
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
-	grid-template-rows: auto
-	gap: 8px
-	@media screen and (max-width: 1023px)
-		border-top: 1px solid #ececec
-		padding-top: 8px
-
 .singlesarga
 	text-align: center
 	cursor: pointer
+	padding: 6px 10px
+	&:hover
+		background: var(--aryan)
+		color: white
+		p
+			color: white
 
 </style>
