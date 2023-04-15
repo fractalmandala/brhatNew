@@ -1,10 +1,16 @@
 <script lang="ts">
 	
 	import InputModal from '$lib/reader/InputModal.svelte'
+	import ModalAmarakosha from '$lib/reader/ModalAmarakosha.svelte'
+	import ModalDhatu from '$lib/reader/ModalDhatu.svelte'
+	import ModalIAST from '$lib/reader/ModalIAST.svelte'
 
 	import '$lib/styles/reader.sass'
 
 	let modalone:boolean = false
+	let modaldhatu = false
+	let modalamar = false
+	let modaliast = false
 	let dropper = false
 	let fake = false
 
@@ -12,8 +18,20 @@
 		dropper = !dropper
 	}
 
+	function toggleIAST(){
+		modaliast = !modaliast
+	}
+
+	function toggleDhatupatha(){
+		modaldhatu = !modaldhatu
+	}
+
 	function toggleModalOne(){
 		modalone = !modalone
+	}
+
+	function toggleAmarakosha(){
+		modalamar = !modalamar
 	}
 
 	function fauxfake(){
@@ -37,16 +55,16 @@
 			</h3>
 		</div>
     <div class="learningheadrest">
-			<div class="headrestitems" on:click={toggleModalOne} on:keydown={fauxfake}>
+			<div class="headrestitems" on:click={toggleIAST} on:keydown={fauxfake}>
 				<h6>IAST</h6>
 			</div>
-			<div class="headrestitems">
+			<div class="headrestitems" on:click={toggleModalOne} on:keydown={fauxfake}>
 				<h6>Dictionary</h6>
 			</div>
-			<div class="headrestitems">
+			<div class="headrestitems" on:click={toggleAmarakosha} on:keydown={fauxfake}>
 				<h6>Amarakośaḥ</h6>
 			</div>
-			<div class="headrestitems">
+			<div class="headrestitems" on:click={toggleDhatupatha} on:keydown={fauxfake}>
 				<h6>Dhātupāṭha</h6>
 			</div>
 			<div class="headrestitems dropper" on:click={toggleDropper} on:keydown={fauxfake}>
@@ -70,14 +88,55 @@
   </div>
 </div>
 {#if modalone}
-<InputModal modalone={modalone}></InputModal>
+		<InputModal>
+			<button slot="close" class="formbutton" on:click={toggleModalOne} on:keydown={fauxfake}>
+				Close
+			</button>
+		</InputModal>
 {/if}
+{#if modalamar}
+	<ModalAmarakosha>
+		<button slot="close" class="formbutton" on:click={toggleAmarakosha} on:keydown={fauxfake}>
+			Close
+		</button>
+	</ModalAmarakosha>
+{/if}
+{#if modaldhatu}
+	<ModalDhatu>
+		<button slot="close" class="formbutton" on:click={toggleDhatupatha} on:keydown={fauxfake}>
+			Close
+		</button>  
+	</ModalDhatu>
+{/if}
+{#if modaliast}
+	<ModalIAST>
+		<button slot="close" class="formbutton" on:click={toggleIAST} on:keydown={fauxfake}>
+			Close
+		</button>  
+	</ModalIAST>
+{/if}
+
 
 <style lang="sass">
 
 .learningheadmain
 	h3
 		margin: 0
+		position: relative
+		padding: 4px 8px
+		&:hover
+			animation: growred 1.4s ease forwards
+			&::before
+				animation: growwide 1.4s ease forwards
+		&::before
+			position: absolute
+			top: 0
+			left: 0
+			content: ''
+			width: 0%
+			height: 100%
+			background: #fe4a49
+			z-index: -1
 	@media screen and (max-width: 1023px)
 		h3
 			font-size: 32px
@@ -106,6 +165,18 @@
 		position: absolute
 		top: 144px
 		right: 48px
+
+@keyframes growwide
+	0%
+		width: 0
+	100%
+		width: 100%
+
+@keyframes growred
+	0%
+		color: #272727
+	100%
+		color: white
 		
 
 </style>

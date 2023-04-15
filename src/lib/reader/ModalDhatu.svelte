@@ -19,9 +19,9 @@
 		searchinput = searchTerm
 		let results: any[] = []
 		const { data, error } = await supabase
-			.from('db-dictionary')
+			.from('db-dhatupatha')
 			.select()
-			.textSearch('word', searchTerm)
+			.textSearch('fts', searchTerm)
 			.order('id')
 			if (error) throw new Error(error.message)
 			results = results.concat(data)
@@ -37,7 +37,7 @@
 
 <div class="inputmodal type">
 	<div class="inputtab">
-		<h5 style="font-weight: 600; text-align: center">Dictionary Search</h5>
+		<h5 style="font-weight: 600; text-align: center">Dhātupāṭha Search</h5>
 		<slot name="describe"></slot>
 		<div class="modalform">
 			<input type="text" placeholder="enter word"
@@ -64,8 +64,8 @@
 			{#if showResults && $resultsStore.length>0}
 				<div class="searchresults">
 					{#each $resultsStore as item, i}
-						<h6 style="text-align: center">{item.word}</h6>
-						<p style="text-align: center">{item.meanings}</p>
+						<h6 style="text-align: center">{item.dhatu} | {item.dhatuiast}</h6>
+						<p style="text-align: center">{item.artha}<br>{item.artha_english}</p>
 					{/each}
 				</div>
 			{/if}
@@ -96,7 +96,7 @@
 	align-items: center
 	width: 32%
 	background: white
-	height: 60%
+	height: max-content
 	row-gap: 32px
 	padding: 32px
 	border: 1px solid #ececec

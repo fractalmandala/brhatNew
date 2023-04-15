@@ -19,10 +19,10 @@
 		searchinput = searchTerm
 		let results: any[] = []
 		const { data, error } = await supabase
-			.from('db-dictionary')
+			.from('db-amarakosha')
 			.select()
 			.textSearch('word', searchTerm)
-			.order('id')
+			.order('primvalue')
 			if (error) throw new Error(error.message)
 			results = results.concat(data)
 	// @ts-ignore
@@ -37,7 +37,7 @@
 
 <div class="inputmodal type">
 	<div class="inputtab">
-		<h5 style="font-weight: 600; text-align: center">Dictionary Search</h5>
+		<h5 style="font-weight: 600; text-align: center">Amarakośaḥ Search</h5>
 		<slot name="describe"></slot>
 		<div class="modalform">
 			<input type="text" placeholder="enter word"
@@ -65,7 +65,7 @@
 				<div class="searchresults">
 					{#each $resultsStore as item, i}
 						<h6 style="text-align: center">{item.word}</h6>
-						<p style="text-align: center">{item.meanings}</p>
+						<p style="text-align: center">Form: {item.form} <span> | </span>Varga: {item.varga} <span> | </span>Categories: {item.ontology}</p>
 					{/each}
 				</div>
 			{/if}

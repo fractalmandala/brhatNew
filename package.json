@@ -44,6 +44,7 @@
 		"sse.js": "^0.6.1",
 		"svelte-inview": "^4.0.0",
 		"svelte-legos": "^0.1.9",
+		"svelte-simple-modal": "^1.5.2",
 		"textify.js": "^2.4.3"
 	}
 }
