@@ -280,3 +280,32 @@ export async function dbDictionary(word:any){
 	if ( error ) throw new Error(error.message)
 	return data	
 }
+
+export async function allDhatus(){
+	const { data, error } = await supabase
+	.from('vw-coredhatus')
+	.select()
+	.order('dhatu')
+	if ( error ) throw new Error(error.message)
+	return data	
+}
+
+export async function dhatuNode(dhatu:any){
+	const { data, error } = await supabase
+	.from('db-dhatupatha')
+	.select()
+	.eq('dhaturomanized',dhatu)
+	.order('id')
+	if ( error ) throw new Error(error.message)
+	return data
+}
+
+export async function dhatuKartari(id:any){
+	const { data, error} = await supabase
+	.from('db-dhatustore')
+	.select()
+	.eq('ind',id)
+	.order('id')
+	if ( error ) throw new Error(error.message)
+	return data
+}

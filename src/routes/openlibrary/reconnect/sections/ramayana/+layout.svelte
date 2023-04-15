@@ -75,17 +75,6 @@
 </script>
 
 
-<div class="subheadtop">
-	<div class="toprest">
-		<h4>
-			<a href="/openlibrary/reconnect/sections/ramayana">
-		Vālmīki Rāmāyaṇa</a>
-		</h4>
-	</div>
-	<div class="breadcrumber">	
-		<h6>Kāṇḍa {pageK} <span> | </span>Sarga {pageS} <span> | </span>Verse {pageV}</h6>
-	</div>
-</div>
 <div class="mainpage">
 	<div class="mainside" data-lenis-prevent>
 		<div class="sideitems" on:click={() => toggleKanda(1)} on:keydown={fauxfake} class:kandainview={sargs[1]}>
@@ -191,10 +180,6 @@
 </div>
 
 <style lang="sass">
-
-.toprest h4
-	@media screen and (max-width: 1023px)
-		font-size: 21px
 
 .sideitems
 	padding: 4px

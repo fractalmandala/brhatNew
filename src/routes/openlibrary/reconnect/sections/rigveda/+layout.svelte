@@ -36,17 +36,6 @@
 
 </script>
 
-<div class="subheadtop">
-	<div class="toprest">
-		<h4>
-			<a href="/openlibrary/reconnect/sections/ramayana">
-		Ṛgveda Saṃhitā</a>
-		</h4>
-	</div>
-	<div class="breadcrumber">	
-		<h6>Maṇḍala <span> | </span>Sūkta <span> | </span>Ṛca </h6>
-	</div>
-</div>
 <div class="mainpage">
 	<div class="mainside" data-lenis-prevent>
 		<div class="sideitems" on:click={() => toggleMandala(1)} on:keydown={fauxfake} class:kandainview={expand[1]}>
@@ -174,10 +163,6 @@
 </div>
 
 <style lang="sass">
-
-.toprest h4
-	@media screen and (max-width: 1023px)
-		font-size: 21px
 
 .sideitems
 	padding: 4px

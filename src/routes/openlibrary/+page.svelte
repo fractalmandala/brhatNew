@@ -210,7 +210,7 @@
 						<h6>
 							Here, at the Bṛhat Open Library, we build this dhārmika pool of our dreams. You are welcome to jump in.
 						</h6>
-						<ButtonOne><a href="/openlibrary/learn">Visit Now</a></ButtonOne>
+						<ButtonOne><a href="/openlibrary/reconnect">Visit Now</a></ButtonOne>
 					</div>
 				</div>
 			{/if}

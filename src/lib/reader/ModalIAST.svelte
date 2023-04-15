@@ -131,12 +131,5 @@
 		margin-bottom: 16px
 		gap: 16px
 
-.searchresults h6
-	padding-top: 8px
-
-.searchresults p
-	border-bottom: 1px solid #ececec
-	padding-bottom: 16px
-	
 
 </style>
