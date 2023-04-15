@@ -64,8 +64,6 @@
 	
 .x1
 	min-height: 100vh
-	h6
-		font-weight: 400
 	@media screen and (min-width: 1024px)
 		padding-left: 20vw
 		padding-right: 24vw

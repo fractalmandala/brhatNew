@@ -1,17 +1,135 @@
-.card-ramayana
+
+*
+	--read: #23c8b5
+	--sn: all 0.09s ease
+
+
+.readingcontainer 
+	display: grid 
+	grid-template-columns: 1fr 1fr 1fr 
+	grid-template-rows: 120px 100%
+	gap: 0px 0px 
+	grid-auto-flow: row 
+	grid-template-areas: "learninghead learninghead learninghead" "learningrest learningrest learningrest"
+	@media screen and (min-width: 1024px)
+		padding-left: 48px
+		padding-right: 48px
+
+
+.learninghead 
+	display: grid 
+	grid-template-columns: 50% 1fr 1fr 
+	grid-template-rows: auto auto
+	gap: 0px 0px 
+	grid-auto-flow: row 
+	grid-template-areas: "learningheadmain learningheadrest learningheadrest" "learningheadmain learningheadrest learningheadrest"
+	grid-area: learninghead 
+
+.learningheadmain 
+	grid-area: learningheadmain 
+	display: flex
+	@media screen and (min-width: 1024px)
+		flex-direction: row
+		align-items: center
+
+.learningheadrest 
+	grid-area: learningheadrest 
+	display: flex
+	@media screen and (min-width: 1024px)
+		flex-direction: row
+		justify-content: flex-end
+		gap: 24px
+		align-items: center
+
+.learningrest 
+	display: grid 
+	grid-template-columns: 1fr 1fr 1fr 
+	grid-template-rows: auto 100%
+	gap: 0px 0px 
+	grid-auto-flow: row 
+	grid-template-areas: "subheadtop subheadtop subheadtop" "mainpage mainpage mainpage"
+	grid-area: learningrest 
+	@media screen and (min-width: 1024px)
+		align-content: start
+
+.subheadtop 
+	display: grid 
+	grid-template-columns: 1fr 1fr
+	grid-template-rows: auto
+	gap: 0px 0px 
+	grid-auto-flow: row 
+	grid-template-areas: "toprest breadcrumber"
+	grid-area: subheadtop
+	@media screen and (min-width: 1024px)
+		height: 80px
+
+.breadcrumber 
+	grid-area: breadcrumber 
+
+.toprest 
+	grid-area: toprest 
+
+.mainpage 
+	display: grid 
+	grid-template-columns: 200px 1fr
+	grid-template-rows: 100%
+	gap: 0px 0px 
+	grid-auto-flow: row 
+	grid-template-areas: "mainside mainmain"
+	grid-area: mainpage 
+	height: 100%
+	@media screen and (min-width: 1024px)
+		column-gap: 64px
+		padding-bottom: 48px
+
+.mainside::-webkit-scrollbar
+	width: 2px
+
+.mainside::-webkit-scrollbar-thumb
+	background: #fe4a49
+
+.mainside 
+	grid-area: mainside 
+	@media screen and (min-width: 1024px)
+		min-height: 100vh
+		overflow-y: scroll
+		overflow-x: hidden
+
+.mainmain 
+	grid-area: mainmain
+
+.basicbox
 	display: flex
 	flex-direction: column
-	border-bottom: 1px solid #ececec
-	padding-bottom: 16px
-	padding-top: 8px
-	row-gap: 8px
-	small, p
+
+.type
+	h1
 		margin: 0
-	p
-		color: #272727 !important
-		font-size: 18px
-		line-height: 1.2
-	a
-		transition: var(--snap)
+
+.dropped p
+	text-transform: uppercase
+	text-align: right
+	font-size: 18px
+	transition: var(--sn)
+	&:hover
+		color: #fe4a49
+
+.sideitems
+	h5
+		color: #878787
+		transition: var(--sn)
+		cursor: pointer
 		&:hover
-			color: var(--aryan)
+			color: #fe4a49
+
+	
+
+.dropper
+	display: flex
+	flex-direction: row
+	align-items: center
+	justify-content: space-between
+	&:hover
+		svg path
+			fill: #fe4a49
+

@@ -35,7 +35,13 @@
 	"dependencies": {
 		"@studio-freight/lenis": "^1.0.6",
 		"@supabase/supabase-js": "^2.14.0",
+		"common-tags": "^1.8.2",
+		"gpt3-tokenizer": "^1.1.5",
 		"gsap": "file:gsap-bonus.tgz",
+		"openai": "^3.2.1",
+		"see": "^0.0.0",
+		"sse": "^0.0.8",
+		"sse.js": "^0.6.1",
 		"svelte-inview": "^4.0.0",
 		"svelte-legos": "^0.1.9",
 		"textify.js": "^2.4.3"
