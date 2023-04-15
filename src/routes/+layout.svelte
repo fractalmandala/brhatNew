@@ -45,7 +45,7 @@
 	<slot></slot>
 	<Footer></Footer>
 </div>
-<Tipper/>
+
 
 <style lang="sass">
 

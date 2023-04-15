@@ -60,6 +60,7 @@
 			{#if dropper}
 				<div class="dropped" on:click={toggleDropper} on:keydown={fauxfake}>
 					<p><a href="/openlibrary/reconnect/sections/ramayana">Rāmāyaṇa</a></p>
+					<p><a href="/openlibrary/reconnect/sections/rigveda">Ṛgveda</a></p>
 				</div>
 			{/if}
 		</div>

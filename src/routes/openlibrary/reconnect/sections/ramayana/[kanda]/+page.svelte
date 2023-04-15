@@ -7,7 +7,7 @@
 	let fake = false
 	let varskand:any
 	let limit = 9
-	let showBreak = false
+	let showBreak:any
 
 	function fauxfake(){
 		fake = !fake
@@ -25,8 +25,8 @@
 
 <div class="mainmain">
 {#if varskand && varskand.length > 0}
-	{#each varskand as item}
-		<ReaderCard query={item.devanagari} showBreak={showBreak}>
+	{#each varskand as item, i}
+		<ReaderCard query={item.devanagari} showBreak={showBreak} i={i}>
 			<cite slot="cite">{item.sarga} - {item.verse} - {item.pada}</cite>
 			<h5 class="dev" slot="title">
 				<a href="/openlibrary/reconnect/sections/ramayana/{data.kanda}/{item.sarga}/{item.verse}">

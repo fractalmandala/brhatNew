@@ -110,6 +110,15 @@ export async function SuktasofMandala10(){
 		return data
 	}
 
+export async function RcasofMandala(ms:any){
+	const { data, error} = await supabase
+	.from('db-rigveda')
+	.select()
+	.eq('ms', ms)
+	if (error) throw new Error(error.message)
+	return data
+}
+
 export async function RcasofSukta(mandala: any,sukta: any){
 	const { data, error} = await supabase
 	.from('db-rigveda')
