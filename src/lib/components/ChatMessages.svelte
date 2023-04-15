@@ -17,43 +17,26 @@
 </script>
 
 <div class="boxofchat {type === 'user' ? 'chat-end' : 'chat-start'}" in:fade={{ duration: 300, delay: 50, easing: elasticOut }}>
-	<div class="agent {type === 'user' ? 'user' : 'brhatGPT'}">
-		{type === 'user' ? 'user' : 'brhatGPT'}:
-	</div>
-	<pre class="commbody {type === 'user' ? 'user' : 'brhatGPT'}">
+	<div class="commbody {type === 'user' ? 'user' : 'brhatGPT'}">
 		{@html message}
-	</pre>
+	</div>
 </div>
 
 
 <style lang="sass">
 
-pre
-	margin: 4px 0 0 0
-	line-height: 1.6
-
-.agent
-	font-size: 12px
-
-.agent.user
-	text-transform: uppercase
-	text-align: right
-	color: #272727
-
-.agent.brhatGPT
-	color: #fe4a49
+.boxofchat
+	padding: 4px 16px 16px 16px
 
 .commbody.user, .commbody.brhatGPT
 	color: #272727
 	font-family: 'Spline Sans', sans-serif
 
 .commbody.brhatGPT
-	font-size: 14px
+	font-size: 18px
 
 .commbody.user
-	text-align: right
-	color: #575757
-	font-size: 14px
+	display: none
 
 .commbody
 	white-space: pre-line

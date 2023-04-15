@@ -174,26 +174,38 @@ export async function searchRV(inputword: string){
 	return data
 }
 
-	export async function padasofRamayana(kanda:any, sarga:any, verse:any, pada:any){
+	export async function padasofRamayana(kanda:any, sarga:any, verse:any){
 		const { data, error} = await supabase
 		.from ('db-ramayana')
 		.select()
 		.eq('kanda',kanda)
 		.eq('sarga',sarga)
 		.eq('verse', verse)
-		.eq('pada', pada)
 		.order('id')
 		if (error) throw new Error(error.message)
 		return data
 	}
 
-	export async function versesofRamayana(kanda:any, sarga:any){
+	export async function versesofRamayana(startat:any, kanda:any, sarga:any){
 		const { data, error} = await supabase
 		.from ('db-ramayana')
 		.select()
 		.eq('kanda',kanda)
 		.eq('sarga',sarga)
 		.order('id')
+		.gte('id',startat)
+		.limit(9)
+		if (error) throw new Error(error.message)
+		return data
+	}
+
+	export async function versesByKanda(kanda:any, limit:any){
+		const { data, error} = await supabase
+		.from ('db-ramayana')
+		.select()
+		.eq('kanda',kanda)
+		.order('id')
+		.limit(limit)
 		if (error) throw new Error(error.message)
 		return data
 	}
@@ -214,6 +226,16 @@ export async function searchRV(inputword: string){
 		.from ('db-ramayanaindex')
 		.select()
 		.eq('type', 'kandakanda')
+		.order('id')
+		if (error) throw new Error(error.message)
+		return data
+	}
+
+	export async function verseSlug(id:any){
+		const { data, error} = await supabase
+		.from ('db-ramayanaindex')
+		.select()
+		.eq('id', id)
 		.order('id')
 		if (error) throw new Error(error.message)
 		return data

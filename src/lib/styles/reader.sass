@@ -14,7 +14,12 @@
 	@media screen and (min-width: 1024px)
 		padding-left: 48px
 		padding-right: 48px
-
+	@media screen and (max-width: 1023px)
+		grid-template-columns: 1fr
+		grid-template-rows: 88px auto
+		grid-template-areas: "learninghead" "learningrest"
+		padding-left: 24px
+		padding-right: 24px
 
 .learninghead 
 	display: grid 
@@ -24,6 +29,9 @@
 	grid-auto-flow: row 
 	grid-template-areas: "learningheadmain learningheadrest learningheadrest" "learningheadmain learningheadrest learningheadrest"
 	grid-area: learninghead 
+	border-bottom: 1px solid #d7d7d7
+	@media screen and (max-width: 1023px)
+		overflow: hidden
 
 .learningheadmain 
 	grid-area: learningheadmain 
@@ -40,17 +48,24 @@
 		justify-content: flex-end
 		gap: 24px
 		align-items: center
+	@media screen and (max-width: 1023px)
+		flex-direction: column
+		align-items: flex-end
 
 .learningrest 
 	display: grid 
 	grid-template-columns: 1fr 1fr 1fr 
-	grid-template-rows: auto 100%
+	grid-template-rows: auto auto
 	gap: 0px 0px 
 	grid-auto-flow: row 
 	grid-template-areas: "subheadtop subheadtop subheadtop" "mainpage mainpage mainpage"
 	grid-area: learningrest 
 	@media screen and (min-width: 1024px)
 		align-content: start
+	@media screen and (max-width: 1023px)
+		grid-template-columns: 1fr
+		grid-template-rows: auto auto
+		grid-template-areas: "subheadtop" "mainpage"
 
 .subheadtop 
 	display: grid 
@@ -62,9 +77,31 @@
 	grid-area: subheadtop
 	@media screen and (min-width: 1024px)
 		height: 80px
+		align-content: center
+		align-items: center
+		border-bottom: 1px solid #d7d7d7
+	@media screen and (max-width: 1023px)
+		height: 48px
+		align-items: center
 
 .breadcrumber 
 	grid-area: breadcrumber 
+	display: flex
+	h6
+		margin: 0
+		font-weight: 400
+		font-size: 14px
+		text-transform: uppercase
+	a
+		&:hover
+			color: #fe4a49
+	@media screen and (min-width: 1024px)
+		flex-direction: row
+		align-items: center
+		justify-content: flex-end
+	@media screen and (max-width: 1023px)
+		align-items: center
+		justify-content: flex-end
 
 .toprest 
 	grid-area: toprest 
@@ -77,10 +114,13 @@
 	grid-auto-flow: row 
 	grid-template-areas: "mainside mainmain"
 	grid-area: mainpage 
-	height: 100%
 	@media screen and (min-width: 1024px)
 		column-gap: 64px
-		padding-bottom: 48px
+		padding-top: 32px
+	@media screen and (max-width: 1023px)
+		grid-template-columns: 1fr
+		grid-template-rows: 32px auto
+		grid-template-areas: "mainside" "mainmain"
 
 .mainside::-webkit-scrollbar
 	width: 2px
@@ -91,12 +131,19 @@
 .mainside 
 	grid-area: mainside 
 	@media screen and (min-width: 1024px)
-		min-height: 100vh
 		overflow-y: scroll
 		overflow-x: hidden
+	@media screen and (max-width: 1023px)
+		display: flex
+		flex-direction: row
+		justify-content: space-between
 
 .mainmain 
 	grid-area: mainmain
+	margin-bottom: 32px
+	@media screen and (max-width: 1023px)
+		margin-top: 32px
+
 
 .basicbox
 	display: flex
@@ -116,13 +163,45 @@
 
 .sideitems
 	h5
-		color: #878787
+		color: #878787 !important
 		transition: var(--sn)
 		cursor: pointer
+		font-size: 18px 
 		&:hover
-			color: #fe4a49
+			color: #fe4a49 !important
 
-	
+.sideitems
+	padding: 4px	
+
+
+.readingcard
+	display: flex
+	flex-direction: column
+	border-bottom: 1px solid #ececec
+	padding-bottom: 12px
+	margin-bottom: 12px
+	a
+		&:hover
+			color: var(--strong)
+	h5.dev, .dev h5
+		font-weight: 700
+		font-family: 'Martel', serif
+		font-size: 1.8vw
+		margin-bottom: 5px
+		margin-top: 10px
+	h6.iast
+		font-weight: 400
+		color: #878787
+	cite
+		text-transform: uppercase
+		color: #b7b7b7
+		font-style: normal
+	@media screen and (max-width: 1023px)
+		h5.dev, .dev h5
+			font-size: 4vw
+		
+		
+
 
 .dropper
 	display: flex
@@ -133,3 +212,13 @@
 		svg path
 			fill: #fe4a49
 
+.sargatray
+	display: grid
+	grid-auto-flow: row
+	@media screen and (min-width: 1024px)
+		grid-template-columns: 1fr 1fr 1fr
+		grid-template-rows: auto
+		grid-template-areas: ". . ."
+
+.words
+	font-size: 18px
