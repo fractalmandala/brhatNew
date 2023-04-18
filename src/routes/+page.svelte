@@ -11,6 +11,7 @@
 	import { latestDhitiSix } from '$lib/utils/localpulls'
 	import WhiteCard from '$lib/components/WhiteCard.svelte'
 	import ButtonOne from '$lib/anims/ButtonOne.svelte'
+	import ButtonTwo from '$lib/anims/ButtonOne.svelte'
 
 	gsap.registerPlugin(ScrollTrigger)
 	let sidebar = false
@@ -23,6 +24,7 @@
 	let bollimit:number = 12
 	let books: string|any[]
 	let scy:number
+	let scyresp:number
 	let ouh:number
 	let X: HTMLElement
 	let innw:number
@@ -51,8 +53,10 @@
 
 	$: if ( innw <= 1023 ) {
 		calib = 6
+		scyresp = 0
 	} else {
 		calib = scy
+		scyresp = scy
 	}
 
 	onMount(async() => {
@@ -123,7 +127,7 @@
 		</div>
 	</div>
 	<div class="rotatingmotif">
-		<svg width="458" height="458" viewBox="0 0 458 458" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: translateX({scy/2}px) rotate({scy/5}deg)">
+		<svg width="458" height="458" viewBox="0 0 458 458" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: translateX({scyresp/2}px) rotate({scy/4}deg)">
 			<g id="segmente">
 				<g id="Vector">
 					<path d="M74.0209 93.0473H67.1123V67.0342L93.0587 67.1108L93.038 74.0205L74.0209 73.9634V93.0473Z" fill="#FE4A49"/>
@@ -320,7 +324,7 @@
 					rel="noreferrer">YouTube channel</a
 				>
 			</h5>
-			<button class="redbutton"><a href="/mrdanga">Visit Bṛhadmṛdaṅga</a></button>
+			<ButtonTwo><a href="/mrdanga">Visit Bṛhadmṛdaṅga</a></ButtonTwo>
 			<div class="gridof4 by2">
 				{#if videos && videos.length > 0}
 					{#each videos as item, i}
@@ -372,7 +376,7 @@
 			<h4><a href="/openlibrary" target="_self">Open Library</a></h4>
 		</div>
 		<div class="strip" bind:this={X}></div>
-		<div class="a-box gridof4">
+		<div class="a-box gridof4 by2">
 			{#if books && books.length > 0}
 				{#each books as item, i}
 					<div class="card-c">
@@ -394,6 +398,13 @@
 		transform-origin: center center
 		width: 200px
 		height: 200px
+	@media screen and (max-width: 1023px)
+		padding-bottom: 32px
+		padding-top: 32px
+		text-align: center
+		svg
+			width: 120px
+			height: 120px
 
 .x2
 	padding-bottom: 64px
@@ -404,7 +415,7 @@
 		height: 100vh
 		align-content: center
 
-.x1, .x2, .x3, .x5
+.x2, .x3, .x5
 	@media screen and (max-width: 1023px)
 		margin-bottom: 48px
 

@@ -75,7 +75,7 @@
 
 <div class="type">
 	<div class="x0">
-		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/about-parambika.webp?t=2023-04-06T12%3A47%3A17.585Z')"></ParallaxImage>
+		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/about-parambika.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/about-parambika.webp')"></ParallaxImage>
 	</div>
 	<div class="plain-three x1 pads">
 		<div class="top" use:reveal={{ transition: "fly", y: 64 }}>

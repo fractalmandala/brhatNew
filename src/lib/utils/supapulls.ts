@@ -565,4 +565,12 @@ export async function events() {
 		return data
 	}
 
+	export async function getCalendar(){
+		const { data, error } = await supabase
+		.from('brhat-calendar')
+		.select()
+		if (error) throw new Error(error.message)
+		return data
+	}
+
 	

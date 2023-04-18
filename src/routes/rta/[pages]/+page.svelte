@@ -24,7 +24,7 @@
 <svelte:window bind:innerWidth={wide}/>
 <div class="type mandalatext">
 	<div class="x0">
-		<ParallaxImage --parallax="url('{data.image}')"></ParallaxImage>
+		<ParallaxImage --parallax="url('{data.image}')" --parallaxresp="url('{data.image}')"></ParallaxImage>
 	</div>
 	<div class="plain-one x1 pads">
 		<h1>
@@ -52,6 +52,8 @@
 .x1
 	padding-top: 64px
 	padding-bottom: 64px
+	@media screen and (max-width: 1023px)
+		padding-bottom: 0
 
 .x2
 	display: grid
@@ -67,7 +69,7 @@
 	@media screen and (max-width: 1023px)
 		grid-template-columns: 1fr
 		grid-template-areas: "mainbar"
-		padding: 64px 6vw
+		padding: 0px 6vw 64px 6vw
 		gap: 32px 0
 
 

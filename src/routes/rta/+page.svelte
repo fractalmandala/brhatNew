@@ -9,7 +9,7 @@
 
 <div class="type">
 	<div class="x0">
-		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/12rid/infinitywall.webp')"></ParallaxImage>
+		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/12rid/infinitywall.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/12rid/infinitywall.webp')"></ParallaxImage>
 	</div>
 	<div class="gridof2 x1 pads">
 		<div class="box">
@@ -84,8 +84,11 @@
 		margin-bottom: 24px
 
 .x0
-	height: 100vh
 	overflow: hidden
+	@media screen and (min-width: 1024px)
+		height: 100vh
+	@media screen and (max-width: 1023px)
+		height: 60vh
 
 .x3
 	@media screen and (min-width: 1024px)
@@ -95,6 +98,14 @@
 			.boxr img
 				object-fit: contain
 				height: 32px
+	@media screen and (max-width: 1023px)
+		padding-bottom: 64px
+		.box
+			img
+				object-fit: contain
+				height: 80px
+		.boxr
+			gap: 32px
 
 .x3
 	.card-nix

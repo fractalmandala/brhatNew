@@ -79,7 +79,7 @@
 
 <div class="type">
 	<div class="box x0">
-		<ParallaxImage --parallax="url('{data.image}')">
+		<ParallaxImage --parallax="url('{data.image}')" --parallaxresp="url('{data.image}')">
 			<h1 style="transform: translateY({-p/5}px)">{data.name}</h1>
 		</ParallaxImage>
 	</div>
@@ -97,8 +97,8 @@
 	</div>
 	<div class="plain-one x2 pads">
 		<div class="a-title boxr">
-			<h3 on:click={() => toggleArea(1)} on:keydown={fauxfake} class:selectedhead={area[1]}>Itinerary</h3>
-			<h3 on:click={() => toggleArea(2)} on:keydown={fauxfake} class:selectedhead={area[2]}>Temples</h3>
+			<h4 on:click={() => toggleArea(1)} on:keydown={fauxfake} class:selectedhead={area[1]}>Itinerary</h4>
+			<h4 on:click={() => toggleArea(2)} on:keydown={fauxfake} class:selectedhead={area[2]}>Temples</h4>
 		</div>
 		<div class="a-box box extra">
 			{#if area[1]}
@@ -124,7 +124,7 @@
 				</div>
 			{/if}
 			{#if area[2]}
-				<div class="gridof4" class:calibrated={alignGrid}>
+				<div class="gridof4 by2" class:calibrated={alignGrid}>
 					{#if temp && temp.length > 0}
 						{#each temp as item, i}
 							{#if imageDetail[i]}
@@ -167,19 +167,36 @@
 		.card-row.opentab
 			grid-area: opentab
 
+.gridof4.by2.calibrated
+	@media screen and (max-width: 1023px)
+		grid-template-areas: "opentab opentab" ". ."
+		grid-template-rows: auto auto
+		.card-row.opentab
+			grid-area: opentab
+			flex-direction: column
+			.card-image, .card-body
+				width: 100%
+			.card-image
+				height: 240px
+
+.gridof4.by2
+	.card-row
+		.card-image
+			height: 120px
+
 .x2
 	.boxr
 		border-top: 1px solid #ececec
 		justify-content: center
 		width: 100%
 		gap: 64px
-	h3
+	h4
 		padding: 2px 16px
 		cursor: pointer
 		&:hover
 			background: var(--yellow)
 			color: white
-	h3.selectedhead
+	h4.selectedhead
 		background: var(--yellow)
 		color: white
 	.gridof3
@@ -187,6 +204,10 @@
 			cursor: pointer
 		.card-c.opentab
 			cursor: default
+			border-bottom: 1px solid #ececec
+			padding-bottom: 16px
+			h5
+				color: var(--yellow)
 		
 
 .card-c
@@ -199,7 +220,10 @@
 
 .x0
 	overflow: hidden
-	height: 100vh
+	@media screen and (min-width: 1024px)
+		height: 100vh
+	@media screen and (max-width: 1023px)
+		height: 40vh
 
 .x0
 	h1
@@ -219,7 +243,6 @@
 	.a-title
 		position: sticky
 		top: 0
-		padding-top: 80px
 		h6
 			background: var(--yellow)
 			color: white
@@ -229,6 +252,10 @@
 	@media screen and (min-width: 1024px)
 		min-height: 100vh
 		align-content: center
+		.a-title
+			padding-top: 80px
+	@media screen and (max-width: 1023px)
+		padding-top: 32px
 
 .x2
 	padding-bottom: 64px

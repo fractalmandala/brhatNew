@@ -372,13 +372,15 @@ caption
 			font-size: 2vw*2.4
 			font-weight: 400
 		h4
-			font-size: 2.8vw*$l2
+			font-size: 2.8vw*$l3
 		.onpagelinks h4
 			font-size: 2.8vw*$l3
+		.a-title.boxr h4
+			font-size: 2.8vw*$l3			
 		h3
 			font-size: 4vw*$l3
 		h2
-			font-size: 5.65vw*$l4
+			font-size: 5.4vw*$l4
 		h1
 			font-size: 8vw*$l4
 			letter-spacing: -1px
@@ -415,8 +417,6 @@ caption
 		.maincol p
 			text-transform: none
 			color: #272727
-		
-
 
 .sidebar .box
 	p
@@ -435,11 +435,21 @@ caption
 	p
 		color: #878787
 
-
 .a-box.box
 	.boxr h6
 		font-size: 24px
+		@media screen and (max-width: 899px)
+			font-size: 18px
+			text-align: center
+
+.boxr.short
+	h6
+		@media screen and (max-width: 899px)
+			font-size: 18px
 
 .plain-one
 	.boxr h6
 		font-size: 24px
+		@media screen and (max-width: 899px)
+			font-size: 18px
+			text-align: center

@@ -133,6 +133,8 @@
 		grid-template-areas: "mainbar"
 		padding: 64px 6vw
 		gap: 32px 0
+		.mainbar
+			padding: 16px
 
 .mainbar
 	padding-top: 80px

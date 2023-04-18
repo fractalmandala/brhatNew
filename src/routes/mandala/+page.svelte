@@ -60,7 +60,7 @@
 
 <div class="type">
 	<div class="x0">
-		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/10mandala/realitywall.webp')"></ParallaxImage>
+		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/10mandala/realitywall.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/10mandala/realitywall.webp')"></ParallaxImage>
 	</div>
 	<div class="x00">
 		<div class="insideparal back" style="transform: translateY({rota / 4}px)">
@@ -167,8 +167,10 @@
 	justify-content: flex-end
 	padding-bottom: 128px
 	padding-left: 6vw
+	@media screen and (min-width: 1024px)
+		.boxc
+			width: 70%
 	.boxc
-		width: 70%
 		background: rgba(0,0,0,0.5)
 		padding: 32px
 		h6, h5
@@ -256,7 +258,6 @@
 		line-height: 1.3
 		padding: 4px
 		text-shadow: 4px 4px 12px #111111
-		width: 60%
 	h2
 		width: max-content
 		text-shadow: 4px 4px 12px #111111
@@ -265,6 +266,8 @@
 		height: 100vh
 		padding-top: 32px
 		padding-bottom: 32px
+		h4
+			width: 60%
 
 
 .x3
@@ -276,8 +279,6 @@
 		height: 100%
 	h4
 		color: white
-		width: 60%
-		margin-left: 40%
 		text-align: right
 		line-height: 1.3
 		background: rgba(0,0,0,0.8)
@@ -290,6 +291,9 @@
 		height: 100vh
 		.box
 			height: 100vh
+		h4
+			width: 60%
+			margin-left: 40%
 
 .x4
 	.box
@@ -313,18 +317,20 @@
 	@media screen and (max-width: 1023px)
 		grid-template-columns: 1fr 30%
 		grid-template-areas: ". ."
-		height: 100%
 		gap: 0 32px
 		padding-top: 32px
 		padding-bottom: 32px
 		.box
 			overflow: hidden
 
+.x2, .x3, .x4
+	@media screen and (max-width: 1023px)
+		height: 60vh
+
 .x3
 	@media screen and (max-width: 1023px)
 		grid-template-columns: 30% 1fr
 		grid-template-areas: ". ."
-		height: 100%
 		gap: 0 32px
 		padding-top: 32px
 		padding-bottom: 32px
@@ -335,9 +341,8 @@
 .x5
 	padding-bottom: 64px
 	padding-top: 64px
-	@media screen and (min-width:1024px)
-		justify-content: center
-		margin-top: -256px
+	justify-content: center
+	margin-top: -256px
 
 .x6
 	padding-top: 64px

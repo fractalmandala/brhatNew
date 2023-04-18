@@ -43,7 +43,7 @@
 
 <div class="type">
 	<div class="x0">
-		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/06drashta/drashtaparallax.webp')"></ParallaxImage>
+		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/06drashta/drashtaparallax.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/06drashta/drashtaparallax.webp')"></ParallaxImage>
 	</div>
 	<div class="gridof2 skew x1 pads">
 		<div class="box small">
@@ -77,7 +77,7 @@
 			<h3>Programs</h3>
 		</div>
 		<div class="a-box box extra">
-			<div class="boxr">
+			<div class="boxr resbox">
 				<h6 on:click={() => toggleCategory(1)} on:keydown={fauxfake} class:selectedhead={selectedCategory[1]}>Schools of Thought</h6>
 				<h6 on:click={() => toggleCategory(2)} on:keydown={fauxfake} class:selectedhead={selectedCategory[2]}>Draṣṭās</h6>
 				<h6 on:click={() => toggleCategory(3)} on:keydown={fauxfake} class:selectedhead={selectedCategory[3]}>Firekeepers of Civilization</h6>
@@ -143,13 +143,22 @@
 
 <style lang="sass">
 
+.type
+	padding--top: 64px
+
 .x0
 	height: 100vh
 	overflow: hidden
 	@media screen and (max-width: 1023px)
-		height: 60vh
+		height: 50vh
 
 .x1
+	.card-row h6
+		text-transform: capitalize
+	.card-meta
+		justify-content: flex-start
+		gap: 32px
+		text-transform: uppercase
 	@media screen and (min-width: 1024px)
 		height: 100vh
 		align-content: center
@@ -157,21 +166,26 @@
 			.card-row
 				border-bottom: 1px solid #ececec
 				padding-bottom: 16px
-				h6
-					font-size: 20px
-					text-transform: capitalize
-				.card-meta
-					justify-content: flex-start
-					gap: 32px
-					text-transform: uppercase
 				.card-body p
 					background: var(--drash)
 					color: white
-					width: max-content
+					width: 100%
 					padding: 2px 8px
+				h6
+					font-size: 20px
 	@media screen and (max-width: 1023px)
+		row-gap: 64px
 		padding-top: 64px
 		padding-bottom: 64px
+		.box.big
+			row-gap: 32px
+			.card-row
+				border-bottom: 1px solid #ececec
+				padding-bottom: 16px
+			.card-row h6
+				color: white
+				background: var(--drash)
+				padding: 4px
 
 
 .x3
@@ -180,11 +194,12 @@
 		text-align: center
 	.a-box
 		.boxr
-			gap: 32px
 			border-bottom: 1px solid #ececec
 			border-top: 1px solid #ececec
 			justify-content: center
 			width: 100%
+			@media screen and (min-width: 1024px)
+				gap: 32px
 			h6
 				cursor: pointer
 				text-transform: uppercase

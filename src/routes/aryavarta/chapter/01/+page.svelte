@@ -97,11 +97,18 @@
 	background: #171717
 
 .x1, .x2
-	height: 100vh
+	@media screen and (min-width: 1024px)
+		height: 100vh
+
+.x2
+	@media screen and (max-width: 1023px)
+		min-height: 100vh
 
 .x1
 	@media screen and (max-width: 1023px)
-		height: 100vh
+		padding-top: 64px
+		padding-bottom: 64px
+		height: 100%
 
 .x1
 	overflow: hidden
@@ -121,16 +128,8 @@
 	width: 100%
 	overflow-x: visible
 	flex-direction: row
-	height: 800px
-	.back
-		width: 50%
-		height: 100vh
-		margin-top: -160px
 	.text
-		width: 50%
-		height: 80%
 		justify-content: space-between
-		padding-top: 80px
 		p
 			padding-left: 32px
 		h6
@@ -139,14 +138,24 @@
 			line-height: 1.5
 			color: white
 			padding: 32px
+	@media screen and (min-width: 1024px)
+		height: 800px
+		.back
+			height: 100vh
+			margin-top: -160px
+			width: 50%
+		.text
+			width: 50%
+			height: 80%
+			padding-top: 80px
 
 .carouselitem
 	@media screen and (max-width: 1023px)
-		flex-wrap: wrap
 		.back
 			width: 100%
 			height: 60vh
-			z-index: 0
+			border: 1px solid red
+			z-index: 2
 		.text
 			width: 100%
 			z-index: 2

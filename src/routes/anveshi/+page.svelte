@@ -95,7 +95,7 @@
 
 <div class="type">
 	<div class="box x0">
-		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/brhatanveshi.webp')"></ParallaxImage>
+		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/brhatanveshi.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/brhatanveshi.webp')"></ParallaxImage>
 	</div>
 	<div class="gridof2 x1 pads">
 		<div class="box" id="anveshipage">
@@ -118,9 +118,10 @@
 		<div class="a-box gridof3">
 			{#if chapters && chapters.length > 0}
 				{#each chapters as item}
-					<WhiteCard>
-						<img slot="image" src={item.image} alt={item.id}/>
-						<div slot="body" class="cardboard"> 
+					<div class="thisrow">
+						<WhiteCard>
+							<img slot="image" src={item.image} alt={item.id}/>
+							<div slot="body" class="cardboard"> 
 							<h6>
 								<a href="/anveshi/chapter/{item.chapter}">
 								{item.name}
@@ -138,7 +139,8 @@
 								</small>
 							</div>
 						</div>
-					</WhiteCard>
+						</WhiteCard>
+					</div>
 				{/each}
 			{/if}
 		</div>
@@ -157,7 +159,7 @@
 				<h6 on:click={() => toggleCategory(2)} on:keydown={() => toggleCategory(2)} class:selected={selectedCategory[2]}>Video Testimonials</h6>
 			</div>
 			{#if selectedCategory[1]}
-				<div class="gridof4">
+				<div class="gridof4 by2">
 				{#if arts && arts.length > 0}
 					{#each arts as item, i}
 						<div class="card-image" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
@@ -224,8 +226,7 @@
 
 .x0
 	overflow: hidden
-	@media screen and (min-width: 1024px)
-		height: 100vh
+	height: 100vh
 
 .x2
 	h3
@@ -237,8 +238,9 @@
 	h5
 		color: #878787
 	.a-box
-		padding-left: 56px
-		padding-right: 32px
+		@media screen and (min-width: 1024px)
+			padding-left: 56px
+			padding-right: 32px
 		.boxr
 			gap: 32px
 			border-bottom: 1px solid #ececec
@@ -260,12 +262,15 @@
 
 
 .x2
-	.gridof3
-		padding-left: 48px
-		padding-right: 32px
+	@media screen and (min-width: 1024px)
+		.gridof3
+			adding-left: 48px
+			padding-right: 32px
 	h6
 		&:hover
 			color: var(--yellow)
+	@media screen and (max-width: 1023px)
+		padding-bottom: 64px
 
 .x1, .x2
 	@media screen and (min-width: 1024px)

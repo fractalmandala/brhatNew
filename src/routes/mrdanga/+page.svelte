@@ -8,14 +8,26 @@
 	import { allmrdVids, Shabdavali, mrdangaVids, kavitaVids } from '$lib/utils/supapulls'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
 	import ButtonOne from '$lib/anims/ButtonOne.svelte'
+	import ButtonTwo from '$lib/anims/ButtonOne.svelte'
 	let sidebar = false
 	let vids:string|any[]
 	let limiter:number = 8
 	let kalas:string|any[]
 	let kavitas:any
 	let rasas:any
+	let iw:number
+	let responsive:boolean
 	let selectedCategory:boolean[] = Array(5).fill(false)
 	selectedCategory[1] = true
+	let fake = false
+
+	function toggleResponsive(){
+		responsive = !responsive
+	}
+
+	function fauxfake(){
+		fake = !fake
+	}
 
 	function toggleCategory(index:number) {
 		selectedCategory[index] = !selectedCategory[index]
@@ -37,6 +49,12 @@
 	function moreClick(){
 		limiter += 4
 		loadMore()
+	}
+
+	$: if ( iw <= 1023) {
+		responsive = true
+	} else {
+		responsive = false
 	}
 
 	onMount(async() => {
@@ -62,16 +80,17 @@
 		Bṛhadmṛdaṅga at
 	</HeadComponent>
 </svelte:head>
-
+<svelte:window bind:innerWidth={iw}/>
 
 <Header sidebar={sidebar}/>
 <div class="type">
 	<div class="x0">
-		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/mrdanga-hero.webp')"></ParallaxImage>
+		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/mrdanga-hero.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/mrdanga-hero.webp')"></ParallaxImage>
 	</div>
 	<div class="plain-one x1 pads">
 		<div class="gridof2">
-			<div class="box">
+			{#if !responsive}
+			<div class="box" id="more">
 				<p>
 				Sanātana Dharma is a view of immanence. It sees the divine everywhere. The transcendent is the Ultimate Truth, the Supreme Consciousness. The view of immanence says that although nothing that we perceive is the Ultimate Truth, it is at the same time a form of the Ultimate. In this view of immanence a gradient of divinity is created in which individual consciousness is always encouraged to elevate itself and ultimately realize its true form as the Supreme Consciousness.
 				</p>
@@ -91,13 +110,20 @@
 				Like Mṛdaṅga they will tap into the eternal streams of beauty and reality in our culture and will voice them in contemporary idiom to convey the eternal truths of the eternal civilization to our contemporary times.
 				</p>
 			</div>
+			{/if}
 			<div class="box">
 				<h5>
 					Mṛdaṅga is one of the sacred trinity of musical instruments. It is a ‘Deva Vādyam’, the instrument which Nandi, the prime gaṇa of Śiva plays when he does his Tāṇḍava. Mṛdaṅga is capable of sounding the divine rhythm across the multiple planes of consciousness. It is so divine because the sound that it emanates is not just a human creation.</h5>
 				<h4 class="mrd">
 				It is a tapping into the divine sound which is always playing but not accessible to our senses normally.
 				</h4>	
+				{#if responsive}
+				<div on:click={toggleResponsive} on:keydown={fauxfake}>
+				<ButtonTwo><a href="/mrdanga/#more">Read More</a></ButtonTwo>
+				</div>
+				{/if}
 			</div>
+			
 		</div>
 	</div>
 	<div class="plain-one x2 pads">
@@ -105,7 +131,7 @@
 			<h3>Explore Bṛhad Mṛdaṅga</h3>
 		</div>
 		<div class="a-box box extra">
-			<div class="boxr">
+			<div class="boxr short">
 				<h6 on:click={() => toggleCategory(1)} on:keydown={() => toggleCategory(1)} class:selected={selectedCategory[1]}>Latest</h6>
 				<h6 on:click={() => toggleCategory(2)} on:keydown={() => toggleCategory(2)} class:selected={selectedCategory[2]}>Rasa</h6>
 				<h6 on:click={() => toggleCategory(3)} on:keydown={() => toggleCategory(3)} class:selected={selectedCategory[3]}>Kavitā</h6>
@@ -181,11 +207,12 @@
 	padding-bottom: 64px
 	.a-box
 		.boxr
-			gap: 32px
 			border-bottom: 1px solid #ececec
 			border-top: 1px solid #ececec
 			justify-content: center
 			width: 100%
+			@media screen and (min-width: 900px)
+				gap: 32px
 			h6
 				cursor: pointer
 				text-transform: uppercase

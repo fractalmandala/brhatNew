@@ -105,6 +105,30 @@ a
 	background-position: center center
 	background-repeat: no-repeat
 
+.boxr.resbox
+	@media screen and (max-width: 899px)
+		flex-direction: column
+		border: 1px solid #ececec
+		padding: 4px
+		row-gap: 8px
+		h6
+			margin: 0
+			padding: 4px
+
+.a-box
+	.boxr
+		@media screen and (max-width: 899px)
+			gap: 16px
+
+.responsivebar
+	display: flex
+	flex-direction: row
+	align-items: center
+	justify-content: center
+	cursor: pointer
+	@media screen and (min-width: 900px)
+		display: none
+
 .box
 	display: flex
 	flex-direction: column
@@ -125,9 +149,13 @@ a
 
 .box.extra
 	row-gap: 24px
+	@media screen and (max-width: 899px)
+		row-gap: 16px
 
 .extra
 	row-gap: 24px
+	@media screen and (max-width: 899px)
+		row-gap: 16px
 
 .boxr
 	display: flex
@@ -403,6 +431,11 @@ a
 		padding-left: 6vw
 		padding-right: 6vw
 
+.pads.resp
+	@media screen and (max-width: 1023px)
+		padding-left: 0
+		padding-right: 0
+
 //******************************************************************************************
 
 .border-bottom
@@ -588,6 +621,8 @@ button.treebutton
 	display: flex
 	flex-direction: column
 	gap: 64px 0
+	@media screen and (max-width: 1023px)
+		gap: 32px 0
 
 //***************************************************************************************
 //GRIDS
@@ -629,6 +664,13 @@ button.treebutton
 		grid-template-columns: 1fr
 		gap: 32px 0
 
+.gridof3.by2
+	@media screen and (max-width: 1023px)
+		grid-template-areas: ". ."
+		grid-template-columns: 1fr 1fr
+		gap: 32px 32px
+
+
 .gridof4
 	display: grid
 	grid-auto-flow: row
@@ -652,7 +694,7 @@ button.treebutton
 		gap: 32px 32px
 	@media screen and (max-width: 1023px)
 		grid-template-columns: 1fr 1fr
-		grid-template-areas: "." "."
+		grid-template-areas: ". ."
 		gap: 32px 24px
 
 .gridof5
@@ -691,6 +733,14 @@ button.treebutton
 				padding-top: 8px
 				margin-top: 16px
 				justify-content: space-between
+
+.thisrow
+	.whitecard
+		@media screen and (max-width: 1023px)
+			flex-direction: row
+			column-gap: 24px
+			img
+				width: 32%
 
 
 .secondlevel

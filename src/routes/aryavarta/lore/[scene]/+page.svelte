@@ -52,7 +52,7 @@
 </Header>
 <div class="type aryatext">
 	<div class="x0 plain-one">
-		<ParallaxImage --parallax="url('{data.image}')"></ParallaxImage>
+		<ParallaxImage --parallax="url('{data.image}')" --parallaxresp="url('{data.image}')"></ParallaxImage>
 	</div>
 	<div class="x1 plain-one pads">
 		<div class="mainstory">
@@ -143,10 +143,9 @@
 		padding-left: 64px
 	@media screen and (max-width: 1023px)
 		display: grid
-		grid-template-columns: 1fr 1fr 1fr 1fr
-		gap: 32px 16px
+		grid-template-columns: 1fr
+		gap: 16px 16px
 		.card-row
-			flex-direction: column
 			h6
 				font-size: 16px
 

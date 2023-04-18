@@ -24,7 +24,7 @@
 <svelte:window bind:scrollY={sy}/>
 <div class="type">
 	<div class="x0">
-		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim13.webp')"></ParallaxImage>
+		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim13.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim13.webp')"></ParallaxImage>
 	</div>
 	<div class="plain-one pads x10">
 		<img class="hinduchakra" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/hinduchakra.png" alt="chakra" style="transform: rotate({sy/4}deg); opacity: {sy/800}">
@@ -62,7 +62,7 @@
 			<h3>
 				The Scrolls of Āryavarta is a project to celebrate, express and engage in our shared lore- the dhārmika lore.
 			</h3>
-			<p>
+			<p class="resppadding">
 				It is a calling to all who dream of the Bhārata that once was, or Bhāratas that could have been.<br>
 				We engage here in creative storytelling and lore creation, employing image generators to create for us visions of a place we all know.
 			</p>
@@ -129,6 +129,12 @@
 	@media screen and (min-width: 1024px)
 		padding-top: 600px	
 		height: 100%	
+	@media screen and (max-width: 1023px)
+		padding-top: 64px
+
+.resppadding
+	@media screen and (max-width: 1023px)
+		margin-bottom: 400px
 
 .x4
 	height: 100vh
@@ -204,7 +210,8 @@
 	@media screen and (max-width: 1023px)
 		grid-template-columns: 1fr 1fr
 		grid-template-areas: ". ."
-		gap: 2px 2px
+		gap: 16px 16px
+		padding-top: 16px
 		.back
 			height: 160px
 			display: flex

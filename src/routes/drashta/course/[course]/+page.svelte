@@ -55,7 +55,7 @@
 
 <div class="type">
 	<div class="box x0">
-		<ParallaxImage --parallax="url('{data.image}')">
+		<ParallaxImage --parallax="url('{data.image}')" --parallaxresp="url('{data.image}')">
 			<h1 style="transform: translateY({-y/5}px)">{data.name}</h1>
 		</ParallaxImage>
 	</div>
@@ -64,7 +64,6 @@
 			<h6>{data.status}</h6>
 			<h6>{data.datefrom}</h6>
 			<h6>{data.ins}</h6>
-			<h6>{dynamizer}</h6>
 		</div>
 		<div class="a-box secondlevel">
 			<h5 style="font-weight: 400; line-height: 1.3">
@@ -141,6 +140,8 @@
 		@media screen and (max-width: 1023px)
 			width: 100%
 			margin-top: 60%
+	@media screen and (max-width: 1023px)
+		height: 60vh
 
 .x1
 	min-height: 100vh

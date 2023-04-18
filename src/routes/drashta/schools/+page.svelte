@@ -38,7 +38,7 @@
 			<h5>
 				At Bṛhat, we set big goals. And to achieve them we need to build on the foundation built by our great sages and scholars. We draw our vitality from some very important and select ‘Schools of Thought’ which define our identity, inform our views, and guide our actions. These schools of thought come together in the ways in which we think and create and in the ways we seek to guide policy to culture. We seek to forge a unique path of culture-conducive policy in Bhāratavarṣa by building on the inspiration from these schools.<br><br>These schools are:
 			</h5>
-			<div class="gridof3 pads" style="padding-top: 32px; column-gap: 64px">
+			<div class="gridof3 by2 pads resp" style="padding-top: 32px; column-gap: 64px">
 			{#if darshanas && darshanas.length > 0}
 				{#each darshanas as item}
 					<div class="boxc">
@@ -53,7 +53,7 @@
 		<div class="a-title">
 			<h3>Draṣṭās</h3>
 		</div>
-		<div class="gridof4" class:calibrated={alignGrid}>
+		<div class="gridof4 by2" class:calibrated={alignGrid}>
 		{#if drashtas && drashtas.length > 0}
 			{#each drashtas as item, i}
 				{#if selectedDrashta[i]}
@@ -111,7 +111,7 @@
 	padding-top: 64px
 	h3
 		text-align: center
-	.gridof4.calibrated
+	.gridof4.calibrated.by2
 		@media screen and (min-width: 1024px)
 			grid-template-areas: "opentab opentab . ." "opentab opentab . ." "opentab opentab . ." "opentab opentab . ."
 			grid-template-rows: auto auto auto auto
@@ -121,6 +121,11 @@
 				grid-area: opentab
 				border: 1px solid #ececec
 				padding: 16px
+		@media screen and (max-width: 1023px)
+			grid-template-areas: "opentab opentab" ". ."
+			grid-template-rows: auto auto
+			.box.opentab
+				grid-area: opentab
 
 .box h6
 	text-transform: capitalize

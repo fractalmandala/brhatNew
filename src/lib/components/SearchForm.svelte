@@ -140,6 +140,10 @@ input
 	border: none
 	outline: none
 	background: none
+	@media screen and (max-width: 899px)
+		width: 120px
+	@media screen and (max-width: 574px)
+		width: 88px
 
 .row
 	display: flex

@@ -249,6 +249,8 @@
 	display: flex
 	flex-direction: column
 	height: 100vh
+	width: 100vw
+	overflow-x: hidden
 	width: 400px
 	background: var(--beau)
 	z-index: 999
@@ -312,6 +314,7 @@
 	@media screen and (max-width: 899px)
 		svg
 			height: 48px
+		width: 160px
 
 .midrow
 	grid-area: midrow

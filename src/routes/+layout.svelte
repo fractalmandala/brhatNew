@@ -7,8 +7,23 @@
 	import '$lib/styles/types.sass'
 	import Footer from '$lib/components/Footer.svelte'
 
+	let innerW:number
+
+	let breakPointOn:boolean
+
+	$: if ( innerW <= 1023 ) {
+		breakPointOn = true
+ 	} else {
+		breakPointOn = false
+	}
+
 	onMount(() => {
 		let url = $page.url.pathname
+		if ( innerW <= 1023 ) {
+			breakPointOn = true
+		} else {
+			breakPointOn = false
+		}
 		const lenis = new Lenis({
 			duration: 0.5,
 			easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -27,6 +42,8 @@
 	})
 
 </script>
+
+<svelte:window bind:innerWidth={innerW}/>
 
 <svelte:head>
 	<link rel="preconnect" href="https://fonts.googleapis.com">

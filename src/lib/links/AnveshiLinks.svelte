@@ -27,7 +27,7 @@
 {#if flytime}
 {#if allSite && allSite.length > 0}
 {#each allSite as name, i}
-	<a in:fly={{ duration: 150, delay: i*50, x: 128, y: 0, easing: quintIn}} out:fly={{ duration: 100, delay: 0, x: 128, y: 0, easing: quintIn}} href="{name.url}">{name.heading}</a>
+	<a in:fly={{ duration: 150, delay: i*50, x: 128, y: 0, easing: quintIn}} out:fly={{ duration: 100, delay: 0, x: 128, y: 0, easing: quintIn}} href="{name.url}" data-sveltekit-reload>{name.heading}</a>
 {/each}
 {/if}
 {/if}

@@ -17,6 +17,8 @@
 	let others:string|any[]
 	let aryans:string|any[]
 	let limit:number = 160
+	let iw:number
+	let responsive:boolean
 	let selectedCategory:boolean[] = Array(5).fill(false)
 	selectedCategory[1] = true
 	let tag:string = 'Core Material'
@@ -29,6 +31,10 @@
 				selectedCategory[i] = false
 			}
 		}		
+	}
+
+	function toggleResponsive(){
+		responsive = !responsive
 	}
 
 	function setTag(newTag:string){
@@ -44,6 +50,12 @@
 	function fauxfake(){
 		fake = !fake
 	}
+
+	$: if (iw <= 899) {
+			responsive = true
+		} else {
+			responsive = false
+		}
 
 	const [send, receive] = crossfade({
 		duration: 400,
@@ -62,6 +74,8 @@
 
 </script>
 
+<svelte:window bind:innerWidth={iw}/>
+
 <svelte:head>
 	<HeadComponent>
 		The Open Library at
@@ -72,7 +86,7 @@
 <Header sidebar={sidebar}/>
 <div class="type">
 	<div class="x0">
-		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/bolherobrhat.webp')">
+		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/bolherobrhat.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/bolherobrhat.webp')">
 			<div class="boxobox" style="display: flex; flex-direction: column; height: 100%; width: 100%; justify-content: center; align-items: center; text-align: center;">
 				<div class="boxc pads" style="height: max-content; background: rgba(0,0,0,0.8); text-align: center; padding-top: 32px; padding-bottom: 32px">
 				<h3 style="color: white; margin-bottom: 24px">Bṛhat Open Library</h3>
@@ -92,19 +106,25 @@
 			<h4 style="text-align: center">Explore</h4>
 		</div>
 		<div class="a-box box extra">
-			<div class="boxr">
-				<h6 on:click={() => toggleCategory(1)} on:keydown={() => toggleCategory(1)} class:selected={selectedCategory[1]}>Essentials</h6>
-				<h6 on:click={() => toggleCategory(2)} on:keydown={() => toggleCategory(2)} class:selected={selectedCategory[2]}>Two Bodhas</h6>
-				<h6 on:click={() => toggleCategory(3)} on:keydown={() => toggleCategory(3)} class:selected={selectedCategory[3]}>IKS</h6>
-				<h6 on:click={() => toggleCategory(4)} on:keydown={() => toggleCategory(4)} class:selected={selectedCategory[4]}>Scriptural</h6>
-				<h6 on:click={() => toggleCategory(5)} on:keydown={() => toggleCategory(5)} class:selected={selectedCategory[5]}>Special</h6>
-				<h6 on:click={() => toggleCategory(6)} on:keydown={() => toggleCategory(6)} class:selected={selectedCategory[6]}>Āryan Issue</h6>
+			<div class="boxr resbox">
+				{#if responsive}
+					<div class="responsivebar" on:click={toggleResponsive} on:keydown={fauxfake}>Expand Menu</div>
+				{/if}
+				{#if !responsive}
+					<div class="responsivebar" on:click={toggleResponsive} on:keydown={fauxfake}>Close Menu</div>
+					<h6 on:click={() => toggleCategory(1)} on:keydown={() => toggleCategory(1)} class:selected={selectedCategory[1]}>Essentials</h6>
+					<h6 on:click={() => toggleCategory(2)} on:keydown={() => toggleCategory(2)} class:selected={selectedCategory[2]}>Two Bodhas</h6>
+					<h6 on:click={() => toggleCategory(3)} on:keydown={() => toggleCategory(3)} class:selected={selectedCategory[3]}>IKS</h6>
+					<h6 on:click={() => toggleCategory(4)} on:keydown={() => toggleCategory(4)} class:selected={selectedCategory[4]}>Scriptural</h6>
+					<h6 on:click={() => toggleCategory(5)} on:keydown={() => toggleCategory(5)} class:selected={selectedCategory[5]}>Special</h6>
+					<h6 on:click={() => toggleCategory(6)} on:keydown={() => toggleCategory(6)} class:selected={selectedCategory[6]}>Āryan Issue</h6>
+				{/if}
 			</div>
 			<div class="gridof2" class:fullgrid={selectedCategory[5] || selectedCategory[6]}>
 			{#if selectedCategory[1]}
 				{#if essentials && essentials.length > 0}
 					{#each essentials as item, i}
-						<div class="card-book" in:scale={{ duration: 150, delay: i*15}} out:scale={{ duration: 150, delay: 0 }}>
+						<div class="card-book" in:scale={{ duration: 150, delay: i*25}} out:scale={{ duration: 25, delay: 0 }}>
 							<div class="card-image">
 								<img src={item.imagelinker} alt={item.id}/>
 							</div>
@@ -120,7 +140,7 @@
 			{#if selectedCategory[2]}
 				{#if bodhas && bodhas.length > 0}
 					{#each bodhas as item, i}
-						<div class="card-book" in:scale={{ duration: 150, delay: i*15}} out:scale={{ duration: 150, delay: 0 }}>
+						<div class="card-book" in:scale={{ duration: 150, delay: i*25}} out:scale={{ duration: 25, delay: 0 }}>
 							<div class="card-image">
 								<img src={item.imagelinker} alt={item.id}/>
 							</div>
@@ -136,7 +156,7 @@
 			{#if selectedCategory[3]}
 				{#if ikss && ikss.length > 0}
 					{#each ikss as item, i}
-						<div class="card-book" in:scale={{ duration: 150, delay: i*15}} out:scale={{ duration: 150, delay: 0 }}>
+						<div class="card-book" in:scale={{ duration: 150, delay: i*25}} out:scale={{ duration: 25, delay: 0 }}>
 							<div class="card-image">
 								<img src={item.imagelinker} alt={item.id}/>
 							</div>
@@ -152,7 +172,7 @@
 			{#if selectedCategory[4]}
 				{#if ross && ross.length > 0}
 					{#each ross as item, i}
-						<div class="card-book" in:scale={{ duration: 150, delay: i*15}} out:scale={{ duration: 150, delay: 0 }}>
+						<div class="card-book" in:scale={{ duration: 150, delay: i*25}} out:scale={{ duration: 25, delay: 0 }}>
 							<div class="card-image">
 								<img src={item.imagelinker} alt={item.id}/>
 							</div>
@@ -255,7 +275,12 @@
 			<h4 style="text-align: center">The Āryan Issue</h4>
 		</div>
 		<div class="a-box">
-			<div class="boxr">
+			<div class="boxr resbox">
+				{#if responsive}
+				<div class="responsivebar" on:click={toggleResponsive} on:keydown={fauxfake}>Expand Genres</div>
+				{/if}
+				{#if !responsive}
+				<div class="responsivebar" on:click={toggleResponsive} on:keydown={fauxfake}>Expand Genres</div>
 				<h6 on:click={() => setTag('Core Material')} on:keydown={fauxfake} class="genres {tag === 'Core Material' ? 'filtered' : ''}">Core Material</h6>
 				<h6 on:click={() => setTag('Indology')} on:keydown={fauxfake} class="genres {tag === 'Indology' ? 'filtered' : ''}">Indology</h6>
 				<h6 on:click={() => setTag('Linguistics')} on:keydown={fauxfake} class="genres {tag === 'Linguistics' ? 'filtered' : ''}">Linguistics</h6>
@@ -265,6 +290,7 @@
 				<h6 on:click={() => setTag('Chronology')} on:keydown={fauxfake} class="genres {tag === 'Chronology' ? 'filtered' : ''}">Chronology</h6>
 				<h6 on:click={() => setTag('Philology')} on:keydown={fauxfake} class="genres {tag === 'Philology' ? 'filtered' : ''}">Philology</h6>
 				<h6 on:click={() => setTag('Geology')} on:keydown={fauxfake} class="genres {tag === 'Geology' ? 'filtered' : ''}">Geology</h6>
+				{/if}
 			</div>
 			<div class="gridof3">
 				{#if aryans && aryans.length > 0}
@@ -282,12 +308,18 @@
 
 <style lang="sass">
 
+.responsivebar
+	background: var(--tree)
+	color: white
+	padding: 2px
+
 .x0
 	overflow: hidden
 	@media screen and (min-width: 1024px)
 		height: 100vh
 	@media screen and (max-width: 1023px)
-		height: 60vh
+		height: 100vh
+		
 
 .x2
 	.gridof2.fullgrid
@@ -311,14 +343,12 @@
 					color: var(--tree)
 	.a-box
 		.boxr
-			gap: 32px
 			border-bottom: 1px solid #ececec
 			border-top: 1px solid #ececec
 			justify-content: center
 			h6
 				cursor: pointer
 				text-transform: uppercase
-				padding: 4px 8px
 				&:hover
 					background: var(--tree)
 					color: white
@@ -327,6 +357,10 @@
 			h6.selected
 				background: var(--tree)
 				color: white
+			@media screen and (min-width: 900px)
+				gap: 32px
+				h6
+					padding: 4px 8px
 
 
 .x4
@@ -334,18 +368,20 @@
 	padding-top: 64px
 	.boxr
 		border-bottom: 1px solid #ececec
-		gap: 16px
 		justify-content: center
 		h6
 			text-transform: uppercase
 			cursor: pointer
-			padding: 4px 8px
 			&:hover
 				background: var(--tree)
 				color: white
 		h6.filtered
 			background: var(--tree)
 			color: white
+		@media screen and (min-width: 900px)
+			gap: 32px
+			h6
+				padding: 4px 8px
 		
 .x4
 	.gridof3
