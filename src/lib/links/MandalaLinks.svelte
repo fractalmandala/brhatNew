@@ -1,15 +1,25 @@
-<a href="/mandala/macrohistoriccase">the macrohistoric case</a>
-<a href="/mandala/aphorisms">caturasūtra - 4 aphorisms</a>
-<a href="/mandala/indiancivcon">civilizational consciousness</a>
-<a href="/mandala/rathaasbija">ratha as a bīja</a>
-<a href="/mandala/historyvsitihasa">history vs itihāsa</a>
-<a href="/mandala/ancestors">ancestors outside of time</a>
-<a href="/mandala/ramasjourney">the avatāra in you</a>
-<a href="/mandala/synrec">synaptic reconnection</a>
+<script lang="ts">
 
-<style lang="sass">
+	import { fly } from 'svelte/transition'
+	import { quintIn } from 'svelte/easing'
+	export let flytime:boolean
 
-a
-	text-transform: capitalize
+	const LinkNames = [
+		"the macrohistoric case",
+		"civilizational consciousness",
+		"caturasūtra - 4 aphorisms",
+		"ancestors outside of time",
+		"history vs. itihāsa",
+		"ratha as bīja",
+		"avatāra in you",
+		"synaptic reconnection",
+	]
 
-</style>
+</script>
+
+{#if flytime}
+{#each LinkNames as name, i}
+	<a in:fly={{ duration: 150, delay: i*50, x: 128, y: 0, easing: quintIn}} out:fly={{ duration: 100, delay: 0, x: 128, y: 0, easing: quintIn}} href="/about/svatahsiddha">{name}</a>
+{/each}
+{/if}
+

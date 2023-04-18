@@ -3,19 +3,17 @@
 	import { page } from '$app/stores'
 	import { onMount } from 'svelte'
 	import Lenis from '@studio-freight/lenis'
-	import Header from '$lib/components/Header.svelte'
 	import '$lib/styles/global.sass'
 	import '$lib/styles/types.sass'
 	import Footer from '$lib/components/Footer.svelte'
-	import Tipper from '$lib/components/Tipper.svelte'
 
 	onMount(() => {
 		let url = $page.url.pathname
 		const lenis = new Lenis({
-			duration: 1.2,
+			duration: 0.5,
 			orientation: 'vertical',
 			gestureOrientation: 'vertical',
-			wheelMultiplier: 0.65,
+			wheelMultiplier: 0.55,
 			smoothWheel: true,
 			touchMultiplier: 1,
 			infinite: false,
@@ -29,8 +27,6 @@
 
 </script>
 
-
-
 <svelte:head>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
@@ -38,9 +34,6 @@
 	<link href="https://cdn.jsdelivr.net/npm/textify.js/dist/Textify.min.css" rel="stylesheet"/>
 </svelte:head>
 
-
-<Header>
-</Header>
 <div id="appbox">
 	<slot></slot>
 	<Footer></Footer>
@@ -53,6 +46,12 @@
 	width: 100vw
 	box-sizing: border-box
 	overflow-x: hidden
+	overflow-y: hidden
+	position: relative
+	height: 100%
+	display: flex
+	flex-direction: column
+
 
 </style>
 

@@ -69,15 +69,6 @@ const navigateList = (e:any) => {
 	}
 } 
 
-	
-	function fauxfake(){
-		fake = !fake
-	}
-
-	function handleClickOutside() {
-		hidden = !hidden
-	}
-
 	onMount(async() => {
 		url = $page.url.pathname
 		dhat = url.substr(39, 40)

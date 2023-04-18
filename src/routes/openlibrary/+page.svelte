@@ -1,6 +1,7 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
+	import Header from '$lib/components/SubHeader.svelte'
 	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import { BOLEssentials, BOLBodhas, BOLIKS, BOLROS, BOLOthers, AryanIssue, AryanTag } from '$lib/utils/supapulls'
 	import { crossfade, fly, scale } from 'svelte/transition'
@@ -8,7 +9,7 @@
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
 	import ButtonOne from '$lib/anims/ButtonOne.svelte'
 	import ButtonTwo from '$lib/anims/ButtonOne.svelte'
-
+	let sidebar = false
 	let essentials:string|any[]
 	let bodhas:string|any[]
 	let ikss:string|any[]
@@ -67,6 +68,8 @@
 	</HeadComponent>
 </svelte:head>
 
+
+<Header sidebar={sidebar}/>
 <div class="type">
 	<div class="x0">
 		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/bolherobrhat.webp')">

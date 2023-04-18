@@ -188,6 +188,7 @@ export async function mrdangaVids() {
   .from('brhat-youtube')
   .select()
 	.eq('type','mrdanga')
+	.lte('id',21)
   .order('id',{ascending: false})
   .limit(6)
   if (error) throw new Error(error.message)
@@ -247,6 +248,15 @@ export async function allDiaryCards() {
 }
 
 
+export async function anveshiTempleArt() {
+	const { data, error } = await supabase
+	.from('brhat-anveshi')
+	.select()
+	.eq('name','Artwork Inspired by the Hoysala Temples')
+	if (error) throw new Error(error.message)
+	return data
+}
+
 export async function allFaq() {
 	const { data, error } = await supabase
 	.from('brhat-anveshi')
@@ -299,13 +309,12 @@ export async function anveshiImages() {
 	return data
 }
 
-export async function anveshiVids(limit: number) {
+export async function anveshiVids() {
   const { data, error } = await supabase
   .from('brhat-youtube')
   .select()
 	.eq('type','anveshi')
   .order('id',{ascending: false})
-  .limit(limit)
   if (error) throw new Error(error.message)
   return data
 }
@@ -555,3 +564,5 @@ export async function events() {
 		.getPublicUrl(link)
 		return data
 	}
+
+	

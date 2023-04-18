@@ -3,6 +3,10 @@ body, html
 	box-sizing: border-box
 	font-family: 'Spline Sans', sans-serif
 
+#anveshipage
+	svg
+		width: 50%
+
 
 $spacer: 48px
 
@@ -83,6 +87,13 @@ $spacer: 48px
 	--greytyp: #474747
 	--beau: linear-gradient(132.9deg, rgba(23,23,23,1) 10.69%, rgba(24, 28, 30, 1) 84.91%)
 
+.mrd
+	color: var(--news)
+	p, h1, h2, h3, h4, h5, h6
+		color: var(--news)
+	p.mrd, h1.mrd, h2.mrd, h3.mrd, h4.mrd, h5.mrd, h6.mrd
+		color: var(--news)
+
 a
 	text-decoration: none
 	color: inherit
@@ -101,6 +112,16 @@ a
 		row-gap: 16px
 	@media screen and (max-width: 1023px)
 		row-gap: 16px
+
+.boxmidrow
+	display: flex
+	@media screen and (min-width: 900px)
+		flex-direction: row
+		gap: 16px
+		a
+			padding: 4px
+			&:hover
+				background: #fe4a49
 
 .box.extra
 	row-gap: 24px
@@ -173,6 +194,20 @@ a
 			row-gap: 8px
 			justify-content: flex-start
 
+.card-image
+	@media screen and (min-width: 1024px)
+		height: 160px
+		img
+			object-fit: cover
+			width: 100%
+			height: 100%
+	@media screen and (max-width: 1023px)
+		height: 160px
+		img
+			object-fit: cover
+			width: 100%
+			height: 100%
+
 .card-b
 	display: flex
 	flex-direction: column
@@ -218,6 +253,9 @@ a
 .card-c
 	display: flex
 	flex-direction: column
+	row-gap: 16px
+	.card-body
+		row-gap: 16px
 	@media screen and (min-width: 1024px)
 		padding: 24px
 		transition: all 0.1s var(--cubec)
@@ -249,6 +287,42 @@ a
 			width: 120px
 		.card-body
 			width: calc(100% - 144px)
+	@media screen and (max-width: 1023px)
+		.card-image
+			height: 88px
+			width: 88px
+		.card-body
+			width: calc(100% - 112px)
+
+.card-row.big
+	display: flex
+	flex-direction: row
+	row-gap: 24px
+	column-gap: 24px
+	@media screen and (min-width: 1024px)
+		.card-image
+			height: 120px
+			width: 240px
+		.card-body
+			width: calc(100% - 264px)
+	@media screen and (max-width: 1023px)
+		.card-image
+			height: 88px
+			width: 88px
+		.card-body
+			width: calc(100% - 112px)
+
+.card-row.opentab
+	display: flex
+	flex-direction: row
+	row-gap: 24px
+	column-gap: 24px
+	@media screen and (min-width: 1024px)
+		.card-image
+			height: 400px
+			width: 800px
+		.card-body
+			width: calc(100% - 824px)
 	@media screen and (max-width: 1023px)
 		.card-image
 			height: 88px
@@ -462,7 +536,7 @@ button.treebutton
 		grid-template-rows: auto auto
 		grid-template-columns: 160px 1fr 1fr 1fr
 		grid-template-areas: "title strip strip strip" "title box box box"
-		gap: 32px 64px
+		gap: 64px 64px
 		.strip
 			grid-area: strip
 		.a-title
@@ -494,7 +568,7 @@ button.treebutton
 	.bot
 		grid-area: bot
 	@media screen and (min-width: 1024px)
-		gap: 32px 0
+		gap: 64px 0
 	@media screen and (max-width: 1023px)
 		gap: 24px 0
 
@@ -504,7 +578,7 @@ button.treebutton
 	grid-template-columns: 1fr
 	grid-template-rows: auto auto
 	grid-template-areas: "up" "down"
-	gap: 32px 0
+	gap: 64px 0
 	.up
 		grid-area: up
 	.down
@@ -513,7 +587,7 @@ button.treebutton
 .plain-one
 	display: flex
 	flex-direction: column
-	gap: 32px 0
+	gap: 64px 0
 
 //***************************************************************************************
 //GRIDS
@@ -525,11 +599,22 @@ button.treebutton
 	@media screen and (min-width: 1024px)
 		grid-template-columns: 1fr 1fr
 		grid-template-areas: ". ."
-		gap: 32px 32px
+		gap: 32px 64px
 	@media screen and (max-width: 1023px)
 		grid-template-columns: 1fr
 		grid-template-areas: "." "."
 		gap: 32px 0
+
+.gridof2.skew
+	@media screen and (min-width: 1024px)
+		grid-template-columns: 36% 1fr
+		grid-template-areas: "small big"
+		gap: 32px 64px
+		.small
+			grid-area: small
+		.big
+			grid-area: big
+		
 
 .gridof3
 	display: grid

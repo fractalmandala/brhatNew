@@ -1,4 +1,4 @@
-export const latestDhitiPost = async() => {
+export async function latestDhitiPost(){
 	const allPostFiles = import.meta.glob('/src/routes/dhiti/*.md')
 	const iterablePostFiles = Object.entries(allPostFiles)
 	const allPosts = await Promise.all(
@@ -17,7 +17,7 @@ export const latestDhitiPost = async() => {
 	return allPosts.slice(0, 1)
 } //single latest post
 
-export const latestDhitiThree = async() => {
+export async function latestDhitiThree(){
 	const allPostFiles = import.meta.glob('/src/routes/dhiti/*.md')
 	const iterablePostFiles = Object.entries(allPostFiles)
 	const allPosts = await Promise.all(
@@ -36,7 +36,7 @@ export const latestDhitiThree = async() => {
 	return allPosts.slice(1, 7)
 } //latest posts 2, 3 and 4
 
-export const latestDhitiTen = async() => {
+export async function latestDhitiTen(){
 	const allPostFiles = import.meta.glob('/src/routes/dhiti/*.md')
 	const iterablePostFiles = Object.entries(allPostFiles)
 	const allPosts = await Promise.all(
@@ -55,7 +55,7 @@ export const latestDhitiTen = async() => {
 	return allPosts.slice(0, 9)
 } //latest 10 posts
 
-export const latestDhitiSix= async() => {
+export async function latestDhitiSix(){
 	const allPostFiles = import.meta.glob('/src/routes/dhiti/*.md')
 	const iterablePostFiles = Object.entries(allPostFiles)
 	const allPosts = await Promise.all(

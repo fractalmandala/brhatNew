@@ -48,7 +48,7 @@ button.accordionbutton
 .accordion
 	display: flex
 	flex-direction: row
-	height: calc(100vh - 64px)
+	height: 100vh
 	width: 100%
 	column-gap: 0
 	overflow: hidden

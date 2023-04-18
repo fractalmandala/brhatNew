@@ -1,7 +1,6 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
-	import { Swipe, SwipeItem } from "svelte-swipe"
 	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import { latestDhitiPost, latestDhitiThree, allFeaturedPosts, filterChosen, authorfiltered } from '$lib/utils/localpulls'
 	import { scale } from 'svelte/transition'
@@ -246,6 +245,10 @@
 
 
 <style lang="sass">
+
+.type.dhiti
+	padding-top: 72px
+	padding-bottom: 72px
 
 .x1, .x2
 	@media screen and (min-width: 1024px)

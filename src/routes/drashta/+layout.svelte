@@ -1,7 +1,7 @@
 <script lang="ts">
 
 	import Header from '$lib/components/SubHeader.svelte'
-	import AnveshiLinks from '$lib/links/AnveshiLinks.svelte'
+	import DrashtaLinks from '$lib/links/DrashtaLinks.svelte'
 	let onHead = true
 	let sidebar = false
 
@@ -10,7 +10,7 @@
 
 <Header sidebar={sidebar}>
 	<div slot="local" class="boxmidrow">
-		<AnveshiLinks flytime={onHead}></AnveshiLinks>
+		<DrashtaLinks flytime={onHead}></DrashtaLinks>
 	</div>
 </Header>
 <slot></slot>

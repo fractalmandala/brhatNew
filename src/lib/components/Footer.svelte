@@ -1,5 +1,6 @@
 <script lang="ts">
 
+	import { onMount } from 'svelte'
 	import AboutLinks from '$lib/links/AboutLinks.svelte'
 	import AnveshiLinks from '$lib/links/AnveshiLinks.svelte'
 	import AryavartaLinks from '$lib/links/AryavartaLinks.svelte'
@@ -9,10 +10,15 @@
 	import IconTop from '$lib/icons/IconTop.svelte'
 
 	let fake:boolean = false
+	let active:boolean
 
 	function fauxfake(){
 		fake = !fake
 	}
+
+	onMount(() => {
+		active = true
+	})
 
 </script>
 
@@ -40,25 +46,25 @@
 			<a class="mainlinks" href="/openlibrary">Bṛhat Open Library</a>
 			<a class="mainlinks" href="/mrdanga">Bṛhad Mṛdaṅga</a>
 			<a class="mainlinks" href="/about">About</a>
-			<AboutLinks></AboutLinks>
+			<AboutLinks flytime={active}></AboutLinks>
 		</div>
 		<div class="spacer">
 			<a class="mainlinks" href="/anveshi">Bṛhat Anveṣī</a>
-			<AnveshiLinks></AnveshiLinks>
+			<AnveshiLinks flytime={active}></AnveshiLinks>
 			<div class="creategap"></div>
 			<a class="mainlinks" href="/drashta">Bṛhat Draṣṭā</a>
-			<DrashtaLinks></DrashtaLinks>
+			<DrashtaLinks flytime={active}></DrashtaLinks>
 		</div>
 		<div class="spacer">
 			<a class="mainlinks" href="/aryavarta">Scrolls of Āryavarta</a>
-			<AryavartaLinks></AryavartaLinks>
+			<AryavartaLinks flytime={active}></AryavartaLinks>
 			<div class="creategap"></div>
 			<a class="mainlinks" href="/rta">Ṛta in Design</a>
-			<RtaLinks></RtaLinks>
+			<RtaLinks flytime={active}></RtaLinks>
 		</div>
 		<div class="spacer">
 			<a class="mainlinks" href="/mandala">Fractal Maṇḍala</a>
-			<MandalaLinks></MandalaLinks>
+			<MandalaLinks flytime={active}></MandalaLinks>
 		</div>
 	</div>
 	<div class="footerbot">

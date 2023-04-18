@@ -1,5 +1,34 @@
-<a href="/anveshi/chapter/karnataka">Karnataka</a>
-<a href="/anveshi/chapter/odisha">Odisha</a>
-<a href="/anveshi/chapter/chamba">Chamba</a>
-<a href="/anveshi/#faqs">FAQs</a>
-<a href="/anveshi/#diaries">Diaries</a>
+<script lang="ts">
+
+	import { fly } from 'svelte/transition'
+	import supabase from '$lib/utils/db'
+	import { onMount } from 'svelte'
+	import { quintIn } from 'svelte/easing'
+	export let flytime:boolean
+	let allSite:any
+
+	export async function Anveshis(){
+		const { data, error } = await supabase
+		.from('brhatindex')
+		.select()
+		.eq('sitemap',true)
+		.eq('names','anveshi')
+		.order('seq')
+		if (error) throw new Error(error.message)
+		return data
+	}
+
+	onMount(async() => {
+		allSite = await Anveshis()
+	})
+
+</script>
+
+{#if flytime}
+{#if allSite && allSite.length > 0}
+{#each allSite as name, i}
+	<a in:fly={{ duration: 150, delay: i*50, x: 128, y: 0, easing: quintIn}} out:fly={{ duration: 100, delay: 0, x: 128, y: 0, easing: quintIn}} href="{name.url}">{name.heading}</a>
+{/each}
+{/if}
+{/if}
+

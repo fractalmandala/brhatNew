@@ -1,6 +1,7 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
+	import Header from '$lib/components/SubHeader.svelte'
 	import { gsap } from 'gsap'
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger.js' 
 	import { reveal } from 'svelte-reveal'
@@ -12,6 +13,7 @@
 	import ButtonOne from '$lib/anims/ButtonOne.svelte'
 
 	gsap.registerPlugin(ScrollTrigger)
+	let sidebar = false
 
 	let threeactions: string|any[]
 	let updates: string|any[]
@@ -95,6 +97,7 @@
 	<meta property="og:type" content="website"/>
 </svelte:head>
 
+<Header sidebar={sidebar}/>
 <div class="type">
 	<HomeAccordion></HomeAccordion>
 	<div class="plain-three x1 pads">
