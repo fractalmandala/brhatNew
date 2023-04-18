@@ -1,8 +1,9 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
-	import Header from '$lib/components/SubHeader.svelte'
+	import { bols } from '$lib/filed/bolindex'
 	import HeadComponent from '$lib/components/HeadComponent.svelte'
+	import IconChevron from '$lib/icons/IconChevron.svelte'
 	import { BOLEssentials, BOLBodhas, BOLIKS, BOLROS, BOLOthers, AryanIssue, AryanTag } from '$lib/utils/supapulls'
 	import { crossfade, fly, scale } from 'svelte/transition'
 	import { circIn } from 'svelte/easing'
@@ -10,6 +11,12 @@
 	import ButtonOne from '$lib/anims/ButtonOne.svelte'
 	import ButtonTwo from '$lib/anims/ButtonOne.svelte'
 	let sidebar = false
+	let searchHelpOn = false
+	let bolInput:any
+	let bolInputValue:any
+	let bolHiLiteIndex:any = null
+	let filteredBOLS:any = []
+	let input:HTMLInputElement
 	let essentials:string|any[]
 	let bodhas:string|any[]
 	let ikss:string|any[]
@@ -23,6 +30,63 @@
 	selectedCategory[1] = true
 	let tag:string = 'Core Material'
 	let fake:boolean = false
+
+	const filterBOLS = () => {
+		let storageArr:any = []
+		if (bolInputValue) {
+			bols.forEach(bol => {
+				if (bol.toLowerCase().startsWith(bolInputValue.toLowerCase())){
+					storageArr = [...storageArr, makeMatchBold(bol)]
+				}
+			})
+		}
+		filteredBOLS = storageArr
+	}
+
+	$: if ( !bolInputValue ) {
+		filteredBOLS = []
+		bolHiLiteIndex = null
+		searchHelpOn = true
+	}
+
+	$: bolHiLitedIndex = filteredBOLS[bolHiLiteIndex]
+
+	const setInputVal = (bolname:any) => {
+		bolInputValue = removeBold(bolname)
+		filteredBOLS = []
+		bolHiLiteIndex = null
+	}
+
+	const makeMatchBold = (str:any) => {
+		let matched = str.substring(0, bolInputValue.length)
+		let makeBold = `${matched}`
+		let boldedMatch = str.replace(matched,makeBold)
+		return boldedMatch
+	}
+
+	const removeBold = (str:any) => {
+		return str.replace(/<(.)*?>/g, "")
+	}
+
+const navigateList = (e:any) => {
+	if (e.key === "ArrowDown" && bolHiLiteIndex <= filteredBOLS.length-1) {
+		bolHiLiteIndex === null ? bolHiLiteIndex = 0 : bolHiLiteIndex += 1
+	} else if (e.key === "ArrowUp" && bolHiLiteIndex !== null) {
+		bolHiLiteIndex === 0 ? bolHiLiteIndex = filteredBOLS.length-1 : bolHiLiteIndex -= 1
+	} else if (e.key === "Enter") {
+		setInputVal(filteredBOLS[bolHiLiteIndex]);
+	} else {
+		return;
+	}
+} 
+
+	function handleClickOutside(event:MouseEvent){
+		const target = event.target as Element
+		if( target && !target.closest('.bolsearch')){
+			bolInput.value = ''
+			searchHelpOn = false
+		}
+	}
 
 	function toggleCategory(index:number) {
 		selectedCategory[index] = !selectedCategory[index]
@@ -64,6 +128,7 @@
 	})
 
 	onMount(async() => {
+		window.addEventListener('click', handleClickOutside)
 		essentials = await BOLEssentials(limit)
 		bodhas = await BOLBodhas(limit)
 		ikss = await BOLIKS(limit)
@@ -74,7 +139,7 @@
 
 </script>
 
-<svelte:window bind:innerWidth={iw}/>
+<svelte:window bind:innerWidth={iw} on:keydown={navigateList}/>
 
 <svelte:head>
 	<HeadComponent>
@@ -83,7 +148,6 @@
 </svelte:head>
 
 
-<Header sidebar={sidebar}/>
 <div class="type">
 	<div class="x0">
 		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/bolherobrhat.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/bolherobrhat.webp')">
@@ -274,8 +338,8 @@
 		<div class="a-title">
 			<h4 style="text-align: center">The Āryan Issue</h4>
 		</div>
-		<div class="a-box">
-			<div class="boxr resbox">
+		<div class="a-box box extra">
+			<div class="gridof5 by1">
 				{#if responsive}
 				<div class="responsivebar" on:click={toggleResponsive} on:keydown={fauxfake}>Expand Genres</div>
 				{/if}
@@ -292,10 +356,10 @@
 				<h6 on:click={() => setTag('Geology')} on:keydown={fauxfake} class="genres {tag === 'Geology' ? 'filtered' : ''}">Geology</h6>
 				{/if}
 			</div>
-			<div class="gridof3">
+			<div class="gridof4">
 				{#if aryans && aryans.length > 0}
 					{#each aryans as item, i}
-						<div class="card-c" in:fly={{ duration: 300, delay: i*40, y: 120, x: 0, easing: circIn}} out:fly={{ duration: 150, y: 120, x: 0, easing: circIn}}>
+						<div class="card-book" in:scale={{ duration: 100, delay: i*40, easing: circIn}} out:fly={{ duration: 50, easing: circIn}}>
 							<h6><a href={item.sourcelink} target="_blank" rel="noreferrer">{item.paper}</a></h6>
 							<p>{item.author}</p>
 						</div>
@@ -307,6 +371,7 @@
 </div>
 
 <style lang="sass">
+
 
 .responsivebar
 	background: var(--tree)
@@ -366,25 +431,25 @@
 .x4
 	padding-bottom: 64px
 	padding-top: 64px
-	.boxr
-		border-bottom: 1px solid #ececec
+	.gridof5
+		justify-items: center
 		justify-content: center
+		align-items: start
+		align-content: start
+		row-gap: 4px !important
 		h6
 			text-transform: uppercase
 			cursor: pointer
+			padding: 4px 8px
 			&:hover
 				background: var(--tree)
 				color: white
 		h6.filtered
 			background: var(--tree)
 			color: white
-		@media screen and (min-width: 900px)
-			gap: 32px
-			h6
-				padding: 4px 8px
 		
 .x4
-	.gridof3
+	.gridof5
 		margin-top: 32px
 
 </style>

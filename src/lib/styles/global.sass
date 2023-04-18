@@ -3,9 +3,30 @@ body, html
 	box-sizing: border-box
 	font-family: 'Spline Sans', sans-serif
 
+#dropper
+	position: relative
+	.box
+		position: absolute
+		background: var(--beau)
+		min-width: 160px
+		top: 32px
+		right: 0
+		text-align: right
+		padding: 16px
+		row-gap: 5px
+
 #anveshipage
 	svg
 		width: 50%
+
+.lenis.lenis-smooth [data-lenis-prevent]
+	overscroll-behavior: contain
+
+.maincol
+	height: 100%
+	display: flex
+	flex-direction: column
+	box-sizing: border-box
 
 
 $spacer: 48px
@@ -114,6 +135,13 @@ a
 		h6
 			margin: 0
 			padding: 4px
+
+.a-box.box
+	.gridof5
+		@media screen and (max-width: 899px)
+			h6
+				margin: 0
+				padding: 4px
 
 .a-box
 	.boxr
@@ -279,6 +307,17 @@ a
 		color: #b7b7b7
 
 .card-c
+	display: flex
+	flex-direction: column
+	row-gap: 16px
+	.card-body
+		row-gap: 16px
+	@media screen and (min-width: 1024px)
+		padding: 24px
+		transition: all 0.1s var(--cubec)
+
+
+.card-border
 	display: flex
 	flex-direction: column
 	row-gap: 16px
@@ -709,6 +748,14 @@ button.treebutton
 		grid-template-columns: 1fr 1fr
 		grid-template-areas: ". ." ". ." ". ."
 		gap: 32px 24px
+
+.gridof5.by1
+	@media screen and (max-width: 1023px)
+		.responsivebar
+			width: 100%
+		grid-template-columns: 1fr
+		grid-template-areas: "."
+		gap: 4px 0
 	
 
 .whitecard

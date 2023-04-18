@@ -13,9 +13,14 @@
 	let fake:boolean = false
 	let writer:string = ''
 	let authorposts:string|any[]
+	let writersortags:boolean = true
 
 	function fauxfake(){
 		fake = !fake
+	}
+
+	function toggleWritersOrTags(){
+		writersortags = !writersortags
 	}
 
 	function setAuthor(newAuthor:string){
@@ -142,21 +147,17 @@
 		<div class="gridof4">
 			{#if filteredposts && filteredposts.length > 0}
 				{#each filteredposts as item, i}
-					<div class="card-row" style="background-image: url('{item.meta.image}')" in:scale={{ duration: 500, delay: i*400, easing: quartOut}} out:scale={{ duration: 400, easing: quartIn}}> 
-						<a href="{item.path}">
-						<div class="card-body">
+					<div class="box back" style="background-image: url('{item.meta.image}')" in:scale={{ duration: 200, delay: i*200, easing: quartOut}} out:scale={{ duration: 100, easing: quartIn}}> 
+						<a class="box" href="{item.path}">
 							<h6>
-								<a href={item.path}>
 									{item.meta.title}
-								</a>
 							</h6>
 							<p style="font-size: 12px">{item.meta.author}
-								{#if item.meta.authortwo && item.meta.authortwo.length > 0}
-								<span> and {item.meta.authortwo}</span>
-								{/if}
+									{#if item.meta.authortwo && item.meta.authortwo.length > 0}
+										<span> and {item.meta.authortwo}</span>
+									{/if}
 							</p>
 							<cite style="color: white; font-style: normal; font-size: 10px; text-transform: uppercase">{item.meta.tags}</cite>
-						</div>
 						</a>
 					</div>
 				{/each}
@@ -165,6 +166,16 @@
 	</div>
 	<div class="x2">
 		<div class="categorystrip">
+			<div class="boxr toggler"><p class:toggled={writersortags} on:click={toggleWritersOrTags} on:keydown={fauxfake}>Writers</p>
+				<div class="boxr switch" on:click={toggleWritersOrTags} on:keydown={fauxfake}>
+			  	<div class="slider">
+						<div class="ball" class:balltag={!writersortags}></div>
+					</div>
+				</div><p class:toggled={!writersortags} on:click={toggleWritersOrTags} on:keydown={fauxfake}>
+				Tags</p>
+			</div>
+			{#if writersortags}
+			<div class="box">
 			<div class="author {writer === 'Akshay Jha' ? 'written' : ''}" on:click={() => setAuthor('Akshay Jha')} on:keydown={fauxfake}>
 				Akshay Jha
 			</div>
@@ -195,7 +206,7 @@
 			<div class="author {writer === 'Sushant Gangoli' ? 'written' : ''}" on:click={() => setAuthor('Sushant Gangoli')} on:keydown={fauxfake}>
 				Sushant Gangoli
 			</div>
-			<div class="author {writer === 'Akshay Jha' ? 'written' : ''}" on:click={() => setAuthor('Akshay Jha')} on:keydown={fauxfake}>
+			<div class="author spaced">
 				Guests:
 			</div>
 			<div class="authors {writer === 'Shri Ramachandra Roddam' ? 'written' : ''}" on:click={() => setAuthor('Shri Ramachandra Roddam')} on:keydown={fauxfake}>
@@ -219,20 +230,24 @@
 			<div class="authors {writer === 'Prabhav Paturi' ? 'written' : ''}" on:click={() => setAuthor('Prabhav Paturi')} on:keydown={fauxfake}>
 				Prabhav Paturi
 			</div>
+			</div>
+			{:else}
+			<div class="authors">tag</div>
+			{/if}
 		</div>
 		<div class="articlesarea">
 			{#if authorposts && authorposts.length > 0}
-				{#each authorposts as item}
-					<div class="card-c">
+				{#each authorposts as item, i}
+					<div class="card-row" in:scale={{ duration: 250, delay: i*100}} out:scale={{ duration: 90, delay: 0}}>
 						<div class="card-image">
 							<img src={item.meta.image} alt={item.meta.title}/>
 						</div>
 						<div class="card-body">
-							<h6>
+							<h5 style="font-weight: bold">
 								<a href="{item.path}">
 									{item.meta.title}
 								</a>
-							</h6>
+							</h5>
 							<p>{item.meta.category}</p>
 							<small>{item.meta.tags}</small>
 						</div>
@@ -245,6 +260,43 @@
 
 
 <style lang="sass">
+
+.toggler
+	p.toggled
+		color: #fe4a49
+
+.toggler
+	align-items: center
+	width: 100%
+	justify-content: center
+	gap: 12px
+	color: #878787
+	margin-bottom: 24px
+	cursor: pointer
+	p
+		&:hover
+			color: #fe4a49
+.switch
+	height: 28px
+	width: 64px
+	background: #d7d7d7
+	border-radius: 13px
+	padding-top: 2px
+	padding-left: 2px
+	padding-right: 2px
+	.ball
+		height: 24px
+		width: 24px
+		background: white
+		border-radius: 12px
+		transition: 0.15s
+
+.ball.balltag
+	transform: translateX(35px)
+
+.switch
+	&:hover
+		background: #fe4a49
 
 .type.dhiti
 	padding-top: 72px
@@ -264,11 +316,11 @@
 	grid-template-rows: auto auto
 	padding-top: 32px
 	@media screen and (min-width: 1024px)
-		padding-left: 32px
-		padding-right: 32px
+		padding-left: 48px
+		padding-right: 48px
 		align-content: start
 		align-items: start
-		gap: 32px 32px
+		gap: 48px 48px
 		grid-template-columns: 1fr 1fr 1fr 30%
 		grid-template-areas: "latestsingle latestsingle latestsingle featured" "latestthree latestthree latestthree featured"
 		grid-template-rows: auto 1fr
@@ -312,7 +364,7 @@
 	display: flex
 	flex-direction: column
 	@media screen and (min-width: 1024px)
-		row-gap: 32px
+		row-gap: 48px
 		padding-bottom: 64px
 		.card-row
 			.card-body
@@ -329,7 +381,7 @@
 	grid-auto-flow: row
 	grid-template-rows: auto
 	@media screen and (min-width: 1024px)
-		gap: 32px 32px
+		gap: 32px 48px
 		grid-template-columns: 1fr 1fr 1fr
 		grid-template-areas: ". . ."
 		.card-nix
@@ -425,6 +477,14 @@
 		height: 100%
 		.categorystrip
 			grid-area: categorystrip
+			padding-top: 24px
+			height: 100%
+			display: flex
+			flex-direction: column
+			>.box
+				row-gap: 2px
+				position: sticky
+				top: 0
 		.articlesarea
 			grid-area: articlesarea
 
@@ -432,13 +492,13 @@
 .gridof4
 	padding-top: 32px
 	padding-bottom: 32px
-	.card-row
+	>.box
 		gap: 16px
 		background-size: cover
 		background-position: center center
 		background-repeat: no-repeat
-		height: 100%
-		.card-body
+		height: 200px
+		a
 			top: 0
 			left: 0
 			height: 100%
@@ -454,7 +514,7 @@
 			p
 				color: #fe4a49
 		&:hover
-			.card-body
+			>.box
 				animation: clearingup 0.35s ease forwards
 				h6
 					animation: goingaway 0.34s ease forwards
@@ -480,21 +540,30 @@
 	height: 100%
 	padding-bottom: 64px
 	@media screen and (min-width: 1024px)
-		grid-template-columns: 1fr 1fr 1fr 1fr
-		grid-template-areas: ". . . ."
+		grid-template-columns: 1fr
+		grid-template-areas: "."
 		gap: 24px 24px
-		.card-c
+		.card-row
 			display: flex
-			flex-direction: column
 			width: 100%
 			background: none
 			box-shadow: none
 			padding: 0
 			.card-image
+				height: 180px
+				width: 400px
 				img
 					object-fit: cover
-					height: 120px
+					height: 100%
 					width: 100%
+			h5
+				border-top: 1px solid #ececec
+				padding-top: 16px
+				&:hover
+					color: var(--strong)
 				
+
+.author.spaced
+	margin-top: 24px
 
 </style>

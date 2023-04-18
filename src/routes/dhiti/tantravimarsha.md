@@ -4,7 +4,7 @@ author: Giriratna Mishra
 category: Svayambodha
 tags: tradition
 date: "2023-04-18"
-image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/35.webp
+image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/ashtamatrika.webp
 ---
 
 

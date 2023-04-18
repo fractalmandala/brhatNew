@@ -1,6 +1,6 @@
 <script lang="ts">
 
-	import { onMount, onDestroy } from 'svelte'
+	import { onMount, onDestroy, afterUpdate } from 'svelte'
 	let scrollPercent:any
 
 	const Progress = () => {
@@ -14,6 +14,11 @@
 	}
 
 	onMount(async() => {
+		if (typeof window !== 'undefined') {
+			window.addEventListener('scroll', Progress)
+		}
+	})
+	afterUpdate(() => {
 		if (typeof window !== 'undefined') {
 			window.addEventListener('scroll', Progress)
 		}

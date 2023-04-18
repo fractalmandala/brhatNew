@@ -113,13 +113,6 @@
 
 <style lang="sass">
 
-.readmore
-	width: max-content
-	padding: 8px
-	&:hover
-		background: #fe4a49
-		color: white
-
 .onpagelinks
 	&:hover
 		a, h4

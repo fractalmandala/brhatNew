@@ -3,6 +3,10 @@
 	--read: #23c8b5
 	--sn: all 0.09s ease
 
+.genericreadcard
+	h4
+		font-family: 'Martel', serif
+
 
 .readingcontainer 
 	display: grid 
@@ -69,15 +73,15 @@
 
 .mainpage 
 	display: grid 
-	grid-template-columns: 280px 1fr
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
 	grid-template-rows: 100%
 	gap: 0px 0px 
 	grid-auto-flow: row 
-	grid-template-areas: "mainside mainmain"
-	grid-area: mainpage 
+	grid-template-areas: "mainside mainside mainmain mainmain mainmain mainmain mainmain mainmain"
 	@media screen and (min-width: 1024px)
-		column-gap: 64px
-		padding-top: 32px
+		gap: 24px 48px
+		padding-top: 128px
+		min-height: 100vh
 	@media screen and (max-width: 1023px)
 		grid-template-columns: 1fr
 		grid-template-rows: 32px auto
@@ -94,16 +98,43 @@
 	@media screen and (min-width: 1024px)
 		overflow-y: scroll
 		overflow-x: hidden
+		row-gap: 0
 	@media screen and (max-width: 1023px)
 		display: flex
 		flex-direction: row
 		justify-content: space-between
 
+.mainside form
+	column-gap: 8px
+	margin-bottom: 32px
+	select
+		border: 1px solid #ececec
+		padding: 8px 16px
+		border-radius: 4px
+		color: #878787
+		
+
 .mainmain 
 	grid-area: mainmain
 	margin-bottom: 32px
+	.boxr
+		align-items: center
 	@media screen and (max-width: 1023px)
 		margin-top: 32px
+
+#pagebar
+	justify-content: flex-end
+	border-bottom: 1px solid #ececec
+	padding-bottom: 16px
+	text-transform: uppercase
+	font-size: 14px
+	font-weight: 400
+	margin-bottom: 64px
+	color: #878787
+	a
+		color: #fe4a49
+	.boxr
+		justify-content: flex-end
 
 
 .basicbox
@@ -123,16 +154,33 @@
 		color: #fe4a49
 
 .sideitems
+	border-bottom: 1px solid #ececec
 	h5
-		color: #878787 !important
+		color: #272727
 		transition: var(--sn)
 		cursor: pointer
-		font-size: 18px 
+		margin: 0
+		padding: 0 0 5px 0
+		font-weight: 400
 		&:hover
-			color: #fe4a49 !important
+			color: #fe4a49
 
 .sideitems
 	padding: 4px	
+	display: flex
+	flex-direction: column
+
+.dev h6
+	font-family: 'Martel', serif
+
+h6 .dev
+	font-family: 'Martel', serif
+
+h6.dev
+	font-family: 'Martel', serif
+
+p.dev, .dev p, p .dev
+	font-family: 'Martel', serif
 
 
 .readingcard

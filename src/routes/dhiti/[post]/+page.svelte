@@ -4,6 +4,7 @@
 	import { onMount } from 'svelte'
 	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import { page } from '$app/stores'
+	import PageProgress from '$lib/components/PageProgress.svelte'
 	import Formatting from '$lib/components/Formatting.svelte'
 	import ReadingProgress from '$lib/components/ReadingProgress.svelte'
 	import { latestDhitiTen } from '$lib/utils/localpulls'
@@ -51,7 +52,8 @@
 
 
 
-<div class="type dhiti">
+<div class="type dhiti heightmeasure">
+<PageProgress --thispagebackground="#fe4a49"/>
 	<div class="x0">
 		<ParallaxImage --parallax="url('{data.image}')">
 		</ParallaxImage>
@@ -68,7 +70,7 @@
 	</div>
 	<div class="x3">
 		<div class="leftcol">
-			<div class="box">
+			<div class="box" data-lenis-prevent>
 				<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/facebook-red.png" alt="fb" on:click={() => window.open(shareFB())} on:keydown={fakefaux}/>
 				<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/twitter-red.png" alt="twitter" on:click={shareTwitter} on:keydown={fakefaux}/>
 				<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/linkedin-red.png" alt="linkedin" on:click={shareLinkedin} on:keydown={fakefaux}/>
@@ -76,7 +78,6 @@
 			</div>
 		</div>
 		<div class="maincol">
-			<ReadingProgress></ReadingProgress>
 			<svelte:component this={data.content} class="dhitiblog"/>
 		</div>
 		<div class="rightcol">
@@ -131,6 +132,7 @@
 		grid-template-columns: 120px 1fr 480px
 		grid-template-row: auto
 		grid-template-area: "leftcol maincol rightcol"
+		height: 100%
 
 .leftcol
 	.box
@@ -140,6 +142,7 @@
 		padding-top: 32px
 		position: sticky
 		top: 112px
+		height: 200px
 	.box img
 		object-fit: contain
 		height: 24px

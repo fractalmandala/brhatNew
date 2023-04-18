@@ -1,3 +1,21 @@
+export async function completeDhiti(){
+	const allfiles = import.meta.glob('/src/routes/dhiti/*.md')
+	const filed = Object.entries(allfiles)
+	const eachfiled = await Promise.all(
+		filed.map(async([path, resolver]) => {
+			const { metadata } = await resolver()
+			const pathitem = path
+			return {
+				meta: metadata,
+				date: new Date(metadata.date as string), // parse date string into Date object
+				linkpath: pathitem
+			}
+		})
+	)
+	eachfiled.sort((a, b) => b.date.getTime() - a.date.getTime()) // compare Date objects directly
+	return eachfiled
+}
+
 export async function latestDhitiPost(){
 	const allPostFiles = import.meta.glob('/src/routes/dhiti/*.md')
 	const iterablePostFiles = Object.entries(allPostFiles)

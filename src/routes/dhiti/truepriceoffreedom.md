@@ -3,7 +3,7 @@ title: The True Price of Freedom
 author: Anshuman Panda
 category: Dharma Today
 tags: nation, freedom
-date: "2023-08-04"
+date: "2023-04-08"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/priceoffreedom.webp
 ---
 

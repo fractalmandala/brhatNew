@@ -1,5 +1,25 @@
 import supabase from '$lib/utils/db'
 
+export async function RVPagination(msr:any){
+		const { data, error} = await supabase
+		.from ('db-rvpagination')
+		.select()
+		.eq('msr',msr)
+		.order('primvalue')
+		if (error) throw new Error(error.message)
+		return data
+}
+
+export async function SuktasofMandalaFull(mandala: any){
+		const { data, error} = await supabase
+		.from ('db-rigveda')
+		.select()
+		.eq('mandala',mandala)
+		.order('primvalue')
+		if (error) throw new Error(error.message)
+		return data
+	}
+
 export async function SuktasofMandala(mandala: any){
 		const { data, error} = await supabase
 		.from ('db-rigvedasuktas')
@@ -173,12 +193,38 @@ export async function rvChandas(mandala: any,sukta: any,rca: any){
 	return data	
 }
 
+export async function distinctRishis(){
+	const { data, error } = await supabase
+	.from('vw-rvdistinctrishis')
+	.select()
+	if (error) throw new Error(error.message)
+	return data	
+}
+
+export async function distDevs(){
+	const { data, error } = await supabase
+	.from('vw-rvdistinctdevas')
+	.select()
+	if (error) throw new Error(error.message)
+	return data
+}
+
 export async function searchRV(inputword: string){
 	const { data, error} = await supabase
 	.from('db-rigveda')
 	.select()
 	.textSearch('ftsman',inputword)
 	.order('primvalue')
+	if (error) throw new Error(error.message)
+	return data
+}
+
+export async function RVWords(msr:any){
+	const { data, error } = await supabase
+	.from('vw-wordsofrv')
+	.select()
+	.eq('msr',msr)
+	.order('msr')
 	if (error) throw new Error(error.message)
 	return data
 }

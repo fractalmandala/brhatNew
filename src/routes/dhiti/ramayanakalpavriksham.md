@@ -3,7 +3,7 @@ title: Bhaavayaami Raghuramam - Ramayana Kalpavriksham March 31st - April 2nd 20
 author: Kavita Krishna Meegama
 category: Culture and Policy
 tags: events
-data: "2023-07-04"
+date: "2023-04-07"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/rmkal.webp
 ---
 

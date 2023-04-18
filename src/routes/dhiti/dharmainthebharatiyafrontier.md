@@ -3,7 +3,7 @@ title: Dharma in the Bhāratīya Frontier - Multan, Part 1
 author: Deepak Srinivasan
 category: Svayambodha
 tags: reclaimed history, dharma
-date: "2023-16-04"
+date: "2023-04-16"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/multandharma.png
 ---
 
