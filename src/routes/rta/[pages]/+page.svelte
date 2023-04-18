@@ -32,15 +32,6 @@
 		</h1>
 	</div>
 	<div class="x2">
-		<div class="sidebar" class:mobileSidebar={mobileView}>
-			<div class="box">
-				<h6><a href="/rta">Ṛta in Design</a></h6>
-				<p><a href="/rta/prologue">Prologue</a></p>
-				<p><a href="/rta/intro">Introduction</a></p>
-				<p><a href="/rta/dharmaisdesign">Dharma is Design</a></p>
-				<p><a href="/rta/designatbrhat">Design at Bṛhat</a></p>
-			</div>
-		</div>
 		<div class="mainbar">
 			<svelte:component this={data.content}/>
 			<div class="boxr" style="column-gap: 16px; padding-top: 16px; border-top: 1px solid #ececec">
@@ -66,47 +57,31 @@
 	display: grid
 	grid-auto-flow: row
 	grid-template-rows: auto
-	.sidebar
-		grid-area: sidebar
 	.mainbar
 		grid-area: mainbar
 	@media screen and (min-width: 1024px)
-		grid-template-columns: 280px 1fr
-		grid-template-areas: "sidebar mainbar"
-		padding: 64px 16vw 64px 4vw
+		grid-template-columns: 1fr
+		grid-template-areas: "mainbar"
+		padding: 64px 16vw 64px 24vw
 		gap: 0 8vw
 	@media screen and (max-width: 1023px)
 		grid-template-columns: 1fr
-		grid-template-areas: "sidebar" "mainbar"
+		grid-template-areas: "mainbar"
 		padding: 64px 6vw
 		gap: 32px 0
 
-.sidebar .box
-	height: max-content
-	position: sticky
-	top: 0
-	padding-top: 80px
-	row-gap: 4px
-	p
-		transition: var(--snap)
-		&:hover
-			color: #10D56C
-	h6
-		font-size: 16px
-		text-transform: uppercase
 
-.sidebar.mobileSidebar
-	position: sticky
-	top: 0
-	height: 64px
-	overflow: hidden
-	background: white
-	.box
-		padding-top: 8px
+
+
 
 
 .mainbar
 	padding-top: 80px
+
+.greenbutton a
+	color: white
+	&:hover
+		text-decoration: none
 	
 
 </style>

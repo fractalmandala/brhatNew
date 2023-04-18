@@ -1,7 +1,7 @@
 ---
 title: Prāmśava
 tag: sons of manu
-image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/midjourneyimages/chapter2/20.webp
+image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim20.webp
 ---
 
 > Where did the lost sons of Manu go?  Where did they flee to when they were exiled by their brother, Ikshvaku?  We know only that the descendants of Sharyati became the Nagas at Kushasthali.  But then they were wiped out by the Haihayas, and their capital renamed Dvarika.  Of the descendants of Nabhaga, Karusaka and Narisyanta we have heard naught.  But the Pramshavas returned, and for a while they even managed to stay.

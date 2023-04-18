@@ -1,7 +1,7 @@
 ---
 title: vasiṣṭha
 tag: ṛṣis
-image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/midjourneyimages/soachapter2/19.webp
+image: https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/soachapter2/19.webp
 ---
 
 > One day you and I will have to decide whether we are to be friends or foes.  I have had great times with you, Sudasa, but do not begrudge me if I choose foe at that later date.  My father has done much to re-establish the Suryavansha, and I will put the furthering of that dream over anything else.”<br><cite>Crown Prince Dilipa Aikshvaku to Crown Prince Sudasa Bharata at their last parting</cite>

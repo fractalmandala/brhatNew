@@ -1,7 +1,7 @@
 ---
 title: the splinter
 tag: pañca gaṇa
-image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/midjourneyimages/chapter2/17.webp
+image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim17.webp
 ---
 
 > The Veda deals with ritual, with the harmony of our being with its external environment.  But what of our internal environment?  What of our mind and intellect?  Must these not resonate at the right frequency, before anything else?<br><cite>Rajarshi Yati to his pupils</cite>

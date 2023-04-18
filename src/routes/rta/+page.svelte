@@ -1,7 +1,5 @@
 <script lang="ts">
 
-	import { onMount } from 'svelte'
-	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
 	let yy:number
 
@@ -9,18 +7,12 @@
 
 <svelte:window bind:scrollY={yy}/>
 
-<svelte:head>
-	<HeadComponent>
-		Ṛta in Design at
-	</HeadComponent>
-</svelte:head>
-
 <div class="type">
 	<div class="x0">
 		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/12rid/infinitywall.webp')"></ParallaxImage>
 	</div>
-	<div class="columnwithparallax x1">
-		<div class="columnplain">
+	<div class="gridof2 x1 pads">
+		<div class="box">
 			<h6 style="font-weight: 300; margin-bottom: 24px">
 				From user flows to adoption curves, learning paths to zoning regulations,
 			</h6>
@@ -35,46 +27,43 @@
 			dharma-led design is effectively ṛta in design.
 			</h4>
 		</div>
-		<div class="columnparallax back" style="transform: translateY({yy-900}px)">
-		</div>
+		<div class="box"></div>
 	</div>
-	<div class="title-box x3 pads">
-		<div class="a-title">
-			<h4>
-				Ṛta in Design
-			</h4>
-			<div class="boxr">
-				<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/12rid/trinfinityball.png" alt="ball"/>
-				<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/12rid/trinfinity.png" alt="trinfinity"/>
+	<div class="gridof2 x3 pads">
+		<div class="box">
+			<div class="a-title boxr" style="gap: 24px; align-items: center">
+				<h4>
+					Ṛta in Design
+				</h4>
+				<div class="boxr">
+					<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/12rid/trinfinityball.png" alt="ball"/>
+					<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/12rid/trinfinity.png" alt="trinfinity"/>
+				</div>
 			</div>
-		</div>
-		<div class="a-box">
 			<h5>
 				A framework for modern design that derives from dharma for its principles, mindsets and processes.
 			</h5>
-			<div class="gridof2">
+			<div class="boxr">
 				<div class="card-nix">
 					<h6>The Design Process</h6>
 					<p>
-						1. Svataḥ Siddha- Preparing the Mind of the Creator<br>
-						2. Purohita- Leading One’s Own Yajña to Completion<br>
-						3. Saṃskartṛ- The Design Being
+						1. Svataḥ Siddha<br>
+						2. Purohita<br>
+						3. Saṃskartṛ
 					</p>
 				</div>
 				<div class="card-nix">
 					<h6>Principles of Ṛta in Design</h6>
 					<p>
-						A. Intent- Design of the Designer<br>
-						B. Agency- From Intent to Manifestation<br>
-						C. Grounding- Cultural Grounding for Ultimate Purpose<br>
-						D. Consonance- Sense-making At All Levels
+						A. Intent<br>
+						B. Agency<br>
+						C. Grounding<br>
+						D. Consonance
 					</p>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="plain-one x4 pads">
-		<div class="onpagelinks">
+		<div class="box onpagelinks">
 			<h4><a href="/rta/prologue">Prologue</a></h4>
 			<h4><a href="/rta/intro">Introduction</a></h4>
 			<h4><a href="/rta/dharmaisdesign">Dharma is Design</a></h4>
@@ -86,37 +75,13 @@
 
 <style lang="sass">
 
-.x1.columnwithparallax
-	display: grid
-	grid-auto-flow: row
-	@media screen and (min-width: 1024px)
-		grid-template-columns: 1fr 1fr
-		grid-template-rows: auto
-		grid-template-areas: "columnplain columnparallax"
-		gap: 0 64px
-		height: 100vh
-		overflow: hidden
-		.columnplain
-			height: 100vh
-			display: flex
-			flex-direction: column
-			justify-content: center
-			grid-area: columnplain
-
 .x1
-	@media screen and (min-width: 1024px)
-		padding-left: 6vw
+	padding-top: 64px
 
 
 .x1
 	.columnplain h4
 		margin-bottom: 24px
-
-
-.x1 .columnparallax
-	grid-area: columnparallax
-	height: 100vh
-	background-image: url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/12rid/12.webp')
 
 .x0
 	height: 100vh
@@ -130,24 +95,16 @@
 			.boxr img
 				object-fit: contain
 				height: 32px
-		.a-box
-			.gridof2
-				padding-top: 32px
-				.card-nix
-					h6
-						border-top: 1px solid #ececec
-						padding-top: 16px
 
-.x4
-	@media screen and (min-width: 1024px)
-		padding-bottom: 64px
-		h4
-			text-align: center
+.x3
+	.card-nix
+		h6
+			border-top: 1px solid #ececec
+			padding-top: 16px
 
-.x4
+.onpagelinks
 	h4
-		transition: var(--snap)
 		&:hover
-			color: var(--greenb)
+			color: #10D56C
 
 </style>

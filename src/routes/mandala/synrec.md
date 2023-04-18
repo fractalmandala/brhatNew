@@ -1,6 +1,6 @@
 ---
 title: Synaptic Reconnection to Civilizational Consciousness, a Preliminary Schema
-image: /images/dhitiheroes/59.webp
+image: https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/batch1/484.webp
 next: /mandala
 prev: /mandala/ramasjourney
 ---

@@ -2,7 +2,7 @@
 title: Ratha as a Bīja of Civilizational DNA
 next: /mandala/historyvsitihasa
 prev: /mandala/rathaasbija
-image: /images/dhitiheroes/46.webp
+image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/01.webp
 tag: 'yes'
 ---
 

@@ -4,7 +4,7 @@ author: Amritanshu Pandey
 category: Svayambodha
 tags: civilizational consciousness, history, storytelling
 date: "2022-09-18"
-image: /images/dhitiheroes/60.webp
+image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/01.webp
 tag: 'yes'
 ---
 

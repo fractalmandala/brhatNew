@@ -2,7 +2,7 @@
 title: Rāma's Journey - the Avatāra in You
 next: /mandala/ancestors
 prev: /mandala/synrec
-image: /images/dhitiheroes/49.webp
+image: https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/batch1/505.webp
 tag: 'yes'
 ---
 

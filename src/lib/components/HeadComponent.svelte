@@ -10,3 +10,10 @@ Bṛhat | the Culture Engine
 <meta property="og:title" content="the Culture Engine | Bṛhat"/>
 <meta property="og:url" content="https://www.brhat.in"/>
 <meta property="og:type" content="website"/>
+
+<style lang="sass">
+
+title
+	text-transform: capitalize
+
+</style>

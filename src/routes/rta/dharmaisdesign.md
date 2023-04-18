@@ -1,6 +1,6 @@
 ---
 title: Dharma is Design
-image: '/images/rid/panel4.webp'
+image: 'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/12rid/ridhero4.png'
 prev: '/rta/intro'
 next: '/rta/designatbrhat'
 ---

@@ -1,7 +1,7 @@
 ---
 title: mṛtyu
 tag: cakravartins
-imag: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim34.webp
+image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim34.webp
 ---
 
 > The rebellion of his brothers hardened Ikshvaku, turning a humble, kind King into a harsh, cold ruler.  And nowhere did his new manifestation fall as sharply as on his second son Nimi.<br><cite>Rshi Vasishtha to Sudasa Bharata</cite>

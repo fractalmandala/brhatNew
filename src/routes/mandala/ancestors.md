@@ -1,6 +1,6 @@
 ---
 title: Ancestors Outside of Time
-image: /images/dhitiheroes/16.webp
+image: https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/batch1/417.webp
 next: /mandala/ramasjourney
 prev: /mandala/historyvsitihasa
 tag: 'yes'

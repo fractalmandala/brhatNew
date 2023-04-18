@@ -1,6 +1,6 @@
 ---
 title: Introduction to Ṛta in Design
-image: '/images/rid/infinitywall.webp'
+image: 'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/ridhero1.webp'
 next: '/rta/dharmaisdesign'
 prev: '/rta/prologue'
 ---

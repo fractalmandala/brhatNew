@@ -1,7 +1,7 @@
 ---
 title: on the eve of bhāratavarṣa
 tag: bhāratas
-image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/midjourneyimages/chapter2/15.webp
+image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim15.webp
 ---
 
 > Aryavarta has always been only a concept, a means of identity.  What are its borders?  Where does it start and where does it end?  What is common to all that inhabit it?  Not till we answers these questions can we say that we are Arya and they are not.<br><cite>Rshi Vasishtha to King Sudasa Bharata</cite>

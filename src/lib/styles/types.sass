@@ -6,6 +6,9 @@ $l4: 1.4
 p, small, cite, caption, h6, h5, h4, h3, h2, h1, pre
 	margin: 0
 
+p.capitalize
+	text-transform: capitalize
+
 pre
 	overflow-x: auto
 	box-sizing: border-box
@@ -22,8 +25,21 @@ small
 .boxmidrow
 	a
 		color: white
-		font-size: 15px
+		font-size: 14px
 		text-transform: uppercase
+
+#dropper
+	.dropperp
+		margin-top: 4px
+
+.dropperp
+	height: max-content
+
+#dropper p
+	color: white
+	font-size: 14px
+	text-transform: uppercase
+
 
 .midrow
 	a
@@ -111,25 +127,37 @@ caption
 .type.mandalatext
 	.mainbar p, .mainbar li
 		font-size: 17px
-		color: white
+		color: #272727
 		margin-bottom: 24px
 		line-height: 1.7
 	.mainbar h5
-		border-left: 4px solid #ff3d00
+		border-left: 4px solid #10D56C
 		padding-left: 16px
 		line-height: 1.12
 		margin-bottom: 24px
-		color: white
+		color: #676767
+	.mainbar h6
+		border-left: 4px solid #10D56C
+		padding-left: 16px
+		line-height: 1.12
+		margin-bottom: 24px
+		color: #676767
+		font-family: 'Martel', serif	
+		font-size: 2vw	
 	.mainbar h4
 		margin: 64px 0 24px 0
-		border-top: 2px solid #ff3d00
+		border-top: 2px solid #10D56C
 		padding-top: 24px
-		color: white
+		color: #474747
 	blockquote
 		font-style: italic
-		border-left: 4px solid #ff3d00
+		border-left: 4px solid #10D56C
 		padding-left: 16px
-		color: white
+		color: #272727
+	.mainbar a
+		color: #10D56C
+		&:hover
+			text-decoration: underline
 
 
 .type.brhattext

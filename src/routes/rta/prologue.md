@@ -1,6 +1,6 @@
 ---
 title: Prologue
-image: '/images/rid/newrid.png'
+image: 'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/ridwallmotif.webp'
 next: '/rta/intro'
 prev: '/rta'
 ---

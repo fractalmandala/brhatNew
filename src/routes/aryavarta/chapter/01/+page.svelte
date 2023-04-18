@@ -50,7 +50,7 @@
 					{#each panels as item, index}
 						<SwipeItem>
 							<div class="carouselitem" transition:scale>
-								<div class="box back" style="background-image: url('{item.image}'); transform: translateY({y/5}px)"></div>
+								<div class="box back" style="background-image: url('https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/chapter1/{item.image.substr(92,20)}'); transform: translateY({y/5}px)"></div>
 								<div class="box text">
 									<div>
 										<p>{item.id}</p>
@@ -72,24 +72,29 @@
 			</div>
 		</div>
 	</div>
-	<div class="title-box x3 pads">
-		<div class="a-title">
-			<h4 style="color: white">
+	<div class="plain-one x3 pads">
+		<div class="a-title pads">
+			<h6 style="color: white">
 				Next
-			</h4>
+			</h6>
 		</div>
-		<div class="a-box">
-			<h2 style="color: white">Sūta and Sudā</h2>
-			<h5>or, return to <span style="color: #ff3d00"><a href="/aryavarta"> Āryavarta</a></span>  main page.</h5>
+		<div class="a-box pads">
+			<h3 style="color: white"><a href="/aryavarta/chapter/02" data-sveltekit-reload>Sūta and Sudā</a></h3>
+			<p>or, return to <span style="color: #ff3d00"><a href="/aryavarta"> Āryavarta</a></span>  main page.</p>
 		</div>
 	</div>
 </div>
 
 <style lang="sass">
 
+.x3
+	h3 a
+		&:hover
+			color: #ff3d00
+
 .type
-	background-color: hsla(0,1%,3%,1)
-	background-image: radial-gradient(at 10% 21%, hsla(9,79%,7%,1) 0px, transparent 50%), radial-gradient(at 88% 70%, hsla(210,85%,8%,1) 0px, transparent 50%)
+	padding-top: 64px
+	background: #171717
 
 .x1, .x2
 	height: 100vh
@@ -157,7 +162,7 @@
 	right: 64px
 	display: flex
 	flex-direction: row
-	gap: 24px
+	gap: 32px
 	@media screen and (max-width: 1023px)
 		display: none
 
