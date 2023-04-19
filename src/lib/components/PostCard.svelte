@@ -1,16 +1,33 @@
-<div class="postcard">
+<script lang="ts">
 
-</div>
+	import { onMount } from 'svelte'
+	import { gsap } from 'gsap'
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
-<style lang="sass">
+	let section: HTMLElement
 
-.postcard
-	background-size: cover
-	background-position: center center
-	background-repeat: no-repeat
-	display: flex
-	flex-direction: column
-	
+	onMount(() => {
+		gsap.registerPlugin(ScrollTrigger)
+    gsap.fromTo(
+      section,
+      { opacity: 0, y: 100 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: section,
+          start: 'top 90%',
+          end: 'bottom 10%',
+          scrub: true,
+        },
+      }
+    )		
+	})
 
+</script>
 
-</style>
+<section bind:this={section}>
+  <slot></slot>
+</section>
+

@@ -1,43 +1,40 @@
 <script lang="ts">
 
 	import { onMount, onDestroy, afterUpdate } from 'svelte'
+	import { tweened } from 'svelte/motion'
 	let scrollPercent:any
+	const progress = tweened(0);
 
-	const Progress = () => {
-		const maincol = document.querySelector('.heightmeasure');
-		if (!maincol) return; // add null check
-			const readingHeight = maincol.scrollHeight;
-			const scrollTop = window.scrollY;
-			const totalScroll = readingHeight - window.innerHeight;
-			const scrollPercentage = Math.min(scrollTop / totalScroll, 1);
-		scrollPercent = Math.round(scrollPercentage * 100);
+	const updateProgress = () => {
+    const maincol = document.querySelector('.heightmeasure');
+    if (!maincol) return;
+    const readingHeight = maincol.scrollHeight;
+    const scrollTop = window.scrollY;
+    const totalScroll = readingHeight - window.innerHeight;
+    const scrollPercentage = Math.min(scrollTop / totalScroll, 1);
+    scrollPercent = Math.round(scrollPercentage * 100);
+    progress.set(scrollPercent);
 	}
 
+  const handleScroll = () => {
+    updateProgress();
+  };
+
 	onMount(async() => {
-		if (typeof window !== 'undefined') {
-			window.addEventListener('scroll', Progress)
-		}
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
 	})
-	afterUpdate(() => {
-		if (typeof window !== 'undefined') {
-			window.addEventListener('scroll', Progress)
-		}
-	})
-	onDestroy(() => {
-		if (typeof window !== 'undefined') {
-  		window.removeEventListener('scroll', Progress);
-		}
-	});
 
 </script>
 
-<div class="scroll-progress" style="width: {scrollPercent}%; background: var(--thispagebackground)"></div>
+<div class="scroll-progress" style="width: {scrollPercent}%; background: var(--thispagebackground); height: var(--thispageheight)"></div>
 
 <style lang="sass">
 
 .scroll-progress
 	width: 100%
-	height: 2px
 	position: fixed
 	top: 0
 	left: 0

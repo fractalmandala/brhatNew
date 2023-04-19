@@ -2,6 +2,8 @@
 
 	import { onMount } from 'svelte'
 	import Header from '$lib/components/SubHeader.svelte'
+	import { browser } from '$app/environment'
+	import lazyload from 'vanilla-lazyload'
 	import { gsap } from 'gsap'
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger.js' 
 	import { reveal } from 'svelte-reveal'
@@ -29,6 +31,11 @@
 	let X: HTMLElement
 	let innw:number
 	let calib:number
+	
+	let lazyloadInstance
+	if ( browser ){
+		lazyloadInstance = new lazyload()
+	}
 
 	function initAnimation(){
 		const elements = document.querySelectorAll('.strip')
@@ -329,7 +336,7 @@
 				{#if videos && videos.length > 0}
 					{#each videos as item, i}
 						<div class="card-video">
-							<iframe width=100% height=100% loading="lazy" src="https://www.youtube.com/embed/{item.videoid}" title={item.name}></iframe>
+							<iframe class="lazy video-iframe" width=100% height=100% loading="lazy" src="https://www.youtube.com/embed/{item.videoid}" title={item.name}></iframe>
 							<p>{item.name}</p>						
 						</div>
 					{/each}

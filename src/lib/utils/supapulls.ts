@@ -409,6 +409,16 @@ const { data, error } = await supabase
   return data
 }
 
+export async function brhatTeamMember(name:string) {
+const { data, error } = await supabase
+  .from('brhat-team')
+  .select()
+	.eq('name',name)
+  .order('sequence')
+  if (error) throw new Error(error.message)
+  return data
+}
+
 export async function brhatHelper(){
 	const { data, error } = await supabase
 	.from('brhat-helper')

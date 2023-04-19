@@ -124,6 +124,7 @@
 
 .mainpage
 	min-height: 100vh
+	padding-top: 0
 
 .mainpage
 	display: flex

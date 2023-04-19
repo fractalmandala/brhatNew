@@ -19,6 +19,12 @@ body, html
 	svg
 		width: 50%
 
+.lenis.lenis-smooth
+	scroll-behavior: auto
+
+.lenis.lenis-stopped
+	overflow: hidden
+
 .lenis.lenis-smooth [data-lenis-prevent]
 	overscroll-behavior: contain
 
@@ -47,7 +53,7 @@ $spacer: 48px
 	height: 100vh
 	top: 0
 	left: 0
-	cursor: none
+	pointer-events: none
 	z-index: 1000
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
 	grid-template-rows: 1fr
@@ -164,6 +170,9 @@ a
 		row-gap: 16px
 	@media screen and (max-width: 1023px)
 		row-gap: 16px
+
+.box.zero
+	gap: 4px
 
 .boxmidrow
 	display: flex

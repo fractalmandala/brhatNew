@@ -25,23 +25,23 @@
 			breakPointOn = false
 		}
 		const lenis = new Lenis({
-			duration: 0.5,
-			easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+			duration: 1.2,
 			orientation: 'vertical',
 			gestureOrientation: 'vertical',
-			wheelMultiplier: 0.55,
 			smoothWheel: true,
+			wheelMultiplier: 0.7,
 			touchMultiplier: 1,
 			infinite: false,
 		})
 		function raf(time: any){
-		lenis.raf(time)
-		requestAnimationFrame(raf)
+			lenis.raf(time)
+			requestAnimationFrame(raf)
 		}
 		requestAnimationFrame(raf)
 	})
 
 </script>
+
 
 <svelte:window bind:innerWidth={innerW}/>
 

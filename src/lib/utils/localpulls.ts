@@ -3,6 +3,7 @@ export async function completeDhiti(){
 	const filed = Object.entries(allfiles)
 	const eachfiled = await Promise.all(
 		filed.map(async([path, resolver]) => {
+			// @ts-ignore
 			const { metadata } = await resolver()
 			const pathitem = path
 			return {
@@ -451,7 +452,7 @@ export const authorfiltered = async(author:string) => {
 	)
 	// @ts-ignore
 	allPosts.sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date))
-	const authorPosts = allPosts.filter((post) => post.meta.author === author || post.meta.authortwo === "Anshuman Panda")
+	const authorPosts = allPosts.filter((post) => post.meta.author === author || post.meta.authortwo === author)
 	return authorPosts
 } 
 

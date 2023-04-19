@@ -136,6 +136,21 @@ caption
 	font-family: 'STIX Two Text', serif
 	color: #272727
 
+.type
+	.maincol
+		blockquote p
+			border-left: 4px solid #fe4a49
+			padding-left: 24px
+			font-style: italic
+			color: #686867 !important
+			font-size: 18px !important
+			line-height: 1.2
+
+.type
+	.maincol.dhitiblogbox
+		a
+			color: #fe4a49
+
 .type.mandalatext
 	.mainbar p, .mainbar li
 		font-size: 17px
@@ -247,7 +262,7 @@ caption
 	.maincol
 		@media screen and (min-width: 1024px)
 			p
-				font-size: 18px
+				font-size: 20px
 				color: #272727
 				margin-bottom: 24px
 			h5
@@ -317,6 +332,8 @@ caption
 		color: #313131
 		font-weight: 700
 		line-height: 1.125
+	.dhitipageauthorposts h6
+		color: #272727
 	p, pre, li
 		color: #878787
 		line-height: 1.48
@@ -465,3 +482,32 @@ caption
 		@media screen and (max-width: 899px)
 			font-size: 18px
 			text-align: center
+
+
+.teampage
+	.authormodal
+		.listing
+			h5
+				font-weight: 600
+				font-size: 18px
+				border-bottom: 1px solid #ececec
+				padding-bottom: 8px
+				padding-top: 8px
+				transition: 0.2s ease
+				text-align: right
+				&:hover
+					color: #fe4a49
+					border-right: 4px solid #474747
+					padding-right: 16px
+
+.dhitipageauthorposts
+	display: flex
+	flex-direction: row
+	column-gap: 24px
+	h6
+		font-weight: 500
+		border-bottom: 1px solid #ececec
+		padding-bottom: 16px
+		color: #272727
+		font-size: 22px
+		letter-spacing: -1px

@@ -58,10 +58,6 @@
 
 <style lang="sass">
 
-.type.brhattext
-	background-color: hsla(0,100%,97%,1)
-	background-image: radial-gradient(at 40% 20%, hsla(27,0%,100%,1) 0px, transparent 50%), radial-gradient(at 80% 78%, hsla(0,92%,58%,1) 0px, transparent 50%)
-
 
 .x2
 	display: grid
