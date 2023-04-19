@@ -3,58 +3,69 @@
 	import { onMount } from 'svelte'
 	import { page } from '$app/stores'
 	import { fly } from 'svelte/transition'	
+	import Conllu from '$lib/reader/GetConllu.svelte'
 	import { rvRishis, rvDevatas, rvChandas, RVWords, RVPagination } from '$lib/utils/synaptic'
- 	let textDev:any
+	
+	export let data:any
+ 	
+	let textDev:any
+	let textIAST:any
+	let nextNum:number
+	let prevNum:number
+	let showPrev = false
 	let breakDev:any
 	let joinDev:any
-	let textIAST:any
 	let breakIAST:any
 	let joinIAST:any
 	let msr:any
 	let dets:any
 	let pagination:any
 	let allwords:any
-	let nextNum:number
-	let prevNum:number
-	let showPrev = false
+	let currentMandala:any
+	let currentSukta:any
+	let currentRca:any
+	let rshis:any
+	let devas:any
+	let chandas:any
 
 	$: if ( prevNum > 0 ) {
 		showPrev = true
 	} else {
 		showPrev = false
 	}
-	
-	let rshis:any
-	let devas:any
-	let chandas:any
-	
-	export let data:any
 
+  function updateVariables() {
+    nextNum = data.primvalue + 1
+    prevNum = data.primvalue - 1
+    currentMandala = data.mandala
+    currentSukta = data.suktacorrected
+    currentRca = data.rca
+    textDev = data.devanagari.split('।').join('<br>')
+    textIAST = data.iast.split('|').join('<br>')
+  }
+
+  async function fetchData(msr: string) {
+    rshis = await rvRishis(data.mandala, data.sukta, data.rca)
+    devas = await rvDevatas(data.mandala, data.sukta, data.rca)
+    chandas = await rvChandas(data.mandala, data.sukta, data.rca)
+    pagination = await RVPagination(msr)
+    updateVariables()
+  }
+
+	$: showPrev = prevNum > 0
+	
 	onMount(async() => {
-		msr = $page.url.pathname.substr(40,100)
-		rshis = await rvRishis(data.mandala,data.sukta,data.rca)
-		devas = await rvDevatas(data.mandala,data.sukta,data.rca)
-		chandas = await rvChandas(data.mandala,data.sukta,data.rca)
-		pagination = await RVPagination(msr)
-		dets = data.msr
-		nextNum = data.primvalue + 1
-		prevNum = data.primvalue - 1
-		allwords = await RVWords(dets)
-		textDev = data.devanagari
-		breakDev = textDev.split('।')
-		joinDev = breakDev.join("<br>")
-		textIAST = data.iast
-		breakIAST = textIAST.split('|')
-		joinIAST = breakIAST.join("<br>")
+    msr = $page.url.pathname.substr(40,100)
+    await fetchData(msr)
 	})
 	
 
 </script>
 
-{#key msr}
+
 <div class="box genericreadcard" transition:fly>
-	<h4>{@html joinDev}</h4>
-	<h5>{@html joinIAST}</h5>
+	<h4>{@html textDev}</h4>
+	<h5>{@html textIAST}</h5>
 	<div class="boxr inside two">
 		<h6>Ṛca<br><span class="datatext">{data.rca}</span></h6>
 		{#if devas && devas.length > 0}
@@ -78,11 +89,8 @@
 		<h6>{data.griffith}</h6>
 	</div>
 	<div class="box extras">
-		{#if allwords && allwords.length > 0}
-			{#each allwords as item}
-				<p>{item.wordsofrv}</p>
-			{/each}
-		{/if}
+		{currentMandala} - {currentSukta} - {currentRca}
+		<Conllu mandala={currentMandala} sukta={currentSukta} rca={currentRca}/>
 	</div>
 	<div class="boxr readernavigation">
 		{#if pagination && pagination.length > 0}
@@ -95,7 +103,7 @@
 		{/if}
 	</div>
 </div>
-{/key}
+
 
 <style lang="sass">
 
@@ -109,6 +117,11 @@
 		line-height: 1.5
 
 .inside
+	justify-content: space-between
+	border-top: 1px solid #ececec
+	border-bottom: 1px solid #ececec
+	padding-top: 24px
+	padding-bottom: 24px
 	h6
 		font-size: 12px
 		color: #878787

@@ -334,6 +334,7 @@
 			color: #fe4a49
 		cite
 			background: #fe4a49
+			padding: 8px
 
 .firstcard
 	@media screen and (min-width: 1024px)
@@ -385,7 +386,7 @@
 	.box a
 		img
 			object-fit: contain
-			width: 100%
+			width: 128px
 			height: 128px
 			transition: var(--snap)
 			transform-origin: center center

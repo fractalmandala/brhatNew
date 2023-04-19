@@ -77,9 +77,9 @@
 </script>
 
 <div class="mainpage type pads">
-	<div class="mainside" data-lenis-prevent>
+	<div class="mainside">
 		<h5 style="font-weight: bold;">
-			<a href="/openlibrary/reconnect/sections/rigveda" data-svelekit-reload>
+			<a href="/openlibrary/reconnect/sections/rigveda">
 			Ṛgveda Saṃhitā
 			</a>
 		</h5>
@@ -146,7 +146,6 @@
 							{/each}	
 		{/if}
 	</div>
-	{#key $page.url}
 	<div class="mainmain" in:fly={{ delay: 500 }} out:fly={{ duration: 250}}>
 		<div class="boxr" id="pagebar">
 			<div class="boxr toggler"><p>Devanāgarī</p>
@@ -185,7 +184,6 @@
 		</div>
 		<slot></slot>
 	</div>
-	{/key}
 </div>
 
 <style lang="sass">
