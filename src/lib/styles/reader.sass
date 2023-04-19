@@ -3,7 +3,7 @@
 	--read: #23c8b5
 	--sn: all 0.09s ease
 
-.genericreadcard
+.generic
 	h4
 		font-family: 'Martel', serif
 
@@ -183,7 +183,7 @@ p.dev, .dev p, p .dev
 	font-family: 'Martel', serif
 
 
-.readingcard
+.generic
 	display: flex
 	flex-direction: column
 	border-bottom: 1px solid #ececec
@@ -192,6 +192,10 @@ p.dev, .dev p, p .dev
 	a
 		&:hover
 			color: var(--strong)
+	h4.dev
+		font-family: 'Martel', serif
+		font-weight: 800
+		line-height: 1.6
 	h5.dev, .dev h5
 		font-weight: 700
 		font-family: 'Martel', serif
@@ -229,18 +233,25 @@ p.dev, .dev p, p .dev
 			padding-left: 4px
 		
 .mainmain
-	h5.dev
+	h5.dev, .dev h5
 		font-family: 'Martel', serif
 		.spl
 			font-family: 'Spline Sans', sans-serif
 			font-weight: 600
 
+.type
+	h5.dev
+		font-family: 'Martel', serif
+
 p.dev, h4.dev
 	font-family: 'Martel', serif
 
 h4.dev
-	.spl
-		font-family: 'Spline Sans', sans-serif
+	color: var(--yellow)
+
+.dev h4, h4 .dev
+	font-family: 'Martel', serif
+	color: var(--yellow)
 
 .dropper
 	display: flex
@@ -303,3 +314,90 @@ h4.dev
 		transform: scale(0.9)
 		background: #fe4a49
 		border: 1px solid var(--strong)
+
+.mainside
+	h5
+		position: relative
+		text-transform: uppercase
+		font-weight: 800
+		padding-bottom: 8px
+		line-height: 2
+
+
+.bread
+	justify-content: flex-end
+	align-items: center
+	gap: 8px
+	select
+		background: white
+		border: 1px solid #ececec
+		color: #878787
+		outline: none
+
+
+
+#pagebar
+	justify-content: flex-end
+	align-items: center
+
+
+.mainpage
+	padding-bottom: 48px
+	form
+		padding-top: 64px
+
+
+.sideitems
+	max-height: 400px
+	overflow-y: scroll
+	position: relative
+	padding-top: 0
+	a, p
+		text-transform: capitalize
+	h6
+		position: sticky
+		top: 0
+		background: white
+		text-transform: uppercase
+		font-weight: 400
+		padding: 12px 0
+		cursor: pointer
+		&:hover
+			color: #fe4a49
+	a
+		font-size: 16px
+		padding: 4px 16px
+		color: #878787
+		width: max-content
+		&:hover
+			background: #fe4a49
+			color: white
+	p
+		font-size: 16px
+		cursor: pointer
+		&:hover
+			color: white
+			background: #fe4a49
+			padding: 4px
+
+.readernavigation
+	justify-content: center
+	gap: 16px
+	button
+		border: 1px solid #676767
+		color: #474747
+		background: white
+		font-weight: 500
+		border-radius: 6px
+		padding: 5px 12px
+		width: 80px
+		transition: 0.18s
+		transform-origin: center center
+		cursor: pointer
+		&:hover
+			background: #fe4a49
+			border: 2px solid #fe4a49
+			color: white
+			transform: scale(0.9)
+			a
+				color: white

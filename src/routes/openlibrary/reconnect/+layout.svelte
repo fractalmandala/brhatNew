@@ -65,10 +65,10 @@
 
 <Header sidebar={sidebar}>
 	<div slot="local" class="boxmidrow">
-		<p>Dhātus</p>
-		<p>Amarakośaḥ</p>
-		<p>Dictionary</p>
-		<p>Purāṇas</p>
+		<p><a href="/openlibrary/reconnect/sections/dhatus">Dhātus</a></p>
+		<p><a href="/openlibrary/reconnect/sections/amarakosha">Amarakośaḥ</a></p>
+		<p><a href="/openlibrary/reconnect/sections/dictionary">Dictionary</a></p>
+		<p><a href="/openlibrary/reconnect/sections/puranas">Purāṇas</a></p>
 		<div class="box" id="dropper" on:click={toggleDropdown} on:keydown={fauxfake}>
 			<p class="droppperp">Texts</p>
 			{#if dropdown}
@@ -80,6 +80,11 @@
 		</div>
 		<a href="/openlibrary">Library Home</a>
 	</div>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </Header>
+
+
 
 <slot></slot>

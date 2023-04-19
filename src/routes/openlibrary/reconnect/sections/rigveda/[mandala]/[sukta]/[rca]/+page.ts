@@ -11,5 +11,5 @@ export async function load({ fetch, params }:{ fetch: Function, params: { mandal
 	.order('primvalue')
 	.single()
 	if (error) throw new Error(error.message)
-	return { props: { data, fetch } }
+	return data
 }

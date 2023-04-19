@@ -2,7 +2,6 @@
 
 	import { onMount } from 'svelte'
 	import { page } from '$app/stores'
-	import { goto } from '$app/navigation'
 	import { fly } from 'svelte/transition'
 	import { rvrishis } from '$lib/filed/rvrshis'
 	import { SuktasofMandala, RcasofSukta } from '$lib/utils/synaptic'
@@ -78,9 +77,9 @@
 
 <div class="mainpage type pads">
 	<div class="mainside">
-		<h5 style="font-weight: bold;">
+		<h5 style="font-family: 'Inknut Antiqua, serif">
 			<a href="/openlibrary/reconnect/sections/rigveda">
-			Ṛgveda Saṃhitā
+			ऋग्वेद संहिता 
 			</a>
 		</h5>
 		<form class="formgrid">
@@ -118,7 +117,7 @@
 			</select>
 		</form>
 		<div class="sideitems">
-			<h5 on:click={() => toggleField(1)} on:keydown={fauxfake}>Maṇḍalas</h5>
+			<h6 on:click={() => toggleField(1)} on:keydown={fauxfake}>Maṇḍalas</h6>
 				{#if expand[1]}
 				<a href="/openlibrary/reconnect/sections/rigveda/{1}">Maṇḍala 1</a>
 				<a href="/openlibrary/reconnect/sections/rigveda/{2}">Maṇḍala 2</a>
@@ -132,54 +131,67 @@
 				<a href="/openlibrary/reconnect/sections/rigveda/{10}">Maṇḍala 10</a>
 				{/if}
 		</div>
-		<div class="sideitems">
-			<h5 on:click={() => toggleField(2)} on:keydown={fauxfake}>Draṣṭās</h5>
+		<div class="sideitems" data-lenis-prevent>
+			<h6 on:click={() => toggleField(2)} on:keydown={fauxfake}>Draṣṭās</h6>
 			{#if expand[2]}
 			{#each rvrishis as item}
 				<p>{item}</p>
 			{/each}
 			{/if}
 		</div>
+		<div class="sideitems">
+			<h6>Devatās</h6>
+		</div>
+		<div class="sideitems">
+			<h6>Chandas</h6>
+		</div>
+		<div class="sideitems">
+			<h6>Family Groups</h6>
+		</div>
+		<div class="sideitems">
+			<h6>Interpretation</h6>
+		</div>
 		{#if richas && richas.length > 0}
-							{#each richas as item}
-								<p>{item.rca}</p>
-							{/each}	
+			{#each richas as item}
+				<p>{item.rca}</p>
+			{/each}	
 		{/if}
 	</div>
 	<div class="mainmain" in:fly={{ delay: 500 }} out:fly={{ duration: 250}}>
 		<div class="boxr" id="pagebar">
-			<div class="boxr toggler"><p>Devanāgarī</p>
-				<div class="boxr switch">
-			  	<div class="slider">
-						<div class="ball"></div>
-					</div>
-				</div><p>
-				IAST</p>
-			</div>
 			<div class="boxr bread">
 				<div class="box">
 					RV
 				</div>
-				{#if linkingMandala && linkingMandala.length > 0}
-					<p> - Maṇḍala {linkingMandala}</p>
+			<select bind:value={filterMandala} class="select1">
+				<option value="0">{linkingMandala}</option>
+				<option value="1">1</option>	
+				<option value="2">2</option>	
+				<option value="3">3</option>	
+				<option value="4">4</option>	
+				<option value="5">5</option>	
+				<option value="6">6</option>	
+				<option value="7">7</option>	
+				<option value="8">8</option>	
+				<option value="9">9</option>	
+				<option value="10">10</option>				
+			</select>
+			<select bind:value={filterSukta} class="select2">
+				<option value="0">{linkingSukta}</option>
+				{#if sidefilter && sidefilter.length > 0}
+					{#each sidefilter as item, i}
+						<option value={i}>{item.sukta}</option>
+					{/each}
 				{/if}
-				{#if linkingSukta && linkingSukta.length > 0}
-					<p> - Sūkta {linkingSukta}</p>
+			</select>
+			<select bind:value={navigate} on:change={goToRca} class="select3">
+				<option value="0">{linkingRca}</option>
+				{#if filteredRcas && filteredRcas.length > 0}
+					{#each filteredRcas as item, i}
+						<option value={i}>{item.rca}</option>
+					{/each}
 				{/if}
-				{#if linkingRca && linkingRca.length > 0}
-				<div class="box breaditem" on:click={toggleBreadC} on:keydown={fauxfake}>
-					<p> - Ṛca {linkingRca}</p>
-					{#if breadc}
-						{#if richas && richas.length > 0}
-							<div class="breaddrop">
-							{#each richas as item}
-								<p>{item.rca}</p>
-							{/each}
-							</div>
-						{/if}
-					{/if}
-				</div>
-				{/if}
+			</select>
 			</div>
 		</div>
 		<slot></slot>
@@ -187,36 +199,6 @@
 </div>
 
 <style lang="sass">
-
-.bread
-	justify-content: flex-end
-	align-items: center
-
-
-#pagebar
-	justify-content: space-between
-	align-items: center
-	p
-		color: #272727
-
-
-.mainpage
-	padding-bottom: 48px
-	form
-		padding-top: 64px
-
-.sideitems
-	max-height: 400px
-	overflow-y: scroll
-	position: relative
-	padding-top: 0
-	a, p
-		text-transform: capitalize
-	h5
-		position: sticky
-		top: 0
-		background: white
-
 
 .formgrid
 	display: grid
@@ -241,39 +223,5 @@
 			grid-area: select3
 		font-size: 12px
 
-.toggler
-	p.toggled
-		color: #fe4a49
-
-.toggler
-	align-items: center
-	justify-content: flex-start
-	gap: 12px
-	color: #878787
-	cursor: pointer
-	p
-		&:hover
-			color: #fe4a49
-.switch
-	height: 29px
-	width: 64px
-	background: #d7d7d7
-	border-radius: 13px
-	padding-top: 1px
-	padding-left: 2px
-	padding-right: 2px
-	.ball
-		height: 24px
-		width: 24px
-		background: white
-		border-radius: 12px
-		transition: 0.15s
-
-.ball.balltag
-	transform: translateX(35px)
-
-.switch
-	&:hover
-		background: #fe4a49
 
 </style>

@@ -30,7 +30,7 @@
 	</div>
 	<div class="footermain">
 		<div class="footerlogo">
-			<a class="logoimage" href="/" data-sveltekit-reload>
+			<a class="logoimage" href="/">
 				<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/02brhatlogos/horizontal%20white-%20600.png" alt="logo of brhat"/>
 			</a>
 			<div class="boxr icons">

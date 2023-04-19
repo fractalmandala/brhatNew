@@ -1,0 +1,89 @@
+{
+    "data": [
+        {
+            "i": "1010001",
+            "baseindex": "01.0001",
+            "dhatu": "भू",
+            "aupadeshik": "भू",
+            "gana": "1",
+            "pada": "P",
+            "settva": "S",
+            "karma": "A",
+            "artha": "सत्तायाम्",
+            "artha_english": "to exist, to become, to be, to happen",
+            "tags": "उदात्तोपदेशः,mspsetu,chittoor3",
+            "dhaturoopnandini": "1",
+            "sk": "1",
+            "lsk_sutra": "372",
+            "sk_sutra": "2165",
+            "artha_hindi": "होना",
+            "upasargas": [
+                {
+                    "name": "अधि",
+                    "artha_hindi": "सत्ता चलाना"
+                },
+                {
+                    "name": "अनु",
+                    "artha_hindi": "समझना, अनुभव करना"
+                },
+                {
+                    "name": "अभि",
+                    "artha_hindi": "जीतना, पीडा देना"
+                },
+                {
+                    "name": "उत्",
+                    "artha_hindi": "उत्पन्न होना"
+                },
+                {
+                    "name": "परा",
+                    "artha_hindi": "पराभव करना"
+                },
+                {
+                    "name": "प्र",
+                    "artha_hindi": "प्रकट होना, निकलना"
+                },
+                {
+                    "name": "प्रति",
+                    "artha_hindi": "बदले में देना"
+                },
+                {
+                    "name": "परि",
+                    "artha_hindi": "अपमान करना, तिरस्कार करना, घेरना"
+                },
+                {
+                    "name": "वि",
+                    "artha_hindi": "आश्रय देना, पालन करना"
+                },
+                {
+                    "name": "व्यति",
+                    "artha_hindi": "परस्पर मित्र होना"
+                },
+                {
+                    "name": "सम्",
+                    "artha_hindi": "उत्पन्न होना, हो सकना"
+                }
+            ],
+            "antarganas": ""
+        },
+        {
+            "i": "1010002",
+            "baseindex": "01.0002",
+            "dhatu": "एध्",
+            "aupadeshik": "एधँ",
+            "gana": "1",
+            "pada": "A",
+            "settva": "S",
+            "karma": "A",
+            "artha": "वृद्धौ",
+            "artha_english": "to grow, to increase, to prosper, to extend, to swell, to rise",
+            "tags": "उदात्तोपदेशः,mspsetu,chittoor3",
+            "dhaturoopnandini": "2",
+            "sk": "2",
+            "lsk_sutra": "506",
+            "sk_sutra": "2232",
+            "artha_hindi": "बढना",
+            "upasargas": [],
+            "antarganas": ""
+        }
+    ]
+}

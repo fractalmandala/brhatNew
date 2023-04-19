@@ -25,11 +25,11 @@
 			breakPointOn = false
 		}
 		const lenis = new Lenis({
-			duration: 1.2,
+			duration: 2.6,
 			orientation: 'vertical',
 			gestureOrientation: 'vertical',
 			smoothWheel: true,
-			wheelMultiplier: 0.7,
+			wheelMultiplier: 1,
 			touchMultiplier: 1,
 			infinite: false,
 		})

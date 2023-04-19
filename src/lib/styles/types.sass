@@ -9,6 +9,28 @@ p, small, cite, caption, h6, h5, h4, h3, h2, h1, pre
 p.capitalize
 	text-transform: capitalize
 
+.type.linksbox
+	h5
+		color: white
+		font-size: 18px
+	&:hover
+		h5
+			color: #fe4a49
+
+.type.linksbox
+	.insidelink
+		color: #474747
+		text-align: right
+		padding: 3px 0
+		font-size: 18px
+		text-transform: capitalize
+
+.type.linksbox
+	&:hover
+		.insidelink
+			&:hover
+				color: white
+
 pre
 	overflow-x: auto
 	box-sizing: border-box
@@ -27,6 +49,10 @@ small
 		color: white
 		font-size: 14px
 		text-transform: uppercase
+
+.type
+	.mainside h5
+		font-family: 'Inknut Antiqua', serif
 
 .boxmidrow
 	p
@@ -60,14 +86,6 @@ small
 
 .spacer
 	a
-		text-transform: capitalize
-
-.type.linksbox
-	a
-		color: #878787
-		text-align: right
-		padding: 3px 0
-		font-size: 18px
 		text-transform: capitalize
 
 .onpagelinks
@@ -328,6 +346,8 @@ caption
 		font-weight: 400
 		letter-spacing: -0.4px
 		line-height: 1.2
+	.mainside h5
+		font-weight: 800
 	h6
 		color: #313131
 		font-weight: 700

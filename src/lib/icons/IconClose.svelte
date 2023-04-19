@@ -9,7 +9,6 @@ svg
 	transition: var(--snap)
 	cursor: pointer
 	&:hover
-		transform: rotate(45deg)
 		path
 			fill: #fe4a49
 

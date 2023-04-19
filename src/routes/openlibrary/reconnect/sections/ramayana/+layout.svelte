@@ -5,6 +5,7 @@
 	import { page } from '$app/stores'
 	import { sargasofRamayana, versesofRamayana } from '$lib/utils/synaptic'
 	let fake = false
+	let starta:number = 0
 	let url:any
 	let pageK:any
 	let pageS:any
@@ -21,7 +22,9 @@
 	let viewSargas = false
 	let filteredKanda:any
 	let filteredSarga:any
+	let filteredVerse:any
 	let startat = 0
+	let showingSargas:any
 
 	function toggleKanda(index:number){
 		sargs[index] = !sargs[index] 
@@ -36,49 +39,78 @@
 		fake = !fake
 	}
 
-	function toggleSargas(){
-		viewSargas = !viewSargas
-	}
-
-	function setNewKanda(newKanda:any){
-		filteredKanda = newKanda
-		viewSargas = !viewSargas
-	}
-
 	function setNewSarga(newSarga:any){
 		filteredSarga = newSarga
 	}
 
+$: if (filteredKanda) {
+		(async() => {
+			showingSargas = await sargasofRamayana(filteredKanda)
+		})()
+	}
 
-	$: if (filteredSarga){
+$: if (filteredSarga){
 		(async() => {
 			vars = await versesofRamayana(startat, filteredKanda, filteredSarga)
-		})
+		})()
 	}
+
+	function goToVerse(){
+		window.location.href=`/openlibrary/reconnect/sections/ramayana/${filteredKanda}/${filteredSarga}/${filteredVerse}`
+	}
+
 
 	onMount(async() => {
 		url = $page.url.pathname
 		pageK = url.substr(41,1)
 		pageS = url.substr(43,1)
 		pageV = url.substr(45,5)
-		sargs1 = await sargasofRamayana(1)
-		sargs2 = await sargasofRamayana(2)
-		sargs3 = await sargasofRamayana(3)
-		sargs4 = await sargasofRamayana(4)
-		sargs5 = await sargasofRamayana(5)
-		sargs6 = await sargasofRamayana(6)
-		sargs7 = await sargasofRamayana(7)
 		vars = await versesofRamayana(startat, filteredKanda, filteredSarga)
+		showingSargas = await sargasofRamayana(filteredKanda)
 	})
 
 
 </script>
 
 
-<div class="mainpage">
-	<div class="mainside" data-lenis-prevent>
+<div class="mainpage type pads">
+	<div class="mainside">
+		<h5>
+			<a href="/openlibrary/reconnect/sections/ramayana">
+			वाल्मीकि रामायण 
+			</a>
+		</h5>
+		<form class="formgrid">
+			<div class="label1">Kāṇḍa:</div>
+			<div class="label2">Sarga:</div>
+			<div class="label3">Verse:</div>
+			<select class="select1" bind:value={filteredKanda}>
+				<option value=0>O</option>
+				<option value=1>1</option>
+				<option value=2>2</option>
+				<option value=3>3</option>
+				<option value=4>4</option>
+				<option value=5>5</option>
+				<option value=6>6</option>
+				<option value=7>7</option>
+			</select>
+			<select class="select2" bind:value={filteredSarga}>
+				{#if showingSargas && showingSargas.length > 0}
+					{#each showingSargas as item, i}	
+						<option value={i}>{item.sarga}</option>
+					{/each}
+				{/if}
+			</select>
+			<select class="select3" bind:value={filteredVerse} on:change={goToVerse}>
+				{#if vars && vars.length > 0}
+					{#each vars as item, i}
+						<option value={i}>{item.verse}</option>
+					{/each}
+				{/if}
+			</select>
+		</form>
 		<div class="sideitems" on:click={() => toggleKanda(1)} on:keydown={fauxfake} class:kandainview={sargs[1]}>
-			<h5>Kāṇḍa 1</h5>
+			<h6>Kāṇḍa 1</h6>
 				{#if sargs[1]}
 					<div class="sargatray" in:fly={{ duration: 400, x: -120, y: 0}} out:fly={{ duration: 200, x: -120, y: 0}}>
 						{#if sargs1 && sargs1.length > 0}
@@ -92,7 +124,7 @@
 				{/if}
 		</div>
 		<div class="sideitems" on:click={() => toggleKanda(2)} on:keydown={fauxfake} class:kandainview={sargs[2]}>
-			<h5>Kāṇḍa 2</h5>
+			<h6>Kāṇḍa 2</h6>
 				{#if sargs[2]}
 					<div class="sargatray" in:fly={{ duration: 400, x: -120, y: 0}} out:fly={{ duration: 200, x: -120, y: 0}}>
 						{#if sargs1 && sargs1.length > 0}
@@ -106,7 +138,7 @@
 				{/if}			
 		</div>
 		<div class="sideitems" on:click={() => toggleKanda(3)} on:keydown={fauxfake} class:kandainview={sargs[3]}>
-			<h5>Kāṇḍa 3</h5>
+			<h6>Kāṇḍa 3</h6>
 				{#if sargs[3]}
 					<div class="sargatray" in:fly={{ duration: 400, x: -120, y: 0}} out:fly={{ duration: 200, x: -120, y: 0}}>
 						{#if sargs1 && sargs1.length > 0}
@@ -120,7 +152,7 @@
 				{/if}
 		</div>
 		<div class="sideitems" on:click={() => toggleKanda(4)} on:keydown={fauxfake} class:kandainview={sargs[4]}>
-			<h5>Kāṇḍa 4</h5>
+			<h6>Kāṇḍa 4</h6>
 				{#if sargs[4]}
 					<div class="sargatray" in:fly={{ duration: 400, x: -120, y: 0}} out:fly={{ duration: 200, x: -120, y: 0}}>
 						{#if sargs1 && sargs1.length > 0}
@@ -134,7 +166,7 @@
 				{/if}
 		</div>
 		<div class="sideitems" on:click={() => toggleKanda(5)} on:keydown={fauxfake} class:kandainview={sargs[5]}>
-			<h5>Kāṇḍa 5</h5>
+			<h6>Kāṇḍa 5</h6>
 				{#if sargs[5]}
 					<div class="sargatray" in:fly={{ duration: 400, x: -120, y: 0}} out:fly={{ duration: 200, x: -120, y: 0}}>
 						{#if sargs1 && sargs1.length > 0}
@@ -148,7 +180,7 @@
 				{/if}
 		</div>
 		<div class="sideitems" on:click={() => toggleKanda(6)} on:keydown={fauxfake} class:kandainview={sargs[6]}>
-			<h5>Kāṇḍa 6</h5>
+			<h6>Kāṇḍa 6</h6>
 				{#if sargs[6]}
 					<div class="sargatray" in:fly={{ duration: 400, x: -120, y: 0}} out:fly={{ duration: 200, x: -120, y: 0}}>
 						{#if sargs1 && sargs1.length > 0}
@@ -162,7 +194,7 @@
 				{/if}
 		</div>
 		<div class="sideitems" on:click={() => toggleKanda(7)} on:keydown={fauxfake} class:kandainview={sargs[7]}>
-			<h5>Kāṇḍa 7</h5>
+			<h6>Kāṇḍa 7</h6>
 				{#if sargs[7]}
 					<div class="sargatray" in:fly={{ duration: 400, x: -120, y: 0}} out:fly={{ duration: 200, x: -120, y: 0}}>
 						{#if sargs1 && sargs1.length > 0}
@@ -176,13 +208,44 @@
 				{/if}
 		</div>
 	</div>
-	<slot></slot>
+	<div class="mainmain">
+		<div class="boxr" id="pagebar">
+			<div class="boxr bread">
+				<div class="box">
+						Rāmāyaṇa 
+					</div>
+			<select class="select1" bind:value={filteredKanda}>
+				<option value=0>O</option>
+				<option value=1>1</option>
+				<option value=2>2</option>
+				<option value=3>3</option>
+				<option value=4>4</option>
+				<option value=5>5</option>
+				<option value=6>6</option>
+				<option value=7>7</option>
+			</select>
+			<select class="select2" bind:value={filteredSarga}>
+				{#if showingSargas && showingSargas.length > 0}
+					{#each showingSargas as item, i}	
+						<option value={i}>{item.sarga}</option>
+					{/each}
+				{/if}
+			</select>
+			<select class="select3" bind:value={filteredVerse} on:change={goToVerse}>
+				{#if vars && vars.length > 0}
+					{#each vars as item, i}
+						<option value={i}>{item.verse}</option>
+					{/each}
+				{/if}
+			</select>
+			</div>
+		</div>
+		<slot></slot>
+	</div>
 </div>
 
 <style lang="sass">
 
-.sideitems
-	padding: 4px
 
 .sargatray
 	border: 1px solid #ececec
@@ -196,17 +259,29 @@
 			background: #fe4a49
 			color: white
 
-.sideitems
-	h5
-		font-size: 18px
-	@media screen and (max-width: 1023px)
-		h5
-			font-size: 16px
 
-.sideitems.kandainview
-	h5
-		color: #fe4a49
-		font-size: 18px
+.formgrid
+	display: grid
+	grid-auto-flow: row
+	@media screen and (min-width: 1024px)
+		grid-template-columns: 1fr 1fr 1fr
+		grid-template-rows: auto auto
+		grid-template-areas: "label1 label2 label3" "select1 select2 select3"
+		gap: 8px 16px
+		justify-content: start
+		.label1
+			grid-area: label1
+		.label2
+			grid-area: label2
+		.label3
+			grid-area: label3
+		.select1
+			grid-area: select1
+		.select2
+			grid-area: select2
+		.select3
+			grid-area: select3
+		font-size: 12px
 
 
 </style>

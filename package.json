@@ -23,6 +23,7 @@
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
 		"sass": "^1.60.0",
+		"simple-svelte-autocomplete": "^2.5.2",
 		"svelte": "^3.54.0",
 		"svelte-check": "^3.0.1",
 		"svelte-reveal": "^0.7.0",
@@ -36,7 +37,9 @@
 		"@indic-transliteration/sanscript": "^1.2.8",
 		"@studio-freight/lenis": "^1.0.6",
 		"@supabase/supabase-js": "^2.14.0",
+		"agnostic-svelte": "^1.1.27",
 		"common-tags": "^1.8.2",
+		"d3": "^7.8.4",
 		"gpt3-tokenizer": "^1.1.5",
 		"gsap": "file:gsap-bonus.tgz",
 		"openai": "^3.2.1",
@@ -47,6 +50,7 @@
 		"svelte-legos": "^0.1.9",
 		"svelte-simple-modal": "^1.5.2",
 		"textify.js": "^2.4.3",
+		"tippy.js": "^6.3.7",
 		"vanilla-lazyload": "^17.8.3"
 	}
 }

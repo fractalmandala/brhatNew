@@ -235,13 +235,31 @@
 	display: flex
 	flex-direction: column
 	padding: 16px
+	position: relative
 	h5, h5 a
 		text-align: right
 		text-transform: uppercase
-		color: white
 		font-weight: 600
-		font-size: 27px
+		font-size: 24px
 		padding-bottom: 8px
+	&:hover
+		&::after
+			animation: lineforward 0.32s var(--cubeb) forwards
+	&::after
+		position: absolute
+		bottom: 0
+		right: 0
+		content: ''
+		height: 1px
+		background: #474747
+		width: 0
+
+@keyframes lineforward
+	0%
+		width: 0
+	100%
+		width: 100%
+		
 
 .appsidebar
 	right: 0
@@ -259,6 +277,12 @@
 	@media screen and (max-width: 899px)
 		width: 100vw
 		z-index: 899
+
+.appsidebar::-webkit-scrollbar
+	width: 2px
+
+.appsidebar::-webkit-scrollbar-thumb
+	background: #fe4a49
 
 .appheader.onsidebar
 	width: calc(100vw - 400px)
@@ -279,7 +303,7 @@
 	top: 0
 	transition: 0.5s ease
 	@media screen and (min-width: 900px)
-		grid-template-columns: 220px  1fr 280px 40px
+		grid-template-columns: 220px  1fr 256px 40px
 		grid-template-rows: 1fr
 		grid-template-areas: "applogo midrow search menuicon"
 		height: 72px

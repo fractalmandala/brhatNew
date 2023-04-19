@@ -73,7 +73,7 @@
  <div class="c-c-c-c istop">
 {#each tables as tableHTML}
 <table>
-{@html tableHTML}
+{tableHTML}
 </table>
 {/each}
 </div>

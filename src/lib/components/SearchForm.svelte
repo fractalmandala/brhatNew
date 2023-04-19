@@ -140,6 +140,7 @@ input
 	border: none
 	outline: none
 	background: none
+	width: 160px
 	@media screen and (max-width: 899px)
 		width: 120px
 	@media screen and (max-width: 574px)

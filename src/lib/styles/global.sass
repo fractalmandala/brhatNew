@@ -113,6 +113,8 @@ $spacer: 48px
 	--white: #ffffff
 	--greytyp: #474747
 	--beau: linear-gradient(132.9deg, rgba(23,23,23,1) 10.69%, rgba(24, 28, 30, 1) 84.91%)
+	--agnostic-primary-modelight: white
+	--agnostic-primary-modedark: white
 
 .mrd
 	color: var(--news)
@@ -765,6 +767,19 @@ button.treebutton
 		grid-template-columns: 1fr
 		grid-template-areas: "."
 		gap: 4px 0
+
+.gridof6
+	display: grid
+	grid-auto-flow: row
+	grid-template-rows: auto
+	@media screen and (min-width: 1024px)
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+		grid-template-areas: ". . . . . ."
+		gap: 48px 48px
+	@media screen and (max-width: 1023px)
+		grid-template-columns: 1fr 1fr
+		grid-template-areas: ". ." ". ." ". ."
+		gap: 32px 24px
 	
 
 .whitecard

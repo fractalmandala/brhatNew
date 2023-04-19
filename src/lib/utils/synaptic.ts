@@ -243,10 +243,11 @@ export async function RVWords(msr:any){
 
 	export async function versesofRamayana(startat:any, kanda:any, sarga:any){
 		const { data, error} = await supabase
-		.from ('db-ramayana')
+		.from ('db-ramayanaindex')
 		.select()
 		.eq('kanda',kanda)
 		.eq('sarga',sarga)
+		.eq('type','sargaverse')
 		.order('id')
 		.gte('id',startat)
 		.limit(9)
@@ -336,9 +337,19 @@ export async function allDhatus(){
 	return data	
 }
 
+export async function dbDhatus(limit:number){
+	const { data, error} = await supabase
+	.from('db-dhatupathafixed')
+	.select()
+	.order('id')
+	.limit(limit)
+	if (error) throw new Error(error.message)
+	return data
+ }
+
 export async function dhatuNode(dhatu:any){
 	const { data, error } = await supabase
-	.from('db-dhatupatha')
+	.from('db-dhatupathafixed')
 	.select()
 	.eq('dhaturomanized',dhatu)
 	.order('id')
@@ -353,5 +364,16 @@ export async function dhatuKartari(id:any){
 	.eq('ind',id)
 	.order('id')
 	if ( error ) throw new Error(error.message)
+	return data
+}
+
+export async function dhatuReference(idx:any,idy:any){
+	const { data, error } = await supabase
+	.from('db-dhatureference')
+	.select()
+	.eq('xaxis',idx)
+	.eq('yaxis',idy)
+	.order('id')
+	if (error) throw new Error(error.message)
 	return data
 }
