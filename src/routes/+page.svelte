@@ -303,7 +303,7 @@
 		<div class="a-box gridof3">
 			{#if updates && updates.length > 0}
 				{#each updates as item, i}
-					<WhiteCard>
+					<WhiteCard --thisflexdir="column">
 						<img slot="image" src={item.image} alt={item.id}/>
 						<div slot="body">
 							<h6>{item.heading}</h6>

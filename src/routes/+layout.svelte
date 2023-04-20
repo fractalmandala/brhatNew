@@ -8,7 +8,6 @@
 	import Footer from '$lib/components/Footer.svelte'
 
 	let innerW:number
-
 	let breakPointOn:boolean
 
 	$: if ( innerW <= 1023 ) {
@@ -18,12 +17,6 @@
 	}
 
 	onMount(() => {
-		let url = $page.url.pathname
-		if ( innerW <= 1023 ) {
-			breakPointOn = true
-		} else {
-			breakPointOn = false
-		}
 		const lenis = new Lenis({
 			duration: 2.6,
 			orientation: 'vertical',

@@ -116,6 +116,16 @@ $spacer: 48px
 	--agnostic-primary-modelight: white
 	--agnostic-primary-modedark: white
 
+.input-container
+	font-size: 14px
+	height: 100%
+	input
+		background: none
+		border: none
+		font-size: 10px
+		height: 100%
+		outline: none
+
 .mrd
 	color: var(--news)
 	p, h1, h2, h3, h4, h5, h6
@@ -133,6 +143,15 @@ a
 	background-size: cover
 	background-position: center center
 	background-repeat: no-repeat
+
+.whitecard
+	img
+		object-fit: cover
+		width: 100%
+	@media screen and (max-width: 1023px)
+		img
+			width: 25%
+			object-fit: cover
 
 .boxr.resbox
 	@media screen and (max-width: 899px)

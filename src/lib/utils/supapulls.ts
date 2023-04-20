@@ -583,4 +583,12 @@ export async function events() {
 		return data
 	}
 
+	export async function brhatIndex(){
+		const { data, error } = await supabase
+		.from('brhatindex')
+		.select()
+		if(error) throw new Error(error.message)
+		return data
+	}
+
 	

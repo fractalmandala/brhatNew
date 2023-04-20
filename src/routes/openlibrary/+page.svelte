@@ -3,6 +3,7 @@
 	import { onMount } from 'svelte'
 	import { bols } from '$lib/filed/bolindex'
 	import HeadComponent from '$lib/components/HeadComponent.svelte'
+	import DropDown from '$lib/components/DropDown.svelte'
 	import IconChevron from '$lib/icons/IconChevron.svelte'
 	import { BOLEssentials, BOLBodhas, BOLIKS, BOLROS, BOLOthers, AryanIssue, AryanTag } from '$lib/utils/supapulls'
 	import { crossfade, fly, scale } from 'svelte/transition'
@@ -172,16 +173,21 @@ const navigateList = (e:any) => {
 		<div class="a-box box extra">
 			<div class="boxr resbox">
 				{#if responsive}
-					<div class="responsivebar" on:click={toggleResponsive} on:keydown={fauxfake}>Expand Menu</div>
+					<DropDown --thisbackground="var(--tree)">
+						<div slot="visible" class="expandmenu">Expand Menu</div>
+						<div slot="invisible">
+							<h6 on:click={() => toggleCategory(1)} on:keydown={() => toggleCategory(1)} class:selected={selectedCategory[1]}>Essentials</h6>
+							<h6 on:click={() => toggleCategory(2)} on:keydown={() => toggleCategory(2)} class:selected={selectedCategory[2]}>Two Bodhas</h6>
+							<h6 on:click={() => toggleCategory(3)} on:keydown={() => toggleCategory(3)} class:selected={selectedCategory[3]}>IKS</h6>
+							<h6 on:click={() => toggleCategory(4)} on:keydown={() => toggleCategory(4)} class:selected={selectedCategory[4]}>Scriptural</h6>
+							<h6 on:click={() => toggleCategory(5)} on:keydown={() => toggleCategory(5)} class:selected={selectedCategory[5]}>Special</h6>
+							<h6 on:click={() => toggleCategory(6)} on:keydown={() => toggleCategory(6)} class:selected={selectedCategory[6]}>Āryan Issue</h6>
+						</div>
+					</DropDown>
 				{/if}
 				{#if !responsive}
 					<div class="responsivebar" on:click={toggleResponsive} on:keydown={fauxfake}>Close Menu</div>
-					<h6 on:click={() => toggleCategory(1)} on:keydown={() => toggleCategory(1)} class:selected={selectedCategory[1]}>Essentials</h6>
-					<h6 on:click={() => toggleCategory(2)} on:keydown={() => toggleCategory(2)} class:selected={selectedCategory[2]}>Two Bodhas</h6>
-					<h6 on:click={() => toggleCategory(3)} on:keydown={() => toggleCategory(3)} class:selected={selectedCategory[3]}>IKS</h6>
-					<h6 on:click={() => toggleCategory(4)} on:keydown={() => toggleCategory(4)} class:selected={selectedCategory[4]}>Scriptural</h6>
-					<h6 on:click={() => toggleCategory(5)} on:keydown={() => toggleCategory(5)} class:selected={selectedCategory[5]}>Special</h6>
-					<h6 on:click={() => toggleCategory(6)} on:keydown={() => toggleCategory(6)} class:selected={selectedCategory[6]}>Āryan Issue</h6>
+
 				{/if}
 			</div>
 			<div class="gridof2" class:fullgrid={selectedCategory[5] || selectedCategory[6]}>
