@@ -6,7 +6,8 @@
 	import IconChevron from '$lib/icons/IconChevron.svelte'
 	import AutoComplete from 'simple-svelte-autocomplete'
 	let items:any
-	let input:any
+	let searches:any
+	let input:string
 	let selectedItem:any
 
 	onMount(async() => {
@@ -17,23 +18,14 @@
 
 
 <form class="row">
-	<AutoComplete
-		items={brhatIndex}
-		bind:selectedItem={input}
-		labelFieldName="heading"
-		className="boxform"
-		placeholder="search..."
-	/>
+	<input type="text"
+	/>	
 	<button type="submit">
 		<IconChevron/>
 	</button>
 </form>
 
 <style lang="sass">
-
-.boxform
-	border: none
-	height: 32px
 
 
 form

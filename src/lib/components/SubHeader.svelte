@@ -18,6 +18,11 @@
 	let isInvisible = false
 	let mouseY:number
 	let latestScrollY:number
+	let fake = false
+
+	function fauxfake(){
+		fake = !fake
+	}
 
 	function toggleSidebar(){
 		sidebar = !sidebar
@@ -175,52 +180,52 @@
 </div>
 {#if sidebar}
 	<div class="appsidebar" in:fly={{ duration: 500, x: 400, y: 0}} out:fly={{ duration: 500, x: 400, y: 0}} data-lenis-prevent on:mouseleave={closeSidebar}>
-		<div class="linksbox type">
+		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
 				<h5><a href="/dhiti">Dhīti</a></h5>
 			{/if}
 		</div>
-		<div class="linksbox type">
+		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
 				<h5><a href="/openlibrary">Bṛhat Open Library</a></h5>
 			{/if}
 		</div>
-		<div class="linksbox type">
+		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
 				<h5><a href="/mrdanga">Bṛhad Mṛdaṅga</a></h5>
 			{/if}
 		</div>
-		<div class="linksbox type">
+		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
 				<h5><a href="/anveshi">Bṛhat Anveṡī</a></h5>
 				<AnveshiLinks flytime={sidebar}/>
 			{/if}
 		</div>
-		<div class="linksbox type">
+		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
 				<h5><a href="/drashta">Bṛhat Draṣṭā</a></h5>
 				<DrashtaLinks flytime={sidebar}/>
 			{/if}
 		</div>
-		<div class="linksbox type">
+		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
 				<h5><a href="/mandala">Fractal Maṇḍala</a></h5>
 				<MandalaLinks flytime={sidebar}/>
 			{/if}
 		</div>
-		<div class="linksbox type">
+		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
 				<h5><a href="/aryavarta">Scrolls of Āryavarta</a></h5>
 				<AryavartaLinks flytime={sidebar}/>
 			{/if}
 		</div>
-		<div class="linksbox type">
+		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
 				<h5><a href="/rta">Ṛta in Design</a></h5>
 				<RtaLinks flytime={sidebar}/>
 			{/if}
 		</div>
-		<div class="linksbox type">
+		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
 				<h5 in:fly={{ delay: 500, duration: 100, x: 128, y: 0}} out:fly={{ delay: 0, duration: 100, x: 128, y: 0}}><a href="/about">About</a></h5>
 				<AboutLinks flytime={sidebar}/>

@@ -138,7 +138,7 @@
 				<h6 on:click={() => toggleCategory(4)} on:keydown={() => toggleCategory(4)} class:selected={selectedCategory[4]}>Śabdāvalī</h6>
 			</div>
 			{#if selectedCategory[1]}
-				<div class="gridof4">
+				<div class="gridof4 marg">
 					{#if vids && vids.length > 0}
 						{#each vids as item, i}
 							<div class="card-video" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
@@ -190,6 +190,9 @@
 </div>
 
 <style lang="sass">
+
+.marg
+	margin-bottom: 32px
 
 .x0
 	height: 100vh

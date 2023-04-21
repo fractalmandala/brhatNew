@@ -3,12 +3,15 @@
 <style lang="sass">
 
 .buttonone
-	height: 32px
+	min-height: 32px
 	width: max-content
+	text-align: center
 	border-radius: 3px
 	background: #fe4a49
 	padding-left: 20px
 	padding-right: 20px
+	padding-top: 4px
+	padding-bottom: 4px
 	color: white
 	display: flex
 	flex-direction: column

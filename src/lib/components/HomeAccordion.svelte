@@ -54,6 +54,8 @@ button.accordionbutton
 	overflow: hidden
 	@media screen and (max-width: 1023px)
 		flex-wrap: wrap
+		margin-top: 64px
+		height: calc(100vh - 64px)
 
 .panel
 	display: flex

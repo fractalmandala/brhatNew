@@ -587,6 +587,7 @@ export async function events() {
 		const { data, error } = await supabase
 		.from('brhatindex')
 		.select()
+		.order('heading')
 		if(error) throw new Error(error.message)
 		return data
 	}

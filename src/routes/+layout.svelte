@@ -18,7 +18,7 @@
 
 	onMount(() => {
 		const lenis = new Lenis({
-			duration: 2.6,
+			duration: 1.1,
 			orientation: 'vertical',
 			gestureOrientation: 'vertical',
 			smoothWheel: true,
