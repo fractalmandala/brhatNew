@@ -34,10 +34,18 @@
 				<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/02brhatlogos/horizontal%20white-%20600.png" alt="logo of brhat"/>
 			</a>
 			<div class="boxr icons">
-				<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/twitter-red.png" alt="twitter"/>
-				<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/facebook-red.png" alt="facebook"/>
-				<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/linkedin-red.png" alt="linkedin"/>
-				<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/youtube-red.png" alt="youtube"/>
+				<a href="https://twitter.com/brhat_in" target="_blank" rel="noreferrer">
+					<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/twitter-red.png" alt="twitter"/>
+				</a>
+				<a href="https://www.facebook.com/brhat.in/" target="_blank" rel="noreferrer">
+					<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/facebook-red.png" alt="facebook"/>
+				</a>
+				<a href="https://www.linkedin.com/company/brhat" target="_blank" rel="noreferrer">
+					<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/linkedin-red.png" alt="linkedin"/>
+				</a>
+				<a href="https://www.youtube.com/channel/UCpmTZwM36xdAuHbBaaE2asg" target="_blank" rel="noreferrer">
+					<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/youtube-red.png" alt="youtube"/>
+				</a>
 			</div>
 		</div>
 		<div class="spacer">
