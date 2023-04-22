@@ -1,0 +1,252 @@
+
+.biggrid
+	width: 100vw
+	height: 100vh
+	background: #171717
+	display: grid
+	grid-template-columns: 1fr 1fr 1fr
+	grid-template-rows: 1fr 1fr
+
+.theclipped
+	clip-path: circle(50%)
+	object-fit: cover
+	width: 100vw
+	height: 100vh
+	position: fixed
+	top: -50vh
+	left: -50vw
+	display: none
+	background: transparent
+
+.calbox
+	row-gap: 0
+	border-bottom: 1px solid #ececec
+	padding-bottom: 16px
+	margin-bottom: 16px
+
+.calbox.video
+	cite
+		font-style: normal
+		text-transform: uppercase
+		background: var(--yellow)
+		color: white
+		padding: 2px 8px
+		width: max-content
+
+.calbox.education
+	cite
+		font-style: normal
+		text-transform: uppercase
+		background: var(--mand)
+		color: white
+		padding: 2px 8px
+		width: max-content
+
+.calbox.creatorship
+	cite
+		font-style: normal
+		text-transform: uppercase
+		background: var(--blued)
+		color: white
+		padding: 2px 8px
+		width: max-content
+
+.calbox.culture
+	cite
+		font-style: normal
+		text-transform: uppercase
+		background: var(--red)
+		color: white
+		padding: 2px 8px
+		width: max-content
+
+.tinystrip
+	overflow: hidden
+
+.clipper
+	position: absolute
+	z-index: 9000
+	top: 0
+	left: 0
+	width: 24px
+	height: 24px
+	border: 1px solid #fe4a49
+	border-radius: 50%
+	pointer-events: none
+	transform-origin: top left
+	transition: width 0.2s ease, height 0.2s ease
+	display: none
+
+.clipper.big
+	width: 48px
+	height: 48px
+	top: -24px
+	left: -24px
+
+.vxvx
+	button
+		border-radius: 50%
+		border: none
+		background: #878787
+		width: 24px
+		height: 24px
+		color: white
+		transition: 0.2s ease
+		&:hover
+			background: #fe4a49
+
+.gridof2
+	grid-template-columns: 32% 1fr
+
+.bulls
+	gap: 16px
+
+.vxvx
+	gap: 24px
+	padding-bottom: 12px
+
+.yarr, .xarr
+	object-fit: contain
+	width: 24px
+	height: 24px
+	position: absolute
+	display: none
+	
+.yarr
+	top: 0
+
+.xarr
+	left: -32px
+
+.yarrowline
+	display: none
+	width: calc(100% - 40px)
+	height: 1px
+	background: #ececec
+	z-index: 0
+	left: 0
+	position: absolute
+	top: 42px
+
+.arrowline
+	z-index: 0
+	width: 1px
+	min-height: calc(100vh - 48px)
+	top: calc(-100vh + 48px)
+	margin-left: 8px
+	position: absolute
+	background: #ececec
+
+.mainone
+	z-index: 1
+	.xvxv
+		width: 100%
+		gap: 32px
+		padding-top: 32px
+
+.gridof3
+	transition: all 0.23s var(--cubea)
+
+.gridof3.calibrated
+	grid-template-areas: "opentab opentab opentab" "opentab opentab opentab"
+	grid-template-rows: auto
+	.insidebox.opentab
+		grid-area: opentab
+		display: flex
+	&:hover
+		.insidebox.opentab
+			img
+				opacity: 1
+		.insidebox
+			img
+				opacity: 0
+
+.insidebox
+	display: flex
+	z-index: 1
+	width: 100%
+	height: 120px
+	transition: all 0.32s ease
+	img
+		object-fit: cover
+		width: 100%
+		height: 100%
+		z-index: 0
+
+.insidebox.opentab
+	height: 280px
+	width: 100%
+	img
+		height: 280px
+		z-index: 800
+		margin-top: 32px
+
+.bulletbox
+	z-index: 1
+	text-align: right
+	margin-top: 32px
+	row-gap: 0
+	.seq
+		row-gap: 0
+
+.mainone
+	z-index: 1
+	>h6
+		color: #fe4a49
+
+
+.plain-one
+	box-sizing: border-box
+	z-index: 0
+	height: 100vh
+	width: 100vw
+	display: grid
+	grid-template-rows: 1fr 48px
+	grid-template-columns: 280px 1fr 40px
+	grid-template-areas: "sideleft mainone sideright" "bottomarrow bottomarrow bottomarrow"
+	padding-top: 32px
+	padding-left: 32px
+	padding-right: 0
+	column-gap: 0px
+	overflow: hidden
+	.bottomarrow
+		grid-area: bottomarrow
+		position: absolute
+		bottom: 0
+		height: 32px
+
+.brandgrid
+	width: calc(100vw - 32px)
+	border: 1px solid red
+	grid-area: mainone
+
+
+.sideright
+	height: calc(100vh - 48px)
+
+	
+
+.sideleft
+	height: calc(100vh - 48px)
+	display: flex
+	flex-direction: column
+
+.mainone
+	display: flex
+	flex-direction: column
+	align-items: flex-end
+	justify-content: flex-start
+	height: calc(100vh - 48px)
+	z-index: 1
+	.gridof2
+		height: 100%
+		align-items: start
+		align-content: start
+	
+
+.bottomarrow
+	height: 48px
+	width: 100vw
+	background: white
+	z-index: 0
+

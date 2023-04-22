@@ -377,3 +377,13 @@ export async function dhatuReference(idx:any,idy:any){
 	if (error) throw new Error(error.message)
 	return data
 }
+
+export async function rmLemma(select:any){
+	const { data, error } = await supabase
+	.from('vw-ramayanalemmawithmeanings')
+	.select()
+	.eq('newslug',select)
+	.order('id')
+	if (error) throw new Error(error.message)
+	return data	
+}

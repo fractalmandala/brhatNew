@@ -3,8 +3,9 @@
 	import { onMount } from 'svelte'
 	import { page } from '$app/stores'
 	import { scale } from 'svelte/transition'
+	import IconLoading from '$lib/icons/IconLoading.svelte'
 	import ReaderCard from '$lib/reader/ReaderCard.svelte'
-	import { padasofRamayana, verseSlug } from '$lib/utils/synaptic'
+	import { padasofRamayana, verseSlug, rmLemma } from '$lib/utils/synaptic'
 	let url:any
 	let url2:any
 	let nextID:any
@@ -18,6 +19,9 @@
 	let nextData:any
 	let showBreak = false
 	let fake = false
+	let lemmas:any
+	let searchwords:any
+	let inputword:any
 
 	function fauxfake(){
 		fake = !fake
@@ -29,7 +33,7 @@
 
 	onMount(async() => {
 		url = $page.url.pathname
-		url2 = $page.url.pathname
+		url2 = $page.url.pathname.substr(41,20)
 		newID = data.id
 		currentKanda = data.kanda
 		currentSarga = data.sarga
@@ -39,6 +43,7 @@
 		prevID = data.id - 1
 		prevData = await verseSlug(prevID)
 		nextData = await verseSlug(nextID)
+		lemmas = await rmLemma(url2)
 	})
 
 	export let data
@@ -59,7 +64,18 @@
 			<h6 class="iast">{item.iast}</h6>
 			</div>
 		{/each}
+	{:else}
+		<IconLoading></IconLoading>
 	{/if}
+		<div class="box details">
+			{#if lemmas && lemmas.length > 0}
+				{#each lemmas as item}
+					<div class="box">
+						<p><span><strong>{item.form}</strong></span><br>{item.meanings}</p>
+					</div>
+				{/each}
+			{/if}
+		</div>
 	</div>
 	<div class="boxr readernavigation">
 		<button>
@@ -97,9 +113,28 @@
 		grid-template-columns: 1fr
 		grid-template-rows: auto auto
 		grid-template-areas: "."
-		gap: 32px 32px
+		gap: 16px 32px
 		align-items: start
 		align-content: start
+
+.ramabox
+	transform-origin: left center
+	cite
+		font-style: normal
+		text-transform: uppercase
+		color: #b7b7b7
+	h6
+		font-weight: 400
+		color: #878787
+	h5
+		padding-top: 8px
+	border-bottom: 1px solid #ececec
+	padding-bottom: 16px
+
+.details
+	padding-bottom: 32px
+	padding-top: 16px
+	border-bottom: 1px solid #ececec
 
 
 </style>

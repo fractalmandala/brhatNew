@@ -5,6 +5,10 @@
 
 <style lang="sass">
 
+svg
+	height: 40px
+	height: 40px
+
 svg, svg path
 	transform-origin: center center
 

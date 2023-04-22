@@ -1,48 +1,76 @@
-			<div class="boxr toggler"><p>Devanāgarī</p>
-				<div class="boxr switch">
-			  	<div class="slider">
-						<div class="ball"></div>
-					</div>
-				</div><p>
-				IAST</p>
-			</div>
+<script lang="ts">
 
-<style lang="sass">
+	export let isLight
+	export let fake
 
-.toggler
-	p.toggled
-		color: #fe4a49
+	function toggleMode(){
+		isLight = !isLight
+	}
 
-.toggler
-	align-items: center
-	justify-content: flex-start
-	gap: 12px
-	color: #878787
-	cursor: pointer
-	p
-		&:hover
-			color: #fe4a49
-.switch
-	height: 29px
-	width: 64px
-	background: #d7d7d7
-	border-radius: 13px
-	padding-top: 1px
-	padding-left: 2px
-	padding-right: 2px
-	.ball
-		height: 24px
-		width: 24px
-		background: white
-		border-radius: 12px
-		transition: 0.15s
+	function fauxfake(){
+		fake = !fake
+	}
 
-.ball.balltag
-	transform: translateX(35px)
+</script>
 
-.switch
-	&:hover
-		background: #fe4a49
+<label for="toggle" on:click={toggleMode} on:keydown={fauxfake}>
+  <input class="input" type="checkbox" id="toggle"/>
+  <div class="toggle-wrapper"><span class="selector"></span></div>
+
+</label>
+
+<style>
+
+
+label {
+  pointer-events: none;
+}
+label .input {
+  display: none;
+}
+label .input:checked + .toggle-wrapper {
+  box-shadow: 0 8px 14px 0 rgba(18, 51, 215, 0.12);
+}
+label .input:checked + .toggle-wrapper > .selector {
+  left: calc(100% - 32px);
+  background-color: #10D56C
+}
+label .input:checked ~ .notification > .selected:before {
+  content: "Yes";
+}
+label .toggle-wrapper {
+  position: relative;
+  width: 80px;
+  height: 32px;
+  background-color: #eaeaea;
+  border-radius: 999px;
+  margin: auto;
+  cursor: pointer;
+  pointer-events: all;
+  box-shadow: 0 8px 14px 0 rgba(215, 60, 18, 0.12);
+}
+label .toggle-wrapper .selector {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: #fe4a49;
+  -webkit-transition: left 0.25s ease;
+  transition: left 0.25s ease;
+  border-radius: 50%;
+}
+label .notification {
+  font-size: 20px;
+  width: 100%;
+}
+label .notification .selected:before {
+  content: "No";
+  font-size: 20px;
+  border-bottom: 2px solid;
+}
 
 
 </style>

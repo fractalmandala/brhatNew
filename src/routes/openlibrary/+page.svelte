@@ -2,6 +2,7 @@
 
 	import { onMount } from 'svelte'
 	import { bols } from '$lib/filed/bolindex'
+	import Header from '$lib/components/SubHeader.svelte'
 	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import DropDown from '$lib/components/DropDown.svelte'
 	import IconChevron from '$lib/icons/IconChevron.svelte'
@@ -12,6 +13,7 @@
 	import ButtonOne from '$lib/anims/ButtonOne.svelte'
 	import ButtonTwo from '$lib/anims/ButtonOne.svelte'
 	let sidebar = false
+	let dropdown = false
 	let searchHelpOn = false
 	let bolInput:any
 	let bolInputValue:any
@@ -98,6 +100,11 @@ const navigateList = (e:any) => {
 		}		
 	}
 
+	function toggleDropdown(){
+		dropdown = !dropdown
+	}
+
+
 	function toggleResponsive(){
 		responsive = !responsive
 	}
@@ -148,7 +155,27 @@ const navigateList = (e:any) => {
 	</HeadComponent>
 </svelte:head>
 
-
+<Header sidebar={sidebar}>
+	<div slot="local" class="boxmidrow">
+		<p><a href="/openlibrary/reconnect/sections/dhatus">Dhātus</a></p>
+		<p><a href="/openlibrary/reconnect/sections/amarakosha">Amarakośaḥ</a></p>
+		<p><a href="/openlibrary/reconnect/sections/dictionary">Dictionary</a></p>
+		<p><a href="/openlibrary/reconnect/sections/puranas">Purāṇas</a></p>
+		<div class="box" id="dropper" on:click={toggleDropdown} on:keydown={fauxfake}>
+			<p class="droppperp">Texts</p>
+			{#if dropdown}
+				<div class="box">
+					<a href="/openlibrary/reconnect/sections/ramayana">Rāmāyaṇa</a>
+					<a href="/openlibrary/reconnect/sections/rigveda">Ṛgveda</a>
+				</div>
+			{/if}
+		</div>
+		<a href="/openlibrary">Library Home</a>
+	</div>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</Header>
 <div class="type">
 	<div class="x0">
 		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/bolherobrhat.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/bolherobrhat.webp')">
@@ -186,8 +213,13 @@ const navigateList = (e:any) => {
 					</DropDown>
 				{/if}
 				{#if !responsive}
+							<h6 on:click={() => toggleCategory(1)} on:keydown={() => toggleCategory(1)} class:selected={selectedCategory[1]}>Essentials</h6>
+							<h6 on:click={() => toggleCategory(2)} on:keydown={() => toggleCategory(2)} class:selected={selectedCategory[2]}>Two Bodhas</h6>
+							<h6 on:click={() => toggleCategory(3)} on:keydown={() => toggleCategory(3)} class:selected={selectedCategory[3]}>IKS</h6>
+							<h6 on:click={() => toggleCategory(4)} on:keydown={() => toggleCategory(4)} class:selected={selectedCategory[4]}>Scriptural</h6>
+							<h6 on:click={() => toggleCategory(5)} on:keydown={() => toggleCategory(5)} class:selected={selectedCategory[5]}>Special</h6>
+							<h6 on:click={() => toggleCategory(6)} on:keydown={() => toggleCategory(6)} class:selected={selectedCategory[6]}>Āryan Issue</h6>
 					<div class="responsivebar" on:click={toggleResponsive} on:keydown={fauxfake}>Close Menu</div>
-
 				{/if}
 			</div>
 			<div class="gridof2" class:fullgrid={selectedCategory[5] || selectedCategory[6]}>
@@ -365,7 +397,7 @@ const navigateList = (e:any) => {
 			<div class="gridof4">
 				{#if aryans && aryans.length > 0}
 					{#each aryans as item, i}
-						<div class="card-book" in:scale={{ duration: 100, delay: i*40, easing: circIn}} out:fly={{ duration: 50, easing: circIn}}>
+						<div class="card-book aryansbook" in:scale={{ duration: 200, delay: i*50, easing: circIn}} out:fly={{ duration: 150, easing: circIn}}>
 							<h6><a href={item.sourcelink} target="_blank" rel="noreferrer">{item.paper}</a></h6>
 							<p>{item.author}</p>
 						</div>
@@ -457,5 +489,8 @@ const navigateList = (e:any) => {
 .x4
 	.gridof5
 		margin-top: 32px
+
+.aryansbook
+	flex-direction: column
 
 </style>

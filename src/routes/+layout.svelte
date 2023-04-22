@@ -1,7 +1,7 @@
 <script lang="ts">
 
 	import { page } from '$app/stores'
-	import { onMount } from 'svelte'
+	import { onMount, afterUpdate } from 'svelte'
 	import Lenis from '@studio-freight/lenis'
 	import '$lib/styles/global.sass'
 	import '$lib/styles/types.sass'
@@ -9,6 +9,14 @@
 
 	let innerW:number
 	let breakPointOn:boolean
+	let link:any
+	let showshow = true
+
+$: if (link && link.startsWith('/oneyear')) {
+showshow = false;
+} else {
+showshow = true;
+}
 
 	$: if ( innerW <= 1023 ) {
 		breakPointOn = true
@@ -33,6 +41,15 @@
 		requestAnimationFrame(raf)
 	})
 
+	onMount(() => {
+		link = $page.url.pathname
+	})
+
+	afterUpdate(() => {
+		link = $page.url.pathname
+	})
+
+
 </script>
 
 
@@ -47,7 +64,9 @@
 
 <div id="appbox">
 	<slot></slot>
+	{#if showshow}
 	<Footer></Footer>
+	{/if}
 </div>
 
 

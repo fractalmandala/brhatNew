@@ -11,13 +11,13 @@
 	let pageS:any
 	let pageV:any
 	let sargs:boolean[] = Array(7).fill(false)
-	let sargs1:any
-	let sargs2:any
-	let sargs3:any
-	let sargs4:any
-	let sargs5:any
-	let sargs6:any
-	let sargs7:any
+	let sargas1:any
+	let sargas2:any
+	let sargas3:any
+	let sargas4:any
+	let sargas5:any
+	let sargas6:any
+	let sargas7:any
 	let vars:any
 	let viewSargas = false
 	let filteredKanda:any
@@ -67,6 +67,8 @@ $: if (filteredSarga){
 		pageV = url.substr(45,5)
 		vars = await versesofRamayana(startat, filteredKanda, filteredSarga)
 		showingSargas = await sargasofRamayana(filteredKanda)
+		sargas2 = await sargasofRamayana(2)
+	
 	})
 
 
@@ -85,7 +87,7 @@ $: if (filteredSarga){
 			<div class="label2">Sarga:</div>
 			<div class="label3">Verse:</div>
 			<select class="select1" bind:value={filteredKanda}>
-				<option value=0>O</option>
+				<option value=0></option>
 				<option value=1>1</option>
 				<option value=2>2</option>
 				<option value=3>3</option>
@@ -96,6 +98,7 @@ $: if (filteredSarga){
 			</select>
 			<select class="select2" bind:value={filteredSarga}>
 				{#if showingSargas && showingSargas.length > 0}
+						<option value=0>select</option>
 					{#each showingSargas as item, i}	
 						<option value={i}>{item.sarga}</option>
 					{/each}
@@ -103,6 +106,7 @@ $: if (filteredSarga){
 			</select>
 			<select class="select3" bind:value={filteredVerse} on:change={goToVerse}>
 				{#if vars && vars.length > 0}
+					<option value=0>select</option>
 					{#each vars as item, i}
 						<option value={i}>{item.verse}</option>
 					{/each}
@@ -113,8 +117,8 @@ $: if (filteredSarga){
 			<h6>Kāṇḍa 1</h6>
 				{#if sargs[1]}
 					<div class="sargatray" in:fly={{ duration: 400, x: -120, y: 0}} out:fly={{ duration: 200, x: -120, y: 0}}>
-						{#if sargs1 && sargs1.length > 0}
-							{#each sargs1 as item}
+						{#if sargas1 && sargas1.length > 0}
+							{#each sargas1 as item}
 								<a href="/openlibrary/reconnect/sections/ramayana/1/{item.sarga}">
 								<p>{item.sarga}</p>
 								</a>
@@ -127,8 +131,8 @@ $: if (filteredSarga){
 			<h6>Kāṇḍa 2</h6>
 				{#if sargs[2]}
 					<div class="sargatray" in:fly={{ duration: 400, x: -120, y: 0}} out:fly={{ duration: 200, x: -120, y: 0}}>
-						{#if sargs1 && sargs1.length > 0}
-							{#each sargs1 as item}
+						{#if sargas2 && sargas2.length > 0}
+							{#each sargas2 as item}
 								<a href="/openlibrary/reconnect/sections/ramayana/2/{item.sarga}">
 								<p>{item.sarga}</p>
 								</a>
@@ -141,8 +145,8 @@ $: if (filteredSarga){
 			<h6>Kāṇḍa 3</h6>
 				{#if sargs[3]}
 					<div class="sargatray" in:fly={{ duration: 400, x: -120, y: 0}} out:fly={{ duration: 200, x: -120, y: 0}}>
-						{#if sargs1 && sargs1.length > 0}
-							{#each sargs1 as item}
+						{#if sargas3 && sargas3.length > 0}
+							{#each sargas3 as item}
 								<a href="/openlibrary/reconnect/sections/ramayana/3/{item.sarga}">
 								<p>{item.sarga}</p>
 								</a>
@@ -155,8 +159,8 @@ $: if (filteredSarga){
 			<h6>Kāṇḍa 4</h6>
 				{#if sargs[4]}
 					<div class="sargatray" in:fly={{ duration: 400, x: -120, y: 0}} out:fly={{ duration: 200, x: -120, y: 0}}>
-						{#if sargs1 && sargs1.length > 0}
-							{#each sargs1 as item}
+						{#if sargas4 && sargas4.length > 0}
+							{#each sargas4 as item}
 								<a href="/openlibrary/reconnect/sections/ramayana/4/{item.sarga}">
 								<p>{item.sarga}</p>
 								</a>
@@ -169,8 +173,8 @@ $: if (filteredSarga){
 			<h6>Kāṇḍa 5</h6>
 				{#if sargs[5]}
 					<div class="sargatray" in:fly={{ duration: 400, x: -120, y: 0}} out:fly={{ duration: 200, x: -120, y: 0}}>
-						{#if sargs1 && sargs1.length > 0}
-							{#each sargs1 as item}
+						{#if sargas5 && sargas5.length > 0}
+							{#each sargas5 as item}
 								<a href="/openlibrary/reconnect/sections/ramayana/5/{item.sarga}">
 								<p>{item.sarga}</p>
 								</a>
@@ -183,8 +187,8 @@ $: if (filteredSarga){
 			<h6>Kāṇḍa 6</h6>
 				{#if sargs[6]}
 					<div class="sargatray" in:fly={{ duration: 400, x: -120, y: 0}} out:fly={{ duration: 200, x: -120, y: 0}}>
-						{#if sargs1 && sargs1.length > 0}
-							{#each sargs1 as item}
+						{#if sargas6 && sargas6.length > 0}
+							{#each sargas6 as item}
 								<a href="/openlibrary/reconnect/sections/ramayana/6/{item.sarga}">
 								<p>{item.sarga}</p>
 								</a>
@@ -197,8 +201,8 @@ $: if (filteredSarga){
 			<h6>Kāṇḍa 7</h6>
 				{#if sargs[7]}
 					<div class="sargatray" in:fly={{ duration: 400, x: -120, y: 0}} out:fly={{ duration: 200, x: -120, y: 0}}>
-						{#if sargs1 && sargs1.length > 0}
-							{#each sargs1 as item}
+						{#if sargas7 && sargas7.length > 0}
+							{#each sargas7 as item}
 								<a href="/openlibrary/reconnect/sections/ramayana/7/{item.sarga}">
 								<p>{item.sarga}</p>
 								</a>
@@ -215,7 +219,7 @@ $: if (filteredSarga){
 						Rāmāyaṇa 
 					</div>
 			<select class="select1" bind:value={filteredKanda}>
-				<option value=0>O</option>
+				<option value=0>0</option>
 				<option value=1>1</option>
 				<option value=2>2</option>
 				<option value=3>3</option>
@@ -226,6 +230,7 @@ $: if (filteredSarga){
 			</select>
 			<select class="select2" bind:value={filteredSarga}>
 				{#if showingSargas && showingSargas.length > 0}
+						<option value=0>select</option>
 					{#each showingSargas as item, i}	
 						<option value={i}>{item.sarga}</option>
 					{/each}
@@ -233,6 +238,7 @@ $: if (filteredSarga){
 			</select>
 			<select class="select3" bind:value={filteredVerse} on:change={goToVerse}>
 				{#if vars && vars.length > 0}
+						<option value=0>select</option>
 					{#each vars as item, i}
 						<option value={i}>{item.verse}</option>
 					{/each}

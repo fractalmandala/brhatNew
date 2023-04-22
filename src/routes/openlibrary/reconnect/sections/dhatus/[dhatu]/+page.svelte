@@ -2,6 +2,7 @@
 
 	import { onMount } from 'svelte'
 	import { dhatuNode, dhatuKartari } from '$lib/utils/synaptic'
+	import { dhatubases } from '$lib/filed/dhatusbase'
 
 	let singleDhatu:any
 	let allDhatus:any
@@ -9,6 +10,9 @@
 	let currentWords:any
 	let showDetails = false
 	let linetosplit:any
+
+
+	let root:any
 
 	function toggleDetails(){
 		showDetails = !showDetails
@@ -39,6 +43,13 @@
 
 </script>
 
+<div class="box x0">
+ a
+	{#if root}
+	<svelte:self root={dhatubases}/>
+	{/if}
+</div>
+
 <div class="mainmain type">
 	{#if allDhatus && allDhatus.length > 0}
 		<div class="gridinmain">
@@ -65,6 +76,9 @@
 </div>
 
 <style lang="sass">
+
+.x0
+	margin-top: 128px
 
 .gridinmain
 	display: grid

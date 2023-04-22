@@ -4,6 +4,7 @@
 	import { page } from '$app/stores'
 	import { fly } from 'svelte/transition'	
 	import Conllu from '$lib/reader/GetConllu.svelte'
+	import IconLoading from '$lib/icons/IconLoading.svelte'
 	import { rvRishis, rvDevatas, rvChandas, RVWords, RVPagination } from '$lib/utils/synaptic'
  	let textDev:any
 	let breakDev:any
@@ -60,8 +61,12 @@
 
 
 <div class="box generic readcard" transition:fly>
+	{#if joinIAST && joinIAST.length > 0}
 	<h5 class="dev">{@html joinDev}</h5>
 	<h6>{@html joinIAST}</h6>
+	{:else}
+		<IconLoading></IconLoading>
+	{/if}
 	<div class="boxr inside two">
 		{#if devas && devas.length > 0}
 			{#each devas as item}
@@ -113,7 +118,8 @@
 		font-weight: 400
 		line-height: 1.5
 	@media screen and (min-width: 1024px)
-		text-align: center
+		text-align: left
+		padding-top: 32px
 
 .inside
 	justify-content: space-between
@@ -135,7 +141,7 @@
 		color: #878787
 
 .readernavigation
-	justify-content: center
+	justify-content: flex-start
 	gap: 16px
 	button
 		border: 1px solid #676767

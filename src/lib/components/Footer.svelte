@@ -1,6 +1,7 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
+
 	import AboutLinks from '$lib/links/AboutLinks.svelte'
 	import AnveshiLinks from '$lib/links/AnveshiLinks.svelte'
 	import AryavartaLinks from '$lib/links/AryavartaLinks.svelte'
