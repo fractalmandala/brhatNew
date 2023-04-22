@@ -146,6 +146,7 @@
 
 <svelte:window bind:scrollY={sY} bind:innerWidth={iW}/>
 
+<div class="respon">
 <div class="s3">
 	<Parallax
 		--parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/about-parambika.webp?t=2023-04-21T20%3A35%3A19.875Z')"
@@ -914,9 +915,23 @@
 	</div>
 {/if}
 </div>
+</div>
+<div class="showmess">
+<p>Namaste</p><br><br>
+<p>We are delighted at your interest in following our story. The web navigation here is design for a desktop screen, and will yield poor results on the mobile. We request you to please access this page on a wider screen.<br><br>If you do not have such access, please download the plain PDF from here.<br><br>Dhanyavāda</p>
+</div>
 
 <style lang="sass">
 
+.showmess
+	padding: 24px
+	@media screen and (min-width: 1024px)
+		display: none
+
+
+.respon
+	@media screen and (max-width: 1023px)
+		display: none
 
 #motifsvg
 	object-fit: contain
@@ -958,13 +973,16 @@
 
 .bottomarrow
 	margin-bottom: -48px
+	z-index: 900
 	svg
 		object-fit: contain
 		width: 24px
 		height: 24px
+		z-index: 900
 
 .onearrow
 	width: 100vw
+	z-index: 900
 	display: flex
 	flex-direction: column
 	align-items: flex-end
