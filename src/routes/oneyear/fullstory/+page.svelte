@@ -11,6 +11,7 @@
 	import Parallax from '$lib/components/ParallaxImage.svelte';
 	import { StoryBoardPanel, StoryBoardBullet, StoryBoardCallout, brCalendar3 } from '$lib/utils/story';
 	let svgDraw = true
+	let showNot = false
 	let iW:number
 	let fH:number
 	let showCalendar = false
@@ -113,6 +114,12 @@
 	 motifY = 0
 	}
 
+	$: if ( sY >= 2500) {
+		showNot = false
+	}	else {
+		showNot = true
+	}
+
 
 	onMount(async () => {
 		window.addEventListener('mousemove', handleMouseMotif);
@@ -157,8 +164,8 @@
 
 <svelte:window bind:scrollY={sY} bind:innerWidth={iW}/>
 
-<div class="xline" class:blacker={isPanel[3]} style="transform: translateX({axisX}px)"></div>
-<div class="yline" class:blacker={isPanel[3]} style="transform: translateY({axisY}px)"></div>
+<div class="xline" class:blacker={isPanel[3]} style="transform: translateX({axisX}px)" class:dead={showNot}></div>
+<div class="yline" class:blacker={isPanel[3]} style="transform: translateY({axisY}px)" class:dead={showNot}></div>
 <div class="respon">
 <div class="s3">
 	<Parallax
@@ -1028,6 +1035,12 @@
 </div>
 
 <style lang="sass">
+
+.xline.dead
+	display: none
+
+.yline.dead
+	display: none
 
 .tv5
 	background-image: url('/images/try.png')
