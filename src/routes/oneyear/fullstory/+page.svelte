@@ -1112,9 +1112,6 @@
 .yline.dead
 	display: none
 
-.tv5
-	background-image: url('/images/try.png')
-
 .eventsrow
 	display: flex
 	flex-direction: row
@@ -1215,11 +1212,6 @@
 		width: 24px
 		height: 24px
 
-.tv1
-	h6, h5, h3, h4, button, p, cite
-		z-index: 100
-	button
-		background: white
 
 .makered
 	color: #fe4a49
@@ -1325,19 +1317,6 @@
 		right: 0
 
 
-.onearrow
-	width: 100vw
-	display: flex
-	flex-direction: column
-	align-items: flex-end
-	
-
-.tv1, .tv2
-	position: relative
-	background: white
-	z-index: 1
-
-
 .portrait
 	img
 		object-fit: cover
@@ -1383,63 +1362,9 @@
 	overflow: hidden
 	position: relative
 
-.tv1, .tv4, .tv5
-	overflow-y: hidden
-	margin-top: 24px
-	display: flex
-	flex-direction: row
-	gap: 0
-	padding: 0
-	justify-content: flex-end
-	.hid
-		width: 480px
-	.listbox
-		justify-self: flex-end
-		align-self: flex-end
-		width: calc(100% - 480px)
-		background: transparent
-		padding-left: 48px
-		padding-bottom: 32px
-		button
-			background: transparent
-			color: #272727
-			text-align: right
-			font-size: 40px
-			font-family: 'Spline Sans', sans-serif
-	.portrait
-		left: 80px
-		bottom: 0
-		img
-			height: 280px
-			object-fit: cover
-	
-
-.tv5
-	.hid
-		background: transparent
-
 .svgbox
 	z-index: 0
 
-.tv1, .tv2, .tv4, .tv6, .tv7, .tv8, .tv9
-	z-index: 2
-	background: white
-	padding-right: 32px
-	width: calc(100vw - 80px)
-	padding-left: 120px
-
-.tv5
-	padding-right: 32px
-	width: calc(100vw - 80px)
-	padding-left: 120px
-	z-index: 2
-
-.tv3
-	z-index: 2
-	background: #171717
-	padding-right: 0
-	width: 100vw
-	padding-left: 0
 
 .wide40
 	width: 60%
@@ -1467,10 +1392,9 @@
 .tv10, .tv11, .tv12, .tv13, .tv15
 	background: #171717
 
-.tv15
-	height: 100vh
 
-.tv12, .tv15
+
+.tv12
 	text-align: right
 	align-items: flex-end
 	display: flex
