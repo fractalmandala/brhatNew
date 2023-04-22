@@ -11,6 +11,7 @@
 	import { inview } from 'svelte-inview';
 	import AllBrands from '$lib/components/AllBrands.svelte'
 	import Parallax from '$lib/components/ParallaxImage.svelte';
+	import { brhatTeam } from '$lib/utils/supapulls'
 	import { StoryBoardPanel, StoryBoardBullet, StoryBoardCallout, brCalendar3, brCalendar4 } from '$lib/utils/story';
 	let svgDraw = true
 	let svgDraw2 = false
@@ -20,6 +21,7 @@
 	let iW:number
 	let fH:number
 	let showCalendar = false
+	let members:any
 	const options = {};
 	let events:any
 	let sY: number;
@@ -165,6 +167,7 @@
 		callouts9 = await StoryBoardCallout(9);
 		events = await brCalendar3()
 		ownEvents = await brCalendar4()
+		members = await brhatTeam()
 		perc = motifY / 2000
 		sH = document.body.scrollHeight
 	});
@@ -177,7 +180,6 @@
 </svelte:head>
 
 <svelte:window bind:scrollY={sY} bind:innerWidth={iW}/>
-<div class="fixed">{sH}</div>
 <div class="xline" class:blacker={isPanel[3] || isPanel[10]} style="transform: translateX({axisX}px)" class:dead={showNot}></div>
 <div class="yline" class:blacker={isPanel[3] || isPanel[10]} style="transform: translateY({axisY}px)" class:dead={showNot}></div>
 <div class="respon">
@@ -692,15 +694,18 @@
 
 <div class="calendarstrip">
 	
-	<button class="calbutton" on:click={() => togglePanel(1)} class:isthis={isPanel[1]} class:blacker={isPanel[3] || isPanel[10]}>1</button>
-	<button class="calbutton" on:click={() => togglePanel(2)} class:isthis={isPanel[2]} class:blacker={isPanel[3] || isPanel[10]}>2</button>
-	<button class="calbutton" on:click={() => togglePanel(3)} class:isthis={isPanel[3]} class:blacker={isPanel[3] || isPanel[10]}>3</button>
-	<button class="calbutton" on:click={() => togglePanel(4)} class:isthis={isPanel[4]} class:blacker={isPanel[3] || isPanel[10]}>4</button>
-	<button class="calbutton" on:click={() => togglePanel(5)} class:isthis={isPanel[5]} class:blacker={isPanel[3] || isPanel[10]}>5</button>
-	<button class="calbutton" on:click={() => togglePanel(6)} class:isthis={isPanel[6]} class:blacker={isPanel[3] || isPanel[10]}>6</button>
-	<button class="calbutton" on:click={() => togglePanel(7)} class:isthis={isPanel[7]} class:blacker={isPanel[3] || isPanel[10]}>7</button>
-	<button class="calbutton" on:click={() => togglePanel(8)} class:isthis={isPanel[8]} class:blacker={isPanel[3] || isPanel[10]}>8</button>
-	<button class="calbutton" on:click={() => togglePanel(10)} class:isthis={isPanel[10]} class:blacker={isPanel[3] || isPanel[10]}>10</button>	
+	<button class="calbutton" on:click={() => togglePanel(1)} class:isthis={isPanel[1]} class:blacker={isPanel[3] || isPanel[12]}>1</button>
+	<button class="calbutton" on:click={() => togglePanel(2)} class:isthis={isPanel[2]} class:blacker={isPanel[3] || isPanel[12]}>2</button>
+	<button class="calbutton" on:click={() => togglePanel(3)} class:isthis={isPanel[3]} class:blacker={isPanel[3] || isPanel[12]}>3</button>
+	<button class="calbutton" on:click={() => togglePanel(4)} class:isthis={isPanel[4]} class:blacker={isPanel[3] || isPanel[12]}>4</button>
+	<button class="calbutton" on:click={() => togglePanel(5)} class:isthis={isPanel[5]} class:blacker={isPanel[3] || isPanel[12]}>5</button>
+	<button class="calbutton" on:click={() => togglePanel(6)} class:isthis={isPanel[6]} class:blacker={isPanel[3] || isPanel[12]}>6</button>
+	<button class="calbutton" on:click={() => togglePanel(7)} class:isthis={isPanel[7]} class:blacker={isPanel[3] || isPanel[12]}>7</button>
+	<button class="calbutton" on:click={() => togglePanel(8)} class:isthis={isPanel[8]} class:blacker={isPanel[3] || isPanel[12]}>8</button>
+	<button class="calbutton" on:click={() => togglePanel(10)} class:isthis={isPanel[10]} class:blacker={isPanel[3] || isPanel[12]}>10</button>	
+	<button class="calbutton" on:click={() => togglePanel(11)} class:isthis={isPanel[11]} class:blacker={isPanel[3] || isPanel[12]}>11</button>	
+	<button class="calbutton" on:click={() => togglePanel(12)} class:isthis={isPanel[12]} class:blacker={isPanel[3] || isPanel[12]}>12</button>	
+
 </div>
   <div class="bottomarrow" on:mouseenter={toggleCalendar} on:mouseleave={toggleCalendar}>
 		<svg width="172" height="121" viewBox="0 0 172 121" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: translateX({axisX}px)">
@@ -747,12 +752,13 @@
 		<img src="/images/sq.png" alt="one"/>
 		</div>
   </div>
-  <div class="listing">
+  <div class="listing" id="aa" style="margin-top: -80px">
 		{#if bullets1 && bullets1.length > 0}
 			{#each bullets1 as item, i}
-				<div class="box listing">
+				<div class="box listing" style="align-items: flex-end">
 					<h5>{item.highlightitem}</h5>
 					<h6>{item.content}</h6>
+					<p style="background: var(--blued); cursor: pointer; color: white; padding: 4px; width: 80px"><a href={item.url}>Visit</a></p>
 				</div>
 			{/each}
 		{/if}
@@ -799,7 +805,7 @@
 		{#if bullets4 && bullets4.length > 0}
 			{#each bullets4 as item}
 				<div class="box listing">
-					<h5>{item.highlightitem}</h5>
+					<h5><a href="{item.url}" target="_blank" rel="noreferrer">{item.highlightitem}</h5>
 					<p>{item.content}</p>
 				</div>
 			{/each}
@@ -850,7 +856,9 @@
 		{#if bullets5 && bullets5.length > 0}
 			{#each bullets5 as item}
 				<div class="box listing">
-					<h5>{item.highlightitem}</h5>
+
+						<h5><a href="{item.url}" target="_blank" rel="noreferrer">{item.highlightitem}</h5>
+
 					<p>{item.content}</p>
 				</div>
 			{/each}
@@ -933,14 +941,14 @@
 		{#if bullets7 && bullets7.length > 0}
 			{#each bullets7 as item}
 				<div class="box">
-					<h5>{item.highlightitem}</h5>
+<h5><a href="{item.url}" target="_blank" rel="noreferrer">{item.highlightitem}</h5>
 				</div>
 			{/each}
 		{/if}
 		{#if callouts7 && callouts7.length > 0}
 			{#each callouts7 as item}
 				<div class="boxr callout back">
-					<h5>{item.highlightitem}</h5>
+<h5><a href="{item.url}" target="_blank" rel="noreferrer">{item.highlightitem}</h5>
 				</div>
 			{/each}
 		{/if}
@@ -983,6 +991,71 @@
 	</div>
 {/if}
 {#if isPanel[10]}
+<div class="tv type tv2000">
+	<h2>The Executive Summary</h2>
+	<div class="boxr" id="sp2">
+		<div class="box">
+			<h5>
+			75 essays on Dhīti<br>
+			200+ works uploaded at Open Library<br>
+			4 Bṛhat Draṣṭā courses<br>
+			3 Bṛhat Anveṣī tours - Karnataka and Odisha<br>
+			20+ Bṛhad Mṛdaṅga videos<br>
+			Short content programs:<br>
+			Shabdavali<br>
+			Scrollls of Aryavarta<br>
+			</h5>
+		<img class="mandimage" src="/images/0_1.png" alt="mandir"/>
+		</div>
+	<div class="box">
+		<h5 class="wide60" style="text-align: right; padding-top: 256px">
+10 IKS Dhara event collaborations<br>
+
+Research partner at WAVES Conference<br>
+
+Brand partner at<br>
+
+Shaktikumbh<br>
+
+IIC Art Exhibition<br>
+
+Anadi IKS Hub<br>
+
+Thanjai Big Art Festival<br>
+
+Arogyam Ayurveda Program<br>
+
+The World of the Bauls<br>
+	
+	</h5>
+	</div>
+</div>
+</div>
+{/if}
+{#if isPanel[11]}
+<div class="plain-one type xp" data-lenis-prevent>
+	<h2>
+		The Team
+	<h2>
+	<div class="gridof2">
+		{#if members && members.length > 0}
+			{#each members as item}
+				<div class="boxr teambox">
+					<div class="teamphoto">
+						<img src={item.image} alt={item.name}/>
+					</div>
+					<div class="box">
+					<h6>{item.name}</h6>
+					<p>{item.title}</p>
+					<pre>{item.bio}</pre>
+					</div>
+				</div>
+			{/each}
+		{/if}
+	</div>
+</div>
+{/if}
+{#if isPanel[12]}
 	<div class="tv type tv1000 svgtv">
 		<svg id="motif" width="200" height="201" viewBox="0 0 200 201" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate({axisY/4}deg)">
 			<path id="special" d="M94.1239 10.2657L91.9906 8.13235L100.023 0.0999756L108.011 8.13525L105.872 10.2628L100.018 4.37285L94.1239 10.2657Z" fill="#FE4A49"
@@ -1530,10 +1603,66 @@
 
 <div class="showmess">
 <p>Namaste</p><br><br>
-<p>We are delighted at your interest in following our story. The web navigation here is design for a desktop screen, and will yield poor results on the mobile. We request you to please access this page on a wider screen.<br><br>If you do not have such access, please download the plain PDF from here.<br><br>Dhanyavāda</p>
+<p>We are delighted at your interest in following our story. The web navigation here is design for a desktop screen, and will yield poor results on the mobile. We request you to please access this page on a wider screen.<br><br>For visitors who do not have such access, we will shortly upload a plain PDF.<br><br>Dhanyavāda</p>
 </div>
 
 <style lang="sass">
+
+.xp
+	overflow-y: scroll
+
+.gridof2
+	padding-top: 32px
+
+.teambox
+	align-items: flex-start
+	gap: 24px
+	padding: 12px
+	img
+		object-fit: cover
+		height: 100%
+		width: 100%
+	.teamphoto
+		width: 120px
+		height: 120px
+	.box
+		width: 68%
+		row-gap: 0
+		p
+			font-size: 18px
+			text-transform: uppercase
+			color: #fe4a49
+		pre
+			font-size: 16px
+			font-weight: 400
+	
+	
+
+.teambox
+	row-gap: 0
+	h5, h6, p
+		margin: 0
+
+.xp
+	padding-left: 128px
+	padding-right: 32px
+	height: 100%
+	width: 100%
+
+#sp2
+	justify-content: space-between
+
+
+.mandimage
+	object-fit: cover
+	width: 600px
+	height: 500px
+
+.tv2000
+	padding-left: 128px
+	padding-right: 32px
+	h2
+		margin-bottom: 32px
 
 #motif
 	:nth-child(n)

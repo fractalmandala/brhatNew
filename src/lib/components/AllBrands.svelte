@@ -16,19 +16,19 @@ let showMrd:boolean = false
 let isBrands = true;
 
 function linkMrdanga(){
-	window.location.href = '/mrdanga';
+	window.location.href = 'https://brhat.in/brhat/culture-creatives/brhadmrdanga/';
 }
 
 function linkMandala(){
-	window.location.href = '/mandala';
+	window.location.href = 'https://brhat.in/brhat/culture-creatives/fractal-mandala-home/';
 }
 
 function linkBol(){
-	window.location.href = '/openlibrary';
+	window.location.href = 'https://brhat.in/brhat/openlibrary/';
 }
 
 function linkSoa(){
-	window.location.href = '/aryavarta';
+	window.location.href = 'https://brhat.in/scrollsofaryavarta/';
 }
 
 function linkAnveshi(){
@@ -36,11 +36,11 @@ function linkAnveshi(){
 }
 
 function linkDrashta(){
-	window.location.href = '/drashta';
+	window.location.href = 'https://brhat.in/brhat/leadership-development/brhat-drasta/';
 }
 
 function linkRid(){
-	window.location.href = '/rta';
+	window.location.href = 'https://brhat.in/rta-in-design/';
 }
 
 function toggleBrands(){
