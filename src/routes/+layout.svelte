@@ -18,6 +18,7 @@ showshow = false;
 showshow = true;
 }
 
+
 	$: if ( innerW <= 1023 ) {
 		breakPointOn = true
  	} else {
