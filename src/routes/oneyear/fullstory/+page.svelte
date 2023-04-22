@@ -189,7 +189,7 @@
 	/>
 </div>
 <div class="type tv tv10 back" style="background-image: url('/images/storywall1.png')" />
-<div class="tv tv11">
+<div class="tv tv11 back" style="background-image: url('/images/storywall2.png')">
 	<div class="svgbox">
 		<svg
 			id="motifsvg"
@@ -632,7 +632,7 @@
 		</svg>
 	</div>
 </div>
-<div class="tv tv13">
+<div class="tv tv13 back" style="background-image: url('/images/storywall3.png')">
 	<svg width="733" height="287" viewBox="0 0 733 287" fill="none" xmlns="http://www.w3.org/2000/svg"
 			use:inview={options}
 			on:inview_enter={(event) => {
@@ -664,8 +664,8 @@
 
 	</div>
 
-<div class="tv tv15 type">
-	<h5>completing 1 year as the</h5>
+<div class="tv tv15 type" style="background-image: url('/images/storywall4.png')">
+	<h5 style="color: white">completing 1 year as the</h5>
 	<h3 style="font-family: JetBrains Mono, monospace;"><span class="makered">&lt;</span><span style="color: white">culture_engine</span><span class="makered">&gt;</span></h3>
 </div>
 
@@ -840,7 +840,7 @@
 		{/if}
 		</div>
     <div class="gallery">
-			<img src="/images/templerow.png" alt="row"/>
+			<img class="templerow" src="/images/templerow.png" alt="row"/>
 		</div>
   </div>
   <div class="left">
@@ -1033,7 +1033,7 @@ The World of the Bauls<br>
 </div>
 {/if}
 {#if isPanel[11]}
-<div class="plain-one type xp" data-lenis-prevent>
+<div class="plain-one type xp bdr" data-lenis-prevent>
 	<h2>
 		The Team
 	<h2>
@@ -1608,8 +1608,16 @@ The World of the Bauls<br>
 
 <style lang="sass">
 
+.templerow
+	width: 400px
+	height: 200px
+	object-fit: cover
+
 .xp
 	overflow-y: scroll
+	.gridof2
+		width: 90vw
+		grid-template-columns: 1fr 1fr
 
 .gridof2
 	padding-top: 32px
