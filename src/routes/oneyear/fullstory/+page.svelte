@@ -751,7 +751,7 @@
 </div>
 {/if}
 {#if isPanel[2]}
-<div class="thebox type" in:fly={{ duration: 900, delay: 1000, x: -1200, easing: quintOut}} out:fly={{ duration: 900, delay: 0, x: 1200, easing: backIn}}>
+<div class="thebox type xxx4" in:fly={{ duration: 900, delay: 1000, x: -1200, easing: quintOut}} out:fly={{ duration: 900, delay: 0, x: 1200, easing: backIn}}>
   <div class="toprow">
     <div class="hid">
 		{#if panels4 && panels4.length > 0}
@@ -761,18 +761,21 @@
 			{/each}
 		{/if}
 		</div>
-    <div class="gallery"></div>
+    <div class="gallery">
+			<img src="/images/03.png" alt="03"/>
+		</div>
   </div>
   <div class="left">
     <div class="detail">
 				<h5>We launched the shared online learning program <span class="makered">Bṛhat Draṣṭā,</span>with a tribute to the stalwarts who have borne forward the civilizational fire before us. <br><br>
 				Introduction to Shri Ram Swarup and to Shri Sita Ram Goel saw more than a 100 participants, and a genuine shared learning environment.
 	 			</h5>
-			<p class="makered">Scroll the cursor at the screen's top edge to begin viewing our calendar of events on every page.</p>
 		</div>
-    <div class="portrait"></div>
+    <div class="portrait">
+			<img src="/images/fire.png" alt="fire"/>
+		</div>
   </div>
-  <div class="listing" style="margin-top: -120px">
+  <div class="listing">
 		{#if bullets4 && bullets4.length > 0}
 			{#each bullets4 as item}
 				<div class="box listing">
@@ -813,14 +816,16 @@
     <div class="gallery"></div>
   </div>
   <div class="left">
-    <div class="detail"></div>
-    <div class="portrait"></div>
+    <div class="portrait">
+			<img src="/images/mand.png" alt="mand"/>
+		</div>
   </div>
   <div class="listing">
 		{#if bullets5 && bullets5.length > 0}
 			{#each bullets5 as item}
 				<div class="box listing">
 					<h5>{item.highlightitem}</h5>
+					<p>{item.content}</p>
 				</div>
 			{/each}
 		{/if}	
@@ -1035,6 +1040,15 @@
 </div>
 
 <style lang="sass">
+
+.xxx4
+	padding-top: 16px
+	padding-right: 16px
+	.gallery
+		padding: 16px
+		margin-bottom: 24px
+	.detail
+		margin-bottom: 32px
 
 .xline.dead
 	display: none
