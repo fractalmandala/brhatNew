@@ -4,14 +4,15 @@
 	import { fly } from 'svelte/transition'
 	import { quintOut, backIn } from 'svelte/easing'
 	import { inview } from 'svelte-inview';
+	import AllBrands from '$lib/components/AllBrands.svelte'
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import Parallax from '$lib/components/ParallaxImage.svelte';
-	import { StoryBoardPanel, StoryBoardBullet, StoryBoardCallout } from '$lib/utils/story';
+	import { StoryBoardPanel, StoryBoardBullet, StoryBoardCallout, brCalendar3 } from '$lib/utils/story';
 	let svgDraw = false;
-	gsap.registerPlugin(ScrollTrigger);
 	let iW:number
 	const options = {};
+	let events:any
 	let sY: number;
 	let portrait1: any;
 	let motifView = false;
@@ -34,9 +35,14 @@
 	let bullets6: any;
 	let callouts6: any;
 	let panels7: any;
+	let panels9:any
 	let bullets7: any;
+	let callouts7:any
 	let panels8: any;
 	let bullets8: any;
+	let callouts8:any
+	let bullets9:any
+	let callouts9:any
 	let axisX = 0
 	let axisY = 0
 	let moveX: any;
@@ -93,12 +99,6 @@
 		moveX = 0;
 	}
 
-	$: if (motifView === true) {
-		animatebegin = true;
-	} else {
-		animatebegin = false;
-	}
-
 	function initStickySVG(svg: SVGSVGElement, x1textInView: boolean) {
 		if (typeof window !== 'undefined') {
 			gsap.registerPlugin(ScrollTrigger);
@@ -150,6 +150,7 @@
 	let svg: SVGSVGElement;
 
 	onMount(async () => {
+		gsap.registerPlugin(ScrollTrigger);
 		window.addEventListener('mousemove', handleMouseMotif);
 		svg = document.querySelector('.svgbox');
 		initStickySVG(svg, motifView);
@@ -180,6 +181,7 @@
 		panels9 = await StoryBoardPanel(9);
 		bullets9 = await StoryBoardBullet(9);
 		callouts9 = await StoryBoardCallout(9);
+		events = await brCalendar3()
 	});
 </script>
 
@@ -662,15 +664,15 @@
 
 <div class="calendarstrip">
 	
-	<button class="calbutton" on:click={() => togglePanel(1)}>1</button>
-	<button class="calbutton" on:click={() => togglePanel(2)}>2</button>
-	<button class="calbutton" on:click={() => togglePanel(3)}>3</button>
-	<button class="calbutton" on:click={() => togglePanel(4)}>4</button>
-	<button class="calbutton" on:click={() => togglePanel(5)}>5</button>
-	<button class="calbutton" on:click={() => togglePanel(6)}>6</button>
-	<button class="calbutton" on:click={() => togglePanel(7)}>7</button>
-	<button class="calbutton" on:click={() => togglePanel(8)}>8</button>
-	<button class="calbutton" on:click={() => togglePanel(9)}>9</button>
+	<button class="calbutton" on:click={() => togglePanel(1)} class:isthis={isPanel[1]}>1</button>
+	<button class="calbutton" on:click={() => togglePanel(2)} class:isthis={isPanel[2]}>2</button>
+	<button class="calbutton" on:click={() => togglePanel(3)} class:isthis={isPanel[3]}>3</button>
+	<button class="calbutton" on:click={() => togglePanel(4)} class:isthis={isPanel[4]}>4</button>
+	<button class="calbutton" on:click={() => togglePanel(5)} class:isthis={isPanel[5]}>5</button>
+	<button class="calbutton" on:click={() => togglePanel(6)} class:isthis={isPanel[6]}>6</button>
+	<button class="calbutton" on:click={() => togglePanel(7)} class:isthis={isPanel[7]}>7</button>
+	<button class="calbutton" on:click={() => togglePanel(8)} class:isthis={isPanel[8]}>8</button>
+	<button class="calbutton" on:click={() => togglePanel(9)} class:isthis={isPanel[9]}>9</button>
 	
 </div>
   <div class="bottomarrow">
@@ -686,17 +688,9 @@
 	</div>
 {#if isPanel[1]}
 <div class="type tv tv1" in:fly={{ duration: 900, delay: 1000, x: -1200, easing: quintOut}} out:fly={{ duration: 900, delay: 0, x: 1200, easing: backIn}}>
-	<div
-		class="portrait back"
-		style="background-image: url('/images/wallone.png'); transform: translateX(-{moveX / 2}px)"
-		use:inview
-		on:inview_enter={(event) => {
-			portrait1 = true;
-		}}
-		on:inview_leave={(event) => {
-			portrait1 = false;
-		}}
-	/>
+	<div class="portrait">
+		<img src="/images/sq.png" alt="one"/>
+	</div>
 	<div class="box hid">
 		{#if panels1 && panels1.length > 0}
 			{#each panels1 as item}
@@ -730,14 +724,13 @@
 			{/each}
 		{/if}
 	</div>
-	<div class="portrait">
-		<img src="/images/sq.png" alt="one"/>
-	</div>
 </div>
 {/if}
 {#if isPanel[2]}
 <div class="type tv tv2" in:fly={{ duration: 900, delay: 1000, x: -1200, easing: quintOut}} out:fly={{ duration: 900, delay: 0, x: 1200, easing: backIn}}>
-	<div class="portrait back" style="background-image: url('/images/templesmany.png')" />
+	<div class="portrait">
+		<img src="/images/templesmany.png" alt="one"/>
+	</div>
 	<div class="box hid">
 		{#if panels2 && panels2.length > 0}
 			{#each panels2 as item}
@@ -757,7 +750,7 @@
 		{/if}
 		{#if callouts2 && callouts2.length > 0}
 			{#each callouts2 as item}
-				<div class="boxr callout back" style="background-image: url('{item.image}')">
+				<div class="boxr callout back">
 					<h5>{item.highlightitem}</h5>
 					<p>{item.content}</p>
 				</div>
@@ -768,33 +761,9 @@
 {/if}
 {#if isPanel[3]}
 <div class="type tv tv3" in:fly={{ duration: 900, delay: 1000, x: -1200, easing: quintOut}} out:fly={{ duration: 900, delay: 0, x: 1200, easing: backIn}}>
-	<div class="portrait back" style="background-image: url('/images/colorwall2.png')" />
-	<div class="box hid">
-		{#if panels3 && panels3.length > 0}
-			{#each panels3 as item}
-				<h2>{item.highlightitem}</h2>
-				<h6>{item.content}</h6>
-			{/each}
-		{/if}
-	</div>
-	<div class="gridof6">
-		{#if bullets3 && bullets3.length > 0}
-			{#each bullets3 as item}
-				<div class="box bullet">
-					<h5>{item.highlightitem}</h5>
-					<p>{item.content}</p>
-				</div>
-			{/each}
-		{/if}
-		{#if callouts3 && callouts3.length > 0}
-			{#each callouts3 as item}
-				<div class="boxr callout back" style="background-image: url('{item.image}')">
-					<h5>{item.highlightitem}</h5>
-					<p>{item.content}</p>
-				</div>
-			{/each}
-		{/if}
-	</div>
+
+	<AllBrands></AllBrands>
+
 </div>
 {/if}
 {#if isPanel[4]}
@@ -830,8 +799,10 @@
 {/if}
 {#if isPanel[5]}
 <div class="type tv tv5" in:fly={{ duration: 900, delay: 1000, x: -1200, easing: quintOut}} out:fly={{ duration: 900, delay: 0, x: 1200, easing: backIn}}>
+	<div class="portrait">
+		<img src="/images/mand.png" alt="mnd"/>
+	</div>	
 	<div class="box hid">
-		<div class="portrait back" style="background-image: url('/images/colorwall2.png')" />
 		{#if panels5 && panels5.length > 0}
 			{#each panels5 as item}
 				<h2>{item.highlightitem}</h2>
@@ -861,29 +832,14 @@
 {/if}
 {#if isPanel[6]}
 <div class="type tv tv6" in:fly={{ duration: 900, delay: 1000, x: -1200, easing: quintOut}} out:fly={{ duration: 900, delay: 0, x: 1200, easing: backIn}}>
-	<div class="box hid">
-		<div class="portrait back" style="background-image: url('/images/colorwall3.png')" />
-		{#if panels6 && panels6.length > 0}
-			{#each panels6 as item}
-				<h2>{item.highlightitem}</h2>
-				<h6>{item.content}</h6>
-			{/each}
-		{/if}
-	</div>
-	<div class="gridof6">
-		{#if bullets6 && bullets6.length > 0}
-			{#each bullets6 as item}
+	<div class="mynewgrid">
+		{#if events && events.length > 0}
+			{#each events as item}
 				<div class="box">
-					<h5>{item.highlightitem}</h5>
-					<p>{item.content}</p>
-				</div>
-			{/each}
-		{/if}
-		{#if callouts6 && callouts6.length > 0}
-			{#each callouts6 as item}
-				<div class="boxr callout back" style="background-image: url('{item.image}')">
-					<h5>{item.highlightitem}</h5>
-					<p>{item.content}</p>
+					<small>{item.month}</small>
+					<cite>{item.catgory}</cite>
+					<h6>{item.contentitem}</h6>
+					<p>{item.action}</p>
 				</div>
 			{/each}
 		{/if}
@@ -893,7 +849,7 @@
 {#if isPanel[7]}
 <div class="type tv tv7" in:fly={{ duration: 900, delay: 1000, x: -1200, easing: quintOut}} out:fly={{ duration: 900, delay: 0, x: 1200, easing: backIn}}>
 	<div class="box hid">
-		<div class="portrait back" style="background-image: url('/images/colorwall4.png')" />
+		<div class="portrait back"/>
 		{#if panels7 && panels7.length > 0}
 			{#each panels7 as item}
 				<h2>{item.highlightitem}</h2>
@@ -912,7 +868,7 @@
 		{/if}
 		{#if callouts1 && callouts1.length > 0}
 			{#each callouts1 as item}
-				<div class="boxr callout back" style="background-image: url('{item.image}')">
+				<div class="boxr callout back">
 					<h5>{item.highlightitem}</h5>
 					<p>{item.content}</p>
 				</div>
@@ -924,7 +880,7 @@
 {#if isPanel[8]}
 <div class="type tv tv8" in:fly={{ duration: 900, delay: 1000, x: -1200, easing: quintOut}} out:fly={{ duration: 900, delay: 0, x: 1200, easing: backIn}}>
 	<div class="box hid">
-		<div class="portrait back" style="background-image: url('/images/bigtemple.png')" />
+		<div class="portrait back"/>
 		{#if panels8 && panels8.length > 0}
 			{#each panels8 as item}
 				<h3>{item.highlightitem}</h3>
@@ -943,7 +899,7 @@
 		{/if}
 		{#if callouts1 && callouts1.length > 0}
 			{#each callouts1 as item}
-				<div class="boxr callout back" style="background-image: url('{item.image}')">
+				<div class="boxr callout back">
 					<h5>{item.highlightitem}</h5>
 					<p>{item.content}</p>
 				</div>
@@ -956,6 +912,23 @@
 
 <style lang="sass">
 
+
+
+
+.mynewgrid
+	display: grid
+	grid-auto-flow: column
+	grid-template-columns: 1fr 1fr 1fr 1fr
+	grid-template-rows: 1fr 1fr 1fr 1fr
+	grid-template-areas: ". . . ." ". . . ." ". . . ." ". . . ."
+	overflow-x: scroll
+	gap: 24px
+	height: 100vh
+	padding: 32px 0
+	overflow-y: hidden
+	.box
+		row-gap: 0
+		min-width: 240px
 
 .rightarrow
 	overflow: visible
@@ -989,8 +962,21 @@
 	align-items: flex-end
 	
 
-.tv1
+.tv1, .tv2
 	position: relative
+	background: white
+	z-index: 1
+
+.tv2
+	.bullet, .callout
+		background: white
+		background-image: none
+	.portrait
+		z-index: -1
+		img
+			width: 1000px
+			height: 800px
+			object-fit: center left
 
 .portrait
 	position: absolute
@@ -1000,6 +986,28 @@
 		object-fit: cover
 		width: 400px
 		height: 400px
+
+.tv5
+	background: transparent
+	.hid
+		z-index: 2
+		background: white
+		h3
+			z-index: 2
+	.portrait
+		right: 0
+		bottom: 0
+		z-index: 0
+		img
+			width: 800px
+			height: 80vh
+	.gridof6
+		grid-template-columns: 1fr 1fr 1fr 1fr
+		grid-template-rows: auto
+		z-index: 2
+		.callout, .bullet
+			z-index: 4
+			background: white
 
 .hid
 	h2
@@ -1026,6 +1034,10 @@
 
 
 .callout, .bullet
+	justify-content: center
+	text-align: center
+	padding: 16px
+	flex-direction: column
 	h5
 		font-weight: bold
 		text-transform: capitalize
@@ -1063,6 +1075,8 @@
 		height: 100%
 		&:hover
 			background: #fe4a49
+	button.isthis
+		background: var(--blued)
 
 .locker
 	background: white
@@ -1078,12 +1092,19 @@
 .svgbox
 	z-index: 0
 
-.tv1, .tv2, .tv3, .tv4, .tv5, .tv6, .tv7
+.tv1, .tv2, .tv4, .tv5, .tv6, .tv7
 	z-index: 2
 	background: white
 	padding-right: 32px
 	width: calc(100vw - 80px)
 	padding-left: 120px
+
+.tv3
+	z-index: 2
+	background: #171717
+	padding-right: 0
+	width: 100vw
+	padding-left: 0
 
 .wide40
 	width: 60%
