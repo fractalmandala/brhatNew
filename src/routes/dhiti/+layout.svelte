@@ -16,5 +16,4 @@
 		<a href="/dhiti" style="color: white">Dhīti</a>
 	</div>
 </Header>
-<slot></slot>
 

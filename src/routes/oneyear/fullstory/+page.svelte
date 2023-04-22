@@ -180,8 +180,8 @@
 </svelte:head>
 
 <svelte:window bind:scrollY={sY} bind:innerWidth={iW}/>
-<div class="xline" class:blacker={isPanel[3] || isPanel[10]} style="transform: translateX({axisX}px)" class:dead={showNot}></div>
-<div class="yline" class:blacker={isPanel[3] || isPanel[10]} style="transform: translateY({axisY}px)" class:dead={showNot}></div>
+<div class="xline" class:blacker={isPanel[3] || isPanel[11]} style="transform: translateX({axisX}px)" class:dead={showNot}></div>
+<div class="yline" class:blacker={isPanel[3] || isPanel[11]} style="transform: translateY({axisY}px)" class:dead={showNot}></div>
 <div class="respon">
 <div class="s3">
 	<Parallax
@@ -694,17 +694,17 @@
 
 <div class="calendarstrip">
 	
-	<button class="calbutton" on:click={() => togglePanel(1)} class:isthis={isPanel[1]} class:blacker={isPanel[3] || isPanel[12]}>1</button>
-	<button class="calbutton" on:click={() => togglePanel(2)} class:isthis={isPanel[2]} class:blacker={isPanel[3] || isPanel[12]}>2</button>
-	<button class="calbutton" on:click={() => togglePanel(3)} class:isthis={isPanel[3]} class:blacker={isPanel[3] || isPanel[12]}>3</button>
-	<button class="calbutton" on:click={() => togglePanel(4)} class:isthis={isPanel[4]} class:blacker={isPanel[3] || isPanel[12]}>4</button>
-	<button class="calbutton" on:click={() => togglePanel(5)} class:isthis={isPanel[5]} class:blacker={isPanel[3] || isPanel[12]}>5</button>
-	<button class="calbutton" on:click={() => togglePanel(6)} class:isthis={isPanel[6]} class:blacker={isPanel[3] || isPanel[12]}>6</button>
-	<button class="calbutton" on:click={() => togglePanel(7)} class:isthis={isPanel[7]} class:blacker={isPanel[3] || isPanel[12]}>7</button>
-	<button class="calbutton" on:click={() => togglePanel(8)} class:isthis={isPanel[8]} class:blacker={isPanel[3] || isPanel[12]}>8</button>
-	<button class="calbutton" on:click={() => togglePanel(10)} class:isthis={isPanel[10]} class:blacker={isPanel[3] || isPanel[12]}>10</button>	
-	<button class="calbutton" on:click={() => togglePanel(11)} class:isthis={isPanel[11]} class:blacker={isPanel[3] || isPanel[12]}>11</button>	
-	<button class="calbutton" on:click={() => togglePanel(12)} class:isthis={isPanel[12]} class:blacker={isPanel[3] || isPanel[12]}>12</button>	
+	<button class="calbutton" on:click={() => togglePanel(1)} class:isthis={isPanel[1]} class:blacker={isPanel[3] || isPanel[11]}>1</button>
+	<button class="calbutton" on:click={() => togglePanel(2)} class:isthis={isPanel[2]} class:blacker={isPanel[3] || isPanel[11]}>2</button>
+	<button class="calbutton" on:click={() => togglePanel(3)} class:isthis={isPanel[3]} class:blacker={isPanel[3] || isPanel[11]}>3</button>
+	<button class="calbutton" on:click={() => togglePanel(4)} class:isthis={isPanel[4]} class:blacker={isPanel[3] || isPanel[11]}>4</button>
+	<button class="calbutton" on:click={() => togglePanel(5)} class:isthis={isPanel[5]} class:blacker={isPanel[3] || isPanel[11]}>5</button>
+	<button class="calbutton" on:click={() => togglePanel(6)} class:isthis={isPanel[6]} class:blacker={isPanel[3] || isPanel[11]}>6</button>
+	<button class="calbutton" on:click={() => togglePanel(7)} class:isthis={isPanel[7]} class:blacker={isPanel[3] || isPanel[11]}>7</button>
+	<button class="calbutton" on:click={() => togglePanel(8)} class:isthis={isPanel[8]} class:blacker={isPanel[3] || isPanel[11]}>8</button>
+	<button class="calbutton" on:click={() => togglePanel(9)} class:isthis={isPanel[9]} class:blacker={isPanel[3] || isPanel[11]}>9</button>	
+	<button class="calbutton" on:click={() => togglePanel(10)} class:isthis={isPanel[10]} class:blacker={isPanel[3] || isPanel[11]}>10</button>	
+	<button class="calbutton" on:click={() => togglePanel(11)} class:isthis={isPanel[11]} class:blacker={isPanel[3] || isPanel[11]}>11</button>	
 
 </div>
   <div class="bottomarrow" on:mouseenter={toggleCalendar} on:mouseleave={toggleCalendar}>
@@ -941,14 +941,14 @@
 		{#if bullets7 && bullets7.length > 0}
 			{#each bullets7 as item}
 				<div class="box">
-<h5><a href="{item.url}" target="_blank" rel="noreferrer">{item.highlightitem}</h5>
+	<h5><a href="{item.url}" target="_blank" rel="noreferrer">{item.highlightitem}</h5>
 				</div>
 			{/each}
 		{/if}
 		{#if callouts7 && callouts7.length > 0}
 			{#each callouts7 as item}
 				<div class="boxr callout back">
-<h5><a href="{item.url}" target="_blank" rel="noreferrer">{item.highlightitem}</h5>
+	<h5><a href="{item.url}" target="_blank" rel="noreferrer">{item.highlightitem}</h5>
 				</div>
 			{/each}
 		{/if}
@@ -981,17 +981,9 @@
 </div>
 </div>
 {/if}
+
 {#if isPanel[9]}
-	<div class="type tv9" in:fly={{ duration: 900, delay: 1000, x: -1200, easing: quintOut}} out:fly={{ duration: 900, delay: 0, x: 1200, easing: backIn}}>
-		<div class="box hid">
-		<h2>Headwinds to Tailwinds</h2>
-			<h6>a summary, and the road ahead</h6>
-		</div>	
-		
-	</div>
-{/if}
-{#if isPanel[10]}
-<div class="tv type tv2000">
+<div class="tv type tv2000" in:fly={{ duration: 900, delay: 1000, x: -1200, easing: quintOut}} out:fly={{ duration: 900, delay: 0, x: 1200, easing: backIn}}>
 	<h2>The Executive Summary</h2>
 	<div class="boxr" id="sp2">
 		<div class="box">
@@ -1009,31 +1001,31 @@
 		</div>
 	<div class="box">
 		<h5 class="wide60" style="text-align: right; padding-top: 256px">
-10 IKS Dhara event collaborations<br>
-
-Research partner at WAVES Conference<br>
-
-Brand partner at<br>
-
-Shaktikumbh<br>
-
-IIC Art Exhibition<br>
-
-Anadi IKS Hub<br>
-
-Thanjai Big Art Festival<br>
-
-Arogyam Ayurveda Program<br>
-
-The World of the Bauls<br>
+	10 IKS Dhara event collaborations<br>
+	
+	Research partner at WAVES Conference<br>
+	
+	Brand partner at<br>
+	
+	Shaktikumbh<br>
+	
+	IIC Art Exhibition<br>
+	
+	Anadi IKS Hub<br>
+	
+	Thanjai Big Art Festival<br>
+	
+	Arogyam Ayurveda Program<br>
+	
+	The World of the Bauls<br>
 	
 	</h5>
 	</div>
 </div>
 </div>
 {/if}
-{#if isPanel[11]}
-<div class="plain-one type xp bdr" data-lenis-prevent>
+{#if isPanel[10]}
+<div class="plain-one type xp" data-lenis-prevent in:fly={{ duration: 900, delay: 1000, x: -1200, easing: quintOut}} out:fly={{ duration: 900, delay: 0, x: 1200, easing: backIn}}>
 	<h2>
 		The Team
 	<h2>
@@ -1055,8 +1047,8 @@ The World of the Bauls<br>
 	</div>
 </div>
 {/if}
-{#if isPanel[12]}
-	<div class="tv type tv1000 svgtv">
+{#if isPanel[11]}
+	<div class="tv type tv1000 svgtv" in:fly={{ duration: 900, delay: 1000, x: -1200, easing: quintOut}} out:fly={{ duration: 900, delay: 0, x: 1200, easing: backIn}}>
 		<svg id="motif" width="200" height="201" viewBox="0 0 200 201" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate({axisY/4}deg)">
 			<path id="special" d="M94.1239 10.2657L91.9906 8.13235L100.023 0.0999756L108.011 8.13525L105.872 10.2628L100.018 4.37285L94.1239 10.2657Z" fill="#FE4A49"
 				use:pannable
