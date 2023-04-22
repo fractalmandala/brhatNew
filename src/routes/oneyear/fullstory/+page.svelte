@@ -35,18 +35,12 @@
 	let callouts6: any;
 	let panels7: any;
 	let bullets7: any;
-	let callouts7: any;
 	let panels8: any;
 	let bullets8: any;
-	let callouts8: any;
-	let panels9: any;
-	let bullets9: any;
-	let callouts9: any;
 	let axisX = 0
 	let axisY = 0
 	let moveX: any;
 	let alignGrid
-	let animatebegin = false;
 	let onBox = Array(8).fill(false)
 	let onBox2 = Array(8).fill(false)
 	let isPanel = Array(10).fill(false)
@@ -114,7 +108,7 @@
 			const timeline = gsap.timeline({
 				paused: true,
 				scrollTrigger: {
-					trigger: '.tv10',
+					trigger: '.tv11',
 					scrub: 1,
 					start: 'top top',
 					end: () => '+=' + window.innerHeight * 4
