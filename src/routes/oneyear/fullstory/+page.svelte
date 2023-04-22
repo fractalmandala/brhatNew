@@ -811,8 +811,10 @@
 {/if}
 {#if isPanel[7]}
 <div class="type tv tv7" in:fly={{ duration: 900, delay: 1000, x: -1200, easing: quintOut}} out:fly={{ duration: 900, delay: 0, x: 1200, easing: backIn}}>
+	<div class="portrait">
+		<img src="/images/ridsection1.png" alt="rid"/>
+	</div>
 	<div class="box hid">
-		<div class="portrait back"/>
 		{#if panels7 && panels7.length > 0}
 			{#each panels7 as item}
 				<h2>{item.highlightitem}</h2>
@@ -829,8 +831,8 @@
 				</div>
 			{/each}
 		{/if}
-		{#if callouts1 && callouts1.length > 0}
-			{#each callouts1 as item}
+		{#if callouts7 && callouts7.length > 0}
+			{#each callouts7 as item}
 				<div class="boxr callout back">
 					<h5>{item.highlightitem}</h5>
 					<p>{item.content}</p>
@@ -843,15 +845,14 @@
 {#if isPanel[8]}
 <div class="type tv tv8" in:fly={{ duration: 900, delay: 1000, x: -1200, easing: quintOut}} out:fly={{ duration: 900, delay: 0, x: 1200, easing: backIn}}>
 	<div class="box hid">
-		<div class="portrait back"/>
 		{#if panels8 && panels8.length > 0}
 			{#each panels8 as item}
-				<h3>{item.highlightitem}</h3>
+				<h2>{item.highlightitem}</h2>
 				<h6>{item.content}</h6>
 			{/each}
 		{/if}
 	</div>
-	<div class="gridof4">
+	<div class="gridof6">
 		{#if bullets8 && bullets8.length > 0}
 			{#each bullets8 as item}
 				<div class="box">
@@ -860,8 +861,8 @@
 				</div>
 			{/each}
 		{/if}
-		{#if callouts1 && callouts1.length > 0}
-			{#each callouts1 as item}
+		{#if callouts8 && callouts8.length > 0}
+			{#each callouts8 as item}
 				<div class="boxr callout back">
 					<h5>{item.highlightitem}</h5>
 					<p>{item.content}</p>
@@ -870,6 +871,15 @@
 		{/if}
 	</div>
 </div>
+{/if}
+{#if isPanel[9]}
+	<div class="type tv9" in:fly={{ duration: 900, delay: 1000, x: -1200, easing: quintOut}} out:fly={{ duration: 900, delay: 0, x: 1200, easing: backIn}}>
+		<div class="box hid">
+		<h2>Headwinds to Tailwinds</h2>
+			<h6>a summary, and the road ahead</h6>
+		</div>	
+		
+	</div>
 {/if}
 </div>
 
@@ -952,6 +962,23 @@
 		object-fit: cover
 		width: 400px
 		height: 400px
+
+.tv7
+	.bullet, .callout
+		background: white
+		height: 100%
+		z-index: 1
+		padding: 24px
+	.portrait
+		right: 0
+		z-index: 0
+		img
+			object-fit: cover
+			width: 720px
+			height: 100%
+	.gridof6
+		grid-template-columns: 1fr 1fr 1fr
+		width: 70%
 
 .tv5
 	background: transparent
@@ -1058,7 +1085,7 @@
 .svgbox
 	z-index: 0
 
-.tv1, .tv2, .tv4, .tv5, .tv6, .tv7
+.tv1, .tv2, .tv4, .tv5, .tv6, .tv7, .tv8, .tv9
 	z-index: 2
 	background: white
 	padding-right: 32px
