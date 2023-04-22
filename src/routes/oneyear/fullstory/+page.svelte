@@ -5,8 +5,6 @@
 	import { quintOut, backIn } from 'svelte/easing'
 	import { inview } from 'svelte-inview';
 	import AllBrands from '$lib/components/AllBrands.svelte'
-	import { gsap } from 'gsap';
-	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import Parallax from '$lib/components/ParallaxImage.svelte';
 	import { StoryBoardPanel, StoryBoardBullet, StoryBoardCallout, brCalendar3 } from '$lib/utils/story';
 	let svgDraw = false;
@@ -52,7 +50,7 @@
 	let isPanel = Array(10).fill(false)
 	isPanel[1] = true
 	let whichPanel:number = 1
-
+	let motifY:number = 0
 
 	function handleMouseMotif(event: MouseEvent) {
 		axisX = event.clientX;
@@ -99,61 +97,15 @@
 		moveX = 0;
 	}
 
-	function initStickySVG(svg: SVGSVGElement, x1textInView: boolean) {
-		if (typeof window !== 'undefined') {
-			gsap.registerPlugin(ScrollTrigger);
-
-			gsap.set(svg.querySelectorAll('path'), { opacity: 0 });
-
-			const timeline = gsap.timeline({
-				paused: true,
-				scrollTrigger: {
-					trigger: '.tv11',
-					scrub: 1,
-					start: 'top top',
-					end: () => '+=' + window.innerHeight * 4
-				}
-			});
-
-			timeline.to(svg.querySelectorAll('path'), {
-				opacity: 1,
-				stagger: 20,
-				duration: 10
-			});
-
-			const svgScrollTrigger = ScrollTrigger.create({
-				trigger: '.svgbox',
-				start: 'center center',
-				endTrigger: 'html',
-				end: 'bottom center',
-				pin: svg,
-				pinSpacing: false
-			});
-
-			function updateStickyStatus() {
-				if (timeline && timeline.isActive()) {
-					timeline.pause();
-				}
-
-				if (!stop && timeline) {
-					timeline.play();
-				}
-
-				const svgScrollTrigger = gsap.ScrollTrigger.getById('.svgbox');
-				if (svgScrollTrigger) {
-					svgScrollTrigger.enable(!stop);
-				}
-			}
-		}
+	$: if (motifView === true ){
+		motifY = sY
+	} else {
+	 motifY = 0
 	}
 
-	let svg: SVGSVGElement;
 
 	onMount(async () => {
-		gsap.registerPlugin(ScrollTrigger);
 		window.addEventListener('mousemove', handleMouseMotif);
-		svg = document.querySelector('.svgbox');
-		initStickySVG(svg, motifView);
 		panels1 = await StoryBoardPanel(1);
 		bullets1 = await StoryBoardBullet(1);
 		callouts1 = await StoryBoardCallout(1);
@@ -200,6 +152,7 @@
 </div>
 <div class="type tv tv10 back" style="background-image: url('/images/storywall1.png')" />
 <div class="tv tv11">
+	<p style="color: white">{motifView} {motifY}</p>
 	<div class="svgbox">
 		<svg
 			id="motifsvg"
@@ -215,17 +168,19 @@
 			on:inview_leave={(event) => {
 				motifView = false;
 			}}
-			style="transform: rotate({sY / 4}deg)"
+			style="transform: rotate({motifY/3}deg)"
 		>
 			<g id="segmente black" clip-path="url(#clip0_1_681)">
 				<g id="edges">
 					<path
 						d="M188.248 20.3314L183.981 16.0648L200.047 0L216.022 16.0705L211.744 20.3257L200.035 8.54576L188.248 20.3314Z"
 						fill="#FE4A49"
+						style="opacity: 1-{motifY/2500}"
 					/>
 					<path
 						d="M199.951 400L183.975 383.929L188.253 379.675L199.963 391.454L211.749 379.669L216.015 383.935L199.951 400Z"
 						fill="#FE4A49"
+						style="opacity: 1-{motifY/2500}"
 					/>
 					<path
 						d="M341.386 81.2727L335.352 81.2555L335.402 64.6467H318.733V58.6121H341.454L341.386 81.2727Z"
@@ -508,41 +463,49 @@
 						id="mid 1"
 						d="M273.409 123.63C273.409 103.802 265.547 85.809 252.77 72.5996C234.395 72.9057 216.114 80.0693 202.093 94.0904L202.053 94.1302C215.596 108.747 222.367 127.372 222.367 145.998C235.538 132.828 253.497 124.446 273.409 123.687L273.409 123.63Z"
 						fill="#FE4A49"
+						style="opacity: 1-{motifY/2500}"
 					/>
 					<path
 						id="mid 2"
 						d="M276.313 126.591C275.554 146.503 267.172 164.461 254.001 177.632C272.627 177.632 291.253 184.403 305.869 197.947L305.909 197.907C319.93 183.886 327.094 165.604 327.4 147.229C314.19 134.453 296.198 126.591 276.369 126.591L276.313 126.591Z"
 						fill="#FE4A49"
+						style="opacity: 1-{motifY/2500}"
 					/>
 					<path
 						id="mid 3"
 						d="M254.001 222.368C267.172 235.539 275.554 253.498 276.313 273.409H276.369C296.198 273.409 314.19 265.548 327.4 252.771C327.094 234.396 319.93 216.115 305.909 202.094L305.869 202.054C291.253 215.597 272.627 222.368 254.001 222.368Z"
 						fill="#FE4A49"
+						style="opacity: 1-{motifY/2500}"
 					/>
 					<path
 						id="mid 4"
 						d="M273.409 276.369L273.409 276.313C253.497 275.554 235.538 267.171 222.368 254.001C222.368 272.627 215.596 291.253 202.053 305.869L202.093 305.909C216.114 319.93 234.395 327.094 252.77 327.4C265.547 314.19 273.409 296.198 273.409 276.369Z"
 						fill="#FE4A49"
+						style="opacity: 1-{motifY/2500}"
 					/>
 					<path
 						id="mid 5"
 						d="M126.591 276.369C126.591 296.198 134.453 314.19 147.229 327.4C165.604 327.094 183.886 319.93 197.907 305.909L197.947 305.869C184.404 291.253 177.632 272.627 177.632 254.001C164.461 267.171 146.503 275.554 126.591 276.313L126.591 276.369Z"
 						fill="#FE4A49"
+						style="opacity: 1-{motifY/2500}"
 					/>
 					<path
 						id="mid 6"
 						d="M123.687 273.409C124.446 253.498 132.828 235.539 145.999 222.368C127.373 222.368 108.747 215.597 94.1302 202.054L94.0904 202.094C80.0693 216.115 72.9057 234.396 72.5996 252.771C85.809 265.548 103.802 273.409 123.631 273.409H123.687Z"
 						fill="#FE4A49"
+						style="opacity: 1-{motifY/2500}"
 					/>
 					<path
 						id="mid 9"
 						d="M145.999 177.632C132.828 164.461 124.446 146.503 123.687 126.591L123.631 126.591C103.802 126.591 85.809 134.453 72.5996 147.229C72.9057 165.604 80.0693 183.886 94.0904 197.907L94.1302 197.947C108.747 184.403 127.373 177.632 145.999 177.632Z"
 						fill="#FE4A49"
+						style="opacity: 1-{motifY/2500}"
 					/>
 					<path
 						id="mid 8"
 						d="M126.591 123.63L126.591 123.687C146.503 124.446 164.461 132.828 177.632 145.998C177.632 127.372 184.404 108.747 197.947 94.1302L197.907 94.0904C183.886 80.0693 165.604 72.9057 147.229 72.5996C134.453 85.809 126.591 103.802 126.591 123.63Z"
 						fill="#FE4A49"
+						style="opacity: 1-{motifY/2500}"
 					/>
 				</g>
 				<g id="outerrings">
@@ -913,7 +876,10 @@
 <style lang="sass">
 
 
-
+#motifsvg
+	object-fit: contain
+	width: 400px
+	margin-left: 128px
 
 .mynewgrid
 	display: grid
@@ -1120,6 +1086,7 @@
 #onlylines
 	path
 		fill: white
+
 
 .tv10, .tv11, .tv12, .tv13, .tv15
 	background: #171717
