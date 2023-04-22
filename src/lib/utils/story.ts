@@ -73,3 +73,13 @@ export async function brCalendar3(){
 	if (error) throw new Error(error.message)
 	return data		
 }
+
+export async function brCalendar4(){
+	const { data, error} = await supabase
+	.from('brhatstorycalendar')
+	.select()
+	.eq('type','calendaritem')
+	.order('id')
+	if (error) throw new Error(error.message)
+	return data		
+}

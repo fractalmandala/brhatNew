@@ -9,9 +9,10 @@
 	import { inview } from 'svelte-inview';
 	import AllBrands from '$lib/components/AllBrands.svelte'
 	import Parallax from '$lib/components/ParallaxImage.svelte';
-	import { StoryBoardPanel, StoryBoardBullet, StoryBoardCallout, brCalendar3 } from '$lib/utils/story';
+	import { StoryBoardPanel, StoryBoardBullet, StoryBoardCallout, brCalendar3, brCalendar4 } from '$lib/utils/story';
 	let svgDraw = true
 	let showNot = false
+	let ownEvents:any
 	let iW:number
 	let fH:number
 	let showCalendar = false
@@ -152,6 +153,7 @@
 		bullets9 = await StoryBoardBullet(9);
 		callouts9 = await StoryBoardCallout(9);
 		events = await brCalendar3()
+		ownEvents = await brCalendar4()
 		perc = motifY / 2000
 	});
 </script>
@@ -804,7 +806,7 @@
 </div>
 {/if}
 {#if isPanel[4]}
-<div class="thebox type" in:fly={{ duration: 900, delay: 1000, x: -1200, easing: quintOut}} out:fly={{ duration: 900, delay: 0, x: 1200, easing: backIn}}>
+<div class="thebox type p4" in:fly={{ duration: 900, delay: 1000, x: -1200, easing: quintOut}} out:fly={{ duration: 900, delay: 0, x: 1200, easing: backIn}}>
   <div class="toprow">
     <div class="hid">
 		{#if panels5 && panels5.length > 0}
@@ -813,9 +815,15 @@
 			{/each}
 		{/if}
 		</div>
-    <div class="gallery"></div>
+    <div class="gallery">
+			<img src="/images/templerow.png" alt="row"/>
+		</div>
   </div>
   <div class="left">
+		<div class="detail">
+			With Ṛta in Design we launched a foray into that which arguably governs us today most of all - design.<br><br>
+			The first phase in our design process is Svataḥsiddha - the Self Initiated. 
+		</div>
     <div class="portrait">
 			<img src="/images/mand.png" alt="mand"/>
 		</div>
@@ -840,52 +848,34 @@
 				</div>
 			{/each}
 		{/if}	
+		<h6 style="padding-top: 32px">The Bṛhat Open Library is a growing tool for the self-initiated knowledge seekers.</h6> 
 	</div>
 </div>	
 {/if}
 {#if isPanel[5]}
-<div class="thebox type" in:fly={{ duration: 900, delay: 1000, x: -1200, easing: quintOut}} out:fly={{ duration: 900, delay: 0, x: 1200, easing: backIn}}>
-  <div class="toprow">
-    <div class="hid">
-		{#if panels7 && panels7.length > 0}
-			{#each panels7 as item}
-				<h2>{item.highlightitem}</h2>
-				<h6>{item.content}</h6>
-			{/each}
-		{/if}
-		</div>
-    <div class="gallery"></div>
-  </div>
-  <div class="left">
-    <div class="detail">
-		{#if bullets7 && bullets7.length > 0}
-			{#each bullets7 as item}
-				<div class="box">
-					<h5>{item.highlightitem}</h5>
-					<p>{item.content}</p>
-				</div>
-			{/each}
-		{/if}
-		</div>
-    <div class="portrait">
-			<img src="/images/ridsection1.png" alt="rid"/>
-		</div>
-  </div>
-  <div class="listing">
-		{#if callouts7 && callouts7.length > 0}
-			{#each callouts7 as item}
-				<div class="boxr callout back">
-					<h5>{item.highlightitem}</h5>
-					<p>{item.content}</p>
-				</div>
-			{/each}
-		{/if}
+<div class="thebox type xx2" in:fly={{ duration: 900, delay: 1000, x: -1200, easing: quintOut}} out:fly={{ duration: 900, delay: 0, x: 1200, easing: backIn}} data-lenis-prevent>
+	<div class="toprow">
+		<div class="hid">
+		<h2>Taking Stock - A Calendar of Output</h2>
 	</div>
+	<div class="box">
+	{#if ownEvents && ownEvents.length > 0}
+		{#each ownEvents as item}
+			<div class="box owncal">
+					<p>{item.date}</p>
+					<h6>{item.month}</h6>
+					<h5>{item.contentitem}</h5>
+			</div>
+		{/each}
+	{/if}
+	</div>
+</div>
 </div>
 {/if}
 {#if isPanel[6]}
 <div class="type tv tv6" in:fly={{ duration: 900, delay: 1000, x: -1200, easing: quintOut}} out:fly={{ duration: 900, delay: 0, x: 1200, easing: backIn}}>
 		<h2>Bṛhat as a Partner and Facilitator</h2>
+		<h6 style="margin-top: 24px; color: #fe4a49;">please scroll sideways</h6>
 	<div class="mynewgrid" data-lenis-prevent>
 		{#if events && events.length > 0}
 			{#each events as item}
@@ -900,15 +890,50 @@
 	</div>
 </div>	
 {/if}
-{#if isPanel[8]}
-<div class="type tv tv8" in:fly={{ duration: 900, delay: 1000, x: -1200, easing: quintOut}} out:fly={{ duration: 900, delay: 0, x: 1200, easing: backIn}}>
-	<div class="box hid">
-		{#if panels8 && panels8.length > 0}
-			{#each panels8 as item}
+{#if isPanel[7]}
+<div class="thebox type" in:fly={{ duration: 900, delay: 1000, x: -1200, easing: quintOut}} out:fly={{ duration: 900, delay: 0, x: 1200, easing: backIn}}>
+  <div class="toprow">
+    <div class="hid">
+		{#if panels7 && panels7.length > 0}
+			{#each panels7 as item}
 				<h2>{item.highlightitem}</h2>
 				<h6>{item.content}</h6>
 			{/each}
 		{/if}
+		</div>
+    <div class="gallery"></div>
+  </div>
+  <div class="left">
+    <div class="detail">
+
+		</div>
+    <div class="portrait">
+			<img src="/images/ridsection1.png" alt="rid"/>
+		</div>
+  </div>
+  <div class="listing">
+		{#if bullets7 && bullets7.length > 0}
+			{#each bullets7 as item}
+				<div class="box">
+					<h5>{item.highlightitem}</h5>
+				</div>
+			{/each}
+		{/if}
+		{#if callouts7 && callouts7.length > 0}
+			{#each callouts7 as item}
+				<div class="boxr callout back">
+					<h5>{item.highlightitem}</h5>
+				</div>
+			{/each}
+		{/if}
+
+	</div>
+</div>
+{/if}
+{#if isPanel[8]}
+<div class="type tv tv8" in:fly={{ duration: 900, delay: 1000, x: -1200, easing: quintOut}} out:fly={{ duration: 900, delay: 0, x: 1200, easing: backIn}}>
+	<div class="box hid">
+		<h2>New Tailwinds...</h2>
 	</div>
 	<div class="gridof6">
 		{#if bullets8 && bullets8.length > 0}
@@ -1041,6 +1066,37 @@
 
 <style lang="sass">
 
+.xx2
+	overflow-y: scroll
+	.hid
+		h2
+			position: sticky
+			top: 0
+	.box
+		overflow-y: scroll
+
+.box
+	row-gap: 32px
+	.owncal
+		row-gap: 0
+		h5
+			font-weight: bold
+		h6
+			padding-left: 16px
+			border-left: 4px solid #fe4a49
+			text-transform: uppercase
+			color: #878787
+
+.p4
+	.gallery
+		padding-top: 16px
+		padding-right: 16px
+		img
+			height: 100px
+	.portrait
+		img
+			height: 240px
+
 .xxx4
 	padding-top: 16px
 	padding-right: 16px
@@ -1113,7 +1169,6 @@
 	img
 		object-fit: contain
 		height: 128px
-		border-radius: 50%
 	img.class
 		transform: scale(0.8)
 
