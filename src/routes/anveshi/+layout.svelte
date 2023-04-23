@@ -13,3 +13,4 @@
 		<AnveshiLinks flytime={onHead}></AnveshiLinks>
 	</div>
 </Header>
+<slot></slot>

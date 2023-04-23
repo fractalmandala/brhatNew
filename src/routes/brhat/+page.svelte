@@ -675,7 +675,7 @@
 		Was the auspicious date when we launched Bṛhat with a team of six members, each at pivotal
 		transitions in their lives.
 	</p>
-	<p class="wide40">A year later we are twelve strong, and (complete)...</p>
+	<p class="wide40">A year later we are twelve strong...</p>
 	<h5 class="wide40">
 		This informal report takes you through the past twelve months as we lived them.<br />
 		We hope to give you a clear picture on the work accomplished thus far, and the roadmap we set for
@@ -1889,12 +1889,12 @@
 
 .showmess
 	padding: 24px
-	@media screen and (min-width: 1024px)
+	@media screen and (min-width: 900px)
 		display: none
 
 
 .respon
-	@media screen and (max-width: 1023px)
+	@media screen and (max-width: 899px)
 		display: none
 
 #motifsvg

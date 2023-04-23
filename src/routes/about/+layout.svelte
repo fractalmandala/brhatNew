@@ -36,7 +36,7 @@
 		</div>	
 	</div>
 </Header>
-
+<slot></slot>
 <style lang="sass">
 
 #dropper

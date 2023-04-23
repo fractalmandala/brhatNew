@@ -13,3 +13,4 @@
 		<DrashtaLinks flytime={onHead}></DrashtaLinks>
 	</div>
 </Header>
+<slot></slot>
