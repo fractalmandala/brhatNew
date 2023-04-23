@@ -1640,7 +1640,7 @@
 
 .teambox
 	row-gap: 0
-	h5, h6, p
+	h6, p
 		margin: 0
 
 .xp
@@ -1742,38 +1742,6 @@
 
 .yline.dead
 	display: none
-
-.eventsrow
-	display: flex
-	flex-direction: row
-	overflow-x: scroll
-	white-space: nowrap
-	position: absolute
-	bottom: 0
-	left: 0
-	z-index: 999
-	width: 100vw
-	margin-left: 8vw
-	padding-right: 64px
-	.box
-		min-width: 240px
-		background: white
-		row-gap: 0
-		white-space: pre-line
-		p
-			font-weight: bold
-			font-size: 14px
-		cite
-			font-style: normal
-			text-transform: uppercase
-			font-size: 12px
-			background: #fe4a49
-			color: white
-			width: max-content
-			padding: 2px
-			margin-bottom: 8px
-		h6
-			color: #878787
 
 .svgtv
 	display: flex
