@@ -1595,7 +1595,7 @@
 
 <div class="showmess">
 <p>Namaste</p><br><br>
-<p>We are delighted at your interest in following our story. The web navigation here is design for a desktop screen, and will yield poor results on the mobile. We request you to please access this page on a wider screen.<br><br>For visitors who do not have such access, we will shortly upload a plain PDF.<br><br>Dhanyavāda</p>
+<p>We are delighted at your interest in following our story. The web navigation here is design for a desktop screen, and will yield poor results on the mobile. We request you to please access this page on a wider screen.<br><br>For visitors who do not have such access, please see <a class="makered" href="https://drive.google.com/file/d/1FsiCJRZZYe6G7zGBdJ-jfrDpKeTmy7vL/view?usp=share_link" target="_blank" rel="noreferrer">this PDF.</a><br><br>Dhanyavāda</p>
 </div>
 
 <style lang="sass">

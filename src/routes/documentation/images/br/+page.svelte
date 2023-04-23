@@ -209,25 +209,6 @@
 
 <div class="locker">
 
-
-
-  <div class="bottomarrow" on:mouseenter={toggleCalendar} on:mouseleave={toggleCalendar}>
-		<svg width="172" height="121" viewBox="0 0 172 121" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: translateX({axisX}px)">
-			<path d="M7.57413 7.7396C-1.97524 17.2627 -1.97524 32.7438 7.57413 42.2669L85.9988 120.588L164.423 42.2669C169.204 37.5053 171.589 31.2543 171.589 25.0032C171.589 18.7522 169.204 12.5011 164.423 7.73959C154.874 -1.7957 139.395 -1.7957 129.845 7.7396L85.9988 51.5091L42.1524 7.7396C32.603 -1.79569 17.1235 -1.79569 7.57413 7.7396Z" fill="#FE4A49"				on:panstart={handlePanStart}
-				on:panmove={handlePanMove}
-				on:panend={handlePanEnd}
-				style="transform:
-					translate({$coords.x}px,{$coords.y}px)
-					rotate({$coords.x * 0.2}deg)"
-				/>
-		</svg>
-	</div>
-	<div class="rightarrow">
-		<svg width="120" height="172" viewBox="0 0 120 172" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: translateY({axisY}px);">
-			<path d="M112.849 7.16203C103.325 -2.38734 87.8443 -2.38734 78.3213 7.16203L0 85.5867L78.3213 164.011C83.0828 168.792 89.3338 171.176 95.5849 171.176C101.836 171.176 108.087 168.792 112.849 164.011C122.384 154.462 122.384 138.982 112.849 129.433L69.079 85.5867L112.849 41.7403C122.384 32.1909 122.384 16.7114 112.849 7.16203Z" fill="#878787"/>
-		</svg>
-	</div>
-
 <div class="thebox type" in:fly={{ duration: 900, delay: 1000, x: -1200, easing: quintOut}} out:fly={{ duration: 900, delay: 0, x: 1200, easing: backIn}}>
   <div class="toprow">
     <div class="hid">
@@ -490,7 +471,7 @@
 </div>
 
 
-<div class="plain-one type xp" data-lenis-prevent in:fly={{ duration: 900, delay: 1000, x: -1200, easing: quintOut}} out:fly={{ duration: 900, delay: 0, x: 1200, easing: backIn}}>
+<div class="plain-one type xp" in:fly={{ duration: 900, delay: 1000, x: -1200, easing: quintOut}} out:fly={{ duration: 900, delay: 0, x: 1200, easing: backIn}}>
 	<h2>
 		The Team
 	<h2>
@@ -530,7 +511,7 @@
 	object-fit: cover
 
 .xp
-	overflow-y: scroll
+	height: 100%
 	.gridof2
 		width: 90vw
 		grid-template-columns: 1fr 1fr
