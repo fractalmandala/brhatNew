@@ -2,6 +2,7 @@
 title: vivāha
 tag: sūryavanśa
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim26.webp
+snip: "This marital alliance makes sense. The Apsaras are a fierce and valiant tribe.  What’s more, they are sworn enemies to the Gandharvas. This marriage will bring us the strength of untold thousands from beyond the Himalaya."
 ---
 
 > This marital alliance makes sense.  The Apsaras are a fierce and valiant tribe.  What’s more, they are sworn enemies to the Gandharvas.  This marriage will bring us the strength of untold thousands from beyond the Himalaya.<br><cite>King Pururava Aila to his minister Virata</cite>

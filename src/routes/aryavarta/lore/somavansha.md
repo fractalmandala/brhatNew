@@ -2,6 +2,7 @@
 title: somavanśa
 tag: somavanśa
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim19.webp
+snip: "I miss him, and I know you do too.  The terms of exile do not mandate that we cannot know of his whereabouts.  Let us at least make sure he is alive and well.   Do not forget, if he were here then we would be attending his marriage."
 ---
 
 > I miss him, and I know you do too.  The terms of exile do not mandate that we cannot know of his whereabouts.  Let us at least make sure he is alive and well.   Do not forget, if he were here then we would be attending his marriage.<br><cite>Putakritu to King Vishvaratha</cite>

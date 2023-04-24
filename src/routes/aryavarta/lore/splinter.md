@@ -2,9 +2,10 @@
 title: the splinter
 tag: pañca gaṇa
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim17.webp
+snip: "The yajña deals with ritual, with the harmony of our being with its external environment.  But what of our internal environment?  What of our mind and intellect?  Must these not resonate at the right frequency, before anything else? That is where the mantra comes in."
 ---
 
-> The Veda deals with ritual, with the harmony of our being with its external environment.  But what of our internal environment?  What of our mind and intellect?  Must these not resonate at the right frequency, before anything else?<br><cite>Rajarshi Yati to his pupils</cite>
+> The yajña deals with ritual, with the harmony of our being with its external environment.  But what of our internal environment?  What of our mind and intellect?  Must these not resonate at the right frequency, before anything else? That is where the mantra comes in.<br><cite>Rajarshi Yati to his pupils</cite>
 
 “The life of Nahusha’s elder son marks a new development in Aryavarta,” said Rshi Vasishtha.  “Prior to Yati, there was always a clear distinction between the men of sword and rule, and the men of prayers and ritual.  But Yati blurred those boundaries.  Here was a man of royal descent who devoted himself to the spiritual path, earning the title of Rajarshi.  He remains the first and most glorious of that title.”
 

@@ -2,6 +2,7 @@
 title: nahuṣa
 tag: cakravartins
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim05.webp
+snip: "I subscribe to a higher loyalty, one beyond just dynastic lineages.  My devotion is to Aryavarta, and to all Aryas.  I do not differentiate between Somavanshi and others- all are fellow Aryas to me."
 ---
 
 > I subscribe to a higher loyalty, one beyond just dynastic lineages.  My devotion is to Aryavarta, and to all Aryas.  I do not differentiate between Somavanshi and others- all are fellow Aryas to me.<br><cite>King Nahusha to his sons</cite>

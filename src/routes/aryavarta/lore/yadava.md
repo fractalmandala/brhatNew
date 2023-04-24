@@ -2,6 +2,7 @@
 title: yādava
 tag: yādava
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim24.webp
+snip: "The Yadavas are Aryavarta’s tragic tribe.  Yadu was his father’s eldest son.  By right, the throne should have passed to him.  But that never came to pass.  Now they occupy a unique position in Aryavarta- most populous, but on the fringes; descended from Kings but no mighty rulers themselves. We must watch out for them, for left unchecked, they may one day come to rule over us all."
 ---
 
 > The Yadavas are Aryavarta’s tragic tribe.  Yadu was his father’s eldest son.  By right, the throne should have passed to him.  But that never came to pass.  Now they occupy a unique position in Aryavarta- most populous, but on the fringes; descended from Kings but no mighty rulers themselves. We must watch out for them, for left unchecked, they may one day come to rule over us all.<br><cite>King Pijavana Bharata to King Bhagiratha Aikshvaku</cite>

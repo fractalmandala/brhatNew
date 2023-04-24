@@ -3,6 +3,15 @@
 	import { onMount, onDestroy } from 'svelte'
 	import Parallax from '$lib/components/ParallaxImage.svelte'
 	import Animations from 'textify.js'
+	import RevealType3 from '$lib/components/RevealType3.svelte'
+	import RevealGeneric from '$lib/components/RevealGeneric.svelte'
+	import RevealType4 from '$lib/components/RevealType3.svelte'
+	import RevealGeneric2 from '$lib/components/RevealGeneric.svelte'
+	import { get } from 'svelte/store'
+	import { inview } from 'svelte-inview'
+	import { flip } from 'svelte/animate'
+	import { tweened } from 'svelte/motion'
+	import { cubicOut } from 'svelte/easing'
 
 	let panel3:HTMLElement | null
 	let panel2:HTMLElement | null
@@ -13,9 +22,9 @@
 	let ifPanel5 = false
 	let ifPanel6 = false
 	let ifPanel9 = false
-	let yPanel2 = 100
-	let yPanel3 = 100
-	let yPanel4 = 100
+	let yPanel2 = 0
+	let yPanel3 = 0
+	let yPanel4 = 0
 	let yPanel5 = 0
 	let yPanel6 = 0
 	let yPanel9 = 0
@@ -23,27 +32,25 @@
 	let options = {}
 	let sY:number
 	let oH:number
-	let iW:number
 	let stringed3:string
 	let stringed2:string
 	let breakLeft = false
 	let breakRight = false
-	let breakPoint:boolean
 
 	const updateTwoPosition = () => {
-		if (!panel2 || breakPoint === true) return
+		if (!panel2) return
 		const { top, height } = panel2.getBoundingClientRect()
 		yPanel2 = Math.max(0, (oH - top) / height * 100 )
 	}
 
 	const updateThreePosition = () => {
-		if (!panel3 || breakPoint === true) return
+		if (!panel3) return
 		const { top, height } = panel3.getBoundingClientRect()
 		yPanel3 = Math.max(0, (oH - top) / height * 100)	
 	}
 
 	const updateFourPosition = () => {
-		if (!panel4 || breakPoint === true) return
+		if (!panel4) return
 		const { top, height } = panel4.getBoundingClientRect()
 		yPanel4 = Math.max(0, (oH - top) / height * 100)
 	}
@@ -55,21 +62,15 @@
 	}
 
 	const updateSixPosition = () => {
-		if (!panel6 || breakPoint === true) return
+		if (!panel6) return
 		const { top, height } = panel6.getBoundingClientRect()
 		yPanel6 = Math.max(0, (oH - top) / height * 100)
 	}
 
 	const updateNinePosition = () => {
-		if (!panel9 || breakPoint === true) return
+		if (!panel9) return
 		const { top, height } = panel9.getBoundingClientRect()
 		yPanel9 = Math.max(0, (oH - top) / height * 100)
-	}
-
-	$: if ( iW <= 1023) {
-		breakPoint = true
-	} else {
-		breakPoint = false
 	}
 
 	$: stringed3 = yPanel3.toFixed(1)
@@ -96,11 +97,6 @@
 	}
 
 	onMount(() => {
-		if ( iW <= 1023 ) {
-			breakPoint = true
-		} else {
-			breakPoint = false
-		}
 		panel3 = document.querySelector('.panel3')
 		panel2 = document.querySelector('.panel2')
 		panel4 = document.querySelector('.panel4')
@@ -119,7 +115,7 @@
 		window.addEventListener('scroll',updateFivePosition)
 		window.addEventListener('scroll',updateSixPosition)
 		window.addEventListener('scroll',updateNinePosition)
-		const { Textify, TextifyTitle } = Animations
+		const { Textify } = Animations
 		new Textify({
 			selector: '.box h6',
 			duration: 1200,
@@ -141,6 +137,7 @@
 			threshold: 0.8,
 			once: false
 		})
+		const { TextifyTitle } = Animations
 		new TextifyTitle({
 			selector: '.box h3',
 			duration: 700,
@@ -154,12 +151,12 @@
 		})
 		new TextifyTitle({
 			selector: '.box h2',
-			duration: 500,
-			stagger: 30,
+			duration: 1200,
+			stagger: 80,
 			fade: true,
 			top: false,
 			reveal: true,
-			threshold: 0.1,
+			threshold: 0.2,
 			once: false,
 			scale: 2.5,
 			easing: "circInOut"
@@ -168,29 +165,14 @@
 
 </script>
 
-<svelte:window bind:scrollY={sY} bind:outerHeight={oH} bind:innerWidth={iW}/>
-
+<svelte:window bind:scrollY={sY} bind:outerHeight={oH}/>
 
 <div class="areabackground">
 <div class="section sec1">
 	<Parallax --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/10mandala/realitywall.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/10mandala/realitywall.webp')"></Parallax>
 </div>
-<div class="section type s101 pads">
-	<div class="box">
-		<h6>
-			To be a history in the true sense of the word, a work must be a story of the people inhabiting a country.
-		</h6>
-		<h6>
-			It must be a record of their life from age to age presented through the life and achievements of men whose exploits become the beacon lights of tradition; through efforts of the people to will themselves into organic unity.
-		</h6>
-		<h4>
-			Such a history of India is still to be written.
-		</h4>
-			<p>- Shri KM Munshi</p>
-	</div>
-</div>
 <div class="section type sec2 pads panel2">
-	<div class="box left2">
+	<div class="box">
 		<h6>
 			with a continuity of untold millennia, the passage of time visible to us in
 		</h6>
@@ -198,19 +180,19 @@
 		itihāsa
 		</h3>
 	</div>
-	<div class="box right2">
+	<div class="box">
 		<div class="parallaxbox" style="transform: translateY({-100 + yPanel2}%)">
 			<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/10mandala/itihaas.webp" alt="itihasa"/>
 		</div>
 	</div>
 </div>
 <div class="section type sec3 pads panel3">
-	<div class="box left3">
+	<div class="box">
 		<div class="parallaxbox" style="transform: translateY({-100 + yPanel3}%)">
 			<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/10mandala/bharata.webp" alt="bharata"/>
 		</div>
 	</div>
-	<div class="box right3">
+	<div class="box">
 		<h6>
 			information was processed in increasingly complex ways within the physical environment best described as
 		</h6>
@@ -220,7 +202,7 @@
 	</div>
 </div>
 <div class="section type sec4 pads panel4">
-	<div class="box left4">
+	<div class="box">
 		<h6>
 			emerged a civilizational consciousness, with multi-level coherence. It is known to us as
 		</h6>
@@ -228,10 +210,8 @@
 			dharma
 		</h3>
 	</div>
-	<div class="box right4">
-		<div class="parallaxbox" style="transform: translateY({-100 + yPanel4}%)">
-			<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/10mandala/dharma.webp" alt="dharma"/>
-		</div>
+	<div class="box parallaxbox" style="transform: translateY({-100 + yPanel4}%)">
+		<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/10mandala/dharma.webp" alt="dharma"/>
 	</div>
 </div>
 <div class="type sec5 pads panel5">
@@ -292,16 +272,6 @@
 
 <style lang="sass">
 
-.s101
-	justify-content: center
-	align-items: center
-	display: flex
-	h6
-		font-weight: 400
-		color: white
-	h4
-		color: #10C56D
-
 .onpagelinks
 	h4
 		color: white
@@ -311,7 +281,9 @@
 
 .headholder
 	overflow: hidden
-
+	
+.fixed
+	background: white
 
 .section
 	overflow: hidden
@@ -334,7 +306,7 @@
 	@media screen and (max-width: 1023px)
 		height: 50vh
 
-.sec2, .sec4
+.sec2, .sec3, .sec4
 	display: flex
 	.box
 		h3
@@ -353,49 +325,14 @@
 	@media screen and (max-width: 1023px)
 		flex-direction: column
 		padding-top: 16px
-		margin-bottom: 32px
-		.box
-			padding-top: 16px
-			padding-bottom: 16px
-			text-align: right
-			.parallaxbox
-				width: 132px
-				img
-					width: 128px
-					height: 128px
-		.right2, .right4
-			margin-top: -64px
-
-.sec3
-	display: flex
-	.box
-		h3
-			color: #10C56D
-		h6
-			color: white
-			font-weight: 400
-	@media screen and (min-width: 1024px)
-		flex-direction: row
-		align-items: center
-		column-gap: 64px
-		height: 100vh
-		.box
-			width: calc(50% - 32px)
-			overflow: hidden
-	@media screen and (max-width: 1023px)
-		flex-direction: column-reverse
-		padding-top: 16px
 		.box
 			padding-top: 16px
 			padding-bottom: 16px
 			.parallaxbox
-				width: 132px
+				width: 260px
 				img
-					width: 128px
-					height: 128px
-		.left3
-			align-items: flex-end
-			margin-top: -64px
+					width: 256px
+					height: 256px
 	
 .sec5
 	display: flex
@@ -403,9 +340,6 @@
 	align-items: center
 	justify-content: center
 	@media screen and (min-width: 1024px)
-		padding-top: 64px
-		padding-bottom: 64px
-	@media screen and (max-width: 1023px)
 		padding-top: 64px
 		padding-bottom: 64px
 
@@ -436,12 +370,6 @@
 			animation: slidingleft 1s ease forwards
 		.ballholder.box.moveLeft.moveRight
 			animation: slidingright 1.4s ease forwards
-	@media screen and (max-width: 1023px)
-		.ballholder
-			img
-				object-fit: cover
-				width: 200px
-				height: 200px
 
 .sec7
 	.textholder
@@ -459,11 +387,6 @@
 			color: #10C56D
 		h6
 			font-weight: 400
-	@media screen and (max-width: 1023px)
-		.textholder
-			width: 100%
-			margin-left: 0
-			padding-top: 32px
 
 .sec8
 	.textholder
@@ -481,28 +404,20 @@
 			color: #10C56D
 		h6
 			font-weight: 400
-	@media screen and (max-width: 1023px)
-		.textholder
-			width: 100%
-			padding-top: 64px
-	
 
 .sec9
+	min-height: 200vh
 	.box
 		justify-content: center
-		h6
-			font-weight: 400
-			color: white
-		h2
-			line-height: 1
-			color: #10D56C
+		height: 100vh
 	@media screen and (min-width: 1024px)
-		min-height: 200vh
 		.box
-			height: 100vh
-	@media screen and (max-width: 1023px)
-		padding-top: 64px
-		padding-bottom: 64px
+			h6
+				font-weight: 400
+				color: white
+			h2
+				line-height: 1
+				color: #10D56C
 		
 
 .green-gradient

@@ -2,9 +2,10 @@
 title: dāsa
 tag: cakravartins
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim20.webp
+snip: "Aryavarta has made friends of us, there will be no more war between us.  We can finally look to a better future, a world where our cities do not cower under the fear of Suryavanshi attack.  We are both Aryas, we should both look westward."
 ---
 
->Aryavarta has made friends of us, there will be no more war between us.  We can finally look to a better future, a world where our cities do not cower under the fear of Suryavanshi attack.  We are both Aryas, we should both look westward.<br><cite>Dahamitara the Zarath Ustra to his detractors</cite>
+> Aryavarta has made friends of us, there will be no more war between us.  We can finally look to a better future, a world where our cities do not cower under the fear of Suryavanshi attack.  We are both Aryas, we should both look westward.<br><cite>Dahamitara the Zarath Ustra to his detractors</cite>
 
 “We have reached a crucial stage in our itihasa,” Rshi Vasishtha explained.  “The war between Suryavansha and Yadava was the first war between Arya tribes- an internecine war.  Prior to this, we only battled Gandharvas, Rakshasas, Yakshas and the other exotic tribes.”	
 

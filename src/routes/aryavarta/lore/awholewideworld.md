@@ -2,6 +2,7 @@
 title: a whole wide world
 tag: bhārata
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim04.webp
+snip: "I promise you father, we will spread your banner to the four corners.  There will come a time when this entire land will be known by your name.  We will name it Bharatvarsha."
 ---
 
 > I promise you father, we will spread your banner to the four corners.  There will come a time when this entire land will be known by your name.  We will name it Bharatvarsha<br><cite>Sunahotra Bharata to his Father</cite>

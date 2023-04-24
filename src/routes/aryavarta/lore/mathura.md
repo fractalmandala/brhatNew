@@ -2,6 +2,7 @@
 title: mathurā
 tag: places
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim21.webp
+snip: "Mathura gives us a strategic advantage.  If we can cross the Yamuna from there, we cut the Bharata Kingdom in half.  No matter how the war goes, Mathura must be held."
 ---
 
 > Mathura gives us a strategic advantage.  If we can cross the Yamuna from there, we cut the Bharata Kingdom in half.  No matter how the war goes, Mathura must be held.<br><cite>King Kanaka to King Kuruvasa, Planning for the Battle of Ten Kings</cite>

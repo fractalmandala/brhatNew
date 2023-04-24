@@ -2,6 +2,7 @@
 title: kāśi and prayāga
 tag: the land
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim17.webp
+snip: "This land is pristine and fertile.  Blessed even, for Rshi Vasishtha has consecrated it with the greatest prayers.  There is a gentle air here, comforting and secure.  I will build a grand, luminous city here and name it after your son.  This will be my gift to your line, and may it prosper as much as Suhotra’s."
 ---
 
 > This land is pristine and fertile.  Blessed even, for Rshi Vasishtha has consecrated it with the greatest prayers.  There is a gentle air here, comforting and secure.  I will build a grand, luminous city here and name it after your son.  This will be my gift to your line, and may it prosper as much as Suhotra’s.<br><cite>Maharaja Bharata to his son Sunahotra</cite>

@@ -2,6 +2,7 @@
 title: jamaya
 tag: sūryavanśa
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim22.webp
+snip: "What we seldom realise is that all of Aryavarta is indeed one blood.  Suryavansha and Somavansha were related through Ila- sister to Ikshvaku and mother to Pururava.  Puru, Yadava, Anu, Turvasu and Druhyu come from a single Somavanshi line; and the Bharatas too have Puru blood in them."
 ---
 
 > What we seldom realise is that all of Aryavarta is indeed one blood.  Suryavansha and Somavansha were related through Ila- sister to Ikshvaku and mother to Pururava.  Puru, Yadava, Anu, Turvasu and Druhyu come from a single Somavanshi line; and the Bharatas too have Puru blood in them.<br><cite>King Bhagiratha Aikshvaku to King Pijavana Bharata</cite>

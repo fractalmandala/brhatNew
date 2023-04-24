@@ -2,6 +2,7 @@
 title: mahaṛṣi
 tag: ṛṣis
 image: https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/chapter2/5.webp
+snip: "End this now.  End this before brother takes the life of brother.  You look upon me as your uncle- I ask that you accord the same respect to my counsel.  Aryavarta can be shared.  Nay- Aryavarta must be shared.  You have the power to bring peace to this land anew."
 ---
 
 > End this now.  End this before brother takes the life of brother.  You look upon me as your uncle- I ask that you accord the same respect to my counsel.  Aryavarta can be shared.  Nay- Aryavarta must be shared.  You have the power to bring peace to this land anew.<br><cite>Maharshi Vishvamitra to Sudasa Bharata</cite>

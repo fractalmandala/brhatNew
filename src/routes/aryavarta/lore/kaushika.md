@@ -2,6 +2,7 @@
 title: Kāuśika
 tag: ancestors outside of time
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim30.webp
+snip: "Judge him not as a prince of the Bharatas, judge him as any ordinary man- and you will find that the title of Maharshi is not misplaced.  There is radiance in those eyes, much like there is in yours; and a calming, empowering air in his presence.  The Purus are not unfortunate to have him on their side, and the loss is entirely ours."
 ---
 
 > Judge him not as a prince of the Bharatas, judge him as any ordinary man- and you will find that the title of Maharshi is not misplaced.  There is radiance in those eyes, much like there is in yours; and a calming, empowering air in his presence.  The Purus are not unfortunate to have him on their side, and the loss is entirely ours.<br><cite>Putakritu Bharata to Rshi Vasishtha</cite>

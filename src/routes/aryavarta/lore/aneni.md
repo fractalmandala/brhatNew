@@ -2,6 +2,7 @@
 title: aṇeni
 tag: sūryavanśa
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim48.webp
+snip: "Since the dawn of time, men have gone to war for women, and they will continue to do so.  But the entire fabric of our past has only one story where a man brokered peace for a woman, where war came to a stop- because of her.  The truce did not last, no truce ever does."
 ---
 
 > Since the dawn of time, men have gone to war for women, and they will continue to do so.  But the entire fabric of our past has only one story where a man brokered peace for a woman, where war came to a stop- because of her.  The truce did not last, no truce ever does.<br><cite>King Bhagiratha Aikshvaku to his grandson Raghu</cite>

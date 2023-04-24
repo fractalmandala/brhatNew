@@ -26,11 +26,11 @@
 
 	onMount(() => {
 		const lenis = new Lenis({
-			duration: 0.5,
+			duration: 1.2,
 			easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
 			orientation: 'vertical',
 			gestureOrientation: 'vertical',
-			wheelMultiplier: 0.55,
+			wheelMultiplier: 0.48,
 			smoothWheel: true,
 			smoothTouch: false,
 			touchMultiplier: 0,

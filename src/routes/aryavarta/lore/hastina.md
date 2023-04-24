@@ -2,6 +2,7 @@
 title: hastina
 tag: pūra
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim42.webp
+snip: "I have always been a proud citizen of Bharatvarsha.  Our Kings are glorious and just, or so I thought.  The survivors we nurse are not soldiers, but ordinary citizens.  Bharata armies did not spare them during their attack."
 ---
 
 > I have always been a proud citizen of Bharatvarsha.  Our Kings are glorious and just, or so I thought.  The survivors we nurse are not soldiers, but ordinary citizens.  Bharata armies did not spare them during their attack.<br><cite>Maharshi Vishvamitra to King Janmejaya Kuru</cite>

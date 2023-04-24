@@ -2,6 +2,7 @@
 title: preparing sudās
 tag: bhāratas
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim38.webp
+snip: "Once, there was life and culture in the Great Deccan- but Manvantaras have passed since then.  Now, our land begins from north of the Vindhyachala and culminates at the Himalaya.  To the east, the River Ganga shows us till the limits of our country, and the Sindhu binds it from the west.  This is the great land of Aryavarta."
 ---
 
 > Once, there was life and culture in the Great Deccan- but Manvantaras have passed since then.  Now, our land begins from north of the Vindhyachala and culminates at the Himalaya.  To the east, the River Ganga shows us till the limits of our country, and the Sindhu binds it from the west.  This is the great land of Aryavarta.<br><cite>Vaivasvat Manu to his son, Ikshvaku</cite>

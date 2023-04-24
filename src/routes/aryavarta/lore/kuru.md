@@ -2,6 +2,7 @@
 title: kuru
 tag: bhāratas
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim29.webp
+snip: "You make a grave mistake, Bharata King.  At least we are from this land, our blood has been birthed and cremated here.  Who are the Kuru?  Where have they come from?  They are not Arya, and they never have been Arya.  One day your line will be gone and they will be the Pretender Kings in the name of your forefathers."
 ---
 
 > You make a grave mistake, Bharata King.  At least we are from this land, our blood has been birthed and cremated here.  Who are the Kuru?  Where have they come from?  They are not Arya, and they never have been Arya.  One day your line will be gone and they will be the Pretender Kings in the name of your forefathers.<br><cite>King Bheda Puru to King Sudasa Bharata</cite>

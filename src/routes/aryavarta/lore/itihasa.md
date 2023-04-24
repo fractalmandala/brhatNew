@@ -1,6 +1,7 @@
 ---
 title: itihāsa
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim06.webp
+snip: "What though the floods spread widely, Indra made them shallow and easy for Sudās to traverse. He, worthy of our praises, caused Simyu, foe of our hymn, to curse the rivers' fury. Eager for spoil was Turvaśa Purodas, fain to win wealth, like fishes urged by hunger. The Bhṛgus and the Druhyus quickly listened: friend rescued friend amid the two distant peoples."
 ---
 
 > What though the floods spread widely, Indra made them shallow and easy for Sudās to traverse. He, worthy of our praises, caused Simyu, foe of our hymn, to curse the rivers' fury. Eager for spoil was Turvaśa Purodas, fain to win wealth, like fishes urged by hunger. The Bhṛgus and the Druhyus quickly listened: friend rescued friend amid the two distant peoples.<br><cite>Rig Veda, Mandala 7 on the War of Ten Kings</cite>

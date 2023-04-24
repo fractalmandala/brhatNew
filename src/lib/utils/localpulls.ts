@@ -90,7 +90,7 @@ export async function latestDhitiSix(){
 	)
 	// @ts-ignore
 	allPosts.sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date))
-	return allPosts.slice(0, 6)
+	return allPosts.slice(0, 3)
 }
 
 export const allFeaturedPosts = async() => {

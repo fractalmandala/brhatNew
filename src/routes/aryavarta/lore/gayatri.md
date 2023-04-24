@@ -2,6 +2,7 @@
 title: gāyatrī
 tag: ṛṣis
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim45.webp
+snip: "I see the way you treat people, the way you hold love for everything alive.  You are like no man I have ever met, and I have met many a kind in my time.  You cannot be of any tribe, of any one place; you are a friend to this entire world."
 ---
 
 > I see the way you treat people, the way you hold love for everything alive.  You are like no man I have ever met, and I have met many a kind in my time.  You cannot be of any tribe, of any one place; you are a friend to this entire world.<br><cite>Kanaka to his friend Kaushika</cite>

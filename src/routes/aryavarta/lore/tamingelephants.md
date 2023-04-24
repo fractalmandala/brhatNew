@@ -2,6 +2,7 @@
 title: taming elephants
 tag: cakravartins
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim33.webp
+snip: "Vivasvana was the first master of this art, though some contend that Maharshi Kashyapa was its real originator.  The Vaivasvat Manu refined it and became a master himself, but in Ikshvaku, perfect expertise first developed.  He is a Grand Master of combat, the First and most Glorious."
 ---
 
 > Vivasvana was the first master of this art, though some contend that Maharshi Kashyapa was its real originator.  The Vaivasvat Manu refined it and became a master himself, but in Ikshvaku, perfect expertise first developed.  He is a Grand Master of combat, the First and most Glorious.<br><cite>Mukhyapati Yuyudha to Sudasa Bharata</cite>

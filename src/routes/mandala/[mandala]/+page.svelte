@@ -1,27 +1,28 @@
 <script lang="ts">
 
-	export let data	
-	import Header from '$lib/components/SubHeader.svelte'
+	import { onMount, afterUpdate } from 'svelte'
 	import PageProgress from '$lib/components/PageProgress.svelte'
-	import { fly } from 'svelte/transition'
-	import { onMount } from 'svelte'
+	import tippy, {animateFill} from 'tippy.js'
+	import 'tippy.js/dist/tippy.css'
+	import 'tippy.js/animations/shift-away.css'
+	import Animations from 'textify.js'
 	import { mandalaAll } from '$lib/utils/localpulls'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
 
 	let fractals:any
 	let wide:number
 	let mobileView:boolean = false
-	let sidebar = false
-	let dropdown = false
+	let lightMode = false
+	let fake = false
+	let pageImage:any
+	let pageTitle:any
 
-	function toggleDropdown(){
-		dropdown = !dropdown
+	function toggleLightMode(){
+		lightMode = !lightMode
 	}
-
-	function closeDropDown(){
-		if ( dropdown === true ) {
-			dropdown = false
-		}
+	
+	function fauxfake(){
+		fake = !fake
 	}
 
 	$: if ( wide <= 1023 ) {
@@ -30,44 +31,64 @@
 		mobileView = false
 	}
 
+	export let data	
+
+	$: pageImage = data.image
+	$: pageTitle = data.title
+
 	onMount(async() => {
 		fractals = await mandalaAll()
+		const { TextifyTitle } = Animations
+		new TextifyTitle({
+			selector: '.a-title h2',
+			duration: 500,
+			stagger: 30,
+			fade: true,
+			top: false,
+			reveal: true,
+			threshold: 0.1,
+			once: false,
+			scale: 2.5,
+			easing: "circInOut"
+		})
+		tippy ('#single', {
+			content: 'Toggle Dark/Light Mode.',
+			duration: 300,
+			arrow: true,
+			animateFill: true,
+			plugins: [animateFill],
+			placement: 'right',
+			theme: 'light'
+		})
+	})
+
+
+	afterUpdate(() => {
+		pageImage = data.image
+		pageTitle = data.title
 	})
 </script>
 
 
 <svelte:window bind:innerWidth={wide}/>
 
-<Header sidebar={sidebar}>
-	<div slot="local" class="boxmidrow">
-		<a href="/mandala/aphorisms">Caturasūtra</a>
-		<a href="/mandala/ancestors">Ancestors Outside of Time</a>
-		<a href="/mandala/synrec">Synaptic Reconnection</a>
-		<a href="/mandala/indiancivcon">Consciousness</a>
-		<div class="box" id="dropper" on:click={toggleDropdown} on:keydown={toggleDropdown}><p class="dropperp">Core Essays</p>
-			{#if dropdown}
-				<a id="link11" href="/mandala/macrohistoriccase" in:fly={{ duration: 100, delay: 50, x: 0, y: 32}} out:fly={{ duration: 100, delay: 0, x: 0, y: 32}}>Macrohistoric Case</a>
-				<a id="link22" href="/mandala/historyvsitihasa" in:fly={{ duration: 100, delay: 100, x: 0, y: 32}} out:fly={{ duration: 100, delay: 0, x: 0, y: 32}}>History vs. Itihāsa</a>
-				<a id="link33" href="/mandala/rathaasbija" in:fly={{ duration: 100, delay: 150, x: 0, y: 32}} out:fly={{ duration: 100, delay: 0, x: 0, y: 32}}>Ratha as a Bīja</a>
-				<a id="link44" href="/mandala/ramasjourney" in:fly={{ duration: 100, delay: 200, x: 0, y: 32}} out:fly={{ duration: 100, delay: 0, x: 0, y: 32}}>Avatāra in You</a>
-			{/if}
-		</div>
-	</div>
-</Header>
-<PageProgress --thispagebackground="#10C56C"/>
+<PageProgress --thispagebackground="#10C56D" --thispageheight="2px"/>
 <div class="type mandalatext heightmeasure">
 	<div class="x0">
-		<ParallaxImage --parallax="url('{data.image}')"></ParallaxImage>
+		<ParallaxImage --parallax="url('{pageImage}')" --parallaxresp="url('{pageImage}')"></ParallaxImage>
 	</div>
 	<div class="plain-one x1 pads">
 		<div class="a-title">
 			<h2>
-			{data.title}
+			{pageTitle}
 			</h2>
+			<div class="toggler" class:togglered={lightMode} id="single" on:click={toggleLightMode} on:keydown={fauxfake}>
+				<div class="togglerball" class:toggled={lightMode}></div>
+			</div>
 		</div>
 	</div>
 	<div class="x2">
-		<div class="mainbar">
+		<div class="mainbar" class:light={lightMode} class:dark={!lightMode}>
 			<svelte:component this={data.content}/>
 		</div>
 	</div>
@@ -75,28 +96,57 @@
 
 <style lang="sass">
 
-#dropper
-	position: relative
-	a
-		position: absolute
-		text-align: right
-		min-width: 200px
-		right: 0
-		background: var(--beau)
-		padding: 4px 8px
+.toggler
+	height: 32px
+	width: 80px
+	border-radius: 16px
+	background: #373737
+	padding-top: 4px
+	padding-left: 4px
+	margin-top: 24px
+	cursor: pointer
+	.togglerball
+		width: 24px
+		height: 24px
+		border-radius: 12px
+		transition: background 0.09s ease, transform 0.2s ease
+	&:hover
+		.togglerball
+			background: #10D56C
+	@media screen and (min-width: 1024px)
+		.togglerball.toggled
+			transform: translateX(48px)	
 		&:hover
-			background: #fe4a49
-	#link11
-		top: 32px
-	#link22
-		top: 56px
-	#link33
-		top: 80px
-	#link44
-		top: 104px
-	
-	
+			.togglerball.toggled
+				background: white
+	@media screen and (max-width: 1023px)
+		height: 24px
+		width: 64px
+		padding-top: 2px
+		padding-left: 2px
+		.togglerball
+			width: 20px
+			height: 20px
+		&:hover
+			.togglerball
+				background: #10D56C
+			.togglerball.toggled
+				background: white
+		.togglerball.toggled
+			transform: translateX(38px)
 
+.togglerball
+	background: white
+
+.togglerball.toggled
+	background: white
+
+.togglered
+	@media screen and (min-width: 1024px)
+		background: #10D56C
+		
+
+	
 .mandalatext
 	background: #171717
 
@@ -110,8 +160,8 @@
 	padding-top: 64px
 	padding-bottom: 64px
 	h2
-		color: #10D56C
-		text-align: center
+		color: #474747
+		text-align: left
 
 .x2
 	display: grid
@@ -119,12 +169,15 @@
 	grid-template-rows: auto
 	.mainbar
 		grid-area: mainbar
-		background: white
 		border-radius: 4px
+	.mainbar.light
+		background: white
+	.mainbar.dark
+		background: #171717
 	@media screen and (min-width: 1024px)
 		grid-template-columns: 1fr
 		grid-template-areas: "mainbar"
-		padding: 64px 20vw 64px 20vw
+		padding: 64px 32vw 64px 6vw
 		.mainbar
 			padding: 64px
 			border: 1px solid #272727

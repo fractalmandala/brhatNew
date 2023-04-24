@@ -2,6 +2,7 @@
 title: bheda and simyu
 tag: pūrus
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim47.webp
+snip: "Culture and ritual are indicators to how evolved a tribe is.  Where we once prayed to Devas, we now pray to the Core Divinities.  The Suryavansha is further ahead- heralding the coming of a Divine Incarnation in its own line.  And the Bharatas- still worshipping Indra and Agni, holding the Veda dear to their chest.  That is how evolved they are!"
 ---
 
 > Culture and ritual are indicators to how evolved a tribe is.  Where we once prayed to Devas, we now pray to the Core Divinities.  The Suryavansha is further ahead- heralding the coming of a Divine Incarnation in its own line.  And the Bharatas- still worshipping Indra and Agni, holding the Veda dear to their chest.  That is how evolved they are!”<br><cite>King Bhuvamanyu Puru to his sons Bheda and Shimyu</cite>

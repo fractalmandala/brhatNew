@@ -2,9 +2,10 @@
 title: pitra and putra
 tag: bhāratas
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim14.webp
+snip: "Avisari, Rajavasa, Vinasana and Pratisthana- these were the great cities of ancient Aryavarta.  Not even Sivobheda or Videha ever matched their glory.  But the grandest of old Aryavarta cities were eclipsed by the Bharata capitals- Kashi and Prayaga.  Their wealth, power, and stability forever changed Aryavarta."
 ---
 
->Avisari, Rajavasa, Vinasana and Pratisthana- these were the great cities of ancient Aryavarta.  Not even Sivobheda or Videha ever matched their glory.  But the grandest of old Aryavarta cities were eclipsed by the Bharata capitals- Kashi and Prayaga.  Their wealth, power, and stability forever changed Aryavarta.<br><cite>From The Collective Wisdom of the Janakas, discovered by Bharata scouts after the War of Ten Kings</cite>
+> Avisari, Rajavasa, Vinasana and Pratisthana- these were the great cities of ancient Aryavarta.  Not even Sivobheda or Videha ever matched their glory.  But the grandest of old Aryavarta cities were eclipsed by the Bharata capitals- Kashi and Prayaga.  Their wealth, power, and stability forever changed Aryavarta.<br><cite>From The Collective Wisdom of the Janakas, discovered by Bharata scouts after the War of Ten Kings</cite>
 
 Prayaga was in grand celebration.  King Pijavana had returned victorious from his campaign against the Yadavas, Mathura and Ekachakra belonging to the Bharatas now.  Sudasa joined the festivities with as much elation as anyone else, but he did not truly feel joy within himself.  Hundreds of Bharata soldiers had lost their lives in the campaign, what right did he have to sing and dance while their families grieved in their homes?
 

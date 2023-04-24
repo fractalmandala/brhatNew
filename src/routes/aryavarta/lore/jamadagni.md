@@ -1,10 +1,11 @@
 ---
 title: jamadagni ānava
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim32.webp
+snip: "The Veda captures only a glimpse of our culture- much like the play of light that reveals silhouettes and shadows, but not the real thing.  People in the future may well look at our Veda and see us as nothing more than Deva-worshipping, cattle-stealing nomads. Our knowledge will be decipherable only in the context of our history."
 ---
 
 
-> “The Veda is not perfect, it captures only a glimpse of our culture- much like the play of light that reveals silhouettes and shadows, but not the real thing.  People in the future may well look at our Veda and see us as nothing more than Deva-worshipping, cattle-stealing nomads.  The Veda must be supplemented.  Our knowledge will be decipherable only in the context of our history.”
+> “The Veda captures only a glimpse of our culture- much like the play of light that reveals silhouettes and shadows, but not the real thing.  People in the future may well look at our Veda and see us as nothing more than Deva-worshipping, cattle-stealing nomads. Our knowledge will be decipherable only in the context of our history.”
 <cite>Rshi Markandeya to Maharshi Jamadagni</cite>
 
 Markandeya blew lazily on the flute, making no attempt to produce anything of melody.  The flute emitted broken, hoarse sounds while he continued, oblivious to the annoyed look on his uncle’s face.

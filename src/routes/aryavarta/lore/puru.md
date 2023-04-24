@@ -2,9 +2,10 @@
 title: pūru
 tag: pūrus
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim11.webp
+snip: "Look at the sky.  What shape is the sun? It is round, father. And at night, in what shape does the moon shine?<br>Spherical, like the sun.<br>And what is the shape of the shadow this earth casts during a lunar eclipse?<br>Spherical again, father. hen how is our earth shaped, son?"
 ---
 
->Look at the sky.  What shape is the sun?<br>It is round, father.<br>And at night, in what shape does the moon shine?<br>Spherical, like the sun.<br>And what is the shape of the shadow this earth casts during a lunar eclipse?<br>Spherical again, father.<br>Then how is our earth shaped, son?<br><cite>Dialogues between Rajarshi Kanva and his son Medhatithi</cite> 
+> Look at the sky.  What shape is the sun?<br>It is round, father.<br>And at night, in what shape does the moon shine?<br>Spherical, like the sun.<br>And what is the shape of the shadow this earth casts during a lunar eclipse?<br>Spherical again, father.<br>Then how is our earth shaped, son?<br><cite>Dialogues between Rajarshi Kanva and his son Medhatithi</cite> 
 
 Young Prince Kaushika was in a fine mood.  It had rained heavily a day before, and today was cool and pleasant.  The morning’s sun had dried the mud, and chased away the many insects that come with rain and humidity.  It was shining bright and was a great day to be out on a hunt.  
 

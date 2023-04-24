@@ -2,6 +2,7 @@
 title: rākṣasa
 tag: cakravartins
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim08.webp
+snip: "I reiterate that ancient division, and cast you forever beyond the Sindhu.  You are Anarya from here on- ignoble to our eyes.  Dasa, Druhyu, Yadava, Puru- all are the same to me.  We are Arya and you are not.  Bharatvarsha is Aryavarta and Aryavarta is Bharatvarsha."
 ---
 
 > I reiterate that ancient division, and cast you forever beyond the Sindhu.  You are Anarya from here on- ignoble to our eyes.  Dasa, Druhyu, Yadava, Puru- all are the same to me.  We are Arya and you are not.  Bharatvarsha is Aryavarta and Aryavarta is Bharatvarsha<br><cite>Sudasa Bharata to Shimyu Puru</cite>

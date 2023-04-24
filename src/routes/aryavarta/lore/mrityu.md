@@ -2,9 +2,10 @@
 title: mṛtyu
 tag: cakravartins
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim34.webp
+snip: "The rebellion of his brothers hardened Ikshvaku, turning a humble, kind King into a harsh, cold ruler. And nowhere did his new manifestation fall as sharply as on his second son Nimi."
 ---
 
-> The rebellion of his brothers hardened Ikshvaku, turning a humble, kind King into a harsh, cold ruler.  And nowhere did his new manifestation fall as sharply as on his second son Nimi.<br><cite>Rshi Vasishtha to Sudasa Bharata</cite>
+> The rebellion of his brothers hardened Ikshvaku, turning a humble, kind King into a harsh, cold ruler. And nowhere did his new manifestation fall as sharply as on his second son Nimi.<br><cite>Rshi Vasishtha to Sudasa Bharata</cite>
 
 “Ikshvaku returned to Avisari and found his city besieged.  His army had to plough their way into Avisari by slaying fellow Suryavanshi soldiers.  In the end, Ikshvaku himself killed members of the royal guard to reach his brothers in Avisari’s main halls.”
 
