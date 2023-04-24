@@ -18,6 +18,8 @@
 	let isInvisible = false
 	let mouseY:number
 	let latestScrollY:number
+	let iW:number
+	let breakPoint:boolean
 	let fake = false
 
 	function fauxfake(){
@@ -49,6 +51,12 @@
 		}
 	}
 
+	$: if ( iW <= 1023) {
+		breakPoint = true
+	} else {
+		breakPoint = false
+	}
+
 
 	onMount(() => {
 		const handleMouse = (event: {clientY: number;}) => {
@@ -66,14 +74,14 @@
 </script>
 
 
-<svelte:window bind:scrollY={y} bind:innerHeight={height}/>
+<svelte:window bind:scrollY={y} bind:innerHeight={height} bind:innerWidth={iW}/>
 
 <div class="appheader" class:onsidebar={sidebar} class:hiddenHeader={isInvisible}>
 	<a class="applogo" href="/">
 		<div class="logomotif">
 			<svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<g id="motif">
-				<g id="backcircle">
+				<g id="backcircle" style="transform: rotate({y/4}deg)">
 					<path d="M22.5897 2.46321L22.0777 1.95121L24.0056 0.0234375L25.9226 1.9519L25.4092 2.46252L24.0043 1.04893L22.5897 2.46321Z" fill="#FE4A49"/>
 					<path d="M23.9941 48.0234L22.077 46.095L22.5904 45.5845L23.9956 46.9979L25.4099 45.5837L25.9218 46.0957L23.9941 48.0234Z" fill="#FE4A49"/>
 					<path d="M40.9664 9.77616L40.2422 9.77409L40.2482 7.78104H38.248V7.05689H40.9745L40.9664 9.77616Z" fill="#FE4A49"/>
@@ -107,7 +115,7 @@
 					<path d="M40.8655 17.4404C41.0531 17.4404 41.2052 17.2883 41.2052 17.1007C41.2052 16.9131 41.0531 16.761 40.8655 16.761C40.6779 16.761 40.5258 16.9131 40.5258 17.1007C40.5258 17.2883 40.6779 17.4404 40.8655 17.4404Z" fill="white"/>
 					<path d="M7.26863 31.1872C7.45622 31.1872 7.6083 31.0352 7.6083 30.8476C7.6083 30.66 7.45622 30.5079 7.26863 30.5079C7.08103 30.5079 6.92895 30.66 6.92895 30.8476C6.92895 31.0352 7.08103 31.1872 7.26863 31.1872Z" fill="white"/>
 				</g>
-				<g id="frontcircle">
+				<g id="frontcircle" style="transform: rotate({-y/5}deg)">
 					<path d="M15.2223 14.8918C15.2223 14.894 15.2223 14.8963 15.2223 14.8985C17.6033 14.9892 19.7507 15.9916 21.3256 17.5665C21.3256 15.3392 22.1354 13.112 23.7548 11.3642C23.7532 11.3626 23.7516 11.361 23.75 11.3594C22.0734 9.68285 19.8874 8.82624 17.6902 8.78964C16.1624 10.3692 15.2223 12.5207 15.2223 14.8918Z" fill="#FE4A49"/>
 					<path d="M21.3408 18.094C19.8118 16.426 17.6466 15.3509 15.2296 15.253C15.3274 17.67 16.4026 19.8353 18.0705 21.3642C20.065 21.4789 22.0291 22.2447 23.617 23.6616C23.6244 23.6619 23.6317 23.6622 23.6391 23.6625C23.639 23.6607 23.6389 23.6589 23.6389 23.6571C23.6386 23.6515 23.6384 23.646 23.6382 23.6404C22.2213 22.0525 21.4555 20.0885 21.3408 18.094Z" fill="#FE4A49"/>
 					<path d="M14.8683 14.8918C14.8683 12.5487 15.7508 10.4117 17.2015 8.79502C15.0701 8.87751 12.9631 9.73232 11.336 11.3594C9.70888 12.9866 8.85407 15.0936 8.77159 17.2249C10.3883 15.7742 12.5252 14.8918 14.8683 14.8918Z" fill="#FE4A49"/>
@@ -171,9 +179,11 @@
 	<div class="midrow">
 		<slot name="local"></slot>
 	</div>
+	{#if !breakPoint}
 	<div class="search">
 		<Search/>
 	</div>
+	{/if}
 	<div class="menuicon" on:click={toggleSidebar} on:keydown={handleKeyDownEvent}>
 		<IconMenu expanded={sidebar}/>
 	</div>
@@ -197,7 +207,7 @@
 		</div>
 		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
-				<h5><a href="/anveshi">Bṛhat Anveṡī</a></h5>
+				<h5><a href="/anveshi" data-sveltekit-reload>Bṛhat Anveṡī</a></h5>
 				<AnveshiLinks flytime={sidebar}/>
 			{/if}
 		</div>
@@ -282,6 +292,7 @@
 	@media screen and (max-width: 899px)
 		width: 100vw
 		z-index: 899
+		padding-top: 88px
 
 .appsidebar::-webkit-scrollbar
 	width: 2px
@@ -303,7 +314,7 @@
 	grid-auto-flow: row
 	background: var(--beau)
 	position: fixed
-	z-index: 999
+	z-index: 10000
 	width: 100vw
 	top: 0
 	transition: 0.5s ease
@@ -316,7 +327,7 @@
 		align-items: center
 		padding: 0 32px
 		.midrow
-			gap: 16px
+			gap: 24px
 	@media screen and (max-width: 899px)
 		grid-template-columns: 160px 1fr 40px
 		grid-template-rows: 1fr
@@ -345,6 +356,9 @@
 			height: 48px
 		width: 160px
 
+#backcircle, #frontcircle
+	transform-origin: center center
+
 .midrow
 	grid-area: midrow
 	display: flex
@@ -352,7 +366,7 @@
 		display: row
 		height: 100%
 		align-items: center
-		justify-content: flex-end
+		justify-content: flex-start
 	@media screen and (max-width: 899px)
 		display: none
 

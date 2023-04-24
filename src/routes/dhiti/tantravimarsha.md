@@ -1,5 +1,5 @@
 ---
-title: Tantra Vimaśa
+title: Tantra Vimarśa
 author: Giriratna Mishra
 category: Svayambodha
 tags: tradition

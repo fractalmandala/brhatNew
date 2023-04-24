@@ -337,7 +337,7 @@
 					{#each videos as item, i}
 						<div class="card-video">
 							<iframe class="lazy video-iframe" width=100% height=100% loading="lazy" src="https://www.youtube.com/embed/{item.videoid}" title={item.name}></iframe>
-							<p>{item.name}</p>						
+							<small>{item.name}</small>
 						</div>
 					{/each}
 				{/if}

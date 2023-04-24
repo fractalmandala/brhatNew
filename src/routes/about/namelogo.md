@@ -14,7 +14,7 @@ Another dhātu, √man (√मन्), denotes considering, knowing and thinking
 
 How will we design the self-perpetuating civilizational moment? By being accelerators, manifestors, enablers- grist to the yearning and intent of a civilization. For storytellers, policy formulators, educators, heritage and ecology preservationists, artists, and more. Let us come together, grow, shine and pour forth. To swell the civilizational mind. A bṛhat mānasa, of people, nation, species and planet.
 
-<img class="bloomer" src="/images/corpimages/infinitelyblooming.gif" alt="infinitely blooming bṛhat" />
+<img class="bloomer" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/infinitelyblooming.gif" alt="infinitely blooming bṛhat" />
 
 Modelled upon a fractal, rounded as a maṇḍala – our logo represents a bṛhat cetanā of people nation, species and planet. Bṛhat brims, it is full of expansive charge.
 
@@ -24,13 +24,13 @@ At the core, with one half of it capable of representing a lotus, is Culture– 
 
 And what of the future? We must plant seeds that yield shade when we are no longer here. As we draw from a past and manifest in the present, we must also form the future. We must develop forward perpetuating cultural cognition – Leadership.
 
-<img class="segments mb-2" src="/images/corpimages/allelems.png" alt="all elements of bṛhat logo" />
+<img class="segments mb-2" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/allelems.webp" alt="all elements of bṛhat logo" />
 
 And it all comes together with one final element- ṛ- the diacritics way to represent ऋ, powers everything– as √dhṛ it opens to dharma, as √bṛh expands brahman, as √kṛ becomes karma, as √bhṛ gives Bhārata. When essential flow is yoked, yukta, we get ṛta. Through ṛ, form takes shape, it is the fuel of bṛh.
 
 Thus is our logo.
 
-<img class="thelogo" src="/images/brhatlogos/horizontalblack.png" alt="Bṛhat's full logo" />
+<img class="thelogo" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/02brhatlogos/horizontalblack.png" alt="Bṛhat's full logo" />
 
 <style>
 

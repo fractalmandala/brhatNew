@@ -1,29 +1,13 @@
 <script lang="ts">
-	
- 	import { page } from '$app/stores';
-	import { onMount } from 'svelte'
-	import Header from '$lib/components/SubHeader.svelte'
-	import PageTrans from '$lib/reader/PageTrans.svelte'
-	import InputModal from '$lib/reader/InputModal.svelte'
-	import ModalAmarakosha from '$lib/reader/ModalAmarakosha.svelte'
-	import ModalDhatu from '$lib/reader/ModalDhatu.svelte'
-	import ModalIAST from '$lib/reader/ModalIAST.svelte'
 
 	import '$lib/styles/reader.sass'
 
 	let modalone:boolean = false
-	let dropdown = false
-	let sidebar = false
 	let modaldhatu = false
 	let modalamar = false
 	let modaliast = false
 	let dropper = false
 	let fake = false
-	let link:any
-
-	function toggleDropdown(){
-		dropdown = !dropdown
-	}
 
 	function toggleDropper(){
 		dropper = !dropper
@@ -49,11 +33,6 @@
 		fake = !fake
 	}
 
-	onMount(async() => {
-		link = $page.url
-	})
-
-
 </script>
 
 <svelte:head>
@@ -62,29 +41,5 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
 </svelte:head>
-
-<Header sidebar={sidebar}>
-	<div slot="local" class="boxmidrow">
-		<p><a href="/openlibrary/reconnect/sections/dhatus">Dhātus</a></p>
-		<p><a href="/openlibrary/reconnect/sections/amarakosha">Amarakośaḥ</a></p>
-		<p><a href="/openlibrary/reconnect/sections/dictionary">Dictionary</a></p>
-		<p><a href="/openlibrary/reconnect/sections/puranas">Purāṇas</a></p>
-		<div class="box" id="dropper" on:click={toggleDropdown} on:keydown={fauxfake}>
-			<p class="droppperp">Texts</p>
-			{#if dropdown}
-				<div class="box">
-					<a href="/openlibrary/reconnect/sections/ramayana">Rāmāyaṇa</a>
-					<a href="/openlibrary/reconnect/sections/rigveda">Ṛgveda</a>
-				</div>
-			{/if}
-		</div>
-		<a href="/openlibrary">Library Home</a>
-	</div>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</Header>
-
-
 
 <slot></slot>

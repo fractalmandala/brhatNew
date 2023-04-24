@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
 	import { scale } from 'svelte/transition'
+	import RevealH1 from '$lib/components/RevealH1.svelte'
+	import RevealCard from '$lib/components/RevealCard.svelte'
 	import { fetchDarshanas, fetchDrashtas } from '$lib/utils/supapulls'
 	let darshanas:any 
 	let drashtas:any
@@ -28,8 +30,8 @@
 </script>
 
 <div class="type">
-	<div class="container-backimage x0">
-		<div class="screen typ">
+	<div class="container-backimage back x0">
+		<div class="screen typ pads">
 			<h1>Schools of Thought</h1>
 		</div>
 	</div>
@@ -51,7 +53,7 @@
 	</div>
 	<div class="plain-one x2 pads">
 		<div class="a-title">
-			<h3>Draṣṭās</h3>
+			<RevealH1><h3>Draṣṭās</h3></RevealH1>
 		</div>
 		<div class="gridof4 by2" class:calibrated={alignGrid}>
 		{#if drashtas && drashtas.length > 0}
@@ -62,9 +64,11 @@
 						<p>{item.content}</p>
 					</div>
 				{:else}
+				<RevealCard>
 					<div class="box" on:click={() => toggleGenre(i)} on:keydown={() => toggleGenre(i)} in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 200, delay: 0}}>
 						<h6>{item.name}</h6>
 					</div>
+				</RevealCard>
 				{/if}
 			{/each}
 		{/if}
@@ -76,17 +80,22 @@
 <style lang="sass">
 
 .x0
-	height: 100vh
 	background-image: url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/06drashta/schoolsofthought.webp')
 	.screen
 		height: 100%
-		width: 100%
 		background: rgba(0,0,0,0.88)
 		display: flex
 		align-items: center
 		justify-content: center
 		h1
 			color: white
+			text-align: center
+	@media screen and (min-width: 1024px)
+		height: 100vh
+	@media screen and (max-width: 1023px)
+		height: 60vh
+		h1
+			line-height: 1.2
 
 .x1
 	align-content: center

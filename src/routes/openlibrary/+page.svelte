@@ -2,24 +2,20 @@
 
 	import { onMount } from 'svelte'
 	import { bols } from '$lib/filed/bolindex'
-	import Header from '$lib/components/SubHeader.svelte'
 	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import DropDown from '$lib/components/DropDown.svelte'
-	import IconChevron from '$lib/icons/IconChevron.svelte'
+	import DropDown2 from '$lib/components/DropDown.svelte'
 	import { BOLEssentials, BOLBodhas, BOLIKS, BOLROS, BOLOthers, AryanIssue, AryanTag } from '$lib/utils/supapulls'
 	import { crossfade, fly, scale } from 'svelte/transition'
 	import { circIn } from 'svelte/easing'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
 	import ButtonOne from '$lib/anims/ButtonOne.svelte'
-	import ButtonTwo from '$lib/anims/ButtonOne.svelte'
-	let sidebar = false
 	let dropdown = false
 	let searchHelpOn = false
 	let bolInput:any
 	let bolInputValue:any
 	let bolHiLiteIndex:any = null
 	let filteredBOLS:any = []
-	let input:HTMLInputElement
 	let essentials:string|any[]
 	let bodhas:string|any[]
 	let ikss:string|any[]
@@ -34,25 +30,11 @@
 	let tag:string = 'Core Material'
 	let fake:boolean = false
 
-	const filterBOLS = () => {
-		let storageArr:any = []
-		if (bolInputValue) {
-			bols.forEach(bol => {
-				if (bol.toLowerCase().startsWith(bolInputValue.toLowerCase())){
-					storageArr = [...storageArr, makeMatchBold(bol)]
-				}
-			})
-		}
-		filteredBOLS = storageArr
-	}
-
 	$: if ( !bolInputValue ) {
 		filteredBOLS = []
 		bolHiLiteIndex = null
 		searchHelpOn = true
 	}
-
-	$: bolHiLitedIndex = filteredBOLS[bolHiLiteIndex]
 
 	const setInputVal = (bolname:any) => {
 		bolInputValue = removeBold(bolname)
@@ -60,28 +42,21 @@
 		bolHiLiteIndex = null
 	}
 
-	const makeMatchBold = (str:any) => {
-		let matched = str.substring(0, bolInputValue.length)
-		let makeBold = `${matched}`
-		let boldedMatch = str.replace(matched,makeBold)
-		return boldedMatch
-	}
-
 	const removeBold = (str:any) => {
 		return str.replace(/<(.)*?>/g, "")
 	}
 
-const navigateList = (e:any) => {
-	if (e.key === "ArrowDown" && bolHiLiteIndex <= filteredBOLS.length-1) {
-		bolHiLiteIndex === null ? bolHiLiteIndex = 0 : bolHiLiteIndex += 1
-	} else if (e.key === "ArrowUp" && bolHiLiteIndex !== null) {
-		bolHiLiteIndex === 0 ? bolHiLiteIndex = filteredBOLS.length-1 : bolHiLiteIndex -= 1
-	} else if (e.key === "Enter") {
-		setInputVal(filteredBOLS[bolHiLiteIndex]);
-	} else {
-		return;
-	}
-} 
+	const navigateList = (e:any) => {
+		if (e.key === "ArrowDown" && bolHiLiteIndex <= filteredBOLS.length-1) {
+			bolHiLiteIndex === null ? bolHiLiteIndex = 0 : bolHiLiteIndex += 1
+		} else if (e.key === "ArrowUp" && bolHiLiteIndex !== null) {
+			bolHiLiteIndex === 0 ? bolHiLiteIndex = filteredBOLS.length-1 : bolHiLiteIndex -= 1
+		} else if (e.key === "Enter") {
+			setInputVal(filteredBOLS[bolHiLiteIndex]);
+		} else {
+			return;
+		}
+	} 
 
 	function handleClickOutside(event:MouseEvent){
 		const target = event.target as Element
@@ -98,15 +73,6 @@ const navigateList = (e:any) => {
 				selectedCategory[i] = false
 			}
 		}		
-	}
-
-	function toggleDropdown(){
-		dropdown = !dropdown
-	}
-
-
-	function toggleResponsive(){
-		responsive = !responsive
 	}
 
 	function setTag(newTag:string){
@@ -129,12 +95,6 @@ const navigateList = (e:any) => {
 			responsive = false
 		}
 
-	const [send, receive] = crossfade({
-		duration: 400,
-		easing: circIn,
-		delay: 100
-	})
-
 	onMount(async() => {
 		window.addEventListener('click', handleClickOutside)
 		essentials = await BOLEssentials(limit)
@@ -155,30 +115,10 @@ const navigateList = (e:any) => {
 	</HeadComponent>
 </svelte:head>
 
-<Header sidebar={sidebar}>
-	<div slot="local" class="boxmidrow">
-		<p><a href="/openlibrary/reconnect/sections/dhatus">Dhātus</a></p>
-		<p><a href="/openlibrary/reconnect/sections/amarakosha">Amarakośaḥ</a></p>
-		<p><a href="/openlibrary/reconnect/sections/dictionary">Dictionary</a></p>
-		<p><a href="/openlibrary/reconnect/sections/puranas">Purāṇas</a></p>
-		<div class="box" id="dropper" on:click={toggleDropdown} on:keydown={fauxfake}>
-			<p class="droppperp">Texts</p>
-			{#if dropdown}
-				<div class="box">
-					<a href="/openlibrary/reconnect/sections/ramayana">Rāmāyaṇa</a>
-					<a href="/openlibrary/reconnect/sections/rigveda">Ṛgveda</a>
-				</div>
-			{/if}
-		</div>
-		<a href="/openlibrary">Library Home</a>
-	</div>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</Header>
+
 <div class="type">
 	<div class="x0">
-		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/bolherobrhat.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/bolherobrhat.webp')">
+		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/bolherobrhat.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/mobile-bol.webp')">
 			<div class="boxobox" style="display: flex; flex-direction: column; height: 100%; width: 100%; justify-content: center; align-items: center; text-align: center;">
 				<div class="boxc pads" style="height: max-content; background: rgba(0,0,0,0.8); text-align: center; padding-top: 32px; padding-bottom: 32px">
 				<h3 style="color: white; margin-bottom: 24px">Bṛhat Open Library</h3>
@@ -199,28 +139,17 @@ const navigateList = (e:any) => {
 		</div>
 		<div class="a-box box extra">
 			<div class="boxr resbox">
-				{#if responsive}
-					<DropDown --thisbackground="var(--tree)">
-						<div slot="visible" class="expandmenu">Expand Menu</div>
-						<div slot="invisible">
-							<h6 on:click={() => toggleCategory(1)} on:keydown={() => toggleCategory(1)} class:selected={selectedCategory[1]}>Essentials</h6>
-							<h6 on:click={() => toggleCategory(2)} on:keydown={() => toggleCategory(2)} class:selected={selectedCategory[2]}>Two Bodhas</h6>
-							<h6 on:click={() => toggleCategory(3)} on:keydown={() => toggleCategory(3)} class:selected={selectedCategory[3]}>IKS</h6>
-							<h6 on:click={() => toggleCategory(4)} on:keydown={() => toggleCategory(4)} class:selected={selectedCategory[4]}>Scriptural</h6>
-							<h6 on:click={() => toggleCategory(5)} on:keydown={() => toggleCategory(5)} class:selected={selectedCategory[5]}>Special</h6>
-							<h6 on:click={() => toggleCategory(6)} on:keydown={() => toggleCategory(6)} class:selected={selectedCategory[6]}>Āryan Issue</h6>
-						</div>
-					</DropDown>
-				{/if}
-				{#if !responsive}
-							<h6 on:click={() => toggleCategory(1)} on:keydown={() => toggleCategory(1)} class:selected={selectedCategory[1]}>Essentials</h6>
-							<h6 on:click={() => toggleCategory(2)} on:keydown={() => toggleCategory(2)} class:selected={selectedCategory[2]}>Two Bodhas</h6>
-							<h6 on:click={() => toggleCategory(3)} on:keydown={() => toggleCategory(3)} class:selected={selectedCategory[3]}>IKS</h6>
-							<h6 on:click={() => toggleCategory(4)} on:keydown={() => toggleCategory(4)} class:selected={selectedCategory[4]}>Scriptural</h6>
-							<h6 on:click={() => toggleCategory(5)} on:keydown={() => toggleCategory(5)} class:selected={selectedCategory[5]}>Special</h6>
-							<h6 on:click={() => toggleCategory(6)} on:keydown={() => toggleCategory(6)} class:selected={selectedCategory[6]}>Āryan Issue</h6>
-					<div class="responsivebar" on:click={toggleResponsive} on:keydown={fauxfake}>Close Menu</div>
-				{/if}
+				<DropDown --thisbackground="var(--tree)" --thisdropdowntextcolor="var(--tree)">
+					<div slot="visible" class="expandmenu"><h6 style="color: white">EXPAND MENU</h6></div>
+					<div slot="invisible">
+						<h5 on:click={() => toggleCategory(1)} on:keydown={() => toggleCategory(1)} class:selected={selectedCategory[1]}>Essentials</h5>
+						<h5 on:click={() => toggleCategory(2)} on:keydown={() => toggleCategory(2)} class:selected={selectedCategory[2]}>Two Bodhas</h5>
+						<h5 on:click={() => toggleCategory(3)} on:keydown={() => toggleCategory(3)} class:selected={selectedCategory[3]}>IKS</h5>
+						<h5 on:click={() => toggleCategory(4)} on:keydown={() => toggleCategory(4)} class:selected={selectedCategory[4]}>Scriptural</h5>
+						<h5 on:click={() => toggleCategory(5)} on:keydown={() => toggleCategory(5)} class:selected={selectedCategory[5]}>Special</h5>
+						<h5 on:click={() => toggleCategory(6)} on:keydown={() => toggleCategory(6)} class:selected={selectedCategory[6]}>Āryan Issue</h5>
+					</div>
+				</DropDown>
 			</div>
 			<div class="gridof2" class:fullgrid={selectedCategory[5] || selectedCategory[6]}>
 			{#if selectedCategory[1]}
@@ -377,23 +306,22 @@ const navigateList = (e:any) => {
 			<h4 style="text-align: center">The Āryan Issue</h4>
 		</div>
 		<div class="a-box box extra">
-			<div class="gridof5 by1">
-				{#if responsive}
-				<div class="responsivebar" on:click={toggleResponsive} on:keydown={fauxfake}>Expand Genres</div>
-				{/if}
-				{#if !responsive}
-				<div class="responsivebar" on:click={toggleResponsive} on:keydown={fauxfake}>Expand Genres</div>
-				<h6 on:click={() => setTag('Core Material')} on:keydown={fauxfake} class="genres {tag === 'Core Material' ? 'filtered' : ''}">Core Material</h6>
-				<h6 on:click={() => setTag('Indology')} on:keydown={fauxfake} class="genres {tag === 'Indology' ? 'filtered' : ''}">Indology</h6>
-				<h6 on:click={() => setTag('Linguistics')} on:keydown={fauxfake} class="genres {tag === 'Linguistics' ? 'filtered' : ''}">Linguistics</h6>
-				<h6 on:click={() => setTag('History')} on:keydown={fauxfake} class="genres {tag === 'History' ? 'filtered' : ''}">History</h6>
-				<h6 on:click={() => setTag('Genetics')} on:keydown={fauxfake} class="genres {tag === 'Genetics' ? 'filtered' : ''}">Genetics</h6>
-				<h6 on:click={() => setTag('Archaeology')} on:keydown={fauxfake} class="genres {tag === 'Archaeology' ? 'filtered' : ''}">Archaeology</h6>
-				<h6 on:click={() => setTag('Chronology')} on:keydown={fauxfake} class="genres {tag === 'Chronology' ? 'filtered' : ''}">Chronology</h6>
-				<h6 on:click={() => setTag('Philology')} on:keydown={fauxfake} class="genres {tag === 'Philology' ? 'filtered' : ''}">Philology</h6>
-				<h6 on:click={() => setTag('Geology')} on:keydown={fauxfake} class="genres {tag === 'Geology' ? 'filtered' : ''}">Geology</h6>
-				{/if}
-			</div>
+			<DropDown2  --thisbackground="var(--tree)" --thisdropdowntextcolor="var(--tree)">
+				<div slot="visible">
+					<h6 style="color: white">EXPAND GENRES</h6>
+				</div>
+				<div slot="invisible">
+					<h5 on:click={() => setTag('Core Material')} on:keydown={fauxfake} class="genres {tag === 'Core Material' ? 'filtered' : ''}">Core Material</h5>
+					<h5 on:click={() => setTag('Indology')} on:keydown={fauxfake} class="genres {tag === 'Indology' ? 'filtered' : ''}">Indology</h5>
+					<h5 on:click={() => setTag('Linguistics')} on:keydown={fauxfake} class="genres {tag === 'Linguistics' ? 'filtered' : ''}">Linguistics</h5>
+					<h5 on:click={() => setTag('History')} on:keydown={fauxfake} class="genres {tag === 'History' ? 'filtered' : ''}">History</h5>
+					<h5 on:click={() => setTag('Genetics')} on:keydown={fauxfake} class="genres {tag === 'Genetics' ? 'filtered' : ''}">Genetics</h5>
+					<h5 on:click={() => setTag('Archaeology')} on:keydown={fauxfake} class="genres {tag === 'Archaeology' ? 'filtered' : ''}">Archaeology</h5>
+					<h5 on:click={() => setTag('Chronology')} on:keydown={fauxfake} class="genres {tag === 'Chronology' ? 'filtered' : ''}">Chronology</h5>
+					<h5 on:click={() => setTag('Philology')} on:keydown={fauxfake} class="genres {tag === 'Philology' ? 'filtered' : ''}">Philology</h5>
+					<h5 on:click={() => setTag('Geology')} on:keydown={fauxfake} class="genres {tag === 'Geology' ? 'filtered' : ''}">Geology</h5>
+				</div>
+			</DropDown2>
 			<div class="gridof4">
 				{#if aryans && aryans.length > 0}
 					{#each aryans as item, i}
@@ -409,12 +337,6 @@ const navigateList = (e:any) => {
 </div>
 
 <style lang="sass">
-
-
-.responsivebar
-	background: var(--tree)
-	color: white
-	padding: 2px
 
 .x0
 	overflow: hidden
@@ -446,8 +368,6 @@ const navigateList = (e:any) => {
 					color: var(--tree)
 	.a-box
 		.boxr
-			border-bottom: 1px solid #ececec
-			border-top: 1px solid #ececec
 			justify-content: center
 			h6
 				cursor: pointer
@@ -457,38 +377,20 @@ const navigateList = (e:any) => {
 					color: white
 				@media screen and (max-width: 1023px)
 					font-size: 16px
-			h6.selected
-				background: var(--tree)
-				color: white
 			@media screen and (min-width: 900px)
+				border-bottom: 1px solid #ececec
+				border-top: 1px solid #ececec
 				gap: 32px
 				h6
 					padding: 4px 8px
+			@media screen and (max-width: 899px)
+				border: none
 
 
 .x4
 	padding-bottom: 64px
 	padding-top: 64px
-	.gridof5
-		justify-items: center
-		justify-content: center
-		align-items: start
-		align-content: start
-		row-gap: 4px !important
-		h6
-			text-transform: uppercase
-			cursor: pointer
-			padding: 4px 8px
-			&:hover
-				background: var(--tree)
-				color: white
-		h6.filtered
-			background: var(--tree)
-			color: white
-		
-.x4
-	.gridof5
-		margin-top: 32px
+
 
 .aryansbook
 	flex-direction: column

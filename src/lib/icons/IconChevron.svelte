@@ -8,12 +8,26 @@
 
 svg
 	object-fit: cover
-	width: 32px
+	width: 27px
+	height: 27px
+	border: 1px solid #575757
+	border-radius: 16px
+	transition: 0.12s var(--cubea)
+	cursor: pointer
+	#chevtwo
+		fill: #474747
+	&:hover
+		border: 1px solid #fe4a49
+		#chevone
+			fill: #fe4a49
+		#chevtwo
+			fill: #ffffff
 
 #chevone
-	fill: #ffffff
+	fill: #171717
+	transition: 0.12s var(--cubea)
 
 #chevtwo
-	fill: #fe4a49
+	transition: 0.12s var(--cubea)
 
 </style>

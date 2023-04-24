@@ -1,12 +1,12 @@
 <script lang="ts">
 
 	export let data
-	let widD:number = 720
+	let widD:number = 800
 	let widM:number
 	let width:number
 	let iframeWidth = widD
 
-	$: widM = 0.8*width
+	$: widM = 0.9*width
 
 	$: if ( width <= 1023 ) {
 		iframeWidth = widM 
@@ -19,21 +19,21 @@
 
 <svelte:window bind:innerWidth={width}/>
 <div class="type">
-<h3>
-	{data.Text}
-</h3>
-<div class="boxr">
-	<p>{data.Description}</p>
-	<h6>{data.author}</h6>
+	<h3>
+		{data.Text}
+	</h3>
+	<div class="boxr">
+		<p>{data.Description}</p>
+		<h5>{data.author}</h5>
+	</div>
 </div>
-</div>
-<div class="boxc frameholder">
-<iframe 
-	title={data.Text}
-	src={data.Extract} 
-	width={iframeWidth}
-	height="720" 
-	allow="autoplay">
+<div class="boxc frameholder" data-lenis-prevent>
+	<iframe 
+		title={data.Text}
+		src={data.Extract} 
+		width={iframeWidth}
+		height="720" 
+		allow="autoplay">
 </iframe>
 </div>
 
@@ -47,17 +47,12 @@
 	.boxr
 		gap: 32px
 		padding-top: 24px
-		align-items: center
-		h6
+		align-items: flex-start
+		h5
 			text-align: right
 			width: 35%
-			background: var(--tree)
-			color: white
+			color: #474747
 			line-height: 1.5
-			padding-right: 16px
-			padding-top: 4px
-			padding-bottom: 4px
-			padding-left: 8px
 			font-weight: 400
 		p
 			width: calc(65% - 32px)
@@ -70,7 +65,7 @@
 			flex-wrap: wrap
 			column-gap: 0
 			row-gap: 16px
-			h6, p
+			h5, p
 				width: 100%
 				text-align: left
 
@@ -83,7 +78,10 @@ iframe
 .frameholder
 	display: flex
 	flex-direction: column
-	align-items: center
+	@media screen and (min-width: 1024px)
+		align-items: flex-end
+	@media screen and (max-width: 1023px)
+		align-items: center
 
 
 </style>

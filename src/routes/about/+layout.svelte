@@ -43,27 +43,25 @@
 	position: relative
 	a
 		position: absolute
-		text-align: right
 		min-width: 200px
-		right: 0
-		background: var(--beau)
-		padding: 4px 8px
-		&:hover
-			background: #fe4a49
-	#link11
-		top: 32px
-	#link22
-		top: 56px
-	#link33
-		top: 80px
-	#link44
-		top: 104px
-	#link55
-		top: 128px
+		background: #171717
+		padding: 8px
 
-.dropperp
-	margin-top: 0
-	padding-top: 0
-	line-height: 1.25
+
+#link11
+	top: 32px
+	min-width: 320px
+#link22
+	top: 56px
+	min-width: 320px
+#link33
+	top: 80px
+	min-width: 320px
+#link44
+	top: 104px
+	min-width: 320px
+#link55
+	top: 128px
+	min-width: 320px
 
 </style>

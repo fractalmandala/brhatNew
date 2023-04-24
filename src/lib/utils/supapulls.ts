@@ -309,12 +309,13 @@ export async function anveshiImages() {
 	return data
 }
 
-export async function anveshiVids() {
+export async function anveshiVids(limit:any) {
   const { data, error } = await supabase
   .from('brhat-youtube')
   .select()
 	.eq('type','anveshi')
   .order('id',{ascending: false})
+	.limit(limit)
   if (error) throw new Error(error.message)
   return data
 }

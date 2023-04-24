@@ -7,8 +7,6 @@ title: Svataḥsiddha
 ### “How are we collectively creating a world that none of us wants, individually
 <cite>Daniel Christian Wahl</cite>
 
-
-
 ### “We are approaching the power of Gods, without the wisdom of Gods”
 <cite>Daniel Schmartenberger</cite>
 

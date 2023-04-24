@@ -1,7 +1,7 @@
 <script lang="ts">
 
 	import { page } from '$app/stores'
-	import { onMount, afterUpdate } from 'svelte'
+	import { onMount } from 'svelte'
 	import Lenis from '@studio-freight/lenis'
 	import '$lib/styles/global.sass'
 	import '$lib/styles/types.sass'
@@ -9,15 +9,8 @@
 
 	let innerW:number
 	let breakPointOn:boolean
+	let showFooter = true
 	let link:any
-	let showshow = true
-
-$: if (link && link.startsWith('/oneyear')) {
-showshow = false;
-} else {
-showshow = true;
-}
-
 
 	$: if ( innerW <= 1023 ) {
 		breakPointOn = true
@@ -25,14 +18,22 @@ showshow = true;
 		breakPointOn = false
 	}
 
+	$: if ( link === "/brhat") {
+		showFooter = false
+	} else {
+		showFooter = true
+	}
+
 	onMount(() => {
 		const lenis = new Lenis({
-			duration: 3,
+			duration: 0.5,
+			easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
 			orientation: 'vertical',
 			gestureOrientation: 'vertical',
+			wheelMultiplier: 0.55,
 			smoothWheel: true,
-			wheelMultiplier: 0.7,
-			touchMultiplier: 1,
+			smoothTouch: false,
+			touchMultiplier: 0,
 			infinite: false,
 		})
 		function raf(time: any){
@@ -40,16 +41,8 @@ showshow = true;
 			requestAnimationFrame(raf)
 		}
 		requestAnimationFrame(raf)
-	})
-
-	onMount(() => {
 		link = $page.url.pathname
 	})
-
-	afterUpdate(() => {
-		link = $page.url.pathname
-	})
-
 
 </script>
 
@@ -65,7 +58,7 @@ showshow = true;
 
 <div id="appbox">
 	<slot></slot>
-	{#if showshow}
+	{#if showFooter}
 	<Footer></Footer>
 	{/if}
 </div>

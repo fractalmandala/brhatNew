@@ -5,6 +5,8 @@
 	import { latestDhitiPost, latestDhitiThree, allFeaturedPosts, filterChosen, authorfiltered } from '$lib/utils/localpulls'
 	import { scale } from 'svelte/transition'
 	import { quartIn, quartOut } from 'svelte/easing'
+	import DropDown from '$lib/components/DropDown.svelte'
+	import DropDown2 from '$lib/components/DropDown.svelte'
 	let latestpost:string|any[]
 	let nextthreeposts:string|any[]
 	let featuredposts:string|any[]
@@ -73,6 +75,7 @@
 			{#each latestpost as item}
 				<div class="latestsingle" style="background-image: url('{item.meta.image}')">
 					<div class="card-body">
+						<cite>{item.meta.category} | <span class="citetwo">{item.meta.tags}</span></cite>
 						<h3><a href="{item.path}">{item.meta.title}</a></h3>
 						<p>{item.meta.author}
 							{#if item.meta.authortwo && item.meta.authortwo.length > 0}
@@ -91,19 +94,21 @@
 							<img src={item.meta.image} alt={item.meta.title}/>
 						</div>
 						<div class="card-body">
+							<cite class="citeone">{item.meta.category}</cite>
 							<h6><a href="{item.path}">{item.meta.title}</a></h6>
 							<p>{item.meta.author}
 								{#if item.meta.authortwo && item.meta.authortwo.length > 0}
 									<span> and {item.meta.authortwo}</span>
 								{/if}
 							</p>
-							<cite style="color: #b7b7b7; font-style: normal; font-size: 12px">{item.meta.tags}</cite>
+							<cite class="citetwo">{item.meta.tags}</cite>
 						</div>
 					</div>
 				{/each}
 			{/if}
 		</div>
 		<div class="featured">
+			<h4>FEATURED</h4>
 			{#if featuredposts && featuredposts.length > 0}
 				{#each featuredposts as item}
 					<div class="card-row">
@@ -117,9 +122,7 @@
 									<span> and {item.meta.authortwo}</span>
 								{/if}
 							</p>
-							<div class="boxr card-meta">
-								<small>{item.meta.tags}</small>
-							</div>
+							<cite class="citetwo">{item.meta.tags}</cite>
 						</div>
 					</div>
 				{/each}
@@ -127,23 +130,28 @@
 		</div>
 	</div>
 	<div class="x1">
-		<div class="categorystrip">
-			<div class="category {category === 'Featured' ? 'selected' : ''}" on:click={() => setFilter('Featured')} on:keydown={fauxfake}>
-				Featured
+		<DropDown --thisbackground="#fe4a49" --thisdropdowntextcolor="#fe4a49">
+			<div slot="visible">
+				<h6 style="color: white">CATEGORIES</h6>
 			</div>
-			<div class="category {category === 'Svayambodha' ? 'selected' : ''}" on:click={() => setFilter('Svayambodha')} on:keydown={fauxfake}>
-				Two Bodhas
+			<div slot="invisible">
+				<div class="category {category === 'Featured' ? 'selected' : ''}" on:click={() => setFilter('Featured')} on:keydown={fauxfake}>
+					<h5>Featured</h5>
+				</div>
+				<div class="category {category === 'Svayambodha' ? 'selected' : ''}" on:click={() => setFilter('Svayambodha')} on:keydown={fauxfake}>
+					<h5>Two Bodhas</h5>
+				</div>
+				<div class="category {category === 'Dharma Today' ? 'selected' : ''}" on:click={() => setFilter('Dharma Today')} on:keydown={fauxfake}>
+					<h5>Dharma Today</h5>
+				</div>
+				<div class="category {category === 'Indian Knowledge Systems' ? 'selected' : ''}" on:click={() => setFilter('Indian Knowledge Systems')} on:keydown={fauxfake}>
+					<h5>IKS</h5>
+				</div>
+				<div class="category {category === 'Culture and Policy' ? 'selected' : ''}" on:click={() => setFilter('Culture and Policy')} on:keydown={fauxfake}>
+					<h5>Culture and Policy</h5>
+				</div>
 			</div>
-			<div class="category {category === 'Dharma Today' ? 'selected' : ''}" on:click={() => setFilter('Dharma Today')} on:keydown={fauxfake}>
-				Dharma Today
-			</div>
-			<div class="category {category === 'Indian Knowledge Systems' ? 'selected' : ''}" on:click={() => setFilter('Indian Knowledge Systems')} on:keydown={fauxfake}>
-				IKS
-			</div>
-			<div class="category {category === 'Culture and Policy' ? 'selected' : ''}" on:click={() => setFilter('Culture and Policy')} on:keydown={fauxfake}>
-				Culture and Policy
-			</div>
-		</div>
+		</DropDown>
 		<div class="gridof4">
 			{#if filteredposts && filteredposts.length > 0}
 				{#each filteredposts as item, i}
@@ -165,76 +173,67 @@
 		</div>
 	</div>
 	<div class="x2">
-		<div class="categorystrip">
-			<div class="boxr toggler"><p class:toggled={writersortags} on:click={toggleWritersOrTags} on:keydown={fauxfake}>Writers</p>
-				<div class="boxr switch" on:click={toggleWritersOrTags} on:keydown={fauxfake}>
-			  	<div class="slider">
-						<div class="ball" class:balltag={!writersortags}></div>
-					</div>
-				</div><p class:toggled={!writersortags} on:click={toggleWritersOrTags} on:keydown={fauxfake}>
-				Tags</p>
+		<DropDown2 --thisbackground="#fe4a49" --thisdropdowntextcolor="#fe4a49">
+			<div slot="visible">
+				<h6 style="color: white">WRITERS</h6>
 			</div>
-			{#if writersortags}
-			<div class="box">
-			<div class="author {writer === 'Akshay Jha' ? 'written' : ''}" on:click={() => setAuthor('Akshay Jha')} on:keydown={fauxfake}>
-				Akshay Jha
+			<div slot="invisible">
+				<div class="author {writer === 'Akshay Jha' ? 'written' : ''}" on:click={() => setAuthor('Akshay Jha')} on:keydown={fauxfake}>
+					<h5>Akshay Jha</h5>
+				</div>
+				<div class="author {writer === 'Amritanshu Pandey' ? 'written' : ''}" on:click={() => setAuthor('Amritanshu Pandey')} on:keydown={fauxfake}>
+					<h5>Amritanshu Pandey</h5>
+				</div>
+				<div class="author {writer === 'Anshuman Panda' ? 'written' : ''}" on:click={() => setAuthor('Anshuman Panda')} on:keydown={fauxfake}>
+					<h5>Anshuman Panda</h5>
+				</div>
+				<div class="author {writer === 'Anurag Shukla' ? 'written' : ''}" on:click={() => setAuthor('Anurag Shukla')} on:keydown={fauxfake}>
+					<h5>Anurag Shukla</h5>
+				</div>
+				<div class="author {writer === 'Kavita Krishna Meegama' ? 'written' : ''}" on:click={() => setAuthor('Kavita Krishna Meegama')} on:keydown={fauxfake}>
+					<h5>Kavita Krishna Meegama</h5>
+				</div>
+				<div class="author {writer === 'Nivedita Tiwari' ? 'written' : ''}" on:click={() => setAuthor('Nivedita Tiwari')} on:keydown={fauxfake}>
+					<h5>Nivedita Tiwari</h5>
+				</div>
+				<div class="author {writer === 'Pankaj Saxena' ? 'written' : ''}" on:click={() => setAuthor('Pankaj Saxena')} on:keydown={fauxfake}>
+					<h5>Pankaj Saxena</h5>
+				</div>
+				<div class="author {writer === 'Raghava Krishna' ? 'written' : ''}" on:click={() => setAuthor('Raghava Krishna')} on:keydown={fauxfake}>
+					<h5>Raghava Krishna</h5>
+				</div>
+				<div class="author {writer === 'Sai Priya Chodavarapu' ? 'written' : ''}" on:click={() => setAuthor('Sai Priya Chodavarapu')} on:keydown={fauxfake}>
+					<h5>Sai Priya Chodavarapu</h5>
+				</div>
+				<div class="author {writer === 'Sushant Gangoli' ? 'written' : ''}" on:click={() => setAuthor('Sushant Gangoli')} on:keydown={fauxfake}>
+					<h5>Sushant Gangoli</h5>
+				</div>
+				<div class="author spaced">
+					<h6>Guests:</h6>
+				</div>
+				<div class="authors {writer === 'Shri Ramachandra Roddam' ? 'written' : ''}" on:click={() => setAuthor('Shri Ramachandra Roddam')} on:keydown={fauxfake}>
+					<h5>Shri Ramachandra Roddam</h5>
+				</div>
+				<div class="authors {writer === 'Akshay Shankar' ? 'written' : ''}" on:click={() => setAuthor('Akshay Shankar')} on:keydown={fauxfake}>
+					<h5>Akshay Shankar</h5>
+				</div>
+				<div class="authors {writer === 'Jash Dholani' ? 'written' : ''}" on:click={() => setAuthor('Jash Dholania')} on:keydown={fauxfake}>
+					<h5>Jash Dholani</h5>
+				</div>
+				<div class="authors {writer === 'Kate Herse' ? 'written' : ''}" on:click={() => setAuthor('Kate Herse')} on:keydown={fauxfake}>
+					<h5>Kate Herse</h5>
+				</div>
+				<div class="authors {writer === 'Ghora Angirasa' ? 'written' : ''}" on:click={() => setAuthor('Ghora Angirasa')} on:keydown={fauxfake}>
+					<h5>Ghora Angirasa</h5>
+				</div>
+				<div class="authors {writer === 'Samyak Dixit' ? 'written' : ''}" on:click={() => setAuthor('Samyak Dixit')} on:keydown={fauxfake}>
+					<h5>Samyak Dixit</h5>
+				</div>
+				<div class="authors {writer === 'Prabhav Paturi' ? 'written' : ''}" on:click={() => setAuthor('Prabhav Paturi')} on:keydown={fauxfake}>
+					<h5>Prabhav Paturi</h5>
+				</div>
 			</div>
-			<div class="author {writer === 'Amritanshu Pandey' ? 'written' : ''}" on:click={() => setAuthor('Amritanshu Pandey')} on:keydown={fauxfake}>
-				Amritanshu Pandey
-			</div>
-			<div class="author {writer === 'Anshuman Panda' ? 'written' : ''}" on:click={() => setAuthor('Anshuman Panda')} on:keydown={fauxfake}>
-				Anshuman Panda
-			</div>
-			<div class="author {writer === 'Anurag Shukla' ? 'written' : ''}" on:click={() => setAuthor('Anurag Shukla')} on:keydown={fauxfake}>
-				Anurag Shukla
-			</div>
-			<div class="author {writer === 'Kavita Krishna Meegama' ? 'written' : ''}" on:click={() => setAuthor('Kavita Krishna Meegama')} on:keydown={fauxfake}>
-				Kavita Krishna Meegama
-			</div>
-			<div class="author {writer === 'Nivedita Tiwari' ? 'written' : ''}" on:click={() => setAuthor('Nivedita Tiwari')} on:keydown={fauxfake}>
-				Nivedita Tiwari
-			</div>
-			<div class="author {writer === 'Pankaj Saxena' ? 'written' : ''}" on:click={() => setAuthor('Pankaj Saxena')} on:keydown={fauxfake}>
-				Pankaj Saxena
-			</div>
-			<div class="author {writer === 'Raghava Krishna' ? 'written' : ''}" on:click={() => setAuthor('Raghava Krishna')} on:keydown={fauxfake}>
-				Raghava Krishna
-			</div>
-			<div class="author {writer === 'Sai Priya Chodavarapu' ? 'written' : ''}" on:click={() => setAuthor('Sai Priya Chodavarapu')} on:keydown={fauxfake}>
-				Sai Priya Chodavarapu
-			</div>
-			<div class="author {writer === 'Sushant Gangoli' ? 'written' : ''}" on:click={() => setAuthor('Sushant Gangoli')} on:keydown={fauxfake}>
-				Sushant Gangoli
-			</div>
-			<div class="author spaced">
-				Guests:
-			</div>
-			<div class="authors {writer === 'Shri Ramachandra Roddam' ? 'written' : ''}" on:click={() => setAuthor('Shri Ramachandra Roddam')} on:keydown={fauxfake}>
-				Shri Ramachandra Roddam
-			</div>
-			<div class="authors {writer === 'Akshay Shankar' ? 'written' : ''}" on:click={() => setAuthor('Akshay Shankar')} on:keydown={fauxfake}>
-				Akshay Shankar
-			</div>
-			<div class="authors {writer === 'Jash Dholani' ? 'written' : ''}" on:click={() => setAuthor('Jash Dholania')} on:keydown={fauxfake}>
-				Jash Dholani
-			</div>
-			<div class="authors {writer === 'Kate Herse' ? 'written' : ''}" on:click={() => setAuthor('Kate Herse')} on:keydown={fauxfake}>
-				Kate Herse
-			</div>
-			<div class="authors {writer === 'Ghora Angirasa' ? 'written' : ''}" on:click={() => setAuthor('Ghora Angirasa')} on:keydown={fauxfake}>
-				Ghora Angirasa
-			</div>
-			<div class="authors {writer === 'Samyak Dixit' ? 'written' : ''}" on:click={() => setAuthor('Samyak Dixit')} on:keydown={fauxfake}>
-				Samyak Dixit
-			</div>
-			<div class="authors {writer === 'Prabhav Paturi' ? 'written' : ''}" on:click={() => setAuthor('Prabhav Paturi')} on:keydown={fauxfake}>
-				Prabhav Paturi
-			</div>
-			</div>
-			{:else}
-			<div class="authors">tag</div>
-			{/if}
-		</div>
+		</DropDown2>
 		<div class="articlesarea">
 			{#if authorposts && authorposts.length > 0}
 				{#each authorposts as item, i}
@@ -243,13 +242,13 @@
 							<img src={item.meta.image} alt={item.meta.title}/>
 						</div>
 						<div class="card-body">
-							<h5 style="font-weight: bold">
+							<cite class="citeone">{item.meta.category}</cite>
+							<h5 style="font-weight: 600">
 								<a href="{item.path}">
 									{item.meta.title}
 								</a>
 							</h5>
-							<p>{item.meta.category}</p>
-							<small>{item.meta.tags}</small>
+							<cite class="citetwo">{item.meta.tags}</cite>
 						</div>
 					</div>
 				{/each}
@@ -261,42 +260,6 @@
 
 <style lang="sass">
 
-.toggler
-	p.toggled
-		color: #fe4a49
-
-.toggler
-	align-items: center
-	width: 100%
-	justify-content: center
-	gap: 12px
-	color: #878787
-	margin-bottom: 24px
-	cursor: pointer
-	p
-		&:hover
-			color: #fe4a49
-.switch
-	height: 28px
-	width: 64px
-	background: #d7d7d7
-	border-radius: 13px
-	padding-top: 2px
-	padding-left: 2px
-	padding-right: 2px
-	.ball
-		height: 24px
-		width: 24px
-		background: white
-		border-radius: 12px
-		transition: 0.15s
-
-.ball.balltag
-	transform: translateX(35px)
-
-.switch
-	&:hover
-		background: #fe4a49
 
 .type.dhiti
 	padding-top: 72px
@@ -306,6 +269,13 @@
 	@media screen and (min-width: 1024px)
 		padding-left: 32px
 		padding-right: 32px
+	@media screen and (max-width: 1023px)
+		padding-left: 24px
+		padding-right: 24px
+
+.x1
+	@media screen and (max-width: 1023px)
+		padding-top: 64px
 
 .x2
 	padding-top: 64px
@@ -314,8 +284,8 @@
 	display: grid
 	grid-auto-flow: row
 	grid-template-rows: auto auto
-	padding-top: 32px
 	@media screen and (min-width: 1024px)
+		padding-top: 32px
 		padding-left: 48px
 		padding-right: 48px
 		align-content: start
@@ -324,6 +294,14 @@
 		grid-template-columns: 1fr 1fr 1fr 30%
 		grid-template-areas: "latestsingle latestsingle latestsingle featured" "latestthree latestthree latestthree featured"
 		grid-template-rows: auto 1fr
+	@media screen and (max-width: 1023px)
+		padding-left: 24px
+		padding-right: 24px
+		padding-top: 24px
+		gap: 0 0
+		grid-template-columns: 1fr
+		grid-template-rows: auto
+		grid-template-areas: "latestsingle" "latestthree" "featured"
 
 
 .latestsingle
@@ -358,6 +336,25 @@
 				font-size: 18px
 				color: white	
 				padding-left: 16px	
+	@media screen and (max-width: 1023px)
+		flex-direction: column
+		height: 480px	
+		justify-content: flex-end
+		padding-bottom: 32px
+		.card-body
+			row-gap: 8px
+			padding: 4px 16px 4px 16px
+			h3, p, cite
+				color: white
+			cite
+				font-style: normal
+				text-transform: uppercase
+				background: #fe4a49
+				padding: 2px 4px
+				.citetwo
+					font-style: italic
+					text-transform: lowercase
+			background: rgba(0,0,0,0.8)
 
 .featured
 	grid-area: featured
@@ -374,6 +371,33 @@
 				p
 					line-height: 1.1
 					padding-top: 4px
+	@media screen and (max-width: 1023px)
+		padding-top: 32px
+		row-gap: 32px
+		padding-bottom: 32px
+		.card-row
+			column-gap: 24px
+			.card-image
+				width: 32%
+				height: 88px
+			.card-body
+				width: calc(68% - 24px)
+				row-gap: 0
+				h6
+					margin-bottom: 6px
+					border-top: 1px solid #ececec
+					padding-top: 8px
+				p
+					margin-bottom: 3px
+				cite
+					text-transform: uppercase
+					color: #878787
+					margin-bottom: 4px
+				.citeone
+					font-style: normal
+				.citetwo
+					text-transform: lowercase
+					font-style: italic		
 
 .latestthree
 	grid-area: latestthree
@@ -390,78 +414,40 @@
 				height: 120px	
 			.card-body
 				row-gap: 2px	
+	@media screen and (max-width: 1023px)
+		gap: 32px 0
+		grid-template-columns: 1fr
+		grid-template-areas: "." "." "."
+		padding-top: 32px
+		padding-bottom: 32px
+		border-bottom: 1px solid #ececec
+		.card-nix
+			flex-direction: row
+			column-gap: 24px
+			.card-image
+				width: 32%
+				height: 88px
+			.card-body
+				width: calc(68% - 24px)
+				row-gap: 0
+				h6
+					margin-bottom: 6px
+					border-top: 1px solid #ececec
+					padding-top: 8px
+				p
+					margin-bottom: 3px
+				cite
+					text-transform: uppercase
+					color: #878787
+					margin-bottom: 4px
+				.citeone
+					font-style: normal
+				.citetwo
+					text-transform: lowercase
+					font-style: italic
 
-.card-nix
-	.card-body
-		display: flex
-		flex-direction: column
-		row-gap: 2px
-		h6
-			margin-bottom: 12px
-			border-bottom: 1px solid #ececec
-			padding-bottom: 8px
-		small, cite
-			margin: 0
-			paddding: 0
-
-.categorystrip
-	display: flex
-	flex-direction: row
-	column-gap: 16px
-	border-top: 1px solid #ececec
-	border-bottom: 1px solid #ececec
-	.category
-		display: flex
-		flex-direction: column
-		font-family: 'Spline Sans', sans-serif
-		text-transform: uppercase
-		font-size: 27px
-		font-weight: 700
-		padding: 4px 12px
-		cursor: pointer
-		&:hover
-			background: #fe4a49
-			color: white
-	.category.selected
-		background: var(--strong)
-		color: white
-		&:hover
-			background: #676767
-			color: white
-			cursor: none
 
 .x2
-	.categorystrip
-		display: flex
-		flex-direction: column
-		.author
-			display: flex
-			flex-direction: column
-			font-family: 'Spline Sans', sans-serif
-			text-transform: uppercase
-			font-size: 18px
-			padding: 6px 4px
-			cursor: pointer
-			&:hover
-				background: #fe4a49
-				color: white
-		.author.written
-			color: white
-			background: var(--strong)
-		.authors
-			display: flex
-			flex-direction: column
-			font-family: 'Spline Sans', sans-serif
-			text-transform: uppercase
-			font-size: 16px
-			padding: 3px
-			cursor: pointer
-			&:hover
-				background: #fe4a49
-				color: white
-		.authors.written
-			background: var(--strong)
-			color: white
 	@media screen and (min-width: 1024px)
 		height: 100vh
 
@@ -475,19 +461,8 @@
 		grid-template-areas: "categorystrip articlesarea"
 		column-gap: 64px
 		height: 100%
-		.categorystrip
-			grid-area: categorystrip
-			padding-top: 24px
-			height: 100%
-			display: flex
-			flex-direction: column
-			>.box
-				row-gap: 2px
-				position: sticky
-				top: 0
 		.articlesarea
 			grid-area: articlesarea
-
 
 .gridof4
 	padding-top: 32px
@@ -538,7 +513,16 @@
 	grid-auto-flow: row
 	grid-template-rows: auto
 	height: 100%
-	padding-bottom: 64px
+	padding-bottom: 32px
+	h5
+		color: #272727
+	.citeone
+		color: #878787
+		text-transform: uppercase
+		font-style: normal
+	.citetwo
+		color: #b7b7b7
+		text-transform: lowercase
 	@media screen and (min-width: 1024px)
 		grid-template-columns: 1fr
 		grid-template-areas: "."
@@ -561,6 +545,27 @@
 				padding-top: 16px
 				&:hover
 					color: var(--strong)
+	@media screen and (max-width: 1023px)
+		padding-top: 32px
+		row-gap: 32px
+		.card-row
+			column-gap: 24px
+			.card-image
+				width: 32%
+				height: 88px
+				img
+					object-fit: cover
+					width: 100%
+					height: 100%
+			.card-body
+				width: calc(68% - 24px)
+				row-gap: 0
+				h5
+					font-size: 1.414vw*3.2
+					border-top: 1px solid #ececec
+					padding-top: 8px
+					margin-top: 5px
+					margin-bottom: 4px
 				
 
 .author.spaced

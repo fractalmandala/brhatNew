@@ -11,7 +11,7 @@
 	import IconTop from '$lib/icons/IconTop.svelte'
 
 	let fake:boolean = false
-	let active:boolean
+	let active:boolean = true
 
 	function fauxfake(){
 		fake = !fake
@@ -93,7 +93,7 @@
 	width: 100vw
 	position: sticky
 	top: 0
-	z-index: 1200
+	z-index: 999
 	grid-template-rows: auto 1fr auto
 	grid-template-areas: "footertop" "footermain" "footerbot"
 	.footertop

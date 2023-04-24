@@ -1,6 +1,6 @@
 <script lang="ts">
 
-	import { onMount } from 'svelte'
+	import { onMount, afterUpdate } from 'svelte'
 	import Header from '$lib/components/SubHeader.svelte'
 	import Animations from 'textify.js'
 	import { scale } from 'svelte/transition'
@@ -73,6 +73,13 @@
 		})	
 	})
 
+	afterUpdate(async() => {
+		vids = await allmrdVids(limiter)
+		kalas = await Shabdavali()
+		rasas = await mrdangaVids()
+		kavitas = await kavitaVids()
+	})
+
 </script>
 
 <svelte:head>
@@ -87,43 +94,33 @@
 	<div class="x0">
 		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/mrdanga-hero.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/mrdanga-hero.webp')"></ParallaxImage>
 	</div>
-	<div class="plain-one x1 pads">
-		<div class="gridof2">
-			{#if !responsive}
-			<div class="box" id="more">
-				<p>
-				Sanātana Dharma is a view of immanence. It sees the divine everywhere. The transcendent is the Ultimate Truth, the Supreme Consciousness. The view of immanence says that although nothing that we perceive is the Ultimate Truth, it is at the same time a form of the Ultimate. In this view of immanence a gradient of divinity is created in which individual consciousness is always encouraged to elevate itself and ultimately realize its true form as the Supreme Consciousness.
-				</p>
-				<p>
-				What are these instruments of realization? In language it is Saṃskṛta and the mantras that lead us to the Ultimate. In sādhanā, it is meditation upon the Iṣṭa and the Mantra.
-				</p>
-				<p>
-				In music, it is the instruments of music. And of all the musical instruments some are considered the most divine. And three of them, Bāṃsurī, Vīṇā and Mṛdaṅga are the most divine of all.
-				</p>
-				<p>
-				Mṛdaṅga is the instrument which makes it possible for us mortals to tap into the divine music, capable of leading one to higher states of consciousness. The Nāṭyaśastra mentions the instrument at many places proving its antiquity in Indian cultural consciousness. It was famous across India and it is mentioned in Cilappatikāram. Bharatanāṭyam also traces its origin to Mṛdaṅga.
-				</p>
-				<p>
-				As important to the mārga culture in Bhāratavarṣa as it is to desīya culture, it is an integral part of the Yakṣagāna performances in Karnataka and other states of India. The famous Koodalmanikyam Temple in Irinjalkuda, Kerala, dedicated to Lord Bharata holds a Mṛdaṅga Mela where young artists come to play the divine instrument. Similar will be the videos on this project.
-				</p>
-				<p>
-				Like Mṛdaṅga they will tap into the eternal streams of beauty and reality in our culture and will voice them in contemporary idiom to convey the eternal truths of the eternal civilization to our contemporary times.
-				</p>
-			</div>
-			{/if}
-			<div class="box">
-				<h5>
-					Mṛdaṅga is one of the sacred trinity of musical instruments. It is a ‘Deva Vādyam’, the instrument which Nandi, the prime gaṇa of Śiva plays when he does his Tāṇḍava. Mṛdaṅga is capable of sounding the divine rhythm across the multiple planes of consciousness. It is so divine because the sound that it emanates is not just a human creation.</h5>
-				<h4 class="mrd">
+	<div class="modern-grid pads">
+		<div class="thin-col">
+			<h5>
+				Mṛdaṅga is one of the sacred trinity of musical instruments. It is a ‘Deva Vādyam’, the instrument which Nandi, the prime gaṇa of Śiva plays when he does his Tāṇḍava. Mṛdaṅga is capable of sounding the divine rhythm across the multiple planes of consciousness. It is so divine because the sound that it emanates is not just a human creation.</h5>
+			<h4 style="color: #fe4a49">
 				It is a tapping into the divine sound which is always playing but not accessible to our senses normally.
-				</h4>	
-				{#if responsive}
-				<div on:click={toggleResponsive} on:keydown={fauxfake}>
-				<ButtonTwo><a href="/mrdanga/#more">Read More</a></ButtonTwo>
-				</div>
-				{/if}
-			</div>
-			
+			</h4>	
+		</div>
+		<div class="thick-col">
+				<p>
+					Sanātana Dharma is a view of immanence. It sees the divine everywhere. The transcendent is the Ultimate Truth, the Supreme Consciousness. The view of immanence says that although nothing that we perceive is the Ultimate Truth, it is at the same time a form of the Ultimate. In this view of immanence a gradient of divinity is created in which individual consciousness is always encouraged to elevate itself and ultimately realize its true form as the Supreme Consciousness.
+				</p>
+				<p>
+					What are these instruments of realization? In language it is Saṃskṛta and the mantras that lead us to the Ultimate. In sādhanā, it is meditation upon the Iṣṭa and the Mantra.
+				</p>
+				<p>
+					In music, it is the instruments of music. And of all the musical instruments some are considered the most divine. And three of them, Bāṃsurī, Vīṇā and Mṛdaṅga are the most divine of all.
+				</p>
+				<p>
+					Mṛdaṅga is the instrument which makes it possible for us mortals to tap into the divine music, capable of leading one to higher states of consciousness. The Nāṭyaśastra mentions the instrument at many places proving its antiquity in Indian cultural consciousness. It was famous across India and it is mentioned in Cilappatikāram. Bharatanāṭyam also traces its origin to Mṛdaṅga.
+				</p>
+				<p>
+					As important to the mārga culture in Bhāratavarṣa as it is to desīya culture, it is an integral part of the Yakṣagāna performances in Karnataka and other states of India. The famous Koodalmanikyam Temple in Irinjalkuda, Kerala, dedicated to Lord Bharata holds a Mṛdaṅga Mela where young artists come to play the divine instrument. Similar will be the videos on this project.
+				</p>
+				<p>
+					Like Mṛdaṅga they will tap into the eternal streams of beauty and reality in our culture and will voice them in contemporary idiom to convey the eternal truths of the eternal civilization to our contemporary times.
+				</p>
 		</div>
 	</div>
 	<div class="plain-one x2 pads">
@@ -138,7 +135,7 @@
 				<h6 on:click={() => toggleCategory(4)} on:keydown={() => toggleCategory(4)} class:selected={selectedCategory[4]}>Śabdāvalī</h6>
 			</div>
 			{#if selectedCategory[1]}
-				<div class="gridof4 marg">
+				<div class="gridof4">
 					{#if vids && vids.length > 0}
 						{#each vids as item, i}
 							<div class="card-video" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
@@ -152,28 +149,30 @@
 				<ButtonOne>Load More</ButtonOne>
 				</div>
 			{/if}
+			{#if selectedCategory[2]}
 			<div class="gridof4"> 
-				{#if selectedCategory[2]}
-					{#if rasas && rasas.length > 0}
-						{#each rasas as item, i}
-							<div class="card-video" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
-								<iframe width=100% height=100% loading="lazy" src="https://www.youtube.com/embed/{item.videoid}" title={item.name}></iframe>
-								<p>{item.name}</p>	
-							</div>
-						{/each}
-					{/if}
-				{/if}
-				{#if selectedCategory[3]}
-					{#if kavitas && kavitas.length > 0}
-						{#each kavitas as item, i}
-							<div class="card-video" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
-								<iframe width=100% height=100% loading="lazy" src="https://www.youtube.com/embed/{item.videoid}" title={item.name}></iframe>
-								<p>{item.name}</p>	
-							</div>
-						{/each}
-					{/if}
+				{#if rasas && rasas.length > 0}
+					{#each rasas as item, i}
+						<div class="card-video" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
+							<iframe width=100% height=100% loading="lazy" src="https://www.youtube.com/embed/{item.videoid}" title={item.name}></iframe>
+							<p>{item.name}</p>	
+						</div>
+					{/each}
 				{/if}
 			</div>
+			{/if}
+			{#if selectedCategory[3]}
+			<div class="gridof4">
+				{#if kavitas && kavitas.length > 0}
+					{#each kavitas as item, i}
+						<div class="card-video" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
+							<iframe width=100% height=100% loading="lazy" src="https://www.youtube.com/embed/{item.videoid}" title={item.name}></iframe>
+							<p>{item.name}</p>	
+						</div>
+					{/each}
+				{/if}
+			</div>
+			{/if}
 			{#if selectedCategory[4]}
 				<div class="gridof5">
 					{#if kalas && kalas.length > 0}
@@ -191,20 +190,46 @@
 
 <style lang="sass">
 
+.modern-grid
+	display: flex
+	@media screen and (min-width: 1024px)
+		height: 100vh
+		flex-direction: row
+		column-gap: 64px
+		padding-top: 64px
+		.thin-col
+			width: 40%
+			row-gap: 16px
+		.thick-col
+			width: calc(60% - 32px)
+			p
+				margin-bottom: 16px
+	@media screen and (max-width: 1023px)
+		flex-direction: column
+		padding-top: 32px
+		padding-bottom: 32px
+		.thin-col
+			row-gap: 16px
+		.thick-col
+			padding-top: 24px
+			p
+				margin-bottom: 16px
+
+.thin-col
+	display: flex
+	flex-direction: column
+
 .marg
 	margin-bottom: 32px
 
 .x0
-	height: 100vh
 	overflow: hidden
-
-.x1
-	padding-top: 64px
-	padding-bottom: 64px
 	@media screen and (min-width: 1024px)
-		align-items: center
-		grid-template-columns: 1fr 36%
-		grid-template-areas: ". ."
+		height: 100vh
+	@media screen and (max-width: 1023px)
+		height: 60vh
+
+
 
 .x2
 	padding-bottom: 64px
@@ -235,6 +260,17 @@
 		align-items: center
 	h3
 		text-align: center
+
+.gridof4
+	padding-left: 0
+	padding-right: 0
+
+.card-video
+	@media screen and (max-width: 1023px)
+		height: 240px
+		width: 100%
+		iframe
+			height: 180px
 
 
 </style>

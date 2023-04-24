@@ -3,10 +3,18 @@
 	import { onMount, afterUpdate } from 'svelte'
   import { page } from '$app/stores'
 	import { scale } from 'svelte/transition'
+	import DropDown from '$lib/components/DropDown.svelte'
+	import StickyCols from '$lib/components/StickyCols.svelte'
+	import StickyCols2 from '$lib/components/StickyCols.svelte'
 	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import { courseContents, courseTakeaways, courseInstructor } from '$lib/utils/supapulls'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
 	let y:number
+	let isPads = true
+	let iW:number
+	let breakPoint:boolean
+	let isRev = false
+	let isRev2 = true
 	let dynamizer:any
 	let conts: any
 	let takes: any
@@ -28,6 +36,12 @@
 		}
 	}
 
+	$: if ( iW <= 1023 ) {
+		breakPoint = true
+	} else {
+		breakPoint = false
+	}
+
 	onMount(async() => {
 		dynamizer = $page.url.pathname.slice(16,50)
 		conts = await courseContents(dynamizer)
@@ -45,11 +59,11 @@
 
 </script>
 
-<svelte:window bind:scrollY={y}/>
+<svelte:window bind:scrollY={y} bind:innerWidth={iW}/>
 
 <svelte:head>
 	<HeadComponent>
-		Bṛhat Draṣṭā {data.name} at 
+		{data.name} | Bṛhat Draṣṭā at 
 	</HeadComponent>
 </svelte:head>
 
@@ -59,40 +73,54 @@
 			<h1 style="transform: translateY({-y/5}px)">{data.name}</h1>
 		</ParallaxImage>
 	</div>
-	<div class="title-box x1 pads">
-		<div class="a-title">
+	<StickyCols isPads={isPads} isRev={isRev}>
+		<div slot="holds" class="box" id="nonhighlight">
 			<h6>{data.status}</h6>
 			<h6>{data.datefrom}</h6>
-			<h6>{data.ins}</h6>
+			<h6> by {data.ins}</h6>
 		</div>
-		<div class="a-box secondlevel">
-			<h5 style="font-weight: 400; line-height: 1.3">
+		<div slot="scrolls">
+			<h5>
 				{data.content}
 			</h5>
-		</div>		
-	</div>
-	<div class="plain-one x2 pads">
-		<div class="boxr">
-			<h6 on:click={() => toggleArea(1)} on:keydown={fauxfake} class:selectedhead={area[1]}>Contents</h6>
-			<h6 on:click={() => toggleArea(2)} on:keydown={fauxfake} class:selectedhead={area[2]}>Takeaways</h6>
-			<h6 on:click={() => toggleArea(3)} on:keydown={fauxfake} class:selectedhead={area[3]}>Instructor</h6>
 		</div>
-		{#if area[1]}
-			{#if conts && conts.length > 0}
-				<div class="gridof4">
-				{#each conts as item, i}
-				<div class="card-c" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
-					<h6>{item.name}</h6>
-					{#if item.content && item.content.length > 0}
-					<p>{item.content}</p>
-					{/if}
+	</StickyCols>
+	<StickyCols2 isPads={isPads} isRev={isRev2}>
+		<div slot="holds" class="box" id="highlight">
+			{#if breakPoint}
+			<DropDown --thisbackground="var(--drash)" --thisdropdowntextcolor="var(--drash)">
+				<div slot="visible">
+					<h6 style="color: white">VIEW DETAILS:</h6>
 				</div>
-				{/each}
+				<div slot="invisible">
+					<h5 on:click={() => toggleArea(1)} on:keydown={fauxfake} class:selectedhead={area[1]}>Contents</h5>
+					<h5 on:click={() => toggleArea(2)} on:keydown={fauxfake} class:selectedhead={area[2]}>Takeaways</h5>
+					<h5 on:click={() => toggleArea(3)} on:keydown={fauxfake} class:selectedhead={area[3]}>Instructor</h5>
 				</div>
+			</DropDown>
+			{:else}
+			<h4 on:click={() => toggleArea(1)} on:keydown={fauxfake} class:selectedhead={area[1]}>Contents</h4>
+			<h4 on:click={() => toggleArea(2)} on:keydown={fauxfake} class:selectedhead={area[2]}>Takeaways</h4>
+			<h4 on:click={() => toggleArea(3)} on:keydown={fauxfake} class:selectedhead={area[3]}>Instructor</h4>
 			{/if}
-		{/if}
-		{#if area[2]}
-			{#if takes && takes.length > 0}
+		</div>
+		<div slot="scrolls">
+			{#if area[1]}
+				{#if conts && conts.length > 0}
+					<div class="gridof2">
+					{#each conts as item, i}
+					<div class="card-c" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
+						<h6>{item.name}</h6>
+						{#if item.content && item.content.length > 0}
+						<p>{item.content}</p>
+						{/if}
+					</div>
+					{/each}
+					</div>
+				{/if}
+			{/if}
+			{#if area[2]}
+				{#if takes && takes.length > 0}
 				<div class="gridof2">
 				{#each takes as item, i}
 				<div class="card-c" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
@@ -101,9 +129,9 @@
 				</div>
 				{/each}
 				</div>
+				{/if}
 			{/if}
-		{/if}
-		{#if area[3]}
+			{#if area[3]}
 			{#if dhits && dhits.length > 0}
 				<div class="plain-one">
 				{#each dhits as item, i}
@@ -119,12 +147,32 @@
 				{/each}
 				</div>
 			{/if}
-		{/if}
-	</div>
+			{/if}
+		</div>
+	</StickyCols2>
 </div>
 
 
 <style lang="sass">
+
+#nonhighlight
+	text-transform: uppercase
+	h6
+		color: var(--drash)
+
+#highlight h4
+	&:hover
+		color: var(--drash)
+		cursor: pointer
+
+#highlight
+	@media screen and (min-width: 1024px)
+		text-align: right
+	@media screen and (max-width: 1023px)
+		flex-direction: row
+		gap: 16px
+		padding-top: 4px
+		padding-bottom: 4px
 
 .x0
 	overflow: hidden
@@ -143,51 +191,7 @@
 	@media screen and (max-width: 1023px)
 		height: 60vh
 
-.x1
-	min-height: 100vh
-	padding-top: 64px
-	padding-bottom: 64px
-	@media screen and (min-width: 1024px)
-		min-height: 100vh
-		align-content: center
-
-.x1
-	padding-top: 64px
-	padding-bottom: 64px
-	.a-title
-		position: sticky
-		top: 0
-		padding-top: 80px
-		h6
-			background: var(--drash)
-			color: white
-			margin-bottom: 8px
-			padding: 8px
-			text-align: center
-			text-transform: uppercase
-	@media screen and (min-width: 1024px)
-		min-height: 100vh
-		align-content: center
-
-.x2
-	padding-bottom: 72px
-	.boxr
-		gap: 32px
-		border-bottom: 1px solid #ececec
-		border-top: 1px solid #ececec
-		justify-content: center
-		width: 100%
-		h6
-			cursor: pointer
-			text-transform: uppercase
-			padding: 4px 8px
-			&:hover
-				background: var(--drash)
-				color: white
-			@media screen and (max-width: 1023px)
-				font-size: 16px
-		h6.selectedhead
-			background: var(--drash)
-			color: white
+.type
+	padding-bottom: 120px
 
 </style>

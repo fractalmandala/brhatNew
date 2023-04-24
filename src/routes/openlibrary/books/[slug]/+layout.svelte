@@ -5,6 +5,7 @@
 	import { get, writable } from 'svelte/store'
 	import supabase from '$lib/utils/db'
 	import { fly } from 'svelte/transition'
+	import DropDown from '$lib/components/DropDownNested.svelte'
 
 	let y:number 
 	let height:number
@@ -112,61 +113,57 @@
 
 <svelte:window bind:innerWidth={width} bind:scrollY={y} bind:outerHeight={height}/>
 
-<div class="bolpaging">
+<div class="bolpaging type">
 	<div class="bolside" class:hiddenheader={isInvisible} class:expandhead={expandmenu}>
-		<div class="mobileicon" on:click={toggleMenu} on:keydown={fauxfake}>
-			<svg width="100%" height="100%" viewBox="0 0 49 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path d="M0.11328 9.24902L24.1133 33.249L48.1133 9.24902L39.1133 0.249022L24.1133 15.249L9.11328 0.249023L0.11328 9.24902Z" fill="white"/>
-			</svg>
-		</div>
-		{#if visibility}
-		<div class="filtration" class:filtrationborder={opencategory} style="display: flex; flex-direction: column; row-gap: 8px">
-			<div class="visible" on:click={togglecategory} on:keydown={fauxfake}>Select Category:</div>
-			{#if opencategory}
-				<p transition:fly={{ delay: 50 }} on:click={() => newcategory('Essentials')} on:keydown={fauxfake} class="{ category === 'Essentials' ? 'cats' : ''}">Essentials</p>
-				<p transition:fly={{ delay: 100 }} on:click={() => newcategory('Bodhas')} on:keydown={fauxfake} class="{ category === 'Bodhas' ? 'cats' : ''}">Two Bodhas</p>
-				<p transition:fly={{ delay: 150 }} on:click={() => newcategory('IKS')} on:keydown={fauxfake} class="{ category === 'IKS' ? 'cats' : ''}">IKS</p>
-				<p transition:fly={{ delay: 200 }} on:click={() => newcategory('Repository of Scripture')} on:keydown={fauxfake} class="{ category === 'Repository of Scripture' ? 'cats' : ''}">Scriptural</p>
-				<p transition:fly={{ delay: 200 }} on:click={() => newcategory('search')} on:keydown={fauxfake} class="{ category === 'search' ? 'cats' : ''}">Search Collection</p>
-			{/if}
-		</div>
-		{#if opensearchbar}
-			<form class="bolform">
-				<input type="text" bind:this={searchinput} on:input={(e) => {if(e && e.target) {searchStore.set(e.target.value)}}}>
-				<button on:click={searchWord} on:keydown={fauxfake}>Find</button>
-			</form>
-			{#if loadingStore}
-				<p>Loading...</p>
-			{/if}
-			{#if showResults}
-				{#if $resultsStore.length>0}
-					{#each $resultsStore as item, i}
-					<div transition:fly={{delay: i * 25}} on:click={toggleMenu} on:keydown={fauxfake}>
-						<p class="searchitem">
-							<a href="/openlibrary/books/{item.slug}">
-								{item.Text}
-							</a>
-						</p>
-					</div>
-					{/each}
+		<DropDown --thisbackground="var(--tree)" --thisdropdowntextcolor="var(--tree)">
+			<div slot="visible">
+				<h6 style="color: white">CATEGORY MENU</h6>
+			</div>
+			<div slot="invisible">
+				<h5 transition:fly={{ delay: 50 }} on:click={() => newcategory('Essentials')} on:keydown={fauxfake} class="{ category === 'Essentials' ? 'cats' : ''}">Essentials</h5>
+				<h5 transition:fly={{ delay: 100 }} on:click={() => newcategory('Bodhas')} on:keydown={fauxfake} class="{ category === 'Bodhas' ? 'cats' : ''}">Two Bodhas</h5>
+				<h5 transition:fly={{ delay: 150 }} on:click={() => newcategory('IKS')} on:keydown={fauxfake} class="{ category === 'IKS' ? 'cats' : ''}">IKS</h5>
+				<h5 transition:fly={{ delay: 200 }} on:click={() => newcategory('Repository of Scripture')} on:keydown={fauxfake} class="{ category === 'Repository of Scripture' ? 'cats' : ''}">Scriptural</h5>
+				<h5 transition:fly={{ delay: 200 }} on:click={() => newcategory('search')} on:keydown={fauxfake} class="{ category === 'search' ? 'cats' : ''}">Search Collection</h5>
+				{#if opensearchbar}
+					<form class="bolform" style="margin-top: 16px">
+						<input type="text" bind:this={searchinput} on:input={(e) => {if(e && e.target) {searchStore.set(e.target.value)}}}>
+						<button on:click={searchWord} on:keydown={fauxfake}>Find</button>
+					</form>
 				{/if}
-			{/if}
-		{:else}
-		<div class="visiblation" style="display: flex; flex-direction: column; row-gap: 4px">
-			{#if books && books.length > 0}
-				{#each books as item, i}
-					<div transition:fly={{delay: i * 25}} on:click={toggleMenu} on:keydown={fauxfake}>
-						<p>
-							<a href="/openlibrary/books/{item.slug}">
-								{item.Text}
-							</a>
-						</p>
-					</div>
-				{/each}
-			{/if}
-		</div>
-		{/if}
-		{/if}
+			</div>
+			<div slot="level2">
+				<div class="visiblation" style="display: flex; flex-direction: column; row-gap: 4px">
+					{#if books && books.length > 0}
+						{#each books as item, i}
+							<div transition:fly={{delay: i * 25}} on:click={toggleMenu} on:keydown={fauxfake}>
+								<p>
+									<a href="/openlibrary/books/{item.slug}">
+										{item.Text}
+									</a>
+								</p>
+							</div>
+						{/each}
+					{/if}
+					{#if loadingStore}
+						<p>Loading...</p>
+					{/if}
+					{#if showResults}
+						{#if $resultsStore.length>0}
+							{#each $resultsStore as item, i}
+								<div transition:fly={{delay: i * 25}} on:click={toggleMenu} on:keydown={fauxfake}>
+									<p class="searchitem">
+										<a href="/openlibrary/books/{item.slug}">
+											{item.Text}
+										</a>
+									</p>
+								</div>
+							{/each}
+						{/if}
+					{/if}
+				</div>
+			</div>
+		</DropDown>
 	</div>
 	<div class="bolmain">
 		<slot></slot>
@@ -208,16 +205,12 @@
 		grid-template-columns: 400px 1fr
 		grid-template-areas: "bolside bolmain"
 		gap: 0 64px
+		padding-top: 128px
+		padding-bottom: 128px
 		.bolmain
 			padding-right: 4vw
-			padding-top: 64px
-			padding-bottom: 64px
 		.bolside
 			padding-left: 48px
-			padding-top: 48px
-			padding-bottom: 48px
-			.mobileicon
-				display: none
 		.bolside.hiddenheader
 			transform: translateY(0px)
 		.bolside.expandhead
@@ -226,86 +219,25 @@
 		grid-template-rows: 64px auto
 		grid-template-columns: 1fr
 		grid-template-areas: "bolside" "bolmain"
-		padding-top: 0px
+		padding-top: 80px
 		.bolside
-			overflow-x: hidden
 			height: 48px
 			padding-left: 6vw
 			padding-right: 6vw
-			position: sticky
 			top: 64px
-			z-index: 999
 			transition: 0.34s ease
-			background: var(--tree)
-			.mobileicon
-				display: flex
-				flex-direction: row
-				width: 100%
-				height: 48px
-				justify-content: center
-				align-items: center
-				svg
-					height: 24px
-					object-fit: contain
-					width: 24px
-					transition: 0.34s ease
-		.bolside.hiddenheader
-			transform: translateY(-64px)
-			&:hover
-				transform: translateY(0px)
-		.bolside.expandhead
-			height: 100vh
-			background: white
-			.mobileicon
-				svg
-					transform: rotate(180deg)
-					path
-						fill: var(--tree)
 		.bolmain
 			padding-left: 6vw
 			padding-right: 6vw
 			padding-bottom: 64px
 
-.filtration
-	border-bottom: 1px solid #d7d7d7
-	margin-bottom: 16px
-	.visible
-		border-left: 4px solid var(--tree)
-		padding-left: 8px
-		margin-bottom: 8px
-		cursor: pointer
-		&:hover
-			text-decoration: underline
-	p
-		text-transform: uppercase
-		font-size: 18px
-		padding: 4px
-		cursor: pointer
-		&:hover
-			background: var(--tree)
-			color: white
-	p.cats
-		background: var(--tree)
-		color: white
-	@media screen and (max-width: 1023px)
-		.visible
-			border-left: 0
-			padding-left: 0
-			font-size: 20px
-		p
-			font-size: 20px
-
-.filtrationborder
-	padding-bottom: 16px
-
 .visiblation
-	p
-		color: #878787
-		font-size: 15px
-		padding: 4px
-		border-bottom: 1px solid #ececec
+	a
 		&:hover
 			color: var(--tree)
+	@media screen and (max-width: 1023px)
+		padding-top: 16px
+	
 
 .searchitem
 	color: #878787

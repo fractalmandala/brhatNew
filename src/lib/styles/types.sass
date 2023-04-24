@@ -55,9 +55,23 @@ small
 
 .boxmidrow
 	a, p
-		color: white
+		color: #676767
 		font-size: 14px
 		text-transform: uppercase
+		transition: all 0.08s ease
+		cursor: pointer
+		&:hover
+			color: #fe4a49
+
+.boxmidrow
+	.dropperp
+		color: #676767
+		font-size: 14px
+		text-transform: uppercase
+		transition: all 0.08s ease
+		cursor: pointer
+		&:hover
+			color: #fe4a49
 
 .type
 	.mainside h5
@@ -75,23 +89,8 @@ small
 		padding: 0
 		line-height: 1.8
 
-#dropper
-	.dropperp
-		margin-top: 4px
-
 .dropperp
 	height: max-content
-
-#dropper p
-	color: white
-	font-size: 14px
-	text-transform: uppercase
-
-
-.midrow
-	a, p
-		text-transform: uppercase
-		cursor: pointer
 
 .spacer
 	a
@@ -117,6 +116,12 @@ small
 			font-size: 10px
 		p, li
 			line-height: 1.2
+
+.type
+	.card-video
+		small
+			font-size: 14px
+			color: #878787
 
 .type
 	.card-a
@@ -253,6 +258,15 @@ caption
 			font-size: 20px
 		.mainbar h6
 			font-size: 20px
+		.mainbar h3
+			margin-bottom: 8px
+			margin-top: 24px
+		.mainbar blockquote
+			margin-bottom: 0
+			padding-bottom: 0
+			p
+				margin-bottom: 0
+				padding-bottom: 0
 
 
 .type.aryatext blockquote
@@ -368,7 +382,7 @@ caption
 		line-height: 1.48
 	.a-title h3
 		text-transform: uppercase
-		font-weight: 700
+		font-weight: 800
 	.a-title h4
 		text-transform: uppercase
 		font-weight: 700
@@ -423,14 +437,16 @@ caption
 			letter-spacing: -1px		
 	@media screen and (max-width: 575px)
 		p, pre, li
-			font-size: 1vw*$md
+			font-size: 1vw*3.6
 		h6
-			font-size: 1.414vw*$l2
+			font-size: 1.414vw*3.2
+			font-weight: 600
+			letter-spacing: -0.1px
 		h5
 			font-size: 2vw*2.4
 			font-weight: 400
 		h4
-			font-size: 2.8vw*$l3
+			font-size: 2.8vw*$md
 		.onpagelinks h4
 			font-size: 2.8vw*$l3
 		.a-title.boxr h4
@@ -540,3 +556,30 @@ caption
 		color: #272727
 		font-size: 22px
 		letter-spacing: -1px
+
+.dropdown
+	@media screen and (max-width: 1023px)
+		.spaced
+			h6
+				color: #878787
+				padding-top: 64px
+				margin-bottom: 32px
+		h5
+			font-weight: 600
+			color: #474747
+			padding: 8px 0
+			transition: 0.04s ease
+			border-bottom: 1px solid #ececec
+			cursor: pointer
+			&:hover
+				color: var(--thisdropdowntextcolor)
+	@media screen and (min-width: 1024px)
+		h5
+			font-weight: 500
+			color: #474747
+			padding: 8px 0
+			transition: 0.04s ease
+			border-bottom: 1px solid #ececec
+			cursor: pointer
+			&:hover
+				color: var(--thisdropdowntextcolor)

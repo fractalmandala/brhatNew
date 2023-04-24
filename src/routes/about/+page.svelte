@@ -189,13 +189,13 @@
 			<h4><a href="/about/#team">TEAM</a></h4>
 		</div>
 	</div>
-	<div class="title-box x5 pads" id="advisors">
+	<div class="title-box x5 pads">
 		<div class="a-title">
 			<h4>
 				Advisors
 			</h4>
 		</div>
-		<div class="a-box gridof4">
+		<div class="a-box gridof4" id="advisors">
 			{#if advisors && advisors.length > 0}
 			{#each advisors as item}
 			<div class="card-a">
@@ -211,13 +211,13 @@
 			{/if}
 		</div>
 	</div>
-	<div class="title-box x6 pads" id="partners">
+	<div class="title-box x6 pads">
 		<div class="a-title">
 			<h4>
 				Partners
 			</h4>
 		</div>
-		<div class="a-box gridnew">
+		<div class="a-box gridnew" id="partners">
 		{#if partners && partners.length > 0}
 			{#each partners as item}
 				<div class="box">
@@ -229,22 +229,24 @@
 		{/if}
 		</div>
 	</div>
-	<div class="title-box x7 pads" id="team">
+	<div class="title-box x7 pads">
 		<div class="a-title">
 			<h4>
-				Team
+				Team {alignGrid}
 			</h4>
 		</div>
-		<div class="a-box gridof3" class:calibrated={alignGrid}>
+		<div class="a-box gridof3" class:calibrated={alignGrid} id="team">
 			{#if team && team.length > 0}
 				{#each team as item, i}
 					<div class="card-a teamcard" class:openedcard={authorCardOn[i]} on:click={scrollToTeam} on:keydown={fauxfake}>
 						<div class="card-image">
 							<img src={item.image} alt={item.id}/>
+							<div>
+								<h6>{item.name}</h6>
+								<small>{item.title}</small>
+							</div>
 						</div>
 						<div class="card-body">
-							<h6>{item.name}</h6>
-							<small>{item.title}</small>
 							<p>{item.bio}</p>
 							{#if item.name === 'Pankaj Saxena'}
 								<cite on:click={() => openAuthorCard(i)} on:keydown={fauxfake}>Writings by Pankaj</cite>
@@ -309,16 +311,15 @@
 		font-style: normal
 		text-align: right
 		text-transform: uppercase
-		background: #676767
 		color: white
 		font-size: 12px
 		padding: 4px 8px
 		width: 200px
 		align-self: end
 		cursor: pointer
+	small
+		color: #878787
 	img
-		filter: saturate(0.01)
-		transform: scale(0.8)
 		transform-origin: bottom right
 		transition: 0.43s ease
 	.card-body
@@ -335,6 +336,21 @@
 		cite
 			background: #fe4a49
 			padding: 8px
+	@media screen and (min-width: 1024px)
+		h6, small
+			text-align: right
+		img
+			filter: saturate(0.01)
+			transform: scale(0.8)
+		cite
+			background: #676767
+		&:hover
+			cite
+				background: #fe4a49
+	@media screen and (max-width: 1023px)
+		cite
+			background: #fe4a49
+			
 
 .firstcard
 	@media screen and (min-width: 1024px)
@@ -408,21 +424,46 @@
 	
 .x7
 	padding-bottom: 64px
-	.card-a
-		.card-image
-			@media screen and (min-width: 1024px)
+	@media screen and (min-width: 1024px)
+		.card-a
+			justify-content: flex-start
+			display: flex
+			flex-direction: column
+			.card-image
 				display: flex
 				flex-direction: column
 				align-items: center
+				height: 240px
+				justify-content: space-between
+				padding: 0
 				img
-					width: 160px
+					width: 180px
+					height: 180px
+					object-fit: cover
 					margin-left: auto
 					margin-right: auto
-			@media screen and (max-width: 1023px)
-				height: 112px
+					border-radius: 80px
+					margin-bottom: 16px
+	@media screen and (max-width: 1023px)
+		.card-a
+			flex-direction: column
+			display: flex
+			padding: 0
+			background: white
+			row-gap: 16px
+			.card-image
+				display: flex
+				flex-direction: row
+				width: 100%
+				align-items: center
+				gap: 16px
+				min-height: 112px
 				img
 					width: 112px
 					height: 112px
+					border-radius: 56px
+			.card-body
+				width: 100%
 
 .card-row
 	@media screen and (min-width: 1024px)
@@ -439,6 +480,13 @@
 .gridof3.calibrated
 	@media screen and (min-width: 1024px)
 		grid-template-areas: "opentab opentab openedcard" ". . ."
+		grid-template-rows: auto auto
+		.opentab
+			grid-area: opentab
+		.teamcard.card-a.openedcard
+			grid-area: openedcard
+	@media screen and (max-width: 1023px)
+		grid-template-areas: "opentab" "openedcard" "."
 		grid-template-rows: auto auto
 		.opentab
 			grid-area: opentab

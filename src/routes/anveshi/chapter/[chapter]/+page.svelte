@@ -2,6 +2,8 @@
 
 	import { onMount, afterUpdate } from 'svelte'
 	import HeadComponent from '$lib/components/HeadComponent.svelte'
+	import StickyCols from '$lib/components/StickyCols.svelte'
+	import StickyCols2 from '$lib/components/StickyCols.svelte'
 	import { scale } from 'svelte/transition'
 	import { chapterItinerary } from '$lib/utils/supapulls'
 	import { chapterTemples } from '$lib/utils/supapulls'
@@ -9,6 +11,9 @@
 
 	let p:number
 	let alignGrid = false
+	let isPads = true
+	let isRev = false
+	let isRev2 = true
 	let chapter:string 
 	let itins:string|any[]
 	let openedDay:boolean[] = Array(5).fill(false)
@@ -83,26 +88,26 @@
 			<h1 style="transform: translateY({-p/5}px)">{data.name}</h1>
 		</ParallaxImage>
 	</div>
-	<div class="title-box x1 pads">
-		<div class="a-title">
-			<h6>{data.duration}</h6>
-			<h6>{data.dates}</h6>
-			<h6>{data.price}</h6>
+	<StickyCols isPads={isPads} isRev={isRev}>
+		<div slot="holds" class="box">
+			<h6 style="color: var(--yellow)">{data.duration}</h6>
+			<h6 style="color: var(--yellow)">{data.dates}</h6>
+			<h6 style="color: var(--yellow)">{data.price}</h6>
 		</div>
-		<div class="a-box secondlevel">
-			<h5 style="font-weight: 400; line-height: 1.3">
+		<div slot="scrolls">
+			<h5>
 				{data.content}
 			</h5>
 		</div>
-	</div>
-	<div class="plain-one x2 pads">
-		<div class="a-title boxr">
+	</StickyCols>
+	<StickyCols2 isPads={isPads} isRev={isRev2}>
+		<div slot="holds" class="box" id="highlight">
 			<h4 on:click={() => toggleArea(1)} on:keydown={fauxfake} class:selectedhead={area[1]}>Itinerary</h4>
 			<h4 on:click={() => toggleArea(2)} on:keydown={fauxfake} class:selectedhead={area[2]}>Temples</h4>
 		</div>
-		<div class="a-box box extra">
+		<div slot="scrolls">
 			{#if area[1]}
-				<div class="gridof3" class:calibrated={alignGrid}>
+				<div class="gridof4 onefour" class:calibrated={alignGrid}>
 					{#if itins && itins.length > 0}
 						{#each itins as item, i}
 							{#if openedDay[i]}
@@ -124,7 +129,7 @@
 				</div>
 			{/if}
 			{#if area[2]}
-				<div class="gridof4 by2" class:calibrated={alignGrid}>
+				<div id="templegrid" class="gridof4 by2 twofour" class:calibrated={alignGrid}>
 					{#if temp && temp.length > 0}
 						{#each temp as item, i}
 							{#if imageDetail[i]}
@@ -148,26 +153,62 @@
 				</div>
 			{/if}
 		</div>
-	</div>
+	</StickyCols2>
 </div>
 
 <style lang="sass">
 
-.gridof3.calibrated
+.type
+	padding-bottom: 120px
+
+#highlight h4
+	&:hover
+		color: var(--yellow)
+		cursor: pointer
+
+#highlight
+	@media screen and (max-width: 1023px)
+		flex-direction: row
+		gap: 16px
+		border-top: 1px solid #ececec
+		padding-top: 4px
+		border-bottom: 1px solid #ececec
+		padding-bottom: 4px
+
+
+.onefour
+	h6, h5
+		cursor: pointer
+
+.onefour.calibrated.gridof4
 	@media screen and (min-width: 1024px)
 		grid-template-areas: "opentab opentab opentab" ". . ."
 		grid-template-rows: auto auto
+		grid-template-columns: 1fr 1fr 1fr
 		.opentab
 			grid-area: opentab
 
-.gridof4.calibrated
+.twofour.calibrated
 	@media screen and (min-width: 1024px)
 		grid-template-areas: "opentab opentab opentab opentab" ". . . ."
 		grid-template-rows: auto auto
 		.card-row.opentab
 			grid-area: opentab
 
-.gridof4.by2.calibrated
+
+.twofour.by2.calibrated.gridof4
+	@media screen and (min-width: 1024px)
+		grid-template-areas: "opentab opentab opentab opentab" ". . . ."
+		grid-template-rows: auto
+		.card-row.opentab
+			grid-area: opentab
+			gap: 48px
+			margin-bottom: 32px
+			.card-image
+				width: 40%
+				height: 240px
+			.card-body
+				width: calc(60% - 48px)
 	@media screen and (max-width: 1023px)
 		grid-template-areas: "opentab opentab" ". ."
 		grid-template-rows: auto auto
@@ -178,28 +219,22 @@
 				width: 100%
 			.card-image
 				height: 240px
+				
 
-.gridof4.by2
-	.card-row
-		.card-image
-			height: 120px
+.twofour.gridof4.by2
+	img
+		object-fit: cover
+		width: 100%
+		height: 100%
+	.card-c
+		padding: 0
+		cursor: pointer
+	gap: 16px
+
+	
 
 .x2
-	.boxr
-		border-top: 1px solid #ececec
-		justify-content: center
-		width: 100%
-		gap: 64px
-	h4
-		padding: 2px 16px
-		cursor: pointer
-		&:hover
-			background: var(--yellow)
-			color: white
-	h4.selectedhead
-		background: var(--yellow)
-		color: white
-	.gridof3
+	.gridof4.onefour
 		.card-c
 			cursor: pointer
 		.card-c.opentab
@@ -209,14 +244,6 @@
 			h5
 				color: var(--yellow)
 		
-
-.card-c
-	flex-shrink: 0
-	row-gap: 24px
-	img
-		object-fit: cover
-		width: 100%
-		height: 240px
 
 .x0
 	overflow: hidden
@@ -236,35 +263,6 @@
 		@media screen and (max-width: 1023px)
 			width: 100%
 			margin-top: 60%
-
-.x1
-	padding-top: 64px
-	padding-bottom: 64px
-	.a-title
-		position: sticky
-		top: 0
-		h6
-			background: var(--yellow)
-			color: white
-			margin-bottom: 8px
-			padding: 8px
-			text-align: center
-	@media screen and (min-width: 1024px)
-		min-height: 100vh
-		align-content: center
-		.a-title
-			padding-top: 80px
-	@media screen and (max-width: 1023px)
-		padding-top: 32px
-
-.x2
-	padding-bottom: 64px
-	@media screen and (min-width: 1024px)
-		align-content: center
-		gap: 32px
-		.gridof4
-			.card-c
-				padding: 0
 
 
 </style>

@@ -2,6 +2,7 @@
 
 	import { onMount } from 'svelte'
 	import { mandalaAll } from '$lib/utils/localpulls'
+	import RevealH1 from '$lib/components/RevealH1.svelte'
 	import HeadComponent from '$lib/components/HeadComponent.svelte'
 
 	let fractals:any
@@ -34,74 +35,40 @@
 <svelte:window bind:innerWidth={wide}/>
 
 <div class="type brhattext">
-	<div class="x2">
-		<div class="sidebar" class:mobileSidebar={mobileView}>
-			<div class="box">
-				<p><a href="/about/svatahsiddha">Svataḥsiddha</a></p>
-				<p><a href="/about/anatomy">Anatomy of a Civilizational Moment</a></p>
-				<p><a href="/about/whatkrishnameanstous">What Śrī Kṛṣṇa Means to Us</a></p>
-				<p><a href="/about/namelogo">Nāmarūpa - Name and Logo</a></p>
-				<p><a href="/about/values">Pratijñā - Values</a></p>
-				<p><a href="/about/#advisors">Advisors</a></p>
-				<p><a href="/about/#partners">Partners</a></p>
-				<p><a href="/about/#team">Team</a></p>
-			</div>
-		</div>
-		<div class="mainbar">
-			<h2 style="letter-spacing: -2px; font-weight: 600">
-				{data.title}
-			</h2>
-			<svelte:component this={data.content}/>
-		</div>
+	<RevealH1>
+	<h3>
+		{data.title}
+	</h3>
+	</RevealH1>
+	<div class="mainbar">
+		<svelte:component this={data.content}/>
 	</div>
 </div>
 
 <style lang="sass">
 
-
-.x2
-	display: grid
-	grid-auto-flow: row
-	grid-template-rows: auto
-	.sidebar
-		grid-area: sidebar
-	.mainbar
-		grid-area: mainbar
+.type
 	@media screen and (min-width: 1024px)
-		grid-template-columns: 280px 1fr
-		grid-template-areas: "sidebar mainbar"
-		padding: 0px 16vw 64px 4vw
-		gap: 0 8vw
+		padding-top: 160px
+		padding-bottom: 120px
+		h3
+			border-left: 104px solid #fe4a49
+			padding-left: 16px
+			font-weight: 600
 		.mainbar
-			padding-top: 80px
-			h2
-				padding-bottom: 32px
-				border-bottom: 1px solid #e1e1e1
-				margin-bottom: 64px
+			padding-left: 120px
+			padding-right: 32vw
 	@media screen and (max-width: 1023px)
-		grid-template-columns: 1fr
-		grid-template-areas: "sidebar" "mainbar"
-		padding: 64px 6vw
-		gap: 32px 0
-
-.sidebar .box
-	height: max-content
-	position: sticky
-	top: 144px
-	padding-top: 24px
-	row-gap: 4px
-	p
-		&:hover
-			color: #fe4a49
-
-.sidebar.mobileSidebar
-	position: sticky
-	top: 0
-	height: 64px
-	overflow: hidden
-	background: white
-	.box
-		padding-top: 8px
+		padding-top: 120px
+		padding-bottom: 120px
+		h3
+			border-left: 12px solid #fe4a49
+			padding-left: 12px
+			font-weight: 600
+			margin-bottom: 64px
+		.mainbar
+			padding-left: 24px
+			padding-right: 24px
 
 
 </style>

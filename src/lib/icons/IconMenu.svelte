@@ -15,7 +15,7 @@
 .topline, .midline, .botline
 	height: 4px
 	width: 22px
-	background: white
+	background: #575757
 
 .topline
 	transform-origin: left top
