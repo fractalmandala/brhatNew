@@ -1,6 +1,6 @@
 ---
 title: mathurā
-tag: places
+tag: 1
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim21.webp
 snip: "Mathura gives us a strategic advantage.  If we can cross the Yamuna from there, we cut the Bharata Kingdom in half.  No matter how the war goes, Mathura must be held."
 ---

@@ -1,6 +1,8 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
+	import { draw } from 'svelte/transition'
+	import { quintOut } from 'svelte/easing'
 	import { fly } from 'svelte/transition'
 	import { backIn, backOut, quintIn } from 'svelte/easing'
 	import IconMenu from '$lib/icons/IconMenu.svelte'
@@ -14,6 +16,7 @@
 
 	export let sidebar:boolean
 	let y:number
+	let circleIt:boolean = false
 	let height:number
 	let isInvisible = false
 	let mouseY:number
@@ -21,6 +24,10 @@
 	let iW:number
 	let breakPoint:boolean
 	let fake = false
+	
+	function toggleCircle(){
+		circleIt = !circleIt
+	}
 
 	function fauxfake(){
 		fake = !fake
@@ -179,30 +186,26 @@
 	<div class="midrow">
 		<slot name="local"></slot>
 	</div>
-	{#if !breakPoint}
-	<div class="search">
-		<Search/>
-	</div>
-	{/if}
-	<div class="menuicon" on:click={toggleSidebar} on:keydown={handleKeyDownEvent}>
-		<IconMenu expanded={sidebar}/>
+	<div class="menuicon" on:click={toggleSidebar} on:keydown={handleKeyDownEvent} on:mouseenter={toggleCircle} on:mouseleave={toggleCircle}>
+		Our Cosmos
+		<div id="menumainx" class:rotated={sidebar}>
+			<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M16.7747 11.795C15.7418 12.8549 15.7418 14.5731 16.7747 15.633L21.5164 20.4998L16.7747 25.3666C15.7418 26.4266 15.7418 28.1448 16.7747 29.2047C17.2906 29.7354 17.9678 30 18.645 30C19.3222 30 19.9994 29.7354 20.5152 29.2047L29 20.4998L20.5152 11.795C19.4835 10.735 17.8064 10.735 16.7747 11.795Z" fill="white"/>
+				{#if circleIt}
+				<path 
+					transition:draw={{ duration: 500, easing: quintOut }}
+					d="M41 21C41 32.0457 32.0457 41 21 41C9.95431 41 1 32.0457 1 21C1 9.95431 9.95431 1 21 1C32.0457 1 41 9.95431 41 21Z" stroke="white" stroke-width="2"/>
+				{/if}
+			</svg>
+		</div>
 	</div>
 </div>
 {#if sidebar}
 	<div class="appsidebar" in:fly={{ duration: 500, x: 400, y: 0}} out:fly={{ duration: 500, x: 400, y: 0}} data-lenis-prevent on:mouseleave={closeSidebar}>
 		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
-				<h5><a href="/dhiti">Dhīti</a></h5>
-			{/if}
-		</div>
-		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
-			{#if sidebar}
-				<h5><a href="/openlibrary">Bṛhat Open Library</a></h5>
-			{/if}
-		</div>
-		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
-			{#if sidebar}
-				<h5><a href="/mrdanga">Bṛhad Mṛdaṅga</a></h5>
+				<h5><a href="/drashta">Bṛhat Draṣṭā</a></h5>
+				<DrashtaLinks flytime={sidebar}/>
 			{/if}
 		</div>
 		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
@@ -213,8 +216,17 @@
 		</div>
 		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
-				<h5><a href="/drashta">Bṛhat Draṣṭā</a></h5>
-				<DrashtaLinks flytime={sidebar}/>
+				<h5><a href="/mrdanga">Bṛhad Mṛdaṅga</a></h5>
+			{/if}
+		</div>
+		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
+			{#if sidebar}
+				<h5><a href="/dhiti">Dhīti</a></h5>
+			{/if}
+		</div>
+		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
+			{#if sidebar}
+				<h5><a href="/openlibrary">Bṛhat Open Library</a></h5>
 			{/if}
 		</div>
 		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
@@ -245,6 +257,19 @@
 {/if}
 
 <style lang="sass">
+
+#menumainx
+	height: 24px
+	width: 28px
+	display: flex
+	flex-direction: column
+	cursor: pointer
+	transform-origin: center center
+	transition: transform 0.2s ease
+
+#menumainx.rotated
+	transform: rotate(180deg)
+	margin-left: 8px
 
 .linksbox
 	display: flex
@@ -319,7 +344,7 @@
 	top: 0
 	transition: 0.5s ease
 	@media screen and (min-width: 900px)
-		grid-template-columns: 220px  1fr 256px 40px
+		grid-template-columns: 220px 1fr 160px
 		grid-template-rows: 1fr
 		grid-template-areas: "applogo midrow search menuicon"
 		height: 72px
@@ -370,21 +395,15 @@
 	@media screen and (max-width: 899px)
 		display: none
 
-.search
-	grid-area: search
+.menuicon
+	grid-area: menuicon
 	display: flex
 	flex-direction: row
 	align-items: center
 	justify-content: flex-end
-	position: relative
-
-.menuicon
-	grid-area: menuicon
-	display: flex
-	flex-direction: column
-	align-items: flex-end
-	justify-content: center
-	width: 40px
+	width: 160px
+	color: white
+	text-transform: uppercase
 	@media screen and (max-width: 899px)
 		height: 64px
 

@@ -1,6 +1,6 @@
 ---
 title: pratiṣṭhāna
-tag: places
+tag: 1
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim25.webp
 snip: "It is a sight to behold, my son.  The waters of Ganga and Yamuna fight with each other, their dividing lines clearly visible.  Then as you row further downstream, you can see the Ganga slowly winning, its waters conquering the eddies.  By the banks of this confluence I have settled my people; your people."
 ---

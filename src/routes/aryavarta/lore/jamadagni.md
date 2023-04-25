@@ -1,5 +1,6 @@
 ---
 title: jamadagni ānava
+tag: 1
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim32.webp
 snip: "The Veda captures only a glimpse of our culture- much like the play of light that reveals silhouettes and shadows, but not the real thing.  People in the future may well look at our Veda and see us as nothing more than Deva-worshipping, cattle-stealing nomads. Our knowledge will be decipherable only in the context of our history."
 ---

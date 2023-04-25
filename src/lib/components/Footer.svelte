@@ -1,7 +1,7 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
-
+	import Modal from '$lib/components/Modal.svelte'
 	import AboutLinks from '$lib/links/AboutLinks.svelte'
 	import AnveshiLinks from '$lib/links/AnveshiLinks.svelte'
 	import AryavartaLinks from '$lib/links/AryavartaLinks.svelte'
@@ -12,6 +12,15 @@
 
 	let fake:boolean = false
 	let active:boolean = true
+	let isModal = false
+
+	function toggleModal(){
+		isModal = !isModal
+	}
+
+	$: if (!isModal) {
+		isModal = false
+	}
 
 	function fauxfake(){
 		fake = !fake
@@ -50,7 +59,7 @@
 			</div>
 		</div>
 		<div class="spacer">
-			<p class="mainlinks">Contact Us</p>
+			<p class="mainlinks" on:click={toggleModal} on:keydown={fauxfake}>Contact Us</p>
 			<a class="mainlinks" href="/dhiti">Dhīti</a>
 			<a class="mainlinks" href="/openlibrary">Bṛhat Open Library</a>
 			<a class="mainlinks" href="/mrdanga">Bṛhad Mṛdaṅga</a>
@@ -82,8 +91,14 @@
 		<small><a href="/about/privacy" style="color: white">Privacy</a> | contact@brhat.in</small>
 	</div>
 </div>
+{#if isModal}
+<Modal modalOpen={isModal}></Modal>
+{/if}
 
 <style lang="sass">
+
+.mainlinks
+	cursor: pointer
 
 .footer
 	display: grid

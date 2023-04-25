@@ -1,15 +1,19 @@
 <script lang="ts">
 
+	import { onMount } from 'svelte'
 	import { fly } from 'svelte/transition'
 	import { quadOut } from 'svelte/easing'
 	import IconClose from '$lib/icons/IconClose.svelte'
-	let modalOpen:boolean = true
+
 
 	function closeModal(){
 		if ( modalOpen === true ) {
 			modalOpen = false
 		}
 	}
+
+	export let modalOpen:boolean
+
 
 </script>
 
@@ -37,9 +41,11 @@
 	flex-direction: column
 	align-items: center
 	justify-content: center
-	width: 100%
-	height: 100%
+	width: 100vw
+	height: 100vh
+	z-index: 1300
 	backdrop-filter: blur(8px)
+	background: rgba(0,0,0,0.2)
 	.extra
 		width: 60%
 		height: 80%

@@ -1,6 +1,6 @@
 ---
 title: sūryavanśa
-tag: sūryavanśa
+tag: 3
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim18.webp
 snip: "I look to the great and first true King- Ikshvaku.  I have learnt much from him, and I continue to turn to his stories for counsel.  In battle or at home, as a leader of warriors and a ruler of cities- Ikshvaku is my inspiration.  There can be no other man like him, a true scion of the Solar dynasty."
 ---

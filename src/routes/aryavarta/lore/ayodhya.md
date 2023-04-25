@@ -1,6 +1,6 @@
 ---
 title: ayodhya
-tag: places
+tag: 3
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim20.webp
 snip: "Sanskrit has always been a very complex code.  The existence of dozens of Prakrits has made any sort of uniform syntax near impossible.  What means “Bhagiratha brought the Suryavanshi to the Ganga” in one Prakrit becomes “Bhagiratha brought the Ganga to the Suryavanshi” in another."
 ---

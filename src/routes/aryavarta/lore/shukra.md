@@ -1,6 +1,6 @@
 ---
 title: śukra
-tag: ṛṣis
+tag: 2
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim11.webp
 snip: "I am lost without an answer to this, acharya.  There is no credibility to the name of Karusaka here.  Among the brothers of Ikshvaku his named is remembered last, and sometimes not even listed.  What do I do?  How do I venture out of this forest and find people who accept my rule?  There are Purus, Bharatas and Yadavas all around us.  My people will be decimated by them in a flash."
 ---

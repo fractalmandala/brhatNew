@@ -1,6 +1,6 @@
 ---
 title: pūru
-tag: pūrus
+tag: 2
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim11.webp
 snip: "Look at the sky.  What shape is the sun? It is round, father. And at night, in what shape does the moon shine?<br>Spherical, like the sun.<br>And what is the shape of the shadow this earth casts during a lunar eclipse?<br>Spherical again, father. hen how is our earth shaped, son?"
 ---

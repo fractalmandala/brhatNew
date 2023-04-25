@@ -1,6 +1,6 @@
 ---
 title: Ikṣvāku
-tag: cakravartins
+tag: 3
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim13.webp
 snip: "As a child, you see your father going to war, and in adulthood the father stays back in aged, weary concern.  I do not begrudge losing out on one side of that experience.  Maybe one day, women will fight war just as men.  But my daughter will not be the first in that list."
 ---

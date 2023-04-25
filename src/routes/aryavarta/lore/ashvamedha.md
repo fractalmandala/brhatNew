@@ -1,6 +1,6 @@
 ---
 title: aśvamedha
-tag: bhāratas
+tag: 3
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim10.webp
 snip: "I am a man of the Vasishtha School, young Puru.  My knowledge, my lore comes from that great branch of learning.  If you subscribe to my rituals, if you sing my compositions, you will add your name to the list of Kings that begins with Ikshvaku himself."
 ---

@@ -1,6 +1,6 @@
 ---
 title: viśvāmitra
-tag: ṛṣi
+tag: 3
 image: https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/soachapter2/30.webp
 snip: "his is the war for Aryavarta, young Puru.  Who holds greater claim?  Whose side do the Devas favour?  And who owns the true Veda?  Every death, every victory and every battle will be for the right to answer these questions for all progeny of this land."
 ---

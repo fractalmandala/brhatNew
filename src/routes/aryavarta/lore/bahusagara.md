@@ -1,6 +1,6 @@
 ---
 title: bahusāgara
-tag: sūryavanśa
+tag: 1
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim36.webp
 snip: "There is place for only one tribe in Aryavarta.  Even the Suryavansha must be ousted one day, there is no other way.  The borders of Bharatvarsha must become congruous with those of Aryavarta."
 ---

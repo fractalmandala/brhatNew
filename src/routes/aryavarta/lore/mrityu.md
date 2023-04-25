@@ -1,6 +1,6 @@
 ---
 title: mṛtyu
-tag: cakravartins
+tag: 1
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim34.webp
 snip: "The rebellion of his brothers hardened Ikshvaku, turning a humble, kind King into a harsh, cold ruler. And nowhere did his new manifestation fall as sharply as on his second son Nimi."
 ---

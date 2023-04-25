@@ -1,6 +1,6 @@
 ---
 title: pitra and putra
-tag: bhāratas
+tag: 1
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim14.webp
 snip: "Avisari, Rajavasa, Vinasana and Pratisthana- these were the great cities of ancient Aryavarta.  Not even Sivobheda or Videha ever matched their glory.  But the grandest of old Aryavarta cities were eclipsed by the Bharata capitals- Kashi and Prayaga.  Their wealth, power, and stability forever changed Aryavarta."
 ---

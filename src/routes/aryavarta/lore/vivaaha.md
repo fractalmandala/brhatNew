@@ -1,6 +1,6 @@
 ---
 title: vivāha
-tag: sūryavanśa
+tag: 1
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim26.webp
 snip: "This marital alliance makes sense. The Apsaras are a fierce and valiant tribe.  What’s more, they are sworn enemies to the Gandharvas. This marriage will bring us the strength of untold thousands from beyond the Himalaya."
 ---

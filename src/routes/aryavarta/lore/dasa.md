@@ -1,6 +1,6 @@
 ---
 title: dāsa
-tag: cakravartins
+tag: 1
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim20.webp
 snip: "Aryavarta has made friends of us, there will be no more war between us.  We can finally look to a better future, a world where our cities do not cower under the fear of Suryavanshi attack.  We are both Aryas, we should both look westward."
 ---

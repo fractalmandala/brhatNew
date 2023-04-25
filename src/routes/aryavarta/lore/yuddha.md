@@ -1,6 +1,6 @@
 ---
 title: yuddha
-tag: bhāratas
+tag: 1
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim02.webp
 snip: "Today we are friends and family, but our descendants might not look upon each other as that.  We must set a precedent, you and I.  There are enough enemies around us, and our dynasties need to be allies in the combined protection of Aryavarta."
 ---

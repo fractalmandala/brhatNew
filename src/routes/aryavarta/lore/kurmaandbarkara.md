@@ -1,6 +1,6 @@
 ---
 title: kurma and barkara
-tag: ṛṣis
+tag: 1
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim31.webp
 snip: "The great Bharata Kings are long gone.  It has been centuries since we had a King to match the glory of an Ajamidha or Brhat.  But Sudasa is different, in him I see the signs of a great ruler.  It is only a matter of time before the Suryavanshi also birth someone to regain their lost valour."
 ---

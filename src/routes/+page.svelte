@@ -301,7 +301,7 @@
 	</div>
 	<div class="title-box x2 pads">
 		<div class="a-title">
-			<h4 style="transform: translateY({calib/6}px)">New and Recent</h4>
+			<h4 style="transform: translateY({calib/6}px)">Latest at Bṛhat</h4>
 		</div>
 		<div class="strip" bind:this={X}></div>
 		<div class="a-box gridof3">
@@ -316,6 +316,64 @@
 							</p>
 						</div>
 					</WhiteCard>
+				{/each}
+			{/if}
+		</div>
+	</div>
+	<div class="title-box h7 pads">
+		<div class="a-title">
+			<h4>Bṛhat Draṣṭā</h4>
+		</div>
+		<div class="a-box gridof3">
+			{#if courses && courses.length > 0}
+				{#each courses as item}
+					<div class="card-a">
+						<div class="card-image">
+							<img src={item.image} alt={item.id}/>
+						</div>
+						<div class="card-body">
+								<h5 style="font-weight: bold; text-transform: capitalize"><a href="/drashta/course/{item.course}">{item.name}</a></h5>
+							<p>with {item.ins}</p>
+							<div class="cardothers">
+								<small style="color: var(--drash)">{item.status}</small>
+								<small style="color: #878787">{item.datefrom}</small>
+							</div>
+						</div>
+					</div>
+				{/each}
+			{/if}
+		</div>
+	</div>
+	<div class="title-box x6 pads">
+		<div class="a-title">
+			<h4>Bṛhat Anveṣī</h4>
+		</div>
+		<div class="a-box gridof3">
+			{#if chapters && chapters.length > 0}
+				{#each chapters as item}
+					<div class="card-a">
+						<div class="card-image">
+							<img src={item.image} alt={item.id}/>
+						</div>
+						<div class="card-body"> 
+							<h5 style="font-weight: bold">
+									<a href="/anveshi/chapter/{item.chapter}">
+										{item.name}
+									</a>
+								</h5>
+								<p>
+									{item.content.slice(0,300)}...<span style="color: var(--yellow); font-weight: bold"><a href="/anveshi/chapter/{item.chapter}">Know More</a></span>
+								</p>
+								<div class="cardothers">
+									<small style="color: var(--yellow)">
+										{item.duration}
+									</small>
+									<small style="color: var(--yellow)">
+										{item.dates}
+									</small>
+								</div>
+							</div>
+						</div>
 				{/each}
 			{/if}
 		</div>
@@ -377,64 +435,6 @@
 								<small>{item.meta.category}</small>
 							</div>
 						</div>	
-					</div>
-				{/each}
-			{/if}
-		</div>
-	</div>
-	<div class="title-box x6 pads">
-		<div class="a-title">
-			<h4>Bṛhat Anveṣī</h4>
-		</div>
-		<div class="a-box gridof3">
-			{#if chapters && chapters.length > 0}
-				{#each chapters as item}
-					<div class="card-a">
-						<div class="card-image">
-							<img src={item.image} alt={item.id}/>
-						</div>
-						<div class="card-body"> 
-							<h5 style="font-weight: bold">
-									<a href="/anveshi/chapter/{item.chapter}">
-										{item.name}
-									</a>
-								</h5>
-								<p>
-									{item.content.slice(0,300)}...<span style="color: var(--yellow); font-weight: bold"><a href="/anveshi/chapter/{item.chapter}">Know More</a></span>
-								</p>
-								<div class="cardothers">
-									<small style="color: var(--yellow)">
-										{item.duration}
-									</small>
-									<small style="color: var(--yellow)">
-										{item.dates}
-									</small>
-								</div>
-							</div>
-						</div>
-				{/each}
-			{/if}
-		</div>
-	</div>
-	<div class="title-box h7 pads">
-		<div class="a-title">
-			<h4>Bṛhat Draṣṭā</h4>
-		</div>
-		<div class="a-box gridof3">
-			{#if courses && courses.length > 0}
-				{#each courses as item}
-					<div class="card-a">
-						<div class="card-image">
-							<img src={item.image} alt={item.id}/>
-						</div>
-						<div class="card-body">
-								<h5 style="font-weight: bold; text-transform: capitalize"><a href="/drashta/course/{item.course}">{item.name}</a></h5>
-							<p>with {item.ins}</p>
-							<div class="cardothers">
-								<small style="color: var(--drash)">{item.status}</small>
-								<small style="color: #878787">{item.datefrom}</small>
-							</div>
-						</div>
 					</div>
 				{/each}
 			{/if}
