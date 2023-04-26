@@ -141,7 +141,7 @@
 			<div class="boxr resbox">
 				<DropDown --thisbackground="var(--tree)" --thisdropdowntextcolor="var(--tree)">
 					<div slot="visible" class="expandmenu"><h6 style="color: white">EXPAND MENU</h6></div>
-					<div slot="invisible">
+					<div class="invisible" slot="invisible">
 						<h5 on:click={() => toggleCategory(1)} on:keydown={() => toggleCategory(1)} class:selected={selectedCategory[1]}>Essentials</h5>
 						<h5 on:click={() => toggleCategory(2)} on:keydown={() => toggleCategory(2)} class:selected={selectedCategory[2]}>Two Bodhas</h5>
 						<h5 on:click={() => toggleCategory(3)} on:keydown={() => toggleCategory(3)} class:selected={selectedCategory[3]}>IKS</h5>
@@ -156,12 +156,16 @@
 				{#if essentials && essentials.length > 0}
 					{#each essentials as item, i}
 						<div class="card-book" in:scale={{ duration: 150, delay: i*25}} out:scale={{ duration: 25, delay: 0 }}>
+							{#if item.imagelinker && item.imagelinker.length > 0}
 							<div class="card-image">
 								<img src={item.imagelinker} alt={item.id}/>
 							</div>
+							{/if}
 							<div class="card-body">
 								<h6><a href="/openlibrary/books/{item.slug}">{item.Text}</a></h6>
+								{#if item.Description && item.Description.length > 0}
 								<p>{item.Description}</p>
+								{/if}
 								<small>{item.author}</small>
 							</div>
 						</div>
@@ -172,12 +176,16 @@
 				{#if bodhas && bodhas.length > 0}
 					{#each bodhas as item, i}
 						<div class="card-book" in:scale={{ duration: 150, delay: i*25}} out:scale={{ duration: 25, delay: 0 }}>
+							{#if item.imagelinker && item.imagelinker.length > 0}
 							<div class="card-image">
 								<img src={item.imagelinker} alt={item.id}/>
 							</div>
+							{/if}
 							<div class="card-body">
 								<h6><a href="/openlibrary/books/{item.slug}">{item.Text}</a></h6>
+								{#if item.Description && item.Description.length > 0}
 								<p>{item.Description}</p>
+								{/if}
 								<small>{item.author}</small>
 							</div>
 						</div>
@@ -188,12 +196,16 @@
 				{#if ikss && ikss.length > 0}
 					{#each ikss as item, i}
 						<div class="card-book" in:scale={{ duration: 150, delay: i*25}} out:scale={{ duration: 25, delay: 0 }}>
+							{#if item.imagelinker && item.imagelinker.length > 0}
 							<div class="card-image">
 								<img src={item.imagelinker} alt={item.id}/>
 							</div>
+							{/if}
 							<div class="card-body">
 								<h6><a href="/openlibrary/books/{item.slug}">{item.Text}</a></h6>
+								{#if item.Description && item.Description.length > 0}
 								<p>{item.Description}</p>
+								{/if}
 								<small>{item.author}</small>
 							</div>
 						</div>
@@ -204,12 +216,16 @@
 				{#if ross && ross.length > 0}
 					{#each ross as item, i}
 						<div class="card-book" in:scale={{ duration: 150, delay: i*25}} out:scale={{ duration: 25, delay: 0 }}>
+							{#if item.imagelinker && item.imagelinker.length > 0}
 							<div class="card-image">
 								<img src={item.imagelinker} alt={item.id}/>
 							</div>
+							{/if}
 							<div class="card-body">
 								<h6><a href="/openlibrary/books/{item.slug}">{item.Text}</a></h6>
+								{#if item.Description && item.Description.length > 0}
 								<p>{item.Description}</p>
+								{/if}
 								<small>{item.author}</small>
 							</div>
 						</div>
@@ -310,7 +326,7 @@
 				<div slot="visible">
 					<h6 style="color: white">EXPAND GENRES</h6>
 				</div>
-				<div slot="invisible">
+				<div class="invisible" slot="invisible">
 					<h5 on:click={() => setTag('Core Material')} on:keydown={fauxfake} class="genres {tag === 'Core Material' ? 'filtered' : ''}">Core Material</h5>
 					<h5 on:click={() => setTag('Indology')} on:keydown={fauxfake} class="genres {tag === 'Indology' ? 'filtered' : ''}">Indology</h5>
 					<h5 on:click={() => setTag('Linguistics')} on:keydown={fauxfake} class="genres {tag === 'Linguistics' ? 'filtered' : ''}">Linguistics</h5>
@@ -385,11 +401,19 @@
 					padding: 4px 8px
 			@media screen and (max-width: 899px)
 				border: none
+	@media screen and (min-width: 1024px)
+		.gridof2
+			margin-top: 80px
+			z-index: 1
 
 
 .x4
 	padding-bottom: 64px
 	padding-top: 64px
+	@media screen and (min-width: 1024px)
+		.gridof4
+			margin-top: 80px
+			z-index: 1
 
 
 .aryansbook

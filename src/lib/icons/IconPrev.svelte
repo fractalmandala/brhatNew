@@ -8,7 +8,8 @@
 <style lang="sass">
 
 svg
-	transform: scale(1.5)
+	transform: scale(1)
+	cursor: pointer
 	&:hover
 		#two
 			animation: inminus 0.2s ease forwards

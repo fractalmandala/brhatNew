@@ -100,8 +100,6 @@ $spacer: 48px
 	--ram: #3A8080
 	--white: #FFFFFF
 	--chambs: #e4a503
-	--drash: #2F7796
-	--blued: #004e89
 	--bol: #10446A
 	--tree: #0B6E4F
 	--aryan: #5A3261
@@ -490,21 +488,6 @@ a
 	width: 100%
 	height: 100%
 
-.card-video
-	display: flex
-	flex-direction: column
-	@media screen and (min-width: 1024px)
-		height: 180px
-		row-gap: 12px
-		iframe
-			height: 144px
-	@media screen and (max-width: 1023px)
-		height: 160px
-		row-gap: 8px
-		iframe
-			height: 104px
-			
-
 .pads
 	@media screen and (min-width: 1024px)
 		padding-left: 6vw
@@ -525,18 +508,6 @@ a
 
 .pad16
 	padding-bottom: 16px
-
-.label
-	background: #fe4a49
-	text-transform: uppercase
-	font-size: 16px
-	color: white
-	padding: 4px 8px 2px 8px
-	width: max-content
-
-.type p.label
-	color: white
-	line-height: 1
 
 .wide60
 	@media screen and (min-width: 1024px)
@@ -994,3 +965,15 @@ button.treebutton
 		object-fit: cover
 		width: 100%
 		height: 50%
+
+.absolute
+	@media screen and (min-width: 1024px)
+		top: 0
+		left: 0
+		height: 120px
+		.invisible
+			display: flex
+			flex-direction: row
+			width: 100%
+			justify-content: center
+			gap: 32px

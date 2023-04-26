@@ -4,9 +4,9 @@
 	import { draw } from 'svelte/transition'
 	import { quintOut } from 'svelte/easing'
 	import { fly } from 'svelte/transition'
-	import { backIn, backOut, quintIn } from 'svelte/easing'
-	import IconMenu from '$lib/icons/IconMenu.svelte'
-	import Search from '$lib/components/SearchForm.svelte'
+	import tippy, {animateFill} from 'tippy.js'
+	import 'tippy.js/dist/tippy.css'
+	import 'tippy.js/animations/shift-away.css'
 	import AboutLinks from '$lib/links/AboutLinks.svelte'
 	import AnveshiLinks from '$lib/links/AnveshiLinks.svelte'
 	import AryavartaLinks from '$lib/links/AryavartaLinks.svelte'
@@ -24,7 +24,7 @@
 	let iW:number
 	let breakPoint:boolean
 	let fake = false
-	
+
 	function toggleCircle(){
 		circleIt = !circleIt
 	}
@@ -66,6 +66,15 @@
 
 
 	onMount(() => {
+		tippy ('#single', {
+			content: 'Toggle Dark/Light Mode.',
+			duration: 300,
+			arrow: true,
+			animateFill: true,
+			plugins: [animateFill],
+			placement: 'right',
+			theme: 'light'
+		})
 		const handleMouse = (event: {clientY: number;}) => {
 			mouseY = event.clientY
 			if ( mouseY <= 128 ) {
@@ -84,7 +93,7 @@
 <svelte:window bind:scrollY={y} bind:innerHeight={height} bind:innerWidth={iW}/>
 
 <div class="appheader" class:onsidebar={sidebar} class:hiddenHeader={isInvisible}>
-	<a class="applogo" href="/">
+	<a class="applogo" href="/" data-sveltekit-reload>
 		<div class="logomotif">
 			<svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<g id="motif">
@@ -186,6 +195,9 @@
 	<div class="midrow">
 		<slot name="local"></slot>
 	</div>
+	<div class="search" id="single">
+		<slot name="modeswitch"></slot>
+	</div>
 	<div class="menuicon" on:click={toggleSidebar} on:keydown={handleKeyDownEvent} on:mouseenter={toggleCircle} on:mouseleave={toggleCircle}>
 		Our Cosmos
 		<div id="menumainx" class:rotated={sidebar}>
@@ -204,52 +216,52 @@
 	<div class="appsidebar" in:fly={{ duration: 500, x: 400, y: 0}} out:fly={{ duration: 500, x: 400, y: 0}} data-lenis-prevent on:mouseleave={closeSidebar}>
 		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
-				<h5><a href="/drashta">Bṛhat Draṣṭā</a></h5>
+				<h5><a href="/drashta" data-sveltekit:prefetch>Bṛhat Draṣṭā</a></h5>
 				<DrashtaLinks flytime={sidebar}/>
 			{/if}
 		</div>
 		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
-				<h5><a href="/anveshi" data-sveltekit-reload>Bṛhat Anveṡī</a></h5>
+				<h5><a href="/anveshi" data-sveltekit:prefetch>Bṛhat Anveṡī</a></h5>
 				<AnveshiLinks flytime={sidebar}/>
 			{/if}
 		</div>
 		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
-				<h5><a href="/mrdanga">Bṛhad Mṛdaṅga</a></h5>
+				<h5><a href="/mrdanga" data-sveltekit:prefetch>Bṛhad Mṛdaṅga</a></h5>
 			{/if}
 		</div>
 		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
-				<h5><a href="/dhiti">Dhīti</a></h5>
+				<h5><a href="/dhiti" data-sveltekit:prefetch>Dhīti</a></h5>
 			{/if}
 		</div>
 		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
-				<h5><a href="/openlibrary">Bṛhat Open Library</a></h5>
+				<h5><a href="/openlibrary" data-sveltekit:prefetch>Bṛhat Open Library</a></h5>
 			{/if}
 		</div>
 		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
-				<h5><a href="/mandala">Fractal Maṇḍala</a></h5>
+				<h5><a href="/mandala" data-sveltekit:prefetch>Fractal Maṇḍala</a></h5>
 				<MandalaLinks flytime={sidebar}/>
 			{/if}
 		</div>
 		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
-				<h5><a href="/aryavarta">Scrolls of Āryavarta</a></h5>
+				<h5><a href="/aryavarta" data-sveltekit:prefetch>Scrolls of Āryavarta</a></h5>
 				<AryavartaLinks flytime={sidebar}/>
 			{/if}
 		</div>
 		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
-				<h5><a href="/rta">Ṛta in Design</a></h5>
+				<h5><a href="/rta" data-sveltekit:prefetch>Ṛta in Design</a></h5>
 				<RtaLinks flytime={sidebar}/>
 			{/if}
 		</div>
 		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
-				<h5 in:fly={{ delay: 500, duration: 100, x: 128, y: 0}} out:fly={{ delay: 0, duration: 100, x: 128, y: 0}}><a href="/about">About</a></h5>
+				<h5 in:fly={{ delay: 500, duration: 100, x: 128, y: 0}} out:fly={{ delay: 0, duration: 100, x: 128, y: 0}}><a href="/about" data-sveltekit:prefetch>About</a></h5>
 				<AboutLinks flytime={sidebar}/>
 			{/if}
 		</div>
@@ -269,7 +281,10 @@
 
 #menumainx.rotated
 	transform: rotate(180deg)
-	margin-left: 8px
+	@media screen and (min-width: 900px)
+		margin-left: 8px
+	@media screen and (max-width: 899px)
+		margin-left: 12px
 
 .linksbox
 	display: flex
@@ -339,12 +354,12 @@
 	grid-auto-flow: row
 	background: var(--beau)
 	position: fixed
-	z-index: 10000
+	z-index: 1000
 	width: 100vw
 	top: 0
 	transition: 0.5s ease
 	@media screen and (min-width: 900px)
-		grid-template-columns: 220px 1fr 160px
+		grid-template-columns: 220px 1fr 56px 160px
 		grid-template-rows: 1fr
 		grid-template-areas: "applogo midrow search menuicon"
 		height: 72px
@@ -353,13 +368,19 @@
 		padding: 0 32px
 		.midrow
 			gap: 24px
+		.search
+			grid-area: search
+			width: 56px
 	@media screen and (max-width: 899px)
-		grid-template-columns: 160px 1fr 40px
+		grid-template-columns: 160px 1fr
 		grid-template-rows: 1fr
-		grid-template-areas: "applogo search menuicon"
+		grid-template-areas: "applogo menuicon"
 		height: 64px
 		align-content: start
 		padding: 0 16px
+		justify-items: stretch
+		.search
+			display: none
 
 .appheader.hiddenHeader
 	transform: translateY(-72px)
@@ -404,8 +425,10 @@
 	width: 160px
 	color: white
 	text-transform: uppercase
+	cursor: pointer
 	@media screen and (max-width: 899px)
 		height: 64px
+		width: 100%
 
 
 

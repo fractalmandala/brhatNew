@@ -31,6 +31,11 @@ button.accordionbutton
 	background: #171717
 	transform-origin: left center
 	transition: all 0.3s ease
+	border-radius: 3px
+	@media screen and (max-width: 1023px)
+		font-size: 18px
+	@media screen and (min-width: 1024px)
+		font-size: 16px
 
 .accordionbutton
 	position: absolute

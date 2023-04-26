@@ -5,6 +5,7 @@
 	import Lenis from '@studio-freight/lenis'
 	import '$lib/styles/global.sass'
 	import '$lib/styles/types.sass'
+	import '$lib/styles/tokens.sass'
 	import Footer from '$lib/components/Footer.svelte'
 
 	let innerW:number
@@ -26,11 +27,11 @@
 
 	onMount(() => {
 		const lenis = new Lenis({
-			duration: 1.2,
+			duration: 3,
 			easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
 			orientation: 'vertical',
 			gestureOrientation: 'vertical',
-			wheelMultiplier: 0.48,
+			wheelMultiplier: 0.68,
 			smoothWheel: true,
 			smoothTouch: false,
 			touchMultiplier: 0,
@@ -57,7 +58,9 @@
 </svelte:head>
 
 <div id="appbox">
+	{#key link}
 	<slot></slot>
+	{/key}
 	{#if showFooter}
 	<Footer></Footer>
 	{/if}

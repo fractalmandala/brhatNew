@@ -325,6 +325,7 @@ export async function allCourses() {
 	.from('brhat-drashta2')
 	.select()
 	.eq('type','overview')
+	.order('sequence',{ascending: false})
 	if (error) throw new Error(error.message)
 	return data
 }

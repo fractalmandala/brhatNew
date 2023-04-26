@@ -1,67 +1,425 @@
 // colors
-$red: rgb(254, 74, 73)
-$white: rgb(255, 255, 255)
-$grey4: rgb(135, 135, 135)
-$grey3: rgb(87, 87, 87)
-$grey2: rgb(71, 71, 71)
-$grey1: rgb(49, 49, 49)
-$black: rgb(39, 39, 39)
-$void: rgb(23, 23, 23)
+$red: #fe4a49
+$deepred: #B0413E
+$mustard: #e4a503
+$blue: #2F7796
+$blueD: #004e89
+$teal: #0B6E4F
+$purple: #5A3261
+$yellow: #FF9F1C
+$orange: #ff3d00
+$green: #10D56E
+$mand: #538733
+$white: #FFFFFF
+$black: #171717
+$text: #272727
+$grey: #474747
+$greyS: #676767
+$greyM: #878787
+$greyL: #b7b7b7
+$greyX: #d7d7d7
+$whiteS: #ECECEC
 
-// typography 
-$type1: normal normal 600 21px/23.625px "Spline Sans", sans-serif
-$type2: normal normal 400 16px/normal "Spline Sans", sans-serif
-$type3: normal normal 400 16px/normal "Spline Sans", sans-serif
-$type4: normal normal 400 15px/19.5px "Spline Sans", sans-serif
-$type5: normal normal 400 15px/normal "Spline Sans", sans-serif
-$type6: normal normal 400 14px/normal "Spline Sans", sans-serif
-$type7: normal normal 400 13.3333px/normal Arial
-$type8: normal normal 400 12px/12px "Spline Sans", sans-serif
-$type9: normal normal 700 10px/normal "Spline Sans", sans-serif
-$type10: italic normal 500 10px/normal "Spline Sans", sans-serif
-$type11: normal normal 600 0px/0px "Spline Sans", sans-serif
-$type12: normal normal 400 0px/0px "Spline Sans", sans-serif
-$type13: normal normal 700 0px/0px "Spline Sans", sans-serif
-$type14: normal normal 400 0px/0px "Spline Sans", sans-serif
-$type15: normal normal 600 0px/0px "Spline Sans", sans-serif
+:root
+	--red: $red
+	--blue: #2F7796
+	--blued: #004e89
 
-//spacing
-$sm-space: 4px
-$md-space: 8px
-$lg-space: 16px
-$xl-space: 48px
-$xx-space: 64px
+//transition-easings
+$cube1: cubic-bezier(0.995, 0.225, 0.750, 0.750)
+$cube2: cubic-bezier(0.995, 0.225, 0.000, 0.965)
+$cube3: cubic-bezier(0.320, 0.760, 0.875, 0.490)
+$cube4: cubic-bezier(0.000, 1.240, 0.875, 0.490)
+$cube5: cubic-bezier(1.000, 0.005, 1.000, 0.005)
+$easy: cubic-bezier(0.205, 0.655, 0.000, 0.995)
 
-// motions
-$tran1: all 0.07s cubic-bezier(0.995, 0.225, 0.75, 0.75) 0s
-$tran2: all 0.3s ease 0s
-$tran3: all 0.32s cubic-bezier(0.995, 0.225, 0.75, 0.75) 0s
-$tran4: all 0.23s ease 0s
-$tran5: all 0.5s ease 0s
-$tran6: all 0.16s cubic-bezier(0, -0.6, 1, -0.6) 0s
-$tran7: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 0.1) 0s
+//units
+$min: 4px
+$half: 8px
+$half-alt: 12px
+$std: 16px
+$std-alt: 24px
+$double: 32px
+$double-alt: 48px
+$quad: 64px
+$penta: 128px
 
-// typography 
-$font-1: normal normal 400 24px/32px custom-font, "Helvetica Neue", Helvetica, Arial, sans-serif
-$font-2: normal normal 400 24px/32px custom-font, "Helvetica Neue", Helvetica, Arial, sans-serif
-$font-3: normal normal 400 20px/28px custom-font, "Helvetica Neue", Helvetica, Arial, sans-serif
-$font-4: normal normal 400 18px/28px custom-font, "Helvetica Neue", Helvetica, Arial, sans-serif
-$font-5: normal normal 400 16px/24px custom-font, "Helvetica Neue", Helvetica, Arial, sans-serif
-$font-6: normal normal 400 16px/24px custom-font, "Helvetica Neue", Helvetica, Arial, sans-serif
-$font-7: normal normal 400 16px/24px custom-font, "Helvetica Neue", Helvetica, Arial, sans-serif
-$font-8: normal normal 400 16px/24px custom-font, "Helvetica Neue", Helvetica, Arial, sans-serif
-$font-9: normal normal 400 16px/24px custom-font, "Helvetica Neue", Helvetica, Arial, sans-serif
-$font-10: normal normal 400 14px/19.6px "Office Code Pro", "Source Code Pro", Menlo, monospace
-$font-11: normal normal 400 14px/20px custom-font, "Helvetica Neue", Helvetica, Arial, sans-serif
-$font-12: normal normal 500 14px/20px custom-font, "Helvetica Neue", Helvetica, Arial, sans-serif
-$font-13: normal normal 400 14px/20px custom-font, "Helvetica Neue", Helvetica, Arial, sans-serif
-$font-14: normal normal 400 14px/20px custom-font, "Helvetica Neue", Helvetica, Arial, sans-serif
-$font-15: normal normal 500 14px/20px custom-font, "Helvetica Neue", Helvetica, Arial, sans-serif
-$font-16: normal normal 400 14px/16px custom-font, "Helvetica Neue", Helvetica, Arial, sans-serif
-$font-17: normal normal 400 12px/16px custom-font, "Helvetica Neue", Helvetica, Arial, sans-serif
-$font-18: normal normal 400 12px/16px custom-font, "Helvetica Neue", Helvetica, Arial, sans-serif
-$font-19: normal normal 400 12px/16px custom-font, "Helvetica Neue", Helvetica, Arial, sans-serif
-$font-20: normal normal 400 12px/16px custom-font, "Helvetica Neue", Helvetica, Arial, sans-serif
-$font-21: normal normal 400 12px/16px custom-font, "Helvetica Neue", Helvetica, Arial, sans-serif
-$font-22: normal normal 400 12px/16px "Office Code Pro", "Source Code Pro", Menlo, monospace
+//sizing
+.minH
+	@media screen and (min-width: 900px)
+		height: 100vh
+		padding-top: $double
+		padding-bottom: $double
+.absolute
+	position: absolute
+.relative
+	position: relative
+.absolute.zero
+	top: 0
+	left: 0
+.cc-all
+	justify-content: center
+	align-items: center
+	text-align: center
 
+
+//typography
+$font: 'Spline Sans', sans-serif
+$serif: 'STIX Two Text', serif
+
+//containers
+.rta-column
+	display: flex
+	flex-direction: column
+
+.rta-in-col
+	display: flex
+	flex-direction: column
+
+.rta-in-col-row
+	display: flex
+	@media screen and (min-width: 1024px)
+		flex-direction: column
+	@media screen and (max-width: 1023px)
+		flex-direction: row
+		column-gap: 24px
+		.thin
+			width: 32%
+		.thick
+			width: calc(68% - 24px)
+
+.rta-in-col.right
+	@media screen and (min-width: 1024px)
+		align-items: flex-end
+		text-align: right
+
+.rta-grid
+	display: grid
+	grid-auto-flow: row
+	grid-template-rows: auto
+
+.align-all
+	align-content: center
+
+.rta-grid.grid3
+	@media screen and (min-width: 1024px)
+		grid-template-columns: 1fr 1fr 1fr
+		grid-template-areas: ". . ."
+
+.rta-grid.grid2
+	@media screen and (min-width: 1024px)
+		grid-template-columns: 1fr 1fr
+		grid-template-areas: ". ."
+	@media screen and (max-width: 1023px)
+		grid-template-columns: 1fr
+		grid-template-areas: "."
+
+.rta-grid.grid2.left
+	@media screen and (min-width: 1024px)
+		grid-template-columns: 24% 1fr
+		grid-template-areas: ". ."
+	@media screen and (max-width: 1023px)
+		grid-template-columns: 1fr
+		grid-template-areas: "."
+
+.rta-grid.grid2.right
+	@media screen and (min-width: 1024px)
+		grid-template-columns: 1fr 24%
+		grid-template-areas: "wide thin"
+		.wide
+			grid-area: wide
+		.thin
+			grid-area: thin
+	@media screen and (max-width: 1023px)
+		grid-template-columns: 1fr
+		grid-template-areas: "on-top" "on-bottom"
+		.on-top
+			grid-area: on-top
+		.on-bottom
+			grid-area: on-bottom
+
+.rta-grid.grid2.right.row
+	@media screen and (max-width: 1023px)
+		grid-template-columns: 32% 1fr
+		grid-template-areas: "thin wide"
+		.wide
+			grid-area: wide
+		.thin
+			grid-area: thin
+		
+.rta-grid.grid2.left.forty
+	@media screen and (min-width: 1024px)
+		grid-template-columns: 40% 1fr
+		grid-template-areas: ". ."
+
+.rowgap-4
+	row-gap: $min
+.rowgap-8
+	row-gap: $half
+.rowgap-16
+	@media screen and (min-width: 1024px)
+		row-gap: $std
+	@media screen and (max-width: 1023px)
+		row-gap: $half-alt
+.rowgap-32
+	row-gap: $double
+.rowgap-64
+	@media screen and (min-width: 1024px)
+		row-gap: $quad
+	@media screen and (max-width: 1023px)
+		row-gap: $std
+.colgap-8
+	column-gap: $half
+.colgap-16
+	column-gap: $std
+.colgap-24
+	column-gap: $std-alt
+.colgap-32
+	column-gap: $double
+
+
+.rta-column.minH
+	@media screen and (min-width: 900px)
+		justify-content: center
+	@media screen and (max-width: 899px)
+		padding-top: $double
+		padding-bottom: $double
+
+.rta-row
+	display: flex
+	flex-direction: row
+
+.is-padded
+	@media screen and (max-width: 575px)
+		padding-left: $std-alt
+		padding-right: $std-alt
+		padding-top: $quad
+		padding-bottom: $double
+	@media screen and (max-width: 639px) and (min-width: 576px)
+		padding-left: $double
+		padding-right: $double
+	@media screen and (max-width: 899px) and (min-width: 640px)
+		padding-left: $double-alt
+		padding-right: $double-alt
+	@media screen and (max-width: 1023px) and (min-width: 900px)
+		padding-left: $quad
+		padding-right: $quad
+	@media screen and (min-width: 1024px)
+		padding-left: $penta
+		padding-right: $penta
+
+.rta-image
+	img
+		object-fit: cover
+		height: 100%
+		width: 100%
+
+.rta-video
+	display: flex
+	flex-direction: column
+	@media screen and (min-width: 1024px)
+		height: 180px
+		row-gap: 12px
+		iframe
+			height: 144px
+	@media screen and (max-width: 1023px)
+		height: 240px
+		row-gap: 8px
+		iframe
+			height: 180px
+
+.rta-icon
+	width: $std-alt
+	height: $std-alt
+	img
+		object-fit: contain
+		width: $std-alt
+		height: $std-alt
+	svg
+		object-fit: contain
+		width: $std-alt
+		height: $std-alt
+
+//themes
+	
+.type.light
+	transition: 0.5s ease-in-out
+	background: $white
+	color: $text
+	p, pre, li, h5
+		color: $greyM
+	h6
+		color: $grey
+	h4, h3, h2, h1
+		color: $text
+	h5.heading
+		color: $text
+
+.bord-top.light
+	@media-screen and (min-width: 1024px)
+		border-top: 1px solid #ececec
+.bord-top.dark
+	@media-screen and (min-width: 1024px)
+		border-top: 1px solid #272727
+
+.theme.dark
+	background: $black
+	color: $white
+	
+.type.dark
+	transition: 0.5s ease-in-out
+	background: $black
+	color: $white
+	h6, h4, h3, h2
+		color: $white
+	h1
+		color: $grey
+	p, pre, li, h5
+		color: $grey
+
+.type
+	.c-red
+		h1
+			color: $red
+
+
+//tools
+.togglemode
+	display: flex
+	flex-direction: column
+	height: 24px
+	width: 56px
+	border-radius: 12px
+	padding: 2px
+	transition: background 0.08s ease
+	cursor: pointer
+	border: none
+	.togglemodeball
+		height: 20px
+		width: 20px
+		border-radius: 10px
+
+.togglemode.general
+	align-items: flex-start
+	border: 1px solid $grey
+	background: $text
+	.togglemodeball
+		background: $grey
+	&:hover
+		.togglemodeball
+			background: $white
+
+.togglemode.dark
+	align-items: flex-end
+	background: $text
+	border: 1px solid $greyM
+	.togglemodeball
+		background: $grey
+	&:hover
+		.togglemodeball
+			background: $white
+
+.label
+	text-transform: uppercase
+	font-size: 11px
+	color: white
+	padding: 2px 4px 2px 4px
+	width: max-content
+
+.label-red
+	background: $red
+
+.label-yellow
+	background: $yellow
+
+.label-mand
+	background: $mand
+
+.label-blue
+	background: $blue
+
+.label-blued
+	background: $blueD
+
+//animationss
+.inview
+	position: relative
+	overflow: hidden
+	&::after
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
+		width: 100%
+		content: ''
+
+.inview.light
+	&::after
+		background: $white
+	
+.inview.dark
+	&::after
+		background: $black
+
+.inview.light.reveal, .inview.dark.reveal
+	&::after
+		animation: afterFromBottom 3s cubic-bezier(0.205, 0.655, 0.000, 0.995) forwards
+
+@keyframes afterFromBottom
+	0%
+		height: 100%
+	100%
+		height: 0
+
+//margins, pads, lengths, widths
+
+.rad-4
+	border-radius: $min
+
+.top-m-16
+	margin-top: $std
+
+.top-m-24
+	margin-top: $std-alt
+
+.bot-p-32
+	@media screen and (min-width: 1024px)
+		padding-bottom: $double
+	@media screen and (min-width: 1024px)
+		padding-bottom: $std
+
+.all-p-32
+	@media screen and (min-width: 1024px)
+		padding: $double
+
+.wide-60-100
+	@media screen and (min-width: 1024px)
+		width: 60%
+	@media screen and (max-width: 1023px) and (min-width: 900px)
+		width: 85%
+	@media screen and (max-width: 899px)
+		width: 100%
+
+.height-30
+	@media screen and (min-width: 1024px)
+		height: 30vh
+
+.height-20
+	@media screen and (min-width: 1024px)
+		height: 16vh
+	@media screen and (max-width: 1023px)
+		height: 16vh
+
+.height-50
+	@media screen and (min-width: 1024px)
+		height: 50vh
+	@media screen and (max-width: 1023px)
+		height: 50vh
+
+.height-60
+	@media screen and (min-width: 1024px)
+		height: 64vh
+
+.height-80
+	@media screen and (min-width: 1024px)
+		height: 80vh

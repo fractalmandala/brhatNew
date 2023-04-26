@@ -73,13 +73,6 @@
 		})	
 	})
 
-	afterUpdate(async() => {
-		vids = await allmrdVids(limiter)
-		kalas = await Shabdavali()
-		rasas = await mrdangaVids()
-		kavitas = await kavitaVids()
-	})
-
 </script>
 
 <svelte:head>
@@ -219,8 +212,6 @@
 	display: flex
 	flex-direction: column
 
-.marg
-	margin-bottom: 32px
 
 .x0
 	overflow: hidden

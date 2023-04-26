@@ -1,24 +1,29 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
-	import { Swipe, SwipeItem } from 'svelte-swipe'
+	import { page } from '$app/stores'
+	import HeadComponent from '$lib/components/HeadComponent.svelte'
+	import { Splide, SplideSlide } from '@splidejs/svelte-splide'
+	import '@splidejs/svelte-splide/css'
 	import { soaChapter2 } from '$lib/utils/supapulls'
-	import { scale } from 'svelte/transition'
+	import { scale, fly } from 'svelte/transition'
+	import { quadIn, quadOut } from 'svelte/easing'
 	import IconPrev from '$lib/icons/IconPrev.svelte'
 	import IconNext from '$lib/icons/IconNext.svelte'
 
 	let panels:any
-	let SwipeComp:any
 	let faux:boolean = false
 	let y:number
+	let currentPanel = 1
+	let link:any
+	let movement:number
+	let iW:number
 
-  function nextSlide(){
-   SwipeComp.nextItem()
-  }
-
-  function prevSlide(){
-    SwipeComp.prevItem()
-  }
+	$: if ( iW <= 1023 ){
+		movement = 5 
+	} else {
+		movement = y
+	}
 
 	function fakefaux(){
 		faux = !faux
@@ -33,44 +38,44 @@
 
 	onMount(async() => {
 		panels = await soaChapter2()
+		link = $page.url.pathname
 	})
 
 </script>
 
-<svelte:window bind:scrollY={y}/>
+<svelte:head>
+	<HeadComponent>
+		Kaśyapa's Lament | Scrolls of Āryavarta at
+	</HeadComponent>
+</svelte:head>
+
+
+<svelte:window bind:scrollY={y} bind:innerWidth={iW}/>
+
 <div class="type">
 	<div class="plain-one x1 pads back">
+		<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/12rid/00ridicons/ridicon.png" alt="general icon"/>
 		<p style="color: #ff3d00">Chapter 2</p>
 		<h2 style="transform: translateY({y}px); color: white">Sūta and Sudā</h2>
 	</div>
 	<div class="plain-one x2">
-		<div class="carousel">
 			{#if panels && panels.length > 0}
-				<Swipe {...swipeConfig} bind:this={SwipeComp}>
-					{#each panels as item, index}
-						<SwipeItem>
-							<div class="carouselitem" transition:scale>
-								<div class="box back" style="background-image: url('https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/chapter2/{item.image.substr(92,20)}'); transform: translateY({y/5}px)"></div>
-								<div class="box text">
-									<div>
-										<p>{item.id}</p>
-										<h6>{item.text}</h6>
-									</div>
-								</div>
+				<Splide>
+					{#each panels as item, i}
+					<SplideSlide>
+					<div class="carouselitem" in:fly={{ delay: 300, duration: 300, x: 1400, opacity: 0, easing: quadOut}} out:fly={{ delay: 0, duration: 260, x: -1400, easing: quadIn}}>
+						<div class="box back" style="background-image: url('https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/chapter2/{item.image.substr(92,20)}');"></div>
+						<div class="box text">
+							<div>
+								<p>{item.id}</p>
+								<h6>{item.text}</h6>
 							</div>
-						</SwipeItem>
-					{/each}
-				</Swipe>
+						</div>
+					</div>
+					</SplideSlide>
+				{/each}
+				</Splide>
 			{/if}
-		</div>
-		<div class="navguide">
-			<div on:click={prevSlide} on:keydown={fakefaux}>
-				<IconPrev/>
-			</div>
-			<div on:click={nextSlide} on:keydown={fakefaux}>
-				<IconNext/>		
-			</div>
-		</div>
 	</div>
 	<div class="plain-one x3 pads">
 		<div class="a-title pads">
@@ -96,75 +101,79 @@
 	padding-top: 64px
 	background: #171717
 
-.x1, .x2
-	height: 100vh
-
-.x1
-	@media screen and (max-width: 1023px)
-		height: 100vh
-
 .x1
 	overflow: hidden
 	padding-top: 80px
-		
-.carousel
-	display: flex
-	flex-direction: row
-	overflow-x: scroll
-	height: 100%
-	width: 100%
+	img
+		object-fit: cover
+		width: 56px
+		height: 56px
+		margin-bottom: 8px
+	@media screen and (min-width: 1024px)
+		gap: 0
+		h2
+			padding: 16px 0
+	@media screen and (max-width: 1023px)
+		padding-top: 64px
+		padding-bottom: 64px
+		height: 100vh
+		gap: 0
+		h2
+			padding: 16px 0
+
+.x1, .x2
+	@media screen and (min-width: 1024px)
+		height: 100vh
+
+.x2
+	gap: 8px
+	@media screen and (max-width: 1023px)
+		min-height: 100vh
 
 .carouselitem
 	display: flex
-	flex-shrink: 0
-	touch-action: pan-y
 	width: 100%
-	overflow-x: visible
-	flex-direction: row
-	height: 800px
-	.back
-		width: 50%
-		height: 100vh
-		margin-top: -160px
 	.text
-		width: 50%
-		height: 80%
 		justify-content: space-between
-		padding-top: 80px
 		p
 			padding-left: 32px
 		h6
 			font-weight: 400
-			text-align: right
 			line-height: 1.5
 			color: white
-			padding: 32px
-
-.carouselitem
+	@media screen and (min-width: 1024px)
+		height: 800px
+		flex-direction: row
+		.back
+			height: calc(100vh - 80px)
+			width: 50vw
+		.text
+			width: 50%
+			height: 80%
+			padding-top: 80px
+			h6
+				text-align: right
+				padding: 32px	
 	@media screen and (max-width: 1023px)
-		flex-wrap: wrap
+		flex-direction: column
 		.back
 			width: 100%
-			height: 60vh
-			z-index: 0
+			height: 40vh
+			z-index: 2
 		.text
 			width: 100%
 			z-index: 2
-			padding-top: 160px
+			padding-top: 16px
+			height: 100%
+			h6
+				font-size: 16px
+				text-align: left
+				line-height: 1.6
+				padding: 24px
 
 
 .x2
 	position: relative
-
-.navguide
-	position: absolute
-	bottom: 64px
-	right: 64px
-	display: flex
-	flex-direction: row
-	gap: 32px
-	@media screen and (max-width: 1023px)
-		display: none
 
 .x3
 	padding-top: 64px
