@@ -9,6 +9,15 @@ p, small, cite, caption, h6, h5, h4, h3, h2, h1, pre
 p.white
 	color: white
 
+.serif
+	font-family: 'STIX Two Text', serif
+
+.tt-uc
+	text-transform: uppercase
+
+.tt-c
+	text-transform: capitalize
+
 .expandmenu
 	color: white
 	text-transform: uppercase
@@ -43,10 +52,10 @@ p.capitalize
 pre
 	overflow-x: auto
 	box-sizing: border-box
-	white-space: pre-wrap
-	white-space: -moz-pre-wrap
-	white-space: -pre-wrap
-	white-space: -o-pre-wrap
+	white-space: pre-line
+	white-space: -moz-pre-line
+	white-space: -pre-line
+	white-space: -o-pre-line
 	word-wrap: break-word
 	word-break: break-word
 
@@ -450,6 +459,11 @@ caption
 			letter-spacing: -1px
 			font-weight: 600
 			line-height: 1
+		.captioned-text
+			h5
+				font-size: 3.6vw
+			p
+				font-size: 2.4vw
 
 .footermain
 	.mainlinks

@@ -3,6 +3,7 @@ $red: #fe4a49
 $deepred: #B0413E
 $mustard: #e4a503
 $blue: #2F7796
+$blueL: #13bbbd
 $blueD: #004e89
 $teal: #0B6E4F
 $purple: #5A3261
@@ -22,7 +23,6 @@ $whiteS: #ECECEC
 
 :root
 	--red: $red
-	--blue: #2F7796
 	--blued: #004e89
 
 //transition-easings
@@ -50,6 +50,10 @@ $penta: 128px
 		height: 100vh
 		padding-top: $double
 		padding-bottom: $double
+.minH.min
+	@media screen and (min-width: 900px)
+		min-height: 100vh
+		height: 100%
 .absolute
 	position: absolute
 .relative
@@ -93,10 +97,32 @@ $serif: 'STIX Two Text', serif
 		align-items: flex-end
 		text-align: right
 
+.rta-column.minH
+	@media screen and (min-width: 900px)
+		justify-content: center
+	@media screen and (max-width: 899px)
+		padding-top: $double
+		padding-bottom: $double
+
+.rta-row
+	display: flex
+	flex-direction: row
+	@media screen and (min-width: 1024px)
+		.w32
+			width: 32%
+		.w64
+			width: 64%
+	@media screen and (max-width: 1023px)
+		.w32
+			width: 32%
+		.w64
+			width: 64%	
+
 .rta-grid
 	display: grid
 	grid-auto-flow: row
 	grid-template-rows: auto
+	transition: all 0.28s $easy
 
 .align-all
 	align-content: center
@@ -105,6 +131,28 @@ $serif: 'STIX Two Text', serif
 	@media screen and (min-width: 1024px)
 		grid-template-columns: 1fr 1fr 1fr
 		grid-template-areas: ". . ."
+
+.rta-grid.grid4
+	@media screen and (min-width: 1024px)
+		grid-template-columns: 1fr 1fr 1fr 1fr
+		grid-template-areas: ". . . ."
+
+.rta-grid.grid4.stays-grid
+	@media screen and (max-width: 1023px)
+		grid-template-columns: 1fr 1fr 1fr
+		grid-template-areas: ". . ."
+
+.rta-grid.grid4.mid-is-wide
+	@media screen and (min-width: 1024px)
+		grid-template-columns: 1fr 1fr 1fr 1fr
+		grid-template-areas: "is-left is-wide is-wide is-right"
+		.is-left
+			grid-area: is-left
+		.is-wide
+			grid-area: is-wide
+		.is-right
+			grid-area: is-right
+		
 
 .rta-grid.grid2
 	@media screen and (min-width: 1024px)
@@ -116,7 +164,7 @@ $serif: 'STIX Two Text', serif
 
 .rta-grid.grid2.left
 	@media screen and (min-width: 1024px)
-		grid-template-columns: 24% 1fr
+		grid-template-columns: 25% 1fr
 		grid-template-areas: ". ."
 	@media screen and (max-width: 1023px)
 		grid-template-columns: 1fr
@@ -124,7 +172,7 @@ $serif: 'STIX Two Text', serif
 
 .rta-grid.grid2.right
 	@media screen and (min-width: 1024px)
-		grid-template-columns: 1fr 24%
+		grid-template-columns: 1fr 25%
 		grid-template-areas: "wide thin"
 		.wide
 			grid-area: wide
@@ -147,10 +195,37 @@ $serif: 'STIX Two Text', serif
 		.thin
 			grid-area: thin
 		
-.rta-grid.grid2.left.forty
+.rta-grid.grid2.left.thirty
 	@media screen and (min-width: 1024px)
 		grid-template-columns: 40% 1fr
-		grid-template-areas: ". ."
+		grid-template-areas: "thin thick"
+		.thick
+			grid-area: thick
+		.thin
+			grid-area: thin
+	@media screen and (max-width: 1023px)
+		grid-template-columns: 1fr
+		grid-template-areas: "on-top" "on-bottom"
+		.on-top
+			grid-area: on-top
+		.on-bottom
+			grid-area: on-bottom
+
+.rta-grid.grid2.right.thirty
+	@media screen and (min-width: 1024px)
+		grid-template-columns: 1fr 40%
+		grid-template-areas: "thick thin"
+		.thick
+			grid-area: thick
+		.thin
+			grid-area: thin
+	@media screen and (max-width: 1023px)
+		grid-template-columns: 1fr
+		grid-template-areas: "on-top" "on-bottom"
+		.on-top
+			grid-area: on-top
+		.on-bottom
+			grid-area: on-bottom
 
 .rowgap-4
 	row-gap: $min
@@ -161,6 +236,8 @@ $serif: 'STIX Two Text', serif
 		row-gap: $std
 	@media screen and (max-width: 1023px)
 		row-gap: $half-alt
+.rowgap-24
+	row-gap: $std-alt
 .rowgap-32
 	row-gap: $double
 .rowgap-64
@@ -175,19 +252,13 @@ $serif: 'STIX Two Text', serif
 .colgap-24
 	column-gap: $std-alt
 .colgap-32
-	column-gap: $double
+	@media screen and (min-width: 1024px)
+		column-gap: $double
+	@media screen and (max-width: 1023px)
+		column-gap: $std
 
-
-.rta-column.minH
-	@media screen and (min-width: 900px)
-		justify-content: center
-	@media screen and (max-width: 899px)
-		padding-top: $double
-		padding-bottom: $double
-
-.rta-row
-	display: flex
-	flex-direction: row
+.colgap-64
+	column-gap: $quad
 
 .is-padded
 	@media screen and (max-width: 575px)
@@ -240,9 +311,125 @@ $serif: 'STIX Two Text', serif
 		width: $std-alt
 		height: $std-alt
 
-//themes
+.rta-icon2
+	img
+		object-fit: contain
+	@media screen and (min-width: 1024px)
+		img
+			width: $quad
+			height: $quad
+	@media screen and (max-width: 1023px)
+		img
+			width: $double-alt
+			height: $double-alt
+
+.button
+	padding: 5px 24px
+	border-radius: 16px
+	width: max-content
+	min-width: 120px
+	cursor: pointer
+	transition: all 0.18s $easy
+	transform-origin: center center
+	overflow: hidden
+	font-weight: bold
+	position: relative
+	&:hover
+		transform: scale(0.96)
+		&::before
+			animation: buttonmovement 0.38s $easy forwards
+	&::before
+		position: absolute
+		top: 0
+		left: 50%
+		content: ''
+		height: 100%
+		width: 0
+		border-radius: 16px
+		z-index: -1
+		transition: all 0.28s $easy 
+
+.dropdown-menu-button
+	background: transparent
+	padding: 12px
+	border-radius: 24px
+	font-size: 16px
+
+.menu-inside-button
+	font-size: 16px
+	padding-bottom: 8px
+
+.dropdown-menu-button.red
+	background: #fe4a49
+	border: 1px solid #fe4a49
+	color: white
+
+.download-button
+	position: relative
+	border-width: 0
+	font-size: 15px
+	font-weight: 600
+	border-radius: 4px
+	height: 32px
+	z-index: 1
+	background: transparent
+	cursor: pointer
+	border: 1px solid transparent
+	.docs
+		display: flex
+		align-items: center
+		justify-content: space-between
+		gap: 10px
+		height: 28px
+		padding: 0 10px
+		border-radius: 4px
+		z-index: 1
+		transition: all .5s cubic-bezier(0.77, 0, 0.175, 1)
+	&:hover
+		.download
+			transform: translateX(20%)
+			
+.download
+	position: absolute
+	inset: 0
+	width: calc(100% - 12px)
+	display: flex
+	align-items: center
+	height: 27px
+	justify-content: flex-end
+	padding-right: 8px
+	margin: 2px auto 0 auto
+	z-index: -1
+	border-radius: 4px
+	transform: translateY(0%)
+	background-color: var(--red)
+	transition: all .5s cubic-bezier(0.77, 0, 0.175, 1)
+	svg
+		transform: rotate(-90deg)
+		polyline, line
+			animation: docs 1s infinite
+
+@keyframes docs
+	0%
+		transform: translateY(0%)
+	
+	50%
+		transform: translateY(-15%)
+
+	100%
+		transform: translateY(0%)
+
+//themes----------------------------------------------------------------------------------------------------------------------------------
 	
 .type.light
+	--blue: #2F7796
+	--greyS: #878787
+	--gren: rgb(63, 207, 142)
+	--black: #272727
+	--bord: #ececec
+	.background
+		background: $white
+		transition: 0.5s ease-in-out
 	transition: 0.5s ease-in-out
 	background: $white
 	color: $text
@@ -254,7 +441,70 @@ $serif: 'STIX Two Text', serif
 		color: $text
 	h5.heading
 		color: $text
+	.text-black
+		p, pre, li, h5
+			color: $text
+	.button.blue
+		border: 1px solid $blue
+		color: $blue
+		background: transparent
+		&:hover
+			color: white
+		&::before
+			background: $blue
+	.general-selector
+		background: transparent
+		border-top: none
+		border-left: none
+		border-right: none
+		border-bottom: 1px solid $whiteS
+		color: $text
+		&:hover
+			background: $red
+			padding-left: 8px
+			color: $white
+	#dradra_3
+		path
+			fill: $text
+			stroke: $text
+			stroke-width: 0.8px
+	#drabrh
+		fill: $text
+		stroke: $text
+	.logo-svg-box
+		&::after
+			background: $white
+	.bord-bot
+		border-bottom: 1px solid $whiteS
+	.bord-all
+		border: 1px solid $whiteS
+		border-radius: 4px
+	.download-button
+		color: $text
+		&:hover
+			color: $white
+			.docs
+				background: $grey
+		.docs
+			background: $whiteS
+	.menu-inside-button
+		background: white
+		border-bottom: 1px solid $whiteS
+		border-top: none
+		border-left: none
+		border-right: none
 
+@keyframes buttonmovement
+	0%
+		left: 50%
+		width: 0
+	100%
+		left: 0
+		width: 100%
+
+.background
+	transition: 0.5s ease-in-out
+			
 .bord-top.light
 	@media-screen and (min-width: 1024px)
 		border-top: 1px solid #ececec
@@ -267,8 +517,16 @@ $serif: 'STIX Two Text', serif
 	color: $white
 	
 .type.dark
+	--blue: #13bbbd
+	--greyS: #676767
+	--gren: #10D56E
+	--black: $white
+	--bord: #272727
 	transition: 0.5s ease-in-out
 	background: $black
+	.background
+		background: $black
+		transition: 0.5s ease-in-out
 	color: $white
 	h6, h4, h3, h2
 		color: $white
@@ -276,6 +534,63 @@ $serif: 'STIX Two Text', serif
 		color: $grey
 	p, pre, li, h5
 		color: $grey
+	h5.heading
+		color: $text
+	h5.heading.text-black
+		color: $white
+	.text-black
+		p, pre, li, h5
+			color: $white
+	.button.blue
+		border: 1px solid $blueL
+		color: $blueL
+		background: transparent
+		&:hover
+			color: $text
+		&::before
+			background: $blueL
+	.general-selector
+		background: transparent
+		border-top: none
+		border-left: none
+		border-right: none
+		border-bottom: 1px solid $text
+		color: $greyS
+		&:hover
+			background: $red
+			padding-left: 8px
+			color: $white
+	#dradra_3
+		path
+			fill: $white
+			stroke: $white
+			stroke-width: 0.8px
+	#drabrh
+		fill: $white
+		stroke: $white
+	.logo-svg-box
+		&::after
+			background: $black
+	.bord-bot
+		border-bottom: 1px solid $text
+	.bord-all
+		border: 1px solid $text
+		border-radius: 4px
+	.download-button
+		color: $greyM
+		&:hover
+			color: $white
+			.docs
+				background: $grey
+		.docs
+			background: $text
+	.menu-inside-button
+		background: $black
+		border-bottom: 1px solid $text
+		border-top: none
+		color: $grey
+		border-left: none
+		border-right: none
 
 .type
 	.c-red
@@ -322,24 +637,28 @@ $serif: 'STIX Two Text', serif
 .label
 	text-transform: uppercase
 	font-size: 11px
-	color: white
 	padding: 2px 4px 2px 4px
 	width: max-content
 
 .label-red
 	background: $red
+	color: white
 
 .label-yellow
 	background: $yellow
+	color: white
 
 .label-mand
 	background: $mand
+	color: white
 
 .label-blue
 	background: $blue
+	color: white
 
 .label-blued
 	background: $blueD
+	color: white
 
 //animationss
 .inview
@@ -382,11 +701,30 @@ $serif: 'STIX Two Text', serif
 .top-m-24
 	margin-top: $std-alt
 
+.top-p-16
+	padding-top: $std
+.bot-p-16
+	padding-bottom: $std
+.top-p-64
+	@media screen and (min-width: 1024px)
+		padding-top: $quad
+	@media screen and (max-width: 1023px)
+		padding-top: $double
+.bot-p-64
+	@media screen and (min-width: 1024px)
+		padding-bottom: $quad
+
 .bot-p-32
 	@media screen and (min-width: 1024px)
 		padding-bottom: $double
-	@media screen and (min-width: 1024px)
+	@media screen and (max-width: 1023px)
 		padding-bottom: $std
+
+.all-p-16
+	@media screen and (min-width: 1024px)
+		padding: $std
+	@media screen and (max-width: 1023px)
+		padding: $half
 
 .all-p-32
 	@media screen and (min-width: 1024px)
@@ -403,6 +741,8 @@ $serif: 'STIX Two Text', serif
 .height-30
 	@media screen and (min-width: 1024px)
 		height: 30vh
+	@media screen and (max-width: 1023px)
+		height: 20vh
 
 .height-20
 	@media screen and (min-width: 1024px)

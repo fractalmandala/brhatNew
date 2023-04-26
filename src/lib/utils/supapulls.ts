@@ -350,6 +350,30 @@ export async function fetchDarshanas(){
 	return data
 }
 
+export async function courseDetails(dynamizer: any){
+	const { data, error } = await supabase
+	.from('brhat-drashta2')
+	.select()
+	.eq('type', 'course details')
+	.eq('dynamizer',dynamizer)
+	.order('sequence',{ascending: false})	
+	.limit(3)
+	if (error) throw new Error(error.message)
+	return data
+}
+
+export async function courseWhoFor(dynamizer: any){
+	const { data, error } = await supabase
+	.from('brhat-drashta2')
+	.select()
+	.eq('type', 'course details')
+	.eq('dynamizer',dynamizer)
+	.order('sequence')	
+	.limit(1)
+	if (error) throw new Error(error.message)
+	return data
+}
+
 export async function courseContents(dynamizer: any){
 	const { data, error } = await supabase
 	.from('brhat-drashta2')
