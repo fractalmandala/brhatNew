@@ -118,6 +118,10 @@ $serif: 'STIX Two Text', serif
 		.w64
 			width: 64%	
 
+.rta-row.colgap-16
+	@media screen and (max-width: 1023px)
+		column-gap: 8px
+
 .rta-grid
 	display: grid
 	grid-auto-flow: row
@@ -153,7 +157,6 @@ $serif: 'STIX Two Text', serif
 		.is-right
 			grid-area: is-right
 		
-
 .rta-grid.grid2
 	@media screen and (min-width: 1024px)
 		grid-template-columns: 1fr 1fr
@@ -227,6 +230,14 @@ $serif: 'STIX Two Text', serif
 		.on-bottom
 			grid-area: on-bottom
 
+.rta-grid.grid5
+	@media screen and (min-width: 1024px)
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+		grid-template-areas: ". . . . ."
+	@media screen and (max-width: 1023px)
+		grid-template-columns: 1fr 1fr
+		grid-template-areas: ". ."
+
 .rowgap-4
 	row-gap: $min
 .rowgap-8
@@ -291,12 +302,12 @@ $serif: 'STIX Two Text', serif
 	@media screen and (min-width: 1024px)
 		height: 180px
 		row-gap: 12px
-		iframe
+		iframe, video
 			height: 144px
 	@media screen and (max-width: 1023px)
 		height: 240px
 		row-gap: 8px
-		iframe
+		iframe, video
 			height: 180px
 
 .rta-icon
@@ -419,6 +430,64 @@ $serif: 'STIX Two Text', serif
 	100%
 		transform: translateY(0%)
 
+.sideways-button
+	position: relative
+	display: flex
+	justify-content: center
+	align-items: center
+	background: transparent
+	overflow: hidden
+	border-left: none
+	border-right: none
+	border-top: none
+	border-bottom: 1px solid $red
+	&::after
+		content: " "
+		width: 0%
+		height: 100%
+		background: #fe4a49
+		position: absolute
+		transition: all 0.4s ease-in-out
+		right: 0
+	&:hover
+		&::after
+			right: auto
+			left: 0
+			width: 100%
+		span
+			color: white
+			animation: scaleUp 0.3s ease-in-out
+	span
+		text-align: center
+		text-decoration: none
+		width: 100%
+		text-transform: uppercase
+		font-weight: 700
+		z-index: 20
+		transition: all 0.3s ease-in-out
+	@media screen and (min-width: 1024px)
+		span
+			padding: 12px
+			font-size: 18px
+	@media screen and (max-width: 1023px)
+		span
+			padding: 6px
+			font-size: 16px
+
+.sideways-button.full
+	width: max-content
+	border-radius: 4px
+
+@keyframes scaleUp
+	0%
+		transform: scale(1)
+
+	50%
+		transform: scale(0.95)
+
+	100%
+		transform: scale(1)
+
 //themes----------------------------------------------------------------------------------------------------------------------------------
 	
 .type.light
@@ -493,6 +562,14 @@ $serif: 'STIX Two Text', serif
 		border-top: none
 		border-left: none
 		border-right: none
+	.sideways-button
+		span
+			color: $grey
+		&:hover
+			span
+				color: $white
+	.sideways-button.full
+		border: 1px solid $grey
 
 @keyframes buttonmovement
 	0%
@@ -533,7 +610,7 @@ $serif: 'STIX Two Text', serif
 	h1
 		color: $grey
 	p, pre, li, h5
-		color: $grey
+		color: $greyX
 	h5.heading
 		color: $text
 	h5.heading.text-black
@@ -591,6 +668,14 @@ $serif: 'STIX Two Text', serif
 		color: $grey
 		border-left: none
 		border-right: none
+	.sideways-button
+		span
+			color: $grey
+		&:hover
+			span
+				color: $white
+	.sideways-button.full
+		border: 1px solid $grey
 
 .type
 	.c-red

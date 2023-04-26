@@ -1,21 +1,17 @@
 <script lang="ts">
 
-	import { onMount, afterUpdate } from 'svelte'
+	import { onMount } from 'svelte'
 	import { browser } from '$app/environment'
 	import Header from '$lib/components/SubHeader.svelte'
 	import visibilityMode from '$lib/stores/visibility'
-	import IconMode from '$lib/icons/IconMode.svelte'
 	import Animations from 'textify.js'
 	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide'
 	import { reveal } from 'svelte-reveal'
-	import { fly } from 'svelte/transition'
-	import { circOut } from 'svelte/easing'
 	import tippy, {animateFill} from 'tippy.js'
 	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import HomeAccordion from '$lib/components/HomeAccordion.svelte'
 	import { createCurateConsult, brhatUpdates, latestVidsVar, BOLLatest, allChapters, allCourses } from '$lib/utils/supapulls'
 	import { latestDhitiSix } from '$lib/utils/localpulls'
-	import WhiteCard from '$lib/components/WhiteCard.svelte'
 	import ButtonOne from '$lib/anims/ButtonOne.svelte'
 	import ButtonTwo from '$lib/anims/ButtonOne.svelte'
 	import '@splidejs/svelte-splide/css'
@@ -23,7 +19,6 @@
 	import 'tippy.js/animations/shift-away.css'
 
 	let threeactions: string|any[]
-	let ifPanel1:boolean
 	let sidebar:boolean
 	let updates: string|any[]
 	let count:number = 3
@@ -38,9 +33,6 @@
 	let oH:number
 	let iW:number
 	let calib:number
-	let revealOne = false
-	let revealTwo = false
-	let revealThree = false
 	let fake = false
 
 	function fauxfake(){

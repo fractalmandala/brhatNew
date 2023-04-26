@@ -1,6 +1,8 @@
 <script lang="ts">
 
 	import { onMount, afterUpdate } from 'svelte'
+	import { browser } from '$app/environment'
+	import visibilityMode from '$lib/stores/visibility'
 	import Header from '$lib/components/SubHeader.svelte'
 	import Animations from 'textify.js'
 	import { scale } from 'svelte/transition'
@@ -27,6 +29,16 @@
 
 	function fauxfake(){
 		fake = !fake
+	}
+
+	function toggleVisibility() {
+	  if (browser) {
+	    visibilityMode.update((mode) => {
+	      const newMode = !mode;
+	      localStorage.setItem('visibilityMode', JSON.stringify(newMode));
+	      return newMode;
+	    });
+	  }
 	}
 
 	function toggleCategory(index:number) {
@@ -57,21 +69,26 @@
 		responsive = false
 	}
 
-	onMount(async() => {
-		vids = await allmrdVids(limiter)
-		kalas = await Shabdavali()
-		rasas = await mrdangaVids()
-		kavitas = await kavitaVids()
-		const { Textify, TextifyTitle } = Animations
-		new TextifyTitle({
-			selector: '.a-title h3',
-			duration: 800,
-			stagger: 40,
+	onMount(() => {
+		const { Textify } = Animations;
+		new Textify({
+			selector: ".typett",
+			duration: 1200,
 			fade: false,
+			top: false,
 			reveal: true,
+			threshold: 0.8,
 			once: false
-		})	
+		});
+
+		(async () => {
+			vids = await allmrdVids(limiter)
+			kalas = await Shabdavali()
+			rasas = await mrdangaVids()
+			kavitas = await kavitaVids()
+		})()
 	})
+
 
 </script>
 
@@ -82,20 +99,28 @@
 </svelte:head>
 <svelte:window bind:innerWidth={iw}/>
 
-<Header sidebar={sidebar}/>
-<div class="type">
+<Header sidebar={sidebar}>
+	<div class="rta-row colgap-8" slot="modeswitch" on:click={toggleVisibility} on:keydown={fauxfake}>
+		<div class="togglemode" class:dark={!$visibilityMode} class:general={$visibilityMode}>
+			<div class="togglemodeball"></div>
+		</div>	
+	</div>
+</Header>
+
+<div class="type" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+
 	<div class="x0">
 		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/mrdanga-hero.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/mrdanga-hero.webp')"></ParallaxImage>
 	</div>
-	<div class="modern-grid pads">
-		<div class="thin-col">
+	<div class="rta-grid grid2 left thirty is-padded rowgap-32 colgap-64 minH cc-all">
+		<div class="rta-in-col rowgap-24 ta-l thin">
 			<h5>
 				Mṛdaṅga is one of the sacred trinity of musical instruments. It is a ‘Deva Vādyam’, the instrument which Nandi, the prime gaṇa of Śiva plays when he does his Tāṇḍava. Mṛdaṅga is capable of sounding the divine rhythm across the multiple planes of consciousness. It is so divine because the sound that it emanates is not just a human creation.</h5>
 			<h4 style="color: #fe4a49">
 				It is a tapping into the divine sound which is always playing but not accessible to our senses normally.
 			</h4>	
 		</div>
-		<div class="thick-col">
+		<div class="rta-in-col rowgap-24 ta-l thick">
 				<p>
 					Sanātana Dharma is a view of immanence. It sees the divine everywhere. The transcendent is the Ultimate Truth, the Supreme Consciousness. The view of immanence says that although nothing that we perceive is the Ultimate Truth, it is at the same time a form of the Ultimate. In this view of immanence a gradient of divinity is created in which individual consciousness is always encouraged to elevate itself and ultimately realize its true form as the Supreme Consciousness.
 				</p>
@@ -116,37 +141,55 @@
 				</p>
 		</div>
 	</div>
-	<div class="plain-one x2 pads">
-		<div class="a-title">
-			<h3>Explore Bṛhad Mṛdaṅga</h3>
+	<div class="rta-column is-padded minH min rowgap-32">
+		<div class="rta-in-col">
+			<h3 class="typett">EXPLORE BṚHAD MṚDAṄGA</h3>
 		</div>
-		<div class="a-box box extra">
-			<div class="boxr short">
-				<h6 on:click={() => toggleCategory(1)} on:keydown={() => toggleCategory(1)} class:selected={selectedCategory[1]}>Latest</h6>
-				<h6 on:click={() => toggleCategory(2)} on:keydown={() => toggleCategory(2)} class:selected={selectedCategory[2]}>Rasa</h6>
-				<h6 on:click={() => toggleCategory(3)} on:keydown={() => toggleCategory(3)} class:selected={selectedCategory[3]}>Kavitā</h6>
-				<h6 on:click={() => toggleCategory(4)} on:keydown={() => toggleCategory(4)} class:selected={selectedCategory[4]}>Śabdāvalī</h6>
-			</div>
+		<div class="rta-row colgap-16">
+				<button class="sideways-button" on:click={() => toggleCategory(1)} class:selected={selectedCategory[1]}>
+					<span>
+						LATEST
+					</span>
+				</button>
+				<button class="sideways-button" on:click={() => toggleCategory(2)} class:selected={selectedCategory[2]}>
+					<span>
+						RASA
+					</span>
+				</button>
+				<button class="sideways-button" on:click={() => toggleCategory(3)} class:selected={selectedCategory[3]}>
+					<span>
+						KAVITĀ
+					</span>
+				</button>
+				<button class="sideways-button" on:click={() => toggleCategory(4)} class:selected={selectedCategory[4]}>
+					<span>
+						ŚABDĀVALĪ
+					</span>
+				</button>
+		</div>
+		<div class="rta-in-col rowgap-32">
 			{#if selectedCategory[1]}
-				<div class="gridof4">
+				<div class="rta-grid grid4 rowgap-32 colgap-32">
 					{#if vids && vids.length > 0}
 						{#each vids as item, i}
-							<div class="card-video" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
+							<div class="rta-video" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
 								<iframe width=100% height=100% loading="lazy" src="https://www.youtube.com/embed/{item.videoid}" title={item.name}></iframe>
 								<p>{item.name}</p>	
 							</div>
 						{/each}
 					{/if}
 				</div>
-				<div on:click={moreClick} on:keydown={moreClick}>
-				<ButtonOne>Load More</ButtonOne>
-				</div>
+				<button class="sideways-button full" on:click={moreClick}>
+					<span>
+						Load More
+					</span>
+				</button>
 			{/if}
 			{#if selectedCategory[2]}
-			<div class="gridof4"> 
+			<div class="rta-grid grid4 rowgap-32 colgap-32"> 
 				{#if rasas && rasas.length > 0}
 					{#each rasas as item, i}
-						<div class="card-video" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
+						<div class="rta-video" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
 							<iframe width=100% height=100% loading="lazy" src="https://www.youtube.com/embed/{item.videoid}" title={item.name}></iframe>
 							<p>{item.name}</p>	
 						</div>
@@ -155,10 +198,10 @@
 			</div>
 			{/if}
 			{#if selectedCategory[3]}
-			<div class="gridof4">
+			<div class="rta-grid grid4 rowgap-32 colgap-32">
 				{#if kavitas && kavitas.length > 0}
 					{#each kavitas as item, i}
-						<div class="card-video" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
+						<div class="rta-video" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
 							<iframe width=100% height=100% loading="lazy" src="https://www.youtube.com/embed/{item.videoid}" title={item.name}></iframe>
 							<p>{item.name}</p>	
 						</div>
@@ -167,10 +210,10 @@
 			</div>
 			{/if}
 			{#if selectedCategory[4]}
-				<div class="gridof5">
+				<div class="rta-grid grid5 rowgap-32 colgap-32">
 					{#if kalas && kalas.length > 0}
 						{#each kalas as item, i}
-							<div class="box" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
+							<div class="rta-video" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
 								<video src={item.fileid} poster={item.imagelink} controls={true}><track kind="captions"></video>
 							</div>
 						{/each}
