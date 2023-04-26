@@ -146,22 +146,22 @@
 			<h3 class="typett">EXPLORE BṚHAD MṚDAṄGA</h3>
 		</div>
 		<div class="rta-row colgap-16">
-				<button class="sideways-button" on:click={() => toggleCategory(1)} class:selected={selectedCategory[1]}>
+				<button class="sideways-button red" on:click={() => toggleCategory(1)} class:selected={selectedCategory[1]}>
 					<span>
 						LATEST
 					</span>
 				</button>
-				<button class="sideways-button" on:click={() => toggleCategory(2)} class:selected={selectedCategory[2]}>
+				<button class="sideways-button red" on:click={() => toggleCategory(2)} class:selected={selectedCategory[2]}>
 					<span>
 						RASA
 					</span>
 				</button>
-				<button class="sideways-button" on:click={() => toggleCategory(3)} class:selected={selectedCategory[3]}>
+				<button class="sideways-button red" on:click={() => toggleCategory(3)} class:selected={selectedCategory[3]}>
 					<span>
 						KAVITĀ
 					</span>
 				</button>
-				<button class="sideways-button" on:click={() => toggleCategory(4)} class:selected={selectedCategory[4]}>
+				<button class="sideways-button red" on:click={() => toggleCategory(4)} class:selected={selectedCategory[4]}>
 					<span>
 						ŚABDĀVALĪ
 					</span>
@@ -226,85 +226,11 @@
 
 <style lang="sass">
 
-.modern-grid
-	display: flex
-	@media screen and (min-width: 1024px)
-		height: 100vh
-		flex-direction: row
-		column-gap: 64px
-		padding-top: 64px
-		.thin-col
-			width: 40%
-			row-gap: 16px
-		.thick-col
-			width: calc(60% - 32px)
-			p
-				margin-bottom: 16px
-	@media screen and (max-width: 1023px)
-		flex-direction: column
-		padding-top: 32px
-		padding-bottom: 32px
-		.thin-col
-			row-gap: 16px
-		.thick-col
-			padding-top: 24px
-			p
-				margin-bottom: 16px
-
-.thin-col
-	display: flex
-	flex-direction: column
-
-
 .x0
 	overflow: hidden
 	@media screen and (min-width: 1024px)
 		height: 100vh
 	@media screen and (max-width: 1023px)
 		height: 60vh
-
-
-
-.x2
-	padding-bottom: 64px
-	.a-box
-		.boxr
-			border-bottom: 1px solid #ececec
-			border-top: 1px solid #ececec
-			justify-content: center
-			width: 100%
-			@media screen and (min-width: 900px)
-				gap: 32px
-			h6
-				cursor: pointer
-				text-transform: uppercase
-				padding: 4px 8px
-				&:hover
-					background: #fe4a49
-					color: white
-				@media screen and (max-width: 1023px)
-					font-size: 16px
-			h6.selected
-				background: #fe4a49
-				color: white
-		.gridof5
-			video
-				object-fit: cover
-				width: 100%
-		align-items: center
-	h3
-		text-align: center
-
-.gridof4
-	padding-left: 0
-	padding-right: 0
-
-.card-video
-	@media screen and (max-width: 1023px)
-		height: 240px
-		width: 100%
-		iframe
-			height: 180px
-
 
 </style>

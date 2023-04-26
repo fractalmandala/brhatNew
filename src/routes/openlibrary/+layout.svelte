@@ -1,13 +1,25 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
- 	import { page } from '$app/stores'
+	import { browser } from '$app/environment'
 	import Header from '$lib/components/SubHeader.svelte'
+ 	import { page } from '$app/stores'
+	import visibilityMode from '$lib/stores/visibility'
 
 	let dropdown = false
 	let fake = false
 	let link:any
 	let sidebar = false
+
+	function toggleVisibility() {
+	  if (browser) {
+	    visibilityMode.update((mode) => {
+	      const newMode = !mode;
+	      localStorage.setItem('visibilityMode', JSON.stringify(newMode));
+	      return newMode;
+	    });
+	  }
+	}
 
 	function toggleDropdown(){
 		dropdown = !dropdown
@@ -45,5 +57,13 @@
 		<p><a href="/openlibrary/reconnect/sections/dictionary">Dictionary</a></p>
 		<p><a href="/openlibrary/reconnect/sections/puranas">Purāṇas</a></p>
 	</div>
+	<div class="rta-row colgap-8" slot="modeswitch" on:click={toggleVisibility} on:keydown={fauxfake}>
+		<div class="togglemode" class:dark={!$visibilityMode} class:general={$visibilityMode}>
+			<div class="togglemodeball"></div>
+		</div>	
+	</div>
 </Header>
-<slot></slot>
+
+<div class="type" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+	<slot></slot>
+</div>

@@ -2,7 +2,10 @@
 
 	import { onMount } from 'svelte'
 	import { bols } from '$lib/filed/bolindex'
+	import SearchForm from '$lib/components/SearchForm.svelte'
+	import Animations from 'textify.js'
 	import HeadComponent from '$lib/components/HeadComponent.svelte'
+	import LogoBol from '$lib/logos/LogoBol.svelte'
 	import DropDown from '$lib/components/DropDown.svelte'
 	import DropDown2 from '$lib/components/DropDown.svelte'
 	import { BOLEssentials, BOLBodhas, BOLIKS, BOLROS, BOLOthers, AryanIssue, AryanTag } from '$lib/utils/supapulls'
@@ -10,8 +13,10 @@
 	import { circIn } from 'svelte/easing'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
 	import ButtonOne from '$lib/anims/ButtonOne.svelte'
-	let dropdown = false
+	let dropdownOne = true
+	let dropdownTwo = true
 	let searchHelpOn = false
+	let breakPoint:boolean
 	let bolInput:any
 	let bolInputValue:any
 	let bolHiLiteIndex:any = null
@@ -29,6 +34,18 @@
 	selectedCategory[1] = true
 	let tag:string = 'Core Material'
 	let fake:boolean = false
+
+	function toggleMenu(){
+		if ( iw <= 1023 ) {
+			dropdownOne = !dropdownOne
+		}
+	}
+
+	function toggleSecondMenu(){
+		if ( iw <= 1023 ) {
+			dropdownTwo = !dropdownTwo
+		}
+	}
 
 	$: if ( !bolInputValue ) {
 		filteredBOLS = []
@@ -95,14 +112,38 @@
 			responsive = false
 		}
 
-	onMount(async() => {
-		window.addEventListener('click', handleClickOutside)
-		essentials = await BOLEssentials(limit)
-		bodhas = await BOLBodhas(limit)
-		ikss = await BOLIKS(limit)
-		ross = await BOLROS(limit)
-		others = await BOLOthers()
-		aryans = await AryanTag(tag)
+	$: if ( iw <= 1023) {
+		breakPoint = true
+		dropdownOne = false
+		dropdownTwo = false
+	} else {
+		breakPoint = false
+		dropdownOne = true
+		dropdownTwo = true
+	}
+
+	onMount(() => {
+		window.addEventListener('click', handleClickOutside);
+		const { Textify } = Animations;
+		new Textify({
+			selector: ".typett",
+			duration: 1200,
+			fade: false,
+			top: false,
+			reveal: true,
+			threshold: 0.8,
+			once: false,
+			scale: 3
+		});
+
+		(async () => {
+			essentials = await BOLEssentials(limit)
+			bodhas = await BOLBodhas(limit)
+			ikss = await BOLIKS(limit)
+			ross = await BOLROS(limit)
+			others = await BOLOthers()
+			aryans = await AryanTag(tag)
+		})();
 	})
 
 </script>
@@ -113,56 +154,63 @@
 	<HeadComponent>
 		The Open Library at
 	</HeadComponent>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </svelte:head>
 
 
-<div class="type">
+
 	<div class="x0">
 		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/bolherobrhat.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/mobile-bol.webp')">
-			<div class="boxobox" style="display: flex; flex-direction: column; height: 100%; width: 100%; justify-content: center; align-items: center; text-align: center;">
-				<div class="boxc pads" style="height: max-content; background: rgba(0,0,0,0.8); text-align: center; padding-top: 32px; padding-bottom: 32px">
-				<h3 style="color: white; margin-bottom: 24px">Bṛhat Open Library</h3>
-				<h5 class="pads" style="color: white; margin-bottom: 24px">
-					is an Online Repository for Texts, Papers, Learning Material and More.
-					It is a tribute to the hard labor of people known and unknown that have created for us an unbelievable repository of Indian knowledge.
-				</h5>
-				<p style="color: white">
-					All material here is sourced from public domains, permitted for resharing, and uploaded under the CC0 1.0 Open License. If you find any material that violates this, please write to us at contact@brhat.in and we will remove it from the collection.
-				</p>
-				</div>
-			</div>
 		</ParallaxImage>
 	</div>
-	<div class="plain-one x2 pads">
-		<div class="a-title">
-			<h4 style="text-align: center">Explore</h4>
+
+<!--initial section with bol description-->
+	<div class="rta-column minH is-padded rowgap-32">
+		<div class="rta-in-col rowgap-24 wide-60-100">
+			<LogoBol></LogoBol>
+			<h5 class="typett">
+				is an Online Repository for Texts, Papers, Learning Material and More.
+				It is a tribute to the hard labor of people known and unknown that have created for us an unbelievable repository of Indian knowledge.
+			</h5>
+			<p class="typett">
+				All material here is sourced from public domains, permitted for resharing, and uploaded under the CC0 1.0 Open License. If you find any material that violates this, please write to us at contact@brhat.in and we will remove it from the collection.
+			</p>
 		</div>
-		<div class="a-box box extra">
-			<div class="boxr resbox">
-				<DropDown --thisbackground="var(--tree)" --thisdropdowntextcolor="var(--tree)">
-					<div slot="visible" class="expandmenu"><h6 style="color: white">EXPAND MENU</h6></div>
-					<div class="invisible" slot="invisible">
-						<h5 on:click={() => toggleCategory(1)} on:keydown={() => toggleCategory(1)} class:selected={selectedCategory[1]}>Essentials</h5>
-						<h5 on:click={() => toggleCategory(2)} on:keydown={() => toggleCategory(2)} class:selected={selectedCategory[2]}>Two Bodhas</h5>
-						<h5 on:click={() => toggleCategory(3)} on:keydown={() => toggleCategory(3)} class:selected={selectedCategory[3]}>IKS</h5>
-						<h5 on:click={() => toggleCategory(4)} on:keydown={() => toggleCategory(4)} class:selected={selectedCategory[4]}>Scriptural</h5>
-						<h5 on:click={() => toggleCategory(5)} on:keydown={() => toggleCategory(5)} class:selected={selectedCategory[5]}>Special</h5>
-						<h5 on:click={() => toggleCategory(6)} on:keydown={() => toggleCategory(6)} class:selected={selectedCategory[6]}>Āryan Issue</h5>
-					</div>
-				</DropDown>
-			</div>
-			<div class="gridof2" class:fullgrid={selectedCategory[5] || selectedCategory[6]}>
+	</div>
+<!--end-->
+
+<!--primary section featuring books-->
+	<div class="rta-column minH min is-padded rowgap-32">
+		<h4 class="typett">EXPLORE</h4>
+		<div class="rta-row row-col colgap-16">
+			{#if breakPoint}
+			<button class="dropdown-menu-button tree" on:click={toggleMenu}>
+				Expand List
+			</button>
+			{/if}
+			{#if dropdownOne}
+			<button class="sideways-button tree" on:click={() => toggleCategory(1)} on:click={toggleMenu} class:selected={selectedCategory[1]}><span>Essentials</span></button>
+			<button class="sideways-button tree" on:click={() => toggleCategory(2)} on:click={toggleMenu} class:selected={selectedCategory[2]}><span>Two Bodhas</span></button>
+			<button class="sideways-button tree" on:click={() => toggleCategory(3)} on:click={toggleMenu} class:selected={selectedCategory[3]}><span>IKS</span></button>
+			<button class="sideways-button tree" on:click={() => toggleCategory(4)} on:click={toggleMenu} class:selected={selectedCategory[4]}><span>Scriptural</span></button>
+			<button class="sideways-button tree" on:click={() => toggleCategory(5)} on:click={toggleMenu} class:selected={selectedCategory[5]}><span>Special</span></button>
+			<button class="sideways-button tree" on:click={() => toggleCategory(6)} on:click={toggleMenu} class:selected={selectedCategory[6]}><span>Āryan Issue</span></button>
+			{/if}
+		</div>
+		<div class="rta-grid grid3 colgap-32 rowgap-32" class:fullgrid={selectedCategory[5] || selectedCategory[6]}>
 			{#if selectedCategory[1]}
 				{#if essentials && essentials.length > 0}
 					{#each essentials as item, i}
-						<div class="card-book" in:scale={{ duration: 150, delay: i*25}} out:scale={{ duration: 25, delay: 0 }}>
+						<div class="rta-row colgap-24" in:scale={{ duration: 150, delay: i*25}} out:scale={{ duration: 25, delay: 0 }}>
 							{#if item.imagelinker && item.imagelinker.length > 0}
-							<div class="card-image">
+							<div class="rta-image w32 height-30">
 								<img src={item.imagelinker} alt={item.id}/>
 							</div>
 							{/if}
-							<div class="card-body">
-								<h6><a href="/openlibrary/books/{item.slug}">{item.Text}</a></h6>
+							<div class="rta-in-col w64 rowgap-8">
+								<h6 class="heading"><a href="/openlibrary/books/{item.slug}">{item.Text}</a></h6>
 								{#if item.Description && item.Description.length > 0}
 								<p>{item.Description}</p>
 								{/if}
@@ -175,14 +223,14 @@
 			{#if selectedCategory[2]}
 				{#if bodhas && bodhas.length > 0}
 					{#each bodhas as item, i}
-						<div class="card-book" in:scale={{ duration: 150, delay: i*25}} out:scale={{ duration: 25, delay: 0 }}>
+						<div class="rta-row colgap-24" in:scale={{ duration: 150, delay: i*25}} out:scale={{ duration: 25, delay: 0 }}>
 							{#if item.imagelinker && item.imagelinker.length > 0}
-							<div class="card-image">
+							<div class="rta-image w32 height-30">
 								<img src={item.imagelinker} alt={item.id}/>
 							</div>
 							{/if}
-							<div class="card-body">
-								<h6><a href="/openlibrary/books/{item.slug}">{item.Text}</a></h6>
+							<div class="rta-in-col w64 rowgap-8">
+								<h6 class="heading"><a href="/openlibrary/books/{item.slug}">{item.Text}</a></h6>
 								{#if item.Description && item.Description.length > 0}
 								<p>{item.Description}</p>
 								{/if}
@@ -195,14 +243,14 @@
 			{#if selectedCategory[3]}
 				{#if ikss && ikss.length > 0}
 					{#each ikss as item, i}
-						<div class="card-book" in:scale={{ duration: 150, delay: i*25}} out:scale={{ duration: 25, delay: 0 }}>
+						<div class="rta-row colgap-24" in:scale={{ duration: 150, delay: i*25}} out:scale={{ duration: 25, delay: 0 }}>
 							{#if item.imagelinker && item.imagelinker.length > 0}
-							<div class="card-image">
+							<div class="rta-image w32 height-30">
 								<img src={item.imagelinker} alt={item.id}/>
 							</div>
 							{/if}
-							<div class="card-body">
-								<h6><a href="/openlibrary/books/{item.slug}">{item.Text}</a></h6>
+							<div class="rta-in-col w64 rowgap-8">
+								<h6 class="heading"><a href="/openlibrary/books/{item.slug}">{item.Text}</a></h6>
 								{#if item.Description && item.Description.length > 0}
 								<p>{item.Description}</p>
 								{/if}
@@ -215,14 +263,14 @@
 			{#if selectedCategory[4]}
 				{#if ross && ross.length > 0}
 					{#each ross as item, i}
-						<div class="card-book" in:scale={{ duration: 150, delay: i*25}} out:scale={{ duration: 25, delay: 0 }}>
+						<div class="rta-row colgap-24" in:scale={{ duration: 150, delay: i*25}} out:scale={{ duration: 25, delay: 0 }}>
 							{#if item.imagelinker && item.imagelinker.length > 0}
-							<div class="card-image">
+							<div class="rta-image w32 height-30">
 								<img src={item.imagelinker} alt={item.id}/>
 							</div>
 							{/if}
-							<div class="card-body">
-								<h6><a href="/openlibrary/books/{item.slug}">{item.Text}</a></h6>
+							<div class="rta-in-col rowgap-8 w64">
+								<h6 class="heading"><a href="/openlibrary/books/{item.slug}">{item.Text}</a></h6>
 								{#if item.Description && item.Description.length > 0}
 								<p>{item.Description}</p>
 								{/if}
@@ -233,8 +281,8 @@
 				{/if}
 			{/if}
 			{#if selectedCategory[5]}
-				<div class="boxc pads" style="width: 100%;">
-					<div class="bodyinside pads" style="display: flex; flex-direction: column; row-gap: 20px">
+				<div class="rta-in-col">
+					<div class="rta-in-col rowgap-24">
 						<h6>
 						We have a dream.
 						</h6>
@@ -285,74 +333,85 @@
 				</div>
 			{/if}
 			{#if selectedCategory[6]}
-				<div class="boxc pads" style="width: 100%">
-					<div class="bodyinside pads" style="display: flex; flex-direction: column; row-gap: 20px">
+				<div class="rta-in-col rowgap-24">
 					<h5 style="font-weight: bold">
 						At Bṛhat, we see history as being salient to civilization,
 						just as memory is salient to consciousness.
 					</h5>
-					<p class="grey5">
+					<p>
 						And by history we mean not just the trivia of events and sequences, but the very processes of history making and civilizational emergence. It is core to a sense of self and identity. The distortion of history is a consequential and egregious ploy in the agenda to distort a civilization’s sense of self. When we speak of colonization, we are keen in pointing out that an important aspect of our colonized national psyche is an internalized false narrative about our past. This narrative is not static — its specific conclusions often change and its goalposts shift, but the overall intent to make us doubt our own past, reconsider our own nativity, and blur our conceptions of our forefathers.
 					</p>
-					<p class="grey5">
+					<p>
 						One core dimension of this agenda is the matter of Aryan invasion/migration, and multiple revisions in the theories that re-formulate them more as “ trickling-in” or even as “tourism”. The theory itself a corollary from the question of ‘proto-Indo-European’ (PIE) origins and dispersal. This is a vast field, whose birth was in the 18th century with the rise of Comparative Linguistics (CL) as a legitimate academic discipline.
 					</p>
-					<p class="grey5">
+					<p>
 						Among the many distortions and misrepresentations this minefield is laden with, two of special concern are claims that:<br><br>– The Out of India (OIT) model of PIE origins and dispersals is built atop pseudoscience with no real evidence in its favor.<br><br>– The current consensus is based on a rigorous, well-proven theory which we dismiss out of misplaced national sentiment at best.
 					</p>
-					<h5 style="font-weight: bold">
+					<h5 class="heading">
 						Partly to refute these false allegations, but largely to continue our intent to construct and maintain a repository for all texts relevant to the Indian civilization and its knowledge systems, we have dedicated here a special section in our Bṛhat Library to the Aryan issue.
-					</h5>	<p class="grey5 wide75">
+					</h5>	
+					<p>
 					This will be a dynamic, continuously growing collection of articles, essays, papers and findings relevant to the AI/M/T issue from all discipline, with a focus on giving due shelf-space and representation to the OIT model(s). In line with the need to have both svayaṃbodha and śatrubodha, we will also feature works by key proponents.<br><br>To traverse such a complex landscape is neither a quick journey, nor does it lend itself to easy navigation without guidance. To this end, we have also added a basic walkthrough.<br><br>We will continue to add to this collection, and if you wish to suggest pertinent and relevant literature and scholarship on the matter, whether papers, works, or writers that should be featured in this repository to build its volume along with its credibility and comprehensiveness, please write to us at contact@brhat.in
 					</p>
-					<p style="font-weight: bold; color: black">Special Gratitude to:</p>
-					<p class="grey5 wide75">
+					<p style="font-weight: bold;">Special Gratitude to:</p>
+					<p>
 						Shri Shrikant Talageri ji, who has single-handedly won the debate, and has generously agreed to have his works posted here. His complete works are available <a href="http://talageri.blogspot.com/" target="_blank" rel="noreferrer" style="color: var(--tree)"> here.</a><br><br>
 						Shri Ashish Kulkarni, who is fighting the good fight on the frontlines of primary research in genetic matters, and who also consented to have his primary essays fronted here. His work is found <a href="https://a-genetics.blogspot.com/" target="_blank" rel="noreferrer" style="color: var(--tree)"> here.</a><br><br>		The ShoebillStork, with the handle @TrueShoebill on Twitter, who has been running an unsung yeoman service for a long time.
 					</p>
 					<h5 style="font-weight: bold; color: var(--tree)">Explore the collection below.</h5>
-					</div>
 				</div>
 			{/if}
-			</div>
 		</div>
 	</div>
-	<div class="plain-one x4 pads">
-		<div class="a-title">
-			<h4 style="text-align: center">The Āryan Issue</h4>
-		</div>
-		<div class="a-box box extra">
-			<DropDown2  --thisbackground="var(--tree)" --thisdropdowntextcolor="var(--tree)">
-				<div slot="visible">
-					<h6 style="color: white">EXPAND GENRES</h6>
+<!--end-->
+
+<!--aryan issue section-->
+	<div class="rta-column minH min is-padded top-p-64 rowgap-32">
+		<h4 class="typett">THE ĀRYAN ISSUE</h4>
+		<div class="rta-grid grid2 left rowgap-32 colgap-32">
+			<div class="rta-image height-50">
+				<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/aryanissue.webp" alt="aryan issue"/>
+			</div>
+			<div class="rta-in-col bord-all all-p-16">
+				{#if breakPoint}
+				<button class="dropdown-menu-button tree" on:click={toggleSecondMenu}>
+					Expand Genres
+				</button>
+				{/if}
+				{#if dropdownTwo}
+				<div class="rta-row row-col cc-all colgap-8" on:click={toggleSecondMenu} on:keydown={fauxfake}>
+					<button on:click={() => setTag('Core Material')} on:keydown={fauxfake} class="tab-button {tag === 'Core Material' ? 'filtered' : ''}">Core</button>
+					<button on:click={() => setTag('Indology')} on:keydown={fauxfake} class="tab-button {tag === 'Indology' ? 'filtered' : ''}">Indology</button>
+					<button on:click={() => setTag('Linguistics')} on:keydown={fauxfake} class="tab-button {tag === 'Linguistics' ? 'filtered' : ''}">Linguistics</button>
+					<button on:click={() => setTag('History')} on:keydown={fauxfake} class="tab-button {tag === 'History' ? 'filtered' : ''}">History</button>
+					<button on:click={() => setTag('Genetics')} on:keydown={fauxfake} class="tab-button {tag === 'Genetics' ? 'filtered' : ''}">Genetics</button>
+					<button on:click={() => setTag('Archaeology')} on:keydown={fauxfake} class="tab-button {tag === 'Archaeology' ? 'filtered' : ''}">Archaeology</button>
+					<button on:click={() => setTag('Chronology')} on:keydown={fauxfake} class="tab-button {tag === 'Chronology' ? 'filtered' : ''}">Chronology</button>
+					<button on:click={() => setTag('Philology')} on:keydown={fauxfake} class="tab-button {tag === 'Philology' ? 'filtered' : ''}">Philology</button>
+					<button on:click={() => setTag('Geology')} on:keydown={fauxfake} class="tab-button {tag === 'Geology' ? 'filtered' : ''}">Geology</button>
 				</div>
-				<div class="invisible" slot="invisible">
-					<h5 on:click={() => setTag('Core Material')} on:keydown={fauxfake} class="genres {tag === 'Core Material' ? 'filtered' : ''}">Core Material</h5>
-					<h5 on:click={() => setTag('Indology')} on:keydown={fauxfake} class="genres {tag === 'Indology' ? 'filtered' : ''}">Indology</h5>
-					<h5 on:click={() => setTag('Linguistics')} on:keydown={fauxfake} class="genres {tag === 'Linguistics' ? 'filtered' : ''}">Linguistics</h5>
-					<h5 on:click={() => setTag('History')} on:keydown={fauxfake} class="genres {tag === 'History' ? 'filtered' : ''}">History</h5>
-					<h5 on:click={() => setTag('Genetics')} on:keydown={fauxfake} class="genres {tag === 'Genetics' ? 'filtered' : ''}">Genetics</h5>
-					<h5 on:click={() => setTag('Archaeology')} on:keydown={fauxfake} class="genres {tag === 'Archaeology' ? 'filtered' : ''}">Archaeology</h5>
-					<h5 on:click={() => setTag('Chronology')} on:keydown={fauxfake} class="genres {tag === 'Chronology' ? 'filtered' : ''}">Chronology</h5>
-					<h5 on:click={() => setTag('Philology')} on:keydown={fauxfake} class="genres {tag === 'Philology' ? 'filtered' : ''}">Philology</h5>
-					<h5 on:click={() => setTag('Geology')} on:keydown={fauxfake} class="genres {tag === 'Geology' ? 'filtered' : ''}">Geology</h5>
-				</div>
-			</DropDown2>
-			<div class="gridof4">
+				{/if}
+				<div class="rta-grid grid2 top-m-24 rowgap-32 colgap-32 all-p-16">
 				{#if aryans && aryans.length > 0}
 					{#each aryans as item, i}
-						<div class="card-book aryansbook" in:scale={{ duration: 200, delay: i*50, easing: circIn}} out:fly={{ duration: 150, easing: circIn}}>
-							<h6><a href={item.sourcelink} target="_blank" rel="noreferrer">{item.paper}</a></h6>
+						<div class="rta-in-col rowgap-8" in:scale={{ duration: 200, delay: i*50, easing: circIn}} out:fly={{ duration: 150, easing: circIn}}>
+							<h6 class="heading"><a href={item.sourcelink} target="_blank" rel="noreferrer">{item.paper}</a></h6>
 							<p>{item.author}</p>
 						</div>
 					{/each}
-				{/if}
+				{/if}	
+				</div>			
 			</div>
 		</div>
 	</div>
-</div>
+<!--end-->
+
+
 
 <style lang="sass">
+
+.heading
+	font-family: 'Playfair Display', serif
 
 .x0
 	overflow: hidden
@@ -361,62 +420,12 @@
 	@media screen and (max-width: 1023px)
 		height: 100vh
 		
-
-.x2
-	.gridof2.fullgrid
-		grid-template-columns: 1fr
-		grid-template-areas: "."
-
-.x2
-	padding-bottom: 64px
-	padding-top: 64px
-	.card-book
-		.card-body
-			row-gap: 12px
-			small
-				border-top: 1px solid #ececec
-				padding-top: 4px
-				text-transform: uppercase
-				font-weight: bold
-			a
-				transition: var(--snap)
-				&:hover
-					color: var(--tree)
-	.a-box
-		.boxr
-			justify-content: center
-			h6
-				cursor: pointer
-				text-transform: uppercase
-				&:hover
-					background: var(--tree)
-					color: white
-				@media screen and (max-width: 1023px)
-					font-size: 16px
-			@media screen and (min-width: 900px)
-				border-bottom: 1px solid #ececec
-				border-top: 1px solid #ececec
-				gap: 32px
-				h6
-					padding: 4px 8px
-			@media screen and (max-width: 899px)
-				border: none
+.rta-grid.grid3.fullgrid
 	@media screen and (min-width: 1024px)
-		.gridof2
-			margin-top: 80px
-			z-index: 1
+		grid-template-columns: 60% 1fr
+		grid-template-areas: ". ."
 
-
-.x4
-	padding-bottom: 64px
-	padding-top: 64px
-	@media screen and (min-width: 1024px)
-		.gridof4
-			margin-top: 80px
-			z-index: 1
-
-
-.aryansbook
-	flex-direction: column
+.tab-button.filtered
+	color: #fe4a49
 
 </style>

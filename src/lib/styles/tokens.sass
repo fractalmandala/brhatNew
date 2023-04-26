@@ -118,6 +118,10 @@ $serif: 'STIX Two Text', serif
 		.w64
 			width: 64%	
 
+.rta-row.row-col
+	@media screen and (max-width: 1023px)
+		flex-direction: column
+
 .rta-row.colgap-16
 	@media screen and (max-width: 1023px)
 		column-gap: 8px
@@ -171,7 +175,7 @@ $serif: 'STIX Two Text', serif
 		grid-template-areas: ". ."
 	@media screen and (max-width: 1023px)
 		grid-template-columns: 1fr
-		grid-template-areas: "."
+		grid-template-areas: "." "."
 
 .rta-grid.grid2.right
 	@media screen and (min-width: 1024px)
@@ -250,7 +254,10 @@ $serif: 'STIX Two Text', serif
 .rowgap-24
 	row-gap: $std-alt
 .rowgap-32
-	row-gap: $double
+	@media screen and (min-width: 1024px)
+		row-gap: $double
+	@media screen and (max-width: 1023px)
+		row-gap: $std-alt
 .rowgap-64
 	@media screen and (min-width: 1024px)
 		row-gap: $quad
@@ -362,7 +369,7 @@ $serif: 'STIX Two Text', serif
 
 .dropdown-menu-button
 	background: transparent
-	padding: 12px
+	padding: 10px
 	border-radius: 24px
 	font-size: 16px
 
@@ -373,6 +380,11 @@ $serif: 'STIX Two Text', serif
 .dropdown-menu-button.red
 	background: #fe4a49
 	border: 1px solid #fe4a49
+	color: white
+
+.dropdown-menu-button.tree
+	background: $teal
+	border: 1px solid $teal
 	color: white
 
 .download-button
@@ -440,12 +452,11 @@ $serif: 'STIX Two Text', serif
 	border-left: none
 	border-right: none
 	border-top: none
-	border-bottom: 1px solid $red
+	cursor: pointer
 	&::after
 		content: " "
 		width: 0%
 		height: 100%
-		background: #fe4a49
 		position: absolute
 		transition: all 0.4s ease-in-out
 		right: 0
@@ -467,16 +478,37 @@ $serif: 'STIX Two Text', serif
 		transition: all 0.3s ease-in-out
 	@media screen and (min-width: 1024px)
 		span
-			padding: 12px
-			font-size: 18px
+			padding: 8px 8px
+			font-size: 16px
 	@media screen and (max-width: 1023px)
 		span
 			padding: 6px
 			font-size: 16px
 
+.sideways-button.red
+	border-bottom: 1px solid $red
+	&::after
+		background: #fe4a49
+
+.sideways-button.tree
+	border-bottom: 1px solid $teal
+	&::after
+		background: $teal
+
 .sideways-button.full
 	width: max-content
 	border-radius: 4px
+
+.searchbutton
+	width: 40px
+	height: 40px
+	background: transparent
+	border: none
+	display: flex
+	svg
+		object-fit: contain
+		width: 48px
+		height: 48px
 
 @keyframes scaleUp
 	0%
@@ -487,6 +519,22 @@ $serif: 'STIX Two Text', serif
 
 	100%
 		transform: scale(1)
+
+.tab-button
+	background: transparent
+	border: none
+	text-transform: uppercase
+	text-align: center
+	font-weight: 600
+	cursor: pointer
+	transition: 0.25s ease-in-out
+	padding: 4px 6px
+	border-radius: 4px
+	color: #676767
+	@media screen and (min-width: 1024px)
+		font-size: 12px
+	@media screen and (max-width: 1023px)
+		font-size: 16px
 
 //themes----------------------------------------------------------------------------------------------------------------------------------
 	
@@ -543,6 +591,16 @@ $serif: 'STIX Two Text', serif
 	.logo-svg-box
 		&::after
 			background: $white
+	#bol-gol-white
+		path
+			fill: #474747
+			stroke: #474747
+	#log-boltype
+		#bol-b, #bol-h, #bol-a, #bol-t
+			fill: #474747
+	#bol-tag
+		path
+			fill: #474747
 	.bord-bot
 		border-bottom: 1px solid $whiteS
 	.bord-all
@@ -570,6 +628,14 @@ $serif: 'STIX Two Text', serif
 				color: $white
 	.sideways-button.full
 		border: 1px solid $grey
+	.searchbutton
+		svg path
+			fill: #474747
+	.tab-button
+		&:hover
+			background: $greyS
+			color: $white
+		
 
 @keyframes buttonmovement
 	0%
@@ -648,6 +714,16 @@ $serif: 'STIX Two Text', serif
 	.logo-svg-box
 		&::after
 			background: $black
+	#bol-gol-white
+		path
+			fill: #FFFFFF
+			stroke: #FFFFFF
+	#log-boltype
+		#bol-b, #bol-h, #bol-a, #bol-t
+			fill: #FFFFFF
+	#bol-tag
+		path
+			fill: #FFFFFF
 	.bord-bot
 		border-bottom: 1px solid $text
 	.bord-all
@@ -676,6 +752,13 @@ $serif: 'STIX Two Text', serif
 				color: $white
 	.sideways-button.full
 		border: 1px solid $grey
+	.searchbutton
+		svg path
+			fill: #FFFFFF
+	.tab-button
+		&:hover
+			background: #474747
+			color: $white
 
 .type
 	.c-red
@@ -788,6 +871,8 @@ $serif: 'STIX Two Text', serif
 
 .top-p-16
 	padding-top: $std
+.top-p-32
+	padding-top: $double
 .bot-p-16
 	padding-bottom: $std
 .top-p-64
@@ -798,6 +883,8 @@ $serif: 'STIX Two Text', serif
 .bot-p-64
 	@media screen and (min-width: 1024px)
 		padding-bottom: $quad
+	@media screen and (max-width: 1023px)
+		padding-bottom: $double
 
 .bot-p-32
 	@media screen and (min-width: 1024px)
