@@ -3,6 +3,7 @@
 	import { onMount } from 'svelte'
 	import { browser } from '$app/environment'
 	import Header from '$lib/components/SubHeader.svelte'
+	import ButtonEmerge from '$lib/anims/ButtonEmerge.svelte'
 	import visibilityMode from '$lib/stores/visibility'
 	import Animations from 'textify.js'
 	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide'
@@ -127,7 +128,11 @@
 				To power creatives, research and design rooted in the Indian civilizational consciousness. We
 				convert individual, institutional and collective intent into action, across 3 dimensions.
 				</h5>
-				<ButtonOne><a href="/about">Know More</a></ButtonOne>
+				<ButtonEmerge>
+					<a href="/about">
+						Know More
+					</a>
+				</ButtonEmerge>
 			</div>
 			<div class="rta-grid grid3 colgap-32 rowgap-32">
 				{#if threeactions && threeactions.length > 0}

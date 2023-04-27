@@ -20,6 +20,31 @@ $greyM: #878787
 $greyL: #b7b7b7
 $greyX: #d7d7d7
 $whiteS: #ECECEC
+$reds1: #D13438
+$reds2: #EF6950
+$reds3: #DA3B01
+$reds4: #CA5010
+$reds5: #F7630C
+$reds6: #FF8C00
+$reds7: #FFB900
+$blues1: #0063B1
+$blues2: #0078D7
+$blues3: #0099BC
+$blues4: #00B7C3
+$viols1: #881798
+$viols2: #B146C2
+$viols3: #BF0077
+$viols4: #E3008C
+$viols5: #C30052
+$viols6: #EA005E
+$viols7: #8E8CD8
+$greens1: #00B294
+$greens2: #018574
+$greens3: #00CC6A
+$greens4: #10893E
+$greens5: #498205
+$greens6: #107C10
+
 
 :root
 	--red: $red
@@ -65,6 +90,26 @@ $penta: 128px
 	justify-content: center
 	align-items: center
 	text-align: center
+
+.full-h
+	height: 100%
+
+.end-col
+	align-items: flex-end
+
+.end-row
+	justify-content: flex-end
+
+.modalclass
+	z-index: 1000
+	position: fixed
+	top: 0
+	left: 0
+	width: 100vw
+	height: 100vh
+	overflow: hidden
+	background: rgba(0,0,0,0.6)
+	backdrop-filter: blur(20px)
 
 
 //typography
@@ -453,6 +498,7 @@ $serif: 'STIX Two Text', serif
 	border-right: none
 	border-top: none
 	cursor: pointer
+	width: max-content
 	&::after
 		content: " "
 		width: 0%
@@ -495,6 +541,11 @@ $serif: 'STIX Two Text', serif
 	&::after
 		background: $teal
 
+.sideways-button.green
+	border-bottom: 1px solid $green
+	&::after
+		background: $green
+
 .sideways-button.full
 	width: max-content
 	border-radius: 4px
@@ -509,6 +560,42 @@ $serif: 'STIX Two Text', serif
 		object-fit: contain
 		width: 48px
 		height: 48px
+
+.basic-button
+	height: 24px
+	min-width: 40px
+	border-radius: 2px
+	text-transform: uppercase
+	cursor: pointer
+	transition: all 0.18s ease-in-out
+	transform-origin: center center
+	width: max-content
+	&:hover
+		transform: scale(0.88)
+	@medias screen and (min-width: 1024px)
+		font-size: 12px
+	@media screen and (max-width: 1023px)
+		font-size: 14px
+		height: 28px
+		min-width: 48px
+
+.light.basic-button
+	background: $white
+	color: $text
+	border: 1px solid $text
+	&:hover
+		background: #fe4a49
+		color: white
+		border: 1px solid $red
+
+.dark.basic-button
+	background: $white
+	color: $text
+	border: 1px solid $text
+	&:hover
+		background: #fe4a49
+		color: white
+		border: 1px solid $red
 
 @keyframes scaleUp
 	0%
@@ -635,6 +722,25 @@ $serif: 'STIX Two Text', serif
 		&:hover
 			background: $greyS
 			color: $white
+	#rid-logo-svg
+		#whites
+			path
+				fill: $text
+	.toast
+		background: rgba( 255, 255, 255, 0.64 )
+		box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )
+		backdrop-filter: blur( 23px )
+		-webkit-backdrop-filter: blur( 13px )
+		border: 1px solid #d7d7d7
+		padding: 16px 12px 16px 16px
+	.basic-button
+		background: $white
+		color: $text
+		border: 1px solid $text
+		&:hover
+			background: #fe4a49
+			color: white
+			border: 1px solid $red
 		
 
 @keyframes buttonmovement
@@ -673,10 +779,16 @@ $serif: 'STIX Two Text', serif
 	color: $white
 	h6, h4, h3, h2
 		color: $white
+	h3.darker
+		color: $text
 	h1
 		color: $grey
-	p, pre, li, h5
+	p, pre, li
 		color: $greyX
+	.dark-text p
+		color: $grey
+	h5
+		color: $greyS
 	h5.heading
 		color: $text
 	h5.heading.text-black
@@ -759,6 +871,25 @@ $serif: 'STIX Two Text', serif
 		&:hover
 			background: #474747
 			color: $white
+	#rid-logo-svg
+		#whites
+			path
+				fill: $white
+	.toast
+		background: rgba( 0, 09, 0, 0.64 )
+		box-shadow: 0 8px 32px 0 rgba( 09, 02, 0, 0.37 )
+		backdrop-filter: blur( 23px )
+		-webkit-backdrop-filter: blur( 13px )
+		border: 1px solid #474747
+		padding: 16px 12px 16px 16px
+	.basic-button
+		background: $white
+		color: $text
+		border: 1px solid $text
+		&:hover
+			background: #fe4a49
+			color: white
+			border: 1px solid $red
 
 .type
 	.c-red
@@ -935,3 +1066,86 @@ $serif: 'STIX Two Text', serif
 .height-80
 	@media screen and (min-width: 1024px)
 		height: 80vh
+
+.rta-card 
+	position: relative 
+	width: 300px 
+	height: 400px 
+	margin: 20px 
+	border-radius: 10px 
+	overflow: hidden 
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) 
+	transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 
+	&:hover 
+		transform: translateY(-10px) 
+		.rta-card-image 
+			img 
+				transform: scale(1.2) 
+		.rta-card-content 
+			transform: translateY(-100%) 
+
+.rta-card-image 
+	position: absolute 
+	top: 0 
+	left: 0 
+	width: 100% 
+	height: 100% 
+	overflow: hidden 
+	border-radius: 10px 
+	height: 400px 
+	width: 300px 
+	background-color: $text
+	img 
+		width: 100% 
+		height: 100% 
+		object-fit: cover 
+		transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 
+
+.rta-card-content 
+	position: absolute 
+	bottom: 0 
+	left: 0 
+	width: 100% 
+	padding: 20px 
+	background-color: #fff 
+	transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 
+
+.rta-card2 
+	overflow: visible 
+	width: 190px 
+	height: 254px 
+	&:hover 
+		.content 
+			transform: rotateY(180deg) 
+.rta-card2-content 
+	width: 100% 
+	height: 100% 
+	transform-style: preserve-3d 
+	transition: transform 300ms 
+	box-shadow: 0px 0px 10px 1px #000000ee 
+	border-radius: 5px 
+.rta-card2-front, .rta-card2-back 
+	background-color: #151515 
+	position: absolute 
+	width: 100% 
+	height: 100% 
+	backface-visibility: hidden 
+	-webkit-backface-visibility: hidden 
+	border-radius: 5px 
+	overflow: hidden 
+.rta-card2-back 
+	width: 100% 
+	height: 100% 
+	justify-content: center 
+	display: flex 
+	align-items: center 
+	overflow: hidden 
+	&::before 
+		position: absolute 
+		content: ' ' 
+		display: block 
+		width: 160px 
+		height: 160% 
+		background: linear-gradient(90deg, transparent, #ff9966, #ff9966, #ff9966, #ff9966, transparent) 
+		animation: rotation_481 5000ms infinite linear 
+

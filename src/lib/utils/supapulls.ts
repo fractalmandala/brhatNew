@@ -617,5 +617,3 @@ export async function events() {
 		if(error) throw new Error(error.message)
 		return data
 	}
-
-	

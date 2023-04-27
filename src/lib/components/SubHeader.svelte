@@ -7,6 +7,7 @@
 	import tippy, {animateFill} from 'tippy.js'
 	import 'tippy.js/dist/tippy.css'
 	import 'tippy.js/animations/shift-away.css'
+	import AutoFill from '$lib/components/AutoFill.svelte'
 	import AboutLinks from '$lib/links/AboutLinks.svelte'
 	import AnveshiLinks from '$lib/links/AnveshiLinks.svelte'
 	import AryavartaLinks from '$lib/links/AryavartaLinks.svelte'
@@ -195,6 +196,9 @@
 	<div class="midrow">
 		<slot name="local"></slot>
 	</div>
+	<div class="autofill">
+		<AutoFill></AutoFill>
+	</div>
 	<div class="search" id="single">
 		<slot name="modeswitch"></slot>
 	</div>
@@ -359,9 +363,9 @@
 	top: 0
 	transition: 0.5s ease
 	@media screen and (min-width: 900px)
-		grid-template-columns: 220px 1fr 56px 160px
+		grid-template-columns: 190px 1fr 200px 56px 160px
 		grid-template-rows: 1fr
-		grid-template-areas: "applogo midrow search menuicon"
+		grid-template-areas: "applogo midrow autofill search menuicon"
 		height: 72px
 		align-content: center
 		align-items: center
@@ -371,6 +375,12 @@
 		.search
 			grid-area: search
 			width: 56px
+		.autofill
+			grid-area: autofill
+			display: flex
+			align-items: center
+			justify-content: flex-end
+			width: calc(100% - 32px)
 	@media screen and (max-width: 899px)
 		grid-template-columns: 160px 1fr
 		grid-template-rows: 1fr
@@ -380,6 +390,8 @@
 		padding: 0 16px
 		justify-items: stretch
 		.search
+			display: none
+		.autofill
 			display: none
 
 .appheader.hiddenHeader

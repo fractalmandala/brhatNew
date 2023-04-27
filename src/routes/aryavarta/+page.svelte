@@ -223,7 +223,7 @@
 						/>
 			
 					</div>
-					<div class="arya-text type-plain" on:mouseenter={() => toggleImage(i)} on:mouseleave={() => toggleImage(i)}>
+					<div class="arya-text" on:mouseenter={() => toggleImage(i)} on:mouseleave={() => toggleImage(i)}>
 						<h3>
 							<a href={item.path}>
 								{item.meta.title}

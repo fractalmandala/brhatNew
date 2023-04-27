@@ -1,28 +1,44 @@
-<div>
-<slot></slot>
+<div class="rta-card2">
+  <div class="rta-in-card">
+  </div>
 </div>
+		<div class="rta-card">
+  		<div class="rta-card-image">
+    
+  		</div>
+  		<div class="rta-card-content">
+    		<h6>Card Title</h6>
+   			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  		</div>
+		</div>
+
 
 <style lang="sass">
 
-div
-	border-radius: 1em
-	perspective: 600px
-	box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.25), 0 0.02125em 0.06125em rgba(0, 0, 0, 0.25)
-	position: relative
-	&::before
-		position: absolute
-		top: 0
-		left: 0
-		content: ''
-		border-radius: 0 0 1em 1em
-		height: 100%
-		width: 50%
-		transform-origin: center top
-		transform: rotateY(180deg)
-		background: white
-		transition: 0.7s ease-in-out transform
-	&:hover
-		&::before
-			transform: rotateY(0)
+.rta-card2
+	width: 190px 
+	height: 254px 
+	background-image: linear-gradient(163deg, #10D56E 0%, #00CC6A 100%) 
+	border-radius: 20px 
+	transition: all .3s 
+	&:hover 
+		box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30) 
+
+.rta-in-card
+	width: 100%
+	height: 100%
+	background-color: #171717
+	transition: all .2s 
+	animation: wavering 2s ease infinite alternate-reverse
+	border-radius: 20px 
+
+@keyframes wavering
+	0%
+		transform: scale(0.98)
+	50%
+		transform: scale(1)
+	100%
+		transform: scale(0.98)
+
 
 </style>

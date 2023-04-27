@@ -2,7 +2,7 @@
   <span class="circle" aria-hidden="true">
   <span class="icon arrow"></span>
   </span>
-  <span class="button-text">Learn More</span>
+  <span class="button-text"><slot></slot></span>
 </button>
 
 <style>
@@ -33,7 +33,7 @@ button.learn-more .circle {
  margin: 0;
  width: 3rem;
  height: 3rem;
- background: #282936;
+ background: #fe4a49;
  border-radius: 1.625rem;
 }
 
@@ -75,7 +75,7 @@ button.learn-more .button-text {
  bottom: 0;
  padding: 0.75rem 0;
  margin: 0 0 0 1.85rem;
- color: #282936;
+ color: #FFFFFF;
  font-weight: 700;
  line-height: 1.6;
  text-align: center;
