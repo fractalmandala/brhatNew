@@ -120,11 +120,12 @@
 <svelte:window bind:scrollY={sY} bind:outerHeight={oH} bind:innerWidth={iW}/>
 
 
-<div class="type">
 	<div class="x0">	
 		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim13.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim13.webp')"></ParallaxImage>
 	</div>
-	<div class="plain-one pads x1">
+
+
+	<div class="rta-column is-padded x1">
 		<img class="hinduchakra" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/hinduchakra.png" alt="chakra" style="transform: rotate({sY/4}deg); opacity: {sY/800}" class:free={noMoreSticky}>
 	</div>
 	<div class="plain-one pads x2">
@@ -236,7 +237,7 @@
 			{/each}
 		{/if}
 	</div>
-</div>
+
 
 <style lang="sass">
 
@@ -246,7 +247,6 @@
 .x7
 	display: grid
 	grid-auto-flow: row
-	background: white
 	@media screen and (min-width: 1024px)
 		grid-template-columns: 1fr 1fr 1fr
 		grid-template-areas: ". . ."
@@ -466,7 +466,6 @@
 	justify-content: center
 	row-gap: 12px
 	padding: 16px
-	background: white
 	h3
 		position: relative
 		color: #272727
@@ -549,7 +548,6 @@
 			justify-self: flex-end
 	@media screen and (max-width: 1023px)
 		padding-top: 64px
-		background: white
 
 .x5
 	.back
