@@ -25,10 +25,13 @@
 </script>
 
 {#if flytime}
-{#if allSite && allSite.length > 0}
-{#each allSite as name, i}
-	<a class="insidelink" in:fly={{ duration: 150, delay: i*10, x: 128, y: 0, easing: quintIn}} out:fly={{ duration: 100, delay: 0, x: 128, y: 0, easing: quintIn}} href="{name.url}">{name.heading}</a>
-{/each}
-{/if}
+	<a class="insidelink" in:fly={{ duration: 150, delay: 0, x: 128, y: 0, easing: quintIn}} out:fly={{ duration: 100, delay: 0, x: 128, y: 0, easing: quintIn}} href="/about/svatahsiddha">Svataḥsiddha</a>
+	<a class="insidelink" in:fly={{ duration: 150, delay: 30, x: 128, y: 0, easing: quintIn}} out:fly={{ duration: 100, delay: 0, x: 128, y: 0, easing: quintIn}} href="/about/anatomy">Civilizational Moment</a>
+	<a class="insidelink" in:fly={{ duration: 150, delay: 60, x: 128, y: 0, easing: quintIn}} out:fly={{ duration: 100, delay: 0, x: 128, y: 0, easing: quintIn}} href="/about/whatkrishnameanstous">What Śrī Kṛṣṇa Means to Us</a>
+	<a class="insidelink" in:fly={{ duration: 150, delay: 90, x: 128, y: 0, easing: quintIn}} out:fly={{ duration: 100, delay: 0, x: 128, y: 0, easing: quintIn}} href="/about/namelogo">Nāmarūpa - Name and Logo</a>
+	<a class="insidelink" in:fly={{ duration: 150, delay: 120, x: 128, y: 0, easing: quintIn}} out:fly={{ duration: 100, delay: 0, x: 128, y: 0, easing: quintIn}} href="/about/values">Pratijñā - Values</a>
+	<a class="insidelink" in:fly={{ duration: 150, delay: 150, x: 128, y: 0, easing: quintIn}} out:fly={{ duration: 100, delay: 0, x: 128, y: 0, easing: quintIn}} href="/about/#advisors">Advisors</a>
+	<a class="insidelink" in:fly={{ duration: 150, delay: 180, x: 128, y: 0, easing: quintIn}} out:fly={{ duration: 100, delay: 0, x: 128, y: 0, easing: quintIn}} href="/about/#partners">Partners</a>
+	<a class="insidelink" in:fly={{ duration: 150, delay: 210, x: 128, y: 0, easing: quintIn}} out:fly={{ duration: 100, delay: 0, x: 128, y: 0, easing: quintIn}} href="/about/#team">Team</a>
 {/if}
 

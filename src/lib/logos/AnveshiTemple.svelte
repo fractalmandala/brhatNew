@@ -276,9 +276,9 @@ svg {
 }
 
 .svg-elem-2 {
-  -webkit-animation: animate-svg-stroke-2 0.2s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s both,
+  -webkit-animation: animate-svg-stroke-2 0.2s cubic-bezier(0.47, 0, 0.745, 0.715) both,
                        animate-svg-fill-2 0.07s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.15000000000000002s both;
-          animation: animate-svg-stroke-2 0.2s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s both,
+          animation: animate-svg-stroke-2 0.2s cubic-bezier(0.47, 0, 0.745, 0.715) both,
                animate-svg-fill-2 0.07s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.15000000000000002s both;
 }
 

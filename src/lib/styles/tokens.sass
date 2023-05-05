@@ -8,7 +8,7 @@ $blueD: #004e89
 $teal: #0B6E4F
 $purple: #5A3261
 $yellow: #FF9F1C
-$orange: #ff3d00
+$orange: #F77F2F
 $green: #10D56E
 $mand: #538733
 $white: #FFFFFF
@@ -69,6 +69,21 @@ $double-alt: 48px
 $quad: 64px
 $penta: 128px
 
+.gradient-red
+	background: linear-gradient(96.89deg, #FF7272 6.93%, #FE4A40 58.12%, #DF2015 92.63%)
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+	background-clip: text
+	text-fill-color: transparent
+
+.gradient-green
+	background: linear-gradient(95.13deg, #5CFC11 -5.26%, #53DD6C 20.27%, #11FC8B 61.7%, #10C56E 85.77%)
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+	background-clip: text
+	text-fill-color: transparent
+
+
 //sizing
 .minH
 	@media screen and (min-width: 900px)
@@ -89,7 +104,8 @@ $penta: 128px
 .cc-all
 	justify-content: center
 	align-items: center
-	text-align: center
+.cc-top
+	justify-content: center
 
 .full-h
 	height: 100%
@@ -108,12 +124,11 @@ $penta: 128px
 	width: 100vw
 	height: 100vh
 	overflow: hidden
-	background: rgba(0,0,0,0.6)
 	backdrop-filter: blur(20px)
 
 
 //typography
-$font: 'Spline Sans', sans-serif
+$mainfont: 'Spline Sans', sans-serif
 $serif: 'STIX Two Text', serif
 
 //containers
@@ -321,7 +336,8 @@ $serif: 'STIX Two Text', serif
 		column-gap: $std
 
 .colgap-64
-	column-gap: $quad
+	@media screen and (min-width: 1024px)
+		column-gap: $quad
 
 .is-padded
 	@media screen and (max-width: 575px)
@@ -625,18 +641,51 @@ $serif: 'STIX Two Text', serif
 
 //themes----------------------------------------------------------------------------------------------------------------------------------
 	
+.line
+	height: 1px
+	width: 100%
+
+.bord-all.light
+	border: 1px solid $greyS
+	border-radius: 4px
+
+.bord-all.dark
+	border: 1px solid $text
+	border-radius: 4px
+
 .type.light
 	--blue: #2F7796
 	--greyS: #878787
 	--gren: rgb(63, 207, 142)
 	--black: #272727
 	--bord: #ececec
+	.line
+		background: #ececec
 	.background
 		background: $white
 		transition: 0.5s ease-in-out
 	transition: 0.5s ease-in-out
-	background: $white
+	background-color: hsla(171,0%,100%,1)
+	background-image: radial-gradient(at 30% 29%, hsla(353,0%,95%,1) 0px, transparent 50%), radial-gradient(at 77% 85%, hsla(0,0%,100%,1) 0px, transparent 50%)
 	color: $text
+	.glass
+		background: rgba(255, 255, 255, 0.6)
+		backdrop-filter: blur(15px)
+		border: 1px solid rgba( 255, 255, 255, 1 )
+		box-shadow: 0 8px 32px 0 rgba( 31, 38, 35, 0.17 )
+		@media screen and (min-width: 1024px)
+			padding: 32px 64px
+			border-radius: 8px
+			height: 80%
+			overflow: hidden
+		@media screen and (max-width: 1023px)
+			padding: 24px
+			.rta-image
+				img
+					height: 240px
+					width: 240px
+					margin-left: auto
+					margin-right: auto
 	p, pre, li, h5
 		color: $greyM
 	h6
@@ -648,6 +697,8 @@ $serif: 'STIX Two Text', serif
 	.text-black
 		p, pre, li, h5
 			color: $text
+	.dark-text
+		color: $text
 	.button.blue
 		border: 1px solid $blue
 		color: $blue
@@ -656,6 +707,14 @@ $serif: 'STIX Two Text', serif
 			color: white
 		&::before
 			background: $blue
+	.button.yellow
+		border: 1px solid $yellow
+		color: $yellow
+		background: transparent
+		&:hover
+			color: white
+		&::before
+			background: $yellow
 	.general-selector
 		background: transparent
 		border-top: none
@@ -761,6 +820,16 @@ $serif: 'STIX Two Text', serif
 	@media-screen and (min-width: 1024px)
 		border-top: 1px solid #272727
 
+.light
+	.bord-top
+		@media-screen and (min-width: 1024px)
+			border-top: 1px solid #ececec
+
+.dark
+	.bord-top
+		@media-screen and (min-width: 1024px)
+			border-top: 1px solid #272727
+
 .theme.dark
 	background: $black
 	color: $white
@@ -773,9 +842,29 @@ $serif: 'STIX Two Text', serif
 	--bord: #272727
 	transition: 0.5s ease-in-out
 	background: $black
+	.line
+		background: $text
 	.background
 		background: $black
 		transition: 0.5s ease-in-out
+	.glass
+		background: rgba(17, 17, 09, 0.5)
+		backdrop-filter: blur(10px)
+		border: 1px solid rgba( 19,19,19, 1 )
+		box-shadow: 0 8px 32px 0 rgba( 03, 08, 05, 0.87 )
+		@media screen and (min-width: 1024px)
+			padding: 32px 64px
+			border-radius: 8px
+			height: 80%
+			overflow: hidden
+		@media screen and (max-width: 1023px)
+			padding: 24px
+			.rta-image
+				img
+					height: 240px
+					width: 240px
+					margin-left: auto
+					margin-right: auto
 	color: $white
 	h6, h4, h3, h2
 		color: $white
@@ -784,13 +873,13 @@ $serif: 'STIX Two Text', serif
 	h1
 		color: $grey
 	p, pre, li
-		color: $greyX
-	.dark-text p
 		color: $grey
+	.dark-text
+		color: $white
 	h5
-		color: $greyS
+		color: $grey
 	h5.heading
-		color: $text
+		color: $greyS
 	h5.heading.text-black
 		color: $white
 	.text-black
@@ -804,6 +893,14 @@ $serif: 'STIX Two Text', serif
 			color: $text
 		&::before
 			background: $blueL
+	.button.yellow
+		border: 1px solid $yellow
+		color: $yellow
+		background: transparent
+		&:hover
+			color: white
+		&::before
+			background: $yellow
 	.general-selector
 		background: transparent
 		border-top: none
@@ -890,6 +987,21 @@ $serif: 'STIX Two Text', serif
 			background: #fe4a49
 			color: white
 			border: 1px solid $red
+	.orangebutton
+		border: 1px solid #F77F2F
+		color: #F77F2F
+		background: $black
+		padding: 5px 16px
+		font-weight: bold
+		font-size: 16px
+		border-radius: 16px
+		width: max-content
+		transition: 0.08s var(--cubed)
+		transform-origin: center center
+		&:hover
+			transform: scale(0.9)
+			background: linear-gradient(96.89deg, #CEAA2C 6.93%, #F77F2F 92.97%)
+			color: white
 
 .type
 	.c-red
@@ -925,8 +1037,8 @@ $serif: 'STIX Two Text', serif
 
 .togglemode.dark
 	align-items: flex-end
-	background: $text
-	border: 1px solid $greyM
+	background: $black
+	border: 1px solid $text
 	.togglemodeball
 		background: $grey
 	&:hover
@@ -999,6 +1111,8 @@ $serif: 'STIX Two Text', serif
 
 .top-m-24
 	margin-top: $std-alt
+.bot-m-32
+	margin-bottom: $std
 
 .top-p-16
 	padding-top: $std

@@ -27,50 +27,33 @@
 	<HeadComponent>
 		{data.title} | Scrolls of Āryavarta at
 	</HeadComponent>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </svelte:head>
 
 
-<Header sidebar={sidebar}>
-	<div slot="local" class="boxmidrow">
-		<a href="/aryavarta">Āryavarta Main</a>
-		<a href="/aryavarta/chapter/01">Kaśyapa's Lament</a>
-		<a href="/aryavarta/chapter/02">Sūta and Sudā</a>
-		<a href="/aryavarta/chapter/03">Nasadīya Across Space and Time</a>
-		<div class="box" id="dropper" on:click={toggleDropdown} on:keydown={toggleDropdown}>
-			<p class="dropperp">All Lore</p>
-				{#if dropdown}
-					{#if lores && lores.length > 0}
-						<div class="box dropped" data-lenis-prevent>
-						{#each lores as item, i}
-							<a href={item.path} in:fly={{ duration: 100, delay: i * 50, x: 0, y: 32}} out:fly={{ duration: 100, delay: 0, x: 0, y: 32}}>{item.meta.title}</a>
-						{/each}
-						</div>
-					{/if}
-				{/if}
-		</div>
-	</div>
-</Header>
-<div class="type aryatext">
-	<div class="x0 plain-one">
+<div class="aryatext">
+	<div class="x0">
 		<ParallaxImage --parallax="url('{data.image}')" --parallaxresp="url('{data.image}')"></ParallaxImage>
 	</div>
-	<div class="x1 plain-one pads">
+	<div class="x1 rta-grid grid2 right is-padded">
 		<div class="mainstory">
-			<h1>
+			<h1 class="hanken">
 				{data.title}
 			</h1>
 			<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/quotemark.png" alt="{data.title}"/>
 			<svelte:component this={data.content}/>
 		</div>
-		<div class="box" id="stories">
+		<div class="rta-in-col rowgap-32" id="stories">
 			{#if lores && lores.length > 0}
 				{#each lores as item}
-					<div class="card-row">
-						<div class="card-image">
+					<div class="rta-row colgap-24">
+						<div class="rta-image height-20 w32">
 							<img src={item.meta.image} alt={item.meta.title}/>
 						</div>
-						<div class="card-body">
-							<h6><a href={item.path}>{item.meta.title}</a></h6>
+						<div class="rta-in-col w64">
+							<h6 class="hanken tt-c"><a href={item.path}>{item.meta.title}</a></h6>
 						</div>
 					</div>
 				{/each}
@@ -82,34 +65,15 @@
 
 <style lang="sass">
 
-#dropper
-	position: relative
-	.dropped
-		position: absolute
-		text-align: right
-		min-width: 200px
-		right: 0
-		top: 32px
-		background: var(--beau)
-		padding: 4px 8px
-		row-gap: 4px
-		height: 40vh
-		overflow-y: scroll
-		a
-			&:hover
-				background: #fe4a49
+.hanken
+	font-family: 'Hanken Grotesk', sans-serif !important
+	font-weight: 400
 
-.type.aryatext
-	padding-top: 64px
-
-.card-image
+.rta-image
 	img
 		object-fit: cover !important
 		height: 100% !important
 		width: 100% !important
-
-.card-body h6
-	text-transform: capitalize
 
 .x0
 	height: 100vh

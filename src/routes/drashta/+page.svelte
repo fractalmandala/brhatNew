@@ -43,7 +43,7 @@
 <!--end-->
 
 <!--single section contains all text, all course cards scroll within it-->
-	<div id="introtext" class="rta-grid grid2 thirty is-padded align-all top-p-64 rowgap-32 colgap-64" class:left={!fullText} class:right={fullText}>
+	<div id="introtext" class="rta-grid grid2 thirty is-padded align-all top-p-64 bot-p-64 rowgap-32 colgap-64" class:left={!fullText} class:right={fullText}>
 		<div class="rta-in-col rowgap-16 top-p-64 text-black on-top" class:thin={!fullText} class:thick={fullText}>
 			<LogDr></LogDr>
 			<p class="serif">
@@ -59,7 +59,7 @@
 					<p class="serif">
 					The Rṣīs of Bhāratavarṣa never neglected saṃsāra and developed objective sciences and disciplines to their heights, but at the same time they were always careful to peg that intellectual activity to a deep inner anchor.
 					</p>
-					<h5 class="serif">
+					<h5 class="serif" style="font-weight: 600">
 					The word darśana is more than the act of seeing. It has a universal significance in Hindu cosmology. Hindu philosophy is also called darśana; because Hindu philosophy is not ‘what you think’; it is ‘what you see’ – darśana.
 					</h5>
 					<p class="serif">	
@@ -68,7 +68,7 @@
 					<p class="serif">
 						The sādhanā of the rṣīs made them capable of witnessing the ultimate truth and in that light every other discipline in saṃsāra too. That is how Sanātana dharma elevated every human discipline as well as every human act, such as the act of looking and seeing to a divine plane of consciousness. And that is how draṣṭās were created. 
 					</p>
-					<h5 class="serif">
+					<h5 class="serif" style="font-weight: 600">
 						One who is on this inner path of sādhanā (darśana) is a draṣṭā. That is how our rṣīs became draṣṭās. They were not called ‘inventors of knowledge’, but the draṣṭā of truth.
 					</h5>
 					<div class="rta-row colgap-8">
@@ -78,7 +78,7 @@
 				</div>
 			{/if}
 		</div>
-		<div id="coursescolumn" class="rta-in-col background rowgap-32 top-p-64 on-bottom" class:thick={!fullText} class:thin={fullText} style="transform: translateY({diff + 300}px); margin-bottom: {diff + 364}px">
+		<div id="coursescolumn" class="rta-in-col rowgap-32 top-p-64 on-bottom" class:thick={!fullText} class:thin={fullText} style="transform: translateY({diff + 300}px); margin-bottom: {diff + 364}px">
 			<h4>All Courses:</h4>
 			{#if courses && courses.length > 0}
 				{#each courses as item}

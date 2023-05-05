@@ -5,7 +5,7 @@ import { brhatActions } from '$lib/utils/supapulls'
 import { onMount } from 'svelte'
 import LogMrd from '$lib/logos/LogMrd.svelte'
 import LogFm from '$lib/logos/LogFm.svelte'
-import LogBol from '$lib/logos/LogoBol.svelte'
+import LogBol from '$lib/logos/LogBolTwo.svelte'
 import LogDr from '$lib/logos/LogDr.svelte'	
 import LogAnv from '$lib/logos/LogAnv.svelte'
 import LogRid from '$lib/logos/LogRid.svelte'
@@ -135,6 +135,9 @@ function toggleBrands(){
 </script>
 
 <div class="biggie boxr">
+	<div class="close">
+		<slot></slot>
+	</div>
 	<div class="boxc col1">
 		<div class="boxer box-of-mrd" id="logo" on:mouseenter={hover} on:mouseleave={unhover} on:click={linkMrdanga} on:keydown={linkMrdanga}>
 			<span class="typ1"></span>
@@ -159,6 +162,14 @@ function toggleBrands(){
 		</div>
 	</div>
 	<div class="boxc col2">
+		<div class="message type rta-in-col rowgap-8">
+			<p>
+				Namaste, please use this interactive area to explore our projects and brands.
+			</p>
+			<p>
+				Hover over any name to view a short description. Click on any to open more elaborate detail. 
+			</p>
+		</div>
 		<div class="bigbox">
 			<div class="logo-svg-box box-of-motif">
 				<svg width="458" height="458" viewBox="0 0 458 458" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -365,6 +376,24 @@ function toggleBrands(){
 </div>
 
 <style>
+
+.biggie {
+	position: relative;
+}
+
+.close {
+	position: absolute;
+	top: 16px;
+	right: 16px;
+}
+
+.message {
+	text-align: center;
+}
+
+.message p {
+	color: white;
+}
 
 .ofmrd {
 	width: 360px;

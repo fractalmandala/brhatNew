@@ -121,14 +121,27 @@
 		window.addEventListener('scroll',updateNinePosition)
 		const { Textify, TextifyTitle } = Animations
 		new Textify({
-			selector: '.box h6',
+			selector: '.typett',
 			duration: 1200,
 			stagger: 300,
 			fade: false,
 			top: false,
 			reveal: true,
 			threshold: 0.8,
-			once: false
+			once: false,
+			scale: 2.5
+		})
+		new Textify({
+			selector: '.typett2',
+			duration: 1200,
+			stagger: 300,
+			delay: 200,
+			fade: false,
+			top: false,
+			reveal: true,
+			threshold: 0.8,
+			once: false,
+			scale: 2.5
 		})
 		new Textify({
 			selector: '.onpagelinks h4',
@@ -141,29 +154,6 @@
 			threshold: 0.8,
 			once: false
 		})
-		new TextifyTitle({
-			selector: '.box h3',
-			duration: 700,
-			stagger: 40,
-			fade: false,
-			top: false,
-			reveal: true,
-			threshold: 0.8,
-			once: false,
-			scale: 1.2
-		})
-		new TextifyTitle({
-			selector: '.box h2',
-			duration: 500,
-			stagger: 30,
-			fade: true,
-			top: false,
-			reveal: true,
-			threshold: 0.1,
-			once: false,
-			scale: 2.5,
-			easing: "circInOut"
-		})
 	})
 
 </script>
@@ -171,112 +161,143 @@
 <svelte:window bind:scrollY={sY} bind:outerHeight={oH} bind:innerWidth={iW}/>
 
 
-<div class="areabackground">
+
 <div class="section sec1">
 	<Parallax --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/10mandala/realitywall.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/10mandala/realitywall.webp')"></Parallax>
 </div>
-<div class="section type s101 pads">
-	<div class="box">
-		<h6>
+
+<!--shri munshi quote section-->
+	<div class="rta-column minH is-padded cc-all">
+	<div class="rta-grid grid2 right cc-all glass">
+		<div id="first-section" class="rta-in-col rowgap-8">
+			<h5 class="typett">
 			To be a history in the true sense of the word, a work must be a story of the people inhabiting a country.
-		</h6>
-		<h6>
+			</h5>
+			<h5 class="typett">
 			It must be a record of their life from age to age presented through the life and achievements of men whose exploits become the beacon lights of tradition; through efforts of the people to will themselves into organic unity.
-		</h6>
-		<h4>
+			</h5>
+			<h4>
 			Such a history of India is still to be written.
-		</h4>
-			<p>- Shri KM Munshi</p>
+			</h4>
+				<p class="typett2">- Shri KM Munshi</p>
+		</div>
 	</div>
-</div>
-<div class="section type sec2 pads panel2">
+	</div>
+<!--end-->
+
+<!--itihasa-->
+	<div class="section sec2 is-padded panel2">
 	<div class="box left2">
-		<h6>
+		<h5 class="typett">
 			with a continuity of untold millennia, the passage of time visible to us in
-		</h6>
-		<h3>
+		</h5>
+		<h4>
 		itihāsa
-		</h3>
+		</h4>
 	</div>
 	<div class="box right2">
 		<div class="parallaxbox" style="transform: translateY({-100 + yPanel2}%)">
 			<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/10mandala/itihaas.webp" alt="itihasa"/>
 		</div>
 	</div>
-</div>
-<div class="section type sec3 pads panel3">
+	</div>
+<!--end-->
+
+<!--bharata-->
+	<div class="section sec3 is-padded panel3">
 	<div class="box left3">
 		<div class="parallaxbox" style="transform: translateY({-100 + yPanel3}%)">
 			<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/10mandala/bharata.webp" alt="bharata"/>
 		</div>
 	</div>
 	<div class="box right3">
-		<h6>
+		<h5 class="typett">
 			information was processed in increasingly complex ways within the physical environment best described as
-		</h6>
-		<h3>
+		</h5>
+		<h4>
 			bhārata
-		</h3>
+		</h4>
 	</div>
-</div>
-<div class="section type sec4 pads panel4">
+	</div>
+<!--end-->
+
+<!--dharma-->
+	<div class="section sec4 is-padded panel4">
 	<div class="box left4">
-		<h6>
+		<h5 class="typett">
 			emerged a civilizational consciousness, with multi-level coherence. It is known to us as
-		</h6>
-		<h3>
+		</h5>
+		<h4>
 			dharma
-		</h3>
+		</h4>
 	</div>
 	<div class="box right4">
 		<div class="parallaxbox" style="transform: translateY({-100 + yPanel4}%)">
 			<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/10mandala/dharma.webp" alt="dharma"/>
 		</div>
 	</div>
-</div>
-<div class="type sec5 pads panel5">
-	<div class="headholder">
-		<h2 class="green-gradient" class:emergence={ifPanel5}>and it is alive...</h2>
 	</div>
-</div>
-<div class="type pads sec6 panel6">
+<!--end-->
+
+<!--and it is alive-->
+	<div class="sec5 is-padded panel5">
+		<div class="headholder">
+			<h2 class="green-gradient" class:emergence={ifPanel5}>and it is alive...</h2>
+		</div>
+	</div>
+<!--end-->
+
+<!--rotating motif section-->
+	<div class="is-padded sec6 panel6">
 	<div class="box ballholder" class:fixIt={ifPanel6} class:moveLeft={breakLeft} class:moveRight={breakRight}>
 		<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/10mandala/fractallogo.webp" alt="fractalmandala" style="transform: rotate({sY/4}deg); opacity: {1 - yPanel9/100}"/>
 	</div>
-</div>
-<div class="section sec7 pads panel7 type">
-	<div class="box textholder">
-		<h3>Fractal</h3>
-		<h6 class="white">
-		A curve or geometrical figure, each part of which has the same statistical character as the whole. Any of various extremely irregular curves or shapes for which any suitably chosen part is similar in shape to a given larger or smaller part.
-		</h6>
-		<h6 class="green">
-		A fractal displays the same properties at any magnification level, ie., it is multi-level.
-		</h6>
 	</div>
-</div>
-<div class="section sec8 pads panel8 type">
-	<div class="box textholder">
-		<h3>Maṇḍala</h3>
-		<h6 class="white">
-		A circle or anything circular- globe, circumference, orbit of a celestial object, an array of troops. From the root √maṇḍ (मण्ड्) meaning satisfaction, adornment, wholeness, complete, satisfied (√bhūṣ, √hṛṣ, tuṣṭa, alaṅkāra).
-		</h6>
-		<h6 class="green">
-		A circle- śūnya or pūrṇam- is where all constituents form a unified whole, ie., it is coherent.
-		</h6>
+<!--end-->
+
+<!--fractal-->
+	<div class="section sec7 is-padded panel7">
+		<div class="box textholder">
+			<h4>Fractal</h4>
+			<h5 class="typett">
+			A curve or geometrical figure, each part of which has the same statistical character as the whole. Any of various extremely irregular curves or shapes for which any suitably chosen part is similar in shape to a given larger or smaller part.
+			</h5>
+			<h5 class="typett2">
+			A fractal displays the same properties at any magnification level, ie., it is multi-level.
+			</h5>
+		</div>
 	</div>
-</div>
-<div class="section sec9 pads panel9 type">
-	<div class="box">
-		<h6>
-			the Fractal Maṇḍala is an exploration, study and articulation of the
-		</h6>
-		<h2>
-			Indian civilizational consciousness
-		</h2>
+<!--end-->
+
+<!--mandala-->
+	<div class="section sec8 is-padded panel8">
+		<div class="box textholder">
+			<h4>Maṇḍala</h4>
+			<h5 class="typett">
+			A circle or anything circular- globe, circumference, orbit of a celestial object, an array of troops. From the root √maṇḍ (मण्ड्) meaning satisfaction, adornment, wholeness, complete, satisfied (√bhūṣ, √hṛṣ, tuṣṭa, alaṅkāra).
+			</h5>
+			<h5 class="typett2">
+			A circle- śūnya or pūrṇam- is where all constituents form a unified whole, ie., it is coherent.
+			</h5>
+		</div>
 	</div>
-</div>
-<div class="section sec10 pads panel10 type">
+<!--end-->
+
+<!--about fractal mandala-->
+	<div class="section sec9 is-padded panel9">
+		<div class="box">
+			<h5 class="typett">
+				the Fractal Maṇḍala is an exploration, study and articulation of the
+			</h5>
+			<h2 class="typett2">
+				Indian civilizational consciousness
+			</h2>
+		</div>
+	</div>
+<!--end-->
+
+<!--all links-->
+	<div class="section sec10 is-padded panel10">
 	<div class="onpagelinks dark">
 		<h4><a href="/mandala/macrohistoriccase">the macrohistoric case</a></h4>
 		<h4><a href="/mandala/aphorisms">caturasūtra - 4 aphorisms</a></h4>
@@ -287,10 +308,18 @@
 		<h4><a href="/mandala/ramasjourney">the avatāra in you</a></h4>
 		<h4><a href="/mandala/synrec">synaptic reconnection</a></h4>
 	</div>
-</div>
-</div>
+	</div>
+<!--end-->
+
 
 <style lang="sass">
+
+#first-section h4, .panel2 h4, .panel3 h4, .panel4 h4, .panel7 h4, .panel8 h4
+	background: linear-gradient(95.13deg, #5CFC11 -5.26%, #53DD6C 20.27%, #11FC8B 61.7%, #10C56E 85.77%)
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+	background-clip: text
+	text-fill-color: transparent
 
 .s101
 	justify-content: center
@@ -298,20 +327,13 @@
 	display: flex
 	h6
 		font-weight: 400
-		color: white
-	h4
-		color: #10C56D
 
 .onpagelinks
 	h4
-		color: white
 		cursor: pointer
-		&:hover
-			color: #10C56D
 
 .headholder
 	overflow: hidden
-
 
 .section
 	overflow: hidden
@@ -337,10 +359,7 @@
 .sec2, .sec4
 	display: flex
 	.box
-		h3
-			color: #10C56D
 		h6
-			color: white
 			font-weight: 400
 	@media screen and (min-width: 1024px)
 		flex-direction: row
@@ -369,10 +388,7 @@
 .sec3
 	display: flex
 	.box
-		h3
-			color: #10C56D
 		h6
-			color: white
 			font-weight: 400
 	@media screen and (min-width: 1024px)
 		flex-direction: row
@@ -451,12 +467,6 @@
 		justify-content: center
 		text-align: right
 		height: 100%
-		h3
-			color: white
-		.white
-			color: white
-		.green
-			color: #10C56D
 		h6
 			font-weight: 400
 	@media screen and (max-width: 1023px)
@@ -473,12 +483,6 @@
 		text-align: left
 		height: 100%
 		padding-top: 256px
-		h3
-			color: white
-		.white
-			color: white
-		.green
-			color: #10C56D
 		h6
 			font-weight: 400
 	@media screen and (max-width: 1023px)
@@ -492,10 +496,8 @@
 		justify-content: center
 		h6
 			font-weight: 400
-			color: white
 		h2
 			line-height: 1
-			color: #10D56C
 	@media screen and (min-width: 1024px)
 		min-height: 200vh
 		.box

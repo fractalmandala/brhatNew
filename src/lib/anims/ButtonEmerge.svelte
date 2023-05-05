@@ -31,9 +31,9 @@ button.learn-more .circle {
  position: relative;
  display: block;
  margin: 0;
- width: 3rem;
- height: 3rem;
- background: #fe4a49;
+ width: 32px;
+ height: 32px;
+ background: linear-gradient(96.89deg, #FF7272 6.93%, #FE4A40 58.12%, #DF2015 92.63%);
  border-radius: 1.625rem;
 }
 
@@ -48,7 +48,7 @@ button.learn-more .circle .icon {
 
 button.learn-more .circle .icon.arrow {
  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
- left: 0.625rem;
+ left: 2px;
  width: 1.125rem;
  height: 0.125rem;
  background: none;
@@ -73,11 +73,9 @@ button.learn-more .button-text {
  left: 0;
  right: 0;
  bottom: 0;
- padding: 0.75rem 0;
- margin: 0 0 0 1.85rem;
  color: #FFFFFF;
  font-weight: 700;
- line-height: 1.6;
+ line-height: 2;
  text-align: center;
  text-transform: uppercase;
 }

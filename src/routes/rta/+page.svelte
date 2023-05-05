@@ -1,9 +1,16 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
+	import { draggable } from '@neodrag/svelte'
+	import type { DragOptions } from '@neodrag/svelte'
 	import Animations from 'textify.js'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
 	import LogRid from '$lib/logos/LogRid.svelte'
+
+	let options: DragOptions = {
+		axis: 'x',
+		bounds: 'parent'
+	}
 
 	let sY:number
 
@@ -38,13 +45,7 @@
 	<div id="panel1" class="rta-column rowgap-24 is-padded minH all-cc back">
 		<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/12rid/ridwall2.webp" alt="design technology"/>
 			<h4 class="typett">
-				"Design creates culture..
-			</h4>
-			<h4 class="typett">
-				Culture shapes values...
-			</h4>
-			<h4 class="typett">
-				Values determine the future."
+				"Design creates culture; Culture shapes values; Values determine the future."
 			</h4>
 			<p style="color: var(--green)">-Robert Peters, Co Founder - Circle Design</p>
 			<h5 class="typett">
@@ -64,7 +65,7 @@
 		</h4>
 		<p style="color: var(--green)">- Fred Brooks, Author - The Design of Design</p>
 		<div class="rta-icon2">
-			<img id="theball" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/12rid/trinfinityball.png" alt="ball"/>
+			<img id="theball" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/12rid/trinfinityball.png" alt="ball" use:draggable={options}/>
 		</div>
 		<h5 class="typett">
 			What’s needed is a “wisdom of gods,” found encoded across culture- or dharma. Through culture, we have a shot. The evolution needed in design is that of culture-rooting. 
@@ -200,7 +201,7 @@
 		height: 100%
 		filter: grayscale(100%) saturate(0.01) opacity(0.1)
 	h4
-		line-height: 1
+		line-height: 1.2
 
 #panel2
 	position: relative

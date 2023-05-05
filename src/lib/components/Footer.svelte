@@ -2,11 +2,6 @@
 
 	import { onMount } from 'svelte'
 	import Modal from '$lib/components/Modal.svelte'
-	import { browser } from '$app/environment'
-	import visibilityMode from '$lib/stores/visibility'
-	import siteTour from '$lib/stores/sitetour'
-	import { scale } from 'svelte/transition'
-	import { expoOut } from 'svelte/easing'
 	import AboutLinks from '$lib/links/AboutLinks.svelte'
 	import AnveshiLinks from '$lib/links/AnveshiLinks.svelte'
 	import AryavartaLinks from '$lib/links/AryavartaLinks.svelte'
@@ -21,16 +16,6 @@
 
 	function toggleModal(){
 		isModal = !isModal
-	}
-
-	function siteStartTour() {
-	  if (browser) {
-	    siteTour.update((mode) => {
-	      const newMode = !mode;
-	      localStorage.setItem('siteTour', JSON.stringify(newMode));
-	      return newMode;
-	    });
-	  }
 	}
 		
 
@@ -76,7 +61,6 @@
 			</div>
 		</div>
 		<div class="spacer">
-			<p class="mainlinks" on:click={siteStartTour} on:keydown={fauxfake}>Site Tour</p>
 			<p class="mainlinks" on:click={toggleModal} on:keydown={fauxfake}>Contact Us</p>
 			<a class="mainlinks" href="/dhiti">Dhīti</a>
 			<a class="mainlinks" href="/openlibrary">Bṛhat Open Library</a>

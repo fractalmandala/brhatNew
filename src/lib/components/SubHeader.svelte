@@ -220,53 +220,58 @@
 	<div class="appsidebar" in:fly={{ duration: 500, x: 400, y: 0}} out:fly={{ duration: 500, x: 400, y: 0}} data-lenis-prevent on:mouseleave={closeSidebar}>
 		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
-				<h5><a href="/drashta" data-sveltekit:prefetch>Bṛhat Draṣṭā</a></h5>
+				<h5><a href="/drashta">Bṛhat Draṣṭā</a></h5>
 				<DrashtaLinks flytime={sidebar}/>
 			{/if}
 		</div>
 		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
-				<h5><a href="/anveshi" data-sveltekit:prefetch>Bṛhat Anveṡī</a></h5>
+				<h5><a href="/anveshi">Bṛhat Anveṡī</a></h5>
 				<AnveshiLinks flytime={sidebar}/>
 			{/if}
 		</div>
 		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
-				<h5><a href="/mrdanga" data-sveltekit:prefetch>Bṛhad Mṛdaṅga</a></h5>
+				<h5><a href="/mrdanga">Bṛhad Mṛdaṅga</a></h5>
 			{/if}
 		</div>
 		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
-				<h5><a href="/dhiti" data-sveltekit:prefetch>Dhīti</a></h5>
+				<h5><a href="/dhiti">Dhīti</a></h5>
 			{/if}
 		</div>
 		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
-				<h5><a href="/openlibrary" data-sveltekit:prefetch>Bṛhat Open Library</a></h5>
+				<h5><a href="/openlibrary">Bṛhat Open Library</a></h5>
 			{/if}
 		</div>
 		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
-				<h5><a href="/mandala" data-sveltekit:prefetch>Fractal Maṇḍala</a></h5>
+				<h5><a href="/mandala">Fractal Maṇḍala</a></h5>
 				<MandalaLinks flytime={sidebar}/>
 			{/if}
 		</div>
 		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
-				<h5><a href="/aryavarta" data-sveltekit:prefetch>Scrolls of Āryavarta</a></h5>
+				<h5><a href="/aryavarta">Scrolls of Āryavarta</a></h5>
 				<AryavartaLinks flytime={sidebar}/>
 			{/if}
 		</div>
 		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
-				<h5><a href="/rta" data-sveltekit:prefetch>Ṛta in Design</a></h5>
+				<h5><a href="/rta">Ṛta in Design</a></h5>
 				<RtaLinks flytime={sidebar}/>
 			{/if}
 		</div>
 		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
-				<h5 in:fly={{ delay: 500, duration: 100, x: 128, y: 0}} out:fly={{ delay: 0, duration: 100, x: 128, y: 0}}><a href="/about" data-sveltekit:prefetch>About</a></h5>
+				<h5 in:fly={{ delay: 500, duration: 100, x: 128, y: 0}} out:fly={{ delay: 0, duration: 100, x: 128, y: 0}}><a href="/about">About</a></h5>
 				<AboutLinks flytime={sidebar}/>
+			{/if}
+		</div>
+		<div class="linksbox type">
+			{#if sidebar}
+				<h5 in:fly={{ delay: 500, duration: 100, x: 128, y: 0}} out:fly={{ delay: 0, duration: 100, x: 128, y: 0}}>Site Tour</h5>
 			{/if}
 		</div>
 	</div>
@@ -301,6 +306,7 @@
 		font-weight: 600
 		font-size: 24px
 		padding-bottom: 8px
+		cursor: pointer
 	&:hover
 		&::after
 			animation: lineforward 0.32s var(--cubeb) forwards

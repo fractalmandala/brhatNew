@@ -1,7 +1,9 @@
+
 $md: 3
 $l2: 2.6
 $l3: 2
 $l4: 1.4
+$mainfont: 'Spline Sans', sans-serif
 
 p, small, cite, caption, h6, h5, h4, h3, h2, h1, pre
 	margin: 0
@@ -24,6 +26,13 @@ p.white
 .ta-r
 	@media screen and (min-width: 1024px)
 		text-align: right
+
+.ta-c
+	text-align: center
+
+.ta-c-mob
+	@media screen and (max-width: 1023px)
+		text-align: center
 
 .expandmenu
 	color: white
@@ -118,10 +127,6 @@ small
 		padding: 10px 0 8px 0
 		line-height: 1.5
 
-.onpagelinks.dark
-	h4
-		border-bottom: 1px solid #272727
-
 .type
 	.card-b
 		small
@@ -169,18 +174,24 @@ caption
 	font-size: 12px
 
 .type p, .type li, .type pre, .type small, .type cite, .type caption, .type h6, .type h5, .type h4, .type h3, .type h2, .type h1
-	font-family: 'Spline Sans', sans-serif
+	font-family: $mainfont
 
-.type.dhiti	h4, .type.dhiti h6, .type.dhiti h3, .type.dhiti h2
-	font-family: 'Spline Sans', sans-serif
+.dhiti	h4, .dhiti h6, .dhiti h3, .dhiti h2
+	font-family: $mainfont
 
 .maincol, .maincol p, .maincol li
 	font-family: 'STIX Two Text', serif
 	color: #272727
 
-.type.aryatext p
-	font-family: 'STIX Two Text', serif
-	color: #272727
+.type.light
+	.aryatext p
+		font-family: $mainfont
+		color: #272727
+
+.type.dark
+	.aryatext p
+		font-family: $mainfont
+		color: #575757
 
 .type
 	.maincol
@@ -229,7 +240,7 @@ caption
 		margin-bottom: 24px
 	.mainbar h5
 		line-height: 1.12
-		font-weight: 700
+		font-weight: 600
 		margin-bottom: 24px
 		font-size: 25px
 	.mainbar h4
@@ -272,35 +283,38 @@ caption
 				padding-bottom: 0
 
 
-.type.aryatext blockquote
-	font-style: italic
-	cite
-		font-style: normal
-		text-transform: uppercase
-		color: #b7b7b7
+.type
+	.aryatext blockquote
+		font-style: italic
+		cite
+			font-style: normal
+			text-transform: uppercase
+			color: #b7b7b7
 
-.type.aryatext
-	@media screen and (min-width: 1024px)
-		p
-			font-size: 20px
-			line-height: 1.5
-			margin-bottom: 20px
-		blockquote
-			width: 80%
-			margin-left: 80px
-			border-bottom: 1px solid #ececec
-			padding-bottom: 32px
-			margin-bottom: 64px
-	@media screen and (max-width: 1023px)
-		p
-			font-size: 18px
-			line-height: 1.5
-			margin-bottom: 20px
-		blockquote
-			margin-left: 80px
-			border-bottom: 1px solid #ececec
-			padding-bottom: 32px
-			margin-bottom: 64px
+.type
+	.aryatext
+		@media screen and (min-width: 1024px)
+			p
+				font-size: 20px
+				line-height: 1.5
+				margin-bottom: 20px
+			blockquote
+				width: 80%
+				margin-left: 80px
+				padding-bottom: 32px
+				margin-bottom: 64px
+		@media screen and (max-width: 1023px)
+			p
+				font-size: 18px
+				line-height: 1.5
+				margin-bottom: 20px
+			blockquote
+				margin-left: 32px
+				padding-bottom: 32px
+				margin-bottom: 32px
+				margin-right: 0
+			blockquote p
+				font-size: 14px
 
 .type
 	.maincol
@@ -356,23 +370,25 @@ caption
 .type h4, .type h3
 	line-height: 1.12
 
-.type.dhiti h3
+.dhiti h3
 	line-height: 1.1
 
 .type
 	h1
 		font-weight: 600
 		padding-bottom: 2px
+	h4
+		line-height: 1.24
 	h4, h3, h2
 		font-weight: 600
 	h4.mrd, h3.mrd, h2.mrd
 		color: var(--news)
 	h5
-		font-weight: 400
+		font-weight: 300
 		letter-spacing: -0.4px
-		line-height: 1.2
+		line-height: 1.4
 	h5.heading
-		font-weight: bold
+		font-weight: 600
 		text-transform: capitalize
 	.mainside h5
 		font-weight: 800
@@ -385,10 +401,10 @@ caption
 		line-height: 1.48
 	.a-title h3
 		text-transform: uppercase
-		font-weight: 800
+		font-weight: 600
 	.a-title h4
 		text-transform: uppercase
-		font-weight: 700
+		font-weight: 600
 	cite
 		font-style: normal
 		text-transform: uppercase
@@ -396,7 +412,7 @@ caption
 		p, pre, li
 			font-size: 1vw
 		h6
-			font-size: 1.32vw
+			font-size: 1.24vw
 		h5
 			font-size: 1.6vw
 		h4
@@ -449,10 +465,9 @@ caption
 			font-weight: 600
 			letter-spacing: -0.1px
 		h5
-			font-size: 2vw*2.4
-			font-weight: 400
+			font-size: 2vw*$l2
 		h4
-			font-size: 2.8vw*$md
+			font-size: 2.8vw*$l3
 		.onpagelinks h4
 			font-size: 2.8vw*$l3
 		.a-title.boxr h4
@@ -494,10 +509,9 @@ caption
 		@media screen and (max-width: 1023px)
 			font-size: 15px
 
-.type.dhiti
+.dhiti
 	@media screen and (min-width: 1024px)
 		.card-row h6
-			border-bottom: 1px solid #e1e1e1
 			padding-bottom: 8px
 		.maincol p
 			text-transform: none
@@ -511,7 +525,6 @@ caption
 		letter-spacing: -0.5px
 		color: #979797
 		transition: var(--snap)
-		border-bottom: 1px solid #eaeaea
 
 .whitecard
 	h6
@@ -546,14 +559,12 @@ caption
 			h5
 				font-weight: 600
 				font-size: 18px
-				border-bottom: 1px solid #ececec
 				padding-bottom: 8px
 				padding-top: 8px
 				transition: 0.2s ease
 				text-align: right
 				&:hover
 					color: #fe4a49
-					border-right: 4px solid #474747
 					padding-right: 16px
 
 .dhitipageauthorposts
@@ -562,7 +573,6 @@ caption
 	column-gap: 24px
 	h6
 		font-weight: 500
-		border-bottom: 1px solid #ececec
 		padding-bottom: 16px
 		color: #272727
 		font-size: 22px
@@ -580,7 +590,6 @@ caption
 			color: #474747
 			padding: 8px 0
 			transition: 0.04s ease
-			border-bottom: 1px solid #ececec
 			cursor: pointer
 			&:hover
 				color: var(--thisdropdowntextcolor)
@@ -590,7 +599,6 @@ caption
 			color: #474747
 			padding: 8px 0
 			transition: 0.04s ease
-			border-bottom: 1px solid #ececec
 			cursor: pointer
 			&:hover
 				color: var(--thisdropdowntextcolor)

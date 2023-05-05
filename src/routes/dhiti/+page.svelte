@@ -69,14 +69,14 @@
 	</HeadComponent>
 </svelte:head>
 
-<div class="type dhiti">
-	<div class="x0">
+<div class="dhiti">
+	<div id="x0" class="rta-grid grid4 colgap-64 rowgap-64">
 		{#if latestpost && latestpost.length > 0}
 			{#each latestpost as item}
 				<div class="latestsingle" style="background-image: url('{item.meta.image}')">
 					<div class="card-body">
 						<cite>{item.meta.category} | <span class="citetwo">{item.meta.tags}</span></cite>
-						<h3><a href="{item.path}">{item.meta.title}</a></h3>
+						<h3 class="heading"><a href="{item.path}">{item.meta.title}</a></h3>
 						<p>{item.meta.author}
 							{#if item.meta.authortwo && item.meta.authortwo.length > 0}
 							<span> and {item.meta.authortwo}</span>
@@ -89,13 +89,13 @@
 		<div class="latestthree">
 			{#if nextthreeposts && nextthreeposts.length > 0}
 				{#each nextthreeposts as item}
-					<div class="card-nix">
-						<div class="card-image">
+					<div class="rta-in-col rowgap-16">
+						<div class="rta-image">
 							<img src={item.meta.image} alt={item.meta.title}/>
 						</div>
-						<div class="card-body">
+						<div class="rta-in-col rowgap-8">
 							<cite class="citeone">{item.meta.category}</cite>
-							<h6><a href="{item.path}">{item.meta.title}</a></h6>
+							<h6 class="heading"><a href="{item.path}">{item.meta.title}</a></h6>
 							<p>{item.meta.author}
 								{#if item.meta.authortwo && item.meta.authortwo.length > 0}
 									<span> and {item.meta.authortwo}</span>
@@ -111,12 +111,12 @@
 			<h4>FEATURED</h4>
 			{#if featuredposts && featuredposts.length > 0}
 				{#each featuredposts as item}
-					<div class="card-row">
-						<div class="card-image">
+					<div class="rta-row colgap-24">
+						<div class="rta-image height-20 w32">
 							<img src={item.meta.image} alt={item.meta.title}/>
 						</div>
-						<div class="card-body">
-							<h6><a href={item.path}>{item.meta.title}</a></h6>
+						<div class="rta-in-col rowgap-8 w64">
+							<h6 class="heading"><a href={item.path}>{item.meta.title}</a></h6>
 							<p>{item.meta.author}
 								{#if item.meta.authortwo && item.meta.authortwo.length > 0}
 									<span> and {item.meta.authortwo}</span>
@@ -157,7 +157,7 @@
 				{#each filteredposts as item, i}
 					<div class="box back" style="background-image: url('{item.meta.image}')" in:scale={{ duration: 200, delay: i*200, easing: quartOut}} out:scale={{ duration: 100, easing: quartIn}}> 
 						<a class="box" href="{item.path}">
-							<h6>
+							<h6 class="heading">
 									{item.meta.title}
 							</h6>
 							<p style="font-size: 12px">{item.meta.author}
@@ -243,7 +243,7 @@
 						</div>
 						<div class="card-body">
 							<cite class="citeone">{item.meta.category}</cite>
-							<h5 style="font-weight: 600">
+							<h5 style="font-weight: 600" class="heading">
 								<a href="{item.path}">
 									{item.meta.title}
 								</a>
@@ -260,8 +260,10 @@
 
 <style lang="sass">
 
+.heading
+	font-family: 'Playfair Display', serif
 
-.type.dhiti
+.dhiti
 	padding-top: 72px
 	padding-bottom: 72px
 
@@ -280,27 +282,14 @@
 .x2
 	padding-top: 64px
 
-.x0
-	display: grid
-	grid-auto-flow: row
-	grid-template-rows: auto auto
+#x0
 	@media screen and (min-width: 1024px)
-		padding-top: 32px
-		padding-left: 48px
-		padding-right: 48px
-		align-content: start
-		align-items: start
-		gap: 48px 48px
 		grid-template-columns: 1fr 1fr 1fr 30%
 		grid-template-areas: "latestsingle latestsingle latestsingle featured" "latestthree latestthree latestthree featured"
-		grid-template-rows: auto 1fr
+		grid-template-rows: auto auto
+		padding-left: 64px
+		padding-right: 64px
 	@media screen and (max-width: 1023px)
-		padding-left: 24px
-		padding-right: 24px
-		padding-top: 24px
-		gap: 0 0
-		grid-template-columns: 1fr
-		grid-template-rows: auto
 		grid-template-areas: "latestsingle" "latestthree" "featured"
 
 
@@ -324,7 +313,7 @@
 			padding-left: 32px
 			h3
 				line-height: 1.1
-				font-weight: 800
+				font-weight: 600
 				letter-spacing: -1.3px
 				font-size: 4.4vw
 				color: white
@@ -363,41 +352,10 @@
 	@media screen and (min-width: 1024px)
 		row-gap: 48px
 		padding-bottom: 64px
-		.card-row
-			.card-body
-				display: flex
-				flex-direction: column
-				row-gap: 4px
-				p
-					line-height: 1.1
-					padding-top: 4px
 	@media screen and (max-width: 1023px)
 		padding-top: 32px
 		row-gap: 32px
-		padding-bottom: 32px
-		.card-row
-			column-gap: 24px
-			.card-image
-				width: 32%
-				height: 88px
-			.card-body
-				width: calc(68% - 24px)
-				row-gap: 0
-				h6
-					margin-bottom: 6px
-					border-top: 1px solid #ececec
-					padding-top: 8px
-				p
-					margin-bottom: 3px
-				cite
-					text-transform: uppercase
-					color: #878787
-					margin-bottom: 4px
-				.citeone
-					font-style: normal
-				.citetwo
-					text-transform: lowercase
-					font-style: italic		
+		padding-bottom: 32px	
 
 .latestthree
 	grid-area: latestthree
@@ -408,44 +366,12 @@
 		gap: 32px 48px
 		grid-template-columns: 1fr 1fr 1fr
 		grid-template-areas: ". . ."
-		.card-nix
-			row-gap: 8px
-			.card-image
-				height: 120px	
-			.card-body
-				row-gap: 2px	
 	@media screen and (max-width: 1023px)
 		gap: 32px 0
 		grid-template-columns: 1fr
 		grid-template-areas: "." "." "."
 		padding-top: 32px
 		padding-bottom: 32px
-		border-bottom: 1px solid #ececec
-		.card-nix
-			flex-direction: row
-			column-gap: 24px
-			.card-image
-				width: 32%
-				height: 88px
-			.card-body
-				width: calc(68% - 24px)
-				row-gap: 0
-				h6
-					margin-bottom: 6px
-					border-top: 1px solid #ececec
-					padding-top: 8px
-				p
-					margin-bottom: 3px
-				cite
-					text-transform: uppercase
-					color: #878787
-					margin-bottom: 4px
-				.citeone
-					font-style: normal
-				.citetwo
-					text-transform: lowercase
-					font-style: italic
-
 
 .x2
 	@media screen and (min-width: 1024px)
@@ -484,7 +410,6 @@
 			text-align: center
 			padding: 16px
 			h6
-				border-bottom: none
 				color: white
 			p
 				color: #fe4a49
@@ -541,7 +466,6 @@
 					height: 100%
 					width: 100%
 			h5
-				border-top: 1px solid #ececec
 				padding-top: 16px
 				&:hover
 					color: var(--strong)
@@ -562,7 +486,6 @@
 				row-gap: 0
 				h5
 					font-size: 1.414vw*3.2
-					border-top: 1px solid #ececec
 					padding-top: 8px
 					margin-top: 5px
 					margin-bottom: 4px

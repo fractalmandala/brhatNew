@@ -3,7 +3,6 @@
 	import { onMount } from 'svelte'
 	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import { scale } from 'svelte/transition'
-	import Lenis from '@studio-freight/lenis'
 	import Animations from 'textify.js'
 	import { reveal } from 'svelte-reveal'
 	import { elementVisibilityStore } from "svelte-legos"
@@ -62,45 +61,36 @@
   }
 	
 	
-	onMount(async() => {
-		threeactions = await createCurateConsult()
-		threeareas = await threeConvictions()
-		advisors = await brhatAdvisors()
-		partners = await brhatPartners()
-		team = await brhatTeam()
-		const { Textify } = Animations
+	onMount(() => {
+		const { Textify, TextifyTitle } = Animations	
 		new Textify({
-			selector: '.card-body h6',
-			duration: 600,
-			stagger: 200,
+			selector: ".typett",
+			duration: 1200,
 			fade: false,
+			top: false,
 			reveal: true,
-			threshold: 0.2
-		})
+			threshold: 0.8,
+			once: false,
+			scale: 3
+		});
 		new Textify({
-			selector: '.card-body p',
-			duration: 800,
-			stagger: 300,
-			fade: false,
+			selector: ".onpagelinks h4",
+			duration: 700,
+			stagger: 40,
+			fade: false,	
+			top: true,
 			reveal: true,
-			threshold: 0.2
+			once: false,
+			scale: 2
 		})
-		new Textify({
-			selector: '.onpagelinks h4',
-			duration: 1000,
-			stagger: 100,
-			fade: false,
-			scale: 0.8,
-			reveal: true,
-			transformOrigin: 'left center'
-		})
-		new Textify({
-			selector: '.a-title h4',
-			duration: 500,
-			stagger: 50,
-			fade: false,
-			reveal: true
-		})		
+
+		(async () => {
+			threeactions = await createCurateConsult()
+			threeareas = await threeConvictions()
+			advisors = await brhatAdvisors()
+			partners = await brhatPartners()
+			team = await brhatTeam()
+		})()
 	})
 
 </script>
@@ -111,29 +101,29 @@
 	</HeadComponent>
 </svelte:head>
 
-<div class="type">
+
+<!--parallax header-->
 	<div class="x0">
 		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/about-parambika.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/about-parambika.webp')"></ParallaxImage>
 	</div>
-	<div class="plain-three x1 pads">
-		<div class="top" use:reveal={{ transition: "fly", y: 64 }}>
-			<h1>Bṛhat is a<br><span style="color: #fe4a49">culture engine</span></h1>
-		</div>
-		<div class="mid box">
-			<h5 class="wide60" use:reveal={{ transition: "fly", y: 64 }}>
-				To power creatives, research and design rooted in the Indian civilizational consciousness. We
-				convert individual, institutional and collective intent into action, across 3 dimensions.
-			</h5>
-		</div>
-		<div class="bot box extra">
+<!--end-->
+
+<!--intro section with 3 actions-->
+	<div class="x1 rta-column is-padded minH rowgap-32">
+		<h2>Bṛhat is a<br><span class="gradient-red">culture engine</span></h2>
+		<h5 class="typett">
+			To power creatives, research and design rooted in the Indian civilizational consciousness. We
+			convert individual, institutional and collective intent into action, across 3 dimensions.
+		</h5>
+		<div class="rta-in-col rowgap-32">
 			{#if threeactions && threeactions.length > 0}
 				{#each threeactions as item}
-					<div class="card-row">
-						<div class="card-image">
+					<div class="rta-row colgap-24">
+						<div class="rta-image height-20 w32">
 							<img src={item.image} alt={item.id}/>
 						</div>
-						<div class="card-body firstcard">
-							<h6 data-textify>{item.name}</h6>
+						<div class="rta-in-col rowgap-16 w64">
+							<h6>{item.name}</h6>
 							<p>{item.content}</p>
 						</div>
 					</div>
@@ -141,23 +131,25 @@
 			{/if}
 		</div>
 	</div>
-	<div class="plain-two x2 pads">
-		<div class="up box extra">
-			<h5 class="wide60">
-				An engine is an instrument for transformation, and this engine is to build the self-perpetuating civilizational moment. How does one go about doing that?
-			</h5>
-			<h4>
-				At Bṛhat, we're acutely aware of three constraints:
-			</h4>
-		</div>
-		<div class="down box extra">
+<!--end-->
+
+<!--three constraints-->
+	<div class="rta-column minH is-padded rowgap-32">
+		<div class="rta-in-col line"></div>
+		<h5 class="typett">
+			An engine is an instrument for transformation, and this engine is to build the self-perpetuating civilizational moment. How does one go about doing that?
+		</h5>
+		<h4 class="typett">
+			At Bṛhat, we're acutely aware of three constraints:
+		</h4>
+		<div class="rta-in-col rowgap-32">
 			{#if threeareas && threeareas.length > 0}
 				{#each threeareas as item}
-					<div class="card-row">
-						<div class="card-image">
+					<div class="rta-row colgap-24">
+						<div class="rta-image w32">
 							<img src={item.image} alt={item.id}/>
 						</div>
-						<div class="card-body firstcard">
+						<div class="rta-in-col rowgap-16 w64">
 							<h6>{item.name}</h6>
 							<p class="wide60">{item.content}</p>
 						</div>
@@ -166,18 +158,26 @@
 			{/if}
 		</div>
 	</div>
-	<div class="plain-one x3 pads">
-		<h5 class="wide60">
+<!--end-->
+
+<!--severest constraint is time-->
+	<div class="rta-column minH is-padded rowgap-32">
+		<div class="rta-in-col line"></div>
+		<h5 class="typett">
 			But the severest constraint of them all is Time, and more specifically – Moment.
 		</h5>
-		<h5 class="wide60">
+		<h5 class="typett">
 			The time for a Culture Engine is now, because we are in the midst of a civilizational moment. What is a civilizational moment? How rare or regular are such moments? How must we respond to them?
 		</h5>
-		<h4 class="wide60">
+		<h4 class="typett">
 			Read more on the need we see, why we think this is the time to address it, and about our self-identity.
 		</h4>
 	</div>
-	<div class="plain-one x4 pads">
+<!--end-->
+
+<!--all links listed-->
+	<div class="rta-column is-padded minH">
+		<div class="rta-in-col line"></div>
 		<div class="onpagelinks">
 			<h4><a href="/about/svatahsiddha">SVATAḤSIDDHA</a></h4>
 			<h4><a href="/about/anatomy">ANATOMY OF A CIVILIZATIONAL MOMENT</a></h4>
@@ -189,13 +189,18 @@
 			<h4><a href="/about/#team">TEAM</a></h4>
 		</div>
 	</div>
-	<div class="title-box x5 pads">
-		<div class="a-title">
-			<h4>
-				Advisors
-			</h4>
-		</div>
-		<div class="a-box gridof4" id="advisors">
+<!--end-->
+
+
+	<div class="rta-column is-padded minH align-all">
+		<div class="rta-in-col line"></div>
+		<div class="rta-grid grid2 left colgap-32">
+			<div class="rta-in-col rowgap-32">
+				<h4 class="typett">
+				ADVISORS
+				</h4>
+			</div>
+			<div class="a-box gridof4" id="advisors">
 			{#if advisors && advisors.length > 0}
 			{#each advisors as item}
 			<div class="card-a">
@@ -209,6 +214,7 @@
 			</div>
 			{/each}
 			{/if}
+			</div>
 		</div>
 	</div>
 	<div class="title-box x6 pads">
@@ -302,7 +308,6 @@
 			{/if}
 		</div>
 	</div>
-</div>
 
 <style lang="sass">
 
@@ -368,8 +373,6 @@
 		align-content: center
 		img
 			width: 200px
-		.bot.box.extra
-			row-gap: 32px
 
 .x2
 	padding-bottom: 64px

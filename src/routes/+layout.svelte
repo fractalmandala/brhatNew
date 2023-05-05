@@ -3,6 +3,7 @@
 	import { page } from '$app/stores'
 	import { onMount } from 'svelte'
 	import { browser } from '$app/environment'
+	import { goto } from '$app/navigation'
 	import visibilityMode from '$lib/stores/visibility'
 	import siteTour from '$lib/stores/sitetour'
 	import { scale } from 'svelte/transition'
@@ -12,6 +13,7 @@
 	import '$lib/styles/types.sass'
 	import '$lib/styles/tokens.sass'
 	import Footer from '$lib/components/Footer.svelte'
+	import AllBrands from '$lib/components/AllBrands.svelte'
 
 	let innerW:number
 	let breakPointOn:boolean
@@ -21,21 +23,19 @@
 	let beginTour = false
 	let currentPage = 1
 	const totalPages = 7
+	let tourPage = Array(7).fill(false)
 
-  function navigate(action: string) {
-    if (action === 'visit') {
-      // Increment the currentPage counter
-      currentPage++;
-    } else if (action === 'skip') {
-      // Skip the page by incrementing the currentPage counter
-      currentPage++;
-    }
-
-    // If the journey is over, reset the currentPage counter
-    if (currentPage > totalPages) {
-      currentPage = 1;
-    }
-  }
+	function toggleTourPage(index:number){
+		tourPage[index] = !tourPage[index]
+		for ( let i = 0; i < tourPage.length; i++) {
+			if ( i !== index && tourPage[i] === true) {
+				tourPage[i] = false
+			}
+		}
+		if (beginTour === true) {
+			beginTour = false
+		}
+	}
 
 	function siteStartTour() {
 	  if (browser) {
@@ -49,6 +49,12 @@
 		
 	function initiateModal(){
 		beginTour = !beginTour
+		if ( firstVisit === true) {
+			firstVisit = false
+		}
+	}
+
+	function closeFirstVisitToast(){
 		if ( firstVisit === true) {
 			firstVisit = false
 		}
@@ -68,11 +74,11 @@
 
 	onMount(() => {
 		const lenis = new Lenis({
-			duration: 3,
+			duration: 1.2,
 			easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
 			orientation: 'vertical',
 			gestureOrientation: 'vertical',
-			wheelMultiplier: 0.68,
+			wheelMultiplier: 0.56,
 			smoothWheel: true,
 			smoothTouch: false,
 			touchMultiplier: 0,
@@ -88,7 +94,6 @@
 		if (firstVisit) {
 			localStorage.setItem('firstVisit', 'false')
 		}
-		console.log(firstVisit)
 	})
 
 </script>
@@ -97,9 +102,9 @@
 <svelte:window bind:innerWidth={innerW}/>
 
 <svelte:head>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&family=Spline+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/textify.js/dist/Textify.min.css" rel="stylesheet"/>
 </svelte:head>
 
@@ -123,7 +128,7 @@
 			Would you like to take a quick tour?
 		</h6>
 		<div class="rta-row colgap-8">
-			<button class="basic-button">
+			<button class="basic-button" on:click={closeFirstVisitToast}>
 				No
 			</button>
 			<button class="basic-button" on:click={initiateModal}>
@@ -135,46 +140,19 @@
 {/if}
 
 {#if beginTour}
-<div class="rta-in-col cc-all modalclass" in:scale={{ duration: 500, easing: expoOut}} out:scale={{ duration: 300, easing: expoOut}} data-lenis-prevent>
-	<div id="inside-modal" class="rta-in-col">
-		<div class="rta-row end-row">
-			<button class="basic-button" on:click={initiateModal} class:light={$visibilityMode} class:dark={!$visibilityMode}>Close</button>
-		</div>
-		<div class="rta-in-col rowgap-16 ta-l type">
-			<h6>Namaste,</h6>
-			<p>Welcome to Bṛhat - the Culture Engine.</p>
-			<p>To skip the tour and find some quick links, explore the links in our footer, where every Bṛhat sub-brand and its programs are listed.</p>
-			<p>
-				To resume or restart the tour at any time, use the link "Site Tour" in the footer.
-			</p>
-			<p>
-				This quick tour will take you through the site's main areas and features in 7 quick steps. Click begin below to start!
-			</p>
-			<button class="basic-button" class:light={$visibilityMode} class:dark={!$visibilityMode}
-				on:click={siteStartTour}
-				>
-				Begin
-			</button>
-		</div>
-	</div>
+<div class="rta-in-col cc-all modalclass" in:scale={{ duration: 500, easing: expoOut}} out:scale={{ duration: 300, easing: expoOut}} data-lenis-prevent class:light={$visibilityMode} class:dark={!$visibilityMode}>
+	<AllBrands>
+		<button class="basic-button dark">Close</button>
+	</AllBrands>
 </div>
 {/if}
 
 
 
-<style lang="sass">
 
-#inside-modal
-	background: white
-	border-radius: 8px
-	@media screen and (min-width: 1024px)
-		width: 32%
-		height: 480px
-		padding: 24px
-	@media screen and (max-width: 1023px)
-		width: calc(100% - 64px)
-		height: calc(100% - 128px)		
-		padding: 16px
+
+
+<style lang="sass">
 
 .toast
 	border-radius: 4px
@@ -216,6 +194,12 @@
 	height: 100%
 	display: flex
 	flex-direction: column
+
+.modalclass.light
+	background: rgba(255,255,255,0.6)
+
+.modalclass.dark
+	background: rgba(0,0,0,0.6)
 
 
 </style>
