@@ -2,6 +2,7 @@
 
 	import { onMount } from 'svelte'
 	import { browser } from '$app/environment'
+	import autoAnimate from '@formkit/auto-animate'
 	import Header from '$lib/components/SubHeader.svelte'
 	import ButtonEmerge from '$lib/anims/ButtonEmerge.svelte'
 	import ButtonEmerge2 from '$lib/anims/ButtonEmerge.svelte'
@@ -11,15 +12,13 @@
 	import ButtonEmerge6 from '$lib/anims/ButtonEmerge.svelte'
 	import visibilityMode from '$lib/stores/visibility'
 	import Animations from 'textify.js'
-	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide'
 	import { reveal } from 'svelte-reveal'
-	import tippy, {animateFill} from 'tippy.js'
 	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import HomeAccordion from '$lib/components/HomeAccordion.svelte'
+	import CompButton from '$lib/ridunits/CompButton.svelte'
+	import CompButton2 from '$lib/ridunits/CompButton.svelte'
 	import { createCurateConsult, brhatUpdates, latestVidsVar, BOLLatest, allChapters, allCourses } from '$lib/utils/supapulls'
 	import { latestDhitiSix } from '$lib/utils/localpulls'
-	import ButtonOne from '$lib/anims/ButtonOne.svelte'
-	import ButtonTwo from '$lib/anims/ButtonOne.svelte'
 	import '@splidejs/svelte-splide/css'
 	import 'tippy.js/dist/tippy.css'
 	import 'tippy.js/animations/shift-away.css'
@@ -40,6 +39,28 @@
 	let iW:number
 	let calib:number
 	let fake = false
+	let anveshiFull = Array(10).fill(false)
+	anveshiFull[1] = true
+	let drashtaFull = Array(10).fill(false)
+	drashtaFull[1] = true
+
+	function toggleAnveshi(index:number){
+		anveshiFull[index] = !anveshiFull[index]
+		for ( let i = 0; i < anveshiFull.length; i++ ) {
+			if ( i !== index && anveshiFull[i] === true ) {
+				anveshiFull[i] = false
+			}
+		}
+	}
+
+	function toggleDrashta(index:number){
+		drashtaFull[index] = !drashtaFull[index]
+		for ( let i = 0; i < drashtaFull.length; i++ ) {
+			if ( i !== index && drashtaFull[i] === true ) {
+				drashtaFull[i] = false
+			}
+		}
+	}
 
 	function fauxfake(){
 		fake = !fake
@@ -74,6 +95,17 @@
 			threshold: 0.8,
 			once: false
 		});
+		new Textify({
+			selector: ".typett2",
+			duration: 1600,
+			stagger: 100,
+			fade: false,
+			top: false,
+			reveal: true,
+			threshold: 0.8,
+			once: false,
+			scale: 2.5
+		});
 	
 		(async () => {
 			threeactions = await createCurateConsult();
@@ -96,44 +128,41 @@
 </svelte:head>
 
 <Header sidebar={sidebar}>
-	<div class="rta-row colgap-8" slot="modeswitch" on:click={toggleVisibility} on:keydown={fauxfake}>
-		<div class="togglemode" class:dark={!$visibilityMode} class:general={$visibilityMode}>
-			<div class="togglemodeball"></div>
-		</div>	
-	</div>
 </Header>
 
-<!--themer tag opens-->
-<div class="type" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+
+<div class="pageglobals" class:light={$visibilityMode} class:dark={!$visibilityMode}>
 
 <!--top accordion of 3 sections-->
 	<HomeAccordion></HomeAccordion>
 <!--end-->
 
 <!--introduction about section-->
-	<div class="rta-column rowgap-64 is-padded minH">
-		<div class="rta-in-col rowgap-16">
-			<h2>Bṛhat is a<br>
-			<span class="spesh">
-			culture engine</span>
-			</h2>
-		</div>
-		<div class="rta-grid grid2 left rowgap-32 colgap-32">
-			<div class="rta-in-col rowgap-16">
-				<h5 class="typett">
-				To power creatives, research and design rooted in the Indian civilizational consciousness. We
-				convert individual, institutional and collective intent into action, across 3 dimensions.
-				</h5>
-				<ButtonEmerge>
-					<a href="/about">
-						Know More
-					</a>
-				</ButtonEmerge>
+	<div class="rta-column col-y-cent alt-pads fixH" id="section1" data-lenis-scroll-snap-align="start">
+		<div class="rta-column col-y-cent rowgap-64 glass">
+			<div class="rta-grid grid2 colgap-32">
+				<div class="rta-in-col bot-p-32">
+				<h1 class="non">Bṛhat is a<br>
+				<span class="spesh">
+					culture engine</span>
+				</h1>
+				</div>
+				<div class="rta-in-col top-p-16">
+					<h5 class="typett">
+						To power creatives, research and design rooted in the Indian civilizational consciousness. We
+						convert individual, institutional and collective intent into action, across 3 dimensions.
+					</h5>
+					<ButtonEmerge>
+						<a href="/about">
+							Know More
+						</a>
+					</ButtonEmerge>
+				</div>
 			</div>
-			<div class="rta-grid grid3 colgap-32 rowgap-32">
+			<div class="rta-grid grid4 rowgap-32 colgap-32">
 				{#if threeactions && threeactions.length > 0}
 					{#each threeactions as item, i}
-						<div class="rta-in-col right rowgap-16"
+						<div class="rta-in-col left rowgap-16"
 							use:reveal={{
 								transition: "fly",
 								y: 200,
@@ -141,8 +170,8 @@
 								delay: i*50
 							}}
 							>
-							<h6 class="typett">{item.name}</h6>
-							<pre>{item.content}</pre>
+							<h6 class="typett non ta-l">{item.name}</h6>
+							<pre class="non ta-l">{item.content}</pre>
 						</div>
 					{/each}
 				{/if}
@@ -152,91 +181,153 @@
 <!--end-->
 
 <!--latest anveshi chapters-->
-	<div class="rta-column rowgap-64 bot-m-32 bot-p-32 is-padded">
-		<div class="rta-in-col line"></div>
-		<div class="rta-grid grid2 align-all colgap-32 rowgap-32 right">
-			<div class="rta-in-col rowgap-32" class:light={$visibilityMode} class:dark={!$visibilityMode}>
-				{#if chapters && chapters.length > 0}
-					{#each chapters as item}
-						<div class="rta-row colgap-24 bord-bot bot-p-32">
-							<div class="rta-image height-20 w32">
+	<div class="rta-column col-y-cent rowgap-32 bot-m-32 bot-p-32 alt-pads minH" data-lenis-scroll-snap-align="start">
+		<div class="rta-row row-y-cent row-between top-p-16">
+
+			<div class="rta-row row-y-cent colgap-24">
+				<h3 class="non typett">BṚHAT ANVEṢĪ</h3>
+				<div use:reveal>
+					<ButtonEmerge2><a href="/anveshi">Learn More</a></ButtonEmerge2>
+				</div>
+			</div>
+
+			<div class="toplabel">
+				<small class="non typett2">Culture Travel and Experience</small>
+			</div>
+		</div>
+
+		<div class="rta-in-col">
+			{#if chapters && chapters.length > 0}
+				<div class="rta-row row-col colgap-64 bord-bot bot-p-24" id="anveshi-drawer" use:autoAnimate>
+					{#each chapters as item, i}
+						<h6 class="non tt-u" style="font-weight: 400" on:click={() => toggleAnveshi(i)} on:keydown={fauxfake} class:drawerselection={anveshiFull[i]}>{item.name}</h6>
+					{/each}
+				</div>
+				<div class="rta-in-col top-p-32" use:autoAnimate> 
+					{#each chapters as item, i}
+						{#if anveshiFull[i]}
+						<div class="rta-row colgap-24">
+							{#if item.status === 'upcoming' || item.status === 'Upcoming'}
+							<div class="rta-image w64 height-40">
 								<img src={item.image} alt={item.name}/>
 							</div>
-							<div class="rta-in-col rowgap-16 w64">
-								<small class="label label-yellow">{item.status}</small>
-								<h5 class="heading">{item.name}</h5>
+							<div class="rta-in-col rowgap-8 w32">
+								<div class="status-sticker">
+									<h6 class="tt-u non">{item.status}</h6>
+								</div>
+								<cite class="non">{item.dates}</cite>
 								{#if item.content && item.content.length > 0}
-								<p>{item.content.slice(0,250)}...<span style="color: var(--yellow)">
-									<a href="/anveshi/chapter/{item.chapter}">READ MORE</a></span>
-								</p>
+									<pre class="h6" style="color: var(--primaryalt)">{item.content}</pre>
 								{/if}
 							</div>
+							{:else}
+							<div class="rta-image w32 height-40">
+								<img src={item.image} alt={item.name}/>
+							</div>
+							<div class="rta-in-col rowgap-8 w64">
+								<div class="status-sticker">
+									<h6 class="tt-u non">{item.status}</h6>
+								</div>
+								<cite class="non">{item.dates}</cite>
+								{#if item.content && item.content.length > 0}
+									<pre class="h6 bord-top top-p-16" style="color: var(--primaryalt)">{item.content}</pre>
+								{/if}
+							<CompButton><a href="/anveshi/chapter/{item.chapter}">Read More</a></CompButton>
+							</div>
+							{/if}
 						</div>
+						{/if}
 					{/each}
-				{/if}
-			</div>
-			<div id="try" class="rta-in-col rowgap-8">
-			<h4 class="typett">BṚHAT ANVEṢĪ</h4>
-			<h5 class="typett">Culture travel and experience</h5>
-			<ButtonEmerge2><a href="/anveshi">Visit</a></ButtonEmerge2>
-			</div>
+				</div>
+			{/if}
+			
 		</div>
 	</div>
 <!--end-->
 
 <!--latest drashta courses-->
-	<div id="x2" class="rta-column rowgap-64 is-padded">
-		<div class="rta-in-col line"></div>
-		<div class="rta-grid grid2 align-all rowgap-32 colgap-32 left">
-			<div class="rta-in-col rowgap-8 thin">
-			<h4>BṚHAT DRAṢṬĀ</h4>
-			<h5>Online courses and shared learning</h5>
-			<ButtonEmerge3><a href="/drashta">See Details</a></ButtonEmerge3>
+	<div class="rta-column rowgap-32 bot-m-32 bot-p-32 alt-pads minH" data-lenis-scroll-snap-align="start">
+		<div class="rta-row row-y-cent row-between top-p-16 bord-bot bot-p-32">
+
+			<div class="rta-row row-y-cent colgap-24" use:autoAnimate>
+				<h3 class="non typett">BṚHAT DRAṢṬĀ</h3>
+				<div use:reveal>
+					<ButtonEmerge3><a href="/drashta">Visit</a></ButtonEmerge3>
+				</div>
 			</div>
-			<div class="rta-in-col rad-4 rowgap-32 bord-top" id="drashtacourses" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+
+			<div class="toplabel">
+				<small class="non typett2">Online Courses and Shared Learning</small>
+			</div>
+
+		</div>
+		<div class="rta-grid left thirty grid2 colgap-32">
 			{#if courses && courses.length > 0}
-				<h5 class="heading">Upcoming:</h5>
-				{#each courses as item}
+				<div class="rta-in-col rowgap-16 bot-p-16" id="drashta-drawer">
+					{#each courses as item, i}
+						<h6 class="non tt-u" style="font-weight: 400" on:click={() => toggleDrashta(i)} on:keydown={fauxfake} class:drawerselection={drashtaFull[i]}>{item.coursename}</h6>
+					{/each}
+				</div>
+				{#each courses as item, i}
+					{#if drashtaFull[i]}
 					{#if item.status === 'upcoming' || item.status === 'Upcoming'}
-						<div class="rta-in-col rowgap-32 bord-bot bot-p-32">
-							<div class="rta-row colgap-24">
-								<div class="rta-image height-20 w32">
+						<div class="rta-row colgap-24" use:autoAnimate>
+								<div class="rta-image w64 height-40">
 									<img src={item.image} alt={item.name}/>
 								</div>
-								<div class="rta-in-col rowgap-16">
-									<h6>{item.name}</h6>
-									<p>{item.datefrom} | with <span class="dark-text"> <b> {item.ins}</b></span></p>
+								<div class="rta-in-col rowgap-8 w32">
+									<div class="status-sticker">
+										<h6 class="tt-u non">{item.status}</h6>
+									</div>
+									<cite class="non tt-c">{item.datefrom} | with <span id="instructor">{item.ins}</span></cite>
 								</div>
+						</div>
+						{:else}
+						<div class="rta-in-col rowgap-16">
+							<div class="rta-image height-40">
+								<img src={item.image} alt={item.name}/>
+							</div>
+							<div class="rta-in-col rowgap-8">
+								<div class="status-sticker">
+									<h6 class="tt-u non">{item.status}</h6>
+								</div>
+								<cite class="non tt-c">{item.datefrom} | with <span id="instructor">{item.ins}</span></cite>
+								<pre class="h6 bord-top top-p-16" style="color: var(--primaryalt)">{item.content}</pre>
+								<CompButton2><a href="/drashta/course/{item.course}">About Course</a></CompButton2>
 							</div>
 						</div>
+						{/if}
 					{/if}
 				{/each}
 			{/if}
-			</div>
 		</div>
 	</div>
 <!--end-->
 
 <!--explore visual content section-->
-	<div class="minH is-padded rta-column rowgap-64">
-		<div class="rta-in-col line"></div>
-		<div class="rta-grid grid2 left  align-all colgap-32 rowgap-32">
-			<div class="rta-in-col rowgap-8">
-			<h4 class="typett">BṚHAD MṚDAṄGA</h4>
-			<h5>Visual and creative cultural content</h5>
-			<ButtonEmerge4><a href="/mrdanga">Visit Page</a></ButtonEmerge4>
+	<div class="minH col-y-cent alt-pads rta-column rowgap-32" id="brhad-mrdanga" data-lenis-scroll-snap-align="start">
+		<div class="rta-row row-y-cent row-between top-p-16 bord-bot bot-p-32">
+			<div class="rta-row row-y-cent colgap-24" use:autoAnimate>
+				<h3 class="non typett">BṚHAD MṚDAṄGA</h3>
+				<div use:reveal>
+				<ButtonEmerge4><a href="/mrdanga">More Videos</a></ButtonEmerge4>
+				</div>
 			</div>
-			<div class="rta-in-col rowgap-32 bord-top" class:light={$visibilityMode} class:dark={!$visibilityMode}>
-			<h5 class="typett">
+			<div class="toplabel">
+				<small class="non typett2">Visual and Creative Cultural Content</small>
+			</div>
+		</div>
+		<h5 class="typett2">
 				Our visual content ranges from explorations of rasa and bhāva, to articulations of an
 				IKS-implementation strategy for modern India. View the latest videos below, or visit our <a
 					href="https://youtube.com/@brhat"
 					target="_blank"
 					style="color: #fe4a49"
 					rel="noreferrer">YouTube channel</a
-				>
-			</h5>
-			<div class="rta-grid grid3 colgap-32">
+				>			
+		</h5>
+
+		<div class="rta-grid grid3 colgap-32">
 				{#if videos && videos.length > 0}
 					{#each videos as item, i}
 						<div class="rta-video"
@@ -248,25 +339,21 @@
 							}}
 							>
 							<iframe class="lazy video-iframe" width=100% height=100% loading="lazy" src="https://www.youtube.com/embed/{item.videoid}" title={item.name}></iframe>
-							<small style="color: var(--greyS)">{item.name}</small>
+							<small style="color: var(--primaryalt)">{item.name}</small>
 						</div>
 					{/each}
 				{/if}
-			</div>
-			</div>
+
 		</div>
+
 	</div>
 <!--end-->
 
-<!--latest at brhat section-->
-	<div class="rta-column rowgap-64 is-padded minH">
-		<div class="rta-in-col line"></div>
-		<div class="rta-grid grid2 align-all colgap-32 rowgap-32 left">
-			<div class="rta-in-col">
-				<h4 class="typett">LATEST AT BṚHAT</h4>
-				<h5>Events, Conferences, Releases</h5>
-			</div>
-			<div class="rta-in-col rowgap-32" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+<!--latest at brhat section
+	<div class="rta-column rowgap-32 alt-pads minH">
+		<h3 class="non typett bord-top top-p-16">LATEST AT BṚHAT</h3>
+		<h5 class="non typett2">Events, Conferences, Releases</h5>
+		<div class="rta-in-col rowgap-32">
 				{#if updates && updates.length > 0}
 					{#each updates as item, i}
 						<div class="rta-row colgap-24 bord-bot bot-p-32"
@@ -289,19 +376,29 @@
 						</div>
 					{/each}
 				{/if}
-			</div>
 		</div>
 	</div>
-<!--end-->
+end-->
 
 <!--dhiti blog latest posts section-->
-	<div class="rta-column is-padded rowgap-64">
-		<div class="rta-in-col line"></div>
-		<div class="rta-grid grid2 right align-all rowgap-32 colgap-32">
-			<div class="rta-in-col rowgap-32" class:light={$visibilityMode} class:dark={!$visibilityMode}>
-				{#if posts && posts.length > 0}
+	<div class="rta-column alt-pads rowgap-32 bot-p-64" data-lenis-scroll-snap-align="start">
+
+		<div class="rta-row row-y-cent row-between top-p-16 bord-bot bot-p-32">
+			<div class="rta-row row-y-cent colgap-24" use:autoAnimate>
+				<h3 class="non typett">RECENT AT DHĪTI</h3>
+				<div use:reveal>
+					<ButtonEmerge6><a href="/dhiti">All Posts</a></ButtonEmerge6>
+				</div>
+			</div>
+			<div class="toplabel">
+				<small class="non typett2">Dhīti is our Blog for Essays on Culture, Policy and Education</small>
+			</div>
+		</div>
+
+		<div class="rta-grid grid3 colgap-64 rowgap-64">
+			{#if posts && posts.length > 0}
 				{#each posts as item, i}
-					<div class="rta-row colgap-24 bord-bot bot-p-32"
+					<div class="rta-card col-y-between rowgap-64 rta-in-col"
 						use:reveal={{
 							transition: "fly",
 							y: 200,
@@ -309,86 +406,184 @@
 							delay: i*50
 						}}
 						>
-						<div class="rta-image w32">
+						<div class="rta-in-col rowgap-16">
+							<small>{item.meta.category}</small>
+							<div class="rta-image">
 							<img src={item.meta.image} alt={item.meta.title}/>
+							</div>
+							<h5 class="non">{item.meta.title}</h5>
 						</div>
-						<div class="rta-in-col w64 rowgap-16">
-							<div class="rta-in-col rowgap-8">
-								<h6>
-								<a href={item.path}>
-									{item.meta.title}
-								</a>
-								</h6>
-								<p>
-								{item.meta.author}
+						<div class="rta-in-col rowgap-4 col-y-end bord-top top-p-8">
+							<p class="non" style="color: var(--primary)"><strong>
+								{item.meta.author}<span> </span>
 								{#if item.meta.authortwo && item.meta.authortwo.length > 0}
-									<span> and {item.meta.authortwo}</span>
-								{/if}
-								</p>
-							</div>
-							<div class="rta-in-col rowgap-4">
-								<cite>{item.meta.tags}</cite>
-								<small>{item.meta.category}</small>
-							</div>
-						</div>	
+									 and {item.meta.authortwo}
+								{/if}</strong>
+							</p>
+							<cite class="non" style="color: var(--primaryalt)">{item.meta.tags}</cite>
+						</div>
 					</div>
 				{/each}
-				{/if}
-			</div>
-			<div class="rta-in-col right rowgap-8 ta-r">
-			<h4 class="typett">POSTS AT DHĪTI</h4>
-			<h5>Dhīti is our blog for essays on culture, policy and education</h5>
-			<ButtonEmerge6><a href="/dhiti">All Posts</a></ButtonEmerge6>
-			</div>
+			{/if}
 		</div>
 	</div>
 <!--end-->
 
 <!--open library latest posts section-->
-	<div class="rta-column is-padded rowgap-32 minH">
-		<div class="rta-in-column line"></div>
-		<div class="rta-grid grid2 left align-all colgap-32">
-			<div class="rta-in-col rowgap-8">
-			<h4 class="typett">BṚHAT OPEN LIBRARY</h4>
-			<h5 class="typett">A repository of reading and research material</h5>
-			<ButtonEmerge5><a href="/openlibrary">Enter Library</a></ButtonEmerge5>
+	<div class="rta-column alt-pads col-y-cent rowgap-32 minH" data-lenis-scroll-snap-align="start">
+
+		<div class="rta-row row-y-cent row-between top-p-16 bord-bot bot-p-32">
+			<div class="rta-row row-y-cent colgap-24" use:autoAnimate>
+				<h3 class="non typett">BṚHAT OPEN LIBRARY</h3>
+				<div use:reveal>
+					<ButtonEmerge5><a href="/openlibrary">Enter Library</a></ButtonEmerge5>
+				</div>
 			</div>
-			<div class="rta-grid grid3 rowgap-32 colgap-32 bord-top" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+			<div class="toplabel">
+				<small class="non typett2">A repository of reading and research material.</small>
+			</div>
+		</div>
+
+		<div class="rta-grid grid4 colgap-32 rowgap-32">
 				{#if books && books.length > 0}
 				{#each books as item, i}
-					<div class="rta-in-col right"
+					<div class="rta-in-col small-card col-y-between rowgap-8"
 						use:reveal={{
 							transition: "fly",
-							y: 200,
+							y: 100,
 							easing: "easeOutCirc",
-							delay: i*50
+							delay: i*5
 						}}
 						>
-						<h6><a href="/openlibrary/books/{item.slug}" class="typett">{item.Text}</a></h6>
-						<p>{item.author}</p>
+						<h6 class="non" style="color: var(--primary)"><a href="/openlibrary/books/{item.slug}" class="typett">{item.Text}</a></h6>
+						<p class="non">{item.author}</p>
 					</div>
 				{/each}
 				{/if}
-			</div>
 		</div>
 	</div>
 <!--end-->
 
-<!--closing tag for themer-->
 </div>
+
 
 <style lang="sass">
 
-.type.light
-	.line
-		border-top: 1px solid #d7d7d7
-		height: 1px
+h3
+	color: var(--primary)
 
-.type.dark
-	.line
-		border-top: 1px solid #272727
-		height: 1px
+.status-sticker
+	background: linear-gradient(90deg,#e14141,#df6262,#ee9191)
+	padding: 2px 8px
+	width: max-content
+	color: white
 
+h6.drawerselection
+	background: linear-gradient(96.89deg, #FF7272 6.93%, #FE4A40 58.12%, #DF2015 92.63%)
+	color: white
+	padding: 6px
+	border-radius: 4px
+	
+
+.toplabel
+	width: max-content
+	height: max-content
+	small
+		color: #fe4a49
+		margin: 0
+		font-size: 12px
+		line-height: 1.5
+		font-weight: bold
+		text-transform: uppercase
+
+.pageglobals.dark
+	background: #171717
+
+
+.glass
+	min-height: 80%
+	@media screen and (min-width: 1024px)
+		padding: 24px 48px
+		border-radius: 4px
+	@media screen and (max-width: 1023px)
+		padding: 20px
+		border-radius: 4px
+
+.dark
+	.glass
+		border: 1px solid var(--primaryalt)
+		background: rgba(9,9,9,0.64)
+		backdrop-filter: blur(30px)
+		h6
+			color: var(--primary)
+		pre
+			color: var(--primaryalt)
+
+.light
+	.glass
+		border: 1px solid var(--bordercolor)
+		h6
+			color: var(--primary)
+		pre, h5
+			color: var(--primaryalt)
+
+#section1
+	h1
+		line-height: 1
+
+#anveshi-drawer h6, #drashta-drawer h6
+	cursor: pointer
+	padding-top: 8px
+	padding-bottom: 8px
+	&::before
+		margin-left: auto
+	&::after, &::before
+		content: ''
+		width: 0%
+		height: 2px
+		background: #fe4a49
+		display: block
+		transition: 0.3s
+	&:hover
+		&::after, &::before
+			width: 100%
+
+
+#brhad-mrdanga
+	h5
+		font-weight: 300
+		color: var(--primaryalt)
+
+.rta-card
+	border: 1px solid var(--bordercolor)
+	border-radius: 4px
+	transition: all 0.18s cubic-bezier(0.795, 1.270, 0.590, 0.945)
+	small
+		background: linear-gradient(135deg, #EED16C 0%, #E36464 100%)
+		padding: 3px 12px
+		text-transform: uppercase
+		font-weight: bold
+		color: white
+		font-size: 10px
+		width: max-content
+
+
+.light
+	.rta-card
+		&:hover
+			background: linear-gradient(135deg, #fff8ee 0%,#fffaef 100%)
+			box-shadow: 4px 6px 8px #e1e1e1
+			border: 1px solid transparent
+
+.dark
+	.rta-card
+		background: rgba(9,9,9,0.6)
+		backdrop-filter: blur(10px)
+		&:hover
+			box-shadow: 4px 6px 8px #121212
+			border: 1px solid #fe4a49
+			background-color: hsla(0,0%,3%,1)
+			background-image: radial-gradient(at 78% 100%, hsla(0,70%,36%,1) 0px, transparent 50%), radial-gradient(at 0% 0%, hsla(25,74%,27%,1) 0px, transparent 50%)
 
 .spesh
 	background: linear-gradient(96.89deg, #FF7272 6.93%, #FE4A40 58.12%, #DF2015 92.63%)
@@ -397,15 +592,6 @@
 	background-clip: text
 	text-fill-color: transparent
 
-.type.light
-	background: white
-
-#x2
-	@media screen and (max-width: 1023px)
-		.rta-in-col
-			.rta-in-col
-				.rta-grid
-					padding: 16px
 
 </style>
 

@@ -320,12 +320,7 @@
 		grid-template-areas: "opentab opentab" ". ."
 		.card-c.opentab
 			grid-area: opentab
-
-.vidgrid
-	margin-bottom: 32px
-	@media screen and (max-width: 1023px)
-		margin-bottom: 16px
-		
+	
 
 .x0
 	overflow: hidden

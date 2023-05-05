@@ -2,6 +2,9 @@
 
 	import { onMount, afterUpdate } from 'svelte'
 	import HeadComponent from '$lib/components/HeadComponent.svelte'
+	import autoAnimate from '@formkit/auto-animate'
+	import { ChevronDown } from 'lucide-svelte'
+	import Accordion from '$lib/ridunits/CompAccordion.svelte'
 	import StickyCols from '$lib/components/StickyCols.svelte'
 	import StickyCols2 from '$lib/components/StickyCols.svelte'
 	import { scale } from 'svelte/transition'
@@ -82,187 +85,96 @@
 	</HeadComponent>
 </svelte:head>
 
-<div class="type">
-	<div class="box x0">
-		<ParallaxImage --parallax="url('{data.image}')" --parallaxresp="url('{data.image}')">
-			<h1 style="transform: translateY({-p/5}px)">{data.name}</h1>
-		</ParallaxImage>
+<!--heading image-->
+	<div class="rta-column x0 top-p-64">
+		<img src="{data.image}" alt={data.name} />
 	</div>
-	<StickyCols isPads={isPads} isRev={isRev}>
-		<div slot="holds" class="box">
-			<h6 style="color: var(--yellow)">{data.duration}</h6>
-			<h6 style="color: var(--yellow)">{data.dates}</h6>
-			<h6 style="color: var(--yellow)">{data.price}</h6>
-		</div>
-		<div slot="scrolls">
-			<h5>
-				{data.content}
-			</h5>
-		</div>
-	</StickyCols>
-	<StickyCols2 isPads={isPads} isRev={isRev2}>
-		<div slot="holds" class="box" id="highlight">
-			<h4 on:click={() => toggleArea(1)} on:keydown={fauxfake} class:selectedhead={area[1]}>Itinerary</h4>
-			<h4 on:click={() => toggleArea(2)} on:keydown={fauxfake} class:selectedhead={area[2]}>Temples</h4>
-		</div>
-		<div slot="scrolls">
-			{#if area[1]}
-				<div class="gridof4 onefour" class:calibrated={alignGrid}>
-					{#if itins && itins.length > 0}
-						{#each itins as item, i}
-							{#if openedDay[i]}
-							<div class="card-c opentab" on:click={() => toggleDay(i)} on:keydown={() => toggleDay(i)} in:scale={{ duration: 500, delay: 150}} out:scale={{ duration: 100, delay: 0}}>
-								<div class="card-body">
-									<h5 style="font-weight: 600">{item.name}</h5>
-									<pre>{item.content}</pre>
-								</div>
-							</div>
-							{:else}
-							<div class="card-c" on:click={() => toggleDay(i)} on:keydown={() => toggleDay(i)} in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
-								<div class="card-body">
-									<h6>{item.name}</h6>
-								</div>
-							</div>
-							{/if}
-						{/each}
+<!--end-->
+
+<!--header and metadetails-->
+	<div class="rta-column alt-pads rowgap-8 top-p-32" id="section1">
+		<h3 class="tt-u ta-c">{data.name}</h3>
+		<h5 class="ta-c tt-c" id="section1line2">{data.status}. Next travelling {data.dates}</h5>
+		<h5 class="ta-c tt-c bord-bot bot-p-16">{data.duration} | {data.price}</h5>
+	</div>
+<!--end-->
+
+<!--detailed content and itinerary-->
+	<div class="rta-column alt-pads top-p-32 rowgap-64">
+		<pre class="h5">
+			{data.content}
+		</pre>
+		<div class="rta-in-col top-p-32 rowgap-16 bot-p-64">
+			<h4 class="tt-u">Itinerary</h4>
+			{#if itins && itins.length > 0}
+				{#each itins as item, i}
+				<div class="rta-in-col col-y-top rowgap-16 accordion-item bord-bot bot-p-16" on:click={() => toggleDay(i)} on:keydown={fauxfake} use:autoAnimate>
+					<div class="rta-row row-y-cent top-p-16 row-between" class:opened={openedDay[i]}>
+						<h6>{item.name}</h6>
+						<div class="rta-in-col">
+							<ChevronDown/>
+						</div>
+					</div>
+					{#if openedDay[i]}
+					<pre class="h6">
+						{item.content}
+					</pre>
 					{/if}
-				</div>
-			{/if}
-			{#if area[2]}
-				<div id="templegrid" class="gridof4 by2 twofour" class:calibrated={alignGrid}>
-					{#if temp && temp.length > 0}
-						{#each temp as item, i}
-							{#if imageDetail[i]}
-								<div class="card-row opentab" on:click={() => toggleImage(i)} on:keydown={() => toggleImage(i)} in:scale={{ duration: 500, delay: 150}} out:scale={{ duration: 100, delay: 0}}>
-									<div class="card-image">
-										<img src={item.image} alt={item.id}/>
-									</div>
-									<div class="card-body">
-										<p>{item.content}</p>
-									</div>
-								</div>
-							{:else}
-							<div class="card-c" on:click={() => toggleImage(i)} on:keydown={() => toggleImage(i)} in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
-								<div class="imagecard">
-									<img src={item.image} alt={item.id}/>
-								</div>
-							</div>
-							{/if}
-						{/each}
-					{/if}
-				</div>
+				</div>				
+				{/each}
 			{/if}
 		</div>
-	</StickyCols2>
-</div>
+	</div>
+<!--end-->
+
+<!--temples-->
+	<div class="rta-column rowgap-16 alt-pads top-p-32 bot-p-64">
+		<h4 class="bot-p-16 tt-u">Temples of {data.chapter}</h4>
+		<div class="rta-grid grid3 colgap-32 rowgap-32">
+			{#if temp && temp.length > 0}
+				{#each temp as item}
+					<div class="rta-in-col rowgap-16">
+						<div class="rta-image height-30">
+							<img src={item.image} alt={item.name}/>
+						</div>
+						<div class="rta-in-col rowgap-8">
+							<h6>{item.name}</h6>
+							<pre>{item.content}</pre>
+						</div>
+					</div>
+				{/each}
+			{/if}
+		</div>
+	</div>
+<!--end-->
+
 
 <style lang="sass">
 
-.type
-	padding-bottom: 120px
+#section1line2
+	background: var(--bluedark)
+	color: white
+	padding: 2px 0
 
-#highlight h4
-	&:hover
-		color: var(--yellow)
-		cursor: pointer
+h6, pre, h4, h3, h5
+	margin: 0
 
-#highlight
-	@media screen and (max-width: 1023px)
-		flex-direction: row
-		gap: 16px
-		border-top: 1px solid #ececec
-		padding-top: 4px
-		border-bottom: 1px solid #ececec
-		padding-bottom: 4px
-
-
-.onefour
-	h6, h5
-		cursor: pointer
-
-.onefour.calibrated.gridof4
-	@media screen and (min-width: 1024px)
-		grid-template-areas: "opentab opentab opentab" ". . ."
-		grid-template-rows: auto auto
-		grid-template-columns: 1fr 1fr 1fr
-		.opentab
-			grid-area: opentab
-
-.twofour.calibrated
-	@media screen and (min-width: 1024px)
-		grid-template-areas: "opentab opentab opentab opentab" ". . . ."
-		grid-template-rows: auto auto
-		.card-row.opentab
-			grid-area: opentab
-
-
-.twofour.by2.calibrated.gridof4
-	@media screen and (min-width: 1024px)
-		grid-template-areas: "opentab opentab opentab opentab" ". . . ."
-		grid-template-rows: auto
-		.card-row.opentab
-			grid-area: opentab
-			gap: 48px
-			margin-bottom: 32px
-			.card-image
-				width: 40%
-				height: 240px
-			.card-body
-				width: calc(60% - 48px)
-	@media screen and (max-width: 1023px)
-		grid-template-areas: "opentab opentab" ". ."
-		grid-template-rows: auto auto
-		.card-row.opentab
-			grid-area: opentab
-			flex-direction: column
-			.card-image, .card-body
-				width: 100%
-			.card-image
-				height: 240px
-				
-
-.twofour.gridof4.by2
+.x0
 	img
 		object-fit: cover
-		width: 100%
-		height: 100%
-	.card-c
-		padding: 0
-		cursor: pointer
-	gap: 16px
-
-	
-
-.x2
-	.gridof4.onefour
-		.card-c
-			cursor: pointer
-		.card-c.opentab
-			cursor: default
-			border-bottom: 1px solid #ececec
-			padding-bottom: 16px
-			h5
-				color: var(--yellow)
-		
-
-.x0
-	overflow: hidden
 	@media screen and (min-width: 1024px)
 		height: 100vh
+		justify-content: center
+		align-items: center
+		img
+			width: 80%
+			height: 80%
+			margin-top: 64px
 	@media screen and (max-width: 1023px)
 		height: 40vh
+		img
+			height: 100%
 
-.x0
-	h1
-		color: white
-		background: rgba(0,0,0,0.7)
-		padding: 2px 24px
-		@media screen and (min-width: 1024px)
-			width: max-content
-			margin-top: 25%
-		@media screen and (max-width: 1023px)
-			width: 100%
-			margin-top: 60%
 
 
 </style>

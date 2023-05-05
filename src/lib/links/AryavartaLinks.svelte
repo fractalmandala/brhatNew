@@ -25,10 +25,9 @@
 </script>
 
 {#if flytime}
-{#if allSite && allSite.length > 0}
-{#each allSite as name, i}
-	<a class="insidelink" in:fly={{ duration: 150, delay: i*10, x: 128, y: 0, easing: quintIn}} out:fly={{ duration: 100, delay: 0, x: 128, y: 0, easing: quintIn}} href="{name.url}">{name.heading}</a>
-{/each}
-{/if}
+	<a class="insidelink" in:fly={{ duration: 150, delay: 10, x: 128, y: 0, easing: quintIn}} out:fly={{ duration: 100, delay: 0, x: 128, y: 0, easing: quintIn}} href="/aryavarta/chapter/01">Kaśyapa's Lament</a>
+	<a class="insidelink" in:fly={{ duration: 150, delay: 20, x: 128, y: 0, easing: quintIn}} out:fly={{ duration: 100, delay: 0, x: 128, y: 0, easing: quintIn}} href="/aryavarta/chapter/02">Sūta and Sudā</a>
+	<a class="insidelink" in:fly={{ duration: 150, delay: 30, x: 128, y: 0, easing: quintIn}} out:fly={{ duration: 100, delay: 0, x: 128, y: 0, easing: quintIn}} href="/aryavarta/chapter/03">Nāsadīya Across Space and Time</a>
+	<a class="insidelink" in:fly={{ duration: 150, delay: 40, x: 128, y: 0, easing: quintIn}} out:fly={{ duration: 100, delay: 0, x: 128, y: 0, easing: quintIn}} href="/aryavarta/lore">Lore</a>	
 {/if}
 

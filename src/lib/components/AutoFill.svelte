@@ -1,5 +1,6 @@
 <script lang="ts">
 
+	import CompSearch from '$lib/ridunits/CompSearch.svelte'
   import type { SearchItem } from '$lib/types/SearchItem'
 	import { searchitems } from '$lib/filed/searchindex'
 

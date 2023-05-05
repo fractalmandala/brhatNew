@@ -9,21 +9,34 @@
 	import { scale } from 'svelte/transition'
 	import { expoOut } from 'svelte/easing'
 	import Lenis from '@studio-freight/lenis'
-	import '$lib/styles/global.sass'
-	import '$lib/styles/types.sass'
-	import '$lib/styles/tokens.sass'
+	import '$lib/styles/rid.sass'
 	import Footer from '$lib/components/Footer.svelte'
 	import AllBrands from '$lib/components/AllBrands.svelte'
+	import { lenisStore as lenis, setLenisStore } from '$lib/stores/lenis'
+	import { useScroll } from '$lib/utils/lenisscroll'
+	import { useFrame } from '$lib/utils/lenisframe'
+	import { raf } from '$lib/stores/tempus'
 
 	let innerW:number
 	let breakPointOn:boolean
 	let showFooter = true
 	let link:any
 	let firstVisit = false
+	let hash:any
 	let beginTour = false
 	let currentPage = 1
 	const totalPages = 7
 	let tourPage = Array(7).fill(false)
+
+	function toggleVisibility() {
+	  if (browser) {
+	    visibilityMode.update((mode) => {
+	      const newMode = !mode;
+	      localStorage.setItem('visibilityMode', JSON.stringify(newMode));
+	      return newMode;
+	    });
+	  }
+	}
 
 	function toggleTourPage(index:number){
 		tourPage[index] = !tourPage[index]
@@ -73,28 +86,20 @@
 	}
 
 	onMount(() => {
-		const lenis = new Lenis({
-			duration: 1.2,
-			easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-			orientation: 'vertical',
-			gestureOrientation: 'vertical',
-			wheelMultiplier: 0.56,
-			smoothWheel: true,
-			smoothTouch: false,
-			touchMultiplier: 0,
-			infinite: false,
-		})
-		function raf(time: any){
-			lenis.raf(time)
-			requestAnimationFrame(raf)
-		}
-		requestAnimationFrame(raf)
-		link = $page.url.pathname
+		const lenisInstance = new Lenis();
+		setLenisStore(lenisInstance);
+		$lenis?.destroy();
+		
 		firstVisit = localStorage.getItem('firstVisit') === null
+
 		if (firstVisit) {
 			localStorage.setItem('firstVisit', 'false')
 		}
-	})
+	});
+
+	useFrame((time) => {
+		$lenis?.raf(time);
+	});
 
 </script>
 
@@ -108,10 +113,10 @@
 	<link href="https://cdn.jsdelivr.net/npm/textify.js/dist/Textify.min.css" rel="stylesheet"/>
 </svelte:head>
 
-<div id="appbox">
-	{#key link}
+<div id="appbox" class="themer" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+
 	<slot></slot>
-	{/key}
+
 	{#if showFooter}
 	<Footer></Footer>
 	{/if}

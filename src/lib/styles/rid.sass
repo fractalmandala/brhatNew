@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+
+$black: #171717
+$white: #FFFFFF
+$white100: #ECECEC
+$grey600: #272727
+$grey500: #373737
+$grey400: #474747
+$grey300: #676767
+$grey200: #878787
+$grey100: #d7d7d7
+
+$green: #10D56C
+$brhat: #FE4A49
+$red: #B0413E
+$mustard: #e4a503
+$blue: #2F7796
+$bluedark: #004e89
+$teal: #0B6E4F
+$purple: #5A3261
+$yellow: #FF9F1C
+$orange: #F77F2F
+$mand: #538733
+
+//textstuff
+$l1: 3
+$l2: 2.6
+$l3: 2
+$l4: 1.4
+
+//units
+$min: 4px
+$half: 8px
+$half-alt: 12px
+$std: 16px
+$std-alt: 24px
+$double: 32px
+$double-alt: 48px
+$quad: 64px
+$penta: 128px
+
+body, html
+	margin: 0
+	box-sizing: border-box
+	padding: 0
+	font-family: 'Barlow', sans-serif
+	overscroll-behavior-y: none
+
+html.lenis-stopped
+	overflow: hidden
+
+div, button
+	box-sizing: border-box
+	font-family: 'Barlow', sans-serif
+
+form, input, textarea, select, option, li, pre
+	font-family: 'Barlow', sans-serif
+	box-sizing: border-box
+	margin: 0
+
+a
+	text-decoration: none
+	color: inherit
+
+:root
+	box-sizing: border-box
+	font-family: 'Barlow', sans-serif
+	--blue: #288AB4
+	--bluedark: #0c7cd7
+
+p, small, cite, h6, h5, h4, h3, h2, h1, button
+	font-family: 'Barlow', sans-serif
+
+.bdr
+	border: 1px solid red
+
+pre
+	overflow-x: auto
+	box-sizing: border-box
+	white-space: pre-line
+	white-space: -moz-pre-line
+	white-space: -pre-line
+	white-space: -o-pre-line
+	word-wrap: break-word
+	word-break: break-word
+
+.dark
+	--primary: #FFFFFF
+	--primaryalt: #676767
+	--backgroundcolor: #171717
+	--bordercolor: #272727
+	background: $black
+	color: #676767
+
+.light
+	--primary: #474747
+	--primaryalt: #b7b7b7
+	--backgroundcolor: #FFFFFF
+	--bordercolor: #E7E7E7
+	background: $white
+	color: $grey600
+
+.icon-standard
+	&:hover
+		path
+			fill: var(--primary)
+
+.rta-column
+	display: flex
+	flex-direction: column
+
+.rta-in-col
+	display: flex
+	flex-direction: column
+
+.rta-image
+	img
+		object-fit: cover
+		width: 100%
+		height: 100%
+
+.left
+	align-items: flex-start
+
+.right
+	align-items: flex-end
+
+.rta-row
+	display: flex
+	flex-direction: row
+	@media screen and (min-width: 1024px)
+		.w32
+			width: 32%
+		.w64
+			width: 64%
+	@media screen and (max-width: 1023px)
+		.w32
+			width: 32%
+		.w64
+			width: 64%	
+
+.rta-row.row-col
+	@media screen and (max-width: 1023px)
+		flex-direction: column
+
+.row-between
+	justify-content: space-between
+
+.row-center
+	justify-content: center
+
+.row-center-m
+	@media screen and (max-width: 1023px)
+		justify-content: center
+
+.col-y-top
+	justify-content: flex-start
+
+.col-y-cent
+	justify-content: center
+
+.col-y-end
+	justify-content: flex-end
+
+.col-y-between
+	justify-content: space-between
+
+.row-right
+	justify-content: flex-end
+
+.rta-card
+	padding: 16px
+	h5
+		font-weight: 700
+		color: var(--primary)
+	@media screen and (min-width: 1024px)
+		padding: 24px
+
+.light
+	.small-card
+		padding: 8px
+		border: 1px solid var(--bordercolor)
+		border-radius: 4px
+		transition: all 0.08s cubic-bezier(0.795, 1.270, 0.590, 0.945)
+		&:hover
+			background: linear-gradient(135deg, #fff8ee 0%,#fffaef 100%)
+			box-shadow: 4px 6px 8px #e1e1e1
+			border: 1px solid transparent
+
+.dark
+	.small-card
+		padding: 8px
+		background: #171717
+		border: 1px solid var(--bordercolor)
+		border-radius: 4px
+		transition: all 0.08s cubic-bezier(0.795, 1.270, 0.590, 0.945)
+		&:hover
+			background-color: hsla(0,0%,3%,1)
+			background-image: radial-gradient(at 78% 100%, hsla(0,70%,36%,1) 0px, transparent 50%), radial-gradient(at 0% 0%, hsla(25,74%,27%,1) 0px, transparent 50%)
+			box-shadow: 4px 6px 8px #121212
+			border: 1px solid transparent
+
+.row-y-cent
+	align-items: center
+
+.ta-l
+	text-align: left
+
+.ta-r
+	text-align: right
+
+.ta-c
+	text-align: center
+
+.tt-c
+	text-transform: capitalize
+
+.tt-u
+	text-transform: uppercase
+
+.rta-grid
+	display: grid
+	grid-auto-flow: row
+	grid-template-rows: auto
+
+.grid2
+	@media screen and (min-width: 900px)
+		grid-template-columns: 1fr 1fr
+		grid-template-areas: ". ."
+
+.grid2.left
+	@media screen and (min-width: 900px)
+		grid-template-columns: 18% 1fr
+		grid-template-areas: ". ."
+
+.grid2.left.thirty
+	@media screen and (min-width: 1024px)
+		grid-template-columns: 40% 1fr
+		grid-template-areas: ". ."
+	@media screen and (max-width: 1023px)
+		grid-template-columns: 1fr
+		grid-template-areas: "on-top" "on-bottom"
+		.on-top
+			grid-area: on-top
+		.on-bottom
+			grid-area: on-bottom
+
+.grid2.right.thirty
+	@media screen and (min-width: 1024px)
+		grid-template-columns: 1fr 40%
+		grid-template-areas: ". ."
+	@media screen and (max-width: 1023px)
+		grid-template-columns: 1fr
+		grid-template-areas: "on-top" "on-bottom"
+		.on-top
+			grid-area: on-top
+		.on-bottom
+			grid-area: on-bottom
+
+.grid3
+	@media screen and (min-width: 1024px)
+		grid-template-columns: 1fr 1fr 1fr
+		grid-template-areas: ". . ."
+
+.grid4
+	@media screen and (min-width: 1024px)
+		grid-template-columns: 1fr 1fr 1fr 1fr
+		grid-template-areas: ". . . ."
+
+.grid8
+	@media screen and (min-width: 1024px)
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+		grid-template-areas: ". . . . . . . ."
+
+.grid8.mobile4
+	@media screen and (max-width: 1023px)
+		grid-template-columns: 1fr 1fr 1fr 1fr
+		grid-template-areas: ". . . ."
+
+.blank-button
+	background: none
+	border: none
+	padding: 0
+	cursor: pointer
+	color: var(--primary)
+
+.full-h
+	height: 100%
+
+.minH
+	min-height: 100vh
+
+.fixH
+	height: 100vh
+
+.rowgap-4
+	row-gap: $min
+.rowgap-8
+	row-gap: $half
+.rowgap-16
+	@media screen and (min-width: 1024px)
+		row-gap: $std
+	@media screen and (max-width: 1023px)
+		row-gap: $half-alt
+.rowgap-24
+	row-gap: $std-alt
+.rowgap-32
+	@media screen and (min-width: 1024px)
+		row-gap: $double
+	@media screen and (max-width: 1023px)
+		row-gap: $std-alt
+.rowgap-64
+	@media screen and (min-width: 1024px)
+		row-gap: $quad
+	@media screen and (max-width: 1023px)
+		row-gap: $std
+.colgap-8
+	column-gap: $half
+.colgap-16
+	column-gap: $std
+.colgap-24
+	column-gap: $std-alt
+.colgap-32
+	@media screen and (min-width: 1024px)
+		column-gap: $double
+	@media screen and (max-width: 1023px)
+		column-gap: $std
+.colgap-64
+	@media screen and (min-width: 1024px)
+		column-gap: $quad
+
+.bord-bot
+	border-bottom: 1px solid var(--bordercolor)
+
+.bord-top
+	border-top: 1px solid var(--bordercolor)
+
+.bord-right
+	border-right: 1px solid var(--bordercolor)
+
+.bord-left
+	border-left: 1px solid var(--bordercolor)
+
+.bord-all
+	border: 1px solid var(--bordercolor)
+
+.all-p-16
+	padding: 2vw
+
+.all-p-32
+	padding: 4vw
+
+.top-p-8
+	padding-top: 8px
+
+.top-p-16
+	padding-top: 16px
+
+.top-p-32
+	padding-top: 32px
+
+.top-p-64
+	padding-top: 64px
+
+.bot-p-8
+	padding-bottom: 8px
+
+.bot-p-16
+	padding-bottom: 16px
+
+.bot-p-24
+	padding-bottom: 24px
+
+.bot-p-32
+	padding-bottom: 32px
+
+.bot-p-64
+	padding-bottom: 64px
+
+.top-m-24
+	margin-top: 24px
+
+.top-m-32
+	margin-top: 32px
+
+.height-30
+	@media screen and (min-width: 1024px)
+		height: 30vh
+
+.height-40
+	@media screen and (min-width: 1024px)
+		height: 40vh
+
+.themer
+	cite
+		font-size: 0.9vw
+		font-style: normal
+		font-weight: 400
+	p, pre, li
+		font-size: 1vw
+		margin: 0 0 24px 0
+	p.non, pre.non, li.non, h6.non, h5.non, h4.non, h3.non, h2.non, h1.non
+		margin: 0
+	h6
+		font-size: 1.24vw
+		margin: 0 0 24px 0
+	h6.typett2
+		font-weight: 300
+	pre.h6
+		font-size: 1.24vw
+	h5
+		font-size: 1.6vw
+		margin: 0 0 24px 0
+		font-weight: 300
+	.rta-card
+		h5
+			font-weight: 700
+			font-size: 1.8vw
+	pre.h5
+		font-size: 1.6vw	
+		font-weight: 300
+	h4
+		font-size: 2.4vw
+		margin: 0 0 24px 0
+	h3
+		font-size: 4vw
+		margin: 0 0 24px 0
+	h2
+		font-size: 5.65vw
+		margin: 0 0 24px 0
+	h1
+		font-size: 6vw
+		margin: 0 0 24px 0
+	.insidelink
+		font-size: 21px
+		text-transform: capitalize
+		&:hover
+			color: white
+	@media screen and (min-width: 787px) and (max-width: 1023px)
+		cite
+			font-size: 12px
+		p, pre, li
+			font-size: 1vw*$l3
+		h6
+			font-size: 1.414vw*$l4
+		h5
+			font-size: 2vw*$l4
+		h4
+			font-size: 2.8vw*$l4
+		h3
+			font-size: 4vw
+		h2
+			font-size: 5.65vw
+		h1
+			font-size: 8vw
+	@media screen and (min-width: 576px) and (max-width: 786px)
+		cite
+			font-size: 12px
+		p, pre, li
+			font-size: 1vw*$l2
+		h6
+			font-size: 1.414vw*$l3
+		h5
+			font-size: 2vw*$l3
+		h4
+			font-size: 2.8vw*$l3
+		h3
+			font-size: 4vw*$l3
+		h2
+			font-size: 5.65vw*$l3
+		h1
+			font-size: 8vw*1.75	
+	@media screen and (max-width: 575px)
+		cite
+			font-size: 12px
+		p, pre, li
+			font-size: 1vw*3.6
+		h6
+			font-size: 1.414vw*$l1
+		pre.h6
+			font-size: 1.414vw*$l1
+		h5
+			font-size: 2vw*$l2
+		pre.h5
+			font-size: 2vw*$l2
+		h4
+			font-size: 3.2vw*$l2	
+		h3
+			font-size: 4vw*$l3
+		h2
+			font-size: 5.4vw*$l4
+		h1
+			font-size: 8vw*$l4
+
+
+.tooltip-item p
+	margin: 0
+	font-size: 12px
+
+.light
+	.tooltip-item p
+		color: white
+
+
+.arrowpart.bottom
+	bottom: -16px
+	right: auto
+	margin-left: auto
+	margin-right: auto
+
+.alt-pads
+	padding-left: 6vw
+	padding-right: 6vw
+
+.accordion-item
+	.rta-row
+		cursor: pointer
+		.rta-in-col
+			transition: 0.2s ease
+	.rta-row.opened
+		.rta-in-col
+			transform: rotate(180deg)
+
+

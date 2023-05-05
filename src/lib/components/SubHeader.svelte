@@ -3,10 +3,14 @@
 	import { onMount } from 'svelte'
 	import { draw } from 'svelte/transition'
 	import { quintOut } from 'svelte/easing'
+	import visibilityMode from '$lib/stores/visibility'
+	import { browser } from '$app/environment'
 	import { fly } from 'svelte/transition'
 	import tippy, {animateFill} from 'tippy.js'
 	import 'tippy.js/dist/tippy.css'
 	import 'tippy.js/animations/shift-away.css'
+	import CompToggle from '$lib/ridunits/CompToggle.svelte'
+	import CompSearch from '$lib/ridunits/CompSearch.svelte'
 	import AutoFill from '$lib/components/AutoFill.svelte'
 	import AboutLinks from '$lib/links/AboutLinks.svelte'
 	import AnveshiLinks from '$lib/links/AnveshiLinks.svelte'
@@ -25,6 +29,16 @@
 	let iW:number
 	let breakPoint:boolean
 	let fake = false
+
+	function toggleVisibility() {
+	  if (browser) {
+	    visibilityMode.update((mode) => {
+	      const newMode = !mode;
+	      localStorage.setItem('visibilityMode', JSON.stringify(newMode));
+	      return newMode;
+	    });
+	  }
+	}
 
 	function toggleCircle(){
 		circleIt = !circleIt
@@ -93,7 +107,7 @@
 
 <svelte:window bind:scrollY={y} bind:innerHeight={height} bind:innerWidth={iW}/>
 
-<div class="appheader" class:onsidebar={sidebar} class:hiddenHeader={isInvisible}>
+<div class="appheader" class:onsidebar={sidebar} class:hiddenHeader={isInvisible} class:light={$visibilityMode} class:dark={!$visibilityMode}>
 	<a class="applogo" href="/" data-sveltekit-reload>
 		<div class="logomotif">
 			<svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -197,10 +211,10 @@
 		<slot name="local"></slot>
 	</div>
 	<div class="autofill">
-		<AutoFill></AutoFill>
+
 	</div>
-	<div class="search" id="single">
-		<slot name="modeswitch"></slot>
+	<div class="search" id="single" on:click={toggleVisibility} on:keydown={fauxfake}>
+		<CompToggle></CompToggle>
 	</div>
 	<div class="menuicon" on:click={toggleSidebar} on:keydown={handleKeyDownEvent} on:mouseenter={toggleCircle} on:mouseleave={toggleCircle}>
 		Our Cosmos
@@ -216,60 +230,64 @@
 		</div>
 	</div>
 </div>
+
 {#if sidebar}
-	<div class="appsidebar" in:fly={{ duration: 500, x: 400, y: 0}} out:fly={{ duration: 500, x: 400, y: 0}} data-lenis-prevent on:mouseleave={closeSidebar}>
-		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
+	<div class="appsidebar" in:fly={{ duration: 500, x: 400, y: 0}} out:fly={{ duration: 500, x: 400, y: 0}} data-lenis-prevent on:mouseleave={closeSidebar} class:light={$visibilityMode} class:dark={!$visibilityMode}>
+		<div class="linksbox right">
+			<CompSearch></CompSearch>
+		</div>
+		<div class="linksbox ta-r" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
 				<h5><a href="/drashta">Bṛhat Draṣṭā</a></h5>
 				<DrashtaLinks flytime={sidebar}/>
 			{/if}
 		</div>
-		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
+		<div class="linksbox ta-r" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
 				<h5><a href="/anveshi">Bṛhat Anveṡī</a></h5>
 				<AnveshiLinks flytime={sidebar}/>
 			{/if}
 		</div>
-		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
+		<div class="linksbox ta-r" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
 				<h5><a href="/mrdanga">Bṛhad Mṛdaṅga</a></h5>
 			{/if}
 		</div>
-		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
+		<div class="linksbox ta-r" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
 				<h5><a href="/dhiti">Dhīti</a></h5>
 			{/if}
 		</div>
-		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
+		<div class="linksbox ta-r" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
 				<h5><a href="/openlibrary">Bṛhat Open Library</a></h5>
 			{/if}
 		</div>
-		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
+		<div class="linksbox ta-r" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
 				<h5><a href="/mandala">Fractal Maṇḍala</a></h5>
 				<MandalaLinks flytime={sidebar}/>
 			{/if}
 		</div>
-		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
+		<div class="linksbox ta-r" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
 				<h5><a href="/aryavarta">Scrolls of Āryavarta</a></h5>
 				<AryavartaLinks flytime={sidebar}/>
 			{/if}
 		</div>
-		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
+		<div class="linksbox ta-r" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
 				<h5><a href="/rta">Ṛta in Design</a></h5>
 				<RtaLinks flytime={sidebar}/>
 			{/if}
 		</div>
-		<div class="linksbox type" on:click={closeSidebar} on:keydown={fauxfake}>
+		<div class="linksbox ta-r" on:click={closeSidebar} on:keydown={fauxfake}>
 			{#if sidebar}
 				<h5 in:fly={{ delay: 500, duration: 100, x: 128, y: 0}} out:fly={{ delay: 0, duration: 100, x: 128, y: 0}}><a href="/about">About</a></h5>
 				<AboutLinks flytime={sidebar}/>
 			{/if}
 		</div>
-		<div class="linksbox type">
+		<div class="linksbox ta-r">
 			{#if sidebar}
 				<h5 in:fly={{ delay: 500, duration: 100, x: 128, y: 0}} out:fly={{ delay: 0, duration: 100, x: 128, y: 0}}>Site Tour</h5>
 			{/if}
@@ -300,14 +318,19 @@
 	flex-direction: column
 	padding: 16px
 	position: relative
+	border-bottom: 1px solid #272727
 	h5, h5 a
+		margin: 0
 		text-align: right
 		text-transform: uppercase
-		font-weight: 600
-		font-size: 24px
+		font-weight: 700
+		font-size: 27px
 		padding-bottom: 8px
 		cursor: pointer
+		color: white
 	&:hover
+		h5, h5 a
+			color: #fe4a49
 		&::after
 			animation: lineforward 0.32s var(--cubeb) forwards
 	&::after
@@ -335,7 +358,6 @@
 	width: 100vw
 	overflow-x: hidden
 	width: 400px
-	background: var(--beau)
 	z-index: 999
 	position: fixed
 	overflow-y: scroll
@@ -343,6 +365,12 @@
 		width: 100vw
 		z-index: 899
 		padding-top: 88px
+
+.appsidebar.dark
+	background: #171717
+
+.appsidebar.light
+	background: white
 
 .appsidebar::-webkit-scrollbar
 	width: 2px
@@ -362,14 +390,13 @@
 .appheader
 	display: grid
 	grid-auto-flow: row
-	background: var(--beau)
 	position: fixed
 	z-index: 1000
 	width: 100vw
 	top: 0
 	transition: 0.5s ease
 	@media screen and (min-width: 900px)
-		grid-template-columns: 190px 1fr 200px 56px 160px
+		grid-template-columns: 190px 1fr 200px 56px 144px
 		grid-template-rows: 1fr
 		grid-template-areas: "applogo midrow autofill search menuicon"
 		height: 72px
@@ -399,6 +426,9 @@
 			display: none
 		.autofill
 			display: none
+
+.appheader.light
+	background: #212121
 
 .appheader.hiddenHeader
 	transform: translateY(-72px)
@@ -440,7 +470,7 @@
 	flex-direction: row
 	align-items: center
 	justify-content: flex-end
-	width: 160px
+	width: 144px
 	color: white
 	text-transform: uppercase
 	cursor: pointer
