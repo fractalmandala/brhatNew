@@ -5,11 +5,14 @@
 	import { browser } from '$app/environment'
 	import { goto } from '$app/navigation'
 	import visibilityMode from '$lib/stores/visibility'
+	import WindowBinder from '$lib/components/WindowBinder.svelte'
+	import { innerWidth, outerHeight, scrollY } from '$lib/stores/windows'
 	import siteTour from '$lib/stores/sitetour'
 	import { scale } from 'svelte/transition'
 	import { expoOut } from 'svelte/easing'
 	import Lenis from '@studio-freight/lenis'
-	import '$lib/styles/rid.sass'
+	import '$lib/styles/types.sass'
+	import '$lib/styles/tokens.sass'
 	import Footer from '$lib/components/Footer.svelte'
 	import AllBrands from '$lib/components/AllBrands.svelte'
 	import { lenisStore as lenis, setLenisStore } from '$lib/stores/lenis'
@@ -17,8 +20,8 @@
 	import { useFrame } from '$lib/utils/lenisframe'
 	import { raf } from '$lib/stores/tempus'
 
-	let innerW:number
 	let breakPointOn:boolean
+	let innerW:number
 	let showFooter = true
 	let link:any
 	let firstVisit = false
@@ -114,9 +117,8 @@
 </svelte:head>
 
 <div id="appbox" class="themer" class:light={$visibilityMode} class:dark={!$visibilityMode}>
-
+	<WindowBinder/>
 	<slot></slot>
-
 	{#if showFooter}
 	<Footer></Footer>
 	{/if}

@@ -75,7 +75,7 @@ button.learn-more .button-text {
  bottom: 0;
  color: #FFFFFF;
  font-weight: 700;
- line-height: 2;
+ line-height: 2.25;
  text-align: center;
  text-transform: uppercase;
  opacity: 0

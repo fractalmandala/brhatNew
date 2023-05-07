@@ -6,11 +6,12 @@
 
 svg
 	object-fit: contain
-	width: 100%
 	cursor: pointer
+	width: 24px
+	height: 24px
 	path
-		fill: #878787
-		transition: var(--snap)
+		fill: #b7b7b7
+		transition: 0.08s
 	&:hover
 		path
 			fill: white

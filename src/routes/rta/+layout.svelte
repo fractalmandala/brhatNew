@@ -36,15 +36,14 @@
 	<HeadComponent>
 		Ṛta in Design at
 	</HeadComponent>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Varta:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </svelte:head>
 
 <Header sidebar={sidebar}>
-	<div class="rta-row colgap-8" slot="modeswitch" on:click={toggleVisibility} on:keydown={fauxfake}>
-		<div class="togglemode" class:dark={!$visibilityMode} class:general={$visibilityMode}>
-			<div class="togglemodeball"></div>
-		</div>	
-	</div>
 </Header>
-<div class="type" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+
+<div class="pagethemer" class:light={$visibilityMode} class:dark={!$visibilityMode}>
 	<slot></slot>
 </div>

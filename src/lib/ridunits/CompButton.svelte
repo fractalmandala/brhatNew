@@ -23,7 +23,7 @@
 	overflow: hidden
 	position: relative
 	text-transform: capitalize
-	background: linear-gradient(135deg, #EED16C 0%, #E36464 100%)
+	background: #fe4a49
 	font-size: 14px
 	&:hover
 		transform: scale(0.96)

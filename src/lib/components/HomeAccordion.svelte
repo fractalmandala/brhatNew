@@ -36,10 +36,11 @@
 	position: absolute
 	bottom: 64px
 	left: 32px
+	transition: 0.08s
 
 .accordion .panel
 	&:hover
-		button.accordionbutton
+		.blank-button
 			background: #fe4a49
 			transform: scale(1.2) translateY(-32px)
 			&:hover
@@ -60,7 +61,7 @@
 .panel
 	display: flex
 	flex-direction: column
-	transition: all 0.32s ease
+	transition: all 1.5s ease
 	position: relative
 	@media screen and (min-width: 1024px)
 		height: 100%
@@ -89,7 +90,7 @@
 
 .panel img
 	filter: saturate(0.1)
-	transition: all 0.32s ease
+	transition: all 0.72s ease
 	&:hover
 		filter: saturate(1)
 

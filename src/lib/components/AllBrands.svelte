@@ -395,20 +395,6 @@ function toggleBrands(){
 	color: white;
 }
 
-.ofmrd {
-	width: 360px;
-	height: 480px;
-	background: rgba(0,0,0,0.7);
-	border: 1px solid #676767;
-	backdrop-filter: blur(8px);
-	border-radius: 4px;
-	z-index: 700;
-	position: fixed;
-	top: 20%;
-	left: 20%;
-}
-
-
 .biggie { background: linear-gradient(132.9deg, rgba(23,23,23,1) 10.69%, rgba(24, 28, 30, 1) 84.91%);}
 .boxer { position: relative; overflow: hidden; transition: all 0.8s var(--cubea) 0.2s; box-shadow: 4px 6px 6px #111111, -2px -4px 6px #171717; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; }
 .boxer span { position: absolute; top: 0; left: 0;}

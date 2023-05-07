@@ -1,72 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Martel:wght@200;300;400;600;700;800;900&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Varta:wght@300;400;500;600;700&display=swap')
 
-$md: 3
-$l2: 2.6
-$l3: 2
-$l4: 1.4
-$mainfont: 'Spline Sans', sans-serif
+@font-face
+	font-family: 'VartaBold'
+	src: url('/fonts/Varta-VariableFont_wght.ttf') format('ttf')
+	font-weight: 300
 
-p, small, cite, caption, h6, h5, h4, h3, h2, h1, pre
-	margin: 0
+$home: 'Varta', sans-serif
+$hind: 'Martel', serif
+$stix: 'STIX Two Text', serif
+$libre: 'Libre Franklin', sans-serif
 
-p.white
-	color: white
-
-.serif
-	font-family: 'STIX Two Text', serif
-
-.tt-uc
-	text-transform: uppercase
-
-.tt-c
-	text-transform: capitalize
-
-.ta-l
-	text-align: left
-
-.ta-r
-	@media screen and (min-width: 1024px)
-		text-align: right
-
-.ta-c
-	text-align: center
-
-.ta-c-mob
-	@media screen and (max-width: 1023px)
-		text-align: center
-
-.expandmenu
-	color: white
-	text-transform: uppercase
-	font-weight: 600
-	font-size: 18px
-
-p.capitalize
-	text-transform: capitalize
-
-.type.linksbox
-	h5
-		color: white
-		font-size: 18px
-	&:hover
-		h5
-			color: #fe4a49
-
-.type.linksbox
-	.insidelink
-		color: #474747
-		text-align: right
-		padding: 3px 0
-		font-size: 18px
-		text-transform: capitalize
-
-.type.linksbox
-	&:hover
-		.insidelink
-			&:hover
-				color: white
+body, html, li, pre
+	font-family: $home
 
 pre
-	overflow-x: auto
 	box-sizing: border-box
 	white-space: pre-line
 	white-space: -moz-pre-line
@@ -74,547 +22,170 @@ pre
 	white-space: -o-pre-line
 	word-wrap: break-word
 	word-break: break-word
+	overflow: hidden
 
-small
-	font-size: 12px
+img
+	object-fit: cover
+	width: 100%
+	height: 100%
+	max-width: 100vw
 
-.boxmidrow
-	a, p
-		color: #676767
-		font-size: 14px
-		text-transform: uppercase
-		transition: all 0.08s ease
-		cursor: pointer
-		&:hover
-			color: #fe4a49
+.rta-image
+	img
+		object-fit: cover
+		width: 100%
+		height: 100%
 
-.boxmidrow
-	.dropperp
-		color: #676767
-		font-size: 14px
-		text-transform: uppercase
-		transition: all 0.08s ease
-		cursor: pointer
-		&:hover
-			color: #fe4a49
+a
+	text-decoration: none
+	color: inherit
+	&:hover
+		color: inherit
 
-.type
-	.mainside h5
-		font-family: 'Inknut Antiqua', serif
+h1, h2, h3, h4, h5, h6
+	font-family: 'VartaBold', sans-serif
 
-.boxmidrow
-	p
-		margin: 0
-		padding: 0
-		line-height: 1.8
+p, pre, li, input
+	font-weight: 400
+	font-size: 1rem
 
-.midrow
-	p
-		margin: 0
-		padding: 0
-		line-height: 1.8
+pre
+	line-height: 1.2
 
-.dropperp
-	height: max-content
+em
+	font-style: normal
+	font-size: 1.28rem
 
-.spacer
-	a
-		text-transform: capitalize
-
-.onpagelinks
-	h4
-		text-transform: uppercase
-		padding: 10px 0 8px 0
-		line-height: 1.5
-
-.type
-	.card-b
-		small
-			text-transform: uppercase
-			font-weight: bold
-			font-size: 10px
-		p, li
-			line-height: 1.2
-
-.type
-	.card-video
-		small
-			font-size: 14px
-			color: #878787
-
-.type
-	.card-a
-		small
-			text-transform: uppercase
-			font-weight: bold
-			font-size: 10px
-		p, li
-			line-height: 1.2
-
-.type
-	.card-c
-		small
-			text-transform: uppercase
-			font-weight: bold
-			font-size: 10px
-		p, li
-			line-height: 1.2
-
-.type
-	.card-nix
-		p, li
-			line-height: 1.2
-		
 cite
-	font-size: 10px
-	text-transform: capitalize
+	font-size: 0.75rem
 	font-weight: 500
 
-caption
-	font-size: 12px
-
-.type p, .type li, .type pre, .type small, .type cite, .type caption, .type h6, .type h5, .type h4, .type h3, .type h2, .type h1
-	font-family: $mainfont
-
-.dhiti	h4, .dhiti h6, .dhiti h3, .dhiti h2
-	font-family: $mainfont
-
-.maincol, .maincol p, .maincol li
-	font-family: 'STIX Two Text', serif
-	color: #272727
-
-.type.light
-	.aryatext p
-		font-family: $mainfont
-		color: #272727
-
-.type.dark
-	.aryatext p
-		font-family: $mainfont
-		color: #575757
-
-.type
-	.maincol
-		blockquote p
-			border-left: 4px solid #fe4a49
-			padding-left: 24px
-			font-style: italic
-			color: #686867 !important
-			font-size: 18px !important
-			line-height: 1.2
-
-.type
-	.maincol.dhitiblogbox
-		a
-			color: #fe4a49
-
-.type.mandalatext
-	.mainbar p, .mainbar li
-		font-size: 17px
-		margin-bottom: 24px
-		line-height: 1.7
-	.mainbar h5
-		padding-left: 16px
-		line-height: 1.12
-		margin-bottom: 24px
-	.mainbar h6
-		line-height: 1.12
-		margin-bottom: 24px
-		font-size: 2vw
-		font-weight: 500
-		font-style: italic	
-	.mainbar h4
-		margin: 64px 0 24px 0
-		border-top: 2px solid #10D56C
-		padding-top: 24px
-	.mainbar a
-		color: #10D56C
-		&:hover
-			text-decoration: underline
-
-
-.type.brhattext
-	.mainbar p, .mainbar li
-		font-size: 17px
-		color: #171717
-		margin-bottom: 24px
-	.mainbar h5
-		line-height: 1.12
-		font-weight: 600
-		margin-bottom: 24px
-		font-size: 25px
-	.mainbar h4
-		margin: 64px 0 24px 0
-		font-size: 32px
-	.mainbar h3
-		margin: 64px 0 24px 0
-		font-size: 20px
-		font-style: italic
-		font-weight: 400
-	.mainbar blockquote
-		font-style: italic
-		border-left: 4px solid #fe4a49
-		padding-left: 16px
-		margin-left: 0
-	cite
-		font-style: normal
-		text-transform: uppercase
-		color: #b7b7b7
-	.mainbar h6
-		font-family: 'Vesper Libre', serif
-		font-size: 25px
-		font-weight: 700
-		margin-bottom: 24px
-	@media screen and (max-width: 1023px)
-		.mainbar h4
-			font-size: 24px
-		.mainbar h5
-			font-size: 20px
-		.mainbar h6
-			font-size: 20px
-		.mainbar h3
-			margin-bottom: 8px
-			margin-top: 24px
-		.mainbar blockquote
-			margin-bottom: 0
-			padding-bottom: 0
-			p
-				margin-bottom: 0
-				padding-bottom: 0
-
-
-.type
-	.aryatext blockquote
-		font-style: italic
-		cite
-			font-style: normal
-			text-transform: uppercase
-			color: #b7b7b7
-
-.type
-	.aryatext
+.light
+	.sticker-black
+		background: rgba(0,0,0,0.8)
+		color: white
+		padding: 8px 8px 4px 8px
+		border-radius: 16px
+		text-transform: capitalize
 		@media screen and (min-width: 1024px)
-			p
-				font-size: 20px
-				line-height: 1.5
-				margin-bottom: 20px
-			blockquote
-				width: 80%
-				margin-left: 80px
-				padding-bottom: 32px
-				margin-bottom: 64px
+			width: max-content
 		@media screen and (max-width: 1023px)
-			p
-				font-size: 18px
-				line-height: 1.5
-				margin-bottom: 20px
-			blockquote
-				margin-left: 32px
-				padding-bottom: 32px
-				margin-bottom: 32px
-				margin-right: 0
-			blockquote p
-				font-size: 14px
+			width: 100%
 
-.type
-	.maincol
+.dark
+	.sticker-black
+		background: #FFFFFF
+		color: #474747
+		padding: 8px 8px 4px 8px
+		border-radius: 16px
+		text-transform: capitalize
 		@media screen and (min-width: 1024px)
-			p
-				font-size: 20px
-				color: #272727
-				margin-bottom: 24px
-			h5
-				font-size: 27px
-				margin-bottom: 24px
-				padding-top: 16px
-				position: relative
-				font-weight: 600
-				color: #474747
-				&::after
-					position: absolute
-					top: 0
-					left: 0
-					content: ''
-					height: 4px
-					width: 16%
-					background: #fe4a49
-			h4
-				margin: 64px 0 24px 0
+			width: max-content
 		@media screen and (max-width: 1023px)
-			padding-bottom: 64px
-			p
-				font-size: 18px
-				color: #272727
-				margin-bottom: 20px
-			h5
-				font-size: 22px
-				font-weight: 600
-				margin-bottom: 20px
-				position: relative
-				padding-top: 16px
-				&::after
-					relative: absolute
-					top: 0
-					left: 0
-					content: ''
-					height: 2px
-					width: 16%
-					background: #fe4a49
-			h4
-				margin: 48px 0 24px 0
-				font-size: 36px
+			width: 100%
 
-.type h1, .type h2
-	line-height: 1.1
+small
+	text-transform: uppercase
+	font-size: 0.75rem
 
-.type h4, .type h3
+p, h1, h2, h3, h4, h5, h6, blockquote
+	margin-bottom: 0
+	margin-top: 0
+
+p.linecut
 	line-height: 1.12
 
-.dhiti h3
-	line-height: 1.1
+li
+	margin-bottom: 8px
 
-.type
-	h1
-		font-weight: 600
-		padding-bottom: 2px
+blockquote
+	font-style: italic
+
+h6
+	font-size: 1.2rem
+
+pre.h5
+	font-size: 1.2rem
+
+h5
+	font-size: 1.44rem
+	font-weight: 300
+
+h4
+	font-size: 2.16rem
+
+h3
+	font-size: 3.6rem
+	letter-spacing: -1px
+
+h2
+	font-size: 4.8rem
+	letter-spacing: -1px
+
+h1
+	font-size: 6rem
+	letter-spacing: -1px
+
+@media screen and (max-width: 575px)
 	h4
-		line-height: 1.24
-	h4, h3, h2
-		font-weight: 600
-	h4.mrd, h3.mrd, h2.mrd
-		color: var(--news)
-	h5
-		font-weight: 300
-		letter-spacing: -0.4px
-		line-height: 1.4
-	h5.heading
-		font-weight: 600
-		text-transform: capitalize
-	.mainside h5
-		font-weight: 800
+		font-size: 2rem
+	h3
+		font-size: 2.8rem
+	h2
+		font-size: 3.4rem
+	h1
+		font-size: 4rem
+
+@media screen and (max-width: 1023px) and (min-width: 576px)
+	h4
+		font-size: 2.4rem
+	h3
+		font-size: 3rem
+	h2
+		font-size: 3.6rem
+	h1
+		font-size: 4.4rem
+
+.boxmidrow
+	a
+		font-size: 16px
+		color: #676767
+
+.dropper
+	font-size: 16px
+	color: #676767
+
+.in-blog
 	h6
-		font-weight: 600
-		line-height: 1.125
-	.dhitipageauthorposts h6
+		font-family: $hind
+		font-size: 1.6rem
+		font-weight: 900
+		margin-top: 1.5rem
+		padding-top: 2rem
+		margin-bottom: 1rem
+		border-top: 1px solid var(--borderline)
+	p, li
+		margin-bottom: 1.5rem
+		font-size: 1.12rem
+	blockquote p
+		margin-bottom: 0
 		color: #272727
-	p, pre, li
-		line-height: 1.48
-	.a-title h3
-		text-transform: uppercase
-		font-weight: 600
-	.a-title h4
-		text-transform: uppercase
-		font-weight: 600
+		border-left: 3px solid #fe4a49
+		padding-left: 1rem
+	blockquote
+		margin-bottom: 1.5rem
 	cite
 		font-style: normal
-		text-transform: uppercase
+	h4
+		margin-top: 3.2rem
+		margin-bottom: 1.5rem
+	h5
+		margin-bottom: 1.5rem
+		font-weight: bold
 	@media screen and (min-width: 1024px)
-		p, pre, li
-			font-size: 1vw
-		h6
-			font-size: 1.24vw
-		h5
-			font-size: 1.6vw
-		h4
-			font-size: 3vw
-			letter-spacing: -0.6px
-		h3
-			font-size: 4vw
-		h2
-			font-size: 5.65vw
-		h1
-			font-size: 8vw
-			letter-spacing: -2px
-	@media screen and (min-width: 787px) and (max-width: 1023px)
-		p, pre, li
-			font-size: 1vw*$l3
-		h6
-			font-size: 1.414vw*$l4
-		h5
-			font-size: 2vw*$l4
-		h4
-			font-size: 2.8vw*$l4
-		h3
-			font-size: 4vw
-		h2
-			font-size: 5.65vw
-		h1
-			font-size: 8vw
-			letter-spacing: -2px
-	@media screen and (min-width: 576px) and (max-width: 786px)
-		p, pre, li
-			font-size: 1vw*$l2
-		h6
-			font-size: 1.414vw*$l3
-		h5
-			font-size: 2vw*$l3
-		h4
-			font-size: 2.8vw*$l3
-		h3
-			font-size: 4vw*$l3
-		h2
-			font-size: 5.65vw*$l3
-		h1
-			font-size: 8vw*1.75
-			letter-spacing: -1px		
-	@media screen and (max-width: 575px)
-		p, pre, li
-			font-size: 1vw*3.6
-		h6
-			font-size: 1.414vw*3.2
-			font-weight: 600
-			letter-spacing: -0.1px
-		h5
-			font-size: 2vw*$l2
-		h4
-			font-size: 2.8vw*$l3
-		.onpagelinks h4
-			font-size: 2.8vw*$l3
-		.a-title.boxr h4
-			font-size: 2.8vw*$l3			
-		h3
-			font-size: 4vw*$l3
-		h2
-			font-size: 5.4vw*$l4
-		h1
-			font-size: 8vw*$l4
-			letter-spacing: -1px
-			font-weight: 600
-			line-height: 1
-		.captioned-text
-			h5
-				font-size: 3.6vw
-			p
-				font-size: 2.4vw
-
-.footermain
-	.mainlinks
-		color: white
-		font-weight: 400
-		font-size: 16px
-		margin-bottom: 8px
-		margin-top: 16px
-		@media screen and (max-width: 1023px)
-			font-size: 15px
-
-.spacer
-	a
-		color: #474747
-		margin: 0 0 4px 0
-		padding: 0
-		line-height: 1.3
-		transition: var(--snap)
-		&:hover
-			color: #fe4a49
-		@media screen and (max-width: 1023px)
-			font-size: 15px
-
-.dhiti
-	@media screen and (min-width: 1024px)
-		.card-row h6
-			padding-bottom: 8px
-		.maincol p
-			text-transform: none
-			color: #272727
-
-.sidebar .box
-	p
-		font-size: 18px
-		text-transform: uppercase
-		font-weight: 400
-		letter-spacing: -0.5px
-		color: #979797
-		transition: var(--snap)
-
-.whitecard
-	h6
-		font-size: 21px
-		margin-bottom: 8px
-	p
-		color: #878787
-
-.a-box.box
-	.boxr h6
-		font-size: 24px
-		@media screen and (max-width: 899px)
-			font-size: 18px
-			text-align: center
-
-.boxr.short
-	h6
-		@media screen and (max-width: 899px)
-			font-size: 18px
-
-.plain-one
-	.boxr h6
-		font-size: 24px
-		@media screen and (max-width: 899px)
-			font-size: 18px
-			text-align: center
-
-
-.teampage
-	.authormodal
-		.listing
-			h5
-				font-weight: 600
-				font-size: 18px
-				padding-bottom: 8px
-				padding-top: 8px
-				transition: 0.2s ease
-				text-align: right
-				&:hover
-					color: #fe4a49
-					padding-right: 16px
-
-.dhitipageauthorposts
-	display: flex
-	flex-direction: row
-	column-gap: 24px
-	h6
-		font-weight: 500
-		padding-bottom: 16px
-		color: #272727
-		font-size: 22px
-		letter-spacing: -1px
-
-.dropdown
+		blockquote
+			margin-left: 2.4rem
 	@media screen and (max-width: 1023px)
-		.spaced
-			h6
-				color: #878787
-				padding-top: 64px
-				margin-bottom: 32px
-		h5
-			font-weight: 600
-			color: #474747
-			padding: 8px 0
-			transition: 0.04s ease
-			cursor: pointer
-			&:hover
-				color: var(--thisdropdowntextcolor)
-	@media screen and (min-width: 1024px)
-		h5
-			font-weight: 500
-			color: #474747
-			padding: 8px 0
-			transition: 0.04s ease
-			cursor: pointer
-			&:hover
-				color: var(--thisdropdowntextcolor)
-
-.type.mandalatext
-	.x2
-		.mainbar
-			h5
-				border-left: 4px solid #10C56D
-		.mainbar.dark
-			p, pre, li
-				color: white
-			h5
-				color: #878787
-		.mainbar.light
-			p, pre, li
-				color: #272727
-			h5
-				color: #474747
+		blockquote
+			margin-left: 0
+			margin-right: 1rem

@@ -16,28 +16,30 @@
 	cursor: pointer
 	height: 20px
 	width: 48px
-	border: 1px solid var(--primaryalt)
 	border-radius: 10px
 	padding-top: 1px
 	padding-right: 2px
 	padding-left: 2px
 	transition: all 0.23s ease
-	&:hover
-		.slider
-			background: var(--primary)
 
 .switch.light
 	align-items: flex-end
+	border: 1px solid #474747
+	&:hover
+		border: 1px solid #fe4a49
 
 .switch.dark
 	align-items: flex-start
+	border: 1px solid #474747
+	&:hover
+		border: 1px solid #fe4a49
 
 .slider 
 	width: 16px
 	height: 16px
 	border-radius: 8px
 	transition: all 0.23s ease
-	background: var(--primaryalt)
+	background: white
 
 
 </style>

@@ -1,7 +1,7 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
-	import Modal from '$lib/components/Modal.svelte'
+	import visibilityMode from '$lib/stores/visibility'
 	import AboutLinks from '$lib/links/AboutLinks.svelte'
 	import AnveshiLinks from '$lib/links/AnveshiLinks.svelte'
 	import AryavartaLinks from '$lib/links/AryavartaLinks.svelte'
@@ -34,9 +34,9 @@
 </script>
 
 
-<div class="footer">
+<div class="footer back" class:light={$visibilityMode} class:dark={!$visibilityMode}>
 	<div class="footertop">
-		<div class="box" on:click={() => { window.scrollTo(0, 0)}} on:keydown={fauxfake}>
+		<div class="topbutton" on:click={() => { window.scrollTo(0, 0)}} on:keydown={fauxfake}>
 			<IconTop></IconTop>
 		</div>
 	</div>
@@ -45,7 +45,7 @@
 			<a class="logoimage" href="/">
 				<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/02brhatlogos/horizontal%20white-%20600.png" alt="logo of brhat"/>
 			</a>
-			<div class="boxr icons">
+			<div class="rta-row icons">
 				<a href="https://twitter.com/brhat_in" target="_blank" rel="noreferrer">
 					<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/twitter-red.png" alt="twitter"/>
 				</a>
@@ -60,13 +60,17 @@
 				</a>
 			</div>
 		</div>
-		<div class="spacer">
+		<div>
+			<div class="spacer">
 			<p class="mainlinks" on:click={toggleModal} on:keydown={fauxfake}>Contact Us</p>
 			<a class="mainlinks" href="/dhiti">Dhīti</a>
 			<a class="mainlinks" href="/openlibrary">Bṛhat Open Library</a>
 			<a class="mainlinks" href="/mrdanga">Bṛhad Mṛdaṅga</a>
+			</div>
+			<div class="spacer">
 			<a class="mainlinks" href="/about">About</a>
 			<AboutLinks flytime={active}></AboutLinks>
+			</div>
 		</div>
 		<div class="spacer">
 			<a class="mainlinks" href="/anveshi">Bṛhat Anveṣī</a>
@@ -93,11 +97,12 @@
 		<small><a href="/about/privacy" style="color: white">Privacy</a> | contact@brhat.in</small>
 	</div>
 </div>
-{#if isModal}
-<Modal modalOpen={isModal}></Modal>
-{/if}
+
 
 <style lang="sass">
+
+.topbutton
+	height: 24px
 
 .mainlinks
 	cursor: pointer
@@ -106,13 +111,14 @@
 	display: grid
 	grid-auto-flow: row
 	grid-template-columns: 1fr
-	background: var(--beau)
 	width: 100vw
 	position: sticky
 	top: 0
 	z-index: 999
 	grid-template-rows: auto 1fr auto
 	grid-template-areas: "footertop" "footermain" "footerbot"
+	background: url('/images/glassdark.png')
+	background-size: cover
 	.footertop
 		grid-area: footertop
 		height: 64px
@@ -121,15 +127,17 @@
 		height: 128px
 	.footermain
 		grid-area: footermain
-		border-top: 1px solid #272727
-		border-bottom: 1px solid #272727
+		border: 1px solid #373737
+		background: rgba(17,17,17,0.90)
+		backdrop-filter: blur(5px)
+		border-radius: 12px
 	@media screen and (min-width: 1024px)
 		min-height: 100vh
 		padding-left: 6vw
 		padding-right: 6vw
 	@media screen and (max-width: 1023px)
-		padding-left: 8vw
-		padding-right: 8vw
+		padding-left: 4vw
+		padding-right: 4vw
 
 .footermain
 	display: grid
@@ -138,8 +146,9 @@
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr
 		grid-template-rows: auto auto
 		grid-template-areas: "footerlogo . . . ."
-		padding-top: 32px
+		padding: 64px 32px
 		gap: 0 40px
+		align-items: start
 		.footerlogo
 			grid-area: footerlogo
 			margin-right: 64px
@@ -147,18 +156,22 @@
 		grid-template-columns: 1fr 1fr
 		grid-template-rows: auto
 		grid-template-areas: "footerlogo footerlogo" ". ." ". ." ". ."
-		padding-top: 32px
-		padding-bottom: 32px
+		padding: 24px
 		gap: 32px 48px
 		.footerlogo
 			grid-area: footerlogo
-			width: 50%
-			margin-bottom: 32px
+			width: 60%
+			row-gap: 0px
+
+.footerlogo
+	display: flex
+	flex-direction: column
 
 .icons
 	justify-content: space-between
 	align-items: center
 	margin-top: 16px
+	column-gap: 16px
 
 .logoimage img
 	object-fit: contain
@@ -181,14 +194,11 @@
 .spacer
 	display: flex
 	flex-direction: column
+	@media screen and (min-width: 1024px)
+		padding-bottom: 16px
 
 .creategap
 	height: 32px
-
-.footertop
-	.box
-		height: 24px
-		width: 24px
 
 .footertop
 	display: flex
@@ -204,5 +214,12 @@
 		margin: 0 0 4px 0
 		line-height: 1
 		color: #474747
+
+.mainlinks
+	color: white
+	font-weight: 700
+	margin-bottom: 8px
+	&:hover
+		color: #fe4a49
 
 </style>

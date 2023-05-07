@@ -210,9 +210,6 @@
 	<div class="midrow">
 		<slot name="local"></slot>
 	</div>
-	<div class="autofill">
-
-	</div>
 	<div class="search" id="single" on:click={toggleVisibility} on:keydown={fauxfake}>
 		<CompToggle></CompToggle>
 	</div>
@@ -233,7 +230,7 @@
 
 {#if sidebar}
 	<div class="appsidebar" in:fly={{ duration: 500, x: 400, y: 0}} out:fly={{ duration: 500, x: 400, y: 0}} data-lenis-prevent on:mouseleave={closeSidebar} class:light={$visibilityMode} class:dark={!$visibilityMode}>
-		<div class="linksbox right">
+		<div class="linksbox right" id="searcharea">
 			<CompSearch></CompSearch>
 		</div>
 		<div class="linksbox ta-r" on:click={closeSidebar} on:keydown={fauxfake}>
@@ -296,6 +293,9 @@
 {/if}
 
 <style lang="sass">
+
+.ta-r
+	text-align: right
 
 #menumainx
 	height: 24px
@@ -370,7 +370,7 @@
 	background: #171717
 
 .appsidebar.light
-	background: white
+	background: #171717
 
 .appsidebar::-webkit-scrollbar
 	width: 2px
@@ -403,17 +403,12 @@
 		align-content: center
 		align-items: center
 		padding: 0 32px
+		gap: 0
 		.midrow
 			gap: 24px
 		.search
 			grid-area: search
 			width: 56px
-		.autofill
-			grid-area: autofill
-			display: flex
-			align-items: center
-			justify-content: flex-end
-			width: calc(100% - 32px)
 	@media screen and (max-width: 899px)
 		grid-template-columns: 160px 1fr
 		grid-template-rows: 1fr
@@ -424,11 +419,12 @@
 		justify-items: stretch
 		.search
 			display: none
-		.autofill
-			display: none
 
 .appheader.light
-	background: #212121
+	background: #171717
+
+.appheader.dark
+	background: #171717
 
 .appheader.hiddenHeader
 	transform: translateY(-72px)
@@ -477,8 +473,6 @@
 	@media screen and (max-width: 899px)
 		height: 64px
 		width: 100%
-
-
 
 
 </style>

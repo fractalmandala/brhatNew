@@ -1,1265 +1,668 @@
-// colors
-$red: #fe4a49
-$deepred: #B0413E
-$mustard: #e4a503
-$blue: #2F7796
-$blueL: #13bbbd
-$blueD: #004e89
-$teal: #0B6E4F
-$purple: #5A3261
-$yellow: #FF9F1C
-$orange: #F77F2F
-$green: #10D56E
-$mand: #538733
-$white: #FFFFFF
+//colors
 $black: #171717
-$text: #272727
-$grey: #474747
-$greyS: #676767
-$greyM: #878787
-$greyL: #b7b7b7
-$greyX: #d7d7d7
-$whiteS: #ECECEC
-$reds1: #D13438
-$reds2: #EF6950
-$reds3: #DA3B01
-$reds4: #CA5010
-$reds5: #F7630C
-$reds6: #FF8C00
-$reds7: #FFB900
-$blues1: #0063B1
-$blues2: #0078D7
-$blues3: #0099BC
-$blues4: #00B7C3
-$viols1: #881798
-$viols2: #B146C2
-$viols3: #BF0077
-$viols4: #E3008C
-$viols5: #C30052
-$viols6: #EA005E
-$viols7: #8E8CD8
-$greens1: #00B294
-$greens2: #018574
-$greens3: #00CC6A
-$greens4: #10893E
-$greens5: #498205
-$greens6: #107C10
+$grey07: #d7d7d7
+$grey87: #878787
+$grey67: #676767
+$grey47: #474747
+$grey37: #373737
+$grey27: #272727
+$white: #FFFFFF
+$white07: #ECECEC
 
-
-:root
-	--red: $red
-	--blued: #004e89
-
-//transition-easings
-$cube1: cubic-bezier(0.995, 0.225, 0.750, 0.750)
-$cube2: cubic-bezier(0.995, 0.225, 0.000, 0.965)
-$cube3: cubic-bezier(0.320, 0.760, 0.875, 0.490)
-$cube4: cubic-bezier(0.000, 1.240, 0.875, 0.490)
-$cube5: cubic-bezier(1.000, 0.005, 1.000, 0.005)
-$easy: cubic-bezier(0.205, 0.655, 0.000, 0.995)
+$brhatred: #FE4A49
+$rtagreen: #10D56C
+$betblue: #0170B9
+$mustard: #E4A503
+$yellow: #FF9F1C
+$bolteal: #0B6E4F
+$purple: #5A3261
+$drashta: #FF9F1C
+$orange: #F77F2F
+$mandala: #538733
 
 //units
-$min: 4px
-$half: 8px
-$half-alt: 12px
-$std: 16px
-$std-alt: 24px
-$double: 32px
-$double-alt: 48px
-$quad: 64px
-$penta: 128px
+$unit4: 4px
+$unit8: 8px
+$unit16: 16px
+$unit20: 20px
+$unit24: 24px
+$unit32: 32px
+$unit48: 48px
+$unit64: 64px
+$unit80: 80px
+$unit128: 128px
 
-.gradient-red
-	background: linear-gradient(96.89deg, #FF7272 6.93%, #FE4A40 58.12%, #DF2015 92.63%)
-	-webkit-background-clip: text
-	-webkit-text-fill-color: transparent
-	background-clip: text
-	text-fill-color: transparent
+//spacing
+@media screen and (min-width: 1024px)
+	.colgap100
+		column-gap: $unit8
+	.rowgap100
+		row-gap: $unit8
+	.gap100
+		gap: $unit8
+	.colgap200
+		column-gap: $unit16
+	.rowgap200
+		row-gap: $unit16
+	.gap200
+		gap: $unit16
+	.colgap300
+		column-gap: $unit24
+	.rowgap300
+		row-gap: $unit24
+	.gap300
+		gap: $unit24
+	.colgap400
+		column-gap: $unit32
+	.rowgap400
+		row-gap: $unit32
+	.gap400
+		gap: $unit32
+	.colgap500
+		column-gap: $unit48
+	.rowgap500
+		row-gap: $unit48
+	.gap500
+		gao: $unit48
+	.colgap600
+		column-gap: $unit64
+	.rowgap600
+		row-gap: $unit64
+	.gap600
+		gao: $unit64
+@media screen and (max-width: 1023px) and (min-width: 768px)
+	.colgap100
+		column-gap: $unit8
+	.rowgap100
+		row-gap: $unit8
+	.gap100
+		gap: $unit8
+	.colgap200
+		column-gap: $unit16
+	.rowgap200
+		row-gap: $unit16
+	.gap200
+		gap: $unit16
+	.colgap300
+		column-gap: $unit24
+	.rowgap300
+		row-gap: $unit24
+	.gap300
+		gap: $unit24
+	.colgap400
+		column-gap: $unit24
+	.rowgap400
+		row-gap: $unit24
+	.gap400
+		gap: $unit24
+	.colgap400
+		column-gap: $unit32
+	.rowgap400
+		row-gap: $unit32
+	.gap400
+		gap: $unit32
+	.colgap500
+		column-gap: $unit32
+	.rowgap500
+		row-gap: $unit32
+	.gap500
+		gao: $unit32
+	.colgap600
+		column-gap: $unit48
+	.rowgap600
+		row-gap: $unit48
+	.gap600
+		gao: $unit48
+@media screen and (max-width: 767px)
+	.colgap100
+		column-gap: $unit8
+	.rowgap100
+		row-gap: $unit8
+	.gap100
+		gap: $unit8
+	.colgap200
+		column-gap: $unit16
+	.rowgap200
+		row-gap: $unit16
+	.gap200
+		gap: $unit16
+	.colgap300
+		column-gap: $unit20
+	.rowgap300
+		row-gap: $unit20
+	.gap300
+		gap: $unit20
+	.colgap400
+		column-gap: $unit24
+	.rowgap400
+		row-gap: $unit24
+	.gap400
+		gap: $unit24
+	.colgap400
+		column-gap: $unit32
+	.rowgap400
+		row-gap: $unit32
+	.gap400
+		gap: $unit32
+	.colgap500
+		column-gap: $unit32
+	.rowgap500
+		row-gap: $unit32
+	.gap500
+		gao: $unit32
+	.colgap600
+		column-gap: $unit32
+	.rowgap600
+		row-gap: $unit32
+	.gap600
+		gao: $unit32
 
-.gradient-green
-	background: linear-gradient(95.13deg, #5CFC11 -5.26%, #53DD6C 20.27%, #11FC8B 61.7%, #10C56E 85.77%)
-	-webkit-background-clip: text
-	-webkit-text-fill-color: transparent
-	background-clip: text
-	text-fill-color: transparent
+//transitions
+$dur100: 0.08s
+$ease100: cubic-bezier(0.150, 1.065, 0.860, 0.985)
 
+=trans100($dur100, $ease100)
+	duration: $dur100
+	transition-timing-function: $ease100
+
+.trans100
+	transition: $dur100 $ease100
+
+a
+	+trans100($dur100, $ease100)
+
+
+body, html
+	box-sizing: border-box
+	margin: 0
+
+//global
+:root
+	box-sizing: border-box
+
+*
+	box-sizing: border-box
+
+.bdr
+	border: 1px solid red
+
+.back
+	background-position: center center
+	background-size: cover
+	background-repeat: no-repeat
 
 //sizing
 .minH
-	@media screen and (min-width: 900px)
-		height: 100vh
-		padding-top: $double
-		padding-bottom: $double
-.minH.min
-	@media screen and (min-width: 900px)
+	@media screen and (min-width: 1024px)
 		min-height: 100vh
-		height: 100%
-.absolute
-	position: absolute
-.relative
-	position: relative
-.absolute.zero
-	top: 0
-	left: 0
-.cc-all
-	justify-content: center
-	align-items: center
-.cc-top
-	justify-content: center
 
-.full-h
-	height: 100%
-
-.end-col
-	align-items: flex-end
-
-.end-row
-	justify-content: flex-end
-
-.modalclass
-	z-index: 1000
-	position: fixed
-	top: 0
-	left: 0
-	width: 100vw
-	height: 100vh
-	overflow: hidden
-	backdrop-filter: blur(20px)
-
-
-//typography
-$mainfont: 'Spline Sans', sans-serif
-$serif: 'STIX Two Text', serif
-
-//containers
-.rta-column
-	display: flex
-	flex-direction: column
-
-.rta-in-col
-	display: flex
-	flex-direction: column
-
-.rta-in-col-row
-	display: flex
+.height-40
 	@media screen and (min-width: 1024px)
-		flex-direction: column
+		height: 50vh
 	@media screen and (max-width: 1023px)
-		flex-direction: row
-		column-gap: 24px
-		.thin
-			width: 32%
-		.thick
-			width: calc(68% - 24px)
-
-.rta-in-col.right
-	@media screen and (min-width: 1024px)
-		align-items: flex-end
-		text-align: right
-
-.rta-column.minH
-	@media screen and (min-width: 900px)
-		justify-content: center
-	@media screen and (max-width: 899px)
-		padding-top: $double
-		padding-bottom: $double
-
-.rta-row
-	display: flex
-	flex-direction: row
-	@media screen and (min-width: 1024px)
-		.w32
-			width: 32%
-		.w64
-			width: 64%
-	@media screen and (max-width: 1023px)
-		.w32
-			width: 32%
-		.w64
-			width: 64%	
-
-.rta-row.row-col
-	@media screen and (max-width: 1023px)
-		flex-direction: column
-
-.rta-row.colgap-16
-	@media screen and (max-width: 1023px)
-		column-gap: 8px
-
-.rta-grid
-	display: grid
-	grid-auto-flow: row
-	grid-template-rows: auto
-	transition: all 0.28s $easy
-
-.align-all
-	align-content: center
-
-.rta-grid.grid3
-	@media screen and (min-width: 1024px)
-		grid-template-columns: 1fr 1fr 1fr
-		grid-template-areas: ". . ."
-
-.rta-grid.grid4
-	@media screen and (min-width: 1024px)
-		grid-template-columns: 1fr 1fr 1fr 1fr
-		grid-template-areas: ". . . ."
-
-.rta-grid.grid4.stays-grid
-	@media screen and (max-width: 1023px)
-		grid-template-columns: 1fr 1fr 1fr
-		grid-template-areas: ". . ."
-
-.rta-grid.grid4.mid-is-wide
-	@media screen and (min-width: 1024px)
-		grid-template-columns: 1fr 1fr 1fr 1fr
-		grid-template-areas: "is-left is-wide is-wide is-right"
-		.is-left
-			grid-area: is-left
-		.is-wide
-			grid-area: is-wide
-		.is-right
-			grid-area: is-right
-		
-.rta-grid.grid2
-	@media screen and (min-width: 1024px)
-		grid-template-columns: 1fr 1fr
-		grid-template-areas: ". ."
-	@media screen and (max-width: 1023px)
-		grid-template-columns: 1fr
-		grid-template-areas: "."
-
-.rta-grid.grid2.left
-	@media screen and (min-width: 1024px)
-		grid-template-columns: 25% 1fr
-		grid-template-areas: ". ."
-	@media screen and (max-width: 1023px)
-		grid-template-columns: 1fr
-		grid-template-areas: "." "."
-
-.rta-grid.grid2.right
-	@media screen and (min-width: 1024px)
-		grid-template-columns: 1fr 25%
-		grid-template-areas: "wide thin"
-		.wide
-			grid-area: wide
-		.thin
-			grid-area: thin
-	@media screen and (max-width: 1023px)
-		grid-template-columns: 1fr
-		grid-template-areas: "on-top" "on-bottom"
-		.on-top
-			grid-area: on-top
-		.on-bottom
-			grid-area: on-bottom
-
-.rta-grid.grid2.right.row
-	@media screen and (max-width: 1023px)
-		grid-template-columns: 32% 1fr
-		grid-template-areas: "thin wide"
-		.wide
-			grid-area: wide
-		.thin
-			grid-area: thin
-		
-.rta-grid.grid2.left.thirty
-	@media screen and (min-width: 1024px)
-		grid-template-columns: 40% 1fr
-		grid-template-areas: "thin thick"
-		.thick
-			grid-area: thick
-		.thin
-			grid-area: thin
-	@media screen and (max-width: 1023px)
-		grid-template-columns: 1fr
-		grid-template-areas: "on-top" "on-bottom"
-		.on-top
-			grid-area: on-top
-		.on-bottom
-			grid-area: on-bottom
-
-.rta-grid.grid2.right.thirty
-	@media screen and (min-width: 1024px)
-		grid-template-columns: 1fr 40%
-		grid-template-areas: "thick thin"
-		.thick
-			grid-area: thick
-		.thin
-			grid-area: thin
-	@media screen and (max-width: 1023px)
-		grid-template-columns: 1fr
-		grid-template-areas: "on-top" "on-bottom"
-		.on-top
-			grid-area: on-top
-		.on-bottom
-			grid-area: on-bottom
-
-.rta-grid.grid5
-	@media screen and (min-width: 1024px)
-		grid-template-columns: 1fr 1fr 1fr 1fr 1fr
-		grid-template-areas: ". . . . ."
-	@media screen and (max-width: 1023px)
-		grid-template-columns: 1fr 1fr
-		grid-template-areas: ". ."
-
-.rowgap-4
-	row-gap: $min
-.rowgap-8
-	row-gap: $half
-.rowgap-16
-	@media screen and (min-width: 1024px)
-		row-gap: $std
-	@media screen and (max-width: 1023px)
-		row-gap: $half-alt
-.rowgap-24
-	row-gap: $std-alt
-.rowgap-32
-	@media screen and (min-width: 1024px)
-		row-gap: $double
-	@media screen and (max-width: 1023px)
-		row-gap: $std-alt
-.rowgap-64
-	@media screen and (min-width: 1024px)
-		row-gap: $quad
-	@media screen and (max-width: 1023px)
-		row-gap: $std
-.colgap-8
-	column-gap: $half
-.colgap-16
-	column-gap: $std
-.colgap-24
-	column-gap: $std-alt
-.colgap-32
-	@media screen and (min-width: 1024px)
-		column-gap: $double
-	@media screen and (max-width: 1023px)
-		column-gap: $std
-
-.colgap-64
-	@media screen and (min-width: 1024px)
-		column-gap: $quad
-
-.is-padded
-	@media screen and (max-width: 575px)
-		padding-left: $std-alt
-		padding-right: $std-alt
-		padding-top: $quad
-		padding-bottom: $double
-	@media screen and (max-width: 639px) and (min-width: 576px)
-		padding-left: $double
-		padding-right: $double
-	@media screen and (max-width: 899px) and (min-width: 640px)
-		padding-left: $double-alt
-		padding-right: $double-alt
-	@media screen and (max-width: 1023px) and (min-width: 900px)
-		padding-left: $quad
-		padding-right: $quad
-	@media screen and (min-width: 1024px)
-		padding-left: $penta
-		padding-right: $penta
-
-.rta-image
-	img
-		object-fit: cover
-		height: 100%
-		width: 100%
-
-.rta-video
-	display: flex
-	flex-direction: column
-	@media screen and (min-width: 1024px)
-		height: 180px
-		row-gap: 12px
-		iframe, video
-			height: 144px
-	@media screen and (max-width: 1023px)
-		height: 240px
-		row-gap: 8px
-		iframe, video
-			height: 180px
-
-.rta-icon
-	width: $std-alt
-	height: $std-alt
-	img
-		object-fit: contain
-		width: $std-alt
-		height: $std-alt
-	svg
-		object-fit: contain
-		width: $std-alt
-		height: $std-alt
-
-.rta-icon2
-	img
-		object-fit: contain
-	@media screen and (min-width: 1024px)
-		img
-			width: $quad
-			height: $quad
-	@media screen and (max-width: 1023px)
-		img
-			width: $double-alt
-			height: $double-alt
-
-.button
-	padding: 5px 24px
-	border-radius: 16px
-	width: max-content
-	min-width: 120px
-	cursor: pointer
-	transition: all 0.18s $easy
-	transform-origin: center center
-	overflow: hidden
-	font-weight: bold
-	position: relative
-	&:hover
-		transform: scale(0.96)
-		&::before
-			animation: buttonmovement 0.38s $easy forwards
-	&::before
-		position: absolute
-		top: 0
-		left: 50%
-		content: ''
-		height: 100%
-		width: 0
-		border-radius: 16px
-		z-index: -1
-		transition: all 0.28s $easy 
-
-.dropdown-menu-button
-	background: transparent
-	padding: 10px
-	border-radius: 24px
-	font-size: 16px
-
-.menu-inside-button
-	font-size: 16px
-	padding-bottom: 8px
-
-.dropdown-menu-button.red
-	background: #fe4a49
-	border: 1px solid #fe4a49
-	color: white
-
-.dropdown-menu-button.tree
-	background: $teal
-	border: 1px solid $teal
-	color: white
-
-.download-button
-	position: relative
-	border-width: 0
-	font-size: 15px
-	font-weight: 600
-	border-radius: 4px
-	height: 32px
-	z-index: 1
-	background: transparent
-	cursor: pointer
-	border: 1px solid transparent
-	.docs
-		display: flex
-		align-items: center
-		justify-content: space-between
-		gap: 10px
-		height: 28px
-		padding: 0 10px
-		border-radius: 4px
-		z-index: 1
-		transition: all .5s cubic-bezier(0.77, 0, 0.175, 1)
-	&:hover
-		.download
-			transform: translateX(20%)
-			
-.download
-	position: absolute
-	inset: 0
-	width: calc(100% - 12px)
-	display: flex
-	align-items: center
-	height: 27px
-	justify-content: flex-end
-	padding-right: 8px
-	margin: 2px auto 0 auto
-	z-index: -1
-	border-radius: 4px
-	transform: translateY(0%)
-	background-color: var(--red)
-	transition: all .5s cubic-bezier(0.77, 0, 0.175, 1)
-	svg
-		transform: rotate(-90deg)
-		polyline, line
-			animation: docs 1s infinite
-
-@keyframes docs
-	0%
-		transform: translateY(0%)
-	
-	50%
-		transform: translateY(-15%)
-
-	100%
-		transform: translateY(0%)
-
-.sideways-button
-	position: relative
-	display: flex
-	justify-content: center
-	align-items: center
-	background: transparent
-	overflow: hidden
-	border-left: none
-	border-right: none
-	border-top: none
-	cursor: pointer
-	width: max-content
-	&::after
-		content: " "
-		width: 0%
-		height: 100%
-		position: absolute
-		transition: all 0.4s ease-in-out
-		right: 0
-	&:hover
-		&::after
-			right: auto
-			left: 0
-			width: 100%
-		span
-			color: white
-			animation: scaleUp 0.3s ease-in-out
-	span
-		text-align: center
-		text-decoration: none
-		width: 100%
-		text-transform: uppercase
-		font-weight: 700
-		z-index: 20
-		transition: all 0.3s ease-in-out
-	@media screen and (min-width: 1024px)
-		span
-			padding: 8px 8px
-			font-size: 16px
-	@media screen and (max-width: 1023px)
-		span
-			padding: 6px
-			font-size: 16px
-
-.sideways-button.red
-	border-bottom: 1px solid $red
-	&::after
-		background: #fe4a49
-
-.sideways-button.tree
-	border-bottom: 1px solid $teal
-	&::after
-		background: $teal
-
-.sideways-button.green
-	border-bottom: 1px solid $green
-	&::after
-		background: $green
-
-.sideways-button.full
-	width: max-content
-	border-radius: 4px
-
-.searchbutton
-	width: 40px
-	height: 40px
-	background: transparent
-	border: none
-	display: flex
-	svg
-		object-fit: contain
-		width: 48px
-		height: 48px
-
-.basic-button
-	height: 24px
-	min-width: 40px
-	border-radius: 2px
-	text-transform: uppercase
-	cursor: pointer
-	transition: all 0.18s ease-in-out
-	transform-origin: center center
-	width: max-content
-	&:hover
-		transform: scale(0.88)
-	@medias screen and (min-width: 1024px)
-		font-size: 12px
-	@media screen and (max-width: 1023px)
-		font-size: 14px
-		height: 28px
-		min-width: 48px
-
-.light.basic-button
-	background: $white
-	color: $text
-	border: 1px solid $text
-	&:hover
-		background: #fe4a49
-		color: white
-		border: 1px solid $red
-
-.dark.basic-button
-	background: $white
-	color: $text
-	border: 1px solid $text
-	&:hover
-		background: #fe4a49
-		color: white
-		border: 1px solid $red
-
-@keyframes scaleUp
-	0%
-		transform: scale(1)
-
-	50%
-		transform: scale(0.95)
-
-	100%
-		transform: scale(1)
-
-.tab-button
-	background: transparent
-	border: none
-	text-transform: uppercase
-	text-align: center
-	font-weight: 600
-	cursor: pointer
-	transition: 0.25s ease-in-out
-	padding: 4px 6px
-	border-radius: 4px
-	color: #676767
-	@media screen and (min-width: 1024px)
-		font-size: 12px
-	@media screen and (max-width: 1023px)
-		font-size: 16px
-
-//themes----------------------------------------------------------------------------------------------------------------------------------
-	
-.line
-	height: 1px
-	width: 100%
-
-.bord-all.light
-	border: 1px solid $greyS
-	border-radius: 4px
-
-.bord-all.dark
-	border: 1px solid $text
-	border-radius: 4px
-
-.type.light
-	--blue: #2F7796
-	--greyS: #878787
-	--gren: rgb(63, 207, 142)
-	--black: #272727
-	--bord: #ececec
-	.line
-		background: #ececec
-	.background
-		background: $white
-		transition: 0.5s ease-in-out
-	transition: 0.5s ease-in-out
-	background-color: hsla(171,0%,100%,1)
-	background-image: radial-gradient(at 30% 29%, hsla(353,0%,95%,1) 0px, transparent 50%), radial-gradient(at 77% 85%, hsla(0,0%,100%,1) 0px, transparent 50%)
-	color: $text
-	.glass
-		background: rgba(255, 255, 255, 0.6)
-		backdrop-filter: blur(15px)
-		border: 1px solid rgba( 255, 255, 255, 1 )
-		box-shadow: 0 8px 32px 0 rgba( 31, 38, 35, 0.17 )
-		@media screen and (min-width: 1024px)
-			padding: 32px 64px
-			border-radius: 8px
-			height: 80%
-			overflow: hidden
-		@media screen and (max-width: 1023px)
-			padding: 24px
-			.rta-image
-				img
-					height: 240px
-					width: 240px
-					margin-left: auto
-					margin-right: auto
-	p, pre, li, h5
-		color: $greyM
-	h6
-		color: $grey
-	h4, h3, h2, h1
-		color: $text
-	h5.heading
-		color: $text
-	.text-black
-		p, pre, li, h5
-			color: $text
-	.dark-text
-		color: $text
-	.button.blue
-		border: 1px solid $blue
-		color: $blue
-		background: transparent
-		&:hover
-			color: white
-		&::before
-			background: $blue
-	.button.yellow
-		border: 1px solid $yellow
-		color: $yellow
-		background: transparent
-		&:hover
-			color: white
-		&::before
-			background: $yellow
-	.general-selector
-		background: transparent
-		border-top: none
-		border-left: none
-		border-right: none
-		border-bottom: 1px solid $whiteS
-		color: $text
-		&:hover
-			background: $red
-			padding-left: 8px
-			color: $white
-	#dradra_3
-		path
-			fill: $text
-			stroke: $text
-			stroke-width: 0.8px
-	#drabrh
-		fill: $text
-		stroke: $text
-	.logo-svg-box
-		&::after
-			background: $white
-	#bol-gol-white
-		path
-			fill: #474747
-			stroke: #474747
-	#log-boltype
-		#bol-b, #bol-h, #bol-a, #bol-t
-			fill: #474747
-	#bol-tag
-		path
-			fill: #474747
-	.bord-bot
-		border-bottom: 1px solid $whiteS
-	.bord-all
-		border: 1px solid $whiteS
-		border-radius: 4px
-	.download-button
-		color: $text
-		&:hover
-			color: $white
-			.docs
-				background: $grey
-		.docs
-			background: $whiteS
-	.menu-inside-button
-		background: white
-		border-bottom: 1px solid $whiteS
-		border-top: none
-		border-left: none
-		border-right: none
-	.sideways-button
-		span
-			color: $grey
-		&:hover
-			span
-				color: $white
-	.sideways-button.full
-		border: 1px solid $grey
-	.searchbutton
-		svg path
-			fill: #474747
-	.tab-button
-		&:hover
-			background: $greyS
-			color: $white
-	#rid-logo-svg
-		#whites
-			path
-				fill: $text
-	.toast
-		background: rgba( 255, 255, 255, 0.64 )
-		box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )
-		backdrop-filter: blur( 23px )
-		-webkit-backdrop-filter: blur( 13px )
-		border: 1px solid #d7d7d7
-		padding: 16px 12px 16px 16px
-	.basic-button
-		background: $white
-		color: $text
-		border: 1px solid $text
-		&:hover
-			background: #fe4a49
-			color: white
-			border: 1px solid $red
-		
-
-@keyframes buttonmovement
-	0%
-		left: 50%
-		width: 0
-	100%
-		left: 0
-		width: 100%
-
-.background
-	transition: 0.5s ease-in-out
-			
-.bord-top.light
-	@media-screen and (min-width: 1024px)
-		border-top: 1px solid #ececec
-.bord-top.dark
-	@media-screen and (min-width: 1024px)
-		border-top: 1px solid #272727
-
-.light
-	.bord-top
-		@media-screen and (min-width: 1024px)
-			border-top: 1px solid #ececec
-
-.dark
-	.bord-top
-		@media-screen and (min-width: 1024px)
-			border-top: 1px solid #272727
-
-.theme.dark
-	background: $black
-	color: $white
-	
-.type.dark
-	--blue: #13bbbd
-	--greyS: #676767
-	--gren: #10D56E
-	--black: $white
-	--bord: #272727
-	transition: 0.5s ease-in-out
-	background: $black
-	.line
-		background: $text
-	.background
-		background: $black
-		transition: 0.5s ease-in-out
-	.glass
-		background: rgba(17, 17, 09, 0.5)
-		backdrop-filter: blur(10px)
-		border: 1px solid rgba( 19,19,19, 1 )
-		box-shadow: 0 8px 32px 0 rgba( 03, 08, 05, 0.87 )
-		@media screen and (min-width: 1024px)
-			padding: 32px 64px
-			border-radius: 8px
-			height: 80%
-			overflow: hidden
-		@media screen and (max-width: 1023px)
-			padding: 24px
-			.rta-image
-				img
-					height: 240px
-					width: 240px
-					margin-left: auto
-					margin-right: auto
-	color: $white
-	h6, h4, h3, h2
-		color: $white
-	h3.darker
-		color: $text
-	h1
-		color: $grey
-	p, pre, li
-		color: $grey
-	.dark-text
-		color: $white
-	h5
-		color: $grey
-	h5.heading
-		color: $greyS
-	h5.heading.text-black
-		color: $white
-	.text-black
-		p, pre, li, h5
-			color: $white
-	.button.blue
-		border: 1px solid $blueL
-		color: $blueL
-		background: transparent
-		&:hover
-			color: $text
-		&::before
-			background: $blueL
-	.button.yellow
-		border: 1px solid $yellow
-		color: $yellow
-		background: transparent
-		&:hover
-			color: white
-		&::before
-			background: $yellow
-	.general-selector
-		background: transparent
-		border-top: none
-		border-left: none
-		border-right: none
-		border-bottom: 1px solid $text
-		color: $greyS
-		&:hover
-			background: $red
-			padding-left: 8px
-			color: $white
-	#dradra_3
-		path
-			fill: $white
-			stroke: $white
-			stroke-width: 0.8px
-	#drabrh
-		fill: $white
-		stroke: $white
-	.logo-svg-box
-		&::after
-			background: $black
-	#bol-gol-white
-		path
-			fill: #FFFFFF
-			stroke: #FFFFFF
-	#log-boltype
-		#bol-b, #bol-h, #bol-a, #bol-t
-			fill: #FFFFFF
-	#bol-tag
-		path
-			fill: #FFFFFF
-	.bord-bot
-		border-bottom: 1px solid $text
-	.bord-all
-		border: 1px solid $text
-		border-radius: 4px
-	.download-button
-		color: $greyM
-		&:hover
-			color: $white
-			.docs
-				background: $grey
-		.docs
-			background: $text
-	.menu-inside-button
-		background: $black
-		border-bottom: 1px solid $text
-		border-top: none
-		color: $grey
-		border-left: none
-		border-right: none
-	.sideways-button
-		span
-			color: $grey
-		&:hover
-			span
-				color: $white
-	.sideways-button.full
-		border: 1px solid $grey
-	.searchbutton
-		svg path
-			fill: #FFFFFF
-	.tab-button
-		&:hover
-			background: #474747
-			color: $white
-	#rid-logo-svg
-		#whites
-			path
-				fill: $white
-	.toast
-		background: rgba( 0, 09, 0, 0.64 )
-		box-shadow: 0 8px 32px 0 rgba( 09, 02, 0, 0.37 )
-		backdrop-filter: blur( 23px )
-		-webkit-backdrop-filter: blur( 13px )
-		border: 1px solid #474747
-		padding: 16px 12px 16px 16px
-	.basic-button
-		background: $white
-		color: $text
-		border: 1px solid $text
-		&:hover
-			background: #fe4a49
-			color: white
-			border: 1px solid $red
-	.orangebutton
-		border: 1px solid #F77F2F
-		color: #F77F2F
-		background: $black
-		padding: 5px 16px
-		font-weight: bold
-		font-size: 16px
-		border-radius: 16px
-		width: max-content
-		transition: 0.08s var(--cubed)
-		transform-origin: center center
-		&:hover
-			transform: scale(0.9)
-			background: linear-gradient(96.89deg, #CEAA2C 6.93%, #F77F2F 92.97%)
-			color: white
-
-.type
-	.c-red
-		h1
-			color: $red
-
-
-//tools
-.togglemode
-	display: flex
-	flex-direction: column
-	height: 24px
-	width: 56px
-	border-radius: 12px
-	padding: 2px
-	transition: background 0.08s ease
-	cursor: pointer
-	border: none
-	.togglemodeball
-		height: 20px
-		width: 20px
-		border-radius: 10px
-
-.togglemode.general
-	align-items: flex-start
-	border: 1px solid $grey
-	background: $text
-	.togglemodeball
-		background: $grey
-	&:hover
-		.togglemodeball
-			background: $white
-
-.togglemode.dark
-	align-items: flex-end
-	background: $black
-	border: 1px solid $text
-	.togglemodeball
-		background: $grey
-	&:hover
-		.togglemodeball
-			background: $white
-
-.label
-	text-transform: uppercase
-	font-size: 11px
-	padding: 2px 4px 2px 4px
-	width: max-content
-
-.label-red
-	background: $red
-	color: white
-
-.label-yellow
-	background: $yellow
-	color: white
-
-.label-mand
-	background: $mand
-	color: white
-
-.label-blue
-	background: $blue
-	color: white
-
-.label-blued
-	background: $blueD
-	color: white
-
-//animationss
-.inview
-	position: relative
-	overflow: hidden
-	&::after
-		position: absolute
-		top: 0
-		left: 0
-		height: 100%
-		width: 100%
-		content: ''
-
-.inview.light
-	&::after
-		background: $white
-	
-.inview.dark
-	&::after
-		background: $black
-
-.inview.light.reveal, .inview.dark.reveal
-	&::after
-		animation: afterFromBottom 3s cubic-bezier(0.205, 0.655, 0.000, 0.995) forwards
-
-@keyframes afterFromBottom
-	0%
-		height: 100%
-	100%
-		height: 0
-
-//margins, pads, lengths, widths
-
-.rad-4
-	border-radius: $min
-
-.top-m-16
-	margin-top: $std
-
-.top-m-24
-	margin-top: $std-alt
-.bot-m-32
-	margin-bottom: $std
-
-.top-p-16
-	padding-top: $std
-.top-p-32
-	padding-top: $double
-.bot-p-16
-	padding-bottom: $std
-.top-p-64
-	@media screen and (min-width: 1024px)
-		padding-top: $quad
-	@media screen and (max-width: 1023px)
-		padding-top: $double
-.bot-p-64
-	@media screen and (min-width: 1024px)
-		padding-bottom: $quad
-	@media screen and (max-width: 1023px)
-		padding-bottom: $double
-
-.bot-p-32
-	@media screen and (min-width: 1024px)
-		padding-bottom: $double
-	@media screen and (max-width: 1023px)
-		padding-bottom: $std
-
-.all-p-16
-	@media screen and (min-width: 1024px)
-		padding: $std
-	@media screen and (max-width: 1023px)
-		padding: $half
-
-.all-p-32
-	@media screen and (min-width: 1024px)
-		padding: $double
-
-.wide-60-100
-	@media screen and (min-width: 1024px)
-		width: 60%
-	@media screen and (max-width: 1023px) and (min-width: 900px)
-		width: 85%
-	@media screen and (max-width: 899px)
-		width: 100%
+		height: 20vh
 
 .height-30
 	@media screen and (min-width: 1024px)
 		height: 30vh
 	@media screen and (max-width: 1023px)
-		height: 20vh
+		height: 8vh
+
+.height-30-2
+	@media screen and (min-width: 1024px)
+		height: 30vh
+	@media screen and (max-width: 1023px)
+		height: 12vh
 
 .height-20
 	@media screen and (min-width: 1024px)
-		height: 16vh
+		height: 20vh
 	@media screen and (max-width: 1023px)
-		height: 16vh
+		height: 8vh
 
-.height-50
+.fullH
+	height: 100%
+
+.ta-c-d
 	@media screen and (min-width: 1024px)
-		height: 50vh
+		text-align: center
+
+.ta-c-m
 	@media screen and (max-width: 1023px)
-		height: 50vh
+		text-align: center
 
-.height-60
+.ta-r-d
 	@media screen and (min-width: 1024px)
-		height: 64vh
+		text-align: right
 
-.height-80
+.tt-u
+	text-transform: uppercase
+
+//containers
+.rta-column
+	display: flex
+	flex-direction: column
+	&.ycenter
+		justify-content: center
+	&.ytop
+		justify-content: flex-start
+	&.ybot
+		justify-content: flex-end
+	&.ybetween
+		justify-content: space-between
+	&.xcenter
+		align-items: center
+	&.xleft
+		align-items: flex-start
+	&.xright
+		align-items: flex-end
+
+.rta-column.col-row
+	@media screen and (max-width: 1023px)
+		flex-direction: row
+		column-gap: 16px
+		.rta-image
+			width: 28%
+		.rta-column
+			width: 68%
+		
+
+.rta-row
+	display: flex
+	&.ycenter
+		align-items: center
+	&.xcenter-d
+		@media screen and (min-width: 1024px)
+			justify-content: center
+	&.xend
+		justify-content: flex-end
+	&.between
+		justify-content: space-between
+	&.ytop
+		align-items: flex-start
 	@media screen and (min-width: 1024px)
-		height: 80vh
+		flex-direction: row
+		.in50
+			width: calc(50% - 16px)
+		.w32
+			width: 32%
+		.w64
+			width: 60%
+	@media screen and (max-width: 1023px)
+		flex-direction: row
+		flex-wrap: wrap
 
-.rta-card 
-	position: relative 
-	width: 300px 
-	height: 400px 
-	margin: 20px 
-	border-radius: 10px 
-	overflow: hidden 
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) 
-	transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 
-	&:hover 
-		transform: translateY(-10px) 
-		.rta-card-image 
-			img 
-				transform: scale(1.2) 
-		.rta-card-content 
-			transform: translateY(-100%) 
+.rta-row.fixed
+	@media screen and (max-width: 1023px)
+		flex-wrap: nowrap
+		.w32
+			width: 32%
+		.w64
+			width: 60%
 
-.rta-card-image 
-	position: absolute 
-	top: 0 
-	left: 0 
-	width: 100% 
-	height: 100% 
-	overflow: hidden 
-	border-radius: 10px 
-	height: 400px 
-	width: 300px 
-	background-color: $text
-	img 
-		width: 100% 
-		height: 100% 
-		object-fit: cover 
-		transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 
+.rta-row.row-col
+	@media screen and (min-width: 1024px)
+		&.ycenter
+			align-items: center
+		&.xend
+			justify-content: flex-end
+		&.between
+			justify-content: space-between
+		.w32
+			width: 32%
+		.w64
+			width: 64%
+	@media screen and (max-width: 1023px)
+		.w32, .w64
+			width: 100%
 
-.rta-card-content 
-	position: absolute 
-	bottom: 0 
-	left: 0 
-	width: 100% 
-	padding: 20px 
-	background-color: #fff 
-	transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 
+.rta-grid
+	display: grid
+	grid-auto-flow: row
+	grid-template-rows: auto
+	width: 100%
 
-.rta-card2 
-	overflow: visible 
-	width: 190px 
-	height: 254px 
-	&:hover 
-		.content 
-			transform: rotateY(180deg) 
-.rta-card2-content 
-	width: 100% 
-	height: 100% 
-	transform-style: preserve-3d 
-	transition: transform 300ms 
-	box-shadow: 0px 0px 10px 1px #000000ee 
-	border-radius: 5px 
-.rta-card2-front, .rta-card2-back 
-	background-color: #151515 
-	position: absolute 
-	width: 100% 
-	height: 100% 
-	backface-visibility: hidden 
-	-webkit-backface-visibility: hidden 
-	border-radius: 5px 
-	overflow: hidden 
-.rta-card2-back 
-	width: 100% 
-	height: 100% 
-	justify-content: center 
-	display: flex 
-	align-items: center 
-	overflow: hidden 
-	&::before 
-		position: absolute 
-		content: ' ' 
-		display: block 
-		width: 160px 
-		height: 160% 
-		background: linear-gradient(90deg, transparent, #ff9966, #ff9966, #ff9966, #ff9966, transparent) 
-		animation: rotation_481 5000ms infinite linear 
+@media screen and (min-width: 1024px)
+	.grid4
+		grid-template-columns: 1fr 1fr 1fr 1fr
+		grid-template-areas: ". . . ."
+	.grid3
+		grid-template-columns: 1fr 1fr 1fr
+		grid-template-areas: ". . ."
+	.grid2
+		grid-template-columns: 1fr 1fr
+		grid-template-areas: ". ."
+		transition: 0.2s
+	.grid2.left
+		grid-template-columns: 32% 1fr
+		grid-template-areas: ". ."
+	.grid2.right
+		grid-template-columns: 1fr 32%
+		grid-template-areas: ". ."	
+	.grid2.left2
+		grid-template-columns: 40% 1fr
+		grid-template-areas: ". ."
+		transition: 0.2s
+	.grid2.right2
+		grid-template-columns: 1fr 40%
+		grid-template-areas: ". ."	
+		transition: 0.2s
 
+@media screen and (max-width: 1023px)
+	.grid4
+		grid-template-columns: 1fr
+		grid-template-areas: "." "." "." "."
+	.grid4.stay2
+		grid-template-columns: 1fr 1fr
+		grid-template-areas: "." "."
+	.grid3
+		grid-template-columns: 1fr
+		grid-template-areas: "." "." "."
+	.grid3.stay2
+		grid-template-columns: 1fr 1fr
+		grid-template-areas: "." "."
+	.grid2
+		grid-template-columns: 1fr
+		grid-template-areas: "up" "down"
+		.up
+			grid-area: up
+		.down
+			grid-area: down
+	
+
+.outer-box
+	@media screen and (min-width: 1024px)
+		padding-left: 80px
+		padding-right: 80px
+		padding-bottom: 48px
+	@media screen and (max-width: 1023px) and (min-width: 768px)
+		padding-left: 48px
+		padding-right: 48px
+	@media screen and (max-width: 767px)
+		padding-left: 24px
+		padding-right: 24px
+		padding-top: 32px
+		padding-bottom: 32px
+
+.outer-box.limit
+	@media screen and (min-width: 1024px)
+		padding-left: 200px
+		padding-right: 200px
+		padding-bottom: 48px
+
+.limit2
+	@media screen and (min-width: 1024px)
+		padding-left: 280px
+		padding-right: 280px
+
+.type-thin
+	@media screen and (min-width: 1024px)
+		>h5
+			width: 70%
+
+.grid3
+	.rta-video
+		@media screen and (min-width: 1024px)
+			height: 280px
+			iframe
+				height: 200px
+		@media screen and (max-width: 1023px)
+			height: 240px
+			iframe
+				height: 200px
+
+.grid4
+	.rta-video
+		@media screen and (min-width: 1024px)
+			height: 200px
+			iframe
+				height: 144px
+		@media screen and (max-width: 1023px)
+			height: 240px
+			iframe
+				height: 200px
+
+.rta-card
+	border-radius: 16px
+	@media screen and (min-width: 1024px)
+		padding: 24px
+	@media screen and (max-width: 1023px)
+		padding: 20px
+
+.dark
+	.rta-card
+		h5
+			color: white
+
+.bord-top
+	border-top: 1px solid var(--borderline)
+
+.bord-bot
+	border-bottom: 1px solid var(--borderline)
+
+.bord-bot-m
+	@media screen and (max-width: 1023px)
+		border-bottom: 1px solid var(--borderline)
+
+.bord-right-d
+	@media screen and (min-width: 1024px)
+		border-right: 1px solid var(--borderline)
+
+.p-top-64
+	@media screen and (min-width: 1024px)
+		padding-top: 64px
+	@media screen and (max-width: 1023px)
+		padding-top: 32px
+
+.p-bot-64
+	@media screen and (min-width: 1024px)
+		padding-bottom: 64px
+	@media screen and (max-width: 1023px)
+		padding-bottom: 32px
+
+.p-bot-64-d
+	@media screen and (min-width: 1024px)
+		padding-bottom: 64px
+	@media screen and (max-width: 1023px)
+		padding-bottom: 0
+
+.p-top-32
+	padding-top: 32px
+.p-bot-32
+	padding-bottom: 32px
+.p-bot-32-m
+	@media screen and (max-width: 1023px)
+		padding-bottom: 32px
+.p-bot-32-d
+	@media screen and (min-width: 1024px)
+		padding-bottom: 32px
+.p-top-8
+	padding-top: 8px
+
+.p-bot-16
+	@media screen and (min-width: 1024px)
+		padding-bottom: 16px
+	@media screen and (max-width: 1023px)
+		padding-bottom: 8px
+
+.p-bot-16-m
+	@media screen and (max-width: 1023px)
+		padding-bottom: 16px
+
+.p-all-32
+	@media screen and (min-width: 1024px)
+		padding: 32px
+	@media screen and (max-width: 1023px)
+		padding: 16px
+
+.light
+	p, pre, li
+		color: $grey87
+	h1, h2, h5, h3
+		color: $grey47
+	h6
+		color: $black
+	small
+		color: $grey87
+	cite
+		color: $grey87
+	h4
+		color: $grey47
+	.in-blog
+		h4
+			color: #272727
+		h6
+			color: #474747
+
+
+.dark
+	p, pre, li
+		color: $grey87
+	h5
+		color: $grey87
+	h1, h2
+		color: $grey07
+	h6, h3, h4
+		color: $white
+	small, cite
+		color: $grey87
+
+.insidelink
+	color: #878787
+	text-transform: capitalize
+	&:hover
+		color: #FFFFFF
+
+//buttons
+.blank-button
+	background: none
+	border: none
+	padding: 0
+	
+
+.drawer-item
+	cursor: pointer
+
+.drawer-item2.ta-r-d
+	@media screen and (min-width: 1024px)
+		text-align: right
+		&::after
+			right: 0
+			margin-left: auto
+
+.drawer-item2
+	text-decoration: none
+	text-align: left
+	font-size: 16px
+	text-transform: uppercase
+	border: none
+	background: none
+	border-radius: 2px
+	padding: 4px
+	cursor: pointer
+	position: relative
+	z-index: 1
+	transition: 0.15s
+	&::after
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		width: 0%
+		height: 100%
+		transition: 0.35s
+		border-radius: 2px
+		z-index: -1
+	&:hover
+		&::after
+			width: 100%
+	@media screen and (max-width: 1023px)
+		width: 100%
+
+.light
+	--borderline: #D7D7D7
+	.drawer-item2
+		color: #474747
+		&:hover
+			color: white
+	.drawer-item2.drawerselection
+		background: #fe4a49
+		color: white
+
+.dark
+	--borderline: #373737
+	.drawer-item2
+		color: #878787
+		&:hover
+			color: white
+	.drawer-item2.drawerselection
+		background: #fe4a49
+		color: white	
+
+.boxrow, .boxmidrow
+	display: flex
+	&:hover
+		>a
+			&:hover
+				color: #fe4a49
+	@media screen and (min-width: 1024px)
+		flex-direction: row
+		column-gap: 16px
+
+.dropper-chevron
+	transition: 0.15s 
+	transform-origin: center center
+.dropper-chevron.rotated
+	transform: rotate(180deg)
+
+.dropper
+	position: relative
+	.dropper-invisible
+		position: absolute
+		top: 48px
+		right: 0
+		min-width: 280px
+		text-align: right
+		a
+			background: #171717
+			font-size: 18px
+			padding: 4px 8px
+			transition: 0.08s
+			&:hover
+				background: #fe4a49
+				color: white
+
+.dropper-visible.expanded
+	color: white
+
+
+.onpagelinks
+	h3
+		border-bottom: 1px solid var(--borderline)
+		padding-bottom: 16px
+	@media screen and (max-width: 1023px)
+		h3
+			font-size: 2rem
+			padding-bottom: 8px
+
+.rta-carousel
+	display: grid
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+	grid-auto-rows: 1fr
+	grid-gap: 1rem
+	overflow: hidden
+	width: 100%
+
+.carousel-item
+	display: none
+
+.carousel-item:nth-child(n + 1):nth-child(-n + 3)
+	display: block
+
+.carousel-item:nth-child(n + 4):nth-child(-n + 6), .carousel-item:nth-child(n + 7):nth-child(-n + 9), .carousel-item:nth-child(n + 10):nth-child(-n + 12), .carousel-item:nth-child(n + 13):nth-child(-n + 15), .carousel-item:nth-child(n + 16):nth-child(-n + 18), .carousel-item:nth-child(n + 19):nth-child(-n + 21)
+	display: none
+
+@media screen and (min-width: 1024px)
+	.carousel-item
+		display: block

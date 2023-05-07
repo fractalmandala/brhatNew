@@ -7,7 +7,7 @@
 	width: max-content
 	text-align: center
 	border-radius: 3px
-	background: var(--drash)
+	background: #fe4a49
 	padding-left: 20px
 	padding-right: 20px
 	padding-top: 4px
@@ -24,6 +24,6 @@
 	z-index: 1
 	&:hover
 		transform: scale(0.85)
-		background: var(--blued)
+		background: #fe4a49
 
 </style>

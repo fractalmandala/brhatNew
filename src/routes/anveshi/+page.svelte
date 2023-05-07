@@ -1,17 +1,27 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
+	import visibilityMode from '$lib/stores/visibility'
 	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import AnveshiTemple from '$lib/logos/AnveshiTemple.svelte'
+	import { ChevronDown } from 'lucide-svelte'
 	import { scale, fly } from 'svelte/transition'
 	import { backOut, backIn, quintIn, quintOut } from 'svelte/easing'
 	import { allChapters, allDiaryCards, allFaq, anveshiGeneral, anveshiTempleArt, anveshiVids } from '$lib/utils/supapulls'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
+	import CompButton from '$lib/ridunits/RIDButton.svelte'
+	import CompButton2 from '$lib/ridunits/RIDButton.svelte'
+	import CompButton3 from '$lib/ridunits/RIDButton.svelte'
+	import CompButton4 from '$lib/ridunits/RIDButton.svelte'
+	import autoAnimate from '@formkit/auto-animate'
 
 	const options = {}
 	let fullText = false
 	let chapters:string|any[]
 	let isPanel2:boolean
+	let iW:number
+	let breakPoint:boolean
+	let expandMenu = false
 	let cards:string|any[]
 	let faqs:string|any[]
 	let gens:string|any[]
@@ -30,6 +40,10 @@
 
 	function fauxfake(){
 		fake = !fake
+	}
+
+	function toggleMenu(){
+		expandMenu = !expandMenu
 	}
 
 	function expandText(){
@@ -86,6 +100,14 @@
 		})()
 	}
 
+	$: if ( iW <= 1023){
+		breakPoint = true
+	} else {
+		breakPoint = false
+	}
+
+	$: anyFaqOpen = isFaqOpen.some(item => item)
+
 	onMount(async() => {
 		chapters = await allChapters()
 		arts = await anveshiTempleArt()
@@ -93,6 +115,9 @@
 		cards = await allDiaryCards()
 		faqs = await allFaq()
 		gens = await anveshiGeneral()
+		if ( iW <= 1023 ){
+			breakPoint = true
+		}
 	})
 	
 </script>
@@ -103,6 +128,8 @@
 	</HeadComponent>
 </svelte:head>
 
+<svelte:window bind:innerWidth={iW}/>
+
 <!--hero image-->
 	<div class="x0">
 		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/brhatanveshi.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/brhatanveshi.webp')"></ParallaxImage>
@@ -110,18 +137,24 @@
 <!--end-->
 
 <!--all chapters-->
-	<div class="rta-grid grid2 colgap-64 rowgap-32 is-padded top-p-64">
-		<div class="rta-in-col rowgap-32">
+	<div class="rta-grid grid2 outer-box rowgap600 colgap600 p-top-64" class:left2={!fullText} class:right2={fullText} use:autoAnimate>
+		<div class="rta-column rowgap400 bord-bot-m p-bot-32-m" use:autoAnimate>
 				<div class="templeanim">
-				<AnveshiTemple></AnveshiTemple>			
+					{#if $visibilityMode}
+						<img src="/images/logos/anv-black.webp" alt="anveshi logo"/>
+					{:else}
+						<img src="/images/logos/anv-white.webp" alt="anveshi logo"/>					
+					{/if}
 				</div>
-				<h5>
+				<h4>
 			 		A travel program to contemporize ancient Indian tradition by guiding travel groups through hitherto rarely explored sacred kṣetras of India.
-				</h5>
+				</h4>
 				<p>
 				Each chapter of Bṛhat Anveṣī focuses on a specific area of India with dense concentrations of great temples and heritage centers. Anveṣī chapters are thrilling rides of three to four days, full of exploration of local cuisine, culture and heritage. Designed to satisfy both your wanderlust and curiosity, leaving you with an elevated taste of the cultural magic of India.
 				</p>
-				<button class="button yellow" on:click={expandText}>Read More</button>
+				<div on:click={expandText} on:keydown={fauxfake}>
+					<CompButton --thisbuttoncolor="#FF9F1C">Read More</CompButton>
+				</div>
 				{#if fullText}
 					<p>
 					A human being is born to search: for truth; for beauty; for meaning in life. Kaśmīra Śaiva darśana tells us that, vimarṣa – Śiva reflecting upon himself – is one of the highest goals of existence itself. According to another school of thought, Nature nudged evolution to a point where a species would emerge capable of reflecting upon itself and the mysteries of the cosmos, life and existence.
@@ -139,42 +172,51 @@
 						In Bhāratavarṣa and Hindu dharma, we discovered a perfect way to harmonize these two seemingly dichotomous urges of humans in one fulfilling quest. We created an entire tradition of traveling to sacred kṣetras, where both the inner and the outer quest of man for discovery is quenched in a way that is not just fulfilling, fun and satisfying but also spiritually and culturally elevating.
 					</p>
 					<h5>
-						Bṛhat Anveṣī is a program in tribute to this fundamental quest. It seeks to contemporize this ancient Indian tradition by guiding travel groups through sacred kṣetras of India which are hitherto unexplored by most of us, but which are not just full of architectural, sculptural and cultural splendor, but are also living systems carrying beautiful ancestral traditions for thousands of years. 
+						<strong>
+							Bṛhat Anveṣī is a program in tribute to this fundamental quest. It seeks to contemporize this ancient Indian tradition by guiding travel groups through sacred kṣetras of India which are hitherto unexplored by most of us, but which are not just full of architectural, sculptural and cultural splendor, but are also living systems carrying beautiful ancestral traditions for thousands of years. 
+						</strong>
 					</h5>
 					<h5>
-						We seek to satisfy the wanderlust in you in a way which will leave you not just intellectually satisfied but will also elevate your understanding and knowledge. <span class="anv">When discovering together such, we are Bṛhat Anveṣī.</span>
+						<strong>
+							We seek to satisfy the wanderlust in you in a way which will leave you not just intellectually satisfied but will also elevate your understanding and knowledge. <span class="anv">When discovering together such, we are Bṛhat Anveṣī.</span>
+						</strong>
 					</h5>
-					<button class="button yellow" on:click={expandText}>Close Text</button>
+				<div on:click={expandText} on:keydown={fauxfake}>
+					<CompButton2 --thisbuttoncolor="#FF9F1C">Close</CompButton2>
+				</div>
 				{/if}
 		</div>
-		<div id="chapterscolumn" class="rta-in-col rowgap-32 bot-p-16">
+		<div id="chapterscolumn" class="rta-column rowgap400 p-bot-16">
 			{#if chapters && chapters.length > 0}
 				{#each chapters as item}
-					<div class="rta-row colgap-24">
+					<div class="rta-row fixed colgap300">
 						<div class="rta-image height-30 w32">
 							<img src={item.image} alt={item.id}/>
 						</div>
-						<div class="rta-in-col rowgap-8 w64"> 
-							<h5 style="font-weight: bold">
-									<a href="/anveshi/chapter/{item.chapter}">
+						<div class="rta-column rowgap100 w64"> 
+							<h6 style="font-weight: bold" class="hover-yellow">
+								<a href="/anveshi/chapter/{item.chapter}">
 										{item.name}
-									</a>
-								</h5>
+								</a>
+							</h6>
+							{#if !breakPoint}
 								{#if item.content && item.content.length > 0}
 								<p>
-									{item.content.slice(0,300)}...<span style="color: var(--yellow); font-weight: bold"><a href="/anveshi/chapter/{item.chapter}">Know More</a></span>
+									{item.content.slice(0,300)}...<span style="font-weight: bold; color: #FF9F1C"><a href="/anveshi/chapter/{item.chapter}">Know More</a></span>
 								</p>
 								{/if}
-								<div class="cardothers">
-									<small style="color: var(--yellow)">
-										{item.duration}
-									</small>
-									<small style="color: var(--yellow)">
-										{item.dates}
-									</small>
-								</div>
+							{/if}
+							<div class="rta-row row-col colgap200">
+								<small>
+									{item.duration}
+								</small>
+								<small>
+									{item.dates}
+								</small>
 							</div>
+							<p class="is-yellow"><strong><a href="/anveshi/chapter/{item.chapter}">Visit Page</a></strong></p>
 						</div>
+					</div>
 				{/each}
 			{/if}
 		</div>
@@ -182,14 +224,14 @@
 <!--end-->
 
 <!--travel diaries-->
-	<div id="travel-diaries" class="rta-column minH min cc-all is-padded">
-		<div class="glass rta-grid grid2 right colgap-64 rowgap-32">
-			<div class="rta-in-col rowgap-16">
+	<div id="travel-diaries" class="rta-column outer-box minH ycenter p-top-64">
+		<div class="rta-grid grid2 right colgap600 rowgap400 bord-top p-top-64 bord-bot-m p-bot-32-m">
+			<div class="rta-column down">
 			{#if selectedCategory[1]}
-				<div class="rta-grid grid4 rowgap-24 colgap-24">
+				<div class="rta-grid grid4 stay2 rowgap300 colgap300">
 				{#if arts && arts.length > 0}
 					{#each arts as item, i}
-						<div class="rta-image height-30" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
+						<div class="rta-image height-20" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
 							<img src={item.image} alt={item.id}/>
 						</div>
 					{/each}
@@ -197,58 +239,85 @@
 				</div>
 			{/if}	
 			{#if selectedCategory[2]}
-				<div class="rta-grid grid4 rowgap-24 colgap-24 bot-p-16 bot-m-24" id="videos-section">
+				<div class="rta-grid grid4 rowgap400 colgap400" id="videos-section">
 					{#if vids && vids.length > 0}
 						{#each vids as item, i}
-						<div class="rta-video" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
+						<div class="rta-video rta-column rowgap100" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
 							<iframe width=100% height=100% loading="lazy" src="https://www.youtube.com/embed/{item.videoid}" title={item.name}></iframe>
 							<small>{item.name}</small>	
 						</div>
 						{/each}
 					{/if}
 				</div>
-				<button class="button yellow top-m-24" on:click={increaseLimit}>Load More</button>
+				<div on:click={increaseLimit} on:keydown={fauxfake}>
+					<CompButton3 --thisbuttoncolor="#FF9F1C">Load More</CompButton3>
+				</div>
 			{/if}			
 			{#if selectedCategory[3]}
-				<div class="box">
+				<div class="rta-column rowgap300">
 					<h4>Travel Diary by Kriteesh Vajrapani - Karnataka</h4>
 					<p>
 						The Bṛhat Anveṣī trip for me started at the airport itself. Instead of going to Hassan by myself, I chose to wait for the Bṛhat team to arrive, so that I could tag along. Interestingly, no one else in the group did this. Whether I am lazy and irresponsible, or extremely aware and smart! Either way, I was just lucky. The wait was more rewarding than I expected. It got me exclusive time with the Bṛhat Team.
 					</p>
-					<button class="yellowbutton"><a href="/anveshi/posts/kriteesh">Read More</a></button>
+					<a href="/anveshi/posts/kriteesh">
+						<CompButton4 --thisbuttoncolor="#FF9F1C">Read More</CompButton4>
+					</a>
 				</div>
 			{/if}	
 			</div>
-			<div class="rta-in-col rowgap-8 ta-r right" id="diaries">
-				<h4>Travel Diaries</h4>
-				<h5>
+			<div class="rta-column rowgap200 ta-r-d up" id="diaries">
+				<h3>Travel Diaries</h3>
+				<h5 class="p-bot-16">
 				Anveṣī Diaries is a collection of traveller images, trip videos, testimonials and writings from our trips. To submit your own experience, please write to anveshi@brhat.in
 				</h5>
-				<button class="button yellow" on:click={() => toggleCategory(3)} class:selected={selectedCategory[3]}>Travel Blog</button>
-				<button class="button yellow" on:click={() => toggleCategory(1)} class:selected={selectedCategory[1]}>Temple Art</button>
-				<button class="button yellow" on:click={() => toggleCategory(2)} class:selected={selectedCategory[2]}>Video Testimonials</button>
+				<button class="drawer-item2 ta-r-d" on:click={() => toggleCategory(3)} class:selected={selectedCategory[3]}>Travel Blog</button>
+				<button class="drawer-item2 ta-r-d" on:click={() => toggleCategory(1)} class:selected={selectedCategory[1]}>Temple Art</button>
+				<button class="drawer-item2 ta-r-d" on:click={() => toggleCategory(2)} class:selected={selectedCategory[2]}>Video Testimonials</button>
 			</div>
 		</div>
 	</div>
 <!--end-->
 
 <!--about anveshi, faq-->
-	<div class="rta-column minH min cc-all is-padded">
-		<div class="glass rta-grid grid2 left colgap-64 rowgap-32">
-			<div class="rta-in-col rowgap-16">
-				<button class="button yellow" on:click={() => toggleArea(3)} class:selected={selectedArea[3]}>About the Lead</button>
-				<button class="button yellow" on:click={() => toggleArea(1)} class:selected={selectedArea[1]}>FAQs</button>
-				<button class="button yellow" on:click={() => toggleArea(2)} class:selected={selectedArea[2]}>Who is Bṛhat Anveṣī</button>		
+	<div class="rta-column ycenter minH outer-box rowgap300" id="aboutsection">
+		{#if breakPoint}
+			<div class="rta-row colgap400 drawer-select">
+				{#if selectedArea[1]}
+				<button class="drawer-item" on:click={() => toggleArea(2)}>
+					About the Lead
+				</button>
+				{:else if selectedArea[2]}
+				<button class="drawer-item" on:click={() => toggleArea(1)}>
+					Read FAQs
+				</button>
+				{/if}
 			</div>
-			<div class="rta-in-col rowgap-16">
+		{/if}
+		{#if expandMenu || !breakPoint}
+		<div class="rta-row row-col ycenter rta-drawer-items colgap400 rowgap100 p-bot-32 bord-bot bord-top p-top-32" use:autoAnimate on:click={toggleMenu} on:keydown={fauxfake}>
+			<button class="drawer-item" on:click={() => toggleArea(2)} class:selected={selectedArea[2]}>About the Lead</button>
+			<button class="drawer-item" on:click={() => toggleArea(1)} class:selected={selectedArea[1]}>FAQs</button>
+		</div>
+		{/if}
+		<div class="rta-column p-bot-64-d rowgap200" use:autoAnimate>
 			{#if selectedArea[1]}
-				<div class="rta-grid grid2 rowgap-24 colgap-24" id="faqgrid" class:calibrated={isFaqOpen} out:fly={{ duration: 400, delay: 300, x: 500, easing: quintIn}} in:fly={{ duration: 250, delay: 0, x: 500, easing: quintOut}}>
+				{#if breakPoint}
+					<h4 class="bord-bot-m p-bot-16-m ta-c-m">
+						FAQs
+					</h4>
+				{/if}
+				<div class="rta-grid grid3 rowgap400 colgap600" id="faqgrid" class:calibrated={anyFaqOpen}>
 					{#if faqs && faqs.length > 0}
 						{#each faqs as item, i}
-							<div class="card-c faqcard" class:opentab={isFaqOpen[i]} on:click={() => toggleFaq(i)} on:keydown={() => toggleFaq(i)} in:scale={{ duration: 400, delay: 200, easing: backOut }} out:scale={{ duration: 200, delay: 0, easing: backOut}}>
-								<h6>{item.name}</h6>
+							<div class="rta-column rowgap200" class:opentab={isFaqOpen[i]} on:click={() => toggleFaq(i)} on:keydown={() => toggleFaq(i)} use:autoAnimate>
+								<div class="rta-row fixed ytop colgap100 rowgap400">
+									<div class="button-box" class:rotated={isFaqOpen[i]}>
+										<ChevronDown size="27" color="#878787"/>
+									</div>
+									<h6>{item.name}</h6>
+								</div>
 								{#if isFaqOpen[i]}
-									<p in:scale={{ duration: 400, delay: 200, easing: backOut }} out:scale={{ duration: 200, delay: 0, easing: backIn}}>{item.content}</p>
+									<p>{item.content}</p>
 								{/if}
 							</div>
 						{/each}
@@ -256,46 +325,25 @@
 				</div>
 			{/if}
 			{#if selectedArea[2]}
-				<div class="box" id="whoisanveshi" class:calibrated={isFaqOpen} out:fly={{ duration: 400, delay: 300, x: 500, easing: quintIn}} in:fly={{ duration: 250, delay: 0, x: 500, easing: quintOut}}>
-					<p>
-					A human being is born to search: for truth; for beauty; for meaning in life. Kaśmīra Śaiva darśana tells us that, vimarṣa – Śiva reflecting upon himself – is one of the highest goals of existence itself. According to another school of thought, Nature nudged evolution to a point where a species would emerge capable of reflecting upon itself and the mysteries of the cosmos, life and existence.
-					</p>
-					<p>
-						Without getting deep into darśana, the point is that, humans are born to search, born for anveṣaṇa. The word anveṣaṇa means discovering, seeking, or searching, and the one who searches is called – anveṣī – the discoverer. This element of discovery has mainly two dimensions – inner and outer. And the two are connected. The favorite theme of literature is wanderlust/ fernweh – the innate urge of humans to go out and discover the world.
-					</p>
-					<p>
-						Yes, that urge to discover the world is innate in all humans. To search for what is novel, what is new is basic. To discover the undiscovered, to unravel the hidden, to find pleasure in the very act of discovery – anveṣaṇa – comes naturally to us. Human history is full of courageous journeys taken individually and in groups, changing the course of entire humanity in the process. This urge is biological, as most other species also have this urge to chart new waters and to discover new territories. But in humans it is central. We are born – anveṣī.
-					</p>
-					<p>
-						But there is a deep inner dimension to this urge for discovery. While discovering the world we also discover the self. While looking for the new, we also crave for what is eternal and everlasting. While looking for change, we also look for the unchanging and the permanent. In short, while we discover the outer world, we also go on an inner journey an inner – anvekṣaṇa.
-					</p>
-					<p>
-						In Bhāratavarṣa and Hindu dharma, we discovered a perfect way to harmonize these two seemingly dichotomous urges of humans in one fulfilling quest. We created an entire tradition of traveling to sacred kṣetras, where both the inner and the outer quest of man for discovery is quenched in a way that is not just fulfilling, fun and satisfying but also spiritually and culturally elevating.
-					</p>
-					<h5>
-						Bṛhat Anveṣī is a program in tribute to this fundamental quest. It seeks to contemporize this ancient Indian tradition by guiding travel groups through sacred kṣetras of India which are hitherto unexplored by most of us, but which are not just full of architectural, sculptural and cultural splendor, but are also living systems carrying beautiful ancestral traditions for thousands of years. 
-					</h5>
-					<h5>
-						We seek to satisfy the wanderlust in you in a way which will leave you not just intellectually satisfied but will also elevate your understanding and knowledge. <span class="anv">When discovering together such, we are Bṛhat Anveṣī.</span>
-					</h5>
-				</div>
-			{/if}
-			{#if selectedArea[3]}
-				<div class="card-row">
-					<div class="card-image">
+				{#if breakPoint}
+					<h4 class="bord-bot-m p-bot-16-m ta-c-m">
+						About the Lead
+					</h4>
+				{/if}
+				<div class="rta-row rowgap300 colgap300">
+					<div class="rta-image height-30 w32" id="lead-photo">
 						<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/00team/pankajsaxena.webp" alt="pankajsaxena"/>
 					</div>
-					<div class="card-body">
-						<h5>
+					<div class="rta-column w64 rowgap200">
+						<h6>
 							Pankaj Saxena is a scholar of Hindu temple architecture, Hindu arts and aesthetics.
-						</h5>
+						</h6>
 						<p>
 							He has visited more than 1200 ancient temples all over India and documented photographic, historical and oral evidence of the living tradition centred around the Hindu temple. He writes on the meaning and purpose of the Hindu temple in Hindu society and history and has authored various articles on that topic.
 						</p>
 					</div>
 				</div>
 			{/if}
-			</div>
 		</div>
 	</div>
 <!--end-->
@@ -303,24 +351,113 @@
 
 <style lang="sass">
 
-#travel-diaries
-	height: 100%
+#aboutsection
+	@media screen and (max-width: 1023px)
+		flex-direction: column-reverse
+
+.is-yellow
+	color: #FF9F1C
+	text-transform: uppercase
+
+#chapterscolumn
+	.rta-image
+		img
+			object-fit: cover
+			width: 100%
+
+.hover-yellow
+	transition: 0.08s
+	&:hover
+		color: #FF9F1C
+
+#lead-photo
+	img
+		object-fit: contain
+
+.drawer-item
+	text-decoration: none
+	font-size: 16px
+	text-transform: uppercase
+	background: none
+	padding: 4px 12px
+	border-radius: 16px
+	border: none
+	&::before
+		margin-left: auto
+	&::before, &::after
+		content: ''
+		display: block
+		width: 0%
+		height: 2px
+		background: #FF9F1C
+		transition: 0.5s
+		border-radius: 2px
+	&:hover
+		&::after, &::before
+			width: 100%
+	@media screen and (max-width: 1023px)
+		width: 100%
+		font-weight: bold
+		font-size: 20px
+		border-bottom: 1px solid var(--borderline)
+		border-radius: 0
+		background: #FF9F1C
+		color: white
+		border-radius: 16px
+		
+
+.drawer-item
+	@media screen and (min-width: 1024px)
+		color: #474747		
+.drawer-item.selected
+	background: #FF9F1C
+	color: white
+
+.drawer-item2
+	@media screen and (max-width: 1023px)
+		border-bottom: 1px solid var(--borderline)
+		font-weight: bold
+		padding-bottom: 16px
+	&::after
+		background: #FF9F1C
+
+.drawer-item2.selected
+	background: #FF9F1c
+	color: white
+	@media screen and (max-width: 1023px)
+		padding-bottom: 4px
+
+#faqgrid
+	.rta-column
+		cursor: pointer
+	h6
+		transition: 0.08s
+		color: #474747
+		&:hover
+			color: #FF9F1c
+
+#faqgrid
+	.opentab
+		h6
+			color: #FF9F1C
+
+.button-box
+	transform-origin: center center
+	height: 27px
+
+.button-box.rotated
+	transform: rotate(180deg)
+	
 
 .templeanim
+	@media screen and (min-width: 1024px)
+		img
+			width: 50%
+			object-fit: contain
 	@media screen and (max-width: 1023px)
-		width: 64%
-
-#whoisanveshi
-	@media screen and (min-width: 1024px)
-		width: 88%	
-
-.rta-grid.grid2.calibrated
-	@media screen and (min-width: 1024px)
-		grid-template-rows: auto auto
-		grid-template-areas: "opentab opentab" ". ."
-		.card-c.opentab
-			grid-area: opentab
-	
+		img
+			width: 55%
+			object-fit: contain
 
 .x0
 	overflow: hidden
@@ -329,12 +466,19 @@
 	@media screen and (max-width: 1023px)
 		height: 60vh
 
-.faqcard
-	cursor: pointer
-	row-gap: 8px
-
-#faqgrid
-	align-items: start
-	align-content: start
+.grid3.calibrated
+	@media screen and (min-width: 1024px)
+		grid-template-areas: "opentab opentab opentab" ". . ."
+		grid-template-columns: ". . ."
+		.rta-column.opentab
+			grid-area: opentab
+			border-bottom: 1px solid var(--borderline)
+			padding-bottom: 24px
+	@media screen and (max-width: 1023px)
+		grid-template-areas: "."
+		grid-template-columns: 1fr
+		.rta-column.opentab
+			border-bottom: 1px solid var(--borderline)
+			padding-bottom: 24px
 
 </style>
