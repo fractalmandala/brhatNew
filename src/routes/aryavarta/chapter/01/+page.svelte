@@ -101,11 +101,6 @@
 .x1
 	overflow: hidden
 	padding-top: 80px
-	img
-		object-fit: cover
-		width: 56px
-		height: 56px
-		margin-bottom: 8px
 	@media screen and (min-width: 1024px)
 		gap: 0
 		h2
@@ -122,15 +117,9 @@
 	width: 100%
 	.text
 		justify-content: space-between
-		h6
-			font-weight: 400
-			line-height: 1.5
 	@media screen and (min-width: 1024px)
 		height: 800px
 		flex-direction: row
-		.back
-			height: calc(100vh - 80px)
-			width: 50vw
 		.rta-image
 			justify-content: center
 			align-items: center
@@ -142,8 +131,6 @@
 			width: 48%
 			height: max-content
 			padding-top: 120px
-			h6
-				text-align: right
 	@media screen and (max-width: 1023px)
 		flex-direction: column
 		.text
@@ -151,11 +138,6 @@
 			z-index: 2
 			padding-top: 16px
 			height: 100%
-			h6
-				font-size: 16px
-				text-align: left
-				line-height: 1.6
-				padding: 24px
 
 
 .x2
