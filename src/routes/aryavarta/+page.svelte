@@ -96,19 +96,13 @@
 		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim13.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim13.webp')"></ParallaxImage>
 	</div>
 
-<!--rotating chakra-->
-	<div class="rta-column is-padded x1">
-		<img class="hinduchakra" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/hinduchakra.png" alt="chakra" style="transform: rotate({sY/4}deg); opacity: {sY/800}" class:free={isPanel2}>
-	</div>
-<!--end-->
-
 <!--there is a place-->
-	<div class="rta-column is-padded minH align-all rowgap-16 x2">
-		<div id="glass1" class="glass rta-grid align-all grid2 ta-r rowgap-24 colgap-64">
-			<div class="rta-image cc-all ta-c-mob">
+	<div class="rta-column outer-box ycenter limit minH" data-lenis-scroll-snap-align="start">
+		<div class="rta-grid grid2 rowgap400 colgap600 fullH right2">
+			<div class="rta-image height-40">
 				<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/anc2.webp" alt="sen"/>
 			</div>
-			<div class="rta-in-col cc-top ta-r rowgap-16">
+			<div class="rta-column rowgap200 ycenter">
 				<h4>there is a place...</h4>
 				<p class="typett">
 				it exists outside of space-time as we know it, but many of us have been there...
@@ -120,9 +114,10 @@
 
 
 <!---text on we can visit such a place-->
-	<div class="rta-column is-padded minH all-cc colgap-64">
-		<div id="glass2" class="glass align-all rta-grid grid2 colgap-64 rowgap-24 back">
-			<div class="rta-in-col cc-top ta-l rowgap-16">
+	<div class="rta-column outer-box ycenter limit minH" data-lenis-scroll-snap-align="start">
+		<div class="rta-column p-bot-64"><div class="line"></div></div>
+		<div class="rta-grid grid2 rowgap400 colgap600 fullH left2">
+			<div class="rta-column rowgap200 ycenter">
 				<p class="typett">
 					Hive mind. Race memory. Blood bond.
 					We may call it many things, but we know it best when we see it,
@@ -138,7 +133,7 @@
 					In streams of imagi/memory that can flow through us...
 				</p>
 			</div>
-			<div class="rta-image cc-all ta-c-mob">
+			<div class="rta-image height-40">
 				<img src="/images/place.png" alt="place"/>
 			</div>
 		</div>
@@ -147,33 +142,35 @@
 
 
 <!--about soa-->
-	<div class="rta-column minH is-padded colgap-64">
-		<div id="glass3" class="glass rta-grid grid2 rowgap-24 colgap-64">
-			<div class="rta-image cc-all ta-c-mob">
+	<div class="rta-column outer-box ycenter limit minH" data-lenis-scroll-snap-align="start">
+		<div class="rta-column p-bot-64"><div class="line"></div></div>
+		<div class="rta-grid grid2 rowgap400 colgap600 fullH right2">
+			<div class="rta-image height-40 p-bot-32-m bord-bot-m">
 				<img src="/images/themandir.png" alt="temple"/>
 			</div>
-			<div class="rta-in-col rowgap-32 cc-top ta-r">
-			<h4>
-				The Scrolls of Āryavarta is a project to celebrate, express and engage in our shared lore- the dhārmika lore.
-			</h4>
-			<p>
-				It is a calling to all who dream of the Bhārata that once was, or Bhāratas that could have been.
-			</p>
-			<p>
-				We engage here in creative storytelling and lore creation, employing image generators to create for us visions of a place we all know.
-			</p>
+			<div class="rta-column rowgap200 ycenter">
+				<h4>
+					The Scrolls of Āryavarta is a project to celebrate, express and engage in our shared lore- the dhārmika lore.
+				</h4>
+				<p>
+					It is a calling to all who dream of the Bhārata that once was, or Bhāratas that could have been.
+				</p>
+				<p>
+					We engage here in creative storytelling and lore creation, employing image generators to create for us visions of a place we all know.
+				</p>
 			</div>
 		</div>
 	</div>
 <!--end-->
 
 <!--details of soa-->
-	<div class="rta-column minH is-padded x6 bot-p-32 panel2">
-		<div id="glass4" class="glass rta-grid grid2 rowgap-24 colgap-64">
-			<div class="rta-in-col cc-top rowgap-32">
-				<h5 class="typett">
-				Here you will find stories, visuals, genealogies, maps and more*. These are all leaps of speculative fiction into the Bhārata that once was.
-				</h5>
+	<div class="rta-column outer-box ycenter limit minH" data-lenis-scroll-snap-align="start">
+		<div class="rta-column p-bot-64"><div class="line"></div></div>
+		<div class="rta-grid grid2 left2 rowgap400 colgap600">
+			<div class="rta-column rowgap200">
+				<h6 class="typett">
+				Here you will find stories, visuals, genealogies, maps and more*. Each work is a leap of speculative fiction into the Bhārata that once was.
+				</h6>
 				<p>
 				Begin at Chapter 1, which is our first foray in to visual storytelling, and a collaborative project with the eminently follow-worthy handle on Twitter - <a href="https://twitter.com/TheEmissaryCo" target="_blank" rel="noreferrer">The Emissary.</a>
 				</p>
@@ -189,7 +186,7 @@
 				</div>
 				-->
 			</div>
-			<div class="rta-in-col cc-top ta-r rowgap-24">
+			<div class="rta-column rowgap300">
 				<h4>Or dive into any of the 40+ short stories from the Paurāṇika eons!</h4>
 				<p>
 				* Scrolls of Āryavarta is an exercise in historical speculation through the medium of fiction. The keen historian will find much in here that does not please him/her, but the endeavour here is entirely creative. Please do not let it be your source for any historical facts, or for dhārmika narrative/interpretation.
@@ -200,16 +197,16 @@
 <!--end-->
 
 <!--main 3 chapters-->
-	<div class="x7 is-padded rta-grid grid3 rowgap-32 colgap-32">
-		<div class="rta-in-col back height-50 all-p-16 cc-all rowgap-8" style="background-image: url('https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/chapter1/9.webp')">
+	<div class="x7 is-padded rta-grid grid3 rowgap400 colgap400 outer-box limit" data-lenis-scroll-snap-align="start">
+		<div class="rta-column back height-40 xcenter ycenter rowgap100 p-all-32" style="background-image: url('https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/chapter1/9.webp')">
 			<small>Chapter 1</small>
 			<h5><a href="/aryavarta/chapter/01">Kaśyapa's Lament</a></h5>
 		</div>
-		<div class="rta-in-col back height-50 all-p-16 cc-all rowgap-8" style="background-image: url('https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/chapter2/8.webp')">
+		<div class="rta-column back height-40 xcenter ycenter rowgap100 p-all-32" style="background-image: url('https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/chapter2/8.webp')">
 			<small>Chapter 2</small>
 			<h5><a href="/aryavarta/chapter/02">Sūta and Sudā</a></h5>
 		</div>
-		<div class="rta-in-col back height-50 all-p-16 cc-all rowgap-8 ta-c" style="background-image: url('https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/nasadiya/2-4.webp')">
+		<div class="rta-column back height-40 xcenter ycenter rowgap100 ta-c-d p-all-32" style="background-image: url('https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/nasadiya/2-4.webp')">
 			<small>Chapter 3</small>
 			<h5><a href="/aryavarta/chapter/03">Nasadīya Across Space and Time</a></h5>
 		</div>
@@ -217,65 +214,47 @@
 <!--end-->
 
 <!--all chapters-->
-	<div class="rta-column is-padded top-p-64 bot-p-64 rowgap-32">
+	<div class="rta-column p-top-64 rowgap400 outer-box limit">
+		<div class="rta-column"><div class="line"></div></div>
 		{#if lores && lores.length > 0}
+			<div class="rta-grid grid2 colgap600 rowgap600 p-bot-64">
 			{#each lores as item, i}
-				<div id="loresgrid" class="rta-row colgap-24 grid-{item.meta.tag} panels{i}"
+				<div id="loresgrid" class="rta-row fixed colgap300 bord-bot-m p-bot-32-m"
 					>
-					<div class="rta-image height-30 w32">
+					<div class="rta-image height-30-2 in50 w32">
 						<img 
 							src={item.meta.image} alt={item.meta.tag}
 							transition:fly={{ y: 200}}
 							style="object-position: center center"
 						/>
 					</div>
-					<div class="rta-in-col rowgap-16 w64" on:mouseenter={() => toggleImage(i)} on:mouseleave={() => toggleImage(i)}>
-						<h4 class="tt-c">
+					<div class="rta-column rowgap100 in50 w64" on:mouseenter={() => toggleImage(i)} on:mouseleave={() => toggleImage(i)}>
+						<h6 class="tt-c point hover-orange">
 							<a href={item.path}>
 								{item.meta.title}
 							</a>
-						</h4>
-						<p>"{item.meta.snip}"</p>
+						</h6>
+						<cite>"{item.meta.snip}"</cite>
 					</div>
 				</div>
 			{/each}
+			</div>
 		{/if}
 	</div>
 <!--end-->
 
 <style lang="sass">
 
-#glass1
-	justify-content: center
+.hover-orange
+	transition: 0.08s
+	&:hover
+		color: #ff3d00
 
 #loresgrid
-	h4
-		background: linear-gradient(16.89deg, #FFF622 6.93%, #F77F2F 62.97%)
-		-webkit-background-clip: text
-		-webkit-text-fill-color: transparent
-		background-clip: text
-		text-fill-color: transparent
 	@media screen and (min-width: 1024px)
-		grid-template-areas: "rta-image rta-in-col rta-in-col"
-		.rta-in-col
-			grid-area: rta-in-col
-
-#glass1, #glass2, #glass3, #glass4
-	h4
-		background: linear-gradient(96.89deg, #FFF622 6.93%, #F77F2F 92.97%)
-		-webkit-background-clip: text
-		-webkit-text-fill-color: transparent
-		background-clip: text
-		text-fill-color: transparent
-	.rta-image
-		img
-			border-radius: 50%
-
-.x5
-	@media screen and (min-width: 1024px)
-		height: 100vh
-		overflow: hidden
-		z-index: 10
+		grid-template-areas: "rta-image rta-column rta-column"
+		.rta-column
+			grid-area: rta-column
 
 .x7
 	h5
@@ -284,25 +263,26 @@
 		padding: 2px 5px
 		font-weight: 600
 		&:hover
-			color: #ff3d00
+			background: #ff3d00
 	small
 		width: max-content
-		background: #ff3d00
+		background: #171717
 		color: white
-		padding: 3px
+		padding: 3px 3px 0 3px
 	@media screen and (max-width: 1023px)
 		h5
 			color: white
 			background: rgba(0,0,0,0.8)
 			padding: 2px 5px
 			font-weight: 600
+			text-align: center
 			&:hover
-				color: #ff3d00
+				background: #ff3d00
 		small
 			width: max-content
-			background: #ff3d00
+			background: #171717
 			color: white
-			padding: 3px
+			padding: 3px 3px 0 3px
 
 @keyframes firstmove
 	0%
@@ -321,10 +301,6 @@
 		transform: translateY(100%)
 	100%
 		transform: translateX(0%)
-
-.aaa
-	&:hover
-		animation: imagegoes 1.2s var(--cubeb) 0.8s forwards
 
 @keyframes goaway
 	0%
@@ -352,26 +328,8 @@
 	@media screen and (min-width: 1024px)
 		height: 100vh
 	@media screen and (max-width: 1023px)
-		height: 70vh
-
-.hinduchakra
-	object-fit: contain
-	transform-origin: center center
-	position: fixed
-	@media screen and (min-width: 1024px)
-		height: 280px
-		width: 280px
-		top: 80px
-		left: 80px
-	@media screen and (max-width: 1023px)
-		height: 120px
-		width: 120px
-		top: 32px
-		left: 32px
-
-.hinduchakra.free
-	opacity: 0
-	display: none
+		height: 40vh
+		margin-top: 64px
 
 
 </style>

@@ -2,6 +2,7 @@
 
 	import { onMount } from 'svelte'
 	import { browser } from '$app/environment'
+	import autoAnimate from '@formkit/auto-animate'
 	import visibilityMode from '$lib/stores/visibility'
 	import { fly } from 'svelte/transition'
 	import { loreAll } from '$lib/utils/localpulls'	
@@ -19,14 +20,16 @@
 		dropdown = !dropdown
 	}
 
-	function toggleVisibility() {
-	  if (browser) {
-	    visibilityMode.update((mode) => {
-	      const newMode = !mode;
-	      localStorage.setItem('visibilityMode', JSON.stringify(newMode));
-	      return newMode;
-	    });
-	  }
+	function offDropdown(){
+		if (dropdown === true){
+			dropdown = false
+		}
+	}
+
+	function onDropdown(){
+		if (dropdown === false ){
+			dropdown = true
+		}
 	}
 
 
@@ -42,23 +45,25 @@
 		<a href="/aryavarta/chapter/01">Kaśyapa's Lament</a>
 		<a href="/aryavarta/chapter/02">Sūta and Sudā</a>
 		<a href="/aryavarta/chapter/03">Nasadīya Across Space and Time</a>
-		<div class="box" id="dropper" on:click={toggleDropdown} on:keydown={toggleDropdown}>
-			<p class="dropperp">All Lore</p>
+		<div class="dropper" on:click={toggleDropdown} on:keydown={toggleDropdown} data-lenis-prevent>
+			<div class="rta-row colgap100 dropper-visible" class:expanded={dropdown} on:mouseenter={onDropdown}>
+				All Lore
+				<div class="dropper-chevron" class:rotated={dropdown}>
+					<svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M2.6284 0.016602L0.983398 1.6616L7.9834 8.6616L14.9834 1.6616L13.3384 0.0166016L7.9834 5.35993L2.6284 0.016602Z" fill="#FE4A49"/>
+					</svg>
+				</div>
+			</div>
 				{#if dropdown}
-					{#if lores && lores.length > 0}
-						<div class="box dropped" data-lenis-prevent>
-						{#each lores as item, i}
-							<a href={item.path} in:fly={{ duration: 100, delay: i * 50, x: 0, y: 32}} out:fly={{ duration: 100, delay: 0, x: 0, y: 32}}>{item.meta.title}</a>
-						{/each}
-						</div>
-					{/if}
+					<div class="rta-grid grid3 dropper-invisible large" on:mouseleave={offDropdown} use:autoAnimate data-lenis-prevent>
+						{#if lores && lores.length > 0}
+							{#each lores as item, i}
+								<a class="tt-c" href={item.path} in:fly={{ duration: 100, delay: i * 10, x: 0, y: 32}} out:fly={{ duration: 100, delay: 0, x: 0, y: 32}}>{item.meta.title}</a>
+							{/each}
+						{/if}
+					</div>
 				{/if}
 		</div>
-	</div>
-	<div class="rta-row colgap-8" slot="modeswitch" on:click={toggleVisibility} on:keydown={fauxfake}>
-		<div class="togglemode" class:dark={!$visibilityMode} class:general={$visibilityMode}>
-			<div class="togglemodeball"></div>
-		</div>	
 	</div>
 </Header>
 	
@@ -69,22 +74,16 @@
 
 <style lang="sass">
 
-#dropper
+.dropper
 	position: relative
-	.dropped
-		position: absolute
-		text-align: right
-		min-width: 200px
-		right: 0
-		top: 32px
-		background: var(--beau)
-		padding: 4px 8px
-		row-gap: 4px
-		height: 40vh
-		overflow-y: scroll
-		a
-			&:hover
-				background: #ffffff
 
+.dropper-invisible
+	position: absolute
 
+.light
+	background: white
+
+.dark
+	background: #171717
+	
 </style>

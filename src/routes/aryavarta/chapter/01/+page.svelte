@@ -40,32 +40,35 @@
 	<HeadComponent>
 		Kaśyapa's Lament | Scrolls of Āryavarta at
 	</HeadComponent>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </svelte:head>
 
 
 <svelte:window bind:scrollY={y} bind:innerWidth={iW}/>
 
-<div class="type">
-	<div class="plain-one x1 pads back">
-		<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/12rid/00ridicons/ridicon.png" alt="general icon"/>
-		<p style="color: #ff3d00">Chapter 1</p>
-		<h2 style="transform: translateY({y}px); color: white">Kaśyapa's Lament</h2>
-		<p>
-			Our first release in the Scrolls of Āryavarta project. A collaboration with<a style="color: #ff3d00" href="https://twitter.com/TheEmissaryCo" target="_blank" rel="noreferrer">The Emissary</a>, who rendered the images in this story and triggered it all to begin with. 
-		</p>
-	</div>
-	<div class="plain-one x2">
+
+<div class="rta-column outer-box minH ycenter x1">
+	<p style="color: #ff3d00">Chapter 1</p>
+	<h2 style="transform: translateY({y}px);">Kaśyapa's Lament</h2>
+	<p>
+		Our first release in the Scrolls of Āryavarta project. A collaboration with<a style="color: #ff3d00" href="https://twitter.com/TheEmissaryCo" target="_blank" rel="noreferrer">The Emissary</a>, who rendered the images in this story and triggered it all to begin with. 
+	</p>
+</div>
+
+	<div class="rta-column x2">
 			{#if panels && panels.length > 0}
 				<Splide>
 					{#each panels as item, i}
 					<SplideSlide>
 					<div class="carouselitem" in:fly={{ delay: 300, duration: 300, x: 1400, opacity: 0, easing: quadOut}} out:fly={{ delay: 0, duration: 260, x: -1400, easing: quadIn}}>
-						<div class="box back" style="background-image: url('https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/chapter1/{item.image.substr(92,20)}');"></div>
-						<div class="box text">
-							<div>
+						<div class="rta-column rta-image">
+							<img src=https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/chapter1/{item.image.substr(92,20)} alt={item.newid}/>
+						</div>
+						<div class="rta-column text rowgap100">
 								<p>{item.newid}</p>
-								<h6>{item.text}</h6>
-							</div>
+								<em class="serif is-text">{item.text}</em>
 						</div>
 					</div>
 					</SplideSlide>
@@ -73,29 +76,27 @@
 				</Splide>
 			{/if}
 	</div>
-	<div class="plain-one x3 pads">
-		<div class="a-title pads">
-			<h6 style="color: white">
+	<div class="rta-column x3 rowgap400 outer-box limit">
+		<div class="rta-column p-bot-64"><div class="line"></div></div>
+			<h6>
 				Next
 			</h6>
-		</div>
-		<div class="a-box pads">
-			<h3 style="color: white"><a href="/aryavarta/chapter/02" data-sveltekit-reload>Sūta and Sudā</a></h3>
+		<div class="rta-column p-bot-64">
+			<h3><a href="/aryavarta/chapter/02">Sūta and Sudā</a></h3>
 			<p>or, return to <span style="color: #ff3d00"><a href="/aryavarta"> Āryavarta</a></span>  main page.</p>
 		</div>
 	</div>
-</div>
+
 
 <style lang="sass">
+
+.serif
+	font-family: 'Playfair Display', serif
 
 .x3
 	h3 a
 		&:hover
 			color: #ff3d00
-
-.type
-	padding-top: 64px
-	background: #171717
 
 .x1
 	overflow: hidden
@@ -110,52 +111,41 @@
 		h2
 			padding: 16px 0
 	@media screen and (max-width: 1023px)
-		padding-top: 64px
+		padding-top: 128px
 		padding-bottom: 64px
-		height: 100vh
 		gap: 0
 		h2
 			padding: 16px 0
-
-.x1, .x2
-	@media screen and (min-width: 1024px)
-		height: 100vh
-
-.x2
-	gap: 8px
-	@media screen and (max-width: 1023px)
-		min-height: 100vh
 
 .carouselitem
 	display: flex
 	width: 100%
 	.text
 		justify-content: space-between
-		p
-			padding-left: 32px
 		h6
 			font-weight: 400
 			line-height: 1.5
-			color: white
 	@media screen and (min-width: 1024px)
 		height: 800px
 		flex-direction: row
 		.back
 			height: calc(100vh - 80px)
 			width: 50vw
-		.text
+		.rta-image
+			justify-content: center
+			align-items: center
 			width: 50%
-			height: 80%
-			padding-top: 80px
+			img
+				width: 80%
+				height: 72%
+		.text.rta-column
+			width: 48%
+			height: max-content
+			padding-top: 120px
 			h6
 				text-align: right
-				padding: 32px	
 	@media screen and (max-width: 1023px)
 		flex-direction: column
-		.back
-			width: 100%
-			height: 40vh
-			z-index: 2
 		.text
 			width: 100%
 			z-index: 2

@@ -191,6 +191,9 @@ body, html
 	background-size: cover
 	background-repeat: no-repeat
 
+.is-mand
+	color: #538733
+
 //sizing
 .minH
 	@media screen and (min-width: 1024px)
@@ -229,6 +232,12 @@ body, html
 .height-20
 	@media screen and (min-width: 1024px)
 		height: 20vh
+	@media screen and (max-width: 1023px)
+		height: 8vh
+
+.height-10
+	@media screen and (min-width: 1024px)
+		height: 10vh
 	@media screen and (max-width: 1023px)
 		height: 8vh
 
@@ -297,7 +306,7 @@ body, html
 		align-items: flex-start
 	@media screen and (min-width: 1024px)
 		flex-direction: row
-		.in50
+		.in50, .in50.w32, .in50.w64
 			width: calc(50% - 16px)
 		.w32
 			width: 32%
@@ -306,6 +315,10 @@ body, html
 	@media screen and (max-width: 1023px)
 		flex-direction: row
 		flex-wrap: wrap
+		.in50.w32
+			width: 32%
+		.in50.w64
+			width: 60%
 
 .rta-row.fixed
 	@media screen and (max-width: 1023px)
@@ -351,6 +364,9 @@ body, html
 		transition: 0.2s
 	.grid2.left0
 		grid-template-columns: 24% 1fr
+		grid-template-areas: ". ."
+	.grid2.right0
+		grid-template-columns: 1fr 24%
 		grid-template-areas: ". ."
 	.grid2.left
 		grid-template-columns: 32% 1fr
@@ -521,12 +537,14 @@ body, html
 		padding: 16px
 
 .light
+	.is-text
+		color: #474747
 	p, pre, li
 		color: $grey87
-	h1, h2, h5, h3
+	.mainstory p
+		color: #474747
+	h1, h2, h5, h3, h6
 		color: $grey47
-	h6
-		color: $black
 	small
 		color: $grey87
 	cite
@@ -541,6 +559,8 @@ body, html
 
 
 .dark
+	.is-text
+		color: #FFFFFF
 	p, pre, li
 		color: $grey87
 	h5
@@ -657,6 +677,8 @@ body, html
 			&:hover
 				background: #fe4a49
 				color: white
+	.dropper-invisible.large
+		min-width: 600px
 
 .dropper-visible.expanded
 	color: white
