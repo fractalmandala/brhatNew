@@ -202,6 +202,12 @@ body, html
 	@media screen and (max-width: 1023px)
 		height: 20vh
 
+.height-40-20
+	@media screen and (min-width: 1024px)
+		height: 20vh
+	@media screen and (max-width: 1023px)
+		height: 20vh
+
 .height-30
 	@media screen and (min-width: 1024px)
 		height: 30vh
@@ -213,6 +219,12 @@ body, html
 		height: 30vh
 	@media screen and (max-width: 1023px)
 		height: 12vh
+
+.height-30-3
+	@media screen and (min-width: 1024px)
+		height: 30vh
+	@media screen and (max-width: 1023px)
+		height: 20vh
 
 .height-20
 	@media screen and (min-width: 1024px)
@@ -237,6 +249,9 @@ body, html
 
 .tt-u
 	text-transform: uppercase
+
+.tt-c
+	text-transform: capitalize
 
 //containers
 .rta-column
@@ -315,6 +330,7 @@ body, html
 	@media screen and (max-width: 1023px)
 		.w32, .w64
 			width: 100%
+		flex-direction: column
 
 .rta-grid
 	display: grid
@@ -333,6 +349,9 @@ body, html
 		grid-template-columns: 1fr 1fr
 		grid-template-areas: ". ."
 		transition: 0.2s
+	.grid2.left0
+		grid-template-columns: 24% 1fr
+		grid-template-areas: ". ."
 	.grid2.left
 		grid-template-columns: 32% 1fr
 		grid-template-areas: ". ."
@@ -354,7 +373,10 @@ body, html
 		grid-template-areas: "." "." "." "."
 	.grid4.stay2
 		grid-template-columns: 1fr 1fr
-		grid-template-areas: "." "."
+		grid-template-areas: ". ."
+	.grid4.stay3
+		grid-template-columns: 1fr 1fr 1fr
+		grid-template-areas: ". . ."
 	.grid3
 		grid-template-columns: 1fr
 		grid-template-areas: "." "." "."
@@ -476,6 +498,9 @@ body, html
 .p-bot-32-d
 	@media screen and (min-width: 1024px)
 		padding-bottom: 32px
+.p-top-32-m
+	@media screen and (max-width: 1023px)
+		padding-top: 32px
 .p-top-8
 	padding-top: 8px
 
@@ -666,3 +691,11 @@ body, html
 @media screen and (min-width: 1024px)
 	.carousel-item
 		display: block
+
+.point
+	cursor: pointer
+
+.line
+	height: 1px
+	width: 100%
+	background: var(--borderline)

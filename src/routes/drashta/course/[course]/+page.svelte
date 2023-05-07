@@ -77,136 +77,86 @@
 
 
 <!--page header with title and icons-->
-	<div id="headersection" class="rta-column minH is-padded rowgap-32">
-		<img src={data.image} alt={data.name}/>
-		<div id="heading" class="rta-in-col rowgap-16 text-black top-p-16 background">
-			<h2 class="heading">{data.name}</h2>
-			<h5 class="serif">
-				{data.excerpt}
-			</h5>
-		</div>
-		<div class="rta-grid grid4 stays-grid colgap-32">
-			{#if details && details.length > 0}
-				{#each details as item}
-					<div class="rta-in-col cc-all bord-all all-p-16 background captioned-text">
-						<div class="rta-icon2">
-							<img src={item.image} alt={item.name}/>
-						</div>
-						<h5 class="tt-uc" style="color: var(--black)">{item.content}</h5>
-						<p class="tt-uc"><b>{item.name}</b></p>
-					</div>
-				{/each}
-			{/if}
+	<div id="headersection" class="rta-column outer-box minH p-top-64 rowgap600">
+		<div class="rta-grid colgap600 grid2 right2" id="headersectionmaingrid">
+			<div class="rta-column rowgap400">
+				<div id="heading" class="rta-column rowgap400 p-top-64 background">
+					<h2 class="heading">{data.name}</h2>
+					<h5 class="serif">
+						{data.excerpt}
+					</h5>
+				</div>
+				<div class="rta-grid grid4 colgap400 rowgap400">
+					{#if details && details.length > 0}
+						{#each details as item}
+							<div class="rta-column xcenter rowgap100 bord-bot-m p-bot-16-m background">
+								<div class="rta-icon2 rta-column">
+									<img src={item.image} alt={item.name}/>
+								</div>
+								<h6 class="tt-uc ta-c-d">{item.content}</h6>
+								<small class="tt-uc ta-c-d"><b>{item.name}</b></small>
+							</div>
+						{/each}
+					{/if}
+				</div>
+			</div>
+			<div class="rta-column rta-image" id="heroimage">
+				<img src={data.image} alt={data.name}/>
+			</div>
 		</div>
 	</div>
 <!--end-->
 
 <!--all course details area-->
-	<div class="rta-grid grid2 left is-padded minH min all-align rowgap-32 colgap-32">
-		<div id="columnofbuttons" class="rta-in-col rowgap-8">
-			{#if !breakPoint}
-			<button class="download-button" on:click={() => toggleArea(1)} class:selected={area[1]}>
-  			<div class="docs">
-					<svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line y2="13" x2="8" y1="13" x1="16"></line><line y2="17" x2="8" y1="17" x1="16"></line><polyline points="10 9 9 9 8 9"></polyline>
-					</svg>
-					Introduction
-				</div>
-  			<div class="download">
-  			  <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line y2="3" x2="12" y1="15" x1="12"></line>
-					</svg>
-  			</div>
-			</button>
-			<button class="download-button" on:click={() => toggleArea(2)} class:selected={area[2]}>
-  			<div class="docs">
-					<svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line y2="13" x2="8" y1="13" x1="16"></line><line y2="17" x2="8" y1="17" x1="16"></line><polyline points="10 9 9 9 8 9"></polyline>
-					</svg>
-					Course Contents
-				</div>
-  			<div class="download">
-  			  <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line y2="3" x2="12" y1="15" x1="12"></line>
-					</svg>
-  			</div>
-			</button>
-			<button class="download-button" on:click={() => toggleArea(3)} class:selected={area[3]}>
-  			<div class="docs">
-					<svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line y2="13" x2="8" y1="13" x1="16"></line><line y2="17" x2="8" y1="17" x1="16"></line><polyline points="10 9 9 9 8 9"></polyline>
-					</svg>
-					Course Audience
-				</div>
-  			<div class="download">
-  			  <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line y2="3" x2="12" y1="15" x1="12"></line>
-					</svg>
-  			</div>
-			</button>
-			<button class="download-button" on:click={() => toggleArea(4)} class:selected={area[4]}>
-  			<div class="docs">
-					<svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line y2="13" x2="8" y1="13" x1="16"></line><line y2="17" x2="8" y1="17" x1="16"></line><polyline points="10 9 9 9 8 9"></polyline>
-					</svg>
-					Learner Takeaways
-				</div>
-  			<div class="download">
-  			  <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line y2="3" x2="12" y1="15" x1="12"></line>
-					</svg>
-  			</div>
-			</button>
-			<button class="download-button" on:click={() => toggleArea(5)} class:selected={area[5]}>
-  			<div class="docs">
-					<svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line y2="13" x2="8" y1="13" x1="16"></line><line y2="17" x2="8" y1="17" x1="16"></line><polyline points="10 9 9 9 8 9"></polyline>
-					</svg>
-					Instructor Profile
-				</div>
-  			<div class="download">
-  			  <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line y2="3" x2="12" y1="15" x1="12"></line>
-					</svg>
-  			</div>
-			</button>
-			<button class="download-button" on:click={() => toggleArea(6)} class:selected={area[6]}>
-  			<div class="docs">
-					<svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line y2="13" x2="8" y1="13" x1="16"></line><line y2="17" x2="8" y1="17" x1="16"></line><polyline points="10 9 9 9 8 9"></polyline>
-					</svg>
-					Session Schedule
-				</div>
-  			<div class="download">
-  			  <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line y2="3" x2="12" y1="15" x1="12"></line>
-					</svg>
-  			</div>
-			</button>
-			{/if}
+	<div class="rta-grid grid2 left0 colgap600 outer-box">
+		<div id="columnofbuttons" class="rta-column bord-right-d rowgap300 p-bot-64">
 			{#if breakPoint}
-			<button class="dropdown-menu-button red" on:click={toggleMenu}>EXPAND DETAILS</button>
-				{#if expandMenu}
-					<div class="rta-in-col rowgap-8">
-						<button class="menu-inside-button" on:click={() => toggleArea(1)} class:selected={area[1]}>Introduction</button>
-						<button class="menu-inside-button" on:click={() => toggleArea(2)} class:selected={area[2]}>Course Contents</button>
-						<button class="menu-inside-button" on:click={() => toggleArea(3)} class:selected={area[3]}>Course Audience</button>
-						<button class="menu-inside-button" on:click={() => toggleArea(4)} class:selected={area[4]}>Learner Takeaways</button>
-						<button class="menu-inside-button" on:click={() => toggleArea(5)} class:selected={area[5]}>Instructor Profile</button>
-						<button class="menu-inside-button" on:click={() => toggleArea(6)} class:selected={area[6]}>Session Schedule</button>
-					</div>
-				{/if}
+			<button class="drawer-select" on:click={toggleMenu}>EXPAND DETAILS</button>
+			{/if}
+			{#if !breakPoint || expandMenu}
+			<div class="rta-column rowgap300" on:click={toggleMenu} on:keydown={fauxfake}>
+			<button class="drawer-item2" on:click={() => toggleArea(1)} class:selected={area[1]}>
+					Introduction
+			</button>
+			<button class="drawer-item2" on:click={() => toggleArea(2)} class:selected={area[2]}>
+					Course Contents
+			</button>
+			<button class="drawer-item2" on:click={() => toggleArea(3)} class:selected={area[3]}>
+					Course Audience
+			</button>
+			<button class="drawer-item2" on:click={() => toggleArea(4)} class:selected={area[4]}>
+					Learner Takeaways
+			</button>
+			<button class="drawer-item2" on:click={() => toggleArea(5)} class:selected={area[5]}>
+					Instructor Profile
+			</button>
+			<button class="drawer-item2" on:click={() => toggleArea(6)} class:selected={area[6]}>
+					Session Schedule
+			</button>
+			</div>
 			{/if}
 		</div>
-		<div class="rta-in-col text-black">
+		<div class="rta-column p-bot-64">
 			{#if area[1]}
-			<div class="rta-in-col rowgap-24" in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut}} out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn}}>
-				<h4 class="heading">Course Introduction</h4>
+			<div class="rta-column rowgap300" in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut}} out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn}}>
+				<h4 class="heading is-blue">Course Introduction</h4>
 				<p class="serif">
 				{data.content}
 				</p>
 			</div>
 			{/if}
 			{#if area[2]}
-			<div class="rta-in-col rowgap-24" in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut}} out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn}}>
-				<h4 class="heading">Course Contents</h4>
+			<div class="rta-column rowgap300" in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut}} out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn}}>
+				<h4 class="heading is-blue">Course Contents</h4>
 				{#if conts && conts.length > 0}
 					{#each conts as item}
-						<div class="rta-in-col rowgap-8 bord-all all-p-16">
-							<h5 class="tt-c heading">{item.name}</h5>
+						<div class="rta-column rowgap-8 bord-bot p-bot-16">
+							<h6 class="tt-c heading">{item.name}</h6>
 							{#if item.content && item.content.length > 0}
 							<pre class="serif">{item.content}</pre>
 							{/if}
 							{#if item.books && item.books.length > 0}
-							<div class="rta-in-col">
+							<div class="rta-column">
 								<small>Books Consulted:</small>
 								<small style="color: #878787">{item.books}</small>
 							</div>
@@ -217,8 +167,8 @@
 			</div>
 			{/if}
 			{#if area[3]}
-			<div class="rta-in-col rowgap-24" in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut}} out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn}}>
-				<h4 class="heading">Who is the Course For</h4>
+			<div class="rta-column rowgap100" in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut}} out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn}}>
+				<h4 class="heading is-blue">Who is the Course For</h4>
 				{#if isFor && isFor.length > 0}
 					{#each isFor as item}
 						<pre class="serif bord-all all-p-16">
@@ -229,12 +179,12 @@
 			</div>
 			{/if}
 			{#if area[4]}
-			<div class="rta-in-col rowgap-24" in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut}} out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn}}>
-				<h4 class="heading">Learner Takeaways</h4>
+			<div class="rta-column rowgap300" in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut}} out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn}}>
+				<h4 class="heading is-blue">Learner Takeaways</h4>
 				{#if takes && takes.length > 0}
 					{#each takes as item}
-						<div class="rta-in-col rowgap-8 bord-all all-p-16">
-							<h5 class="heading">{item.name}</h5>
+						<div class="rta-column rowgap100 bord-bot p-bot-16">
+							<h6 class="heading">{item.name}</h6>
 							<pre class="serif">{item.content}</pre>
 						</div>
 					{/each}
@@ -242,16 +192,16 @@
 			</div>
 			{/if}
 			{#if area[5]}
-			<div class="rta-in-col rowgap-24" in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut}} out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn}}>
-				<h4 class="heading">Course Instructor</h4>
+			<div class="rta-column rowgap300" in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut}} out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn}}>
+				<h4 class="heading is-blue">Course Instructor</h4>
 				{#if instructor && instructor.length > 0}
 					{#each instructor as item}
-						<div class="rta-in-col colgap-24 rowgap-8 bord-all all-p-16">
-							<div class="rta-image w32 height-30">
+						<div class="rta-row row-col fixed rowgap300 colgap300 bord-bot p-bot-16">
+							<div class="rta-image w32 height-30-3">
 								<img src={item.image} alt={item.name}/>
 							</div>
-							<div class="rta-in-col w64">
-								<h5 class="heading">{item.name}</h5>
+							<div class="rta-column w64">
+								<h6 class="heading">{item.name}</h6>
 								<pre class="serif">{item.content}</pre>
 							</div>
 						</div>
@@ -262,20 +212,23 @@
 		</div>
 	</div>
 <!--end-->
-
+	<div class="rta-column outer-box"><div class="line"></div></div>
 <!--all other courses list-->
-	<div class="rta-grid grid4 is-padded minH all-align rowgap-32 colgap-32">
-		<h4 class="heading">All Courses</h4>
+	<div class="rta-grid grid2 left0 rowgap400 outer-box colgap600 p-top-64">
+		<div class="rta-column">
+			<h3 class="heading is-blue">All Courses</h3>
+		</div>
+		<div class="rta-grid grid3 colgap400 rowgap400 p-bot-64">
 		{#if otherCourses && otherCourses.length > 0}
 			{#each otherCourses as item}
-				<div class="rta-in-col rowgap-8 bord-bot">
+				<div class="rta-column rowgap100 bord-bot p-bot-16">
 					{#if item.status === 'upcoming' || item.status === 'Upcoming'}
 						<small class="label label-red">{item.status}</small>
 						<h6 class="heading tt-c">{item.name}</h6>
 						<p>{item.datefrom} | with {item.ins}</p>
 					{:else}
 					<small class="label">{item.status}</small>
-					<h6 class="heading tt-c">
+					<h6 class="heading tt-c is-blue">
 						<a href="/drashta/course/{item.course}">
 							{item.name}
 						</a>
@@ -285,38 +238,65 @@
 				</div>
 			{/each}
 		{/if}
+		</div>
 	</div>
 <!--end-->
 
 
 <style lang="sass">
 
-#headersection
-	position: relative
-	overflow: hidden
-	>img
-		position: absolute
-		object-fit: cover
-		z-index: 0
-	>.rta-in-col
-		z-index: 1
-	>.rta-grid
-		z-index: 1
-	@media screen and (min-width: 1024px)
-		>img
-			top: 15%
-			right: 0
-			z-index: 0
-			object-position: center right
-			height: 70%
-			width: 40%
+.drawer-select
+	background: #0170B9
+	color: white
+	border: none
+	font-size: 18px
+	padding: 8px
+	border-radius: 20px
+
+
+#heading
+	h2
+		@media screen and (max-width: 1023px)
+			font-size: 2.7rem
+
+#headersectionmaingrid
 	@media screen and (max-width: 1023px)
-		padding-top: calc(30vh + 64px)
-		>img
-			top: 64px
-			left: 0
-			width: 100%
-			height: 30vh
+		grid-template-areas: "hero" "."
+		padding-top: 64px
+		#heroimage
+			grid-area: hero
+
+.is-blue
+	color: #0170B9
+
+#columnofbuttons
+	@media screen and (min-width: 1024px)
+		padding-right: 32px
+
+.drawer-item2
+	&::after
+		background: #0170B9
+	@media screen and (max-width: 1023px)
+		text-align: center
+
+#heroimage
+	@media screen and (min-width: 1024px)
+		justify-content: center
+		img
+			height: 80%
+
+.rta-icon2
+	img
+		object-fit: cover
+	@media screen and (min-width: 1024px)
+		align-items: center
+		img
+			width: 80px
+			height: 80px
+	@media screen and (max-width: 1023px)
+		img
+			width: 80px
+			height: 80px
 
 h2
 	text-transform: capitalize
@@ -326,10 +306,6 @@ h2
 		letter-spacing: -2px
 	@media screen and (max-width: 1023px)
 		letter-spacing: -1px
-
-#heading
-	@media screen and (min-width: 1024px)
-		width: 75%
 
 .serif
 	font-family: 'Nanum Myeongjo', serif
@@ -341,11 +317,7 @@ pre.serif, p.serif
 	font-weight: 400
 	font-size: 20px
 
-#columnofbuttons
-	@media screen and (min-width: 1024px)
-		width: 72%
-
-.download-button.selected
+.drawer-item2.selected
 	border: 1px solid var(--bord)
 
 </style>

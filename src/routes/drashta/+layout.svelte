@@ -29,12 +29,17 @@
 	<div slot="local" class="boxmidrow">
 		<DrashtaLinks flytime={onHead}></DrashtaLinks>
 	</div>
-	<div class="rta-row colgap-8" slot="modeswitch" on:click={toggleVisibility} on:keydown={fauxfake}>
-		<div class="togglemode" class:dark={!$visibilityMode} class:general={$visibilityMode}>
-			<div class="togglemodeball"></div>
-		</div>	
-	</div>
 </Header>
 <div class="type" class:light={$visibilityMode} class:dark={!$visibilityMode}>
 	<slot></slot>
 </div>
+
+<style lang="sass">
+
+.light
+	background: white
+
+.dark
+	background: #171717
+
+</style>

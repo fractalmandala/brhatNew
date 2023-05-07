@@ -3,14 +3,26 @@
 	import { onMount } from 'svelte'
 	import { fly } from 'svelte/transition'
 	import { circOut } from 'svelte/easing'
+	import autoAnimate from '@formkit/auto-animate'
 	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import LogDr from '$lib/logos/LogDr.svelte'
 	import { allCourses } from '$lib/utils/supapulls'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
+	import CompButton from '$lib/ridunits/RIDButton.svelte'
+	import CompButton2 from '$lib/ridunits/RIDButton.svelte'
+	import CompButton3 from '$lib/ridunits/RIDButton.svelte'
+	import CompButton4 from '$lib/ridunits/RIDButton.svelte'
 	let fullText = false
+	let iW:number
+	let breakPoint:boolean
+	let fake = false
 	let sY:number
 	let iH:number
 	let diff:number
+
+	function fauxfake(){
+		fake = !fake
+	}
 
 	function toggleFullText(){
 		fullText = !fullText
@@ -18,14 +30,23 @@
 
 	let courses:string|any[]
 
-	$: diff = iH - sY
+	$: if ( iW <= 1023 ) {
+		breakPoint = true
+		diff = -300
+	} else {
+		breakPoint = false
+		diff = iH - sY
+	}
 
 	onMount(async() => {
 		courses = await allCourses()
+		if ( iW <= 1023 ) {
+			breakPoint = true
+		}
 	})
 </script>
 
-<svelte:window bind:scrollY={sY} bind:innerHeight={iH}/>
+<svelte:window bind:scrollY={sY} bind:innerHeight={iH} bind:innerWidth={iW}/>
 
 <svelte:head>
 	<HeadComponent>
@@ -33,7 +54,7 @@
 	</HeadComponent>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </svelte:head>
 
 <!--parallax section on top-->
@@ -43,19 +64,22 @@
 <!--end-->
 
 <!--single section contains all text, all course cards scroll within it-->
-	<div id="introtext" class="rta-grid grid2 thirty is-padded align-all top-p-64 bot-p-64 rowgap-32 colgap-64" class:left={!fullText} class:right={fullText}>
-		<div class="rta-in-col rowgap-16 top-p-64 text-black on-top" class:thin={!fullText} class:thick={fullText}>
-			<LogDr></LogDr>
+	<div id="introtext" class="rta-grid grid2 outer-box rowgap600 colgap600 p-top-64" class:left2={!fullText} class:right={fullText}>
+		<div class="rta-column rowgap300" class:thin={!fullText} class:thick={fullText} use:autoAnimate>
 			<p class="serif">
-				is an offering in deep learning that extends courses on some of the greatest ancient and contemporary philosophers (draṣṭās) and schools of thoughts (darśanas).
+				An offering in deep learning that extends courses on some of the greatest ancient and contemporary philosophers (draṣṭās) and schools of thoughts (darśanas).
 			</p>
 			<p class="serif">What ultimately differentiates a culture are its ways of looking and seeing. How we see ourselves and the world is extremely important to our identity and to the way the world perceives us. But to Hindu civilization seeing was not merely a physical act of looking at saṃsāra using our external eyes. The focus of our civilization was as much on our internal journey.</p>
 			<p class="serif">
 				This anchor was sādhanā, done under the guidance and grace of a guru. A purely intellectual civilization is anchorless. In order to have an opinion on saṃsāra one needs a world to look at and a worldview to look from – <span style="color: var(--blue)">dṛśya</span> and <span style="color: var(--blue)">darśana.</span>
 			</p>
-			<button class="button blue" on:click={toggleFullText}>READ MORE</button>
+			{#if !fullText}
+			<div on:click={toggleFullText} on:keydown={fauxfake}>
+				<CompButton --thisbuttoncolor="#0170B9">Read More</CompButton>
+			</div>
+			{/if}
 			{#if fullText}
-				<div class="rta-in-col rowgap-24 text-black top-p-16 bot-p-16" in:fly={{ duration: 600, y: -300, easing: circOut}} out:fly={{ duration: 500, y: 0, x: -300, easing: circOut}}>
+				<div class="rta-column rowgap300">
 					<p class="serif">
 					The Rṣīs of Bhāratavarṣa never neglected saṃsāra and developed objective sciences and disciplines to their heights, but at the same time they were always careful to peg that intellectual activity to a deep inner anchor.
 					</p>
@@ -71,48 +95,64 @@
 					<h5 class="serif" style="font-weight: 600">
 						One who is on this inner path of sādhanā (darśana) is a draṣṭā. That is how our rṣīs became draṣṭās. They were not called ‘inventors of knowledge’, but the draṣṭā of truth.
 					</h5>
-					<div class="rta-row colgap-8">
-						<button class="button blue"><a href="/drashta/schools">EXPLORE MORE</a></button>
-						<button class="button blue" on:click={toggleFullText}>CLOSE</button>
+					<div class="rta-row colgap200">
+						<div on:click={toggleFullText} on:keydown={fauxfake}>
+							<CompButton2 --thisbuttoncolor="#0170B9">Close</CompButton2>
+						</div>
+						<a href="/drashta/schools">
+							<CompButton --thisbuttoncolor="#0170B9">Explore More</CompButton>
+						</a>
 					</div>
 				</div>
 			{/if}
 		</div>
-		<div id="coursescolumn" class="rta-in-col rowgap-32 top-p-64 on-bottom" class:thick={!fullText} class:thin={fullText} style="transform: translateY({diff + 300}px); margin-bottom: {diff + 364}px">
-			<h4>All Courses:</h4>
+		<div id="coursescolumn" class="rta-column rowgap400 p-top-32-m" class:thick={!fullText} class:thin={fullText} style="transform: translateY({diff + 300}px); margin-bottom: {diff + 364}px">
+			<h3>All Courses:</h3>
 			{#if courses && courses.length > 0}
 				{#each courses as item}
 					{#if item.status === 'upcoming' || item.status === 'Upcoming'}
-					<div class="rta-row colgap-24 bord-bot bot-p-32">
-						<div class="rta-image w32 height-20">
+					<div class="rta-row row-col rowgap300 colgap300 bord-bot p-bot-32">
+						<div class="rta-image w32 height-40-20">
 							<img src={item.image} alt={item.name}/>
 						</div>
-						<div class="rta-in-col w64 rowgap-8">
-							<small class="label" style="background: var(--gren)">
+						<div class="rta-column w64 rowgap100">
+							<small class="label">
 								{item.status}
 							</small>
-							<h5 class="heading serif text-black">{item.name}</h5>
-							<cite><span style="color: var(--greyS)">{item.datefrom} | with</span> <span style="color: var(--gren)"> {item.ins}</span></cite>
+							{#if fullText}
+								<h6 class="serif tt-c">{item.name}</h6>
+							{:else}
+								<h5 class="serif tt-c">{item.name}</h5>
+							{/if}
+							<cite class="sticker-blue"><span>{item.datefrom} | with</span> <span style="color: var(--gren)"> {item.ins}</span></cite>
 						</div>
 					</div>
 					{:else}
-					<div class="rta-row colgap-24 bord-bot bot-p-32">
-						<div class="rta-image w32 height-30">
+					<div class="rta-row row-col rowgap300 colgap300 bord-bot p-bot-32">
+						<div class="rta-image w32 height-40-20">
 							<img src={item.image} alt={item.name}/>
 						</div>
-						<div class="rta-in-col w64 rowgap-16">
+						<div class="rta-column w64 rowgap100">
 							<small class="label label-yellow">
 								{item.status}
 							</small>
-							<h5 class="heading serif text-black">
+							{#if fullText}
+							<h6 class="serif tt-c hover-blue">
+								<a href="/drashta/course/{item.course}">
+									{item.name}
+								</a>
+							</h6>
+							{:else}
+							<h5 class="serif tt-c hover-blue">
 								<a href="/drashta/course/{item.course}">
 									{item.name}
 								</a>
 							</h5>
+							{/if}
 							<p>
 								{item.content.slice(0,250)}...<a style="color: var(--yellow)" href="/drashta/course/{item.course}">READ MORE</a>
 							</p>
-							<cite>with {item.ins}</cite>
+							<cite class="sticker-blue">with {item.ins}</cite>
 						</div>
 					</div>
 					{/if}
@@ -124,12 +164,23 @@
 
 <style lang="sass">
 
-.serif
-	font-family: 'STIX Two Text', serif
-	line-height: 1.4
+.hover-blue
+	transition: 0.08s
+	&:hover
+		color: #0170B9
 
-#introtext
-	height: max-content
+.sticker-blue
+	background: #0170B9
+	color: white
+	padding-top: 2px
+	padding-left: 8px
+	width: 70%
+
+.serif
+	font-family: 'Playfair Display', serif
+
+h5.serif
+	font-weight: bold
 
 p.serif
 	font-size: 18px
