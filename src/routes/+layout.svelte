@@ -85,7 +85,6 @@
 				</svg>
 			</div>
 		</div>
-		{isMessageOpen}
 		<p>
 			Namaste,
 		</p>

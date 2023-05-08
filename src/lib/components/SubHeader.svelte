@@ -308,9 +308,9 @@
 
 #menumainx.rotated
 	transform: rotate(180deg)
-	@media screen and (min-width: 900px)
+	@media screen and (min-width: 1024px)
 		margin-left: 8px
-	@media screen and (max-width: 899px)
+	@media screen and (max-width: 1023px)
 		margin-left: 12px
 
 .linksbox
@@ -361,7 +361,7 @@
 	z-index: 999
 	position: fixed
 	overflow-y: scroll
-	@media screen and (max-width: 899px)
+	@media screen and (max-width: 1023px)
 		width: 100vw
 		z-index: 899
 		padding-top: 88px
@@ -383,7 +383,7 @@
 	left: 0
 	.midrow
 		display: none
-	@media screen and (max-width: 899px)
+	@media screen and (max-width: 1023px)
 		width: 100vw
 		left: 0
 
@@ -395,7 +395,7 @@
 	width: 100vw
 	top: 0
 	transition: 0.5s ease
-	@media screen and (min-width: 900px)
+	@media screen and (min-width: 1024px)
 		grid-template-columns: 190px 1fr 200px 56px 144px
 		grid-template-rows: 1fr
 		grid-template-areas: "applogo midrow autofill search menuicon"
@@ -409,7 +409,7 @@
 		.search
 			grid-area: search
 			width: 56px
-	@media screen and (max-width: 899px)
+	@media screen and (max-width: 1023px)
 		grid-template-columns: 160px 1fr
 		grid-template-rows: 1fr
 		grid-template-areas: "applogo menuicon"
@@ -441,7 +441,7 @@
 		display: flex
 		flex-direction: row
 		align-items: center
-	@media screen and (max-width: 899px)
+	@media screen and (max-width: 1023px)
 		svg
 			height: 48px
 		width: 160px
@@ -452,12 +452,12 @@
 .midrow
 	grid-area: midrow
 	display: flex
-	@media screen and (min-width: 900px)
+	@media screen and (min-width: 1024px)
 		display: row
 		height: 100%
 		align-items: center
 		justify-content: flex-start
-	@media screen and (max-width: 899px)
+	@media screen and (max-width: 1023px)
 		display: none
 
 .menuicon
@@ -470,7 +470,7 @@
 	color: white
 	text-transform: uppercase
 	cursor: pointer
-	@media screen and (max-width: 899px)
+	@media screen and (max-width: 1023px)
 		height: 64px
 		width: 100%
 
