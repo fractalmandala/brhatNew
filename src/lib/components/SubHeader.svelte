@@ -1,23 +1,10 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
-	import { draw } from 'svelte/transition'
-	import { quintOut } from 'svelte/easing'
 	import visibilityMode from '$lib/stores/visibility'
 	import { browser } from '$app/environment'
-	import { fly } from 'svelte/transition'
-	import tippy, {animateFill} from 'tippy.js'
-	import 'tippy.js/dist/tippy.css'
-	import 'tippy.js/animations/shift-away.css'
 	import CompToggle from '$lib/ridunits/CompToggle.svelte'
-	import CompSearch from '$lib/ridunits/CompSearch.svelte'
-	import AutoFill from '$lib/components/AutoFill.svelte'
-	import AboutLinks from '$lib/links/AboutLinks.svelte'
-	import AnveshiLinks from '$lib/links/AnveshiLinks.svelte'
-	import AryavartaLinks from '$lib/links/AryavartaLinks.svelte'
-	import DrashtaLinks from '$lib/links/DrashtaLinks.svelte'
-	import MandalaLinks from '$lib/links/MandalaLinks.svelte'
-	import RtaLinks from '$lib/links/RtaLinks.svelte'
+	import RIDSidebar from '$lib/ridunits/RIDSidebar.svelte'
 
 	export let sidebar:boolean
 	let y:number
@@ -81,15 +68,6 @@
 
 
 	onMount(() => {
-		tippy ('#single', {
-			content: 'Toggle Dark/Light Mode.',
-			duration: 300,
-			arrow: true,
-			animateFill: true,
-			plugins: [animateFill],
-			placement: 'right',
-			theme: 'light'
-		})
 		const handleMouse = (event: {clientY: number;}) => {
 			mouseY = event.clientY
 			if ( mouseY <= 128 ) {
@@ -213,170 +191,26 @@
 	<div class="search" id="single" on:click={toggleVisibility} on:keydown={fauxfake}>
 		<CompToggle></CompToggle>
 	</div>
-	<div class="menuicon" on:click={toggleSidebar} on:keydown={handleKeyDownEvent} on:mouseenter={toggleCircle} on:mouseleave={toggleCircle}>
-		Our Cosmos
-		<div id="menumainx" class:rotated={sidebar}>
-			<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path d="M16.7747 11.795C15.7418 12.8549 15.7418 14.5731 16.7747 15.633L21.5164 20.4998L16.7747 25.3666C15.7418 26.4266 15.7418 28.1448 16.7747 29.2047C17.2906 29.7354 17.9678 30 18.645 30C19.3222 30 19.9994 29.7354 20.5152 29.2047L29 20.4998L20.5152 11.795C19.4835 10.735 17.8064 10.735 16.7747 11.795Z" fill="white"/>
-				{#if circleIt}
-				<path 
-					transition:draw={{ duration: 500, easing: quintOut }}
-					d="M41 21C41 32.0457 32.0457 41 21 41C9.95431 41 1 32.0457 1 21C1 9.95431 9.95431 1 21 1C32.0457 1 41 9.95431 41 21Z" stroke="white" stroke-width="2"/>
-				{/if}
+	<div class="menuicon colgap100" on:click={toggleSidebar} on:keydown={handleKeyDownEvent} on:mouseenter={toggleCircle} on:mouseleave={toggleCircle}>
+		<p>OUR COSMOS</p>
+		<div id="menumainx">
+			<svg id="pulsar" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M3.07538 3.07539C4.97451 1.17624 7.60074 0 10.5 0C13.3993 0 16.0255 1.17624 17.9247 3.07538C19.8237 4.97449 21 7.60074 21 10.5C21 13.3993 19.8237 16.0255 17.9247 17.9247C16.0255 19.8237 13.3993 21 10.5 21C7.60074 21 4.97451 19.8237 3.0754 17.9247C1.17629 16.0255 0 13.3993 0 10.5C0 7.60074 1.17626 4.97451 3.07538 3.07539Z" fill="#474747"/>
+			</svg>
+			<svg id="sliver" width="5" height="21" viewBox="0 0 5 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M0.232608 20.7295C-0.0775366 20.3689 -0.0775334 19.7843 0.232616 19.4236C2.19765 17.1389 3.41164 13.9852 3.41164 10.5C3.41164 7.01488 2.19766 3.86117 0.232607 1.57635C-0.0775381 1.21574 -0.0775353 0.631067 0.232613 0.270456C0.542761 -0.0901559 1.04561 -0.0901507 1.35575 0.270464C3.60649 2.88746 5 6.5054 5 10.5C5 14.4947 3.60649 18.1126 1.35575 20.7295C1.0456 21.0902 0.542752 21.0902 0.232608 20.7295Z" fill="white"/>
 			</svg>
 		</div>
 	</div>
 </div>
 
 {#if sidebar}
-	<div class="appsidebar" in:fly={{ duration: 500, x: 400, y: 0}} out:fly={{ duration: 500, x: 400, y: 0}} data-lenis-prevent on:mouseleave={closeSidebar} class:light={$visibilityMode} class:dark={!$visibilityMode}>
-		<div class="linksbox right" id="searcharea">
-			<CompSearch></CompSearch>
-		</div>
-		<div class="linksbox ta-r" on:click={closeSidebar} on:keydown={fauxfake}>
-			{#if sidebar}
-				<h5><a href="/drashta">Bṛhat Draṣṭā</a></h5>
-				<DrashtaLinks flytime={sidebar}/>
-			{/if}
-		</div>
-		<div class="linksbox ta-r" on:click={closeSidebar} on:keydown={fauxfake}>
-			{#if sidebar}
-				<h5><a href="/anveshi">Bṛhat Anveṡī</a></h5>
-				<AnveshiLinks flytime={sidebar}/>
-			{/if}
-		</div>
-		<div class="linksbox ta-r" on:click={closeSidebar} on:keydown={fauxfake}>
-			{#if sidebar}
-				<h5><a href="/mrdanga">Bṛhad Mṛdaṅga</a></h5>
-			{/if}
-		</div>
-		<div class="linksbox ta-r" on:click={closeSidebar} on:keydown={fauxfake}>
-			{#if sidebar}
-				<h5><a href="/dhiti">Dhīti</a></h5>
-			{/if}
-		</div>
-		<div class="linksbox ta-r" on:click={closeSidebar} on:keydown={fauxfake}>
-			{#if sidebar}
-				<h5><a href="/openlibrary">Bṛhat Open Library</a></h5>
-			{/if}
-		</div>
-		<div class="linksbox ta-r" on:click={closeSidebar} on:keydown={fauxfake}>
-			{#if sidebar}
-				<h5><a href="/mandala">Fractal Maṇḍala</a></h5>
-				<MandalaLinks flytime={sidebar}/>
-			{/if}
-		</div>
-		<div class="linksbox ta-r" on:click={closeSidebar} on:keydown={fauxfake}>
-			{#if sidebar}
-				<h5><a href="/aryavarta">Scrolls of Āryavarta</a></h5>
-				<AryavartaLinks flytime={sidebar}/>
-			{/if}
-		</div>
-		<div class="linksbox ta-r" on:click={closeSidebar} on:keydown={fauxfake}>
-			{#if sidebar}
-				<h5><a href="/rta">Ṛta in Design</a></h5>
-				<RtaLinks flytime={sidebar}/>
-			{/if}
-		</div>
-		<div class="linksbox ta-r" on:click={closeSidebar} on:keydown={fauxfake}>
-			{#if sidebar}
-				<h5 in:fly={{ delay: 500, duration: 100, x: 128, y: 0}} out:fly={{ delay: 0, duration: 100, x: 128, y: 0}}><a href="/about">About</a></h5>
-				<AboutLinks flytime={sidebar}/>
-			{/if}
-		</div>
-		<div class="linksbox ta-r">
-			{#if sidebar}
-				<h5 in:fly={{ delay: 500, duration: 100, x: 128, y: 0}} out:fly={{ delay: 0, duration: 100, x: 128, y: 0}}>Site Tour</h5>
-			{/if}
-		</div>
+	<div on:mouseleave={closeSidebar}>
+		<RIDSidebar sidebar={sidebar}/>
 	</div>
 {/if}
 
 <style lang="sass">
-
-.ta-r
-	text-align: right
-
-#menumainx
-	height: 24px
-	width: 28px
-	display: flex
-	flex-direction: column
-	cursor: pointer
-	transform-origin: center center
-	transition: transform 0.2s ease
-
-#menumainx.rotated
-	transform: rotate(180deg)
-	@media screen and (min-width: 1024px)
-		margin-left: 8px
-	@media screen and (max-width: 1023px)
-		margin-left: 12px
-
-.linksbox
-	display: flex
-	flex-direction: column
-	padding: 16px
-	position: relative
-	border-bottom: 1px solid #272727
-	h5, h5 a
-		margin: 0
-		text-align: right
-		text-transform: uppercase
-		font-weight: 700
-		font-size: 27px
-		padding-bottom: 8px
-		cursor: pointer
-		color: white
-	&:hover
-		h5, h5 a
-			color: #fe4a49
-		&::after
-			animation: lineforward 0.32s var(--cubeb) forwards
-	&::after
-		position: absolute
-		bottom: 0
-		right: 0
-		content: ''
-		height: 1px
-		background: #474747
-		width: 0
-
-@keyframes lineforward
-	0%
-		width: 0
-	100%
-		width: 100%
-		
-
-.appsidebar
-	right: 0
-	top: 0
-	display: flex
-	flex-direction: column
-	height: 100vh
-	width: 100vw
-	overflow-x: hidden
-	width: 400px
-	z-index: 999
-	position: fixed
-	overflow-y: scroll
-	@media screen and (max-width: 1023px)
-		width: 100vw
-		z-index: 899
-		padding-top: 88px
-
-.appsidebar.dark
-	background: #171717
-
-.appsidebar.light
-	background: #171717
-
-.appsidebar::-webkit-scrollbar
-	width: 2px
-
-.appsidebar::-webkit-scrollbar-thumb
-	background: #fe4a49
 
 .appheader.onsidebar
 	width: calc(100vw - 400px)
@@ -394,12 +228,12 @@
 	z-index: 1000
 	width: 100vw
 	top: 0
-	transition: 0.5s ease
+	transition: 0.5s cubic-bezier(0.635, 0.405, 0.535, 0.035)
 	@media screen and (min-width: 1024px)
 		grid-template-columns: 190px 1fr 200px 56px 144px
 		grid-template-rows: 1fr
 		grid-template-areas: "applogo midrow autofill search menuicon"
-		height: 72px
+		height: 80px
 		align-content: center
 		align-items: center
 		padding: 0 32px
@@ -427,7 +261,7 @@
 	background: #171717
 
 .appheader.hiddenHeader
-	transform: translateY(-72px)
+	transform: translateY(-80px)
 	
 .applogo
 	grid-area: applogo
@@ -470,9 +304,75 @@
 	color: white
 	text-transform: uppercase
 	cursor: pointer
-	@media screen and (max-width: 1023px)
+	border-radius: 16px
+	height: 26px
+	padding: 2px 0
+	p
+		padding-top: 2px
+		color: #FFFFFF
+		font-weight: 700
+	@media screen and (max-width: 899px)
 		height: 64px
 		width: 100%
+	&:hover
+		p
+			color: #fe4a49
+		#sliver
+			display: block
+			animation: doppler 1.5s ease-in-out infinite both
 
+#menumainx
+	height: 24px
+	width: 24px
+	display: flex
+	flex-direction: row
+	cursor: pointer
+	transform-origin: center center
+	transition: transform 0.2s cubic-bezier(0.515, 0.130, 0.295, 0.450)
+
+#sliver
+	transform: translateX(8px)
+	height: 24px
+	display: none
+	path
+		fill: #FFFFFF
+
+#pulsar
+	animation: heartbeat 1.5s ease-in-out infinite both
+	height: 20px
+	width: 20px
+	margin-top: 2px
+	path
+		fill: #FFFFFF
+
+@keyframes doppler
+	from
+		transform: translateX(4px)
+	10%
+		transform: translateX(12px)
+	17%
+		transform: translateX(10px)
+	33%
+		transform: translateX(12px)
+	45%
+		transform: translateX(4px)
+
+@keyframes heartbeat
+	from
+		transform: scale(1)
+		transform-origin: center center
+		animation-timing-function: ease-out
+	10%
+		transform: scale(0.91)
+		animation-timing-function: ease-in
+	17%
+		transform: scale(0.98)
+		animation-timing-function: ease-out
+	33%
+		transform: scale(0.87)
+		animation-timing-function: ease-in
+	45%
+		transform: scale(1)
+		animation-timing-function: ease-out
 
 </style>

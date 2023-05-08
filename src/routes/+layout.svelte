@@ -77,7 +77,7 @@
 
 	<slot></slot>
 	{#if isMessageOpen}
-	<div class="globaltoast rta-column">
+	<div class="globaltoast rta-column" class:light={$visibilityMode} class:dark={!$visibilityMode}>
 		<div class="rta-row">
 			<div class="blank-button" on:click={toggleMessage} on:keydown={fauxfake}>
 				<svg class="closeguy point" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -148,6 +148,12 @@
 		height: max-content
 		p
 			font-size: 12px
+
+.globaltoast.rta-column.light
+	box-shadow: 4px 6px 7px #d7d7d7
+
+.globaltoast.rta-column.dark
+	box-shadow: none
 
 #appbox
 	width: 100vw
