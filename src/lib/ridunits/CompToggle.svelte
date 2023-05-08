@@ -1,12 +1,11 @@
 <script lang="ts">
 
 	import visibilityMode from '$lib/stores/visibility'
-	import autoAnimate from '@formkit/auto-animate'
 
 
 </script>
 
-<div class="switch rta-column" use:autoAnimate class:light={$visibilityMode} class:dark={!$visibilityMode}>
+<div class="switch rta-column" class:light={$visibilityMode} class:dark={!$visibilityMode}>
   <div class="slider rta-in-col"></div>
 </div>
 
@@ -14,32 +13,37 @@
 
 .switch 
 	cursor: pointer
-	height: 20px
+	height: 22px
 	width: 48px
-	border-radius: 10px
-	padding-top: 1px
+	border-radius: 11px
+	padding-top: 2px
 	padding-right: 2px
 	padding-left: 2px
-	transition: all 0.23s ease
+	padding-bottom: 2px
+	transition: all 0.2s cubic-bezier(0.515, 0.130, 0.295, 0.450)
 
 .switch.light
-	align-items: flex-end
 	border: 1px solid #474747
+	.slider
+		background: #FFFFFF
 	&:hover
-		border: 1px solid #fe4a49
+		.slider
+			background: #FFFFFF
 
 .switch.dark
-	align-items: flex-start
 	border: 1px solid #474747
+	.slider
+		transform: translateX(26px)
 	&:hover
-		border: 1px solid #fe4a49
+		.slider
+			background: #FFFFFF
 
 .slider 
 	width: 16px
 	height: 16px
 	border-radius: 8px
-	transition: all 0.23s ease
-	background: white
+	transition: all 0.2s cubic-bezier(0.515, 0.130, 0.295, 0.450)
+	background: #474747
 
 
 </style>

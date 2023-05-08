@@ -1,83 +1,31 @@
 <script lang="ts">
 
-	import { page } from '$app/stores'
 	import { onMount } from 'svelte'
 	import { browser } from '$app/environment'
-	import { clickOutsideAction } from "svelte-legos"
-	import { goto } from '$app/navigation'
 	import visibilityMode from '$lib/stores/visibility'
-	import WindowBinder from '$lib/components/WindowBinder.svelte'
-	import { innerWidth, outerHeight, scrollY } from '$lib/stores/windows'
-	import siteTour from '$lib/stores/sitetour'
 	import Lenis from '@studio-freight/lenis'
 	import '$lib/styles/types.sass'
 	import '$lib/styles/tokens.sass'
 	import Footer from '$lib/components/Footer.svelte'
 	import { lenisStore as lenis, setLenisStore } from '$lib/stores/lenis'
-	import { useScroll } from '$lib/utils/lenisscroll'
 	import { useFrame } from '$lib/utils/lenisframe'
-	import { raf } from '$lib/stores/tempus'
 
 	let breakPointOn:boolean
 	let innerW:number
 	let showFooter = true
 	let link:any
 	let firstVisit = false
-	let hash:any
-	let beginTour = false
-	let currentPage = 1
-	const totalPages = 7
-	let tourPage = Array(7).fill(false)
 	let isMessageOpen = true
+	let fake = false
+
+	function fauxfake(){
+		fake = !fake
+	}
 
 	function toggleMessage(){
 		isMessageOpen = !isMessageOpen
 	}
 
-	function toggleVisibility() {
-	  if (browser) {
-	    visibilityMode.update((mode) => {
-	      const newMode = !mode;
-	      localStorage.setItem('visibilityMode', JSON.stringify(newMode));
-	      return newMode;
-	    });
-	  }
-	}
-
-	function toggleTourPage(index:number){
-		tourPage[index] = !tourPage[index]
-		for ( let i = 0; i < tourPage.length; i++) {
-			if ( i !== index && tourPage[i] === true) {
-				tourPage[i] = false
-			}
-		}
-		if (beginTour === true) {
-			beginTour = false
-		}
-	}
-
-	function siteStartTour() {
-	  if (browser) {
-	    siteTour.update((mode) => {
-	      const newMode = !mode;
-	      localStorage.setItem('siteTour', JSON.stringify(newMode));
-	      return newMode;
-	    });
-	  }
-	}
-		
-	function initiateModal(){
-		beginTour = !beginTour
-		if ( firstVisit === true) {
-			firstVisit = false
-		}
-	}
-
-	function closeFirstVisitToast(){
-		if ( firstVisit === true) {
-			firstVisit = false
-		}
-	}
 
 	$: if ( innerW <= 1023 ) {
 		breakPointOn = true
@@ -114,20 +62,30 @@
 
 <svelte:head>
 	<link href="https://cdn.jsdelivr.net/npm/textify.js/dist/Textify.min.css" rel="stylesheet"/>
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-6NPMDTQVDE"></script>
+	<script>
+  	window.dataLayer = window.dataLayer || [];
+  	function gtag(){dataLayer.push(arguments);}
+  	gtag('js', new Date());
+
+  	gtag('config', 'G-6NPMDTQVDE');
+	</script>
 </svelte:head>
 
 <div id="appbox" class="themer" class:light={$visibilityMode} class:dark={!$visibilityMode}>
-	<WindowBinder/>
+
 	<slot></slot>
 	{#if isMessageOpen}
 	<div class="globaltoast rta-column">
 		<div class="rta-row">
-			<button class="blank-button" on:click={toggleMessage}>
-			<svg class="closeguy point" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<div class="blank-button" on:click={toggleMessage} on:keydown={fauxfake}>
+				<svg class="closeguy point" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path d="M12 24C5.3724 24 0 18.6276 0 12C0 5.3724 5.3724 0 12 0C18.6276 0 24 5.3724 24 12C24 18.6276 18.6276 24 12 24ZM12 10.3032L8.6064 6.9084L6.9084 8.6064L10.3032 12L6.9084 15.3936L8.6064 17.0916L12 13.6968L15.3936 17.0916L17.0916 15.3936L13.6968 12L17.0916 8.6064L15.3936 6.9084L12 10.3032Z" fill="white"/>
-			</svg>
-			</button>
+				</svg>
+			</div>
 		</div>
+		{isMessageOpen}
 		<p>
 			Namaste,
 		</p>

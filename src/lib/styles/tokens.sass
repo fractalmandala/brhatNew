@@ -542,6 +542,12 @@ body, html
 		padding-top: 32px
 .p-top-8
 	padding-top: 8px
+.p-top-16
+	padding-top: 16px
+.m-top-16
+	margin-top: 16px
+.m-bot-4
+	margin-bottom: 4px
 
 .p-bot-16
 	@media screen and (min-width: 1024px)
@@ -563,7 +569,7 @@ body, html
 	--dhiticolor: #5A3261
 	.is-text
 		color: #474747
-	p, pre, li
+	p, pre, li, blockquote
 		color: $grey87
 	.mainstory p
 		color: #474747
@@ -573,7 +579,7 @@ body, html
 		color: $grey87
 	cite
 		color: $grey87
-	h4
+	h4, em
 		color: $grey47
 	.in-blog
 		h4
@@ -601,7 +607,7 @@ body, html
 		color: $grey87
 	h1, h2
 		color: $grey07
-	h6, h3, h4
+	h6, h3, h4, em, blockquote, li.em
 		color: $white
 	small, cite
 		color: $grey87
@@ -675,7 +681,7 @@ body, html
 		color: white
 
 .dark
-	--borderline: #373737
+	--borderline: #272727
 	.drawer-item2
 		color: #878787
 		&:hover
