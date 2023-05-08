@@ -124,35 +124,6 @@
 	{/if}
 </div>
 
-{#if firstVisit}
-<div id="firstVisitToast" class="type" class:light={$visibilityMode} class:dark={!$visibilityMode}>
-	<div class="rta-column rowgap-16 toast">
-		<h4>Namaste!</h4>
-		<h6>
-			We detect that this is your first visit to bṛhat.in
-		</h6>
-		<h6>
-			Would you like to take a quick tour?
-		</h6>
-		<div class="rta-row colgap-8">
-			<button class="basic-button" on:click={closeFirstVisitToast}>
-				No
-			</button>
-			<button class="basic-button" on:click={initiateModal}>
-				Yes
-			</button>
-		</div>
-	</div>
-</div>
-{/if}
-
-{#if beginTour}
-<div class="rta-in-col cc-all modalclass" in:scale={{ duration: 500, easing: expoOut}} out:scale={{ duration: 300, easing: expoOut}} data-lenis-prevent class:light={$visibilityMode} class:dark={!$visibilityMode}>
-	<AllBrands>
-		<button class="basic-button dark">Close</button>
-	</AllBrands>
-</div>
-{/if}
 
 
 
