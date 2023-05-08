@@ -5,6 +5,7 @@ category: Culture and Policy
 tags: ancient arts, cinema
 date: "2022-10-31"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/51.webp
+excerpt: "A glimpse into the timelessness of the traditional arts, conveyed through superior cinema: Swarnakamalam; and the discussion of modernity threatening the value of traditional systems in its lyrical expositions."
 ---
 
 Most connoisseurs would readily agree that upon reminiscence, Telugu film of the seventies and the eighties, especially the work of the *“Kala Tapasvi”* Kasinathuni Vishwanath, evokes an unreproducible nostalgia and has a certain sempiternal quality to it — a longing for a time we perhaps have not known personally, yet resides close to our hearts. In his career spanning multiple decades, we see the elevation of cinema to the level of a fine art, its rising above the mundane and almost vulgar visuals that the rest of the industry tended to produce — through the rooting of his cinematic productions in the ethos and aesthetics of Hindu traditions and Dharma.

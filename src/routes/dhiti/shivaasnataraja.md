@@ -5,6 +5,7 @@ category: Culture and Policy
 tags: shiva, symbolism
 date: "2023-01-27"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/nataraja.webp
+excerpt: " It is said that Śiva does not dance in the day but rather, at twilight, the darkness pierced only by his own effulgence and the light emanating from the moon on his head, the licks of the flame in his hand, and the gems on the heads of the cobras that adorn his body."
 ---
 
 > “When our Lord who is both end and beginning

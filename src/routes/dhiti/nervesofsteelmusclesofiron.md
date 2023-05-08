@@ -5,6 +5,7 @@ category: Indian Knowledge Systems
 tags: education, tradition, vivekananda
 date: "2023-01-12"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/61.webp
+excerpt: "Learn about the educational philosophy of Svāmī Vivekānanda, as influenced by his guru Śrī Rāmakṛṣṇa Paramahaṃsa, who emphasized the importance of developing the physical, moral, and spiritual dimensions of individuals. Discover how Svāmījī's ideas on self-discovery and inner realization were shaped by his guru, and the importance of purity, patience, and perseverance on the path to knowledge and wisdom."
 ---
 
 *In his writings and speeches, Svāmī Vivekānanda emphasized that education should not be limited to merely the acquisition of knowledge, but should also aim to develop the physical, moral, and spiritual dimensions of an individual.*

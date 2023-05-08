@@ -6,6 +6,7 @@ category: Svayambodha
 tags: history, rajya, tradition
 date: "2022-11-12"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/45.webp
+excerpt: "A journey through the history of Travancore's royal family, beginning from the Chera eras. And a reminder of the gratitude we owe to the ancient nobles who embodied vīra rasa and sevā bhāva."
 ---
 
 The Travancore monarchy is one of the most dhārmika kingdoms of Bhārata. Along with Mysore, Maheshwar, Baroda, Bikaner, Udaipur, and a few others, these royalties have embodied the ideals of Rāma Rājya both in their politics, as well as in their attitude towards their public. Above all, they have been role models for their piety, simplicity, and śraddhā in our devatās. During the Padmanabhaswamy Temple fracas, where the non-Hindu Kerala government wanted to take over this rich Hindu temple, their bhakti was more than evident to all observers. These kṣatriyas have also led the battle of the Indic Knowledge Systems (IKS) from the front, be it the erstwhile great Swathi Thirunal or a prolific Raja Ravi Varma, the contemporary Rama Varma or even HRH Princess Aswathi Thirunal Gowri Lakshmi Bai whose ‘Sree Padmanabha Swamy Temple (1998)’ is a comprehensive go to book on the temple. Classical music, dance, arts, writing, they have not merely been patrons or connoisseurs but also practitioners, composers, and teachers of arts and literature.

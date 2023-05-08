@@ -5,6 +5,7 @@ category: Indian Knowledge Systems
 tags: education, tradition
 date: "2023-03-01"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/57.webp
+excerpt: "A personal reflection of the writer's experience studying at the Arsha Vidya Gurukulam, and the transformative impact it had on her understanding of the self and her relationship with the world and God. Part 4 of 4."
 ---
 
 ### śrī gurubhyo namaha!

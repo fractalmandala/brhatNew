@@ -5,6 +5,7 @@ category: Dharma Today
 tags: cinema
 date: "2022-08-02"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/13.webp
+excerpt: "As Seen on TV introduces Bṛhat's cultural review of cinema lens, where we examine the impact movies have played in shaping India."
 ---
 
 Bṛhat is a cultural research organization that cares deeply about the manner in which culture is represented in cinema, television and other media. We produce content, but also analyze depictions in media, with the aim to ensure not only accuracy, but inject a certain wholesomeness and a tethering to our civilizational values. We believe there is a critical need for content to be sensitive to our culture and religion rather than a soapbox for the obverse views of divergent countercultural elements. Our culture, as it should be seen, rather than as the ideation of antithetical ideologues.

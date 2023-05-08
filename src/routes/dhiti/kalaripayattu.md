@@ -5,6 +5,7 @@ category: Svayambodha
 tags: ancient arts, tradition
 date: "2022-11-08"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/06.webp
+excerpt: "Kalaripayaṭṭu must be elevated, as a traditional psychophysiological discipline, as a ‘scientific’ system of physical culture, and as an arena of experience and self-transformation: the crucible of the individual’s experience where embodied practice helps shape a self."
 ---
 
 *Kalaripayaṭṭu* is an ancient martial art that originated in India and, a part of the enormous corpus of India’s cultural traditions. Like Yoga, it is a complete discipline that combines physical and mental training, self-discipline, with the art of body massage and traditional Āyurvaidika medicine. Phillip Zarrilli describes *kalari* as a *​​”mode of cultural praxis through which bodies, knowledges, powers, agency and selves/identities have been and are repositioned through practice.”*

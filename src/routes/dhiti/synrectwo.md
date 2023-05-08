@@ -5,6 +5,7 @@ category: Svayambodha
 tags: decolonization, history
 date: "2022-07-08"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/59.webp
+excerpt: "Mental schema for synaptic reconnection to the civilizational consciousness. This is part 2 of an ongoing series."
 ---
 
 ...continued from Part 1.

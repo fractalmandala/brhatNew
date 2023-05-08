@@ -5,6 +5,7 @@ category: Svayambodha
 tags: decolonization, history
 date: "2022-08-26"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/58.webp
+excerpt: "A continuation and conclusion of part 1, where we established the notion of civilizational trajectory, marked two fundamental problems in it, and appraised the Indian experience on the same to make the case for our civilizational primacy."
 ---
 
 ...continuing from Part 1

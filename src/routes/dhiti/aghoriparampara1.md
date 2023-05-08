@@ -6,6 +6,7 @@ category: Svayambodha
 tags: aghora, tradition
 date: "2022-09-13"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/35.webp
+excerpt: "The first article in this three part series takes a comprehensive and detailed look at the Aghorī-s, drawing from personal experience and insider’s knowledge of this rare and much misunderstood tradition."
 ---
 
 A sect that has borne the brunt of being caricatured ad infinitum is the Aghorī. It has been othered like no other and has spawned many a fantastical tale around its origins, practices, and membership. Making fun of its adherents for looking a certain way or creating an Indiana Jones level of misinformation around its supposed practices, is a reductionist *caste, cows, curry* (Rajiv Malhotra) approach towards a very revered panth. Trying to appreciate a different sect on its own merit takes patience, understanding, and empathy. It needs us to be non-judgmental and willing to open our hearts and minds.

@@ -5,6 +5,7 @@ category: Svayambodha
 tags: festivals, tradition
 date: "2022-11-14"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/53.webp
+excerpt: "We owe a lot to our mothers and grandmothers, who carry forth traditions year after year diligently. In the case of Chath, it involves fasting for more than thirty six hours and standing in cold water, all for the wellbeing of their family. Even amidst apathy towards culture by many, Chaṭh gives me hope."
 ---
 
 This year Chaṭh fell on Oct 30th. I made sure I booked my tickets to Delhi from Hyderabad well in advance. I can miss celebrating Diwali at home but not Chaṭh. Not many outside Bihar Jharkhand region know of this festival. It is very close to my heart as it brings not just my extended family but also the whole community together. Chaṭh is a very colourful and arduous vrata. It is not just songs and celebration, there is rigorous fasting of not even sipping water before the feasting, and it is performed in the early morning hours of winter, standing waist deep in water throughout the day. Chaṭh brings back all the childhood memories of my village. The anticipation of Chaṭh starts by the end of Deepavali, and I am flooded with memories on how all of us used to save crackers from Diwali for Chaṭh!

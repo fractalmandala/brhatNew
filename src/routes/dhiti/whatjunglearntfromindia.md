@@ -5,6 +5,7 @@ category: Dharma Today
 tags: india to outsiders, jung
 date: "2022-07-26"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/12.webp
+excerpt: "Jung once wrote on India - It is quite possible that India is the real world, and that the white man lives in a madhouse of abstractions."
 ---
 
 Carl Jung was a rebellious student who broke rank from his influential master, Sigmund Freud. He was a maverick thinker who studied odd subjects such as astrology, alchemy, and parapsychology. He had Nobel Prize winners such as Wolfgang Pauli as his patients. And above all, Jung was a psychotherapist – a doctor of the soul working hard to heal the painful wounds on the Western man’s psyche.

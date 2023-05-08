@@ -5,6 +5,7 @@ category: Svayambodha
 tags: reclaimed history, dharma
 date: "2023-04-16"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/multandharma.png
+excerpt: "Deepak Srinivasan presents an in-depth analysis of the rich history of the ancient Bhāratīya city of Multan (now in Pakistan). In a captivating story of a land long-forgotten, we are taken through the tough battles it fought to retain its identity and centrality to the civilizational heritage of the Hindus until the Partition occurred."
 ---
 
 Carl Sagan famously said that you have to know the past to understand the present. As the inheritors of the Dhārmika civilization, to understand the present, we must go back to where it all began – Mūlasthāna, a place we are guilty of forgetting. 

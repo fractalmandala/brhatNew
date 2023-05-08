@@ -34,6 +34,8 @@ $unit128: 128px
 
 //spacing
 @media screen and (min-width: 1024px)
+	.rowgap50
+		row-gap: 4px
 	.colgap100
 		column-gap: $unit8
 	.rowgap100
@@ -235,6 +237,12 @@ body, html
 	@media screen and (max-width: 1023px)
 		height: 8vh
 
+.height-24
+	@media screen and (min-width: 1024px)
+		height: 24vh
+	@media screen and (max-width: 1023px)
+		height: 20vh
+
 .height-10
 	@media screen and (min-width: 1024px)
 		height: 10vh
@@ -304,6 +312,8 @@ body, html
 		justify-content: space-between
 	&.ytop
 		align-items: flex-start
+	&.ybot
+		align-items: flex-end
 	@media screen and (min-width: 1024px)
 		flex-direction: row
 		.in50, .in50.w32, .in50.w64
@@ -380,6 +390,10 @@ body, html
 		transition: 0.2s
 	.grid2.right2
 		grid-template-columns: 1fr 40%
+		grid-template-areas: ". ."	
+		transition: 0.2s
+	.grid2.right3
+		grid-template-columns: 1fr 27%
 		grid-template-areas: ". ."	
 		transition: 0.2s
 
@@ -537,6 +551,7 @@ body, html
 		padding: 16px
 
 .light
+	--dhiticolor: #5A3261
 	.is-text
 		color: #474747
 	p, pre, li
@@ -556,9 +571,19 @@ body, html
 			color: #272727
 		h6
 			color: #474747
+	.rta-dhiti
+		p
+			color: #676767
+			line-height: 1.2
+	p.author
+		color: #272727
+		font-weight: bold
+	.is-black
+		color: #272727
 
 
 .dark
+	--dhiticolor: #0B6E4F
 	.is-text
 		color: #FFFFFF
 	p, pre, li
@@ -571,6 +596,11 @@ body, html
 		color: $white
 	small, cite
 		color: $grey87
+	p.author
+		color: #FFFFFF
+		font-weight: bold
+	.is-black
+		color: #474747
 
 .insidelink
 	color: #878787

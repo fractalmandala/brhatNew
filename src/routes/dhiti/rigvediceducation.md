@@ -5,6 +5,7 @@ category: Indian Knowledge Systems
 tags: education, vedic
 date: "2022-07-21"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/15.webp
+excerpt: "Results of the tapas and intellectuality of our ṛṣis and and how, through education, they imparted essential faculties."
 ---
 
 In the first article of this series on Vedic education, we examined how the processes of śravaṇa, manana, and nididhyāsana (Bṛhadāraṇyaka Upaniṣad) were central to the pedagogical formulations of the Vedic period, while the second article elaborated on how ṛṣis played a crucial role in preserving the knowledge and passing it on to the next generation. This third article examines some of the results of the tapas and the enormous intellectuality of our ṛṣis and gurus and how, through education, they imparted the faculties of memory, discernment, imagination, perception, reasoning, etc., to build the spiritual and moral force that we see pulsating in our ancient philosophy, in the supreme poetry, art, jurisprudence, logic, metaphysics, sculpture, and the unique social structure. As rightly noted by A. S. Altekar, the objective of Vedic education was to approach knowledge as

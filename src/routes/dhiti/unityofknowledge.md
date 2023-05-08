@@ -5,6 +5,7 @@ category: Culture and Policy
 tags: science, tradition
 date: "2022-12-26"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/54.webp
+excerpt: "A vision is not an easy thing to cultivate, especially when being tied up in the mundanities of life. Thankfully, we have the work of great men to guide us. This is our tribute to the great humanist and naturalist, Edward Wilson."
 ---
 
 When a big tree falls, the ground trembles. But when a leaf gently kisses the ground at the end of its life, it nourishes it for future biota. Last year on this day, one of Earth’s most devoted sons touched her feet and bid her farewell, leaving behind profound wisdom for generations to follow. This dedicated son was the gifted naturalist Edward Osborne Wilson.

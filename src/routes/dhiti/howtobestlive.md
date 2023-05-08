@@ -5,6 +5,7 @@ category: Svayambodha
 tags: mahabharata, purushartha
 date: "2022-08-11"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/17.webp
+excerpt: "How to live life best has always been the human pondering. Ancient India had the right answer- Puruṣārtha, or the four aims of life."
 ---
 
 #### Introduction

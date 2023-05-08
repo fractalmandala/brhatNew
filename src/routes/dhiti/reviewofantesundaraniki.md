@@ -6,6 +6,7 @@ category: Dharma Today
 tags: cinema
 date: "2022-08-03"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/14.webp
+excerpt: "A Review of Ante Sundaraniki, the second piece in our cultural reviews of Indian cinema, puts the Telugu film 'Ante Sundaraniki' under lens."
 ---
 
 Everyone is loving the latest Telugu movie – Ante Sundaraniki (The thing about Sundar is….) by Vivek Athreya. It comes close on the heels of the mega success of Pushpa and RRR, two other recent offerings from the Telugu Film Industry (TFI) and seemingly the opposite of the typical big-budget commercial blockbusters. It has a certain quirkiness to it, the songs are minimal and refreshingly composed, it talks about the very topical and relevant subject of a young couple attempting to convince their families to allow them to marry, and it is all styled as a comedy. The movie promises to be fun, and certainly has all the elements of a quirky rom-com that the audience could possibly want, especially with charming set and prop design. Innovation, quirkiness, humour, all of it adds to the ample natural talent of the lead pair (Nani and Nazariya) along with excellent performances by all the supporting actors. This movie appears to be a success even among the older generation, many of whom might be seeking exactly such an escape post-pandemic, given that it is easily accessible via OTT (Netflix).

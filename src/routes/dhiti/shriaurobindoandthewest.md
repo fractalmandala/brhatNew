@@ -5,6 +5,7 @@ category: Śatrubodha
 tags: aurobindo
 date: "2022-06-26"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/30.webp
+excerpt: "What should sit in the driver’s seat: Ideas or Matter? Must the reason of philosophy and the energy of religion always be at odds? Can Europe and India teach each other anything, or are they distinct civilizations, drifting off on divergent paths?"
 ---
 
 Let’s explore 3 interesting pairs: Ideas and Matter, Philosophy and Religion, and Europe and India. These pairs can and have danced together – but they can also duel violently. In these three pairs, Sri Aurobindo, the great Indian mystic of the 20th century, sees a creative tension. A tension that can be productive as well as destructive.

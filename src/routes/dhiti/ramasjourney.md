@@ -5,6 +5,7 @@ category: Svayambodha
 tags: civilizational consciousness, festivals
 date: "2022-10-24"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/49.webp
+excerpt: "We celebrate the return of Rāma with a Festival of Lights, for if his journey- Rāma’s Ayaṇa- is recreated within us, it generates within us the Supreme Light. His journey within us is the journey from untruth to truth. From Darkness to Light. It is the rising of Agni from earth to sky, the ultimate union, or Yoga."
 ---
 
 In the previous Fractal Maṇḍala essay, we explored the idea of the ratha (chariot) as a flowering seed in the Dhārmika worldview. This worldview has at its core the Mind, or Consciousness. The affixation of *-man* to √bṛh and √at to make brahman and ātman respectively may be an uncanny phonetic coincidence, but brahman and ātman mean the ‘expansion of Mind’ and ‘descent of Mind’ just the same.

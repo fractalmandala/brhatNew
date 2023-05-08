@@ -5,6 +5,7 @@ category: Culture and Policy
 tags: storytelling, tradition
 date: "2022-08-17"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/29.webp
+excerpt: "A rounded coverage of the oral storytelling traditions that prevail among old cultures around the world, and especially in India."
 ---
 
 Storytelling and the power of imagination are perhaps among the most universal qualities of civilizations worldwide, one that stems from basic human nature and can take on various shapes and forms. In West Africa, there are the griots — troubadour-historians that travel far and wide preserving the genealogies, culture and oral histories. The Jewish people practice a tradition known as seder for Passover, wherein the elders narrate the story of Exodus and the four youngest children present can ask a question — a method of recalling and keeping extant the celebration of the freeing of the Jewish people from slavery in Egypt. In Ireland, the seanchai were story-keepers, who moved from village to village reciting ancient lore and tales of wisdom. The Native American Choctaw tribe use storytelling to educate their young and preserve their history, and use animal characters to weave stories.

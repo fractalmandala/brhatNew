@@ -5,6 +5,7 @@ category: Svayambodha
 tags: decolonization, history
 date: "2022-06-02"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/59.webp
+excerpt: "A preliminary schema to reconnect with civilizational consciousness. Developing a complete Ontology, Epistemology and Teleology for Bhārata."
 ---
 
 Like atheism, decolonization is a rejection, a creation of empty space. But unlike atheism, decolonization carries a forward implication. The empty space created must be filled with a native lens. In the Indian context we speak of a Dhārmika OET- ontology, epistemology, teleology¹. These technical terms make for a psychological and cultural paradigm, connecting things that are core to existential human queries. Simply put, ontology describes what we know- things that make up reality, epistemology studies how we come to know- the methods of acquiring knowledge, and teleology points us to purpose or value- what do we do with this knowledge, or what is it for?

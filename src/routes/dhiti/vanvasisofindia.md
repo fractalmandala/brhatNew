@@ -5,6 +5,7 @@ category: Culture and Policy
 tags: culture, ecology
 date: "2023-01-24"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/vanavasis.webp
+excerpt: "Vanavāsis, the essential component of Bharatiya society, have faced displacement & poverty due to colonialism and state actions. To understand and solve their problems, we must acknowledge their traditional regenerative way of life and their place within the Dhārmika fold."
 ---
 
 It happened in one of the most remote villages, or pāḍā as they are called, of Kashivali in Jawhar District, Maharashtra. While on an excursion to understand the status and implementation of CFR (Community Forest Rights) under the Forest Rights Act, I talked to one of the village elders in his 90s. He told me about his lived experiences before and after independence.

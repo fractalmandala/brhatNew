@@ -5,6 +5,7 @@ category: Svayambodha
 tags: civilization, dharma, vivekananda
 date: "2022-06-09"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/31.webp
+excerpt: "The renaissance started by Swami Vivekananda was not just political or socio-cultural in nature, it was spiritual, Sanātana in character."
 ---
 
 #### Introduction to the Schools of Thought Series

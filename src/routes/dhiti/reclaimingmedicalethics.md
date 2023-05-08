@@ -5,6 +5,7 @@ category: Svayambodha
 tags: charaka, ethics
 date: "2022-05-28"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/24.webp
+excerpt: "The medical ethics was an important feature of the Āyurvedic curriculum, duly emphasized by ancient practitioners. Caraka’s Oath can be regarded as the summation of this tradition, and veritably, its epitome."
 ---
 
 The oath-taking ceremony is perhaps one of the most profound moments in the life of a young doctor through medical school. There is a certain sense of gravity that the oath tends to impart, which harkens to the seriousness and difficulty of the years ahead. To me, it was the moment I realized that down the line, I might have to contend with the daunting challenge of balancing ethics and empathy with day-to-day patient decisions — decisions which tend to be sterile and algorithmic in nature and quite divorced from the human being they affect. The oath administered is one written by Hippocrates in about 5th century B.C., and each medical school in the world generally has its own “modern” version, adapted to the values to which it subscribes; this practice extends to medical schools in India as well.

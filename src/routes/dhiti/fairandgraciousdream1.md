@@ -5,6 +5,7 @@ category: Culture and Policy
 tags: tradition
 date: "2023-02-01"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/fairdream.webp
+excerpt: "The Bangla Dream, or Kalpataru, was a bolt of lightning that transformed Hindu Bengal. Understanding it can help us understand the future, and the role of elites in Dhārmika politics."
 ---
 
 #### The Bangla Dream

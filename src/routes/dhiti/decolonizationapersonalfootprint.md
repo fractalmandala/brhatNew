@@ -5,6 +5,7 @@ category: Svayambodha
 tags: decolonization, history
 date: "2022-09-02"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/04.webp
+excerpt: "In the noise that words with wide circulation receive, their representation is often distorted. 'Decolonization' is one such word. Here we share a personal footprint as the writer looks back at his earliest memories, and outlines some essential ramp ways we all can use."
 ---
 
 It is easy for one to start looking at decolonization as a buzzword or the latest fad, or to dismiss it by finding characterizations that are misrepresentative.

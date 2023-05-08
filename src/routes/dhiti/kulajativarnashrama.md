@@ -5,6 +5,7 @@ category: Svayambodha
 tags: dharma, gaming, purushartha
 date: "2022-10-15"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/43.webp
+excerpt: "Our individual and social conundrums are as old as time, but civilizational essence is timeless. What can we learn from new arenas of creative activity, to rediscover the eternal essence? This essay is an exploration of the meta and meaning-making significance of culture and Dharma, via game design."
 ---
 
 The spectre of kula-jāti-varṇa (henceforth, KJV) looms large in the Indian discourse. This churn is both – expected and essential. Regardless of expression, it stems from a moral concern and the task ahead for all of us is to make this churn productive. One polarity in particular stands out. On one hand there is a tendency to frame the metaphysics of Hindu cosmology, eschatology and soteriology in exclusively socio-political or literalist terms. Even so, the near total absence of āśrama in the dialogue is conspicuous. This merits attention because any KJV analysis is incomplete and ineffective without the centrality of āśrama.

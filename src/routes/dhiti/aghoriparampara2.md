@@ -6,6 +6,7 @@ category: Svayambodha
 tags: aghora, tradition
 date: "2022-11-09"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/52.webp
+excerpt: "The second article in this three part series takes a comprehensive and detailed look at the Aghorī-s. The author is a sādhaka within the Aghorī paraṃparā of the nātha saṃpradāyam."
 ---
 
 After attempting to present our understanding of the Aghorī paramparā in this previous article, here we would like to talk about some of the common misrepresentations of the Aghorīs as well as their actual practices and provide a safe space to learn about them.

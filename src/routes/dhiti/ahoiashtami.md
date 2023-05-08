@@ -5,6 +5,7 @@ category: Svayambodha
 tags: ecology, festivals
 date: "2022-10-17"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/47.webp
+excerpt: "The festival of Ahoi Aṣṭamī instills the deep sense in Hindus that our actions have consequences; that human civilization destroys Nature by the sheer act of living in great groups and thus has to make extra efforts to respect and protect Nature; and that we have to give back to Nature as we take much from it."
 ---
 
 Today is a festival most of us barely even know about. Some would be familiar with a faint memory of their childhood, when after Barsātein (another almost forgotten festival) and one week before Diwali, married women with children would keep nirjala vṛta (without food and water) for a day and worship Ahoi Mātā. Ahoi Mātā has various different depictions and appearances but she is often imagined in the form of a porcupine. Women cook festive food and most impoṛtantly ‘Gadkore’ which are like chickpea fritters.

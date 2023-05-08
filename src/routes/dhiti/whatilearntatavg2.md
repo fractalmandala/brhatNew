@@ -5,6 +5,7 @@ category: Indian Knowledge Systems
 tags: education, tradition
 date: "2023-01-02"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/57.webp
+excerpt: "A personal reflection of the writer's experience studying at the Arsha Vidya Gurukulam, and the transformative impact it had on her understanding of the self and her relationship with the world and God. Part 2 of 4."
 ---
 
 Pūjya Svāmī Dayananda Saraswati ji would say: **success is your ability to manage your desires…..where your desires do not create any problem for you.** This took a while to internalize. In one’s youth the ‘heat of the moment’ is everything, so is ‘being a free-bird’. Spontaneous actions are complimented as natural and normal. But if those very actions cause harm to one’s spiritual growth or keep us tied to sorrow and fear then these are actions stemming from our habitual patterns not our true selves. **Those who do what they are supposed to do and do not do what they are not supposed to do are called yathoktakāris.** To be such, most of us need to work on ourselves; from a natural state we have to get to a refined, civilized state where we know how to sublimate and manage our desires, so that they are in line with dharma and do not transgress it. For nidhidhyāsanam to happen effectively i.e. for us to be in a meditative state where the one-ness is emphasized, even a small desire causes a problem. So we learn to give up on those desires which create preoccupations of insistence and resistance.

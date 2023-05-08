@@ -5,6 +5,7 @@ category: Featured
 tags: dharma, shakta
 date: "2022-09-26"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/40.webp
+excerpt: "When Devi or supreme Goddess is worshipped as the primary power, how is the primacy of Devi established in Śākta traditions?"
 ---
 
 #### Introduction

@@ -5,6 +5,7 @@ category: Śatrubodha
 tags: culture, turned gaze
 date: "2023-04-01"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/cultureiceberg.webp
+excerpt: "A review of Edward Hall's model of culture and its limitations, that explains how it doesn't fully capture cultural complexity. Reestablishing cultural context through knowledge systems in education policy can help preserve and revive cultural identity."
 ---
 
 Samuel Huntington in his Clash of Civilisations posits that “the fundamental source of conflict in this new world will not be primarily ideological or primarily economic. The great divisions among humankind and the dominating source of conflict will be cultural.” Verily, the most significant areas of conflict in the modern world are related to culture, and more narrowly, to the self’s interactions — in native as well as in foreign cultural environments — with institutions, ideas, and even extensions of the self, such as language.

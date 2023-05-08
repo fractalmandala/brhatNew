@@ -36,7 +36,7 @@ export async function latestDhitiPost(){
 	return allPosts.slice(0, 1)
 } //single latest post
 
-export async function latestDhitiThree(){
+export async function latestDhitiFour(){
 	const allPostFiles = import.meta.glob('/src/routes/dhiti/*.md')
 	const iterablePostFiles = Object.entries(allPostFiles)
 	const allPosts = await Promise.all(
@@ -52,7 +52,7 @@ export async function latestDhitiThree(){
 	)
 	// @ts-ignore
 	allPosts.sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date))
-	return allPosts.slice(1, 7)
+	return allPosts.slice(0, 4)
 } //latest posts 2, 3 and 4
 
 export async function latestDhitiTen(){
@@ -134,7 +134,7 @@ export const dhitiBodhaTwo = async() => {
 	return featuredPosts.slice(0, 2)
 } //two posts in Svayambodha and Shatrubodha category
 
-export async function allBodhas(start:number, limit:number) {
+export async function allBodhas() {
 	const allPostFiles = import.meta.glob('/src/routes/dhiti/*.md')
 	const iterablePostFiles = Object.entries(allPostFiles)
 	const allPosts = await Promise.all(
@@ -151,11 +151,11 @@ export async function allBodhas(start:number, limit:number) {
 	// @ts-ignore
 	allPosts.sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date))
 	const featuredPosts = allPosts.filter((post) => post.meta.category === "Svayambodha" || post.meta.category === "Shatrubodha")
-	return featuredPosts.slice(start,limit)
+	return featuredPosts
 } 
 
 
-export async function allIKS(start:number, limit:number) {
+export async function allIKS() {
 	const allPostFiles = import.meta.glob('/src/routes/dhiti/*.md')
 	const iterablePostFiles = Object.entries(allPostFiles)
 	const allPosts = await Promise.all(
@@ -172,10 +172,10 @@ export async function allIKS(start:number, limit:number) {
 	// @ts-ignore
 	allPosts.sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date))
 	const featuredPosts = allPosts.filter((post) => post.meta.category === "Indian Knowledge Systems")
-	return featuredPosts.slice(start,limit)
+	return featuredPosts
 } 
 
-export async function allCandP(start:number, limit:number) {
+export async function allCandP() {
 	const allPostFiles = import.meta.glob('/src/routes/dhiti/*.md')
 	const iterablePostFiles = Object.entries(allPostFiles)
 	const allPosts = await Promise.all(
@@ -192,10 +192,10 @@ export async function allCandP(start:number, limit:number) {
 	// @ts-ignore
 	allPosts.sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date))
 	const featuredPosts = allPosts.filter((post) => post.meta.category === "Culture and Policy")
-	return featuredPosts.slice(start,limit)
+	return featuredPosts
 } 
 
-export async function allDharmaToday(start:number, limit:number) {
+export async function allDharmaToday() {
 	const allPostFiles = import.meta.glob('/src/routes/dhiti/*.md')
 	const iterablePostFiles = Object.entries(allPostFiles)
 	const allPosts = await Promise.all(
@@ -212,7 +212,7 @@ export async function allDharmaToday(start:number, limit:number) {
 	// @ts-ignore
 	allPosts.sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date))
 	const featuredPosts = allPosts.filter((post) => post.meta.category === "Dharma Today")
-	return featuredPosts.slice(start,limit)
+	return featuredPosts
 } 
 
 export const dhitiCandPTwo = async() => {

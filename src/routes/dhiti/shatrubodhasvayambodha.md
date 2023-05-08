@@ -5,6 +5,7 @@ category: Featured
 tags: civilizational consciousness, dharma
 date: "2022-11-13"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/62.webp
+excerpt: "The Hindu civilizational discourse has arguably entered the sophisticated phase. This is marked by a shift in the content of the discourse, a transition from the political to the cultural, civilizational and metaphysical. What then are the challenges and how can we develop the thinking resources to overcome those?"
 ---
 
 #### Why Do We Need a Framework?

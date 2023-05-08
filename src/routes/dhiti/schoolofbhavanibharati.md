@@ -5,6 +5,7 @@ category: Svayambodha
 tags: aurobindo, civilizational consciousness
 date: "2022-06-26"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/30.webp
+excerpt: "The 2nd in our schools of thought series is on Sri Aurobindo, who gave us the method of attaining true svarāja."
 ---
 
 Sri Aurobindo is akin to a Himālayan peak, whose first glimpse leaves an indelible awe inspiring impression on our mind. A revolutionary, a nationalist leader, a philosopher, a poet, a yogi and a seer. An ordinary mind moves from known to yet another known with a sense of calculable fear. A spiritualized mind establishes an enduring link between the known and the unknown. Whereas, a seer’s mind traverses the realms of the unknown to bridge countless chasms of time. Sri Aurobindo is that seer who saw with sublime clarity the role for India in forging a brilliant future for humanity.

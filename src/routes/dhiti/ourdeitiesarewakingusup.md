@@ -5,6 +5,7 @@ category: Culture and Policy
 tags: cinema, cultural review
 date: "2022-10-28"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/44.webp
+excerpt: "Have no doubt; the deities are waking us up to their presence like never before. They are willing to travel from their forests, kśetras onto the screen and talk to us, to tell us: Oh children, don't remain blind anymore to our presence. Take refuge in us. We are here with you every moment."
 ---
 
 Kantara is a movie like no other, and for a reason. Kantara conjures magic at two levels: one where language plays a pivotal role in getting a grasp on the temporal aspect of the narrative. This facet of the movie transpired in the mind of its creator, Rishabh, who is a genius. Then there is the subliminal aspect, which is the undercurrent of the movie. This facet is felt and experienced because of the deity.

@@ -5,6 +5,7 @@ category: Svayambodha
 tags: aryan, chariot
 date: "2022-09-30"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/46.webp
+excerpt: "Dharma is sanātana, but civilizational emergence follows a worldly trajectory where the technologies we develop shape and form us in turn. Here we look at an ancient technology, the ratha or chariot, and unpack its significance in the Indian civilizational trajectory."
 ---
 
 #### Visions of the Maṇḍala

@@ -6,6 +6,7 @@ category: Featured
 tags: conversion
 date: "2022-08-23"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/27.webp
+excerpt: "Can one (particularly a non-Indian foreigner) convert to Hindu Dharma? How does caste feature in this (if at all)? What are the basic duties of a Hindu convert, who may not have any particular sampradāya affiliation?"
 ---
 
 There is an ongoing quest, especially among those who practice yoga and meditation, to dwell deeper into the secrets of life and living. The more they tend to reach out sincerely the closer will they get towards vaidika dharma or sanātana dharma, Hinduism if you will. Once they stand on the threshold of this oldest continuous surviving tradition which is at once a philosophy, spirituality, religion, way of life and culture, they have reached home. Yet many among such seekers do not know how to navigate their way about such vastness, in awe of such freedom and grandeur they tend to lose interest and revert back to what they are comfortable with, or take solace in blaming Hindu dharma for being so complicated and illegible.

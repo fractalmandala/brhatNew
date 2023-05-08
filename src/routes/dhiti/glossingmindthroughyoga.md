@@ -5,6 +5,7 @@ category: Indian Knowledge Systems
 tags: mental health, patañjali, yoga
 date: "2022-10-27"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/08.webp
+excerpt: "Dr. Richa Chopra continues her series on Patañjali’s Yoga Sūtras and tells us why 'the quality of life is how the mind perceives it' and how to go about acquiring a better quality of life. By consciously building mental and physical habits that awaken us to the great goals of human life. Step by step, day by day, thought by thought. There is no easy way out."
 ---
 
 This mini feature in two connected segments, is in continuation to the earlier republished article, ‘Universal Ideas from Patañjali’s Yoga Sūtras on Mind & Mental Health: Philosophy and Practice’. Presenting the first segment which builds on **‘Mind’ as an instrument of ‘Human Perception and Experience’,** in the ultimate pursuit of ‘Glossing Mind through Yoga5 towards Happiness & Quality-of-Life Enhancement’. In the second segment of this mini feature, we will present the philosophy and the techniques of Yoga that can help us to redirect the outward nature of our mind, turning it inward by channelizing the myriad of the vāsanas, kleśas and vṛttis – bringing us closer to our true nature – ānanda (ultimate happiness).

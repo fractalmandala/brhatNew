@@ -5,6 +5,7 @@ category: Svayambodha
 tags: decolonization, history
 date: "2022-08-04"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/16.webp
+excerpt: "The Fractal Maṇḍala is Indian civilizational consciousness: multi-level coherent. Here we draw from Indian macrohistory to evidence this."
 ---
 
 Humanity’s route to ‘progress’ has been a faustian bargain. Every next level of organization, co-operation and productivity has mandated new choices, new sacrifices and new problems. In the Purāṇas, humans are listed alongside cattle, goats and horses as “domesticated animals,” implying that ancient Indians too perceived this bargain.

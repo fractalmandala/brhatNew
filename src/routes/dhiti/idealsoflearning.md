@@ -5,6 +5,7 @@ category: Indian Knowledge Systems
 tags: education
 date: "2022-06-07"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/23.webp
+excerpt: "Learning has long been valued and pursued in India, not only as part of dharma and philosophy, but for its own sake—knowledge itself was a pursuit in Indian education."
 ---
 
 The distinctive tendencies of Hindu thought are manifested nowhere more clearly than in the realm of education and learning. It was an integral part of the Indian theory of knowledge and the corresponding scheme of life and values. It is no surprise, then, that learning has long been valued and pursued in India, not only as part of dharma and philosophy, but for its own sake—knowledge itself was a pursuit. It was held in such high regard that those who completed their studies were praised, while those who did not were chastized. One of the kurals of the Tamil poem Thirukkural says, *“the learned are said to have eyes, but the unlearned have (merely) two sores in their faces.”*

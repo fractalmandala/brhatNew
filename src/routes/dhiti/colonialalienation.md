@@ -5,6 +5,7 @@ category: Svayambodha
 tags: civilizational, decolonization
 date: "2022-09-13"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/36.webp
+excerpt: "Why do Indians display cultural and historical amnesia regarding their own past? What historical processes have led to the situation where we must constantly feel stunted by a deeply implanted sense of degradation and inferiority?"
 ---
 
 This piece is inspired by various social media exchanges with numerous individuals. One participant in such a discussion vehemently rejected the notion that Indians could have had scientific and engineering traditions in the past, given that the terms “science and engineering” are themselves European inventions. The denial persists despite the fact that, if true, the Indians could not have constructed the Kallanai Dam, which was built in the second century by King Karikalan of the Chola Dynasty and is one of the world’s oldest irrigation systems that is still in use.

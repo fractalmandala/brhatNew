@@ -5,6 +5,7 @@ category: Featured
 tags: culture, family, tradition
 date: "2022-09-12"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/05.webp
+excerpt: "Tradition is the bedrock on which civilization stands and culture flourishes. And tradition is that which continues. But how exactly does it continue? How is it transferred to the next generation?"
 ---
 
 #### Culture, Tradition and State

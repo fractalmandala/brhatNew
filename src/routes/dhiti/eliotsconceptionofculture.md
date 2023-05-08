@@ -5,6 +5,7 @@ category: Dharma Today
 tags: culture, eliot
 date: "2022-09-06"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/38.webp
+excerpt: "Cultures across the world produce seekers and seers who bring home the truth. In India, this process is a living tradition. In other places, we have a rare T.S. Eliot who breaks the hold."
 ---
 
 > “..to understand the culture is to understand the people..

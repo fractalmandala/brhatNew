@@ -5,6 +5,7 @@ category: Culture and Policy
 tags: tradition
 date: "2023-02-25"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/fairdream2.webp
+excerpt: "A look into the final destination of the intellectual journey of the group of people the author calls the 'Legacy Elite', or the 'Old Elite'. Part 2 of the decipherment of the taste of the broth of Dreams that our Elite has prepared for our consumption."
 ---
 
 #### An Old Dream

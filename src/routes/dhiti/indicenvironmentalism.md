@@ -5,6 +5,7 @@ category: Culture and Policy
 tags: design, environment, indic
 date: "2023-02-28"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/indicenvironmentalism.webp
+excerpt: "Sanātana Dharma always works within the universal principles but it provides enough room for creativity and innovation. To move the discourse on environmentalism further, we have to apply the framework which has existed from time immemorial to design our actions and processes, the design of Dharma itself, Ṛta in Design."
 ---
 
 **Beauty and architecture have seldom been apart in the Indian aesthetic sense.** But it has been changing at a rapid pace. Take a stroll down the urban street and one would notice the rows of identical houses all around. The same shape, size, and design repeated over and over again, with no hint of individuality.  An unchanging world that offers little stimulation. It would have been a saving grace if these designs were at least pleasing. But, alas, many of these are downright ugly and devoid of any colour or personality. They leave no space for individual and creative expression.

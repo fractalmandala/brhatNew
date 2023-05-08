@@ -5,6 +5,7 @@ category: Dharma Today
 tags: physics, vedanta
 date: "2022-09-24"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/03.webp
+excerpt: "Western science, built on reason, made a shocking discovery in the 20th century that rocked it to its core. The discovery: Reality rests on a substrate of weird. The western mind needed a 'blood transfusion from eastern thought' - but those can be tricky."
 ---
 
 #### Introduction: Physics is Over?

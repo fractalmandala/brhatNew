@@ -5,6 +5,7 @@ category: Indian Knowledge Systems
 tags: radhakrishnan, teacher
 date: "2022-09-05"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/37.webp
+excerpt: "On this Teacher's Day, we scope some views of the man behind the legacy. His wide range, his exposure to Western civilization, his own readings of Dharma- these gave to Shri Radhakrishnan a unique view, a distinct voice. Art, intuition, science - he had insights on all."
 ---
 
 Controversies of the day pass but eternal questions endure. Sarvepalli Radhakrishnan dedicated his life to precisely these eternal questions: From where does art derive its moving power? What is the mysterious source of scientific insight? How to differentiate between dogmatic religion and genuine spiritual insight?

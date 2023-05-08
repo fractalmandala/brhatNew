@@ -5,6 +5,7 @@ category: Svayambodha
 tags: art, culture, meaning-making
 date: "2022-09-25"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/39.webp
+excerpt: "There is a reason that as a culture we were more interested in ‘what happens’ than ‘what happened’. ‘What happened’ becomes dated. ‘What happened’ is limited. While ‘what happens’ is timeless and limitless. The great seers of this great land observed the world from a śuddha citta and created analogies capable of reflecting the timeless and divine principles and messages which are still relevant to us. And they did this through poetry, literature and art."
 ---
 
 #### Meaning Making in Culture

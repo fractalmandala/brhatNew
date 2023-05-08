@@ -5,6 +5,7 @@ category: Dharma Today
 tags: poetry
 date: "2022-05-27"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/32.webp
+excerpt: "The sacred in life, nature and the cosmos is made by that invisible, all-pervading consciousness, which defines this land we call Bhārata."
 ---
 
 In Kumaon, a woman is photographed,

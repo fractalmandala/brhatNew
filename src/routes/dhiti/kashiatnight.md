@@ -5,6 +5,7 @@ category: Dharma Today
 tags: poetry, places of india
 date: "2022-07-16"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/18.webp
+excerpt: "A short poem that perfectly captures Varanasi, and evokes the almost mystic feel it can overtake you with when there."
 ---
 
 From this side of the boat,

@@ -5,6 +5,7 @@ category: Featured
 tags: culture, harmony
 date: "2022-05-26"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/25.webp
+excerpt: "In our introductory essay, Pankaj Saxena tells us what the cultural imperative is, and the redemption it provides."
 ---
 
 ### 1- A Civilization Of Imbalance

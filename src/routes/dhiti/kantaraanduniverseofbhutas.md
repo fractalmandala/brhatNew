@@ -5,6 +5,7 @@ category: Dharma Today
 tags: cinema, cultural review, storytelling
 date: "2022-11-05"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/09.webp
+excerpt: "A review of the massively successful Kāntāra, appreciating the film’s foray into Karnataka’s lesser known Bhūta universe, along with an account of the tradition itself."
 ---
 
 *Kāntāra* (2022) is a powerful and visceral cinematic experience, perhaps unlike anything we’ve seen in contemporary times. It harkens back to legends of yore, tales that animate the rich corpus of Indian literary and oral storytelling traditions. Set in a small hamlet in the midst of the lush forests of the coastal region of *Dakṣiṇa Kannaḍa* or South Canara, *Kāntāra* evokes the rustic and unabashedly authentic imagery of rural life. Tulunadu is portrayed as the playground of countless *bhūtas*, with the Tuluvas performing ritual worship and sacrifices, not so much with the hope of rewards, but to pay homage to the spirits and avert their displeasure. *Kāntāra* grounds itself in a gloriously complex and vibrant ritual universe built on the strong foundations of immense and unrelenting faith. It serves to reaffirm the importance and universality of the belief that forms the thread that weaves together almost all Hindu traditions.

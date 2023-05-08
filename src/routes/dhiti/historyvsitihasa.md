@@ -5,6 +5,7 @@ category: Svayambodha
 tags: civilizational consciousness, history, storytelling
 date: "2022-09-18"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/60.webp
+excerpt: "In this essay we engage in emic freethinking, and look at some names from Indian itihāsa in a new light. How many such stories might we find in the Purāṇas, Epics and other texts? And if we did, would we not understand our past better?"
 ---
 
 At one point in the 1998 movie Pi, the protagonist’s professor shouts out- *“if you look for the number pi everywhere, you will find the number pi everywhere!”* We can understand the exasperation, for confirmation bias and recursive thinking are not unfamiliar in common experience. The reference is made here to preamble the following article, which may well be a similar case of ‘finding pi-s everywhere.’ Alternatively, it could be a relevant observation on itihāsa, or Indian civilisational memory. The latter proposition finds strength from previous notices of macro-historical memory in Indian itihāsa.

@@ -5,6 +5,7 @@ category: Culture and Policy
 tags: policy, sri lanka
 date: "2022-06-29"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/21.webp
+excerpt: "The Sri Lankan crisis and the subsequent economic turmoil question the abrupt policy shift of the government toward organic farming."
 ---
 
 The Sri lankan crisis and the subsequent economic turmoil has generated much discussion and concern, especially from a public policy perspective in light of the failure of multiple policies simultaneously. The crisis is attributable to a number of factors — from the global financial crunch of 2008 to the heavy borrowing from the International Monetary Fund, to a multitude of impractical and faulty domestic policies all culminating in an economic nadir that was heightened by politics and domestic strife. Of these, one of the many policy failures of the Sri Lankan government was the abrupt ban of chemical fertilizers and the declaration to go organic.

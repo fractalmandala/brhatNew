@@ -5,6 +5,7 @@ category: Svayambodha
 tags: decolonization, colonization, svayambodha
 date: "2022-12-10"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/55.webp
+excerpt: "Colonization should be understood as both a process and an event. The svayaṃbodha that emerges from such a realization would make us understand how colonization was not just about the subordination of people and their traditions or the colonization of land and resources, but also about colonizing people's knowledge, their daily experiences, and collective imaginations."
 ---
 
 In development paradigms, the representation of colonized countries has either been of socio-economic-culturally backward regions in comparison to the Western countries or as the sites for resource extraction. In both of these development paradigms, which are ideologically opposed to one another, colonized countries have been denied agency.

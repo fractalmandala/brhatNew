@@ -6,6 +6,7 @@ category: Featured
 tags: conversion, dharma, religion
 date: "2022-09-27"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/41.webp
+excerpt: "We read here a personal account from Smt. Kate Herse, and find that being born in the United States did not prevent her from learning the Upaniṣads, leading a dhārmika life, and living as a Hindu. Caste played no part at all in her journey. What is required though is adherence to duties and norms of the sampradāya that she has chosen."
 ---
 
 When I first visited Eugene, USA, in 2014 I was pleasantly surprised to find myself amongst a small community of non-Indian Hindus. In terms of dedication, service and sincerity of practice they seemed to be far ahead of any deracinated Indian Hindu. This was not a Hare Krishna group, nor a Swaminarayan group which are the two major Hindu-makers outside of India. Nor did they belong to any of the Isha Yoga, Art of Living, Amma, and other similar global traditions. Here was a quiet community going about its business even more quietly. How could two functioning Hindu shrines be maintained here, for more than a decade, without being known to the outside world?

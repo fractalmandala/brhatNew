@@ -5,6 +5,7 @@ category: Indian Knowledge Systems
 tags: education, guru, knowledge
 date: "2022-06-19"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/22.webp
+excerpt: "The uninterrupted transmission of knowledge would not have been possible without the intervention of excellent teachers, called gurus in Indian traditions."
 ---
 
 The Vedas contain the seeds and sources from which the entire course of Hindu thought has been derived and has flowed in many streams throughout the ages. Rudolph Steiner, an Austrian philosopher and educationist, and a lifetime student of science and spirituality, found in Vedas ‘the archives of Hindu wisdom’ which according to him, even if not in its original form, gives:

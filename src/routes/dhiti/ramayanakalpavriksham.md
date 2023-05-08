@@ -5,6 +5,7 @@ category: Culture and Policy
 tags: events
 date: "2023-04-07"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/rmkal.webp
+excerpt: "The Rāmāyaṇa Kalpavṛikṣam in Bhagyanagar showcased a range of creative activities based on the theme of Rāmāyaṇa, evoking bhakti and śraddhā in participants, highlighting the importance of sustaining and upholding dharma, and showcasing the timeless beauty and universality of Indian culture. Here we share a detailed coverage."
 ---
 
 > ‘It is this veneration and the daily religious and socio-religious services and ceremonies which have hitherto maintained discipline in the Hindu family and cemented it together. Their gradual extinction is tending to seriously disturb the harmony and happiness of the family among those who have advanced most on the Western path…….Western civilisation on the other hand, takes but little heed of spiritual life and seeks to accomplish the well-being of man mainly—if not solely—by the gratification of his senses, by adding physical comforts, by multiplying his wants and desires. With us, the death of desire is the birth of happiness. With the Westerns, the satisfaction of desire is the chief, if not the only source of happiness as it is understood by them. Our sages have sought spiritual development at the expense of the animal, the Western scientists seek the expansion of the animal life taking little account of the spiritual’,
