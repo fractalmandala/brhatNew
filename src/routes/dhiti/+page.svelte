@@ -1,11 +1,12 @@
 <script lang="ts">
-
+//@ts-nocheck
 	import { onMount } from 'svelte'
 	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import { latestDhitiFour, allFeaturedPosts, filterChosen, authorfiltered, allBodhas, allCandP, allIKS, allDharmaToday } from '$lib/utils/localpulls'
 	import { scale } from 'svelte/transition'
 	import visibilityMode from '$lib/stores/visibility'
 	import { quartIn, quartOut } from 'svelte/easing'
+	import CompDrawer from '$lib/ridunits/CompDrawer.svelte'
 	import DropDown from '$lib/components/DropDown.svelte'
 	import DropDown2 from '$lib/components/DropDown.svelte'
 	import SocialShare from '$lib/ridunits/RIDSocialShare.svelte'
@@ -27,6 +28,7 @@
 	let caps:any
 	let knows:any
 	let dharmas:any
+	let hide = true
 
 	$: anyCategoryOpen = categoryItems.some(item => item)
 	$: if (anyCategoryOpen === true) {
@@ -100,9 +102,6 @@
 	<div class="rta-column bord-right-d main-area">
 		<div id="topsticky" class="rta-column rowgap600 bord-bot p-bot-32 p-top-64 mobile-down">
 			<div class="rta-row between p-bot-16 ybot top-row">
-				<div class="searcher rta-row ycenter">
- 
-				</div>
 				<div class="rta-column rowgap50 xright">
 					{#if showDefault}
 					<small class="is-black"><strong>Filter Categories:</strong></small>
@@ -129,7 +128,8 @@
 						class:light={$visibilityMode} class:dark={!$visibilityMode}
 						on:click={() => toggleCategory(4)}
 						class:selected={categoryItems[4]}
-						>Culture and Policy</button>
+						>Culture and Policy
+					</button>
 					</div>
 				</div>
 			</div>
@@ -149,6 +149,7 @@
 				{#if categoryItems[4]}
 					<h5><strong>Culture and Policy</strong></h5>
 				{/if}
+				{#if !hide}
 				<div class="dropper point">
 					<div class="rta-row filter-row ycenter colgap100" on:click={toggleWriters} on:keydown={fauxfake} class:light={$visibilityMode} class:dark={!$visibilityMode}>
 						<small><strong>Filter Writers</strong></small>
@@ -219,6 +220,7 @@
 					<p>Prabhav Paturi</p>
 				</div>
 				</div>
+				{/if}
 				{/if}
 			</div>
 		</div>

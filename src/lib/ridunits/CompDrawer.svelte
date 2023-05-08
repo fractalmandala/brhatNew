@@ -49,7 +49,9 @@
 <div class="rta-row colgap-24 row-col comp-drawer" class:dark={!$visibilityMode} class:light={$visibilityMode} use:autoAnimate>
 	{#if breakPoint}
 		<div class="rta-row row-center-m colgap-8" id="menu-select" on:click={toggleMenu} on:keydown={fauxfake}>
-			<h6 class="drawer-item non">Expand Menu</h6>
+			<h6 class="drawer-item non">
+				<slot name="visible"></slot>
+			</h6>
 			<div class="rta-in-col" class:rotated={expandMenu}>
 				<ChevronDown/>
 			</div>
@@ -57,14 +59,7 @@
 	{/if}
 	{#if !breakPoint || expandMenu}
 	<div class="rta-row row-col colgap-24" id="drawer-items" on:click={toggleMenu} on:keydown={fauxfake} use:autoAnimate>
-		<h6 class="drawer-item">Item 1</h6>
-		<h6 class="drawer-item">Item 2</h6>
-		<h6 class="drawer-item">Item 3</h6>
-		<h6 class="drawer-item">Item 4</h6>
-		<h6 class="drawer-item">Item 5</h6>
-		<h6 class="drawer-item">Item 6</h6>
-		<h6 class="drawer-item">Item 7</h6>
-		<h6 class="drawer-item">Item 8</h6>
+		<slot name="invisibles"></slot>
 	</div>
 	{/if}
 </div>

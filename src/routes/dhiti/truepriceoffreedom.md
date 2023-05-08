@@ -8,7 +8,7 @@ image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwe
 excerpt: "Freedom is not beseeched, it is seized. In his book Revolutionaries, Sanjeev Sanyal describes the true import of this statement, through the lives, wills and actions of our lesser-known freedom fighters."
 ---
 
-Is the concept of Rāṣṭra the same as that of a Nation? Scholars may provide accurate definitions, but generally, while a nation is defined in terms of descent, history, culture, or language, Rāṣṭra embodies something more. It contains at its base a certain sanātana spiritual principle, an inclusive yet discerning dṛṣti which enables it to conceive a civilisation.
+Is the concept of Rāṣṭra the same as that of a Nation? Scholars may provide accurate definitions, but generally, while a nation is defined in terms of descent, history, culture, or language, Rāṣṭra embodies something more. It contains at its base a certain sanātana spiritual principle, an inclusive yet discerning dṛṣti which enables it to conceive a civilization.
 
 In the context of modern history, while the European countries had the fortune (or misfortune) of being organised as nation-states post the Treaty of Westphalia, our country went through agonising colonisation to tunnel the dṛṣti of rāṣṭra into a nation. In the process, two variants of history emerged. One which spoke glowingly, and solely, of the contribution of the Indian National Congress in the struggle for independence. And then there was the other side, as depicted beautifully by Śrī Sanjeev Sanyal in his latest book, Revolutionaries: The other story of how India won its freedom.
 
