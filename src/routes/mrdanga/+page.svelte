@@ -40,16 +40,6 @@
 		fake = !fake
 	}
 
-	function toggleVisibility() {
-	  if (browser) {
-	    visibilityMode.update((mode) => {
-	      const newMode = !mode;
-	      localStorage.setItem('visibilityMode', JSON.stringify(newMode));
-	      return newMode;
-	    });
-	  }
-	}
-
 	function toggleCategory(index:number) {
 		selectedCategory[index] = !selectedCategory[index]
 		for ( let i = 0; i < selectedCategory.length; i++) {
@@ -140,22 +130,22 @@
 		<div class="rta-column p-top-32 bord-top bord-bot p-bot-32">
 			<h3 class="ta-c-d">EXPLORE BṚHAD MṚDAṄGA</h3>
 		</div>
-				{#if breakPoint}
-				<div class="rta-row colgap400 drawer-select" on:click={toggleMenu} on:keydown={fauxfake}>
-					Expand Themes
-					<div class="button-box" class:rotated={expandMenu}>
-						<ChevronDown size="27"/>
-					</div>
-				</div>
-				{/if}
-				{#if expandMenu || !breakPoint}
-				<div class="rta-row xcenter-d row-col ycenter rta-drawer-items colgap400 rowgap100 p-bot-16" use:autoAnimate on:click={toggleMenu} on:keydown={fauxfake}>
-					<button class="drawer-item" on:click={() => toggleCategory(1)} on:keydown={fauxfake} class:selected={selectedCategory[1]}>Latest</button>
-					<button class="drawer-item" on:click={() => toggleCategory(2)} on:keydown={fauxfake} class:selected={selectedCategory[2]}>Rasa</button>
-					<button class="drawer-item" on:click={() => toggleCategory(3)} on:keydown={fauxfake} class:selected={selectedCategory[3]}>Kavitā</button>
-					<button class="drawer-item" on:click={() => toggleCategory(4)} on:keydown={fauxfake} class:selected={selectedCategory[4]}>Śabdāvalī</button>
-				</div>
-				{/if}
+		{#if breakPoint}
+		<div class="rta-row colgap400 drawer-select" on:click={toggleMenu} on:keydown={fauxfake}>
+			Expand Themes
+			<div class="button-box" class:rotated={expandMenu}>
+				<ChevronDown size="27"/>
+			</div>
+		</div>
+		{/if}
+		{#if expandMenu || !breakPoint}
+			<div class="rta-row xcenter-d row-col ycenter rta-drawer-items colgap400 rowgap100 p-bot-16" use:autoAnimate on:click={toggleMenu} on:keydown={fauxfake}>
+				<button class="drawer-item" on:click={() => toggleCategory(1)} on:keydown={fauxfake} class:selected={selectedCategory[1]}>Latest</button>
+				<button class="drawer-item" on:click={() => toggleCategory(2)} on:keydown={fauxfake} class:selected={selectedCategory[2]}>Rasa</button>
+				<button class="drawer-item" on:click={() => toggleCategory(3)} on:keydown={fauxfake} class:selected={selectedCategory[3]}>Kavitā</button>
+				<button class="drawer-item" on:click={() => toggleCategory(4)} on:keydown={fauxfake} class:selected={selectedCategory[4]}>Śabdāvalī</button>
+			</div>
+		{/if}
 
 		<div class="rta-column xcenter rowgap-32">
 			{#if selectedCategory[1]}
