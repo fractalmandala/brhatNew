@@ -361,7 +361,13 @@ body, html
 	grid-template-rows: auto
 	width: 100%
 
+.rta-grid.ycenter
+	align-items: center
+
 @media screen and (min-width: 1024px)
+	.grid5
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+		grid-template-areas: ". . . . ."	
 	.grid4
 		grid-template-columns: 1fr 1fr 1fr 1fr
 		grid-template-areas: ". . . ."
@@ -398,6 +404,9 @@ body, html
 		transition: 0.2s
 
 @media screen and (max-width: 1023px)
+	.grid5.stay2
+		grid-template-columns: 1fr 1fr
+		grid-template-areas: ". ."	
 	.grid4
 		grid-template-columns: 1fr
 		grid-template-areas: "." "." "." "."

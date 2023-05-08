@@ -3,13 +3,15 @@
 	import { onMount, afterUpdate } from 'svelte'
 	import { browser } from '$app/environment'
 	import visibilityMode from '$lib/stores/visibility'
+	import { ChevronDown } from 'lucide-svelte'
+	import autoAnimate from '@formkit/auto-animate'
 	import Header from '$lib/components/SubHeader.svelte'
 	import Animations from 'textify.js'
 	import { scale } from 'svelte/transition'
 	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import { allmrdVids, Shabdavali, mrdangaVids, kavitaVids } from '$lib/utils/supapulls'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
-	import ButtonOne from '$lib/anims/ButtonOne.svelte'
+	import RIDButton from '$lib/ridunits/RIDButton.svelte'
 	import ButtonTwo from '$lib/anims/ButtonOne.svelte'
 	let sidebar = false
 	let vids:string|any[]
@@ -21,7 +23,14 @@
 	let responsive:boolean
 	let selectedCategory:boolean[] = Array(5).fill(false)
 	selectedCategory[1] = true
+	let breakPoint:boolean
 	let fake = false
+	let iW:number
+	let expandMenu = false
+
+	function toggleMenu(){
+		expandMenu = !expandMenu
+	}
 
 	function toggleResponsive(){
 		responsive = !responsive
@@ -64,22 +73,12 @@
 	}
 
 	$: if ( iw <= 1023) {
-		responsive = true
+		breakPoint = true
 	} else {
-		responsive = false
+		breakPoint = false
 	}
 
 	onMount(() => {
-		const { Textify } = Animations;
-		new Textify({
-			selector: ".typett",
-			duration: 1200,
-			fade: false,
-			top: false,
-			reveal: true,
-			threshold: 0.8,
-			once: false
-		});
 
 		(async () => {
 			vids = await allmrdVids(limiter)
@@ -100,11 +99,6 @@
 <svelte:window bind:innerWidth={iw}/>
 
 <Header sidebar={sidebar}>
-	<div class="rta-row colgap-8" slot="modeswitch" on:click={toggleVisibility} on:keydown={fauxfake}>
-		<div class="togglemode" class:dark={!$visibilityMode} class:general={$visibilityMode}>
-			<div class="togglemodeball"></div>
-		</div>	
-	</div>
 </Header>
 
 <div class="type" class:light={$visibilityMode} class:dark={!$visibilityMode}>
@@ -112,15 +106,15 @@
 	<div class="x0">
 		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/mrdanga-hero.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/mrdanga-hero.webp')"></ParallaxImage>
 	</div>
-	<div class="rta-grid grid2 left thirty is-padded rowgap-32 colgap-64 minH cc-all">
-		<div class="rta-in-col rowgap-24 ta-l thin">
+	<div class="rta-grid grid2 left2 rowgap400 colgap600 minH outer-box p-top-64 limit">
+		<div class="rta-column rowgap300 ta-l thin">
 			<h5>
 				Mṛdaṅga is one of the sacred trinity of musical instruments. It is a ‘Deva Vādyam’, the instrument which Nandi, the prime gaṇa of Śiva plays when he does his Tāṇḍava. Mṛdaṅga is capable of sounding the divine rhythm across the multiple planes of consciousness. It is so divine because the sound that it emanates is not just a human creation.</h5>
 			<h4 style="color: #fe4a49">
 				It is a tapping into the divine sound which is always playing but not accessible to our senses normally.
 			</h4>	
 		</div>
-		<div class="rta-in-col rowgap-24 ta-l thick">
+		<div class="rta-column rowgap300 ta-l thick">
 				<p>
 					Sanātana Dharma is a view of immanence. It sees the divine everywhere. The transcendent is the Ultimate Truth, the Supreme Consciousness. The view of immanence says that although nothing that we perceive is the Ultimate Truth, it is at the same time a form of the Ultimate. In this view of immanence a gradient of divinity is created in which individual consciousness is always encouraged to elevate itself and ultimately realize its true form as the Supreme Consciousness.
 				</p>
@@ -141,76 +135,70 @@
 				</p>
 		</div>
 	</div>
-	<div class="rta-column is-padded minH min rowgap-32">
-		<div class="rta-in-col">
-			<h3 class="typett">EXPLORE BṚHAD MṚDAṄGA</h3>
+
+	<div class="rta-column outer-box limit p-top-64 rowgap600">
+		<div class="rta-column p-top-32 bord-top bord-bot p-bot-32">
+			<h3 class="ta-c-d">EXPLORE BṚHAD MṚDAṄGA</h3>
 		</div>
-		<div class="rta-row colgap-16">
-				<button class="sideways-button red" on:click={() => toggleCategory(1)} class:selected={selectedCategory[1]}>
-					<span>
-						LATEST
-					</span>
-				</button>
-				<button class="sideways-button red" on:click={() => toggleCategory(2)} class:selected={selectedCategory[2]}>
-					<span>
-						RASA
-					</span>
-				</button>
-				<button class="sideways-button red" on:click={() => toggleCategory(3)} class:selected={selectedCategory[3]}>
-					<span>
-						KAVITĀ
-					</span>
-				</button>
-				<button class="sideways-button red" on:click={() => toggleCategory(4)} class:selected={selectedCategory[4]}>
-					<span>
-						ŚABDĀVALĪ
-					</span>
-				</button>
-		</div>
-		<div class="rta-in-col rowgap-32">
+				{#if breakPoint}
+				<div class="rta-row colgap400 drawer-select" on:click={toggleMenu} on:keydown={fauxfake}>
+					Expand Themes
+					<div class="button-box" class:rotated={expandMenu}>
+						<ChevronDown size="27"/>
+					</div>
+				</div>
+				{/if}
+				{#if expandMenu || !breakPoint}
+				<div class="rta-row xcenter-d row-col ycenter rta-drawer-items colgap400 rowgap100 p-bot-16" use:autoAnimate on:click={toggleMenu} on:keydown={fauxfake}>
+					<button class="drawer-item" on:click={() => toggleCategory(1)} on:keydown={fauxfake} class:selected={selectedCategory[1]}>Latest</button>
+					<button class="drawer-item" on:click={() => toggleCategory(2)} on:keydown={fauxfake} class:selected={selectedCategory[2]}>Rasa</button>
+					<button class="drawer-item" on:click={() => toggleCategory(3)} on:keydown={fauxfake} class:selected={selectedCategory[3]}>Kavitā</button>
+					<button class="drawer-item" on:click={() => toggleCategory(4)} on:keydown={fauxfake} class:selected={selectedCategory[4]}>Śabdāvalī</button>
+				</div>
+				{/if}
+
+		<div class="rta-column xcenter rowgap-32">
 			{#if selectedCategory[1]}
-				<div class="rta-grid grid4 rowgap-32 colgap-32">
+				<div class="rta-grid grid4 rowgap400 colgap400">
 					{#if vids && vids.length > 0}
 						{#each vids as item, i}
-							<div class="rta-video" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
+							<div class="rta-column rowgap100 rta-video" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
 								<iframe width=100% height=100% loading="lazy" src="https://www.youtube.com/embed/{item.videoid}" title={item.name}></iframe>
-								<p>{item.name}</p>	
+								<small>{item.name}</small>	
 							</div>
 						{/each}
 					{/if}
 				</div>
-				<button class="sideways-button full" on:click={moreClick}>
-					<span>
-						Load More
-					</span>
-				</button>
+				<div on:click={moreClick} on:keydown={fauxfake}>
+					<RIDButton --thisbuttoncolor="#fe4a49">Load More</RIDButton>
+				</div>
 			{/if}
 			{#if selectedCategory[2]}
-			<div class="rta-grid grid4 rowgap-32 colgap-32"> 
+			<div class="rta-grid grid4 rowgap400 colgap400"> 
 				{#if rasas && rasas.length > 0}
 					{#each rasas as item, i}
-						<div class="rta-video" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
+						<div class="rta-column rowgap100 rta-video" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
 							<iframe width=100% height=100% loading="lazy" src="https://www.youtube.com/embed/{item.videoid}" title={item.name}></iframe>
-							<p>{item.name}</p>	
+							<small>{item.name}</small>	
 						</div>
 					{/each}
 				{/if}
 			</div>
 			{/if}
 			{#if selectedCategory[3]}
-			<div class="rta-grid grid4 rowgap-32 colgap-32">
+			<div class="rta-grid grid4 rowgap400 colgap400">
 				{#if kavitas && kavitas.length > 0}
 					{#each kavitas as item, i}
-						<div class="rta-video" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
+						<div class="rta-column rowgap100 rta-video" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
 							<iframe width=100% height=100% loading="lazy" src="https://www.youtube.com/embed/{item.videoid}" title={item.name}></iframe>
-							<p>{item.name}</p>	
+							<small>{item.name}</small>	
 						</div>
 					{/each}
 				{/if}
 			</div>
 			{/if}
 			{#if selectedCategory[4]}
-				<div class="rta-grid grid5 rowgap-32 colgap-32">
+				<div class="rta-grid grid5 stay2 rowgap400 colgap400">
 					{#if kalas && kalas.length > 0}
 						{#each kalas as item, i}
 							<div class="rta-video" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
@@ -226,11 +214,92 @@
 
 <style lang="sass">
 
+.rta-video
+	video
+		object-fit: cover
+		width: 100%
+		height: 100%
+
+
+.light
+	background: white
+	h3
+		color: #272727
+
+.dark
+	background: #171717
+	h3
+		color: white
+
 .x0
 	overflow: hidden
 	@media screen and (min-width: 1024px)
 		height: 100vh
 	@media screen and (max-width: 1023px)
 		height: 60vh
+
+
+.drawer-item
+	text-decoration: none
+	font-size: 16px
+	text-transform: uppercase
+	border: none
+	background: none
+	padding: 4px 12px
+	border-radius: 16px
+	&::before
+		margin-left: auto
+	&::before, &::after
+		content: ''
+		display: block
+		width: 0%
+		height: 2px
+		background: #FE4A49
+		transition: 0.5s
+		border-radius: 2px
+	&:hover
+		&::after, &::before
+			width: 100%
+	@media screen and (max-width: 1023px)
+		width: 100%
+
+.light
+	.drawer-item
+		color: #474747
+	.drawer-item.selected
+		background: #fe4a49
+		color: white
+
+.dark
+	.drawer-item
+		color: #878787
+	.drawer-item.selected
+		background: #fe4a49
+		color: white	
+
+.drawer-select
+	display: flex
+	text-decoration: none
+	font-size: 20px
+	text-transform: uppercase
+	justify-content: space-between
+	background: #fe4a49
+	color: white
+	align-items: center
+	padding: 6px 12px 0px 12px
+	border-radius: 20px
+	.rotated
+		transform: rotate(180deg)
+		transform-origin: center center
+		.button-box
+			padding-bottom: 4px
+
+.button-box
+	height: 30px
+	display: flex
+	justify-content: center
+	align-items: center
+	padding: 0
+	transition: 0.08s
 
 </style>
