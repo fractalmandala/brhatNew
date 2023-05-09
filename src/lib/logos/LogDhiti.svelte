@@ -55,7 +55,7 @@
 	transition: 0.5s;
 }
 
-.light #the-i {
+#the-i {
 	fill: #272727;
 	stroke: #272727;
 }

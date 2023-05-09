@@ -81,9 +81,4 @@ Gods are not a creation of our neural pathways or the chemicals they generate. T
 
 We are mere specks but simultaneous holders of a divine potential. There are many paths to realize that sacred core and our civilization curated that journey to suit our individual ways. This is the highest empathy there can be. Movies like Balagam remind us of this core and the method is civilizational too - Rituals and Story-telling as pedagogy.
 
-#### Endnotes:
-- https://timesofindia.indiatimes.com/entertainment/telugu/movie-reviews/balagam/movie-review/98373762.cms?from=mdr
-- https://www.thehindu.com/entertainment/movies/balagam-telugu-movie-review-death-and-drama-wrapped-in-humour/article66579320.ece 
-- https://www.britannica.com/ 
-
 
