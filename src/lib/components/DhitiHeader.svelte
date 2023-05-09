@@ -8,6 +8,7 @@
 	import { fly } from 'svelte/transition'
 	import tippy, {animateFill} from 'tippy.js'
 	import LogDhiti from '$lib/logos/LogDhiti.svelte'
+	import LogDhitiD from '$lib/logos/LogDhiDark.svelte'
 	import 'tippy.js/dist/tippy.css'
 	import 'tippy.js/animations/shift-away.css'
 	import CompToggle from '$lib/ridunits/CompToggle.svelte'
@@ -111,7 +112,11 @@
 
 <div class="appheader" class:onsidebar={sidebar} class:hiddenHeader={isInvisible} class:light={$visibilityMode} class:dark={!$visibilityMode}>
 	<a class="applogo" href="/dhiti">
+		{#if $visibilityMode}
 		<LogDhiti></LogDhiti>
+		{:else}
+		<LogDhitiD></LogDhitiD>
+		{/if}
 	</a>
 	<div class="toggling" id="single" on:click={toggleVisibility} on:keydown={fauxfake}>
 		<div class="switch rta-column" use:autoAnimate class:light={$visibilityMode} class:dark={!$visibilityMode}>

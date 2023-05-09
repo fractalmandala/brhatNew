@@ -11,7 +11,7 @@
 </script>
 
 
-<svg width="144" height="66" viewBox="0 0 144 66" fill="none" xmlns="http://www.w3.org/2000/svg" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+<svg width="144" height="66" viewBox="0 0 144 66" fill="none" xmlns="http://www.w3.org/2000/svg">
 	<g id="logoofdhi">
 		<path 
 			id="Vector"
