@@ -432,8 +432,6 @@
 
 .top-row
 	@media screen and (min-width: 1024px)
-		.wt
-			width: 20%
 		.ct
 			width: 80%
 
