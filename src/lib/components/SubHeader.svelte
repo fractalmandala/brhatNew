@@ -4,7 +4,9 @@
 	import visibilityMode from '$lib/stores/visibility'
 	import { browser } from '$app/environment'
 	import CompToggle from '$lib/ridunits/CompToggle.svelte'
+	import CompToggle2 from '$lib/ridunits/CompToggle.svelte'
 	import RIDSidebar from '$lib/ridunits/RIDSidebar.svelte'
+	import IconClose from '$lib/icons/IconClose.svelte'
 
 	export let sidebar:boolean
 	let y:number
@@ -192,6 +194,12 @@
 		<CompToggle></CompToggle>
 	</div>
 	<div class="menuicon colgap100" on:click={toggleSidebar} on:keydown={handleKeyDownEvent} on:mouseenter={toggleCircle} on:mouseleave={toggleCircle}>
+		{#if sidebar && breakPoint}
+		<div class="givemarg" on:click={toggleVisibility} on:keydown={fauxfake}>
+			<CompToggle></CompToggle>
+		</div>
+		<IconClose></IconClose>
+		{:else}
 		<p>OUR COSMOS</p>
 		<div id="menumainx">
 			<svg id="pulsar" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -201,6 +209,7 @@
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M0.232608 20.7295C-0.0775366 20.3689 -0.0775334 19.7843 0.232616 19.4236C2.19765 17.1389 3.41164 13.9852 3.41164 10.5C3.41164 7.01488 2.19766 3.86117 0.232607 1.57635C-0.0775381 1.21574 -0.0775353 0.631067 0.232613 0.270456C0.542761 -0.0901559 1.04561 -0.0901507 1.35575 0.270464C3.60649 2.88746 5 6.5054 5 10.5C5 14.4947 3.60649 18.1126 1.35575 20.7295C1.0456 21.0902 0.542752 21.0902 0.232608 20.7295Z" fill="white"/>
 			</svg>
 		</div>
+		{/if}
 	</div>
 </div>
 
@@ -211,6 +220,9 @@
 {/if}
 
 <style lang="sass">
+
+.givemarg
+	margin-right: 16px
 
 .appheader.onsidebar
 	width: calc(100vw - 400px)

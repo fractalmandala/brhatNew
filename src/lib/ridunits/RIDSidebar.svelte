@@ -1,6 +1,8 @@
 <script lang="ts">
 
+	import { onMount } from 'svelte'
 	import visibilityMode from '$lib/stores/visibility'
+	import { browser } from '$app/environment'
 	import CompSearch from '$lib/ridunits/CompSearch.svelte'
 	import AboutLinks from '$lib/links/AboutLinks.svelte'
 	import AnveshiLinks from '$lib/links/AnveshiLinks.svelte'
@@ -8,10 +10,42 @@
 	import DrashtaLinks from '$lib/links/DrashtaLinks.svelte'
 	import MandalaLinks from '$lib/links/MandalaLinks.svelte'
 	import RtaLinks from '$lib/links/RtaLinks.svelte'
+	import CompToggle from '$lib/ridunits/CompToggle.svelte'
+	let iW:number
+	let breakPoint:boolean
+	let fake = false
+
+	function fauxfake(){
+		fake = !fake
+	}
+
+	function toggleVisibility() {
+	  if (browser) {
+	    visibilityMode.update((mode) => {
+	      const newMode = !mode;
+	      localStorage.setItem('visibilityMode', JSON.stringify(newMode));
+	      return newMode;
+	    });
+	  }
+	}
+
+	$: if ( iW <= 1023 ) {
+		breakPoint = true 
+	} else {
+		breakPoint = false
+	}
 
 	export let sidebar:boolean
 
+	onMount(() => {
+		if ( iW <= 1023 ) {
+			breakPoint = true
+		}
+	})
+
 </script>
+
+<svelte:window bind:innerWidth={iW}/>
 
 <div class="appsidebar modal" class:light={$visibilityMode} class:dark={!$visibilityMode}>
 	<div class="linksbox right" id="searcharea">
@@ -56,6 +90,7 @@
 </div>
 
 <style lang="sass">
+
 
 .ta-r
 	text-align: right
