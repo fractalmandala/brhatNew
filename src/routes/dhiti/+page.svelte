@@ -3,15 +3,11 @@
 	import { onMount } from 'svelte'
 	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import { latestDhitiFour, allFeaturedPosts, filterChosen, authorfiltered, allBodhas, allCandP, allIKS, allDharmaToday } from '$lib/utils/localpulls'
-	import { scale } from 'svelte/transition'
 	import visibilityMode from '$lib/stores/visibility'
-	import { quartIn, quartOut } from 'svelte/easing'
 	import CompDrawer from '$lib/ridunits/CompDrawer.svelte'
-	import DropDown from '$lib/components/DropDown.svelte'
-	import DropDown2 from '$lib/components/DropDown.svelte'
+	import RIDDropdown from '$lib/ridunits/RIDDropdown.svelte'
 	import SocialShare from '$lib/ridunits/RIDSocialShare.svelte'
 	import autoAnimate from '@formkit/auto-animate'
-	import { clickOutsideAction } from "svelte-legos";
 	let nextthreeposts:string|any[]
 	let featuredposts:string|any[]
 	let filteredposts:string|any[]
@@ -19,7 +15,6 @@
 	let fake:boolean = false
 	let writer:string = ''
 	let authorposts:string|any[]
-	let writersortags:boolean = true
 	let showWriters = false
 	let searchFocus = false
 	let showDefault = true
@@ -28,9 +23,16 @@
 	let caps:any
 	let knows:any
 	let dharmas:any
-	let hide = true
+	let openDrawer = false
 
 	$: anyCategoryOpen = categoryItems.some(item => item)
+
+	$: if ( writer === '') {
+		showWriters = false
+	} else {
+		showWriters = true
+	}
+
 	$: if (anyCategoryOpen === true) {
 		showDefault = false
 	} else {
@@ -51,7 +53,7 @@
 	}
 
 	function offWriters(){
-		showWriters = !showWriters
+		writer = ''
 	}
 
 	function searchFocusOn(){
@@ -100,132 +102,175 @@
 
 <div id="top-panel" class="rta-grid grid2 right outer-box minH" class:light={$visibilityMode} class:dark={!$visibilityMode}>
 	<div class="rta-column bord-right-d main-area">
-		<div id="topsticky" class="rta-column rowgap600 bord-bot p-bot-32 p-top-64 mobile-down">
-			<div class="rta-row between p-bot-16 ybot top-row">
-				<div class="rta-column rowgap50 xright">
-					{#if showDefault}
-					<small class="is-black"><strong>Filter Categories:</strong></small>
-					{:else}
-					<small class="is-black"><strong>Deselect Category to Return to Latest Posts.</strong></small>
-					{/if}
-					<div class="rta-row colgap100">
-					<button class="drawer-item"
+		<div id="topsticky" class="rta-column bord-bot p-bot-32 p-top-64">
+			<div class="rta-row between ytop top-row">
+				<div class="rta-column rowgap50 in50 ct">
+					<CompDrawer openDrawer={openDrawer}>
+						<div slot="visible">
+							{#if showDefault}
+							<small><strong>Filter Categories:</strong></small>
+							{:else}
+							<small><strong>Deselect Category to Return to Latest Posts.</strong></small>
+							{/if}		
+						</div>
+						<div class="rta-row row-col colgap100" slot="invisibles" class:openRow={openDrawer}>
+						<button class="drawer-item"
 						class:light={$visibilityMode} class:dark={!$visibilityMode}
 						on:click={() => toggleCategory(1)}
 						class:selected={categoryItems[1]}
 						>Two Bodhas</button>
-					<button class="drawer-item"
+						<button class="drawer-item"
 						class:light={$visibilityMode} class:dark={!$visibilityMode}
 						on:click={() => toggleCategory(2)}
 						class:selected={categoryItems[2]}
 						>Dharma Today</button>
-					<button class="drawer-item"
+						<button class="drawer-item"
 						class:light={$visibilityMode} class:dark={!$visibilityMode}
 						on:click={() => toggleCategory(3)}
 						class:selected={categoryItems[3]}
 						>IKS</button>
-					<button class="drawer-item"
+						<button class="drawer-item"
 						class:light={$visibilityMode} class:dark={!$visibilityMode}
 						on:click={() => toggleCategory(4)}
 						class:selected={categoryItems[4]}
 						>Culture and Policy
-					</button>
-					</div>
+						</button>
+						</div>
+					</CompDrawer>
+				</div>
+				<div class="rta-column rowgap50">
+					{#if !showWriters}
+					<RIDDropdown --dropdownbackground="var(--dhiticolor)">
+						<div slot="visible" class="rta-row filter">
+							<small>Filter Writers</small>
+							<div class="iconfilter">
+								<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_2422_105)">
+									<path d="M9.57895 13.8947L2 2.52632V0H22.2105V2.52632L14.6316 13.8947V21.4737L9.57895 24V13.8947Z" fill="#272727"/>
+									</g>
+									<defs>
+									<clipPath id="clip0_2422_105">
+									<rect width="24" height="24" fill="white" transform="translate(0.246094 0.475586)"/>
+									</clipPath>
+									</defs>
+									</svg>
+							</div>
+						</div>
+						<div slot="invisible" class="rta-column drops">
+							<div class="authors {writer === 'Akshay Jha' ? 'written' : ''}" on:click={() => setAuthor('Akshay Jha')} on:keydown={fauxfake}>
+								<p>Akshay Jha</p>
+							</div>
+							<div class="authors {writer === 'Amritanshu Pandey' ? 'written' : ''}" on:click={() => setAuthor('Amritanshu Pandey')} on:keydown={fauxfake}>
+								<p>Amritanshu Pandey</p>
+							</div>
+							<div class="authors {writer === 'Anshuman Panda' ? 'written' : ''}" on:click={() => setAuthor('Anshuman Panda')} on:keydown={fauxfake}>
+								<p>Anshuman Panda</p>
+							</div>
+							<div class="authors {writer === 'Anurag Shukla' ? 'written' : ''}" on:click={() => setAuthor('Anurag Shukla')} on:keydown={fauxfake}>
+								<p>Anurag Shukla</p>
+							</div>
+							<div class="authors {writer === 'Kavita Krishna Meegama' ? 'written' : ''}" on:click={() => setAuthor('Kavita Krishna Meegama')} on:keydown={fauxfake}>
+								<p>Kavita Krishna Meegama</p>
+							</div>
+							<div class="authors {writer === 'Nivedita Tiwari' ? 'written' : ''}" on:click={() => setAuthor('Nivedita Tiwari')} on:keydown={fauxfake}>
+								<p>Nivedita Tiwari</p>
+							</div>
+							<div class="authors {writer === 'Pankaj Saxena' ? 'written' : ''}" on:click={() => setAuthor('Pankaj Saxena')} on:keydown={fauxfake}>
+								<p>Pankaj Saxena</p>
+							</div>
+							<div class="authors {writer === 'Raghava Krishna' ? 'written' : ''}" on:click={() => setAuthor('Raghava Krishna')} on:keydown={fauxfake}>
+								<p>Raghava Krishna</p>
+							</div>
+							<div class="authors {writer === 'Sai Priya Chodavarapu' ? 'written' : ''}" on:click={() => setAuthor('Sai Priya Chodavarapu')} on:keydown={fauxfake}>
+								<p>Sai Priya Chodavarapu</p>
+							</div>
+							<div class="authors {writer === 'Sushant Gangoli' ? 'written' : ''}" on:click={() => setAuthor('Sushant Gangoli')} on:keydown={fauxfake}>
+								<p>Sushant Gangoli</p>
+							</div>
+							<div class="spaced">
+								<p><strong>Guests:</strong></p>
+							</div>
+							<div class="authors {writer === 'Shri Ramachandra Roddam' ? 'written' : ''}" on:click={() => setAuthor('Shri Ramachandra Roddam')} on:keydown={fauxfake}>
+								<p>Shri Ramachandra Roddam</p>
+							</div>
+							<div class="authors {writer === 'Akshay Shankar' ? 'written' : ''}" on:click={() => setAuthor('Akshay Shankar')} on:keydown={fauxfake}>
+								<p>Akshay Shankar</p>
+							</div>
+							<div class="authors {writer === 'Jash Dholani' ? 'written' : ''}" on:click={() => setAuthor('Jash Dholania')} on:keydown={fauxfake}>
+								<p>Jash Dholani</p>
+							</div>
+							<div class="authors {writer === 'Kate Herse' ? 'written' : ''}" on:click={() => setAuthor('Kate Herse')} on:keydown={fauxfake}>
+								<p>Kate Herse</p>
+							</div>
+							<div class="authors {writer === 'Ghora Angirasa' ? 'written' : ''}" on:click={() => setAuthor('Ghora Angirasa')} on:keydown={fauxfake}>
+								<p>Ghora Angirasa</p>
+							</div>
+							<div class="authors {writer === 'Samyak Dixit' ? 'written' : ''}" on:click={() => setAuthor('Samyak Dixit')} on:keydown={fauxfake}>
+								<p>Samyak Dixit</p>
+							</div>
+							<div class="authors {writer === 'Prabhav Paturi' ? 'written' : ''}" on:click={() => setAuthor('Prabhav Paturi')} on:keydown={fauxfake}>
+								<p>Prabhav Paturi</p>
+							</div>
+						</div>
+					</RIDDropdown>
+					{:else}
+					<small class="point"
+						on:click={offWriters} on:keydown={fauxfake}	
+						>Clear Filter</small>	
+					{/if}
 				</div>
 			</div>
-			<div class="rta-row between ycenter bottom-row" use:autoAnimate={{ duration: 100 }}>
-				{#if showDefault}
-					<h5><strong>Latest Posts:</strong></h5>
-				{/if}
+			<div class="rta-column bottom-row p-top-64">
+				{#if showWriters}
+				<em>Posts by</em>
+				<h4>{writer}</h4>
+				{:else}
 				{#if categoryItems[1]}
-					<h5><strong>Svayambodha and Śatrubodha</strong></h5>
+				<h4>Svayambodha and Śatrubodha</h4>
 				{/if}
 				{#if categoryItems[2]}
-					<h5><strong>Dharma Today</strong></h5>
+				<h4>Dharma Today</h4>
 				{/if}
 				{#if categoryItems[3]}
-					<h5><strong>Indian Knowledge System</strong></h5>
+				<h4>Indian Knowledge System</h4>
 				{/if}
 				{#if categoryItems[4]}
-					<h5><strong>Culture and Policy</strong></h5>
+				<h4>Culture and Policy</h4>
 				{/if}
-				{#if !hide}
-				<div class="dropper point">
-					<div class="rta-row filter-row ycenter colgap100" on:click={toggleWriters} on:keydown={fauxfake} class:light={$visibilityMode} class:dark={!$visibilityMode}>
-						<small><strong>Filter Writers</strong></small>
-						<div class="filtericon">
-							<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M16 0V1.77778H15.1111L9.77778 9.77778V16H6.22222V9.77778L0.888889 1.77778H0V0H16Z" fill="var(--dhiticolor)"/>
-							</svg>
-						</div>
-					</div>
-				</div>
-				{#if showWriters}
-				<div class="rta-column writers-column modal"
-				use:clickOutsideAction
-				on:clickoutside={offWriters}
-				>
-				<div class="authors {writer === 'Akshay Jha' ? 'written' : ''}" on:click={() => setAuthor('Akshay Jha')} on:keydown={fauxfake}>
-					<p>Akshay Jha</p>
-				</div>
-				<div class="authors {writer === 'Amritanshu Pandey' ? 'written' : ''}" on:click={() => setAuthor('Amritanshu Pandey')} on:keydown={fauxfake}>
-					<p>Amritanshu Pandey</p>
-				</div>
-				<div class="authors {writer === 'Anshuman Panda' ? 'written' : ''}" on:click={() => setAuthor('Anshuman Panda')} on:keydown={fauxfake}>
-					<p>Anshuman Panda</p>
-				</div>
-				<div class="authors {writer === 'Anurag Shukla' ? 'written' : ''}" on:click={() => setAuthor('Anurag Shukla')} on:keydown={fauxfake}>
-					<p>Anurag Shukla</p>
-				</div>
-				<div class="authors {writer === 'Kavita Krishna Meegama' ? 'written' : ''}" on:click={() => setAuthor('Kavita Krishna Meegama')} on:keydown={fauxfake}>
-					<p>Kavita Krishna Meegama</p>
-				</div>
-				<div class="authors {writer === 'Nivedita Tiwari' ? 'written' : ''}" on:click={() => setAuthor('Nivedita Tiwari')} on:keydown={fauxfake}>
-					<p>Nivedita Tiwari</p>
-				</div>
-				<div class="authors {writer === 'Pankaj Saxena' ? 'written' : ''}" on:click={() => setAuthor('Pankaj Saxena')} on:keydown={fauxfake}>
-					<p>Pankaj Saxena</p>
-				</div>
-				<div class="authors {writer === 'Raghava Krishna' ? 'written' : ''}" on:click={() => setAuthor('Raghava Krishna')} on:keydown={fauxfake}>
-					<p>Raghava Krishna</p>
-				</div>
-				<div class="authors {writer === 'Sai Priya Chodavarapu' ? 'written' : ''}" on:click={() => setAuthor('Sai Priya Chodavarapu')} on:keydown={fauxfake}>
-					<p>Sai Priya Chodavarapu</p>
-				</div>
-				<div class="authors {writer === 'Sushant Gangoli' ? 'written' : ''}" on:click={() => setAuthor('Sushant Gangoli')} on:keydown={fauxfake}>
-					<p>Sushant Gangoli</p>
-				</div>
-				<div class="spaced">
-					<p><strong>Guests:</strong></p>
-				</div>
-				<div class="authors {writer === 'Shri Ramachandra Roddam' ? 'written' : ''}" on:click={() => setAuthor('Shri Ramachandra Roddam')} on:keydown={fauxfake}>
-					<p>Shri Ramachandra Roddam</p>
-				</div>
-				<div class="authors {writer === 'Akshay Shankar' ? 'written' : ''}" on:click={() => setAuthor('Akshay Shankar')} on:keydown={fauxfake}>
-					<p>Akshay Shankar</p>
-				</div>
-				<div class="authors {writer === 'Jash Dholani' ? 'written' : ''}" on:click={() => setAuthor('Jash Dholania')} on:keydown={fauxfake}>
-					<p>Jash Dholani</p>
-				</div>
-				<div class="authors {writer === 'Kate Herse' ? 'written' : ''}" on:click={() => setAuthor('Kate Herse')} on:keydown={fauxfake}>
-					<p>Kate Herse</p>
-				</div>
-				<div class="authors {writer === 'Ghora Angirasa' ? 'written' : ''}" on:click={() => setAuthor('Ghora Angirasa')} on:keydown={fauxfake}>
-					<p>Ghora Angirasa</p>
-				</div>
-				<div class="authors {writer === 'Samyak Dixit' ? 'written' : ''}" on:click={() => setAuthor('Samyak Dixit')} on:keydown={fauxfake}>
-					<p>Samyak Dixit</p>
-				</div>
-				<div class="authors {writer === 'Prabhav Paturi' ? 'written' : ''}" on:click={() => setAuthor('Prabhav Paturi')} on:keydown={fauxfake}>
-					<p>Prabhav Paturi</p>
-				</div>
-				</div>
+				{#if !anyCategoryOpen}
+				<h4>Latest Posts</h4>
 				{/if}
 				{/if}
 			</div>
 		</div>
-		<div class="rta-column p-top-64 mobile-up" use:autoAnimate>
-			{#if showDefault}
+		<div class="rta-column p-top-64" use:autoAnimate>
+			{#if showWriters}
+			<div class="rta-column articlesarea">
+				{#if authorposts && authorposts.length > 0}
+				{#each authorposts as item, i}
+					<div class="rta-dhiti rta-row rowgap300 ytop between bord-bot p-bot-32 p-top-32">
+						<div class="rta-column w70 rowgap200">
+							<p class="citeone">{item.meta.category}</p>
+							<h5 class="heading" class:light={$visibilityMode} class:dark={!$visibilityMode}><a href="{item.path}">{item.meta.title}</a></h5>
+							<p>{item.meta.excerpt}</p>
+							<div class="rta-column p-top-16">
+								<p class="author">{item.meta.author}
+								{#if item.meta.authortwo && item.meta.authortwo.length > 0}
+									<span> and {item.meta.authortwo}</span>
+								{/if}
+								</p>
+								<cite class="citetwo">{item.meta.tags}</cite>
+							</div>
+						</div>
+						<div class="rta-image rta-column ytop w32 height-24">
+							<img src={item.meta.image} alt={item.meta.title}/>
+						</div>
+					</div>
+				{/each}
+				{/if}
+			</div>	
+			{/if}
+				{#if showDefault}
 				{#if nextthreeposts && nextthreeposts.length > 0}
 				{#each nextthreeposts as item}
 					<div class="rta-dhiti rta-row rowgap300 ytop between bord-bot p-bot-32 p-top-32">
@@ -248,14 +293,14 @@
 					</div>
 				{/each}
 				{/if}
-			{/if}
+				{/if}
 			{#if categoryItems[1]}
 				{#if bodhas && bodhas.length > 0}
 					{#each bodhas as item}
-					<div class="rta-dhiti rta-row ytop between bord-bot p-bot-32 p-top-32">
+					<div class="rta-dhiti rta-row rowgap300 ytop between bord-bot p-bot-32 p-top-32">
 						<div class="rta-column w70 rowgap200">
 							<p class="citeone">{item.meta.category}</p>
-							<h5 class="heading"><a href="{item.path}">{item.meta.title}</a></h5>
+							<h5 class="heading" class:light={$visibilityMode} class:dark={!$visibilityMode}><a href="{item.path}">{item.meta.title}</a></h5>
 							<p>{item.meta.excerpt}</p>
 							<div class="rta-column p-top-16">
 								<p class="author">{item.meta.author}
@@ -276,10 +321,10 @@
 			{#if categoryItems[2]}
 				{#if dharmas && dharmas.length > 0}
 					{#each dharmas as item}
-					<div class="rta-dhiti rta-row ytop between bord-bot p-bot-32 p-top-32">
+					<div class="rta-dhiti rta-row rowgap300 ytop between bord-bot p-bot-32 p-top-32">
 						<div class="rta-column w70 rowgap200">
 							<p class="citeone">{item.meta.category}</p>
-							<h5 class="heading"><a href="{item.path}">{item.meta.title}</a></h5>
+							<h5 class="heading" class:light={$visibilityMode} class:dark={!$visibilityMode}><a href="{item.path}">{item.meta.title}</a></h5>
 							<p>{item.meta.excerpt}</p>
 							<div class="rta-column p-top-16">
 								<p class="author">{item.meta.author}
@@ -300,10 +345,10 @@
 			{#if categoryItems[3]}
 				{#if knows && knows.length > 0}
 					{#each knows as item}
-					<div class="rta-dhiti rta-row ytop between bord-bot p-bot-32 p-top-32">
+					<div class="rta-dhiti rta-row rowgap300 ytop between bord-bot p-bot-32 p-top-32">
 						<div class="rta-column w70 rowgap200">
 							<p class="citeone">{item.meta.category}</p>
-							<h5 class="heading"><a href="{item.path}">{item.meta.title}</a></h5>
+							<h5 class="heading" class:light={$visibilityMode} class:dark={!$visibilityMode}><a href="{item.path}">{item.meta.title}</a></h5>
 							<p>{item.meta.excerpt}</p>
 							<div class="rta-column p-top-16">
 								<p class="author">{item.meta.author}
@@ -324,10 +369,10 @@
 			{#if categoryItems[4]}
 				{#if caps && caps.length > 0}
 					{#each caps as item}
-					<div class="rta-dhiti rta-row ytop between bord-bot p-bot-32 p-top-32">
+					<div class="rta-dhiti rta-row rowgap300 ytop between bord-bot p-bot-32 p-top-32">
 						<div class="rta-column w70 rowgap200">
 							<p class="citeone">{item.meta.category}</p>
-							<h5 class="heading"><a href="{item.path}">{item.meta.title}</a></h5>
+							<h5 class="heading" class:light={$visibilityMode} class:dark={!$visibilityMode}><a href="{item.path}">{item.meta.title}</a></h5>
 							<p>{item.meta.excerpt}</p>
 							<div class="rta-column p-top-16">
 								<p class="author">{item.meta.author}
@@ -384,58 +429,59 @@
 
 <style lang="sass">
 
-#topsticky
+
+.top-row
+	@media screen and (min-width: 1024px)
+		.wt
+			width: 20%
+		.ct
+			width: 80%
+
+.authors, .spaced
+	padding-right: 16px
+	padding-left: 16px
+
+
+.authors p, .spaced p
+	color: white
+
+.authors
+	cursor: pointer
+	&:hover
+		background: white
+		p
+			color: var(--dhiticolor)
+
+.spaced
+	margin-top: 32px
+
+.iconfilter svg
+	height: 16px
+
+.filter
+	cursor: pointer
+	&:hover
+		svg path
+			fill: var(--dhiticolor)
+
+.rta-row.openRow
 	@media screen and (max-width: 1023px)
-		flex-direction: column-reverse
-		.bottom-row
-			h5
-				display: none
+		display: grid
+		grid-auto-flow: row
+		grid-template-columns: 1fr 1fr
+		grid-template-rows: auto
+		grid-template-areas: ". ."
+		gap: 8px
+
+#topsticky
+	position: sticky
+	top: 0
+	z-index: 1000
+	@media screen and (max-width: 1023px)
+		padding-top: 80px
+		top: 0
 		.top-row
 			flex-wrap: wrap
-			.xright
-				width: 100%
-			.xright
-				.rta-row
-					flex-direction: column
-					row-gap: 16px
-
-.main-area
-	@media screen and (max-width: 1023px)
-		flex-direction: column-reverse
-
-.bottom-row
-	position: relative
-	.writers-column
-		position: absolute
-		text-align: right
-		top: 40px
-		right: 0
-		z-index: 400
-		background: var(--dhiticolor)
-		color: white
-		.spaced p
-			color: white
-		.authors
-			transition: 0.08s
-			padding: 0 16px
-			cursor: pointer
-			p
-				color: white
-			&:hover
-				background: white
-				p
-					color: var(--dhiticolor)
-		@media screen and (min-width: 1024px)
-			border: 1px solid var(--borderline)
-			min-width: 240px
-			padding: 16px 0
-			border-radius: 8px
-			.spaced
-				padding-right: 16px
-				padding-top: 16px
-				padding-bottom: 8px
-				border-top: 1px solid white
-				margin-top: 16px
 
 .is-purple
 	color: var(--dhiticolor)
@@ -452,51 +498,13 @@
 		padding-top: 12px
 		padding-bottom: 2px
 
-.filtericon
-	transition: 0.08s
-	display: flex
-	align-items: center
-	justify-content: center
-	svg
-		transition: 0.08s
-
-.filter-row
-	transition: 0.08s
-	border-radius: 16px
-	padding: 8px 12px
-	border: 1px solid var(--borderline)
-	&:hover
-		background: var(--dhiticolor)
-		small
-			color: white
-		.filtericon
-			svg
-				path
-					fill: white
-
-.filter-row.light
-	small
-		color: #272727
-
-.filter-row.dark
-	small
-		color: white
-
-.filter-row
-	small
-		line-height: 1
-		padding-top: 4px
-		font-weight: bold
-
-
 #top-panel
 	@media screen and (min-width: 1024px)
-		.rta-column.bord-right-d
+		.main-area
 			padding-right: 48px
 		.featured
 			padding-left: 48px
 	@media screen and (max-width: 1023px)
-		margin-top: 0px
 
 .rta-dhiti
 	.rta-image
@@ -550,39 +558,53 @@ p.citeone
 
 .drawer-item
 	text-decoration: none
-	font-size: 12px
-	font-weight: bold
-	text-transform: uppercase
-	padding: 4px 12px
-	border-radius: 16px
-	color: white
 	transition: 0.08s
+	@media screen and (min-width: 1024px)
+		font-size: 12px
+		padding: 2px 8px
+		border-radius: 4px
+		color: white
+		text-transform: uppercase
+		font-weight: bold
+	@media screen and (max-width: 1023px)
+		text-align: left
+		border: none
+		padding: 8px
+		font-size: 16px
 
 .light.drawer-item
-	background: #c7c7c7
-	border: 2px solid #c7c7c7
-	&:hover
-		border: 2px solid #5A3261
-		background: white
-		color: #5A3261
+	@media screen and (min-width: 1024px)
+		background: #676767
+		border: 2px solid #676767
+		&:hover
+			border: 2px solid var(--dhiticolor)
+			background: white
+			color: var(--dhiticolor)
+	@media screen and (max-width: 1023px)
+		background: var(--dhiticolor)
+		color: #FFFFFF
 
 .dark.drawer-item
-	background: #474747
-	border: 2px solid #474747
-	&:hover
-		border: 2px solid #0B6E4F
-		background: #171717
-		color: #0B6E4F
+	@media screen and (min-width: 1024px)
+		background: #474747
+		border: 2px solid #474747
+		&:hover
+			border: 2px solid var(--dhiticolor)
+			background: #171717
+			color: var(--dhiticolor)
+	@media screen and (max-width: 1023px)
+		background: var(--dhiticolor)
+		color: #FFFFFF
 
 .light.drawer-item.selected
-	background: #5A3261
+	background: var(--dhiticolor)
 	color: white
-	border: 2px solid #5A3261
+	border: 2px solid var(--dhiticolor)
 
 .dark.drawer-item.selected
-	background: #0B6E4F
+	background: var(--dhiticolor)
 	color: white
-	border: 2px solid #0B6E4F
+	border: 2px solid var(--dhiticolor)
 
 #top-panel
 	@media screen and (min-width: 1024px)

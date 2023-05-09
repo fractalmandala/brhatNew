@@ -60,6 +60,8 @@
 	stroke: #272727;
 }
 
+
+
 svg:hover #the-i {
 	opacity: 1;
 	animation: heartbeat2 1s ease-in infinite both;

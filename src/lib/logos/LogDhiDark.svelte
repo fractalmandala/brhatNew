@@ -48,8 +48,8 @@
 }
 
 #the-i {
-	fill: #272727;
-	stroke: #272727;
+	fill: #FFFFFF;
+	stroke: #FFFFFF;
 }
 
 svg:hover #the-i {

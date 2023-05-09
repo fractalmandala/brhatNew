@@ -9,6 +9,7 @@
 	let iW:number
 	let breakPoint:boolean
 	let expandMenu = false
+	export let openDrawer:boolean
 
 	function toggleMenu(){
 		expandMenu = !expandMenu
@@ -46,19 +47,14 @@
 
 <svelte:window bind:innerWidth={iW}/>
 
-<div class="rta-row colgap-24 row-col comp-drawer" class:dark={!$visibilityMode} class:light={$visibilityMode} use:autoAnimate>
-	{#if breakPoint}
-		<div class="rta-row row-center-m colgap-8" id="menu-select" on:click={toggleMenu} on:keydown={fauxfake}>
-			<h6 class="drawer-item non">
-				<slot name="visible"></slot>
-			</h6>
-			<div class="rta-in-col" class:rotated={expandMenu}>
-				<ChevronDown/>
-			</div>
-		</div>
-	{/if}
-	{#if !breakPoint || expandMenu}
-	<div class="rta-row row-col colgap-24" id="drawer-items" on:click={toggleMenu} on:keydown={fauxfake} use:autoAnimate>
+<div class="rta-column rowgap100 comp-drawer" class:dark={!$visibilityMode} class:light={$visibilityMode} use:autoAnimate>
+	<div class="rta-row" id="menu-select" on:click={toggleMenu} on:keydown={fauxfake}>
+		<small>
+			<slot name="visible"></slot>
+		</small>
+	</div>
+	{#if !breakPoint || expandMenu || openDrawer}
+	<div id="drawer-items" on:click={toggleMenu} on:keydown={fauxfake} use:autoAnimate class:relativity={!openDrawer}>
 		<slot name="invisibles"></slot>
 	</div>
 	{/if}
@@ -67,45 +63,21 @@
 <style lang="sass">
 
 .comp-drawer
+	position: relative
+
+.relativity
+	position: absolute
+	top: 32px
+	left: 0
+	min-width: 280px
+	z-index: 1000
+	display: flex
+	flex-direction: column
+	row-gap: 8px
+
+.comp-drawer
 	.rta-row
 		cursor: pointer
-		h6
-			margin: 0
-		.rta-in-col
-			transition: 0.23s ease
-		.rta-in-col.rotated
-			transform: rotate(180deg)
-	@media screen and (max-width: 1023px)
-		text-align: center
-		#drawer-items h6
-			padding-top: 6px
-			padding-bottom: 6px
 
-.comp-drawer.dark
-	#menu-select
-		background: #111111
-		padding: 6px
-
-.drawer-item
-	cursor: pointer
-	position: relative
-	padding-bottom: 4px
-	transition: 0.16s ease
-	margin: 0
-	font-weight: 400
-	&::after
-		position: absolute
-		content: ''
-		bottom: 0
-		left: 50%
-		width: 0%
-		height: 1px
-		background: #10D56C
-		transition: 0.2s ease
-	&:hover
-		color: var(--primary)
-		&::after
-			left: 0
-			width: 100%
 
 </style>

@@ -66,7 +66,7 @@ button
 			transition: 0.08s
 	&:hover
 		svg path
-			fill: var(--socialcolor)
+			fill: #0B6E4F
 		svg
 			transform: scale(0.9)
 

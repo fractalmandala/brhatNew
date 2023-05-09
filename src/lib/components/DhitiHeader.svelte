@@ -111,11 +111,14 @@
 <svelte:window bind:scrollY={y} bind:innerHeight={height} bind:innerWidth={iW}/>
 
 <div class="appheader" class:onsidebar={sidebar} class:hiddenHeader={isInvisible} class:light={$visibilityMode} class:dark={!$visibilityMode}>
-	<a class="applogo" href="/dhiti">
+	<a class="applogo" href="/dhiti" class:fullcol={breakPoint}>
 		{#if $visibilityMode}
 		<LogDhiti></LogDhiti>
 		{:else}
 		<LogDhitiD></LogDhitiD>
+		{/if}
+		{#if !breakPoint}
+		<p><a href="/">Bṛhat Home</a></p>
 		{/if}
 	</a>
 	<div class="toggling" id="single" on:click={toggleVisibility} on:keydown={fauxfake}>
@@ -348,15 +351,37 @@
 .applogo
 	grid-area: applogo
 	display: flex
-	flex-direction: row
+	flex-direction: column
 	gap: 12px
 	align-items: center
 	height: 128px
+	p
+		text-transform: uppercase
+		font-weight: 800
+		font-size: 14px
+		font-family: 'Varta', san-serif
 	@media screen and (min-width: 1024px)
 		row-gap: 0
 		justify-content: center
+		p
+			padding-top: 6px
 	@media screen and (max-width: 1023px)
 		width: 104px
+
+.applogo.fullcol
+	flex-direction: row
+
+.light
+	.applogo p
+		color: #676767
+		&:hover
+			color: #fe4a49
+
+.dark
+	.applogo p
+		color: white
+		&:hover
+			color: #fe4a49
 
 .menuicon
 	grid-area: menuicon
@@ -394,19 +419,19 @@
 .switch
 	&:hover
 		.slider
-			background: #fe4a49
+			background: #0B6E4F
 
 .switch.light
 	align-items: flex-end
 	border: 1px solid #272727
 	&:hover
-		border: 1px solid #fe4a49
+		border: 1px solid #0B6E4F
 
 .switch.dark
 	align-items: flex-start
 	border: 1px solid #272727
 	&:hover
-		border: 1px solid #fe4a49
+		border: 1px solid #0B6E4F
 
 .slider 
 	width: 16px
