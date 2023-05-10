@@ -1,7 +1,9 @@
 <script lang="ts">
 
-	import { onMount } from 'svelte'
+	import { onMount, onDestroy } from 'svelte'
 	import visibilityMode from '$lib/stores/visibility'
+	import { isModal } from '$lib/stores/modal'
+	import Contact from '$lib/ridunits/RIDContact.svelte'
 	import AboutLinks from '$lib/links/AboutLinks.svelte'
 	import AnveshiLinks from '$lib/links/AnveshiLinks.svelte'
 	import AryavartaLinks from '$lib/links/AryavartaLinks.svelte'
@@ -12,15 +14,14 @@
 
 	let fake:boolean = false
 	let active:boolean = true
-	let isModal = false
+	let modalStatus:any
+
+	const unsubscribe = isModal.subscribe(value => {
+		modalStatus = value
+	})
 
 	function toggleModal(){
-		isModal = !isModal
-	}
-		
-
-	$: if (!isModal) {
-		isModal = false
+		isModal.update(value => !value)
 	}
 
 	function fauxfake(){
@@ -30,6 +31,8 @@
 	onMount(() => {
 		active = true
 	})
+
+	onDestroy(unsubscribe)
 
 </script>
 
@@ -97,6 +100,9 @@
 		<small><a href="/about/privacy" style="color: white">Privacy</a> | contact@brhat.in</small>
 	</div>
 </div>
+{#if modalStatus}
+	<Contact/>
+{/if}
 
 
 <style lang="sass">
