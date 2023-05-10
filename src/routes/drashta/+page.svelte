@@ -58,13 +58,13 @@
 </svelte:head>
 
 <!--parallax section on top-->
-	<div class="x0">
+	<div class="x0" data-lenis-scroll-snap-align="start">
 		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/06drashta/drashtaparallax.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/06drashta/drashtaparallax.webp')"></ParallaxImage>
 	</div>
 <!--end-->
 
 <!--single section contains all text, all course cards scroll within it-->
-	<div id="introtext" class="rta-grid grid2 outer-box rowgap600 colgap600 p-top-64" class:left2={!fullText} class:right={fullText}>
+	<div id="introtext" class="rta-grid grid2 outer-box rowgap600 colgap600 p-top-64" class:left2={!fullText} class:right={fullText} data-lenis-scroll-snap-align="start">
 		<div class="rta-column rowgap300" class:thin={!fullText} class:thick={fullText} use:autoAnimate>
 			<p class="serif">
 				An offering in deep learning that extends courses on some of the greatest ancient and contemporary philosophers (draṣṭās) and schools of thoughts (darśanas).

@@ -73,14 +73,14 @@
 
 
 <!--parallax header-->
-	<div class="x0">
+	<div class="x0" data-lenis-scroll-snap-align="start">
 		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/about-parambika.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/about-parambika.webp')"></ParallaxImage>
 	</div>
 <!--end-->
 
 
 <!--intro section with 3 actions-->
-	<div class="x1 type-thin rta-column ycenter outer-box limit p-top-64 minH rowgap600">
+	<div class="x1 type-thin rta-column ycenter outer-box limit p-top-64 minH rowgap600" data-lenis-scroll-snap-align="start">
 		<h2>Bṛhat is a<br><span>culture engine</span></h2>
 		<h5 class="typett">
 			To power creatives, research and design rooted in the Indian civilizational consciousness. We
@@ -105,7 +105,7 @@
 <!--end-->
 
 <!--three constraints-->
-	<div class="rta-column type-thin minH ycenter outer-box limit rowgap600">
+	<div class="rta-column type-thin minH ycenter outer-box limit rowgap600" data-lenis-scroll-snap-align="start">
 		<div class="rta-column line"></div>
 		<h5 class="typett">
 			An engine is an instrument for transformation, and this engine is to build the self-perpetuating civilizational moment. How does one go about doing that?
@@ -132,7 +132,7 @@
 <!--end-->
 
 <!--severest constraint is time-->
-	<div class="rta-column type-thin ycenter outer-box limit rowgap400">
+	<div class="rta-column type-thin ycenter outer-box limit rowgap400" data-lenis-scroll-snap-align="start">
 		<div class="rta-column line"></div>
 		<h5 class="typett">
 			But the severest constraint of them all is Time, and more specifically – Moment.
@@ -147,7 +147,7 @@
 <!--end-->
 
 <!--all links listed-->
-	<div class="rta-column outer-box limit p-top-64">
+	<div class="rta-column outer-box limit p-top-64" data-lenis-scroll-snap-align="start">
 		<div class="onpagelinks rta-column rowgap400">
 			<h3><a href="/about/svatahsiddha">SVATAḤSIDDHA</a></h3>
 			<h3><a href="/about/anatomy">ANATOMY OF A CIVILIZATIONAL MOMENT</a></h3>
@@ -162,7 +162,7 @@
 <!--end-->
 
 
-	<div class="rta-column ycenter rowgap600 outer-box minH limit">
+	<div class="rta-column ycenter rowgap600 outer-box minH limit" data-lenis-scroll-snap-align="start">
 		<h3 class="typett bord-top bord-bot p-top-32 p-bot-32">ADVISORS</h3>
 			<div class="rta-grid grid4 rowgap400 colgap400" id="advisors">
 			{#if advisors && advisors.length > 0}
@@ -182,7 +182,7 @@
 	</div>
 
 
-<div class="rta-column rowgap600 outer-box limit">
+<div class="rta-column rowgap600 outer-box limit" data-lenis-scroll-snap-align="start">
 	<h3 class="bord-top bord-bot p-top-32 p-bot-32">
 		PARTNERS
 	</h3>
@@ -200,7 +200,7 @@
 </div>
 
 
-	<div class="rta-column rowgap600 outer-box limit p-top-64">
+	<div class="rta-column rowgap600 outer-box limit p-top-64" data-lenis-scroll-snap-align="start">
 			<h3 class="bord-top bord-bot p-top-32 p-bot-32">
 				TEAM
 			</h3>
@@ -329,23 +329,11 @@
 		grid-template-rows: auto auto
 		.opentab
 			grid-area: opentab
-		.teamcard.card-a.openedcard
-			grid-area: openedcard
 	@media screen and (max-width: 1023px)
 		grid-template-areas: "opentab" "openedcard" "."
 		grid-template-rows: auto auto
 		.opentab
 			grid-area: opentab
-		.teamcard.card-a.openedcard
-			grid-area: openedcard
-
-.teamcard.card-a.openedcard
-	img
-		filter: saturate(1)
-	small
-		color: #fe4a49
-	cite
-		background: #fe4a49
 
 .opentab.teampage
 	display: flex

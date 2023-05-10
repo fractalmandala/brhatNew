@@ -162,12 +162,12 @@
 
 
 
-<div class="section sec1">
+<div class="section sec1" data-lenis-scroll-snap-align="start">
 	<Parallax --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/10mandala/realitywall.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/10mandala/realitywall.webp')"></Parallax>
 </div>
 
 <!--shri munshi quote section-->
-	<div class="rta-column minH ycenter outer-box limit">
+	<div class="rta-column minH ycenter outer-box limit" data-lenis-scroll-snap-align="start">
 	<div class="rta-grid grid2 right">
 		<div id="first-section" class="rta-column rowgap200">
 			<p class="typett">
@@ -243,7 +243,7 @@
 <!--end-->
 
 <!--and it is alive-->
-	<div class="rta-column outer-box panel5">
+	<div class="rta-column outer-box panel5" data-lenis-scroll-snap-align="start">
 		<div class="headholder ta-c-d">
 			<h2 class:emergence={ifPanel5}>and it is alive...</h2>
 		</div>
@@ -251,7 +251,7 @@
 <!--end-->
 
 <!--rotating motif section-->
-	<div class="outer-box sec6 panel6">
+	<div class="outer-box sec6 panel6" data-lenis-scroll-snap-align="start">
 		<div class="rta-column ballholder" class:fixIt={ifPanel6} class:moveLeft={breakLeft} class:moveRight={breakRight}>
 			<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/10mandala/fractallogo.webp" alt="fractalmandala" style="transform: rotate({sY/4}deg); opacity: {1 - yPanel9/100}"/>
 		</div>
@@ -259,7 +259,7 @@
 <!--end-->
 
 <!--fractal-->
-	<div class="rta-column outer-box minH ycenter limit panel7">
+	<div class="rta-column outer-box minH ycenter limit panel7" data-lenis-scroll-snap-align="start">
 		<div class="rta-column rowgap300 textholder">
 			<h4>Fractal</h4>
 			<h6 class="typett">
@@ -273,7 +273,7 @@
 <!--end-->
 
 <!--mandala-->
-	<div class="rta-column outer-box minH ycenter limit panel8">
+	<div class="rta-column outer-box minH ycenter limit panel8" data-lenis-scroll-snap-align="start">
 		<div class="rta-column rowgap300 textholder">
 			<h4>Maṇḍala</h4>
 			<h6 class="typett">
@@ -287,7 +287,7 @@
 <!--end-->
 
 <!--about fractal mandala-->
-	<div class="rta-column outer-box limit panel9">
+	<div class="rta-column outer-box limit panel9" data-lenis-scroll-snap-align="start">
 		<div class="rta-column rowgap300 p-bot-64 bord-bot">
 			<h6 class="typett">
 				the Fractal Maṇḍala is an exploration, study and articulation of the
@@ -300,7 +300,7 @@
 <!--end-->
 
 <!--all links-->
-	<div class="rta-column minH ycenter outer-box limit">
+	<div class="rta-column minH ycenter outer-box limit" data-lenis-scroll-snap-align="start">
 	<div class="onpagelinks rta-column rowgap400 p-bot-64">
 		<h3><a href="/mandala/macrohistoriccase">the macrohistoric case</a></h3>
 		<h3><a href="/mandala/aphorisms">caturasūtra - 4 aphorisms</a></h3>

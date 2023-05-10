@@ -77,7 +77,7 @@
 
 
 <!--page header with title and icons-->
-	<div id="headersection" class="rta-column outer-box minH p-top-64 rowgap600">
+	<div id="headersection" class="rta-column outer-box minH p-top-64 rowgap600" data-lenis-scroll-snap-align="start">
 		<div class="rta-grid colgap600 grid2 right2" id="headersectionmaingrid">
 			<div class="rta-column rowgap400">
 				<div id="heading" class="rta-column rowgap400 p-top-64 background">
@@ -108,7 +108,7 @@
 <!--end-->
 
 <!--all course details area-->
-	<div class="rta-grid grid2 left0 colgap600 outer-box">
+	<div class="rta-grid grid2 left0 colgap600 outer-box" data-lenis-scroll-snap-align="start">
 		<div id="columnofbuttons" class="rta-column bord-right-d rowgap300 p-bot-64">
 			{#if breakPoint}
 			<button class="drawer-select" on:click={toggleMenu}>EXPAND DETAILS</button>
@@ -214,7 +214,7 @@
 <!--end-->
 	<div class="rta-column outer-box"><div class="line"></div></div>
 <!--all other courses list-->
-	<div class="rta-grid grid2 left0 rowgap400 outer-box colgap600 p-top-64">
+	<div class="rta-grid grid2 left0 rowgap400 outer-box colgap600 p-top-64" data-lenis-scroll-snap-align="start">
 		<div class="rta-column">
 			<h3 class="heading is-blue">All Courses</h3>
 		</div>

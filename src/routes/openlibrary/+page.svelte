@@ -161,13 +161,13 @@
 
 <div class:light={$visibilityMode} class:dark={!$visibilityMode}>
 
-	<div class="x0">
+	<div class="x0" data-lenis-scroll-snap-align="start">
 		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/bolherobrhat.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/mobile-bol.webp')">
 		</ParallaxImage>
 	</div>
 
 <!--initial section with bol description-->
-	<div class="rta-column minH outer-box ycenter p-top-64 limit2">
+	<div class="rta-column minH outer-box ycenter p-top-64 limit2" data-lenis-scroll-snap-align="start">
 		<div class="rta-column rowgap600 wide-60-100">
 			<h4 class="typett">
 				Bṛhat Open Library is an Online Repository for Texts, Papers, Learning Material and More.
@@ -181,7 +181,7 @@
 <!--end-->
 
 <!--primary section featuring books-->
-	<div class="rta-column rowgap600 outer-box">
+	<div class="rta-column rowgap600 outer-box" data-lenis-scroll-snap-align="start">
 		<h3 class="typett ta-c-d bord-top p-top-32 p-bot-32 bord-bot">EXPLORE</h3>
 			{#if breakPoint}
 				<div class="rta-row colgap400 drawer-select" on:click={toggleMenu} on:keydown={fauxfake}>
@@ -338,7 +338,7 @@
 <!--end-->
 
 <!--aryan issue section-->
-	<div class="rta-column minH rowgap600 outer-box p-top-64">
+	<div class="rta-column minH rowgap600 outer-box p-top-64" data-lenis-scroll-snap-align="start">
 		<h3 class="typett p-top-32 p-bot-32 bord-top bord-bot ta-c-d">THE ĀRYAN ISSUE</h3>
 			{#if breakPoint}
 				<div class="rta-row colgap400 drawer-select" on:click={toggleSecondMenu} on:keydown={fauxfake}>

@@ -93,10 +93,10 @@
 
 <div class="type" class:light={$visibilityMode} class:dark={!$visibilityMode}>
 
-	<div class="x0">
+	<div class="x0" data-lenis-scroll-snap-align="start">
 		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/mrdanga-hero.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/mrdanga-hero.webp')"></ParallaxImage>
 	</div>
-	<div class="rta-grid grid2 left2 rowgap400 colgap600 minH outer-box p-top-64 limit">
+	<div class="rta-grid grid2 left2 rowgap400 colgap600 minH outer-box p-top-64 limit" data-lenis-scroll-snap-align="start">
 		<div class="rta-column rowgap300 ta-l thin">
 			<h5>
 				Mṛdaṅga is one of the sacred trinity of musical instruments. It is a ‘Deva Vādyam’, the instrument which Nandi, the prime gaṇa of Śiva plays when he does his Tāṇḍava. Mṛdaṅga is capable of sounding the divine rhythm across the multiple planes of consciousness. It is so divine because the sound that it emanates is not just a human creation.</h5>
@@ -126,7 +126,7 @@
 		</div>
 	</div>
 
-	<div class="rta-column outer-box limit p-top-64 rowgap600">
+	<div class="rta-column outer-box limit p-top-64 rowgap600" data-lenis-scroll-snap-align="start">
 		<div class="rta-column p-top-32 bord-top bord-bot p-bot-32">
 			<h3 class="ta-c-d">EXPLORE BṚHAD MṚDAṄGA</h3>
 		</div>

@@ -92,7 +92,7 @@
 <svelte:window bind:scrollY={sY} bind:outerHeight={oH} bind:innerWidth={iW}/>
 
 
-	<div class="x0">	
+	<div class="x0" data-lenis-scroll-snap-align="start">	
 		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim13.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/13scrolls/palimpsest/palim13.webp')"></ParallaxImage>
 	</div>
 
@@ -214,7 +214,7 @@
 <!--end-->
 
 <!--all chapters-->
-	<div class="rta-column p-top-64 rowgap400 outer-box limit">
+	<div class="rta-column p-top-64 rowgap400 outer-box limit" data-lenis-scroll-snap-align="start">
 		<div class="rta-column"><div class="line"></div></div>
 		{#if lores && lores.length > 0}
 			<div class="rta-grid grid2 colgap600 rowgap600 p-bot-64">

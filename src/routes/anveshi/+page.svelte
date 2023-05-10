@@ -131,13 +131,13 @@
 <svelte:window bind:innerWidth={iW}/>
 
 <!--hero image-->
-	<div class="x0">
+	<div class="x0" data-lenis-scroll-snap-align="start">
 		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/brhatanveshi.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/brhatanveshi.webp')"></ParallaxImage>
 	</div>
 <!--end-->
 
 <!--all chapters-->
-	<div class="rta-grid grid2 outer-box rowgap600 colgap600 p-top-64" class:left2={!fullText} class:right2={fullText} use:autoAnimate>
+	<div class="rta-grid grid2 outer-box rowgap600 colgap600 p-top-64" class:left2={!fullText} class:right2={fullText} use:autoAnimate data-lenis-scroll-snap-align="start">
 		<div class="rta-column rowgap400 bord-bot-m p-bot-32-m" use:autoAnimate>
 				<div class="templeanim">
 					{#if $visibilityMode}
@@ -224,7 +224,7 @@
 <!--end-->
 
 <!--travel diaries-->
-	<div id="travel-diaries" class="rta-column outer-box minH ycenter p-top-64">
+	<div id="travel-diaries" class="rta-column outer-box minH ycenter p-top-64" data-lenis-scroll-snap-align="start">
 		<div class="rta-grid grid2 right colgap600 rowgap400 bord-top p-top-64 bord-bot-m p-bot-32-m">
 			<div class="rta-column down">
 			{#if selectedCategory[1]}
@@ -279,7 +279,7 @@
 <!--end-->
 
 <!--about anveshi, faq-->
-	<div class="rta-column ycenter minH outer-box rowgap300" id="aboutsection">
+	<div class="rta-column ycenter minH outer-box rowgap300" id="aboutsection" data-lenis-scroll-snap-align="start">
 		{#if breakPoint}
 			<div class="rta-row colgap400 drawer-select">
 				{#if selectedArea[1]}

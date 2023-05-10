@@ -518,6 +518,7 @@ end-->
 									{item.meta.title}
 								</a></strong>
 							</h5>
+							<small style="text-transform: none">{item.meta.excerpt}</small>
 						</div>
 						<div class="rta-column">
 							<p><strong>

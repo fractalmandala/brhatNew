@@ -1,6 +1,8 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
+	import { dev } from '$app/environment';
+	import { inject } from '@vercel/analytics';
 	import { browser } from '$app/environment'
 	import visibilityMode from '$lib/stores/visibility'
 	import Lenis from '@studio-freight/lenis'
@@ -16,6 +18,8 @@
 	let link:any
 	let firstVisit = false
 	let fake = false
+
+	inject({ mode: dev ? 'development' : 'production' });
 
 	function fauxfake(){
 		fake = !fake
