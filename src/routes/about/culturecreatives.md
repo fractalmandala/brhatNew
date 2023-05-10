@@ -3,7 +3,7 @@ title: Culture Creatives
 image: "/images/areas-cc.webp"
 ---
 
-<img class="image" src="/images/corpimages/ganapati.webp" alt="ganapati" />
+<img class="image" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/ganapati.webp" alt="ganapati" />
 
 Culture, as Loren Eiseley said, is stand-in Nature; a human substitute to the laws of Nature which broke down when man discovered technology, came out of the food chain and broke the natural order. Culture through its laws and conventions tries to mimic and safeguard natural laws, and at the same time, in a society like Bhāratavarṣa, tries to spiritually elevate man while respecting natural physical constraints.
 

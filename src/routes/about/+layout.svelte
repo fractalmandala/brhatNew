@@ -68,3 +68,14 @@
 <slot></slot>
 </div>
 
+<style lang="sass">
+
+.light
+	background: #FFFFFF
+
+.dark
+	background: #171717
+
+
+</style>
+

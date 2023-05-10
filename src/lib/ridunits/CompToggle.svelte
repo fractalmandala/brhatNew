@@ -3,6 +3,7 @@
 	import { onMount } from 'svelte'
 	import visibilityMode from '$lib/stores/visibility'
 	import { fly } from 'svelte/transition'
+	import { backIn, backOut } from 'svelte/easing'
 	let tooltip = false
 	let iW:number
 	let breakPoint:boolean
@@ -37,12 +38,12 @@
 <div class="switch rta-column" class:light={$visibilityMode} class:dark={!$visibilityMode} on:mouseenter={toggleTooltip} on:mouseleave={toggleTooltip}>
   <div class="slider rta-in-col"></div>
 	{#if tooltip && $visibilityMode}
-	<div class="rta-column tooltip" transition:fly={{ duration: 100, x: flyX, y: flyY }} class:modile={breakPoint}>
+	<div class="rta-column tooltip" transition:fly={{ duration: 100, x: flyX, y: flyY, easing: backOut }} class:modile={breakPoint}>
 		Toggle Dark Mode
 	</div>
 	{/if}
 	{#if tooltip && !$visibilityMode}
-	<div class="rta-column tooltip" transition:fly={{ duration: 100, x: flyX, y: flyY }} class:modile={breakPoint}>
+	<div class="rta-column tooltip" transition:fly={{ duration: 100, x: flyX, y: flyY, easing: backOut }} class:modile={breakPoint}>
 		Toggle Light Mode
 	</div>
 	{/if}
@@ -69,7 +70,7 @@
 	font-size: 12px
 	width: 120px
 	text-align: center
-	padding: 2px 8px
+	padding: 2px 8px 0 8px
 	border-radius: 2px
 	font-weight: 600
 

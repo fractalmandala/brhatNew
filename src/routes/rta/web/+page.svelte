@@ -3,7 +3,20 @@
 	import visibilityMode from '$lib/stores/visibility'
 	import { draggable } from '@neodrag/svelte'
 	import type { DragOptions } from '@neodrag/svelte'
-	import ButtonOne from '$lib/anims/ButtonBlue.svelte'
+
+	let fake = true
+	let iW:number
+	let breakPoint:boolean
+
+	$: if ( iW <= 1023 ) {
+		breakPoint = true
+	} else {
+		breakPoint = false
+	}
+	
+	function fauxfake(){
+		fake = !fake
+	}
 
   let options: DragOptions = {
     axis: 'x',
@@ -12,6 +25,8 @@
 
 </script>
 
+<svelte:window bind:innerWidth={iW}/>
+
 
 <div class="rta-grid grid2 left0 p-bot-64 minH" class:light={$visibilityMode} class:dark={!$visibilityMode}>
 	<div class="rta-column sidebar">
@@ -19,7 +34,7 @@
 	</div>
 	<div class="rta-column rowgap100 mainpage">
 		<div class="greenline"></div>
-			<div class="rta-row m-top-16 colgap200">
+			<div class="rta-row fixed ytop-m m-top-16 colgap200">
 				<h4>Ṛta in Design Web Components</h4>
 				<img class="trinfinity" src="/images/trinfinity.png" alt="trinfinity"
 					use:draggable={options}
@@ -38,18 +53,13 @@
 		</div>
 		<div class="rta-column rowgap200 one-section">
 			<h5 class="p-bot-32">Tabs</h5>
-			<p>Tabs are quite frequent on our site, being required for instances like chapter or course listings, blog categories etc. Our tabs are responsive, contracting into a dropdown menu below breakpoints. We have both horizontal and vertical tab drawers.</p>
-			<h6 class="p-top-16">
+			<p>Tabs are quite frequent on our site, being required for instances like chapter or course listings, blog categories etc. Our tabs are responsive, contracting into a dropdown menu below breakpoint. We have both horizontal and vertical tab drawers.</p>
+			<em class="is-p p-top-16">
 				Horizontal Tabs
-			</h6>
+			</em>
 			<p>Horizontal tabs can be aligned left, right or center.</p>
-			<div class="rta-row colgap400">
-				<div class="drawer-item">Label 1</div>
-				<div class="drawer-item">Label 2</div>
-				<div class="drawer-item">Label 3</div>
-				<div class="drawer-item">Label 4</div>
-				<div class="drawer-item">Label 5</div>
-				<div class="drawer-item">Label 6</div>
+			<div class="rta-column component-section">
+
 			</div>
 		</div>
 	</div>
@@ -59,29 +69,52 @@
 
 <style lang="sass">
 
+.component-section
+	border-radius: 8px
+	@media screen and (min-width: 1024px)
+		padding: 24px
+	@media screen and (max-width: 1023px)
+		padding: 16px
+
 .dark
-	.drawer-item
-		color: white
-		font-size: 20px
-		font-weight: 700
-	
+	p
+		color: #474747
+	h5
+		color: #FFFFFF
+	em.is-p
+		color: #676767
+	.component-section
+		background: #101010
+		box-shadow: 5px 5px 12px #090909
+
+.light
+	h5
+		color: #878787
+	.component-section
+		background: #f1f1f1
+		box-shadow: 5px 5px 12px #e1e1e1
+		
 
 .rta-column
 	h5
 		font-weight: 600
-		color: #FFFFFF
 	h6
 		font-weight: 500
 		line-height: 1.6
-	em
-		line-height: 1.8
-		margin-bottom: 20px
 	li.em
 		margin-bottom: 4px
 
+.one-section
+	em.is-p
+		line-height: 1.8
+		margin-bottom: 0
+		font-weight: 700
+	em
+		margin-bottom: 20px
+		padding-bottom: 0
+
 .sidebar
 	border-right: 1px solid var(--borderline)
-
 
 .mainpage
 	a
@@ -112,6 +145,14 @@
 			h5
 				border-top: 1px solid var(--borderline)
 				padding-top: 32px
+	@media screen and (max-width: 1023px)
+		padding-top: 128px
+		padding-left: 24px
+		padding-right: 24px
+		.trinfinity
+			width: 80px
+			object-fit: contain
+			height: max-content
 
 .greenline
 	height: 1px

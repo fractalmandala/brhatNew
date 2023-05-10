@@ -4,6 +4,7 @@
 	import { browser } from '$app/environment'
 	import autoAnimate from '@formkit/auto-animate'
 	import { ChevronDown } from 'lucide-svelte'
+	import CompSearch from '$lib/ridunits/CompSearch.svelte'
 	import Header from '$lib/components/SubHeader.svelte'
 	import ButtonEmerge from '$lib/anims/ButtonEmerge.svelte'
 	import ButtonEmerge2 from '$lib/anims/ButtonEmerge.svelte'

@@ -242,9 +242,9 @@
 	top: 0
 	transition: 0.5s cubic-bezier(0.635, 0.405, 0.535, 0.035)
 	@media screen and (min-width: 1024px)
-		grid-template-columns: 190px 1fr 200px 56px 144px
+		grid-template-columns: 190px 1fr 56px 144px
 		grid-template-rows: 1fr
-		grid-template-areas: "applogo midrow autofill search menuicon"
+		grid-template-areas: "applogo midrow search menuicon"
 		height: 80px
 		align-content: center
 		align-items: center
@@ -302,7 +302,8 @@
 		display: row
 		height: 100%
 		align-items: center
-		justify-content: flex-start
+		justify-content: flex-end
+		margin-right: 24px
 	@media screen and (max-width: 1023px)
 		display: none
 
@@ -321,7 +322,6 @@
 	padding: 2px 0
 	p
 		padding-top: 2px
-		color: #FFFFFF
 		font-weight: 700
 	@media screen and (max-width: 899px)
 		height: 64px
@@ -332,6 +332,9 @@
 		#sliver
 			display: block
 			animation: doppler 1.5s ease-in-out infinite both
+		#pulsar
+			path
+				fill: white
 
 #menumainx
 	height: 24px
@@ -347,7 +350,7 @@
 	height: 24px
 	display: none
 	path
-		fill: #FFFFFF
+		fill: #fe4a49
 
 #pulsar
 	animation: heartbeat 1.5s ease-in-out infinite both
@@ -355,7 +358,7 @@
 	width: 20px
 	margin-top: 2px
 	path
-		fill: #FFFFFF
+		fill: #878787
 
 @keyframes doppler
 	from

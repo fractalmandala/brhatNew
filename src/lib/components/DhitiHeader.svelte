@@ -423,22 +423,30 @@
 
 .switch.light
 	align-items: flex-end
-	border: 1px solid #272727
+	border: 1px solid #878787
 	&:hover
 		border: 1px solid #0B6E4F
+		.slider
+			background: #0B6E4F
+	.slider
+		background: #878787
 
 .switch.dark
 	align-items: flex-start
-	border: 1px solid #272727
+	border: 1px solid #474747
 	&:hover
 		border: 1px solid #0B6E4F
+	.slider
+		background: #474747
 
 .slider 
 	width: 16px
 	height: 16px
 	border-radius: 8px
 	transition: all 0.23s ease
-	background: #272727
+	
+
+
 
 
 </style>

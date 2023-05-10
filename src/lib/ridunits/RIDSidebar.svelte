@@ -10,7 +10,6 @@
 	import DrashtaLinks from '$lib/links/DrashtaLinks.svelte'
 	import MandalaLinks from '$lib/links/MandalaLinks.svelte'
 	import RtaLinks from '$lib/links/RtaLinks.svelte'
-	import CompToggle from '$lib/ridunits/CompToggle.svelte'
 	let iW:number
 	let breakPoint:boolean
 	let fake = false
@@ -48,7 +47,7 @@
 <svelte:window bind:innerWidth={iW}/>
 
 <div class="appsidebar modal" class:light={$visibilityMode} class:dark={!$visibilityMode}>
-	<div class="linksbox right" id="searcharea">
+	<div class="right" id="searcharea">
 		<CompSearch></CompSearch>
 	</div>
 	<div class="linksbox ta-r">
@@ -91,6 +90,19 @@
 
 <style lang="sass">
 
+#searcharea
+	display: flex
+	@media screen and (min-width: 1024px)
+		flex-direction: column
+		justify-content: center
+		padding-top: 32px
+		padding-right: 16px
+		padding-bottom: 32px
+	@media screen and (max-width: 1023px)
+		flex-direction: column
+		width: 100%
+		padding-right: 16px
+		padding-bottom: 16px
 
 .ta-r
 	text-align: right
