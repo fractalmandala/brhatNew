@@ -147,7 +147,7 @@
 		text-align: right
 		text-transform: uppercase
 		font-weight: 700
-		font-size: 27px
+		font-size: 21px
 		padding-bottom: 8px
 		cursor: pointer
 		color: white
