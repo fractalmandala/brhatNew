@@ -1,6 +1,6 @@
 ---
 title: The Saga of the Padmanabhadasas - A Glimpse into the Cultural Practice and Patronage of the present day Travancore Royals, Part 3
-author: Kavita Krishna Meegama
+author: Kavita Krishna Meegama, Akshay Shankar
 category: Dharma Today
 tags: tradition, education, gurukula
 date: "2023-05-16"
