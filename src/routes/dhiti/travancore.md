@@ -21,9 +21,7 @@ Even as the world is witness to the coronation of Prince Charles as King, and ma
 
 >This is savagery, not education.” 
 
-([Dharmic Education in the Era of Planned De-Hinduisation of India by ](https://www.dharmadispatch.in/commentary/dharmic-education-in-an-era-of-planned-de-hinduisation-of-india)
-
-[ Sandeep Balakrishna](https://www.dharmadispatch.in/commentary/dharmic-education-in-an-era-of-planned-de-hinduisation-of-india))
+([Dharmic Education in the Era of Planned De-Hinduisation of India by Sandeep Balakrishna ](https://www.dharmadispatch.in/commentary/dharmic-education-in-an-era-of-planned-de-hinduisation-of-india)
 
 यतो हस्तः ततो दृष्टिः
 
