@@ -3,7 +3,7 @@ title: The Saga of the Padmanabhadasas - A Glimpse into the Cultural Practice an
 author: Kavita Krishna Meegama
 category: Svayambodha
 tags: history, rajya, tradition
-excerpt: "Śrī Padmanābhasvāmī Perumāḻ, the lord of Thiruvananthapuram, and the royal traditions associated with the region. It highlights the rich cultural heritage of Kerala, particularly the dance form of Mōhiniāṭṭam, taught by Guru Gopikā Varmā ji, a member of the Travancore Royal Family."
+excerpt: "Śrī Padmanābhasvāmī Perumāḻ, the lord of Thiruvananthapuram, and the royal traditions associated with the region. It highlights the rich cultural heritage of Kerala, particularly the dance form of Mōhiniāṭṭam, taught by Guru Gopikā Varma ji, a member of the Travancore Royal Family."
 date: "2023-05-16"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/travancore.webp
 ---
