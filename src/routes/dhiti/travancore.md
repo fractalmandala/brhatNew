@@ -1,8 +1,8 @@
 ---
 title: The Saga of the Padmanabhadasas - A Glimpse into the Cultural Practice and Patronage of the present day Travancore Royals, Part 3
 author: Kavita Krishna Meegama
-category: Dharma Today
-tags: tradition, education, gurukula
+category: Svayambodha
+tags: history, rajya, tradition
 excerpt: "Śrī Padmanābhasvāmī Perumāḻ, the lord of Thiruvananthapuram, and the royal traditions associated with the region. It highlights the rich cultural heritage of Kerala, particularly the dance form of Mōhiniāṭṭam, taught by Guru Gopikā Varmā ji, a member of the Travancore Royal Family."
 date: "2023-05-16"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/travancore.webp
