@@ -314,12 +314,12 @@
 	grid-auto-flow: row
 	grid-template-rows: auto
 	@media screen and (min-width: 1024px)
-		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr
-		grid-template-areas: ". . . . . . ."
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+		grid-template-areas: ". . . . . . . ."
 		gap: 0 32px
 	@media screen and (max-width: 1023px)
-		grid-template-columns: 1fr 1fr 1fr
-		grid-template-areas: ". . ." ". . ." ". . ."
+		grid-template-columns: 1fr 1fr 1fr 1fr
+		grid-template-areas: ". . . ." ". . . ."
 		gap: 16px 16px
 	
 
