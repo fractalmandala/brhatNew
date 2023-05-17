@@ -92,64 +92,64 @@ Back in Hyderabad when I look out of my window reminiscing on the sights and sou
 
 ([An Imperative for Dharma Education for Hindu Children in a Woke Pandemic Era - Śrī Sandeep Balakrishna](https://www.dharmadispatch.in/commentary/an-imperative-for-dharmic-education-for-hindu-children-in-an-woke-pandemic-era))
 
-<div class="rta-grid grid3">
-    <div class="rta-image">
+<div class="rta-grid grid3 colgap100 rowgap100">
+    <div class="rta-image height-30">
         <img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gallery/01.jpg" alt="gallery"/>
     </div>
     
-    <div class="rta-image">
+    <div class="rta-image height-30">
         <img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gallery/02.jpg" alt="gallery"/>
     </div>
     
-    <div class="rta-image">
+    <div class="rta-image height-30">
         <img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gallery/03.jpg" alt="gallery"/>
     </div>
     
-    <div class="rta-image">
+    <div class="rta-image height-30">
         <img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gallery/04.jpg" alt="gallery"/>
     </div>
     
-    <div class="rta-image">
+    <div class="rta-image height-30">
         <img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gallery/05.jpg" alt="gallery"/>
     </div>
     
-    <div class="rta-image">
+     <div class="rta-image height-30">
         <img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gallery/06.jpg" alt="gallery"/>
     </div>
     
-    <div class="rta-image">
+    <div class="rta-image height-30">
         <img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gallery/07.jpg" alt="gallery"/>
     </div>
     
-    <div class="rta-image">
+    <div class="rta-image height-30">
         <img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gallery/08.jpg" alt="gallery"/>
     </div>
     
-    <div class="rta-image">
+    <div class="rta-image height-30">
         <img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gallery/09.jpg" alt="gallery"/>
     </div>
     
-    <div class="rta-image">
+    <div class="rta-image height-30">
         <img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gallery/10.jpg" alt="gallery"/>
     </div>
     
-    <div class="rta-image">
+    <div class="rta-image height-30">
         <img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gallery/11.jpg" alt="gallery"/>
     </div>
     
-    <div class="rta-image">
+    <div class="rta-image height-30">
         <img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gallery/12.jpg" alt="gallery"/>
     </div>
     
-    <div class="rta-image">
+    <div class="rta-image height-30">
         <img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gallery/13.jpg" alt="gallery"/>
     </div>
     
-    <div class="rta-image">
+    <div class="rta-image height-30">
         <img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gallery/14.jpg" alt="gallery"/>
     </div>
     
-    <div class="rta-image">
+    <div class="rta-image height-30">
         <img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gallery/15.jpg" alt="gallery"/>
     </div>
     
