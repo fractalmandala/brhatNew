@@ -189,7 +189,7 @@
 		<div class="a-box gridnew" id="partners">
 		{#if partners && partners.length > 0}
 			{#each partners as item}
-				<div class="box">
+				<div class="box partner-bb">
 					<a href={item.link} target="_blank" rel="noreferrer">
 						<img src={item.image} alt={item.id}/>
 					</a>
@@ -345,5 +345,9 @@
 	&:hover
 		color: #fe4a49
 
+.partner-bb a
+	img
+		object-fit: contain
+		width: 100%
 
 </style>
