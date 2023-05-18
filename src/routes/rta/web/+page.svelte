@@ -81,8 +81,6 @@
 		color: #474747
 	h5
 		color: #FFFFFF
-	em.is-p
-		color: #676767
 	.component-section
 		background: #101010
 		box-shadow: 5px 5px 12px #090909

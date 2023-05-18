@@ -3,7 +3,7 @@
 	import { onMount } from 'svelte'
 	import { draw } from 'svelte/transition'
 	import { quintOut } from 'svelte/easing'
-	import visibilityMode from '$lib/stores/visibility'
+	import { themeMode } from '$lib/stores/globalstores'
 	import { browser } from '$app/environment'
 	import RIDSidebar from '$lib/ridunits/RIDSidebar.svelte'
 	import CompToggle from '$lib/ridunits/CompToggle.svelte'
@@ -19,11 +19,11 @@
 	let breakPoint:boolean
 	let fake = false
 
-	function toggleVisibility() {
+	function toggleTheme() {
 	  if (browser) {
-	    visibilityMode.update((mode) => {
+	    themeMode.update((mode) => {
 	      const newMode = !mode;
-	      localStorage.setItem('visibilityMode', JSON.stringify(newMode));
+	      localStorage.setItem('themeMode', JSON.stringify(newMode));
 	      return newMode;
 	    });
 	  }
@@ -86,14 +86,14 @@
 
 <svelte:window bind:scrollY={y} bind:innerHeight={height} bind:innerWidth={iW}/>
 
-<div class="appheader" class:onsidebar={sidebar} class:hiddenHeader={isInvisible} class:light={$visibilityMode} class:dark={!$visibilityMode}>
+<div class="appheader" class:onsidebar={sidebar} class:hiddenHeader={isInvisible} class:light={$themeMode} class:dark={!$themeMode}>
 	<div class="applogo">
 		<slot name="logo"></slot>
 	</div>
 	<div class="midrow">
 		<slot name="local"></slot>
 	</div>
-	<div class="search" id="single" on:click={toggleVisibility} on:keydown={fauxfake}>
+	<div class="search" id="single" on:click={toggleTheme} on:keydown={fauxfake}>
 		<CompToggle></CompToggle>
 	</div>
 	<div class="menuicon colgap100" on:click={toggleSidebar} on:keydown={handleKeyDownEvent} on:mouseenter={toggleCircle} on:mouseleave={toggleCircle}>
