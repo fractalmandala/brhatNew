@@ -98,11 +98,6 @@
 .rta-column
 	h5
 		font-weight: 600
-	h6
-		font-weight: 500
-		line-height: 1.6
-	li.em
-		margin-bottom: 4px
 
 .one-section
 	em.is-p

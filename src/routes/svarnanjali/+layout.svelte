@@ -1,10 +1,13 @@
 <script lang="ts">
 
-	import Header from '$lib/components/DhitiHeader.svelte'
+	import Header from '$lib/components/SubHeader.svelte'
 	import { browser } from '$app/environment'
 	import visibilityMode from '$lib/stores/visibility'
-	import LogDhiti from '$lib/logos/LogDhiti.svelte'
+	import SvarLinks from '$lib/links/SvarnanjaliLinks.svelte'	
+	let onHead = true
 	let sidebar = false
+	let fake = false
+
 
 </script>
 
@@ -15,8 +18,10 @@
 </svelte:head>
 
 <Header sidebar={sidebar}>
+	<div slot="local" class="boxmidrow">
+		<SvarLinks flytime={onHead}></SvarLinks>
+	</div>
 </Header>
-
 <div class="type" class:light={$visibilityMode} class:dark={!$visibilityMode}>
 	<slot></slot>
 </div>
@@ -24,7 +29,7 @@
 <style lang="sass">
 
 .light
-	background: #ffffff
+	background: white
 
 .dark
 	background: #171717
