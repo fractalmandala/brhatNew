@@ -617,3 +617,43 @@ export async function events() {
 		if(error) throw new Error(error.message)
 		return data
 	}
+
+export async function allDhatus(){
+    const { data, error } = await supabase
+    .from('db-dhatupatha')
+    .select()
+    .order('id')
+		if(error) throw new Error(error.message)
+		return data
+}
+
+	export async function allDictionary(){
+		const { data, error } = await supabase
+		.from('db-dictionary')
+		.select()
+		.order('id')
+		if(error) throw new Error(error.message)
+		return data
+	}
+
+
+export async function newSRG(dynamizer:any){
+    const { data, error } = await supabase
+    .from('brhat-drashta2')
+    .select()
+    .eq('type','session schedule')
+    .eq('dynamizer', dynamizer)
+    .order('sequence')
+    if (error) throw new Error(error.message)
+    return data
+}
+
+
+export async function juneCalendar(){
+    const { data, error } = await supabase
+    .from('brhat-june')
+    .select()
+    .order('id')
+    if (error) throw new Error(error.message)
+    return data
+}

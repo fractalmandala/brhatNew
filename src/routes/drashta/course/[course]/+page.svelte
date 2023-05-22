@@ -6,7 +6,7 @@
 	import { backOut, backIn } from 'svelte/easing'
 	import DropDown from '$lib/components/DropDown.svelte'
 	import HeadComponent from '$lib/components/HeadComponent.svelte'
-	import { courseContents, courseTakeaways, courseInstructor, courseDetails, courseWhoFor, allCourses } from '$lib/utils/supapulls'
+	import { courseContents, juneCalendar, courseTakeaways, newSRG, courseInstructor, courseDetails, courseWhoFor, allCourses } from '$lib/utils/supapulls'
 	let y:number
 	let iW:number
 	let breakPoint:boolean
@@ -14,8 +14,10 @@
 	let details:any
 	let conts: any
 	let takes: any
+  let junes:any
 	let instructor:any
 	let otherCourses:any
+    let schedules:any
 	let isFor:any
 	let area:any = Array(5).fill(false)
 	area[1] = true
@@ -53,6 +55,8 @@
 		details = await courseDetails(dynamizer)
 		isFor = await courseWhoFor(dynamizer)
 		otherCourses = await allCourses()
+    schedules = await newSRG(dynamizer)
+    junes = await juneCalendar();
 	})
 
 	afterUpdate(() => {
@@ -140,9 +144,9 @@
 			{#if area[1]}
 			<div class="rta-column rowgap300" in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut}} out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn}}>
 				<h4 class="heading is-blue">Course Introduction</h4>
-				<p class="serif">
+				<pre class="serif">
 				{data.content}
-				</p>
+				</pre>
 			</div>
 			{/if}
 			{#if area[2]}
@@ -209,6 +213,25 @@
 				{/if}
 			</div>
 			{/if}
+            {#if area[6]}
+                <div class="rta-column rowgap300" in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut}} out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn}}>
+                    {#if schedules && schedules.length > 0}
+                    <h4 class="heading is-blue">Session Schedule</h4>
+                    <div class="rta-grid grid7">
+                      {#if junes && junes.length > 0}
+                        {#each junes as item}
+                          <div class="rta-column datebox {item.isyes}">
+                            <small>June {item.id}</small>
+                            {#if item.isyes === 'yes'}
+                            <p>{item.title}</p>
+                            {/if}
+                          </div>
+                        {/each}
+                      {/if}
+                    </div>
+                    {/if}
+                </div>
+            {/if}
 		</div>
 	</div>
 <!--end-->
@@ -273,6 +296,31 @@
 	@media screen and (min-width: 1024px)
 		padding-right: 32px
 
+.datebox.yes
+	background: var(--borderline)
+	small
+		color: #fe4a49
+
+.datebox
+	@media screen and (min-width: 1024px)
+		height: 120px
+		border: 1px solid var(--borderline)
+		padding: 16px
+		p
+			font-size: 14px
+			line-height: 1.2
+			font-weight: bold
+			color: var(--opposite)
+	@media screen and (max-width: 1023px)
+		height: 120px
+		border: 1px solid var(--borderline)
+		padding: 8px
+		p
+			font-size: 14px
+			line-height: 1.2
+			font-weight: bold
+			color: var(--opposite)
+
 .drawer-item2
 	&::after
 		background: #0170B9
@@ -313,7 +361,7 @@ h2
 .heading
 	font-family: 'Playfair Display', serif
 
-pre.serif, p.serif
+pre.serif
 	font-weight: 400
 	font-size: 20px
 
