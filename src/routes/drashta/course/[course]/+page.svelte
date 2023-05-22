@@ -6,6 +6,7 @@
 	import { backOut, backIn } from 'svelte/easing'
 	import DropDown from '$lib/components/DropDown.svelte'
 	import HeadComponent from '$lib/components/HeadComponent.svelte'
+	import CompButton from '$lib/ridunits/RIDButton.svelte'
 	import { courseContents, juneCalendar, courseTakeaways, newSRG, courseInstructor, courseDetails, courseWhoFor, allCourses } from '$lib/utils/supapulls'
 	let y:number
 	let iW:number
@@ -101,6 +102,13 @@
 								<small class="tt-uc ta-c-d"><b>{item.name}</b></small>
 							</div>
 						{/each}
+            {#if data.status === 'open now'}
+              <CompButton --thisbuttoncolor="#0170B9">
+                <a href="https://rzp.io/l/4OgbiD3Co" target="_blank" rel="noreferrer" style="font-size: 18px">
+                  Register and Pay
+                </a>
+              </CompButton>
+            {/if}
 					{/if}
 				</div>
 			</div>

@@ -127,6 +127,34 @@
 							<cite class="sticker-blue"><span>{item.datefrom} | with</span> <span style="color: var(--gren)"> {item.ins}</span></cite>
 						</div>
 					</div>
+          {:else if item.status === 'open now'}
+          <div class="rta-row row-col rowgap300 colgap300 bord-bot p-bot-32">
+						<div class="rta-image w32 height-40-20">
+							<img src={item.image} alt={item.name}/>
+						</div>
+						<div class="rta-column w64 rowgap100">
+							<h6 class="label label-open">
+								{item.status}!
+							</h6>
+							{#if fullText}
+							<h6 class="serif tt-c hover-blue">
+								<a href="/drashta/course/{item.course}">
+									{item.name}
+								</a>
+							</h6>
+							{:else}
+							<h5 class="serif tt-c hover-blue">
+								<a href="/drashta/course/{item.course}">
+									{item.name}
+								</a>
+							</h5>
+							{/if}
+							<p>
+								{item.content.slice(0,250)}...<a style="color: var(--yellow)" href="/drashta/course/{item.course}">READ MORE</a>
+							</p>
+							<cite class="sticker-blue">with {item.ins}</cite>
+						</div>
+          </div>
 					{:else}
 					<div class="rta-row row-col rowgap300 colgap300 bord-bot p-bot-32">
 						<div class="rta-image w32 height-40-20">
@@ -163,6 +191,12 @@
 <!--end-->
 
 <style lang="sass">
+
+.label-open
+	background: #E4A503
+	color: white
+	padding: 5px
+
 
 .hover-blue
 	transition: 0.08s
