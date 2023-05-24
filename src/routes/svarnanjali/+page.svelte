@@ -241,7 +241,7 @@ h2
 		margin-left: -32px
 
 .typett, .typett2, .playfair
-	font-family: 'Playfair Display', serif
+	font-family: 'STIX Two Text', serif
 
 .my-screen
 	height: 100%

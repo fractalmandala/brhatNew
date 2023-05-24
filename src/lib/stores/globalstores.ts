@@ -13,6 +13,7 @@ const storedReadingMode = browser
 
 export const readingMode = writable(storedReadingMode)
 
+
 const initialWidth = browser ? window.innerWidth : 1024;
 export const innerWidth = writable(initialWidth);
 

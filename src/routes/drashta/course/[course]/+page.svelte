@@ -71,16 +71,6 @@
 
 <svelte:window bind:scrollY={y} bind:innerWidth={iW}/>
 
-<svelte:head>
-	<HeadComponent>
-		{data.name} | Bṛhat Draṣṭā at 
-	</HeadComponent>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</svelte:head>
-
-
 <!--page header with title and icons-->
 	<div id="headersection" class="rta-column outer-box minH p-top-64 rowgap600" data-lenis-scroll-snap-align="start">
 		<div class="rta-grid colgap600 grid2 right2" id="headersectionmaingrid">
@@ -367,7 +357,7 @@ h2
 	font-family: 'Nanum Myeongjo', serif
 
 .heading
-	font-family: 'Playfair Display', serif
+	font-family: 'STIX Two Text', serif
 
 pre.serif
 	font-weight: 400

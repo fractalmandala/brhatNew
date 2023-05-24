@@ -66,7 +66,7 @@
 			<cite>{data.tags}</cite><br>
 			<small>{data.category}</small>
 		</div>
-		<h2 style="font-family: 'Playfair Display', serif; font-weight: 700;">{data.title}</h2>
+		<h2 style="font-family: 'STIX Two Text', serif; font-weight: 700;">{data.title}</h2>
 		<div class="authorbox">{data.author}<br>
 			{#if member && member.length > 0}
 			{#each member as item}

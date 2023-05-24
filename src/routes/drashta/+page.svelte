@@ -48,14 +48,6 @@
 
 <svelte:window bind:scrollY={sY} bind:innerHeight={iH} bind:innerWidth={iW}/>
 
-<svelte:head>
-	<HeadComponent>
-		Bṛhat Draṣṭā at 
-	</HeadComponent>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</svelte:head>
 
 <!--parallax section on top-->
 	<div class="x0" data-lenis-scroll-snap-align="start">
@@ -211,7 +203,7 @@
 	width: 70%
 
 .serif
-	font-family: 'Playfair Display', serif
+	font-family: 'STIX Two Text', serif
 
 h5.serif
 	font-weight: bold

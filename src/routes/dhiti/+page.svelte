@@ -612,7 +612,7 @@ p.citeone
 		padding-top: 128px
 
 .heading
-	font-family: 'Playfair Display', serif
+	font-family: 'STIX Two Text', serif
 
 h5.heading
 	font-weight: 800

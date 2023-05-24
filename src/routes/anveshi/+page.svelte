@@ -14,6 +14,7 @@
 	import CompButton3 from '$lib/ridunits/RIDButton.svelte'
 	import CompButton4 from '$lib/ridunits/RIDButton.svelte'
 	import autoAnimate from '@formkit/auto-animate'
+	import Youtuber from '$lib/components/Youtuber.svelte'
 
 	const options = {}
 	let fullText = false
@@ -243,7 +244,7 @@
 					{#if vids && vids.length > 0}
 						{#each vids as item, i}
 						<div class="rta-video rta-column rowgap100" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
-							<iframe width=100% height=100% loading="lazy" src="https://www.youtube.com/embed/{item.videoid}" title={item.name}></iframe>
+							<Youtuber youTubeId={item.videoid}/>
 							<small>{item.name}</small>	
 						</div>
 						{/each}

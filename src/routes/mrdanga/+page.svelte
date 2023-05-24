@@ -3,6 +3,9 @@
 	import { onMount, afterUpdate } from 'svelte'
 	import { browser } from '$app/environment'
 	import { themeMode } from '$lib/stores/globalstores'
+	import Youtuber from '$lib/components/Youtuber.svelte'
+	import Youtuber2 from '$lib/components/Youtuber.svelte'
+	import Youtuber3 from '$lib/components/Youtuber.svelte'
 	import { ChevronDown } from 'lucide-svelte'
 	import autoAnimate from '@formkit/auto-animate'
 	import Header from '$lib/components/SubHeader.svelte'
@@ -153,7 +156,7 @@
 					{#if vids && vids.length > 0}
 						{#each vids as item, i}
 							<div class="rta-column rowgap100 rta-video" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
-								<iframe width=100% height=100% loading="lazy" src="https://www.youtube.com/embed/{item.videoid}" title={item.name}></iframe>
+								<Youtuber youTubeId={item.videoid}/>
 								<small>{item.name}</small>	
 							</div>
 						{/each}
@@ -168,7 +171,7 @@
 				{#if rasas && rasas.length > 0}
 					{#each rasas as item, i}
 						<div class="rta-column rowgap100 rta-video" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
-							<iframe width=100% height=100% loading="lazy" src="https://www.youtube.com/embed/{item.videoid}" title={item.name}></iframe>
+							<Youtuber2 youTubeId={item.videoid}/>
 							<small>{item.name}</small>	
 						</div>
 					{/each}
@@ -180,7 +183,7 @@
 				{#if kavitas && kavitas.length > 0}
 					{#each kavitas as item, i}
 						<div class="rta-column rowgap100 rta-video" in:scale={{ duration: 200, delay: i * 25}} out:scale={{ duration: 100, delay: 0}}>
-							<iframe width=100% height=100% loading="lazy" src="https://www.youtube.com/embed/{item.videoid}" title={item.name}></iframe>
+							<Youtuber3 youTubeId={item.videoid}/>
 							<small>{item.name}</small>	
 						</div>
 					{/each}

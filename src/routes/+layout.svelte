@@ -2,6 +2,8 @@
 
 	import { onMount } from 'svelte'
 	import { invalidate } from '$app/navigation';
+	import HeadComponent from '$lib/components/HeadComponent.svelte'
+	import { page } from '$app/stores'
 	import type { LayoutData } from './$types';
 	import { breakZero, breakOne, breakTwo, themeMode, innerWidth } from '$lib/stores/globalstores'
 	import { dev } from '$app/environment';
@@ -15,6 +17,9 @@
 	import { useFrame } from '$lib/utils/lenisframe'
 
 	let breakPointOn:boolean
+	let prelocal = ''
+	let precap = ''
+	let localpage = ''
 	let showFooter = true
 	let link:any
 	let firstVisit = false
@@ -41,6 +46,9 @@ $: ({ supabase, session } = data);
 	}
 
 	onMount(() => {
+		prelocal = $page.url.pathname.split('/').join(' | ');
+		precap = prelocal.slice(2);
+		localpage = precap.charAt(0).toUpperCase() + precap.slice(1) + ' | ';
 		const lenis = new Lenis({
 			duration: 1.6,
 			orientation: 'vertical',
@@ -71,8 +79,8 @@ export let data: LayoutData;
 <svelte:window bind:innerWidth={$innerWidth}/>
 
 <svelte:head>
+	<HeadComponent localpage={localpage}/>
 	<link href="https://cdn.jsdelivr.net/npm/textify.js/dist/Textify.min.css" rel="stylesheet"/>
-
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-6NPMDTQVDE"></script>
 	<script>
   	window.dataLayer = window.dataLayer || [];

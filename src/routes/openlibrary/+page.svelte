@@ -388,7 +388,7 @@
 		align-items: center
 
 .heading
-	font-family: 'Playfair Display', serif
+	font-family: 'STIX Two Text', serif
 
 .x0
 	overflow: hidden

@@ -19,6 +19,7 @@
 	import HomeAccordion from '$lib/components/HomeAccordion.svelte'
 	import CompButton from '$lib/ridunits/CompButton.svelte'
 	import CompButton2 from '$lib/ridunits/CompButton.svelte'
+	import Youtuber from '$lib/components/Youtuber.svelte'
 	import { createCurateConsult, brhatUpdates, latestVidsVar, BOLLatest, allChapters, allCourses } from '$lib/utils/supapulls'
 	import { latestDhitiSix } from '$lib/utils/localpulls'
 	import '@splidejs/svelte-splide/css'
@@ -414,7 +415,7 @@
 								delay: i*50
 							}}
 							>
-							<iframe class="lazy video-iframe" width=100% height=100% loading="lazy" src="https://www.youtube.com/embed/{item.videoid}" title={item.name}></iframe>
+							<Youtuber youTubeId={item.videoid}/>
 							<small>{item.name}</small>
 						</div>
 					{/each}
