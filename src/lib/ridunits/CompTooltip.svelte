@@ -1,7 +1,7 @@
 <script lang="ts">
 
 	import { browser } from '$app/environment'
-	import visibilityMode from '$lib/stores/visibility'
+	import { themeMode } from '$lib/stores/globalstores'
 	import autoAnimate from '@formkit/auto-animate'
 	import { ChevronDown } from 'lucide-svelte'
 	let fake = false
@@ -14,9 +14,9 @@
 
 	function toggleVisibility() {
 	  if (browser) {
-	    visibilityMode.update((mode) => {
+	    themeMode.update((mode) => {
 	      const newMode = !mode;
-	      localStorage.setItem('visibilityMode', JSON.stringify(newMode));
+	      localStorage.setItem('themeMode', JSON.stringify(newMode));
 	      return newMode;
 	    });
 	  }
@@ -28,7 +28,7 @@
 
 </script>
 
-<div class="rta-column comp-tooltip" class:light={$visibilityMode} class:dark={!$visibilityMode} use:autoAnimate={{ duration: 50}} on:mouseenter={toggleTooltip} on:mouseleave={toggleTooltip}>
+<div class="rta-column comp-tooltip" class:light={$themeMode} class:dark={!$themeMode} use:autoAnimate={{ duration: 50}} on:mouseenter={toggleTooltip} on:mouseleave={toggleTooltip}>
 	{#if showTooltip}
 	<div class="rta-in-col tooltip-item">
 		<slot name="tooltip"></slot>

@@ -2,7 +2,7 @@
 
 	import Header from '$lib/components/SubHeader.svelte'
 	import { browser } from '$app/environment'
-	import visibilityMode from '$lib/stores/visibility'
+	import { themeMode } from '$lib/stores/globalstores'
 	import DrashtaLinks from '$lib/links/DrashtaLinks.svelte'
 	let onHead = true
 	let sidebar = false
@@ -14,9 +14,9 @@
 
 	function toggleVisibility() {
 	  if (browser) {
-	    visibilityMode.update((mode) => {
+	    themeMode.update((mode) => {
 	      const newMode = !mode;
-	      localStorage.setItem('visibilityMode', JSON.stringify(newMode));
+	      localStorage.setItem('themeMode', JSON.stringify(newMode));
 	      return newMode;
 	    });
 	  }
@@ -30,7 +30,7 @@
 		<DrashtaLinks flytime={onHead}></DrashtaLinks>
 	</div>
 </Header>
-<div class="type" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+<div class="type" class:light={$themeMode} class:dark={!$themeMode}>
 	<slot></slot>
 </div>
 

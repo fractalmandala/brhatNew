@@ -1,10 +1,10 @@
 <script lang="ts">
 
-	import visibilityMode from '$lib/stores/visibility'
+	import { themeMode } from '$lib/stores/globalstores'
 
 </script>
 
-<button class="comp-button" class:pale={$visibilityMode} class:deep={!$visibilityMode}>
+<button class="comp-button" class:pale={$themeMode} class:deep={!$themeMode}>
 <slot></slot>
 </button>
 

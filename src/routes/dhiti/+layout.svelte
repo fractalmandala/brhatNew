@@ -2,7 +2,7 @@
 
 	import Header from '$lib/components/DhitiHeader.svelte'
 	import { browser } from '$app/environment'
-	import visibilityMode from '$lib/stores/visibility'
+	import { themeMode } from '$lib/stores/globalstores'
 	import LogDhiti from '$lib/logos/LogDhiti.svelte'
 	let sidebar = false
 
@@ -17,7 +17,7 @@
 <Header sidebar={sidebar}>
 </Header>
 
-<div class="type" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+<div class="type" class:light={$themeMode} class:dark={!$themeMode}>
 	<slot></slot>
 </div>
 

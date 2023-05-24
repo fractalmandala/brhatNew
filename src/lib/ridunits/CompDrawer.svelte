@@ -2,7 +2,7 @@
 
 	import { onMount } from 'svelte'
 	import { browser } from '$app/environment'
-	import visibilityMode from '$lib/stores/visibility'
+	import { themeMode } from '$lib/stores/globalstores'
 	import autoAnimate from '@formkit/auto-animate'
 	import { ChevronDown } from 'lucide-svelte'
 	let fake = false
@@ -17,9 +17,9 @@
 
 	function toggleVisibility() {
 	  if (browser) {
-	    visibilityMode.update((mode) => {
+	    themeMode.update((mode) => {
 	      const newMode = !mode;
-	      localStorage.setItem('visibilityMode', JSON.stringify(newMode));
+	      localStorage.setItem('themeMode', JSON.stringify(newMode));
 	      return newMode;
 	    });
 	  }
@@ -47,7 +47,7 @@
 
 <svelte:window bind:innerWidth={iW}/>
 
-<div class="rta-column rowgap100 comp-drawer" class:dark={!$visibilityMode} class:light={$visibilityMode} use:autoAnimate>
+<div class="rta-column rowgap100 comp-drawer" class:dark={!$themeMode} class:light={$themeMode} use:autoAnimate>
 	<div class="rta-row" id="menu-select" on:click={toggleMenu} on:keydown={fauxfake}>
 		<small>
 			<slot name="visible"></slot>

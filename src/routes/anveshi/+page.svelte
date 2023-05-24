@@ -1,7 +1,7 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
-	import visibilityMode from '$lib/stores/visibility'
+	import { themeMode } from '$lib/stores/globalstores'
 	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import AnveshiTemple from '$lib/logos/AnveshiTemple.svelte'
 	import { ChevronDown } from 'lucide-svelte'
@@ -140,7 +140,7 @@
 	<div class="rta-grid grid2 outer-box rowgap600 colgap600 p-top-64" class:left2={!fullText} class:right2={fullText} use:autoAnimate data-lenis-scroll-snap-align="start">
 		<div class="rta-column rowgap400 bord-bot-m p-bot-32-m" use:autoAnimate>
 				<div class="templeanim">
-					{#if $visibilityMode}
+					{#if $themeMode}
 						<img src="/images/logos/anv-black.webp" alt="anveshi logo"/>
 					{:else}
 						<img src="/images/logos/anv-white.webp" alt="anveshi logo"/>					

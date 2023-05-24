@@ -1,10 +1,12 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
+	import { invalidate } from '$app/navigation';
+	import type { LayoutData } from './$types';
+	import { breakZero, breakOne, breakTwo, themeMode, innerWidth } from '$lib/stores/globalstores'
 	import { dev } from '$app/environment';
 	import { inject } from '@vercel/analytics';
 	import { browser } from '$app/environment'
-	import visibilityMode from '$lib/stores/visibility'
 	import Lenis from '@studio-freight/lenis'
 	import '$lib/styles/types.sass'
 	import '$lib/styles/tokens.sass'
@@ -13,7 +15,6 @@
 	import { useFrame } from '$lib/utils/lenisframe'
 
 	let breakPointOn:boolean
-	let innerW:number
 	let showFooter = true
 	let link:any
 	let firstVisit = false
@@ -25,7 +26,9 @@
 		fake = !fake
 	}
 
-	$: if ( innerW <= 1023 ) {
+$: ({ supabase, session } = data);
+
+	$: if ( $innerWidth <= 1023 ) {
 		breakPointOn = true
  	} else {
 		breakPointOn = false
@@ -38,9 +41,20 @@
 	}
 
 	onMount(() => {
-		const lenisInstance = new Lenis();
-		setLenisStore(lenisInstance);
-		$lenis?.destroy();
+		const lenis = new Lenis({
+			duration: 1.6,
+			orientation: 'vertical',
+			gestureOrientation: 'vertical',
+			wheelMultiplier: 0.4,
+			smoothWheel: true,
+			touchMultiplier: 1,
+			infinite: false
+		});
+		function raf(time: any) {
+			lenis.raf(time);
+			requestAnimationFrame(raf);
+		}
+		requestAnimationFrame(raf);
 		
 		firstVisit = localStorage.getItem('firstVisit') === null
 
@@ -49,14 +63,12 @@
 		}
 	});
 
-	useFrame((time) => {
-		$lenis?.raf(time);
-	});
+export let data: LayoutData;
 
 </script>
 
 
-<svelte:window bind:innerWidth={innerW}/>
+<svelte:window bind:innerWidth={$innerWidth}/>
 
 <svelte:head>
 	<link href="https://cdn.jsdelivr.net/npm/textify.js/dist/Textify.min.css" rel="stylesheet"/>
@@ -71,7 +83,7 @@
 	</script>
 </svelte:head>
 
-<div id="appbox" class="themer" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+<div id="appbox" class="themer" class:light={$themeMode} class:dark={!$themeMode}>
 
 	<slot></slot>
 	{#if showFooter}

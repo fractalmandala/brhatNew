@@ -4,7 +4,6 @@
 	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import { scale } from 'svelte/transition'
 	import Animations from 'textify.js'
-	import visibilityMode from '$lib/stores/visibility'
 	import { createCurateConsult, threeConvictions, brhatAdvisors, brhatTeam, brhatPartners } from '$lib/utils/supapulls'
 	import PankajSaxena from '$lib/authors/PankajSaxena.svelte'
 	import RaghavaKrishna from '$lib/authors/RaghavaKrishna.svelte'

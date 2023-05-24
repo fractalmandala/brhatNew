@@ -1,7 +1,7 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
-	import visibilityMode from '$lib/stores/visibility'
+	import { themeMode } from '$lib/stores/globalstores'
 	import { browser } from '$app/environment'
 	import CompToggle from '$lib/ridunits/CompToggle.svelte'
 	import CompToggle2 from '$lib/ridunits/CompToggle.svelte'
@@ -21,9 +21,9 @@
 
 	function toggleVisibility() {
 	  if (browser) {
-	    visibilityMode.update((mode) => {
+	    themeMode.update((mode) => {
 	      const newMode = !mode;
-	      localStorage.setItem('visibilityMode', JSON.stringify(newMode));
+	      localStorage.setItem('themeMode', JSON.stringify(newMode));
 	      return newMode;
 	    });
 	  }
@@ -87,7 +87,7 @@
 
 <svelte:window bind:scrollY={y} bind:innerHeight={height} bind:innerWidth={iW}/>
 
-<div class="appheader" class:onsidebar={sidebar} class:hiddenHeader={isInvisible} class:light={$visibilityMode} class:dark={!$visibilityMode}>
+<div class="appheader" class:onsidebar={sidebar} class:hiddenHeader={isInvisible} class:light={$themeMode} class:dark={!$themeMode}>
 	<a class="applogo" href="/" data-sveltekit-reload>
 		<div class="logomotif">
 			<svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">

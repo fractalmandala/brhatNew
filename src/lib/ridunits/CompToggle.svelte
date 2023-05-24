@@ -1,7 +1,6 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
-	import visibilityMode from '$lib/stores/visibility'
 	import { themeMode } from '$lib/stores/globalstores'
 	import { fly } from 'svelte/transition'
 	import { backIn, backOut } from 'svelte/easing'

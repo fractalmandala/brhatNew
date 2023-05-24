@@ -5,6 +5,7 @@
 	import autoAnimate from '@formkit/auto-animate'
 	import { ChevronDown } from 'lucide-svelte'
 	import CompSearch from '$lib/ridunits/CompSearch.svelte'
+	import { themeMode } from '$lib/stores/globalstores'
 	import Header from '$lib/components/SubHeader.svelte'
 	import ButtonEmerge from '$lib/anims/ButtonEmerge.svelte'
 	import ButtonEmerge2 from '$lib/anims/ButtonEmerge.svelte'
@@ -12,7 +13,6 @@
 	import ButtonEmerge4 from '$lib/anims/ButtonEmerge.svelte'
 	import ButtonEmerge5 from '$lib/anims/ButtonEmerge.svelte'
 	import ButtonEmerge6 from '$lib/anims/ButtonEmerge.svelte'
-	import visibilityMode from '$lib/stores/visibility'
 	import Animations from 'textify.js'
 	import { reveal } from 'svelte-reveal'
 	import HeadComponent from '$lib/components/HeadComponent.svelte'
@@ -79,16 +79,6 @@
 		fake = !fake
 	}
 
-	function toggleVisibility() {
-	  if (browser) {
-	    visibilityMode.update((mode) => {
-	      const newMode = !mode;
-	      localStorage.setItem('visibilityMode', JSON.stringify(newMode));
-	      return newMode;
-	    });
-	  }
-	}
-
 	$:	if ( iW <= 1023) {
 			breakPoint = true
 		} else {
@@ -148,7 +138,7 @@
 </Header>
 
 
-<div class="pageglobals" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+<div class="pageglobals" class:light={$themeMode} class:dark={!$themeMode}>
 
 <!--top accordion of 3 sections-->
 	<HomeAccordion></HomeAccordion>
@@ -357,14 +347,14 @@
 						{:else}
 						<div class="rta-column rowgap200">
 							<div class="rta-image height-40">
-								<img src={item.image} alt={item.name}/>
+								<img src={item.image} alt={item.name} style="object-fit: contain"/>
 							</div>
 							<div class="rta-column rowgap200">
 								<div class="status-sticker">
 									<small class="tt-u">{item.status}</small>
 								</div>
 								<cite>{item.datefrom} | with <span id="instructor">{item.ins}</span></cite>
-								<pre class="h6">{item.content}</pre>
+								<pre class="h6">{item.content.slice(0,200)}</pre>
 								<CompButton2><a href="/drashta/course/{item.course}">Course Details</a></CompButton2>
 							</div>
 						</div>

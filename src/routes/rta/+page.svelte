@@ -2,7 +2,7 @@
 
 	import { onMount } from 'svelte'
 	import CompGridder from '$lib/ridunits/CompGridder.svelte'
-	import visibilityMode from '$lib/stores/visibility'
+	import { themeMode } from '$lib/stores/globalstores'
 	import { draggable } from '@neodrag/svelte'
 	import type { DragOptions } from '@neodrag/svelte'
 
@@ -13,7 +13,7 @@
 
 </script>
 
-<div class="rta-grid grid2 left0 minH" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+<div class="rta-grid grid2 left0 minH" class:light={$themeMode} class:dark={!$themeMode}>
 	<div class="rta-column sidepage"></div>
 	<div class="rta-column mainpage p-bot-64">
 		<div class="rta-column">

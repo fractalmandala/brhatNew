@@ -3,7 +3,7 @@
 	import Header from '$lib/components/SubHeader.svelte'
 	import autoAnimate from '@formkit/auto-animate'
 	import { browser } from '$app/environment'
-	import visibilityMode from '$lib/stores/visibility'
+	import { themeMode } from '$lib/stores/globalstores'
 	import AboutLinks from '$lib/links/AboutLinks.svelte'
 	import { fly } from 'svelte/transition'
 
@@ -64,7 +64,7 @@
 	</div>
 </Header>
 
-<div class="themer" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+<div class="themer" class:light={$themeMode} class:dark={!$themeMode}>
 <slot></slot>
 </div>
 

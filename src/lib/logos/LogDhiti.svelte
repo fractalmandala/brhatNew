@@ -1,12 +1,6 @@
 <script lang="ts">
 
-	import { fly } from 'svelte/transition'
-	import visibilityMode from '$lib/stores/visibility'
 	let showHome:boolean = false
-
-	function toggleHomeLink(){
-		showHome = !showHome
-	}
 
 </script>
 

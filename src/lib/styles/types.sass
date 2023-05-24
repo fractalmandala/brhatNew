@@ -226,9 +226,94 @@ h1
 			margin-right: 1rem
 
 .light.maincol
-	p
-		font-family: 'EB Garamond', serif
+	p, p i, i
+		font-family: 'STIX Two Text', serif
 		color: #272727
+		margin-bottom: 20px
+		font-weight: 400
+	>.rta-column
+		p
+			font-family: 'Varta', serif
+			font-weight: bold
+			color: #878787
+			border-top: 1px solid var(--borderline)
+			padding-top: 64px
+			margin-top: 32px
+	li
+		font-family: 'STIX Two Text', serif
+		color: #272727
+	h4
+		font-family: 'STIX Two Text', serif
+		color: #272727
+	blockquote
+		border-left: 4px solid #fe4a49
+	h5
+		font-weight: 600
+		letter-spacing: -0.25px
+	@media screen and (min-width: 1024px)
+		p, li, p i
+			font-size: 20px
+			line-height: 1.6
+		h4
+			margin-top: 40px
+			margin-bottom: 20px
+			letter-spacing: -0.5px
+		blockquote
+			padding-left: 16px
+			p
+				color: #878787
+		h5
+			padding-top: 20px
+			padding-bottom: 20px
+			margin-top: 40px
+			margin-bottom: 40px
+			border-top: 1px solid var(--borderline)
+			border-bottom: 1px solid var(--borderline)
+	@media screen and (max-width: 1023px) and (min-width: 787px)
+		p, li, p i
+			font-size: 20px
+			line-height: 1.5
+		h4
+			margin-top: 40px
+			margin-bottom: 20px
+			letter-spacing: -0.5px
+		blockquote
+			padding-left: 16px
+			p
+				color: #878787
+		h5
+			padding-top: 20px
+			padding-bottom: 20px
+			margin-top: 40px
+			margin-bottom: 40px
+			border-top: 1px solid var(--borderline)
+			border-bottom: 1px solid var(--borderline)
+	@media screen and (max-width: 786px)
+		p, li, p i
+			font-size: 20px
+			line-height: 1.5
+		h4
+			margin-top: 40px
+			margin-bottom: 20px
+			letter-spacing: -0.5px
+		blockquote
+			padding-left: 16px
+			margin-left: 0
+			p
+				color: #878787
+		h5
+			padding-top: 20px
+			padding-bottom: 20px
+			margin-top: 40px
+			margin-bottom: 40px
+			border-top: 1px solid var(--borderline)
+			border-bottom: 1px solid var(--borderline)
+	
+
+.dark.maincol
+	p, p i, i
+		font-family: 'STIX Two Text', serif
+		color: #FFFFFF
 		margin-bottom: 20px
 	>.rta-column
 		p
@@ -239,18 +324,18 @@ h1
 			padding-top: 64px
 			margin-top: 32px
 	li
-		font-family: 'EB Garamond', serif
-		color: #272727
+		font-family: 'STIX Two Text', serif
+		color: #FFFFFF
 	h4
-		font-family: 'EB Garamond', serif
-		color: #272727
+		font-family: 'STIX Two Text', serif
+		color: #FFFFFF
 	blockquote
 		border-left: 4px solid #fe4a49
 	h5
 		font-weight: 600
 		letter-spacing: -0.25px
 	@media screen and (min-width: 1024px)
-		p, li
+		p, li, p i, i
 			font-size: 20px
 			line-height: 1.4
 		h4
@@ -268,42 +353,36 @@ h1
 			margin-bottom: 40px
 			border-top: 1px solid var(--borderline)
 			border-bottom: 1px solid var(--borderline)
-	
-
-.dark.maincol
-	p
-		font-family: 'EB Garamond', serif
-		color: #FFFFFF
-		margin-bottom: 20px
-	>.rta-column
-		p
-			font-family: 'Varta', serif
-			font-weight: bold
-			color: #878787
-			border-top: 1px solid var(--borderline)
-			padding-top: 64px
-			margin-top: 32px
-	li
-		font-family: 'EB Garamond', serif
-		color: #FFFFFF
-	h4
-		font-family: 'EB Garamond', serif
-		color: #FFFFFF
-	blockquote
-		border-left: 4px solid #fe4a49
-	h5
-		font-weight: 600
-		letter-spacing: -0.25px
-	@media screen and (min-width: 1024px)
-		p, li
+	@media screen and (max-width: 1023px) and (min-width: 787px)
+		p, li, p i
 			font-size: 20px
-			line-height: 1.4
+			line-height: 1.5
 		h4
 			margin-top: 40px
 			margin-bottom: 20px
 			letter-spacing: -0.5px
 		blockquote
 			padding-left: 16px
+			p
+				color: #878787
+		h5
+			padding-top: 20px
+			padding-bottom: 20px
+			margin-top: 40px
+			margin-bottom: 40px
+			border-top: 1px solid var(--borderline)
+			border-bottom: 1px solid var(--borderline)
+	@media screen and (max-width: 786px)
+		p, li, p i
+			font-size: 20px
+			line-height: 1.5
+		h4
+			margin-top: 40px
+			margin-bottom: 20px
+			letter-spacing: -0.5px
+		blockquote
+			padding-left: 16px
+			margin-left: 0
 			p
 				color: #878787
 		h5
@@ -317,3 +396,4 @@ h1
 .menu-row
 	color: var(--opposite)
 	text-transform: uppercase
+

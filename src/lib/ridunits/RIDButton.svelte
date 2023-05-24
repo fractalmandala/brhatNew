@@ -1,10 +1,10 @@
 <script lang="ts">
 
-	import visibilityMode from '$lib/stores/visibility'
+	import { themeMode } from '$lib/stores/globalstores'
 
 </script>
 
-<button class="rid-button" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+<button class="rid-button" class:light={$themeMode} class:dark={!$themeMode}>
   <span>
 		<slot></slot>
 	</span>

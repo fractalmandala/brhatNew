@@ -4,7 +4,7 @@
 	import { browser } from '$app/environment'
 	import Header from '$lib/components/SubHeader.svelte'
  	import { page } from '$app/stores'
-	import visibilityMode from '$lib/stores/visibility'
+	import { themeMode } from '$lib/stores/globalstores'
 
 	let dropdown = false
 	let fake = false
@@ -13,9 +13,9 @@
 
 	function toggleVisibility() {
 	  if (browser) {
-	    visibilityMode.update((mode) => {
+	    themeMode.update((mode) => {
 	      const newMode = !mode;
-	      localStorage.setItem('visibilityMode', JSON.stringify(newMode));
+	      localStorage.setItem('themeMode', JSON.stringify(newMode));
 	      return newMode;
 	    });
 	  }
@@ -43,7 +43,7 @@
 <Header sidebar={sidebar}>
 </Header>
 
-<div class="type" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+<div class="type" class:light={$themeMode} class:dark={!$themeMode}>
 	<slot></slot>
 </div>
 

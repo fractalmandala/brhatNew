@@ -1,6 +1,6 @@
 <script lang="ts">
 
-	import visibilityMode from '$lib/stores/visibility'
+	import { themeMode } from '$lib/stores/globalstores'
 	import { fly } from 'svelte/transition'
 	import { quintIn, quintOut } from 'svelte/easing'
 
@@ -42,7 +42,7 @@
 
 <svelte:window bind:innerWidth={iW}/>
 
-<div class="rta-dropdown" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+<div class="rta-dropdown" class:light={$themeMode} class:dark={!$themeMode}>
 	{#if breakPoint}
 		<div class="dropdown-selector point rta-row ycenter between" on:click={toggleMenu} on:keydown={toggleMenu}>
 			<button class="blank-button">

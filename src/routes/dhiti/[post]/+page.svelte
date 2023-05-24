@@ -3,7 +3,9 @@
 	export let data
 	import { onMount } from 'svelte'
 	import HeadComponent from '$lib/components/HeadComponent.svelte'
-	import visibilityMode from '$lib/stores/visibility'
+	import { themeMode } from '$lib/stores/globalstores'
+	import { breakZero, breakOne, breakTwo } from '$lib/stores/globalstores'
+	import { elementSizeStore } from '$lib/utils/elementsize'
 	import { page } from '$app/stores'
 	import PageProgress from '$lib/components/PageProgress.svelte'
 	import Formatting from '$lib/components/Formatting.svelte'
@@ -19,6 +21,8 @@
 	let thisAuthorPosts:any
 	let fake:boolean = false
 	let member:any
+  let ref:HTMLElement | null = null
+  let y:number
 
 
 	function fakefaux(){
@@ -38,15 +42,19 @@
 	<HeadComponent>
 		{data.title} | Dhīti at
 	</HeadComponent>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </svelte:head>
 
 
 
 
-<PageProgress --thispagebackground="#fe4a49" --thispageheight="4px"/>
+<PageProgress --thispagebackground="#fe4a49" --thispageheight="4px" ref={ref}/>
+
+<div 
+	class="rta-column"
+	class:levelzero={$breakZero}
+	class:levelone={$breakOne}
+	class:leveltwo={$breakTwo}
+	>
 
 	<div class="x0">
 		<ParallaxImage --parallax="url('{data.image}')" --parallaxresp="url('{data.image}')">
@@ -73,13 +81,11 @@
 		</div>
 	</div>
 
-	<div class="rta-grid grid2 right">
-		<div class="rta-grid grid2 pagebox">
-			<div class="rr"></div>
-			<div class="maincol dhitiblogbox" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+	<div class="rta-column x22">
+			<div class="maincol dhitiblogbox" class:light={$themeMode} class:dark={!$themeMode} bind:this={ref}>
 				<svelte:component this={data.content} class="dhitiblog"/>
 				<div class="rta-column rowgap300">
-					<p>More from {data.author}:</p>
+					<h5>More from {data.author}:</h5>
 					{#if thisAuthorPosts && thisAuthorPosts.length > 0}
 						{#each thisAuthorPosts as item}
 						<a class="rta-row fixed colgap300 bord-bot p-bot-32" href="{item.path}">
@@ -94,16 +100,18 @@
 						</a>
 						{/each}
 					{/if}
-					</div>
+				</div>
 			</div>
-		</div>
-		<div class="rightcol">
+	</div>
+
+	<div class="rta-column x3 dhitiouter">
+		<h4>Latest Posts:</h4>
 			{#if posts && posts.length > 0}
 				{#each posts as item}
 					{#if item.meta.title !== data.title}
-					<div class="rta-column rowgap100 bord-bot p-bot-16">
+					<div class="rta-column rowgap200 bord-bot p-bot-32 p-top-32">
 						<h6 class="heading hover-purple"><a href={item.path}>{item.meta.title}</a></h6>
-						<small class="tt-no">{item.meta.excerpt}</small>
+						<p class="tt-no">{item.meta.excerpt}</p>
 						<div class="rta-column">
 							<small class="is-purple">
 								<strong>
@@ -119,38 +127,55 @@
 					{/if}
 				{/each}
 			{/if}
-		</div>
 	</div>
 
-
+</div>
 
 <style lang="sass">
 
-.rta-grid.grid2.right
-	box-sizing: border-box
-	@media screen and (max-width: 1023px)
-		grid-template-columns: 1fr
-		grid-template-areas: "pagebox" "rightcol"
-		.pagebox
-			grid-area: pagebox
-		.rightcol
-			grid-area: rightcol
+.x3.dhitiouter
+	h4
+		padding: 64px 0 12px 0
 
-.pagebox
-	@media screen and (min-width: 1024px)
-		grid-template-columns: 120px 1fr
-		grid-template-areas: "rr maincol"
-		.rr
-			grid-area: rr
-		.maincol
-			grid-area: maincol
-	@media screen and (max-width: 1023px)
-		grid-template-columns: 1fr
-		grid-template-areas: "maincol" "rr"
-		.rr
-			grid-area: rr
-		.maincol
-			grid-area: maincol
+.levelzero
+	align-items: center
+	.x22, .x3
+		width: 720px
+		margin-left: -64px
+	.x3
+		padding-bottom: 128px
+	.x0
+		height: 100vh
+		width: 100vw
+		overflow: hidden
+
+.levelone
+	align-items: center
+	.x22, .x3
+		width: 690px
+		margin-left: 0
+	.x3
+		padding-bottom: 128px
+	.x0
+		height: 100vh
+		width: 100vw
+		overflow: hidden
+
+.leveltwo
+	.x3
+		padding-bottom: 128px
+	.x0
+		height: 50vh
+		margin-top: 64px
+		width: 100vw
+		overflow: hidden
+	.x1, .x22, .x3
+		padding-left: 32px
+		padding-right: 32px
+
+
+.rta-column
+	box-sizing: border-box
 
 .is-purple
 	color: var(--dhiticolor)
@@ -212,20 +237,9 @@
 			letter-spacing: -3px
 			line-height: 1.12
 	@media screen and (max-width: 1023px)
-		padding-left: 24px
-		padding-right: 24px
 		h2
 			letter-spacing: -1px
 			font-size: 40px
-
-.x0
-	overflow: hidden
-	@media screen and (min-width: 1024px)
-		margin-top: 80px
-		height: 100vh
-	@media screen and (max-width: 1023px)
-		height: 56vh
-		margin-top: 64px
 
 .x1
 	@media screen and (min-width: 1024px)
@@ -250,12 +264,11 @@
 
 .maincol
 	>.rta-column
-	padding-top: 64px
+		padding-top: 64px
 
 
 .maincol
 	@media screen and (min-width: 1024px)
-		padding-right: 120px
 		padding-bottom: 80px
 		padding-top: 64px
 		.rta-row
@@ -264,24 +277,6 @@
 				height: 96px
 				img
 					object-fit: cover
-	@media screen and (max-width: 1023px)
-		padding-left: 24px
-		padding-right: 24px
-
-.rightcol
-	display: flex
-	flex-direction: column
-	row-gap: 48px
-	@media screen and (min-width: 1024px)
-		padding-right: 8vw
-		.rta-column
-			h6
-				font-size: 18px		
-	@media screen and (max-width: 1023px)
-		padding-top: 64px
-		padding-bototm: 64px
-		padding-left: 24px
-		padding-right: 24px
 
 .rta-row
 	h6

@@ -1,12 +1,12 @@
 <script lang="ts">
 
 	import { browser } from '$app/environment'
-	import visibilityMode from '$lib/stores/visibility'
+	import { themeMode } from '$lib/stores/globalstores'
 
 </script>
 
 <div class="rta-column minH cc-all is-padded">
-	<div class="circle" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+	<div class="circle" class:light={$themeMode} class:dark={!$themeMode}>
 		<h5>sat</h5>
 	</div>
 </div>

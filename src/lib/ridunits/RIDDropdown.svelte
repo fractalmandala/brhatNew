@@ -3,7 +3,7 @@
 	import { onMount } from 'svelte'
 	import { clickOutsideAction } from "svelte-legos"
 	import { fly } from 'svelte/transition'
-	import visibilityMode from '$lib/stores/visibility'
+	import { themeMode } from '$lib/stores/globalstores'
 	let fake = false
 	let iW:number
 	let breakPoint:boolean
@@ -37,7 +37,7 @@
 
 <svelte:window bind:innerWidth={iW}/>
 
-<div class="rta-column rta-dropdown" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+<div class="rta-column rta-dropdown" class:light={$themeMode} class:dark={!$themeMode}>
 	<div on:click={toggleMenu} on:keydown={fauxfake}>
 		<slot name="visible">
 		</slot>

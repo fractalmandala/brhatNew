@@ -2,7 +2,7 @@
 
 	import Header from '$lib/components/SubHeader.svelte'
 	import { browser } from '$app/environment'
-	import visibilityMode from '$lib/stores/visibility'
+	import { themeMode } from '$lib/stores/globalstores'
 	import SvarLinks from '$lib/links/SvarnanjaliLinks.svelte'	
 	let onHead = true
 	let sidebar = false
@@ -22,7 +22,7 @@
 		<SvarLinks flytime={onHead}></SvarLinks>
 	</div>
 </Header>
-<div class="type" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+<div class="type" class:light={$themeMode} class:dark={!$themeMode}>
 	<slot></slot>
 </div>
 

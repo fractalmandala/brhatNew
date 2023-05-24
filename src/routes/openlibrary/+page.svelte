@@ -2,7 +2,7 @@
 
 	import { onMount } from 'svelte'
 	import { bols } from '$lib/filed/bolindex'
-	import visibilityMode from '$lib/stores/visibility'
+	import { themeMode } from '$lib/stores/globalstores'
 	import Animations from 'textify.js'
 	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import { ChevronDown } from 'lucide-svelte'
@@ -159,7 +159,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </svelte:head>
 
-<div class:light={$visibilityMode} class:dark={!$visibilityMode}>
+<div class:light={$themeMode} class:dark={!$themeMode}>
 
 	<div class="x0" data-lenis-scroll-snap-align="start">
 		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/bolherobrhat.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/mobile-bol.webp')">

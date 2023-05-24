@@ -2,13 +2,8 @@
 
 	import { onMount } from 'svelte'
 	import Animations from 'textify.js'
-	import visibilityMode from '$lib/stores/visibility'
 	import HeadComponent from '$lib/components/HeadComponent.svelte'
-	import { ChevronDown } from 'lucide-svelte'
-	import { scale, fly } from 'svelte/transition'
-	import { backOut, backIn, quintIn, quintOut } from 'svelte/easing'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
-	import autoAnimate from '@formkit/auto-animate'
 	import SvarLogo from '$lib/logos/Svarnanjali2.svelte'
 	import SvarLogo2 from '$lib/logos/Svarnanjali2.svelte'
 

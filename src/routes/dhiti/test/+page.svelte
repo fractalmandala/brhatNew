@@ -3,7 +3,7 @@
 	import { onMount } from 'svelte'
 	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import { latestDhitiFour, allFeaturedPosts, filterChosen, authorfiltered, allBodhas, allCandP, allIKS, allDharmaToday } from '$lib/utils/localpulls'
-	import visibilityMode from '$lib/stores/visibility'
+	import { themeMode } from '$lib/stores/globalstores'
 	import CompDrawer from '$lib/ridunits/CompDrawer.svelte'
 	import RIDDropdown from '$lib/ridunits/RIDDropdown.svelte'
 	import SocialShare from '$lib/ridunits/RIDSocialShare.svelte'
@@ -94,7 +94,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 </svelte:head>
 
-<div id="top-panel" class="rta-column outer-box minH" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+<div id="top-panel" class="rta-column outer-box minH" class:light={$themeMode} class:dark={!$themeMode}>
 	<div class="rta-row grid2 right topgrid">
 		<div class="rta-column">
 			<div class="rta-row between ytop top-row">
@@ -109,22 +109,22 @@
 						</div>
 						<div class="rta-row row-col colgap100" slot="invisibles" class:openRow={openDrawer}>
 						<button class="drawer-item"
-						class:light={$visibilityMode} class:dark={!$visibilityMode}
+						class:light={$themeMode} class:dark={!$themeMode}
 						on:click={() => toggleCategory(1)}
 						class:selected={categoryItems[1]}
 						>Two Bodhas</button>
 						<button class="drawer-item"
-						class:light={$visibilityMode} class:dark={!$visibilityMode}
+						class:light={$themeMode} class:dark={!$themeMode}
 						on:click={() => toggleCategory(2)}
 						class:selected={categoryItems[2]}
 						>Dharma Today</button>
 						<button class="drawer-item"
-						class:light={$visibilityMode} class:dark={!$visibilityMode}
+						class:light={$themeMode} class:dark={!$themeMode}
 						on:click={() => toggleCategory(3)}
 						class:selected={categoryItems[3]}
 						>IKS</button>
 						<button class="drawer-item"
-						class:light={$visibilityMode} class:dark={!$visibilityMode}
+						class:light={$themeMode} class:dark={!$themeMode}
 						on:click={() => toggleCategory(4)}
 						class:selected={categoryItems[4]}
 						>Culture and Policy
@@ -247,7 +247,7 @@
 					<div class="rta-dhiti rta-row rowgap300 ytop between bord-bot p-bot-32 p-top-32">
 						<div class="rta-column w70 rowgap200">
 							<p class="citeone">{item.meta.category}</p>
-							<h5 class="heading" class:light={$visibilityMode} class:dark={!$visibilityMode}><a href="{item.path}">{item.meta.title}</a></h5>
+							<h5 class="heading" class:light={$themeMode} class:dark={!$themeMode}><a href="{item.path}">{item.meta.title}</a></h5>
 							<p>{item.meta.excerpt}</p>
 							<div class="rta-column p-top-16">
 								<p class="author">{item.meta.author}

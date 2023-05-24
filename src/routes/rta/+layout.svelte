@@ -4,7 +4,7 @@
 	import { browser } from '$app/environment'
 	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import Header from '$lib/ridunits/RIDHeader.svelte'
-	import visibilityMode from '$lib/stores/visibility'
+	import { themeMode } from '$lib/stores/globalstores'
 	import RtaLinks from '$lib/links/RtaLinks.svelte'
 	let iW = 0
 	let sidebar = false
@@ -74,7 +74,7 @@
 		</a>
 </Header>
 
-<div class="pagethemer" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+<div class="pagethemer" class:light={$themeMode} class:dark={!$themeMode}>
 	<slot></slot>
 </div>
 

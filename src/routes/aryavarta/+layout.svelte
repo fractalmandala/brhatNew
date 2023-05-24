@@ -3,7 +3,7 @@
 	import { onMount } from 'svelte'
 	import { browser } from '$app/environment'
 	import autoAnimate from '@formkit/auto-animate'
-	import visibilityMode from '$lib/stores/visibility'
+	import { themeMode } from '$lib/stores/globalstores'
 	import { fly } from 'svelte/transition'
 	import { loreAll } from '$lib/utils/localpulls'	
 	import Header from '$lib/components/SubHeader.svelte'
@@ -67,7 +67,7 @@
 	</div>
 </Header>
 	
-<div class="type" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+<div class="type" class:light={$themeMode} class:dark={!$themeMode}>
 	<slot></slot>
 </div>
 

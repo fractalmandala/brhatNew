@@ -1,6 +1,6 @@
 <script lang="ts">
 
-	import visibilityMode from '$lib/stores/visibility'
+	import { themeMode } from '$lib/stores/globalstores'
 	import { draggable } from '@neodrag/svelte'
 	import type { DragOptions } from '@neodrag/svelte'
 
@@ -28,7 +28,7 @@
 <svelte:window bind:innerWidth={iW}/>
 
 
-<div class="rta-grid grid2 left0 p-bot-64 minH" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+<div class="rta-grid grid2 left0 p-bot-64 minH" class:light={$themeMode} class:dark={!$themeMode}>
 	<div class="rta-column sidebar">
 	
 	</div>

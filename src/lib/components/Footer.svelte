@@ -1,7 +1,7 @@
 <script lang="ts">
 
 	import { onMount, onDestroy } from 'svelte'
-	import visibilityMode from '$lib/stores/visibility'
+	import { themeMode } from '$lib/stores/globalstores'
 	import { isModal } from '$lib/stores/modal'
 	import Contact from '$lib/ridunits/RIDContact.svelte'
 	import AboutLinks from '$lib/links/AboutLinks.svelte'
@@ -37,7 +37,7 @@
 </script>
 
 
-<div class="footer back" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+<div class="footer back" class:light={$themeMode} class:dark={!$themeMode}>
 	<div class="footertop">
 		<div class="topbutton" on:click={() => { window.scrollTo(0, 0)}} on:keydown={fauxfake}>
 			<IconTop></IconTop>

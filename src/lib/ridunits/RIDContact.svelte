@@ -2,7 +2,7 @@
 
 	import { onDestroy } from 'svelte'
 	import supabase from '$lib/utils/db'
-	import visibilityMode from '$lib/stores/visibility'
+	import { themeMode } from '$lib/stores/globalstores'
 	import { isModal } from '$lib/stores/modal'
 	import IconClose from '$lib/icons/IconClose.svelte'
 
@@ -46,7 +46,7 @@
 
 </script>
 
-<div class="rta-column rta-modal" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+<div class="rta-column rta-modal" class:light={$themeMode} class:dark={!$themeMode}>
 	<div class="rta-column inside-modal">
 		<div class="rta-row closebutton" on:click={toggleModal} on:keydown={fauxfake}>
 			<h6>Contact Form</h6>

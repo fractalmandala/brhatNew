@@ -1,6 +1,6 @@
 <script lang="ts">
 
-	import visibilityMode from '$lib/stores/visibility'
+	import { themeMode } from '$lib/stores/globalstores'
   import type { SearchItem } from '$lib/types/SearchItem'
 	import { searchitems } from '$lib/filed/searchindex'
 	let fake = false
@@ -35,7 +35,7 @@
 
 </script>
 
-<div class="rta-column comp-search" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+<div class="rta-column comp-search" class:light={$themeMode} class:dark={!$themeMode}>
 	<form class="rta-row colgap200 xend">
 		<input type="text" placeholder="Search..."
 			bind:value={inputValue}

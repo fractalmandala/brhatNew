@@ -2,7 +2,7 @@
 
 	import { onMount, afterUpdate } from 'svelte'
 	import { browser } from '$app/environment'
-	import visibilityMode from '$lib/stores/visibility'
+	import { themeMode } from '$lib/stores/globalstores'
 	import { ChevronDown } from 'lucide-svelte'
 	import autoAnimate from '@formkit/auto-animate'
 	import Header from '$lib/components/SubHeader.svelte'
@@ -91,7 +91,7 @@
 <Header sidebar={sidebar}>
 </Header>
 
-<div class="type" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+<div class="type" class:light={$themeMode} class:dark={!$themeMode}>
 
 	<div class="x0" data-lenis-scroll-snap-align="start">
 		<ParallaxImage --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/mrdanga-hero.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/mrdanga-hero.webp')"></ParallaxImage>

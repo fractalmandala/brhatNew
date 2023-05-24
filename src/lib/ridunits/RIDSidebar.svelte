@@ -1,7 +1,7 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
-	import visibilityMode from '$lib/stores/visibility'
+	import { themeMode } from '$lib/stores/globalstores'
 	import { browser } from '$app/environment'
 	import CompSearch from '$lib/ridunits/CompSearch.svelte'
 	import AboutLinks from '$lib/links/AboutLinks.svelte'
@@ -20,9 +20,9 @@
 
 	function toggleVisibility() {
 	  if (browser) {
-	    visibilityMode.update((mode) => {
+	    themeMode.update((mode) => {
 	      const newMode = !mode;
-	      localStorage.setItem('visibilityMode', JSON.stringify(newMode));
+	      localStorage.setItem('themeMode', JSON.stringify(newMode));
 	      return newMode;
 	    });
 	  }
@@ -46,7 +46,7 @@
 
 <svelte:window bind:innerWidth={iW}/>
 
-<div class="appsidebar modal" class:light={$visibilityMode} class:dark={!$visibilityMode}>
+<div class="appsidebar modal" class:light={$themeMode} class:dark={!$themeMode}>
 	<div class="right" id="searcharea">
 		<CompSearch></CompSearch>
 	</div>

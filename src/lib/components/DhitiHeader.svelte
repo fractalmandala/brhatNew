@@ -3,7 +3,7 @@
 	import { onMount } from 'svelte'
 	import { draw } from 'svelte/transition'
 	import { quintOut } from 'svelte/easing'
-	import visibilityMode from '$lib/stores/visibility'
+	import { themeMode } from '$lib/stores/globalstores'
 	import { browser } from '$app/environment'
 	import { fly } from 'svelte/transition'
 	import tippy, {animateFill} from 'tippy.js'
@@ -35,9 +35,9 @@
 
 	function toggleVisibility() {
 	  if (browser) {
-	    visibilityMode.update((mode) => {
+	    themeMode.update((mode) => {
 	      const newMode = !mode;
-	      localStorage.setItem('visibilityMode', JSON.stringify(newMode));
+	      localStorage.setItem('themeMode', JSON.stringify(newMode));
 	      return newMode;
 	    });
 	  }
@@ -110,9 +110,9 @@
 
 <svelte:window bind:scrollY={y} bind:innerHeight={height} bind:innerWidth={iW}/>
 
-<div class="appheader" class:onsidebar={sidebar} class:hiddenHeader={isInvisible} class:light={$visibilityMode} class:dark={!$visibilityMode}>
+<div class="appheader" class:onsidebar={sidebar} class:hiddenHeader={isInvisible} class:light={$themeMode} class:dark={!$themeMode}>
 	<a class="applogo" href="/dhiti" class:fullcol={breakPoint}>
-		{#if $visibilityMode}
+		{#if $themeMode}
 		<LogDhiti></LogDhiti>
 		{:else}
 		<LogDhitiD></LogDhitiD>
@@ -122,7 +122,7 @@
 		{/if}
 	</a>
 	<div class="toggling" id="single" on:click={toggleVisibility} on:keydown={fauxfake}>
-		<div class="switch rta-column" use:autoAnimate class:light={$visibilityMode} class:dark={!$visibilityMode}>
+		<div class="switch rta-column" use:autoAnimate class:light={$themeMode} class:dark={!$themeMode}>
 		  <div class="slider rta-in-col"></div>
 		</div>
 	</div>
@@ -142,7 +142,7 @@
 </div>
 
 {#if sidebar}
-	<div class="appsidebar" in:fly={{ duration: 500, x: 400, y: 0}} out:fly={{ duration: 500, x: 400, y: 0}} data-lenis-prevent on:mouseleave={closeSidebar} class:light={$visibilityMode} class:dark={!$visibilityMode}>
+	<div class="appsidebar" in:fly={{ duration: 500, x: 400, y: 0}} out:fly={{ duration: 500, x: 400, y: 0}} data-lenis-prevent on:mouseleave={closeSidebar} class:light={$themeMode} class:dark={!$themeMode}>
 		<div class="linksbox right" id="searcharea">
 			<CompSearch></CompSearch>
 		</div>
@@ -425,9 +425,9 @@
 	align-items: flex-end
 	border: 1px solid #878787
 	&:hover
-		border: 1px solid #0B6E4F
+		border: 1px solid #fe4a49
 		.slider
-			background: #0B6E4F
+			background: #fe4a49
 	.slider
 		background: #878787
 
@@ -435,9 +435,9 @@
 	align-items: flex-start
 	border: 1px solid #474747
 	&:hover
-		border: 1px solid #0B6E4F
+		border: 1px solid #fe4a49
 	.slider
-		background: #474747
+		background: #fe4a49
 
 .slider 
 	width: 16px
