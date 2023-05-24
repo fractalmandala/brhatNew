@@ -15,7 +15,7 @@
 	import ButtonEmerge6 from '$lib/anims/ButtonEmerge.svelte'
 	import Animations from 'textify.js'
 	import { reveal } from 'svelte-reveal'
-	import HeadComponent from '$lib/components/HeadComponent.svelte'
+	import HeadLocal from '$lib/components/HeadLocal.svelte'
 	import HomeAccordion from '$lib/components/HomeAccordion.svelte'
 	import CompButton from '$lib/ridunits/CompButton.svelte'
 	import CompButton2 from '$lib/ridunits/CompButton.svelte'
@@ -49,6 +49,14 @@
 	anveshiFull[0] = true
 	let drashtaFull = Array(10).fill(false)
 	drashtaFull[0] = true
+
+
+	let title = 'Bṛhat'
+	let content:string = 'the Cultre Engine'
+	let url = 'https://www.brhat.in'
+	let type = 'website'
+	let description = 'Bṛhat is an Engine for Dhārmika Furtherance, Affordance and Deliverance'
+	let imagelink = 'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/brhatheadcard.webp'
 
 	function toggleMenu(){
 		expandMenu = !expandMenu
@@ -131,8 +139,8 @@
 <svelte:window bind:scrollY={sY} bind:outerHeight={oH} bind:innerWidth={iW}/>
 
 <svelte:head>
-	<HeadComponent></HeadComponent>
 	<script src="https://cdn.jsdelivr.net/npm/textify.js/dist/Textify.min.js"></script>
+	<HeadLocal title={title} content={content} url={url} type={type} description={description} imagelink={imagelink}/>
 </svelte:head>
 
 <Header sidebar={sidebar}>

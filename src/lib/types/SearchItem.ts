@@ -4,7 +4,7 @@ export interface SearchItem {
 }
 
 export interface DhatuSearch {
-    dhatuiast: string;
+    dhaturomanized: string;
     url: string;
     id: number;
 }

@@ -2,32 +2,32 @@
   <span></span>
   <span></span>
   <span></span>
-  <span></span> Hover me
+  <span></span><p> <slot></slot></p>
 </button>
 
 <style>
 
 button {
  position: relative;
- padding: 1em 1.8em;
+  padding: 2px 8px;
  outline: none;
- border: 1px solid #303030;
- background: #212121;
- color: #ae00ff;
- text-transform: uppercase;
- letter-spacing: 2px;
- font-size: 15px;
+ border: 1px solid var(--borderline);
+ background: #fe4a49;
  overflow: hidden;
  transition: 0.2s;
- border-radius: 20px;
+ border-radius: 4px;
  cursor: pointer;
  font-weight: bold;
 }
 
+button p { font-size: 16px; font-family: 'Space Grotesk', sans-serif; color: var(--background)}
+
 button:hover {
- box-shadow: 0 0 10px #ae00ff, 0 0 25px #001eff, 0 0 50px #ae00ff;
- transition-delay: 0.6s;
+ box-shadow: 0 0 10px #fe4a49, 0 0 25px #f98227, 0 0 50px #fb2b2b;
+  background: var(--background);
 }
+
+button:hover p { color: #fe4a49;}
 
 button span {
  position: absolute;
@@ -38,12 +38,12 @@ button span:nth-child(1) {
  left: -100%;
  width: 100%;
  height: 2px;
- background: linear-gradient(90deg, transparent, #ae00ff);
+ background: linear-gradient(90deg, transparent, #ef2c36);
 }
 
 button:hover span:nth-child(1) {
  left: 100%;
- transition: 0.7s;
+ transition: 0.17s;
 }
 
 button span:nth-child(3) {
@@ -51,13 +51,12 @@ button span:nth-child(3) {
  right: -100%;
  width: 100%;
  height: 2px;
- background: linear-gradient(90deg, transparent, #001eff);
+ background: linear-gradient(90deg, transparent, #f73920);
 }
 
 button:hover span:nth-child(3) {
  right: 100%;
- transition: 0.7s;
- transition-delay: 0.35s;
+ transition: 0.27s;
 }
 
 button span:nth-child(2) {
@@ -65,13 +64,12 @@ button span:nth-child(2) {
  right: 0;
  width: 2px;
  height: 100%;
- background: linear-gradient(180deg, transparent, #ae00ff);
+ background: linear-gradient(180deg, transparent, #e83131);
 }
 
 button:hover span:nth-child(2) {
  top: 100%;
- transition: 0.7s;
- transition-delay: 0.17s;
+ transition: 0.17s;
 }
 
 button span:nth-child(4) {
@@ -79,13 +77,12 @@ button span:nth-child(4) {
  left: 0;
  width: 2px;
  height: 100%;
- background: linear-gradient(360deg, transparent, #001eff);
+ background: linear-gradient(360deg, transparent, #fc441f);
 }
 
 button:hover span:nth-child(4) {
  bottom: 100%;
- transition: 0.7s;
- transition-delay: 0.52s;
+ transition: 0.37s;
 }
 
 button:active {

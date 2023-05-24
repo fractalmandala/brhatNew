@@ -79,7 +79,6 @@ export let data: LayoutData;
 <svelte:window bind:innerWidth={$innerWidth}/>
 
 <svelte:head>
-	<HeadComponent localpage={localpage}/>
 	<link href="https://cdn.jsdelivr.net/npm/textify.js/dist/Textify.min.css" rel="stylesheet"/>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-6NPMDTQVDE"></script>
 	<script>
@@ -89,6 +88,7 @@ export let data: LayoutData;
 
   	gtag('config', 'G-6NPMDTQVDE');
 	</script>
+	<HeadComponent/>
 </svelte:head>
 
 <div id="appbox" class="themer" class:light={$themeMode} class:dark={!$themeMode}>
@@ -104,8 +104,6 @@ export let data: LayoutData;
 #appbox
 	width: 100vw
 	box-sizing: border-box
-	overflow-x: hidden
-	overflow-y: hidden
 	position: relative
 	height: 100%
 	display: flex

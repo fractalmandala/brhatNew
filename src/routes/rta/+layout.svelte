@@ -2,7 +2,7 @@
 
 	import { onMount, afterUpdate } from 'svelte'
 	import { browser } from '$app/environment'
-	import HeadComponent from '$lib/components/HeadComponent.svelte'
+import HeadLocal from '$lib/components/HeadLocal.svelte'
 	import Header from '$lib/ridunits/RIDHeader.svelte'
 	import { themeMode } from '$lib/stores/globalstores'
 	import RtaLinks from '$lib/links/RtaLinks.svelte'
@@ -10,6 +10,14 @@
 	let sidebar = false
 	let flytime = true
 	let fake = false
+
+	let title = 'Ṛta in Design'
+	let content:string = 'Design by Dharma'
+	let url = 'https://www.brhat.in/rta'
+	let type = 'webpage'
+	let description = 'Ṛta in Design is a new framework for design thinking, centred on the mind of the designer. Inspired by universal principles of Dharma.'
+	let imagelink = 'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/ridhero1.webp'
+
 
 	function fauxfake(){
 		fake = !fake
@@ -23,9 +31,7 @@
 </script>
 
 <svelte:head>
-	<HeadComponent>
-		Ṛta in Design at
-	</HeadComponent>
+<HeadLocal title={title} content={content} url={url} type={type} description={description} imagelink={imagelink}/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css2?family=Varta:wght@300;400;500;600;700&display=swap" rel="stylesheet">

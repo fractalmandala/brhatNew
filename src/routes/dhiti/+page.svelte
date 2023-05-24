@@ -1,7 +1,7 @@
 <script lang="ts">
 //@ts-nocheck
 	import { onMount } from 'svelte'
-	import HeadComponent from '$lib/components/HeadComponent.svelte'
+	import HeadLocal from '$lib/components/HeadLocal.svelte'
 	import { latestDhitiFour, allFeaturedPosts, filterChosen, authorfiltered, allBodhas, allCandP, allIKS, allDharmaToday } from '$lib/utils/localpulls'
 	import { themeMode } from '$lib/stores/globalstores'
 	import CompDrawer from '$lib/ridunits/CompDrawer.svelte'
@@ -24,6 +24,16 @@
 	let knows:any
 	let dharmas:any
 	let openDrawer = false
+
+
+
+	let title = 'Dhīti'
+	let content:string = 'blog at Bṛhat'
+	let url = 'https://www.brhat.in/dhiti'
+	let type = 'blog'
+	let description = 'Our blog, Dhīti, is an attempt to decode the aesthetics of culture manifest in art and literature, in the intention they were originally perceived in.'
+	let imagelink = 'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/dhiti.webp'
+
 
 	$: anyCategoryOpen = categoryItems.some(item => item)
 
@@ -92,9 +102,7 @@
 </script>
 
 <svelte:head>
-	<HeadComponent>
-		Dhīti, the blog at
-	</HeadComponent>
+<HeadLocal title={title} content={content} url={url} type={type} description={description} imagelink={imagelink}/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">

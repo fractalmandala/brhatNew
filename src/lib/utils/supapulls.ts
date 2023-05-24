@@ -97,7 +97,7 @@ export async function BOLLatest(limit: number) {
 	return data;
 }
 
-export async function BOLSelect(selected:any) {
+export async function BOLSelect(selected:string) {
 	const { data, error } = await supabase
 		.from('brhat-openlibrary')
 		.select()
@@ -309,7 +309,7 @@ export async function anveshiImages() {
 	return data
 }
 
-export async function anveshiVids(limit:any) {
+export async function anveshiVids(limit:number) {
   const { data, error } = await supabase
   .from('brhat-youtube')
   .select()
@@ -350,7 +350,7 @@ export async function fetchDarshanas(){
 	return data
 }
 
-export async function courseDetails(dynamizer: any){
+export async function courseDetails(dynamizer:string){
 	const { data, error } = await supabase
 	.from('brhat-drashta2')
 	.select()
@@ -362,7 +362,7 @@ export async function courseDetails(dynamizer: any){
 	return data
 }
 
-export async function courseWhoFor(dynamizer: any){
+export async function courseWhoFor(dynamizer:string){
 	const { data, error } = await supabase
 	.from('brhat-drashta2')
 	.select()
@@ -374,7 +374,7 @@ export async function courseWhoFor(dynamizer: any){
 	return data
 }
 
-export async function courseContents(dynamizer: any){
+export async function courseContents(dynamizer:string){
 	const { data, error } = await supabase
 	.from('brhat-drashta2')
 	.select()
@@ -385,7 +385,7 @@ export async function courseContents(dynamizer: any){
 	return data
 }
 
-export async function courseTakeaways(dynamizer: any){
+export async function courseTakeaways(dynamizer:string){
 	const { data, error } = await supabase
 	.from('brhat-drashta2')
 	.select()
@@ -396,7 +396,7 @@ export async function courseTakeaways(dynamizer: any){
 	return data
 }
 
-export async function courseInstructor(dynamizer: any){
+export async function courseInstructor(dynamizer:string){
 	const { data, error } = await supabase
 	.from('brhat-drashta2')
 	.select()
@@ -491,7 +491,7 @@ export async function soaNasadiya(){
 	return data
 }
 
-export async function brhatActions(link: any){
+export async function brhatActions(link:string){
 	const { data, error } = await supabase
 	.from('brhat-actions')
 	.select()
@@ -541,7 +541,7 @@ export async function soaChapter4(){
 	return data
 }
 
-export async function DhitiPaginator(link: any){
+export async function DhitiPaginator(link:string){
 	const { data, error } = await supabase
 	.from('brhat-dhiti')
 	.select()
@@ -618,13 +618,32 @@ export async function events() {
 		return data
 	}
 
-export async function allDhatus(){
-    const { data, error } = await supabase
-    .from('db-dhatupatha')
-    .select()
-    .order('id')
-		if(error) throw new Error(error.message)
-		return data
+export async function allDhatus(limit:number){
+	const { data, error } = await supabase
+	.from('db-dhatupatha')
+	.select()
+	.order('id')
+	.limit(limit)
+	if (error) throw new Error(error.message)
+	return data	
+}
+
+export async function dhatuForms(id:string){
+	const { data, error } = await supabase
+	.from('db-dh1')
+	.select()
+	.eq('ind',id)
+	if (error) throw new Error(error.message)
+	return data	
+}
+
+export async function dhatuStore(id:string){
+	const { data, error } = await supabase
+	.from('vw-dhatustore2')
+	.select()
+	.eq('ind',id)
+	if (error) throw new Error(error.message)
+	return data	
 }
 
 	export async function allDictionary(){
@@ -637,7 +656,7 @@ export async function allDhatus(){
 	}
 
 
-export async function newSRG(dynamizer:any){
+export async function newSRG(dynamizer:string){
     const { data, error } = await supabase
     .from('brhat-drashta2')
     .select()
@@ -657,3 +676,13 @@ export async function juneCalendar(){
     if (error) throw new Error(error.message)
     return data
 }
+
+export async function getDescription(url:string){
+	const { data, error} = await supabase
+	.from('bol-descriptions')
+	.select()
+	.eq('path',url)
+  if (error) throw new Error(error.message)
+  return data
+}
+

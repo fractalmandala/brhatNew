@@ -2,7 +2,7 @@
 
 	export let data
 	import { onMount } from 'svelte'
-	import HeadComponent from '$lib/components/HeadComponent.svelte'
+	import HeadLocal from '$lib/components/HeadLocal.svelte'
 	import { themeMode } from '$lib/stores/globalstores'
 	import { breakZero, breakOne, breakTwo } from '$lib/stores/globalstores'
 	import { elementSizeStore } from '$lib/utils/elementsize'
@@ -25,6 +25,15 @@
   let y:number
 
 
+	let title = data.title
+	let content:string = 'Dhīti at Bṛhat'
+	let urls = 'https://www.brhat.in' + data.pathname
+	let type = 'article'
+	let description = data.excerpt
+	let imagelink = data.image
+
+
+
 	function fakefaux(){
 		fake = !fake
 	}
@@ -39,9 +48,7 @@
 </script>
 
 <svelte:head>
-	<HeadComponent>
-		{data.title} | Dhīti at
-	</HeadComponent>
+<HeadLocal title={title} content={content} url={urls} type={type} description={description} imagelink={imagelink}/>
 </svelte:head>
 
 

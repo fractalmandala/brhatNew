@@ -1,7 +1,7 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
-	import HeadComponent from '$lib/components/HeadComponent.svelte'
+	import HeadLocal from '$lib/components/HeadLocal.svelte'
 	import { scale } from 'svelte/transition'
 	import Animations from 'textify.js'
 	import { createCurateConsult, threeConvictions, brhatAdvisors, brhatTeam, brhatPartners } from '$lib/utils/supapulls'
@@ -25,6 +25,13 @@
 	let authorCardOn = Array(12).fill(false)
 	let fake = false
 	let alignGrid = false
+
+	let title = 'About Bṛhat'
+	let content:string = 'the Cultre Engine'
+	let url = 'https://www.brhat.in/about'
+	let type = 'about'
+	let description = 'Bṛhat is an Engine for Dhārmika Furtherance, Affordance and Deliverance'
+	let imagelink = 'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/brhatheadcard.webp'
 
 	function openAuthorCard(index:number){
 		authorCardOn[index] = !authorCardOn[index]
@@ -65,9 +72,7 @@
 </script>
 
 <svelte:head>
-	<HeadComponent>
-		About 
-	</HeadComponent>
+	<HeadLocal title={title} content={content} url={url} type={type} description={description} imagelink={imagelink}/>
 </svelte:head>
 
 

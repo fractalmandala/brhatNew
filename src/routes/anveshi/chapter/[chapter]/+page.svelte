@@ -1,7 +1,7 @@
 <script lang="ts">
 
 	import { onMount, afterUpdate } from 'svelte'
-	import HeadComponent from '$lib/components/HeadComponent.svelte'
+	import HeadLocal from '$lib/components/HeadLocal.svelte'
 	import autoAnimate from '@formkit/auto-animate'
 	import { ChevronDown } from 'lucide-svelte'
 	import Accordion from '$lib/ridunits/CompAccordion.svelte'
@@ -26,6 +26,16 @@
 	let visibleTemple:any = Array(30).fill(false)
 	let fake = false
 	let elementTop: HTMLElement
+
+
+	export let data
+	let title = data.title
+	let content:string = 'travel chapter at Bṛhat Anveṣī'
+	let url = 'https://www.brhat.in' + data.pathname
+	let type = 'webpage'
+	let description = 'Bṛhat Anveṣī is our culture experience and discovery travel program, through curated and guided temple tours throughout India.'
+	let imagelink = data.image
+
 
 	function fauxfake(){
 		fake = !fake
@@ -67,16 +77,13 @@
 		chapter = data.chapter
 	})
 
-	export let data
 
 </script>
 
 <svelte:window bind:scrollY={p}/>
 
 <svelte:head>
-	<HeadComponent>
-		Bṛhat Anveṣī {data.name} at 
-	</HeadComponent>
+<HeadLocal title={title} content={content} url={url} type={type} description={description} imagelink={imagelink}/>
 </svelte:head>
 
 <!--heading image-->

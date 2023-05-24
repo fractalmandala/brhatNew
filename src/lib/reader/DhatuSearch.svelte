@@ -62,7 +62,7 @@
 		{#each searchResults as result}
 		<p class="tt-c white">
             <a href="/openlibrary/reconnect/dhatus/{result.id}">
-			    {result.dhatuiast}
+			    {result.dhaturomanized}
             </a>
 		</p>
 		{/each}

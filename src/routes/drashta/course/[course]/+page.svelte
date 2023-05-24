@@ -5,7 +5,7 @@
 	import { fly } from 'svelte/transition'
 	import { backOut, backIn } from 'svelte/easing'
 	import DropDown from '$lib/components/DropDown.svelte'
-	import HeadComponent from '$lib/components/HeadComponent.svelte'
+	import HeadLocal from '$lib/components/HeadLocal.svelte'
 	import CompButton from '$lib/ridunits/RIDButton.svelte'
 	import { courseContents, juneCalendar, courseTakeaways, newSRG, courseInstructor, courseDetails, courseWhoFor, allCourses } from '$lib/utils/supapulls'
 	let y:number
@@ -24,6 +24,15 @@
 	area[1] = true
 	let fake = false
 	let expandMenu = false
+
+	export let data
+	let title = data.title
+	let content:string = 'online course at Bṛhat Draṣṭā'
+	let url = 'https://www.brhat.in' + data.pathname
+	let type = 'webpage'
+	let description = 'A shared online learning program to develop civilizational svayaṃbodha and śatrubodha. Rampways for Hindu individual self-confidence.'
+	let imagelink = data.image
+
 
 	function toggleMenu(){
 		expandMenu = !expandMenu
@@ -63,13 +72,17 @@
 	afterUpdate(() => {
 		dynamizer = $page.url.pathname.slice(16,50)
 	})
-	export let data
 
 	
 
 </script>
 
 <svelte:window bind:scrollY={y} bind:innerWidth={iW}/>
+
+<svelte:head>
+
+<HeadLocal title={title} content={content} url={url} type={type} description={description} imagelink={imagelink}/>
+</svelte:head>
 
 <!--page header with title and icons-->
 	<div id="headersection" class="rta-column outer-box minH p-top-64 rowgap600" data-lenis-scroll-snap-align="start">

@@ -3,11 +3,21 @@
 	import { onMount } from 'svelte'
 	import { mandalaAll } from '$lib/utils/localpulls'
 	import RevealH1 from '$lib/components/RevealH1.svelte'
-	import HeadComponent from '$lib/components/HeadComponent.svelte'
+	import HeadLocal from '$lib/components/HeadLocal.svelte'
 
 	let fractals:any
 	let wide:number
 	let mobileView:boolean = false
+	export let data	
+
+
+	let title = data.title
+	let content:string = data.title + ' at Bṛhat'
+	let url = 'https://brhat.in' + data.pathname
+	let type = 'about'
+	let description = data.title
+	let imagelink = 'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/brhatheadcard.webp'
+
 
 	$: if ( wide <= 1023 ) {
 		mobileView = true
@@ -19,14 +29,10 @@
 		fractals = await mandalaAll()
 	})
 
-	export let data	
-
 </script>
 
 <svelte:head>
-	<HeadComponent>
-		{data.title} at 
-	</HeadComponent>
+<HeadLocal title={title} content={content} url={url} type={type} description={description} imagelink={imagelink}/>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">

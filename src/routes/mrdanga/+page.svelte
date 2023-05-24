@@ -3,6 +3,7 @@
 	import { onMount, afterUpdate } from 'svelte'
 	import { browser } from '$app/environment'
 	import { themeMode } from '$lib/stores/globalstores'
+import HeadLocal from '$lib/components/HeadLocal.svelte'
 	import Youtuber from '$lib/components/Youtuber.svelte'
 	import Youtuber2 from '$lib/components/Youtuber.svelte'
 	import Youtuber3 from '$lib/components/Youtuber.svelte'
@@ -11,7 +12,6 @@
 	import Header from '$lib/components/SubHeader.svelte'
 	import Animations from 'textify.js'
 	import { scale } from 'svelte/transition'
-	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import { allmrdVids, Shabdavali, mrdangaVids, kavitaVids } from '$lib/utils/supapulls'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
 	import RIDButton from '$lib/ridunits/RIDButton.svelte'
@@ -30,6 +30,16 @@
 	let fake = false
 	let iW:number
 	let expandMenu = false
+
+
+	let title = 'Bṛhad Mṛdaṅga'
+	let content:string = 'visual and aesthetic content'
+	let url = 'https://www.brhat.in/mrdanga'
+	let type = 'webpage'
+	let description = 'The fundamental human aesthetic experience, explored through visual and poetic content. Videos, posts, audio clips and more.'
+	let imagelink = 'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/brhadmrdanga.webp'
+
+
 
 	function toggleMenu(){
 		expandMenu = !expandMenu
@@ -85,10 +95,10 @@
 </script>
 
 <svelte:head>
-	<HeadComponent>
-		Bṛhadmṛdaṅga at
-	</HeadComponent>
+
+<HeadLocal title={title} content={content} url={url} type={type} description={description} imagelink={imagelink}/>
 </svelte:head>
+
 <svelte:window bind:innerWidth={iw}/>
 
 <Header sidebar={sidebar}>

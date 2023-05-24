@@ -8,6 +8,7 @@
 	import Animations from 'textify.js'
 	import { mandalaAll } from '$lib/utils/localpulls'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
+import HeadLocal from '$lib/components/HeadLocal.svelte'
 
 	let fractals:any
 	let wide:number
@@ -32,6 +33,15 @@
 	}
 
 	export let data	
+
+	let title = data.title
+	let content:string = 'indian civilizational consciousness'
+	let url = 'https://www.brhat.in' + data.pathname
+	let type = 'webpage'
+	let description = 'Civilization with multi-level coherence. Research, exploration, and furtherance of Indian civilizational consciousness.'
+	let imagelink = data.image
+
+
 
 	$: pageImage = data.image
 	$: pageTitle = data.title
@@ -71,6 +81,11 @@
 
 
 <svelte:window bind:innerWidth={wide}/>
+
+<svelte:head>
+
+<HeadLocal title={title} content={content} url={url} type={type} description={description} imagelink={imagelink}/>
+</svelte:head>
 
 <PageProgress --thispagebackground="#10C56D" --thispageheight="2px"/>
 <div class="type mandalatext heightmeasure">

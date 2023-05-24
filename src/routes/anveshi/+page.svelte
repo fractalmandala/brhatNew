@@ -2,7 +2,7 @@
 
 	import { onMount } from 'svelte'
 	import { themeMode } from '$lib/stores/globalstores'
-	import HeadComponent from '$lib/components/HeadComponent.svelte'
+	import HeadLocal from '$lib/components/HeadLocal.svelte'
 	import AnveshiTemple from '$lib/logos/AnveshiTemple.svelte'
 	import { ChevronDown } from 'lucide-svelte'
 	import { scale, fly } from 'svelte/transition'
@@ -38,6 +38,14 @@
 	selectedArea[1] = true
 	let alignGrid:boolean = false
 	let fake = false
+
+	let title = 'Bṛhat Anveṣī'
+	let content:string = 'culture experience and discovery travel'
+	let url = 'https://www.brhat.in/anveshi'
+	let type = 'webpage'
+	let description = 'Bṛhat Anveṣī is our culture experience and discovery travel program, through curated and guided temple tours throughout India.'
+	let imagelink = 'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/brhatanveshi.webp'
+
 
 	function fauxfake(){
 		fake = !fake
@@ -124,9 +132,7 @@
 </script>
 
 <svelte:head>
-	<HeadComponent>
-		Bṛhat Anveṣī at 
-	</HeadComponent>
+<HeadLocal title={title} content={content} url={url} type={type} description={description} imagelink={imagelink}/>
 </svelte:head>
 
 <svelte:window bind:innerWidth={iW}/>

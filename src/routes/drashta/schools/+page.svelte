@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte'
 	import { scale } from 'svelte/transition'
 	import autoAnimate from '@formkit/auto-animate'
+import HeadLocal from '$lib/components/HeadLocal.svelte'
 	import RevealH1 from '$lib/components/RevealH1.svelte'
 	import RevealCard from '$lib/components/RevealCard.svelte'
 	import { fetchDarshanas, fetchDrashtas } from '$lib/utils/supapulls'
@@ -9,6 +10,15 @@
 	let darshanas:any 
 	let drashtas:any
 	let selectedDrashta:boolean[] = Array().fill(false)
+
+	let title = 'Bṛhat Draṣṭā'
+	let content:string = 'online learning and cultural education'
+	let url = 'https://www.brhat.in/drashta'
+	let type = 'webpage'
+	let description = 'A shared online learning program to develop civilizational svayaṃbodha and śatrubodha. Rampways for Hindu individual self-confidence.'
+	let imagelink = 'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/brhatdrashta.webp'
+
+
 
 	function toggleGenre(index:number) {
 		selectedDrashta[index] = !selectedDrashta[index]
@@ -26,6 +36,11 @@
 		drashtas = await fetchDrashtas()
 	})
 </script>
+
+<svelte:head>
+
+<HeadLocal title={title} content={content} url={url} type={type} description={description} imagelink={imagelink}/>
+</svelte:head>
 
 
 	<div class="x0">

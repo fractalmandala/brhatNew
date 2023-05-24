@@ -1,6 +1,7 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
+	import { breakOne, breakZero, breakTwo } from '$lib/stores/globalstores'
 	import { fly } from 'svelte/transition'
 	import { backIn, quintOut } from 'svelte/easing'
 
@@ -34,10 +35,14 @@
 
 <svelte:window bind:innerWidth={iW}/>
 
-<div class="dropdown">
+<div class="dropdown"
+	class:levelzero={$breakZero}
+	class:levelone={$breakOne}
+	class:leveltwo={$breakTwo}
+	>
 	<div class="visiblepanel" style="background: var(--thisbackground)" class:reverse={showDropDown} on:click={toggleDropDown} on:keydown={toggleDropDown}>
 		<slot name="visible"></slot>
-		{#if breakPoint}
+		{#if $breakTwo}
 		<div class="box">
 			<svg width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg" class:rotated={showDropDown}>
 				<path d="M19.8229 0.292328C9.21492 0.292328 0.622925 8.88433 0.622925 19.4923C0.622925 30.1003 9.21492 38.6923 19.8229 38.6923C30.4309 38.6923 39.0229 30.1003 39.0229 19.4923C39.0229 8.88433 30.4309 0.292328 19.8229 0.292328ZM19.8229 25.7323L11.7349 17.6443L14.2789 15.1003L19.8229 20.6443L25.3669 15.1003L27.9109 17.6443L19.8229 25.7323Z" fill="black"/>

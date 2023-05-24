@@ -150,15 +150,6 @@
 
 <svelte:window bind:innerWidth={iw} on:keydown={navigateList}/>
 
-<svelte:head>
-	<HeadComponent>
-		The Open Library at
-	</HeadComponent>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</svelte:head>
-
 <div class:light={$themeMode} class:dark={!$themeMode}>
 
 	<div class="x0" data-lenis-scroll-snap-align="start">
@@ -379,6 +370,16 @@
 
 <style lang="sass">
 
+.light, .dark
+	p, h6, h5, h4, h3, small, .drawer-item
+		font-family: 'Space Grotesk', sans-serif
+	.drawer-item
+		font-weight: bold
+		font-size: 21px
+
+
+
+
 .is-green
 	color: #538733
 
@@ -386,9 +387,6 @@
 	@media screen and (min-width: 1024px)
 		text-align: center
 		align-items: center
-
-.heading
-	font-family: 'STIX Two Text', serif
 
 .x0
 	overflow: hidden

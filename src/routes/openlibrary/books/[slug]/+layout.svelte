@@ -1,6 +1,7 @@
 <script lang="ts">
 	//@ts-nocheck
 	import { onMount } from 'svelte'
+	import { breakOne, breakZero, breakTwo } from '$lib/stores/globalstores'
 	import { BOLSelect } from '$lib/utils/supapulls'
 	import { get, writable } from 'svelte/store'
 	import supabase from '$lib/utils/db'
@@ -18,7 +19,7 @@
 	let category:any = 'Essentials'
 	let opencategory:boolean = false
 	let fake = false
-	let iconmobile = false
+	let iconmobile = true
 	let expandmenu = false
 	let visibility = true
 
@@ -113,27 +114,31 @@
 
 <svelte:window bind:innerWidth={width} bind:scrollY={y} bind:outerHeight={height}/>
 
-<div class="bolpaging type">
-	<div class="bolside" class:hiddenheader={isInvisible} class:expandhead={expandmenu}>
-		<DropDown --thisbackground="var(--tree)" --thisdropdowntextcolor="var(--tree)">
-			<div slot="visible">
-				<h6 style="color: white">CATEGORY MENU</h6>
-			</div>
-			<div slot="invisible">
+
+<div class="docugrid"
+	class:levelzero={$breakZero}
+	class:levelone={$breakOne}
+	class:leveltwo={$breakTwo}
+	>
+	<div class="docuside">
+		<h6 style="color: white">CATEGORY MENU</h6>
+		{#if $breakZero}
+		<div class="maincategories rta-column">
 				<h5 transition:fly={{ delay: 50 }} on:click={() => newcategory('Essentials')} on:keydown={fauxfake} class="{ category === 'Essentials' ? 'cats' : ''}">Essentials</h5>
 				<h5 transition:fly={{ delay: 100 }} on:click={() => newcategory('Bodhas')} on:keydown={fauxfake} class="{ category === 'Bodhas' ? 'cats' : ''}">Two Bodhas</h5>
 				<h5 transition:fly={{ delay: 150 }} on:click={() => newcategory('IKS')} on:keydown={fauxfake} class="{ category === 'IKS' ? 'cats' : ''}">IKS</h5>
 				<h5 transition:fly={{ delay: 200 }} on:click={() => newcategory('Repository of Scripture')} on:keydown={fauxfake} class="{ category === 'Repository of Scripture' ? 'cats' : ''}">Scriptural</h5>
 				<h5 transition:fly={{ delay: 200 }} on:click={() => newcategory('search')} on:keydown={fauxfake} class="{ category === 'search' ? 'cats' : ''}">Search Collection</h5>
-				{#if opensearchbar}
+		</div>
+		<div class="searcher rta-column">
+						{#if opensearchbar}
 					<form class="bolform" style="margin-top: 16px">
 						<input type="text" bind:this={searchinput} on:input={(e) => {if(e && e.target) {searchStore.set(e.target.value)}}}>
 						<button on:click={searchWord} on:keydown={fauxfake}>Find</button>
 					</form>
 				{/if}
-			</div>
-			<div slot="level2">
-				<div class="visiblation" style="display: flex; flex-direction: column; row-gap: 4px">
+		</div>
+				<div class="visiblation rta-column">
 					{#if books && books.length > 0}
 						{#each books as item, i}
 							<div transition:fly={{delay: i * 25}} on:click={toggleMenu} on:keydown={fauxfake}>
@@ -161,16 +166,26 @@
 							{/each}
 						{/if}
 					{/if}
-				</div>
-			</div>
-		</DropDown>
+				</div>	
+		{/if	}
 	</div>
-	<div class="bolmain">
+	<div class="documain">
 		<slot></slot>
 	</div>
 </div>
 
 <style lang="sass">
+
+.docugrid
+	h6, h5, p
+		font-family: 'Space Grotesk', sans-serif
+	h5
+		font-weight: bold
+		border-bottom: 1px solid var(--borderline)
+		padding-bottom: 8px
+		cursor: pointer
+	h5.cats
+		color: #fe4a49
 
 .bolform
 	display: flex
@@ -193,40 +208,36 @@
 			background: white
 			color: var(--tree)
 
-.bolpaging
+.docugrid
 	display: grid
 	grid-auto-flow: row
-	.bolside
-		grid-area: bolside
-	.bolmain
-		grid-area: bolmain
+	.docuside
+		grid-area: docuside
+	.documain
+		grid-area: documain
 	@media screen and (min-width: 1024px)
 		grid-template-rows: auto
-		grid-template-columns: 400px 1fr
-		grid-template-areas: "bolside bolmain"
+		grid-template-columns: 320px 1fr
+		grid-template-areas: "docuside documain"
 		gap: 0 64px
 		padding-top: 128px
 		padding-bottom: 128px
-		.bolmain
+		.documain
 			padding-right: 4vw
-		.bolside
+		.docuside
 			padding-left: 48px
-		.bolside.hiddenheader
-			transform: translateY(0px)
-		.bolside.expandhead
-			height: 100%
 	@media screen and (max-width: 1023px)
 		grid-template-rows: 64px auto
 		grid-template-columns: 1fr
-		grid-template-areas: "bolside" "bolmain"
-		padding-top: 80px
-		.bolside
+		grid-template-areas: "docuside" "documain"
+		padding-top: 32px
+		.docuside
 			height: 48px
 			padding-left: 6vw
 			padding-right: 6vw
 			top: 64px
 			transition: 0.34s ease
-		.bolmain
+		.documain
 			padding-left: 6vw
 			padding-right: 6vw
 			padding-bottom: 64px
@@ -234,7 +245,7 @@
 .visiblation
 	a
 		&:hover
-			color: var(--tree)
+			color: #fe4a49
 	@media screen and (max-width: 1023px)
 		padding-top: 16px
 	

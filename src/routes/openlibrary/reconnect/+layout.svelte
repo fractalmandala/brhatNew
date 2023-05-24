@@ -7,13 +7,6 @@
 
 </script>
 
-<svelte:head>
-<title>Discover and Reconnect at Bṛhat Open Library</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
-</svelte:head>
-
 <div class="rta-grid grid2 left00 p-top-64"
     class:levelzero={$breakZero}
     class:levelone={$breakOne}
@@ -72,7 +65,17 @@
     .sidebar
         padding-right: 32px
         border-right: 1px solid var(--borderline)
+        position: sticky
+        top: 0
+        height: 100vh
+        display: flex
+        flex-direction: column
     .mainbar
         padding-left: 64px
+
+.rta-grid
+    padding-bottom: 128px
+    cite, h6
+        font-family: 'Space Grotesk', sans-serif
 
 </style>

@@ -4,7 +4,7 @@
 	import { fly } from 'svelte/transition'
 	import { circOut } from 'svelte/easing'
 	import autoAnimate from '@formkit/auto-animate'
-	import HeadComponent from '$lib/components/HeadComponent.svelte'
+	import HeadLocal from '$lib/components/HeadLocal.svelte'
 	import LogDr from '$lib/logos/LogDr.svelte'
 	import { allCourses } from '$lib/utils/supapulls'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
@@ -19,6 +19,14 @@
 	let sY:number
 	let iH:number
 	let diff:number
+
+	let title = 'Bṛhat Draṣṭā'
+	let content:string = 'online learning and cultural education'
+	let url = 'https://www.brhat.in/drashta'
+	let type = 'webpage'
+	let description = 'A shared online learning program to develop civilizational svayaṃbodha and śatrubodha. Rampways for Hindu individual self-confidence.'
+	let imagelink = 'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/brhatdrashta.webp'
+
 
 	function fauxfake(){
 		fake = !fake
@@ -48,6 +56,10 @@
 
 <svelte:window bind:scrollY={sY} bind:innerHeight={iH} bind:innerWidth={iW}/>
 
+<svelte:head>
+
+<HeadLocal title={title} content={content} url={url} type={type} description={description} imagelink={imagelink}/>
+</svelte:head>
 
 <!--parallax section on top-->
 	<div class="x0" data-lenis-scroll-snap-align="start">
