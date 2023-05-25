@@ -30,7 +30,7 @@ Whatever we do, there will be emphasis on beauty and harmony- these are compleme
 
 We understand linkages between things and how they group up. bṛhat will grow by an ability to integrate. None of us is better than all of us, and our collective output will be larger than the sum of us. A civilizational mahāvākya leads us here.
 
-###### यथा पिंडे तथा ब्रह्मण्डे । <br>यथा ब्रह्मण्डे तथा पिंडे ॥
+###### यथा पिंडे तथा ब्रह्मण्डे । <br>यथा ब्रह्मांडे तथा पिंडे ॥
 
 > As in the microcosm, so in the macrocosm;
 > as in the macrocosm, so in the microcosm.
@@ -40,7 +40,7 @@ We understand linkages between things and how they group up. bṛhat will grow b
 
 To deliberate upon and cultivate excellence actively is a given at bṛhat, but what informs our discernment? How and when do we say yes or no to a project, a person, a plan? When and where do we say this? An ability to emphasise on discernment is the key to our fourth cornerstone. A differentiated, contextual and sustainable framework based on dharma will be our solution.
 
-###### आ मां मे॒धा सु॒रभि॑-र्वि॒श्वरू॑पा॒ हिर॑ण्यवर्णा॒ जग॑ती जग॒म्या । <br>ऊर्ज॑स्वती॒ पय॑सा॒ पिन्व॑माना॒ सा मे॒धा सु॒प्रती॑का जुषन्ताम् ॥
+###### आमां मे॒धा सु॒रभि॑-र्वि॒श्वरू॑पा॒ हिर॑ण्यवर्णा॒ जग॑ती जग॒म्या । <br>ऊर्ज॑स्वती॒ पय॑सा॒ पिन्व॑माना॒ सा मां मे॒धा सु॒प्रती॑का जुषन्ताम् ॥
 
 > May that Sarasvati, who is intelligence personified, who is fragrant, who is all pervading, who has a golden complexion, who is the earth, who is accessible to all; who is full of vigor, who is overflowing with the nectar of knowledge, and who is beautiful; come to me and bless me with intelligence.
 
