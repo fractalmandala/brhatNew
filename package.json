@@ -61,6 +61,7 @@
     "svelte-simple-modal": "^1.5.2",
     "textify.js": "^2.4.3",
     "tippy.js": "^6.3.7",
+    "twitter": "^1.7.1",
     "vanilla-lazyload": "^17.8.3"
   }
 }

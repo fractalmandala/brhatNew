@@ -1,10 +1,10 @@
 <script lang="ts">
+
 	import { page } from '$app/stores';
 	import Header from '$lib/components/SubHeader.svelte';
 	import { breakZero, breakOne, breakTwo, themeMode, innerWidth } from '$lib/stores/globalstores';
 	import ButtonF from '$lib/anims/ButtonFlashes.svelte';
 	import type { PageData } from './$types';
-	let sidebar: boolean;
 
 	export let data: PageData;
 	$: supabase = data.supabase;
@@ -23,7 +23,7 @@
 	}
 </script>
 
-<Header {sidebar} />
+<Header></Header>
 <div
 	class="rta-grid grid2 appshell minH"
 	class:levelzero={$breakZero}
@@ -66,7 +66,7 @@
 			<pre>{JSON.stringify(loadedData, null, 2)}</pre>
 		{/if}
 	</div>
-	<div class="rta-main" />
+	<div class="rta-main"></div>
 </div>
 
 <style lang="sass">
