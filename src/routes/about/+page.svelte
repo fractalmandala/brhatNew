@@ -1,9 +1,9 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
-	import HeadLocal from '$lib/components/HeadLocal.svelte'
+	import { page } from '$app/stores'
+	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores'
 	import { scale } from 'svelte/transition'
-	import Animations from 'textify.js'
 	import { createCurateConsult, threeConvictions, brhatAdvisors, brhatTeam, brhatPartners } from '$lib/utils/supapulls'
 	import PankajSaxena from '$lib/authors/PankajSaxena.svelte'
 	import RaghavaKrishna from '$lib/authors/RaghavaKrishna.svelte'
@@ -26,12 +26,13 @@
 	let fake = false
 	let alignGrid = false
 
-	let title = 'About Bṛhat'
-	let content:string = 'the Culture Engine'
-	let url = 'https://www.brhat.in/about'
-	let type = 'about'
-	let description = 'Bṛhat is an Engine for Dhārmika Furtherance, Affordance and Deliverance'
-	let imagelink = 'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/brhatheadcard.webp'
+	export let data
+
+	$: $metaUrl = $page.url.pathname
+	$: $metaTitle = data.name
+	$: $metaDescription = data.shorts
+	$: $metaImage = data.image
+	$: $metaType = 'webpage'
 
 	function openAuthorCard(index:number){
 		authorCardOn[index] = !authorCardOn[index]
@@ -57,7 +58,6 @@
     }
   }
 	
-	
 	onMount(() => {
 
 		(async () => {
@@ -71,10 +71,6 @@
 
 </script>
 
-<svelte:head>
-	<HeadLocal title={title} content={content} url={url} type={type} description={description} imagelink={imagelink}/>
-</svelte:head>
-
 
 <!--parallax header-->
 	<div class="x0" data-lenis-scroll-snap-align="start">
@@ -84,8 +80,8 @@
 
 
 <!--intro section with 3 actions-->
-	<div class="x1 type-thin rta-column ycenter outer-box limit p-top-64 minH rowgap600" data-lenis-scroll-snap-align="start">
-		<h2>Bṛhat is a<br><span>culture engine</span></h2>
+	<div class="x1 type-thin rta-column ycenter outer-box glass-bottom limit p-top-64 minH rowgap400" data-lenis-scroll-snap-align="start">
+		<h1>Bṛhat is a<br><span>culture engine</span></h1>
 		<h5 class="typett">
 			To power creatives, research and design rooted in the Indian civilizational consciousness. We
 			convert individual, institutional and collective intent into action, across 3 dimensions.
@@ -98,7 +94,7 @@
 							<img src={item.image} alt={item.id}/>
 						</div>
 						<div class="rta-column ta-c-d rowgap100">
-							<h5><strong>{item.name}</strong></h5>
+							<h6>{item.name}</h6>
 							<pre>{item.content}</pre>
 						</div>
 					</div>
@@ -109,8 +105,7 @@
 <!--end-->
 
 <!--three constraints-->
-	<div class="rta-column type-thin minH ycenter outer-box limit rowgap600" data-lenis-scroll-snap-align="start">
-		<div class="rta-column line"></div>
+	<div class="rta-column type-thin minH ycenter outer-box limit glass-bottom rowgap600" data-lenis-scroll-snap-align="start">
 		<h5 class="typett">
 			An engine is an instrument for transformation, and this engine is to build the self-perpetuating civilizational moment. How does one go about doing that?
 		</h5>
@@ -125,7 +120,7 @@
 							<img src={item.image} alt={item.id}/>
 						</div>
 						<div class="rta-column ta-c-d rowgap200 w64">
-							<h5><strong>{item.name}</strong></h5>
+							<h6>{item.name}</h6>
 							<p class="wide60">{item.content}</p>
 						</div>
 					</div>
@@ -136,8 +131,7 @@
 <!--end-->
 
 <!--severest constraint is time-->
-	<div class="rta-column type-thin ycenter outer-box limit rowgap400" data-lenis-scroll-snap-align="start">
-		<div class="rta-column line"></div>
+	<div class="rta-column type-thin p-top-64 ycenter outer-box glass-bottom limit rowgap400" data-lenis-scroll-snap-align="start">
 		<h5 class="typett">
 			But the severest constraint of them all is Time, and more specifically – Moment.
 		</h5>
@@ -167,7 +161,7 @@
 
 
 	<div class="rta-column ycenter rowgap600 outer-box minH limit" data-lenis-scroll-snap-align="start">
-		<h3 class="typett bord-top bord-bot p-top-32 p-bot-32">ADVISORS</h3>
+		<h3 class="typett glass-y p-top-32 p-bot-32">ADVISORS</h3>
 			<div class="rta-grid grid4 rowgap400 colgap400" id="advisors">
 			{#if advisors && advisors.length > 0}
 			{#each advisors as item}
@@ -187,7 +181,7 @@
 
 
 <div class="rta-column rowgap600 outer-box limit" data-lenis-scroll-snap-align="start">
-	<h3 class="bord-top bord-bot p-top-32 p-bot-32">
+	<h3 class="glass-y p-top-32 p-bot-32">
 		PARTNERS
 	</h3>
 		<div class="a-box gridnew" id="partners">
@@ -205,7 +199,7 @@
 
 
 	<div class="rta-column rowgap600 outer-box limit p-top-64" data-lenis-scroll-snap-align="start">
-			<h3 class="bord-top bord-bot p-top-32 p-bot-32">
+			<h3 class="glass-y p-top-32 p-bot-32">
 				TEAM
 			</h3>
 		<div class="rta-grid grid3 colgap600 rowgap600 p-bot-64" class:calibrated={alignGrid} id="team">
@@ -285,12 +279,6 @@
 			object-fit: contain
 			height: 160px
 			border-radius: 80px
-	@media screen and (max-width: 1023px)
-		img
-			object-fit: contain
-			height: 88px
-			width: 88px
-			border-radius: 44px
 
 #imagebox3
 	@media screen and (min-width: 1024px)
@@ -333,6 +321,8 @@
 		grid-template-rows: auto auto
 		.opentab
 			grid-area: opentab
+		.openedcard
+			grid-area: openedcard
 	@media screen and (max-width: 1023px)
 		grid-template-areas: "opentab" "openedcard" "."
 		grid-template-rows: auto auto

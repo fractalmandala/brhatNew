@@ -1,11 +1,11 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
+	import { page } from '$app/stores'
+	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores'
 	import Animations from 'textify.js'
-	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import { loreAll } from '$lib/utils/localpulls'
 	import { fly } from 'svelte/transition'
-	import { circInOut } from 'svelte/easing'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
 	
 	let lores:string|any[]
@@ -18,10 +18,15 @@
 	let sY:number
 	let iW:number
 	let oH:number
-	let noMoreSticky = false
 	let isInView = Array(50).fill(false)
-	const options = {}
-	let moving = 0
+
+	export let data
+
+	$: $metaUrl = $page.url.pathname
+	$: $metaTitle = data.name
+	$: $metaDescription = data.shorts
+	$: $metaImage = data.image
+	$: $metaType = 'webpage'
 
 	$: if ( yPanel2 > 0) {
 		isPanel2 = true
@@ -82,12 +87,6 @@
 	})
 
 </script>
-
-<svelte:head>
-	<HeadComponent>
-		Scrolls of Āryavarta at
-	</HeadComponent>
-</svelte:head>
 
 <svelte:window bind:scrollY={sY} bind:outerHeight={oH} bind:innerWidth={iW}/>
 

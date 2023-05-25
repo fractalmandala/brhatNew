@@ -1,6 +1,12 @@
 import { writable, derived } from 'svelte/store';
 import { browser } from '$app/environment' 
 
+const storedSideMode = browser
+	? JSON.parse(localStorage.getItem('sideMode') || 'false')
+	: false;
+
+export const sideMode = writable(storedSideMode);
+
 const storedThemeMode = browser
   ? JSON.parse(localStorage.getItem('themeMode') || 'false')
   : false;
@@ -37,3 +43,17 @@ export const breakZeroOne = derived(
 	$innerWidth => $innerWidth <= 1023
 );
 	
+const initialChip = {
+    isShown: false,
+    title: '',
+    color: '',
+}
+
+export const chipStore = writable(initialChip);
+
+export function showChip(title:string, color:string ){
+    chipStore.update(state => ({...state, isShown: true, title, color }));
+}
+export function hideChip() {
+    chipStore.update(state => ({...state, isShown: false, title: '', color: '' }));
+}

@@ -1,15 +1,23 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
-	import { fly } from 'svelte/transition'
-	import Header from '$lib/components/SubHeader.svelte'
-	import HeadComponent from '$lib/components/HeadComponent.svelte'
+	import { page } from '$app/stores'
+	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores'
 	import { loreAll } from '$lib/utils/localpulls'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
 
 	let lores:any
 	let sidebar = false
 	let dropdown = false
+
+	export let data
+
+	$: $metaUrl = $page.url.pathname
+	$: $metaTitle = data.title
+	$: $metaDescription = data.snip
+	$: $metaImage = data.image
+	$: $metaType = 'article'
+
 
 	function toggleDropdown(){
 		dropdown = !dropdown
@@ -19,18 +27,8 @@
 		lores = await loreAll()
 	})
 
-	export let data
 
 </script>
-
-<svelte:head>
-	<HeadComponent>
-		{data.title} | Scrolls of Āryavarta at
-	</HeadComponent>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</svelte:head>
 
 
 <div class="aryatext">
@@ -66,7 +64,7 @@
 <style lang="sass">
 
 .serif
-	font-family: 'Playfair Display', serif
+	font-family: 'STIX Two Text', serif
 
 .mainstory
 	h1

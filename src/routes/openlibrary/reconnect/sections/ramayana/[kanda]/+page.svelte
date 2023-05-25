@@ -2,7 +2,6 @@
 
 	import { onMount } from 'svelte'
 	import { scale } from 'svelte/transition'
-	import ReaderCard from '$lib/reader/ReaderCard.svelte'
 	import { versesByKanda } from '$lib/utils/synaptic'
 	let fake = false
 	let varskand:any

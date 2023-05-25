@@ -111,7 +111,7 @@
 
 {#if sidebar}
 	<div on:mouseleave={closeSidebar}>
-		<RIDSidebar sidebar={sidebar}/>
+		<RIDSidebar/>
 	</div>
 {/if}
 

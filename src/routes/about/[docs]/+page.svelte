@@ -1,22 +1,20 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
+	import { page } from '$app/stores'
 	import { mandalaAll } from '$lib/utils/localpulls'
-	import RevealH1 from '$lib/components/RevealH1.svelte'
-	import HeadLocal from '$lib/components/HeadLocal.svelte'
+	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores'
+	import { breakZero, breakOne, breakTwo } from '$lib/stores/globalstores'
 
 	let fractals:any
 	let wide:number
 	let mobileView:boolean = false
 	export let data	
 
-
-	let title = data.title
-	let content:string = data.title + ' at Bṛhat'
-	let url = 'https://brhat.in' + data.pathname
-	let type = 'about'
-	let description = data.title
-	let imagelink = 'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/brhatheadcard.webp'
+	$: $metaUrl = $page.url.pathname
+	$: $metaTitle = data.title
+	$: $metaDescription = data.about
+	$: $metaType = 'webpage'
 
 
 	$: if ( wide <= 1023 ) {
@@ -31,16 +29,13 @@
 
 </script>
 
-<svelte:head>
-<HeadLocal title={title} content={content} url={url} type={type} description={description} imagelink={imagelink}/>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
-</svelte:head>
-
 <svelte:window bind:innerWidth={wide}/>
 
-<div class="container-blog outer-box limit">
+<div class="container-blog outer-box limit"
+	class:levelzero={$breakZero}
+	class:levelone={$breakOne}
+	class:leveltwo={$breakTwo}
+	>
 	<div class="svgbox rta-column xcenter">
 		<svg width="210" height="126" viewBox="0 0 210 126" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M101.091 105.925C101.104 105.913 101.117 105.901 101.13 105.889C101.141 105.879 101.153 105.868 101.164 105.858C101.186 105.838 101.208 105.817 101.23 105.797C101.184 105.755 101.138 105.712 101.091 105.67C83.0197 104.639 66.6016 97.4177 53.9162 86.0891C34.6891 85.2513 15.2003 91.8207 0.0751953 105.797C15.2003 119.774 34.6891 126.343 53.9163 125.505C66.6017 114.177 83.0197 106.955 101.091 105.925Z" fill="#FE4A49"/>
@@ -50,10 +45,10 @@
 			<path d="M108.46 105.469C108.413 105.512 108.367 105.554 108.321 105.597C108.367 105.639 108.413 105.682 108.46 105.724C126.531 106.755 142.949 113.976 155.635 125.305C174.862 126.142 194.351 119.573 209.476 105.597C194.351 91.6202 174.862 85.0509 155.635 85.8887C142.949 97.2173 126.531 104.439 108.46 105.469Z" fill="#FE4A49"/>
 		</svg>
 	</div>
-	<h2 class="p-top-64 p-bot-32 ta-c-d">
+	<h2 class="p-top-64 p-bot-32 glass-bottom ta-c-d">
 		{data.title}
 	</h2>
-	<div class="in-blog p-top-64 bord-top p-bot-64">
+	<div class="in-blog p-top-64 p-bot-64">
 		<svelte:component this={data.content}/>
 	</div>
 </div>
@@ -89,11 +84,19 @@
 
 
 .container-blog
-	@media screen and (min-width: 1024px)
+	@media screen and (min-width: 769px)
 		padding-top: 128px
-		.in-blog
-			padding-left: 128px
-			padding-right: 128px
+		display: flex
+		flex-direction: column
+		align-items: center
+
+.levelzero
+	.in-blog, .svgbox
+		width: 680px
+
+.levelone
+	.in-blog, .svgbox
+		width: 680px
 
 
 </style>

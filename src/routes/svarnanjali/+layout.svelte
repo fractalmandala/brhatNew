@@ -1,12 +1,10 @@
 <script lang="ts">
 
 	import Header from '$lib/components/SubHeader.svelte'
-	import { browser } from '$app/environment'
 	import { themeMode } from '$lib/stores/globalstores'
 	import SvarLinks from '$lib/links/SvarnanjaliLinks.svelte'	
 	let onHead = true
-	let sidebar = false
-	let fake = false
+
 
 
 </script>
@@ -17,7 +15,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800;1,900&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </svelte:head>
 
-<Header sidebar={sidebar}>
+<Header>
 	<div slot="local" class="boxmidrow">
 		<SvarLinks flytime={onHead}></SvarLinks>
 	</div>

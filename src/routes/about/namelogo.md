@@ -1,5 +1,6 @@
 ---
 title: Nāmarūpa
+about: About our Name and Logo
 ---
 
 ##### What does a word’s root represent beyond mere sound?

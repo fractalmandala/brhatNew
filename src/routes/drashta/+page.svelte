@@ -1,17 +1,13 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
-	import { fly } from 'svelte/transition'
-	import { circOut } from 'svelte/easing'
 	import autoAnimate from '@formkit/auto-animate'
-	import HeadLocal from '$lib/components/HeadLocal.svelte'
-	import LogDr from '$lib/logos/LogDr.svelte'
+	import { page } from '$app/stores'
+	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores'
 	import { allCourses } from '$lib/utils/supapulls'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
 	import CompButton from '$lib/ridunits/RIDButton.svelte'
 	import CompButton2 from '$lib/ridunits/RIDButton.svelte'
-	import CompButton3 from '$lib/ridunits/RIDButton.svelte'
-	import CompButton4 from '$lib/ridunits/RIDButton.svelte'
 	let fullText = false
 	let iW:number
 	let breakPoint:boolean
@@ -20,13 +16,13 @@
 	let iH:number
 	let diff:number
 
-	let title = 'Bṛhat Draṣṭā'
-	let content:string = 'online learning and cultural education'
-	let url = 'https://www.brhat.in/drashta'
-	let type = 'webpage'
-	let description = 'A shared online learning program to develop civilizational svayaṃbodha and śatrubodha. Rampways for Hindu individual self-confidence.'
-	let imagelink = 'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/brhatdrashta.webp'
+	export let data
 
+	$: $metaUrl = $page.url.pathname
+	$: $metaTitle = data.name
+	$: $metaDescription = data.shorts
+	$: $metaImage = data.image
+	$: $metaType = 'webpage'
 
 	function fauxfake(){
 		fake = !fake
@@ -55,11 +51,6 @@
 </script>
 
 <svelte:window bind:scrollY={sY} bind:innerHeight={iH} bind:innerWidth={iW}/>
-
-<svelte:head>
-
-<HeadLocal title={title} content={content} url={url} type={type} description={description} imagelink={imagelink}/>
-</svelte:head>
 
 <!--parallax section on top-->
 	<div class="x0" data-lenis-scroll-snap-align="start">

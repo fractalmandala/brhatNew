@@ -1,27 +1,14 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
-	import { browser } from '$app/environment'
-	import HeadLocal from '$lib/components/HeadLocal.svelte'
 	import autoAnimate from '@formkit/auto-animate'
 	import { themeMode } from '$lib/stores/globalstores'
 	import { fly } from 'svelte/transition'
 	import { loreAll } from '$lib/utils/localpulls'	
 	import Header from '$lib/components/SubHeader.svelte'
-	let sidebar = false
 	let dropdown = false
 	let lores:any
 	let fake = false 
-
-
-
-	let title = 'Scrolls of Āryavarta'
-	let content:string = 'historical fiction, lore, art'
-	let url = 'https://www.brhat.in/aryavarta'
-	let type = 'webpage'
-	let description = 'Cultural narratives of the Bhārata that once was, and some of the Bhārata that could have been. At the edge of AI and art.'
-	let imagelink = 'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/scrollshero.webp'
-
 
 	function fauxfake(){
 		fake = !fake
@@ -50,11 +37,7 @@
 
 </script>
 
-<svelte:head>
-<HeadLocal title={title} content={content} url={url} type={type} description={description} imagelink={imagelink}/>
-</svelte:head>
-
-<Header sidebar={sidebar}>
+<Header>
 	<div slot="local" class="boxmidrow">
 		<a href="/aryavarta">Āryavarta Main</a>
 		<a href="/aryavarta/chapter/01">Kaśyapa's Lament</a>

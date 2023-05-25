@@ -3,7 +3,7 @@
 	import { onMount } from 'svelte'
 	import { draw } from 'svelte/transition'
 	import { quintOut } from 'svelte/easing'
-	import { themeMode } from '$lib/stores/globalstores'
+	import { themeMode, sideMode } from '$lib/stores/globalstores'
 	import { browser } from '$app/environment'
 	import { fly } from 'svelte/transition'
 	import tippy, {animateFill} from 'tippy.js'
@@ -11,7 +11,6 @@
 	import LogDhitiD from '$lib/logos/LogDhiDark.svelte'
 	import 'tippy.js/dist/tippy.css'
 	import 'tippy.js/animations/shift-away.css'
-	import CompToggle from '$lib/ridunits/CompToggle.svelte'
 	import CompSearch from '$lib/ridunits/CompSearch.svelte'
 	import AboutLinks from '$lib/links/AboutLinks.svelte'
 	import AnveshiLinks from '$lib/links/AnveshiLinks.svelte'
@@ -43,6 +42,26 @@
 	  }
 	}
 
+	function toggleSideBar(){
+		if ( browser ) {
+			sideMode.update((mode) => {
+				const newMode = !mode;
+				localStorage.setItem('sideMode', JSON.stringify(newMode));
+				return newMode;
+			})
+		}
+	}
+
+	function handleKeyDownEvent(event: KeyboardEvent) {
+		if (event.key === 'F1' && browser ){
+			sideMode.update((mode) => {
+				const newMode = !mode;
+				localStorage.setItem('sideMode', JSON.stringify(newMode));
+				return newMode;
+			})
+		}
+	}
+
 	function toggleCircle(){
 		circleIt = !circleIt
 	}
@@ -55,12 +74,6 @@
 		sidebar = !sidebar
 	}
 
-	function handleKeyDownEvent(event: KeyboardEvent) {
-		if (event.key === 'F1'){
-			sidebar = !sidebar
-		}
-	}
-
 	$: {
 		if ( y > 100 && y > latestScrollY ) {
 			isInvisible = true
@@ -70,11 +83,6 @@
 		latestScrollY = y
 	}
 
-	function closeSidebar(){
-		if ( sidebar === true ) {
-			sidebar = false
-		}
-	}
 
 	$: if ( iW <= 1023) {
 		breakPoint = true
@@ -110,7 +118,7 @@
 
 <svelte:window bind:scrollY={y} bind:innerHeight={height} bind:innerWidth={iW}/>
 
-<div class="appheader" class:onsidebar={sidebar} class:hiddenHeader={isInvisible} class:light={$themeMode} class:dark={!$themeMode}>
+<div class="appheader" class:hiddenHeader={isInvisible} class:light={$themeMode} class:dark={!$themeMode}>
 	<a class="applogo" href="/dhiti" class:fullcol={breakPoint}>
 		{#if $themeMode}
 		<LogDhiti></LogDhiti>
@@ -126,7 +134,7 @@
 		  <div class="slider rta-in-col"></div>
 		</div>
 	</div>
-	<div class="menuicon" on:click={toggleSidebar} on:keydown={handleKeyDownEvent} on:mouseenter={toggleCircle} on:mouseleave={toggleCircle}>
+	<div class="menuicon" on:click={toggleSideBar} on:keydown={handleKeyDownEvent} on:mouseenter={toggleCircle} on:mouseleave={toggleCircle}>
 		<p>Our Cosmos</p>
 		<div id="menumainx" class:rotated={sidebar}>
 			<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -141,163 +149,9 @@
 	</div>
 </div>
 
-{#if sidebar}
-	<div class="appsidebar" in:fly={{ duration: 500, x: 400, y: 0}} out:fly={{ duration: 500, x: 400, y: 0}} data-lenis-prevent on:mouseleave={closeSidebar} class:light={$themeMode} class:dark={!$themeMode}>
-		<div class="linksbox right" id="searcharea">
-			<CompSearch></CompSearch>
-		</div>
-		<div class="linksbox ta-r" on:click={closeSidebar} on:keydown={fauxfake}>
-			{#if sidebar}
-				<h5><a href="/drashta">Bṛhat Draṣṭā</a></h5>
-				<DrashtaLinks flytime={sidebar}/>
-			{/if}
-		</div>
-		<div class="linksbox ta-r" on:click={closeSidebar} on:keydown={fauxfake}>
-			{#if sidebar}
-				<h5><a href="/anveshi">Bṛhat Anveṡī</a></h5>
-				<AnveshiLinks flytime={sidebar}/>
-			{/if}
-		</div>
-		<div class="linksbox ta-r" on:click={closeSidebar} on:keydown={fauxfake}>
-			{#if sidebar}
-				<h5><a href="/mrdanga">Bṛhad Mṛdaṅga</a></h5>
-			{/if}
-		</div>
-		<div class="linksbox ta-r" on:click={closeSidebar} on:keydown={fauxfake}>
-			{#if sidebar}
-				<h5><a href="/dhiti">Dhīti</a></h5>
-			{/if}
-		</div>
-		<div class="linksbox ta-r" on:click={closeSidebar} on:keydown={fauxfake}>
-			{#if sidebar}
-				<h5><a href="/openlibrary">Bṛhat Open Library</a></h5>
-			{/if}
-		</div>
-		<div class="linksbox ta-r" on:click={closeSidebar} on:keydown={fauxfake}>
-			{#if sidebar}
-				<h5><a href="/mandala">Fractal Maṇḍala</a></h5>
-				<MandalaLinks flytime={sidebar}/>
-			{/if}
-		</div>
-		<div class="linksbox ta-r" on:click={closeSidebar} on:keydown={fauxfake}>
-			{#if sidebar}
-				<h5><a href="/aryavarta">Scrolls of Āryavarta</a></h5>
-				<AryavartaLinks flytime={sidebar}/>
-			{/if}
-		</div>
-		<div class="linksbox ta-r" on:click={closeSidebar} on:keydown={fauxfake}>
-			{#if sidebar}
-				<h5><a href="/rta">Ṛta in Design</a></h5>
-				<RtaLinks flytime={sidebar}/>
-			{/if}
-		</div>
-		<div class="linksbox ta-r" on:click={closeSidebar} on:keydown={fauxfake}>
-			{#if sidebar}
-				<h5 in:fly={{ delay: 500, duration: 100, x: 128, y: 0}} out:fly={{ delay: 0, duration: 100, x: 128, y: 0}}><a href="/about">About</a></h5>
-				<AboutLinks flytime={sidebar}/>
-			{/if}
-		</div>
-		<div class="linksbox ta-r">
-			{#if sidebar}
-				<h5 in:fly={{ delay: 500, duration: 100, x: 128, y: 0}} out:fly={{ delay: 0, duration: 100, x: 128, y: 0}}>Site Tour</h5>
-			{/if}
-		</div>
-	</div>
-{/if}
 
 <style lang="sass">
 
-.ta-r
-	text-align: right
-
-#menumainx
-	height: 32px
-	width: 32px
-	display: flex
-	flex-direction: column
-	justify-content: center
-	cursor: pointer
-	transform-origin: center center
-	transition: transform 0.2s ease
-
-#menumainx.rotated
-	transform: rotate(180deg)
-	@media screen and (min-width: 900px)
-		margin-left: 8px
-	@media screen and (max-width: 899px)
-		margin-left: 12px
-
-.linksbox
-	display: flex
-	flex-direction: column
-	padding: 16px
-	position: relative
-	border-bottom: 1px solid #272727
-	h5, h5 a
-		margin: 0
-		text-align: right
-		text-transform: uppercase
-		font-weight: 700
-		font-size: 27px
-		padding-bottom: 8px
-		cursor: pointer
-		color: white
-	&:hover
-		h5, h5 a
-			color: #fe4a49
-		&::after
-			animation: lineforward 0.32s var(--cubeb) forwards
-	&::after
-		position: absolute
-		bottom: 0
-		right: 0
-		content: ''
-		height: 1px
-		background: #474747
-		width: 0
-
-@keyframes lineforward
-	0%
-		width: 0
-	100%
-		width: 100%
-		
-
-.appsidebar
-	right: 0
-	top: 0
-	display: flex
-	flex-direction: column
-	height: 100vh
-	width: 100vw
-	overflow-x: hidden
-	width: 400px
-	z-index: 999
-	position: fixed
-	overflow-y: scroll
-	@media screen and (max-width: 899px)
-		width: 100vw
-		z-index: 899
-		padding-top: 88px
-
-.appsidebar.dark
-	background: #171717
-
-.appsidebar.light
-	background: #171717
-
-.appsidebar::-webkit-scrollbar
-	width: 2px
-
-.appsidebar::-webkit-scrollbar-thumb
-	background: #fe4a49
-
-.appheader.onsidebar
-	width: calc(100vw - 400px)
-	left: 0
-	@media screen and (max-width: 899px)
-		width: 100vw
-		left: 0
 
 .appheader
 	display: grid
@@ -338,6 +192,39 @@
 			grid-area: menuicon
 			width: 200px
 			height: 72px
+
+.appheader.light
+	background: #FFFFFF
+
+.appheader.dark
+	background: #171717
+
+.appheader.hiddenHeader
+	transform: translateY(-128px)
+
+
+#menumainx
+	height: 32px
+	width: 32px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	cursor: pointer
+	transform-origin: center center
+	transition: transform 0.2s ease
+
+#menumainx.rotated
+	transform: rotate(180deg)
+	@media screen and (min-width: 900px)
+		margin-left: 8px
+	@media screen and (max-width: 899px)
+		margin-left: 12px
+
+@keyframes lineforward
+	0%
+		width: 0
+	100%
+		width: 100%
 
 .appheader.light
 	background: #FFFFFF

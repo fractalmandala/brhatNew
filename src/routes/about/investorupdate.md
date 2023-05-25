@@ -1,5 +1,6 @@
 ---
 title: Investor Update
+about: An update on our journey, and the support we are grateful for.
 ---
 
 Entrepreneurial journeys are lonely, and lonelier still when the endeavor is cultural. Cultural initiatives are fundamentally different to commercial or even social enterprises. The outcomes that a true cultural endeavor envisions is in the realm of ‘thought’. This ‘thought’ however undergirds everything else – it determines values, attitudes and behaviors. The combination of values, attitudes and behaviors in turn determines social cohesion, economic growth, national integrity and civilizational sustenance.

@@ -4,7 +4,6 @@
 	import { breakZero, breakOne, breakTwo } from '$lib/stores/globalstores';
 	import { getDescription, allDhatus } from '$lib/utils/supapulls';
 	import type { DhatuSearch } from '$lib/types/SearchItem';
-	import { scale } from 'svelte/transition';
 	let y: number;
 	let url: string;
 	let deets: any;

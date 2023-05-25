@@ -1,10 +1,10 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
-	import { browser } from '$app/environment'
+	import { page } from '$app/stores'
+	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores'
 	import autoAnimate from '@formkit/auto-animate'
 	import { ChevronDown } from 'lucide-svelte'
-	import CompSearch from '$lib/ridunits/CompSearch.svelte'
 	import { themeMode } from '$lib/stores/globalstores'
 	import Header from '$lib/components/SubHeader.svelte'
 	import ButtonEmerge from '$lib/anims/ButtonEmerge.svelte'
@@ -15,7 +15,6 @@
 	import ButtonEmerge6 from '$lib/anims/ButtonEmerge.svelte'
 	import Animations from 'textify.js'
 	import { reveal } from 'svelte-reveal'
-	import HeadLocal from '$lib/components/HeadLocal.svelte'
 	import HomeAccordion from '$lib/components/HomeAccordion.svelte'
 	import CompButton from '$lib/ridunits/CompButton.svelte'
 	import CompButton2 from '$lib/ridunits/CompButton.svelte'
@@ -51,12 +50,11 @@
 	drashtaFull[0] = true
 
 
-	let title = 'Bṛhat'
-	let content:string = 'the Culture Engine'
-	let url = 'https://www.brhat.in'
-	let type = 'website'
-	let description = 'Bṛhat is an Engine for Dhārmika Furtherance, Affordance and Deliverance'
-	let imagelink = 'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/brhatheadcard.webp'
+	$: $metaTitle = 'Bṛhat'
+	$: $metaDescription = 'the Culture Engine'
+	$: $metaUrl = ''
+	$: $metaImage = 'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/brhatheadcard.webp'
+	$: $metaType = 'webpage'
 
 	function toggleMenu(){
 		expandMenu = !expandMenu
@@ -136,14 +134,12 @@
 
 </script>
 
+
+
 <svelte:window bind:scrollY={sY} bind:outerHeight={oH} bind:innerWidth={iW}/>
 
-<svelte:head>
-	<script src="https://cdn.jsdelivr.net/npm/textify.js/dist/Textify.min.js"></script>
-	<HeadLocal title={title} content={content} url={url} type={type} description={description} imagelink={imagelink}/>
-</svelte:head>
 
-<Header sidebar={sidebar}>
+<Header>
 </Header>
 
 

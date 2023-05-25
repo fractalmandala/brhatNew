@@ -1,5 +1,6 @@
 ---
 title: Anatomy of a Civilizational Moment
+about: An explainer on what we mean by a civilizational moment, why we're in the midst of one now, and the mandate it thus sets for us.
 ---
 
 What is a civilizational moment? How rare or regular are such moments? How must we respond to them?

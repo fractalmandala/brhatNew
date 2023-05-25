@@ -1,10 +1,17 @@
 <script lang="ts">
 
-	import { onMount } from 'svelte'
-	import CompGridder from '$lib/ridunits/CompGridder.svelte'
-	import { themeMode } from '$lib/stores/globalstores'
-	import { draggable } from '@neodrag/svelte'
+	import { themeMode, breakOne, breakZero, breakTwo } from '$lib/stores/globalstores'
+	import { page } from '$app/stores'
+	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores'
 	import type { DragOptions } from '@neodrag/svelte'
+
+	export let data
+
+	$: $metaUrl = $page.url.pathname
+	$: $metaTitle = data.name
+	$: $metaDescription = data.shorts
+	$: $metaImage = data.image
+	$: $metaType = 'webpage'
 
   let options: DragOptions = {
     axis: 'x',
@@ -13,9 +20,12 @@
 
 </script>
 
-<div class="rta-grid grid2 left0 minH" class:light={$themeMode} class:dark={!$themeMode}>
-	<div class="rta-column sidepage"></div>
-	<div class="rta-column mainpage p-bot-64">
+<div class="rta-column minH" class:light={$themeMode} class:dark={!$themeMode}
+	class:levelzero={$breakZero}
+	class:levelone={$breakOne}
+	class:leveltwo={$breakTwo}
+	>
+	<div class="rta-column carrier std-type p-bot-64">
 		<div class="rta-column">
 			<h3 class="m-bot-4">
 				Ṛta in Design
@@ -51,7 +61,7 @@
 			</h6>
 		</div>
 		<div class="rta-column one-section p-top-64">
-			<h4 class="bord-top p-top-64 p-bot-16">
+			<h4 class="glass-top p-top-64 p-bot-16">
 				1 - Prologue
 			</h4>
 			<h5>
@@ -90,7 +100,7 @@
 			</h6>
 		</div>
 		<div class="rta-column one-section p-top-64">
-			<h4 class="bord-top p-top-64 p-bot-16">
+			<h4 class="glass-top p-top-64 p-bot-16">
 				2 - Dharma is Design
 			</h4>
 			<div class="rta-grid grid2 colgap600 p-bot-32">
@@ -143,27 +153,12 @@
 .is-green
 	color: #10D56c
 
-.heading-row
-	justify-content: flex-start
-	.rta-column
-		width: 80%
-
-.trinfinity
-	object-fit: contain
-	height: 80px
-
 .greenline
 	height: 1px
 	background: #10D56C
 	width: 100%
 
-.sidepage
-	border-right: 1px solid var(--borderline)
-
-.mainpage
-	h3
-		font-weight: 400
-		letter-spacing: 0
+.std-type
 	h6
 		color: #10D56C
 		line-height: 1.5
@@ -173,16 +168,8 @@
 		font-weight: 600
 	em, li, h5, h4, p, blockquote
 		margin-bottom: 24px
-	@media screen and (min-width: 1024px)
-		padding-top: 128px
-		padding-left: 64px
-		padding-right: 200px
-		em
+	em
 			line-height: 1.8
-	@media screen and (max-width: 1023px)
-		padding-top: 128px
-		padding-left: 24px
-		padding-right: 24px
 
 .dark
 	p
@@ -194,11 +181,6 @@
 	blockquote
 		margin-left: 0
 		margin-right: 0
-
-.sidepage
-	@media screen and (max-width: 1023px)
-		display: none
-
 
 </style>
 

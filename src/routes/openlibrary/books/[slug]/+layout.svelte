@@ -6,7 +6,6 @@
 	import { get, writable } from 'svelte/store'
 	import supabase from '$lib/utils/db'
 	import { fly } from 'svelte/transition'
-	import DropDown from '$lib/components/DropDownNested.svelte'
 
 	let y:number 
 	let height:number

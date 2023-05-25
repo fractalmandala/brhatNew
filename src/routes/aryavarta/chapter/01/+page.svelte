@@ -2,22 +2,25 @@
 
 	import { onMount } from 'svelte'
 	import { page } from '$app/stores'
-	import HeadComponent from '$lib/components/HeadComponent.svelte'
+	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores'
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide'
 	import '@splidejs/svelte-splide/css'
 	import { soaChapter1 } from '$lib/utils/supapulls'
-	import { scale, fly } from 'svelte/transition'
+	import { fly } from 'svelte/transition'
 	import { quadIn, quadOut } from 'svelte/easing'
-	import IconPrev from '$lib/icons/IconPrev.svelte'
-	import IconNext from '$lib/icons/IconNext.svelte'
 
 	let panels:any
 	let faux:boolean = false
 	let y:number
-	let currentPanel = 1
 	let link:any
 	let movement:number
 	let iW:number
+
+	$: $metaUrl = $page.url.pathname
+	$: $metaTitle = `Chapter 1 - Kaśyapa's Lament`
+	$: $metaDescription = 'A visual tale through the premonitions of an ancient ṛṣī.'
+	$: $metaImage = 'https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/chapter1/4.webp'
+	$: $metaType = 'webpage'
 
 	$: if ( iW <= 1023 ){
 		movement = 5 
@@ -35,16 +38,6 @@
 	})
 
 </script>
-
-<svelte:head>
-	<HeadComponent>
-		Kaśyapa's Lament | Scrolls of Āryavarta at
-	</HeadComponent>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</svelte:head>
-
 
 <svelte:window bind:scrollY={y} bind:innerWidth={iW}/>
 

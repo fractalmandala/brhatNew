@@ -1,38 +1,30 @@
 <script lang="ts">
 
-	export let data
 	import { onMount } from 'svelte'
-	import HeadLocal from '$lib/components/HeadLocal.svelte'
+	import { page } from '$app/stores'
+	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores'
 	import { themeMode } from '$lib/stores/globalstores'
 	import { breakZero, breakOne, breakTwo } from '$lib/stores/globalstores'
-	import { elementSizeStore } from '$lib/utils/elementsize'
-	import { page } from '$app/stores'
 	import PageProgress from '$lib/components/PageProgress.svelte'
-	import Formatting from '$lib/components/Formatting.svelte'
-	import ReadingProgress from '$lib/components/ReadingProgress.svelte'
 	import { latestDhitiTen } from '$lib/utils/localpulls'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'	
 	import { brhatTeamMember } from '$lib/utils/supapulls'
 	import { authorfiltered } from '$lib/utils/localpulls'
+	
+	export let data
 
-	let url = $page.url.pathname
-	let text = data.title
+	$: $metaUrl = $page.url.pathname
+	$: $metaTitle = data.title
+	$: $metaDescription = data.excerpt
+	$: $metaImage = data.image
+	$: $metaType = 'article'
+
 	let posts:any
 	let thisAuthorPosts:any
 	let fake:boolean = false
 	let member:any
   let ref:HTMLElement | null = null
   let y:number
-
-
-	let title = data.title
-	let content:string = 'Dhīti at Bṛhat'
-	let urls = 'https://www.brhat.in' + data.pathname
-	let type = 'article'
-	let description = data.excerpt
-	let imagelink = data.image
-
-
 
 	function fakefaux(){
 		fake = !fake
@@ -46,12 +38,6 @@
 
 
 </script>
-
-<svelte:head>
-<HeadLocal title={title} content={content} url={urls} type={type} description={description} imagelink={imagelink}/>
-</svelte:head>
-
-
 
 
 <PageProgress --thispagebackground="#fe4a49" --thispageheight="4px" ref={ref}/>

@@ -1,14 +1,11 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
-	import { themeMode } from '$lib/stores/globalstores'
+	import { themeMode, sideMode } from '$lib/stores/globalstores'
 	import { browser } from '$app/environment'
 	import CompToggle from '$lib/ridunits/CompToggle.svelte'
-	import CompToggle2 from '$lib/ridunits/CompToggle.svelte'
-	import RIDSidebar from '$lib/ridunits/RIDSidebar.svelte'
 	import IconClose from '$lib/icons/IconClose.svelte'
 
-	export let sidebar:boolean
 	let y:number
 	let circleIt:boolean = false
 	let height:number
@@ -29,6 +26,16 @@
 	  }
 	}
 
+	function toggleSideBar(){
+		if ( browser ) {
+			sideMode.update((mode) => {
+				const newMode = !mode;
+				localStorage.setItem('sideMode', JSON.stringify(newMode));
+				return newMode;
+			})
+		}
+	}
+
 	function toggleCircle(){
 		circleIt = !circleIt
 	}
@@ -37,13 +44,14 @@
 		fake = !fake
 	}
 
-	function toggleSidebar(){
-		sidebar = !sidebar
-	}
 
 	function handleKeyDownEvent(event: KeyboardEvent) {
-		if (event.key === 'F1'){
-			sidebar = !sidebar
+		if (event.key === 'F1' && browser ){
+			sideMode.update((mode) => {
+				const newMode = !mode;
+				localStorage.setItem('sideMode', JSON.stringify(newMode));
+				return newMode;
+			})
 		}
 	}
 
@@ -54,12 +62,6 @@
 			isInvisible = false
 		}
 		latestScrollY = y
-	}
-
-	function closeSidebar(){
-		if ( sidebar === true ) {
-			sidebar = false
-		}
 	}
 
 	$: if ( iW <= 1023) {
@@ -87,7 +89,7 @@
 
 <svelte:window bind:scrollY={y} bind:innerHeight={height} bind:innerWidth={iW}/>
 
-<div class="appheader" class:onsidebar={sidebar} class:hiddenHeader={isInvisible} class:light={$themeMode} class:dark={!$themeMode}>
+<div class="appheader" class:hiddenHeader={isInvisible} class:light={$themeMode} class:dark={!$themeMode}>
 	<a class="applogo" href="/" data-sveltekit-reload>
 		<div class="logomotif">
 			<svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -193,8 +195,8 @@
 	<div class="search" id="single" on:click={toggleVisibility} on:keydown={fauxfake}>
 		<CompToggle></CompToggle>
 	</div>
-	<div class="menuicon colgap100" on:click={toggleSidebar} on:keydown={handleKeyDownEvent} on:mouseenter={toggleCircle} on:mouseleave={toggleCircle}>
-		{#if sidebar && breakPoint}
+	<div class="menuicon colgap100" on:click={toggleSideBar} on:keydown={handleKeyDownEvent} on:mouseenter={toggleCircle} on:mouseleave={toggleCircle}>
+		{#if $sideMode && breakPoint}
 		<div class="givemarg" on:click={toggleVisibility} on:keydown={fauxfake}>
 			<CompToggle></CompToggle>
 		</div>
@@ -213,25 +215,10 @@
 	</div>
 </div>
 
-{#if sidebar}
-	<div on:mouseleave={closeSidebar} data-lenis-prevent>
-		<RIDSidebar sidebar={sidebar}/>
-	</div>
-{/if}
-
 <style lang="sass">
 
 .givemarg
 	margin-right: 16px
-
-.appheader.onsidebar
-	width: calc(100vw - 400px)
-	left: 0
-	.midrow
-		display: none
-	@media screen and (max-width: 1023px)
-		width: 100vw
-		left: 0
 
 .appheader
 	display: grid
@@ -322,8 +309,9 @@
 	padding: 2px 0
 	p
 		padding-top: 2px
-		font-weight: 700
-	@media screen and (max-width: 899px)
+		font-weight: 400
+		color: #FFFFFF
+	@media screen and (max-width: 1023px)
 		height: 64px
 		width: 100%
 	&:hover
@@ -358,7 +346,7 @@
 	width: 20px
 	margin-top: 2px
 	path
-		fill: #878787
+		fill: #FFFFFF
 
 @keyframes doppler
 	from

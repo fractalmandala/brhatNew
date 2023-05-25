@@ -3,15 +3,6 @@
 	import { onMount, onDestroy } from 'svelte'
 	import Parallax from '$lib/components/ParallaxImage.svelte'
 	import Animations from 'textify.js'
-	import RevealType3 from '$lib/components/RevealType3.svelte'
-	import RevealGeneric from '$lib/components/RevealGeneric.svelte'
-	import RevealType4 from '$lib/components/RevealType3.svelte'
-	import RevealGeneric2 from '$lib/components/RevealGeneric.svelte'
-	import { get } from 'svelte/store'
-	import { inview } from 'svelte-inview'
-	import { flip } from 'svelte/animate'
-	import { tweened } from 'svelte/motion'
-	import { cubicOut } from 'svelte/easing'
 
 	let panel3:HTMLElement | null
 	let panel2:HTMLElement | null
@@ -281,9 +272,6 @@
 
 .headholder
 	overflow: hidden
-	
-.fixed
-	background: white
 
 .section
 	overflow: hidden

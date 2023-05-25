@@ -1,6 +1,8 @@
 <script lang="ts">
 
 	import { onMount, afterUpdate } from 'svelte'
+	import { page } from '$app/stores'
+	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores'
 	import PageProgress from '$lib/components/PageProgress.svelte'
 	import tippy, {animateFill} from 'tippy.js'
 	import 'tippy.js/dist/tippy.css'
@@ -34,17 +36,12 @@ import HeadLocal from '$lib/components/HeadLocal.svelte'
 
 	export let data	
 
-	let title = data.title
-	let content:string = 'indian civilizational consciousness'
-	let url = 'https://www.brhat.in' + data.pathname
-	let type = 'webpage'
-	let description = 'Civilization with multi-level coherence. Research, exploration, and furtherance of Indian civilizational consciousness.'
-	let imagelink = data.image
+	$: $metaUrl = $page.url.pathname
+	$: $metaTitle = data.title
+	$: $metaDescription = 'An essay at Fractal Maṇḍala'
+	$: $metaImage = data.image
+	$: $metaType = 'article'
 
-
-
-	$: pageImage = data.image
-	$: pageTitle = data.title
 
 	onMount(async() => {
 		fractals = await mandalaAll()
@@ -81,11 +78,6 @@ import HeadLocal from '$lib/components/HeadLocal.svelte'
 
 
 <svelte:window bind:innerWidth={wide}/>
-
-<svelte:head>
-
-<HeadLocal title={title} content={content} url={url} type={type} description={description} imagelink={imagelink}/>
-</svelte:head>
 
 <PageProgress --thispagebackground="#10C56D" --thispageheight="2px"/>
 <div class="type mandalatext heightmeasure">

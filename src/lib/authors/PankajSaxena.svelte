@@ -15,9 +15,9 @@
 	{#if articles && articles.length > 0}
 		{#each articles as item}
 			<div class="listing">
-				<h5>
+				<h6>
 					<a href="{item.path}">{item.meta.title}</a>
-				</h5>
+				</h6>
 			</div>
 		{/each}
 	{/if}

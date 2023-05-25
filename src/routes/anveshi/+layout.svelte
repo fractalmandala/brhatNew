@@ -1,13 +1,10 @@
 <script lang="ts">
 
-	import { onMount } from 'svelte'
 	import Header from '$lib/components/SubHeader.svelte'
-	import { browser } from '$app/environment'
 	import { themeMode } from '$lib/stores/globalstores'
 	import AnveshiLinks from '$lib/links/AnveshiLinks.svelte'
 	let onHead = true
 	let sidebar = false
-	let fake = false
 
 
 </script>

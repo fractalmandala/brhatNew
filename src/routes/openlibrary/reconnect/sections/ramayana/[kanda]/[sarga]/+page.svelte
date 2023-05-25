@@ -2,7 +2,6 @@
 
 	import { onMount } from 'svelte'
 	import { page } from '$app/stores'
-	import { fly } from 'svelte/transition'
 	import { versesofRamayana } from '$lib/utils/synaptic'
 	let verseSarga:any
 	let currentKanda:any

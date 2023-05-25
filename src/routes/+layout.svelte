@@ -2,26 +2,20 @@
 
 	import { onMount } from 'svelte'
 	import { invalidate } from '$app/navigation';
-	import HeadComponent from '$lib/components/HeadComponent.svelte'
+	import HeadComponent from '$lib/components/MetaTag.svelte'
+	import RIDSidebar from '$lib/ridunits/RIDSidebar.svelte'
 	import { page } from '$app/stores'
 	import type { LayoutData } from './$types';
-	import { breakZero, breakOne, breakTwo, themeMode, innerWidth } from '$lib/stores/globalstores'
+	import { breakZero, breakOne, breakTwo, themeMode, innerWidth, sideMode, chipStore, showChip } from '$lib/stores/globalstores'
 	import { dev } from '$app/environment';
+	import Chip from '$lib/components/Chip.svelte'
 	import { inject } from '@vercel/analytics';
-	import { browser } from '$app/environment'
 	import Lenis from '@studio-freight/lenis'
 	import '$lib/styles/types.sass'
 	import '$lib/styles/tokens.sass'
 	import Footer from '$lib/components/Footer.svelte'
-	import { lenisStore as lenis, setLenisStore } from '$lib/stores/lenis'
-	import { useFrame } from '$lib/utils/lenisframe'
 
 	let breakPointOn:boolean
-	let prelocal = ''
-	let precap = ''
-	let localpage = ''
-	let showFooter = true
-	let link:any
 	let firstVisit = false
 	let fake = false
 
@@ -31,7 +25,7 @@
 		fake = !fake
 	}
 
-$: ({ supabase, session } = data);
+	$: ({ supabase, session } = data);
 
 	$: if ( $innerWidth <= 1023 ) {
 		breakPointOn = true
@@ -39,16 +33,7 @@ $: ({ supabase, session } = data);
 		breakPointOn = false
 	}
 
-	$: if ( link === "/brhat") {
-		showFooter = false
-	} else {
-		showFooter = true
-	}
-
 	onMount(() => {
-		prelocal = $page.url.pathname.split('/').join(' | ');
-		precap = prelocal.slice(2);
-		localpage = precap.charAt(0).toUpperCase() + precap.slice(1) + ' | ';
 		const lenis = new Lenis({
 			duration: 0.6,
 			orientation: 'vertical',
@@ -89,18 +74,14 @@ export let data: LayoutData;
 
   	gtag('config', 'G-6NPMDTQVDE');
 	</script>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </svelte:head>
 
-<div id="appbox" class="themer" class:light={$themeMode} class:dark={!$themeMode}>
-
+<main id="appbox" class="themer" class:light={$themeMode} class:dark={!$themeMode}>
+	<Chip/>
 	<slot></slot>
-	{#if showFooter}
+	<RIDSidebar/>
 	<Footer></Footer>
-	{/if}
-</div>
+</main>
 
 <style lang="sass">
 

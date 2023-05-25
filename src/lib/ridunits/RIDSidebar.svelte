@@ -1,21 +1,54 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
-	import { themeMode } from '$lib/stores/globalstores'
+	import { themeMode, sideMode, breakZero, breakOne, breakTwo, showChip, chipStore } from '$lib/stores/globalstores'
 	import { browser } from '$app/environment'
-	import CompSearch from '$lib/ridunits/CompSearch.svelte'
+	import { fly } from 'svelte/transition'
+	import { expoInOut } from 'svelte/easing'
+  import type { SearchItem } from '$lib/types/SearchItem'
+	import { searchitems } from '$lib/filed/searchindex'
+	import { slide } from 'svelte/transition'
+	import CompToggle from '$lib/ridunits/CompToggle.svelte'
 	import AboutLinks from '$lib/links/AboutLinks.svelte'
 	import AnveshiLinks from '$lib/links/AnveshiLinks.svelte'
 	import AryavartaLinks from '$lib/links/AryavartaLinks.svelte'
 	import DrashtaLinks from '$lib/links/DrashtaLinks.svelte'
 	import MandalaLinks from '$lib/links/MandalaLinks.svelte'
 	import RtaLinks from '$lib/links/RtaLinks.svelte'
+
 	let iW:number
 	let breakPoint:boolean
 	let fake = false
+	let xaxis:number
+	let yaxis:number
+	let inputElement: HTMLInputElement
+	let inputValue = ''
+  let searchResults: SearchItem[] = []
+  let isFocused = false
+	let showResults = false
 
 	function fauxfake(){
 		fake = !fake
+	}
+
+ async function handleInput() {
+    if (inputValue.length > 2) {
+      searchResults = searchitems.filter((item) =>
+        item.heading.toLowerCase().includes(inputValue.toLowerCase()),
+				showResults = true,
+      );
+    } else {
+      searchResults = [];
+    }
+  }
+
+  function handleFocus() {
+    isFocused = true;
+  }
+
+	function handleBlur(){
+		inputValue = ''
+		isFocused = false
 	}
 
 	function toggleVisibility() {
@@ -28,13 +61,44 @@
 	  }
 	}
 
+	function toggleSideBar(){
+		if ( browser ) {
+			sideMode.update((mode) => {
+				const newMode = !mode;
+				localStorage.setItem('sideMode', JSON.stringify(newMode));
+				return newMode;
+			})
+		}
+	}
+
+	function handleThemeAndClose(){
+		toggleVisibility();
+		toggleSideBar();
+	}
+
+	function handleMouseLeave(){
+		if ($sideMode) {
+					sideMode.update((mode) => {
+						const newMode = !mode;
+						localStorage.setItem('sideMode', JSON.stringify(newMode));
+						return newMode;
+					})
+		}
+	}
+
 	$: if ( iW <= 1023 ) {
 		breakPoint = true 
 	} else {
 		breakPoint = false
 	}
 
-	export let sidebar:boolean
+	$: if ( breakPoint === true ) {
+		xaxis = 0;
+		yaxis = -600
+	} else {
+		xaxis = 480;
+		yaxis = 0
+	}
 
 	onMount(() => {
 		if ( iW <= 1023 ) {
@@ -46,63 +110,102 @@
 
 <svelte:window bind:innerWidth={iW}/>
 
-<div class="appsidebar modal" class:light={$themeMode} class:dark={!$themeMode}>
-	<div class="right" id="searcharea">
-		<CompSearch></CompSearch>
-	</div>
-	<div class="linksbox ta-r">
+{#if $sideMode}
+<div class="appsidebar modal" class:light={$themeMode} class:dark={!$themeMode}
+	in:fly={{ x: xaxis, y: yaxis, duration: 650, easing: expoInOut }}
+	out:fly={{ x: xaxis, y: yaxis, duration: 650, easing: expoInOut }}
+	data-lenis-prevent
+	on:mouseleave={handleMouseLeave}
+	>
+		<div class="right" id="searcharea">
+			<form class="rta-row colgap200 xend">
+				<input type="text" placeholder="Search..."
+					bind:value={inputValue}
+					bind:this={inputElement}
+					on:blur={handleBlur}
+    			on:input={handleInput}
+    			on:focus={handleFocus}
+				/>
+			</form>
+		</div>
+	{#if searchResults.length && showResults}
+	  <div class="search-results rta-column all-p-16 rowgap100" transition:slide>
+			<h6 class="ta-r">Results:</h6>
+	    {#each searchResults as result}
+				<a href={result.url} on:click={toggleSideBar} on:keydown={fauxfake}>
+	      	<p class="tt-c ta-r">
+					{result.heading}
+					</p>
+				</a>	
+	    {/each}
+	  </div>
+	{/if}
+	<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
 		<h5><a href="/drashta">Bṛhat Draṣṭā</a></h5>
-		<DrashtaLinks flytime={sidebar}/>
+		<DrashtaLinks flytime={$sideMode}/>
 	</div>
-	<div class="linksbox ta-r">
+	<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
 		<h5><a href="/anveshi">Bṛhat Anveṡī</a></h5>
-		<AnveshiLinks flytime={sidebar}/>
+		<AnveshiLinks flytime={$sideMode}/>
 	</div>
-	<div class="linksbox ta-r">
+	<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
 		<h5><a href="/mrdanga">Bṛhad Mṛdaṅga</a></h5>
 	</div>
-	<div class="linksbox ta-r">
+	<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
 		<h5><a href="/dhiti">Dhīti</a></h5>
 	</div>
-	<div class="linksbox ta-r">
+	<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
 		<h5><a href="/openlibrary">Bṛhat Open Library</a></h5>
 	</div>
-	<div class="linksbox ta-r">
+	<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
 		<h5><a href="/aryavarta">Scrolls of Āryavarta</a></h5>
-		<AryavartaLinks flytime={sidebar}/>	
+		<AryavartaLinks flytime={$sideMode}/>	
 	</div>
-	<div class="linksbox ta-r">
+	<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
 		<h5><a href="/mandala">Fractal Maṇḍala</a></h5>
-		<MandalaLinks flytime={sidebar}/>
+		<MandalaLinks flytime={$sideMode}/>
 	</div>
-	<div class="linksbox ta-r">
+	<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
 		<h5><a href="/rta">Ṛta in Design</a></h5>
-		<RtaLinks flytime={sidebar}/>
+		<RtaLinks flytime={$sideMode}/>
 	</div>
-	<div class="linksbox ta-r">
+	<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
 		<h5><a href="/about">About</a></h5>
-		<AboutLinks flytime={sidebar}/>
-	</div>
-	<div class="linksbox ta-r">
-		<h5>Site Tour</h5>
+		<AboutLinks flytime={$sideMode}/>
 	</div>
 </div>
+{/if}
 
 <style lang="sass">
 
 #searcharea
-	display: flex
+	position: relative
+	input
+		padding: 4px 8px
+		border-radius: 10px
+		font-size: 14px
+		width: 80%
+
+#searcharea
+	input
+		border: none
+
+.right
 	@media screen and (min-width: 1024px)
-		flex-direction: column
-		justify-content: center
-		padding-top: 32px
-		padding-right: 16px
-		padding-bottom: 32px
+		padding: 8px 32px
 	@media screen and (max-width: 1023px)
-		flex-direction: column
-		width: 100%
-		padding-right: 16px
-		padding-bottom: 16px
+		padding: 8px 32px
+
+.search-results
+	@media screen and (min-width: 1024px)
+		padding: 16px 32px
+		a
+			&:hover
+				p
+					color: #fe4a49
+	@media screen and (max-width: 1023px)
+		padding: 16px 32px
+		border-bottom: 1px solid var(--contraster)
 
 .ta-r
 	text-align: right
@@ -113,13 +216,14 @@
 	display: flex
 	flex-direction: column
 	height: 100vh
-	width: 100vw
+	width: 40vw
 	overflow-x: hidden
-	width: 400px
-	z-index: 999
+	z-index: 1000
 	position: fixed
 	overflow-y: scroll
-	@media screen and (max-width: 899px)
+	@media screen and (min-width: 1024px)
+		padding-top: 96px
+	@media screen and (max-width: 1023px)
 		width: 100vw
 		z-index: 899
 		padding-top: 88px
@@ -139,15 +243,13 @@
 .linksbox
 	display: flex
 	flex-direction: column
-	padding: 16px
+	padding: 16px 32px
 	position: relative
 	border-bottom: 1px solid #272727
 	h5, h5 a
 		margin: 0
 		text-align: right
 		text-transform: uppercase
-		font-weight: 700
-		font-size: 21px
 		padding-bottom: 8px
 		cursor: pointer
 		color: white
@@ -164,6 +266,14 @@
 		height: 1px
 		background: #474747
 		width: 0
+	@media screen and (min-width: 1024px)
+		h5
+			font-size: 32px
+			font-weight: 700
+	@media screen and (max-width: 1023px)
+		h5
+			font-size: 32px
+			font-weight: 700
 
 @keyframes lineforward
 	0%

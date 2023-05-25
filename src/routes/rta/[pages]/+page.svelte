@@ -2,12 +2,21 @@
 
 	export let data	
 	import { onMount } from 'svelte'
+	import { page } from '$app/stores'
+	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores'
 	import { mandalaAll } from '$lib/utils/localpulls'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
 
 	let fractals:any
 	let wide:number
 	let mobileView:boolean = false
+
+
+	$: $metaUrl = $page.url.pathname
+	$: $metaTitle = data.title
+	$: $metaDescription = 'Essays at Ṛta in Design'
+	$: $metaImage = data.image
+	$: $metaType = 'webpage'
 
 	$: if ( wide <= 1023 ) {
 		mobileView = true

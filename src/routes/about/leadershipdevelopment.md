@@ -1,6 +1,7 @@
 ---
 title: Leadership Development
 image: "/images/areas-ld.webp"
+about: About Leadership Development, the third pillar at Bṛhat
 ---
 
 ###### लौकिकानां हि साधूनाम् अर्थं वागनुवर्तते। <br>ऋषीणां पुनराद्यानां वाचमर्थोनुधावति ॥

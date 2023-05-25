@@ -68,7 +68,7 @@
 	bottom: 0
 	left: -128px
 	font-size: 12px
-	width: 120px
+	min-width: 120px
 	text-align: center
 	padding: 2px 8px 0 8px
 	border-radius: 2px

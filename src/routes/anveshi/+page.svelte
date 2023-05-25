@@ -2,11 +2,10 @@
 
 	import { onMount } from 'svelte'
 	import { themeMode } from '$lib/stores/globalstores'
-	import HeadLocal from '$lib/components/HeadLocal.svelte'
-	import AnveshiTemple from '$lib/logos/AnveshiTemple.svelte'
+	import { page } from '$app/stores'
+	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores'
 	import { ChevronDown } from 'lucide-svelte'
-	import { scale, fly } from 'svelte/transition'
-	import { backOut, backIn, quintIn, quintOut } from 'svelte/easing'
+	import { scale } from 'svelte/transition'
 	import { allChapters, allDiaryCards, allFaq, anveshiGeneral, anveshiTempleArt, anveshiVids } from '$lib/utils/supapulls'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
 	import CompButton from '$lib/ridunits/RIDButton.svelte'
@@ -16,10 +15,8 @@
 	import autoAnimate from '@formkit/auto-animate'
 	import Youtuber from '$lib/components/Youtuber.svelte'
 
-	const options = {}
 	let fullText = false
 	let chapters:string|any[]
-	let isPanel2:boolean
 	let iW:number
 	let breakPoint:boolean
 	let expandMenu = false
@@ -39,13 +36,13 @@
 	let alignGrid:boolean = false
 	let fake = false
 
-	let title = 'Bṛhat Anveṣī'
-	let content:string = 'culture experience and discovery travel'
-	let url = 'https://www.brhat.in/anveshi'
-	let type = 'webpage'
-	let description = 'Bṛhat Anveṣī is our culture experience and discovery travel program, through curated and guided temple tours throughout India.'
-	let imagelink = 'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/brhatanveshi.webp'
+	export let data
 
+	$: $metaUrl = $page.url.pathname
+	$: $metaTitle = data.name
+	$: $metaDescription = data.shorts
+	$: $metaImage = data.image
+	$: $metaType = 'webpage'
 
 	function fauxfake(){
 		fake = !fake
@@ -130,10 +127,6 @@
 	})
 	
 </script>
-
-<svelte:head>
-<HeadLocal title={title} content={content} url={url} type={type} description={description} imagelink={imagelink}/>
-</svelte:head>
 
 <svelte:window bind:innerWidth={iW}/>
 

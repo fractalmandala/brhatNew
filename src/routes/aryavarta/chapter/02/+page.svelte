@@ -2,22 +2,24 @@
 
 	import { onMount } from 'svelte'
 	import { page } from '$app/stores'
-	import HeadComponent from '$lib/components/HeadComponent.svelte'
+	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores'
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide'
 	import '@splidejs/svelte-splide/css'
 	import { soaChapter2 } from '$lib/utils/supapulls'
-	import { scale, fly } from 'svelte/transition'
+	import { fly } from 'svelte/transition'
 	import { quadIn, quadOut } from 'svelte/easing'
-	import IconPrev from '$lib/icons/IconPrev.svelte'
-	import IconNext from '$lib/icons/IconNext.svelte'
-
 	let panels:any
 	let faux:boolean = false
 	let y:number
-	let currentPanel = 1
 	let link:any
 	let movement:number
 	let iW:number
+
+	$: $metaUrl = $page.url.pathname
+	$: $metaTitle = 'Chapter 2 - Sūta and Sudā'
+	$: $metaDescription = 'The great battle before the Great Battle, as remembered by a warrior-bard.'
+	$: $metaImage = 'https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/chapter2/1.webp'
+	$: $metaType = 'webpage'
 
 	$: if ( iW <= 1023 ){
 		movement = 5 
@@ -42,13 +44,6 @@
 	})
 
 </script>
-
-<svelte:head>
-	<HeadComponent>
-		Kaśyapa's Lament | Scrolls of Āryavarta at
-	</HeadComponent>
-</svelte:head>
-
 
 <svelte:window bind:scrollY={y} bind:innerWidth={iW}/>
 

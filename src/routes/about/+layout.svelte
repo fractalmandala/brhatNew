@@ -2,9 +2,7 @@
 
 	import Header from '$lib/components/SubHeader.svelte'
 	import autoAnimate from '@formkit/auto-animate'
-	import { browser } from '$app/environment'
 	import { themeMode } from '$lib/stores/globalstores'
-	import AboutLinks from '$lib/links/AboutLinks.svelte'
 	import { fly } from 'svelte/transition'
 
 	let sidebar = false

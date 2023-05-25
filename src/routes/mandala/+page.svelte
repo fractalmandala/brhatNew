@@ -1,9 +1,11 @@
 <script lang="ts">
 
 	import { onMount, onDestroy } from 'svelte'
+	import { page } from '$app/stores'
+	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores'
 	import Parallax from '$lib/components/ParallaxImage.svelte'
 	import Animations from 'textify.js'
-import HeadLocal from '$lib/components/HeadLocal.svelte'
+
 
 	let panel3:HTMLElement | null
 	let panel2:HTMLElement | null
@@ -31,14 +33,14 @@ import HeadLocal from '$lib/components/HeadLocal.svelte'
 	let breakRight = false
 	let breakPoint:boolean
 
-	let title = 'Fractal Maṇḍala'
-	let content:string = 'indian civilizational consciousness'
-	let url = 'https://www.brhat.in/mandala'
-	let type = 'webpage'
-	let description = 'Civilization with multi-level coherence. Research, exploration, and furtherance of Indian civilizational consciousness.'
-	let imagelink = 'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/fmhomehero.webp'
 
+	export let data
 
+	$: $metaUrl = $page.url.pathname
+	$: $metaTitle = data.name
+	$: $metaDescription = data.shorts
+	$: $metaImage = data.image
+	$: $metaType = 'webpage'
 
 	const updateTwoPosition = () => {
 		if (!panel2 || breakPoint === true) return
@@ -169,11 +171,6 @@ import HeadLocal from '$lib/components/HeadLocal.svelte'
 </script>
 
 <svelte:window bind:scrollY={sY} bind:outerHeight={oH} bind:innerWidth={iW}/>
-
-<svelte:head>
-
-<HeadLocal title={title} content={content} url={url} type={type} description={description} imagelink={imagelink}/>
-</svelte:head>
 
 <div class="section sec1" data-lenis-scroll-snap-align="start">
 	<Parallax --parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/10mandala/realitywall.webp')" --parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/10mandala/realitywall.webp')"></Parallax>
@@ -359,14 +356,6 @@ import HeadLocal from '$lib/components/HeadLocal.svelte'
 	width: 100vw
 	@media screen and (min-width: 1024px)
 		height: 100vh
-
-.parallaxbox
-	transition: var(--cubec)
-	border: 2px solid white
-	img
-		object-fit: cover
-		width: 100%
-		height: 100%
 
 .sec1
 	overflow: hidden

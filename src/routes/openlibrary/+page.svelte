@@ -1,15 +1,12 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
-	import { bols } from '$lib/filed/bolindex'
 	import { themeMode } from '$lib/stores/globalstores'
-	import Animations from 'textify.js'
-	import HeadComponent from '$lib/components/HeadComponent.svelte'
+	import { page } from '$app/stores'
+	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores'
 	import { ChevronDown } from 'lucide-svelte'
 	import autoAnimate from '@formkit/auto-animate'
-	import LogoBol from '$lib/logos/LogoBol.svelte'
-	import RIDButton from '$lib/ridunits/RIDButton.svelte'
-	import { BOLEssentials, BOLBodhas, BOLIKS, BOLROS, BOLOthers, AryanIssue, AryanTag } from '$lib/utils/supapulls'
+	import { BOLEssentials, BOLBodhas, BOLIKS, BOLROS, BOLOthers, AryanTag } from '$lib/utils/supapulls'
 	import { fly, scale } from 'svelte/transition'
 	import { circIn } from 'svelte/easing'
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
@@ -36,6 +33,15 @@
 	let fake = false
 	let iW:number
 	let expandMenu = false
+
+
+	export let data
+
+	$: $metaUrl = $page.url.pathname
+	$: $metaTitle = data.name
+	$: $metaDescription = data.shorts
+	$: $metaImage = data.image
+	$: $metaType = 'webpage'
 
 	function toggleMenu(){
 		expandMenu = !expandMenu
@@ -124,17 +130,6 @@
 
 	onMount(() => {
 		window.addEventListener('click', handleClickOutside);
-		const { Textify } = Animations;
-		new Textify({
-			selector: ".typett",
-			duration: 1200,
-			fade: false,
-			top: false,
-			reveal: true,
-			threshold: 0.8,
-			once: false,
-			scale: 3
-		});
 
 		(async () => {
 			essentials = await BOLEssentials(limit)

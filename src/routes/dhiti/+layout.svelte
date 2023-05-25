@@ -1,9 +1,7 @@
 <script lang="ts">
 
 	import Header from '$lib/components/DhitiHeader.svelte'
-	import { browser } from '$app/environment'
 	import { themeMode } from '$lib/stores/globalstores'
-	import LogDhiti from '$lib/logos/LogDhiti.svelte'
 	let sidebar = false
 
 </script>

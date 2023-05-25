@@ -1,5 +1,6 @@
 ---
 title: Pratijñā
+about: About our values for internal and external conduct
 ---
 
 

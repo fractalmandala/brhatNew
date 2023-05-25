@@ -1,5 +1,6 @@
 ---
 title: Svataḥsiddha
+about: The reckoner on our primary problem statement, our reason to be. This explains the Why of Bṛhat
 ---
 
 

@@ -1,22 +1,15 @@
 <script lang="ts">
 
 	import { onMount, afterUpdate } from 'svelte'
-	import HeadLocal from '$lib/components/HeadLocal.svelte'
+	import { page } from '$app/stores'
+	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores'
 	import autoAnimate from '@formkit/auto-animate'
 	import { ChevronDown } from 'lucide-svelte'
-	import Accordion from '$lib/ridunits/CompAccordion.svelte'
-	import StickyCols from '$lib/components/StickyCols.svelte'
-	import StickyCols2 from '$lib/components/StickyCols.svelte'
-	import { scale } from 'svelte/transition'
 	import { chapterItinerary } from '$lib/utils/supapulls'
 	import { chapterTemples } from '$lib/utils/supapulls'
-	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
 
 	let p:number
 	let alignGrid = false
-	let isPads = true
-	let isRev = false
-	let isRev2 = true
 	let chapter:string 
 	let itins:string|any[]
 	let openedDay:boolean[] = Array(5).fill(false)
@@ -27,15 +20,13 @@
 	let fake = false
 	let elementTop: HTMLElement
 
-
 	export let data
-	let title = data.title
-	let content:string = 'travel chapter at Bṛhat Anveṣī'
-	let url = 'https://www.brhat.in' + data.pathname
-	let type = 'webpage'
-	let description = 'Bṛhat Anveṣī is our culture experience and discovery travel program, through curated and guided temple tours throughout India.'
-	let imagelink = data.image
 
+	$: $metaUrl = $page.url.pathname
+	$: $metaTitle = data.name
+	$: $metaDescription = data.excerpt
+	$: $metaImage = data.image
+	$: $metaType = 'webpage'
 
 	function fauxfake(){
 		fake = !fake
@@ -82,9 +73,7 @@
 
 <svelte:window bind:scrollY={p}/>
 
-<svelte:head>
-<HeadLocal title={title} content={content} url={url} type={type} description={description} imagelink={imagelink}/>
-</svelte:head>
+
 
 <!--heading image-->
 	<div class="rta-column x0 top-p-64" id="heading-image">

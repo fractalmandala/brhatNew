@@ -1,6 +1,8 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
+	import { page } from '$app/stores'
+	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores'
 	import { Swipe, SwipeItem } from 'svelte-swipe'
 	import { soaNasadiya } from '$lib/utils/supapulls'
 	import { scale } from 'svelte/transition'
@@ -11,6 +13,13 @@
 	let SwipeComp:any
 	let faux:boolean = false
 	let y:number
+
+
+	$: $metaUrl = $page.url.pathname
+	$: $metaTitle = 'Chapter 3 - Nasadīya Across Space and Time'
+	$: $metaDescription = 'A visual experiment in Ṛgvedic exploration.'
+	$: $metaImage = 'https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/nasadiya/1-2.webp'
+	$: $metaType = 'webpage'
 
   function nextSlide(){
    SwipeComp.nextItem()

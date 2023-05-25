@@ -1,41 +1,19 @@
 <script lang="ts">
 
 	import Header from '$lib/components/SubHeader.svelte'
-	import { browser } from '$app/environment'
 	import { themeMode } from '$lib/stores/globalstores'
-	import HeadComponent from '$lib/components/HeadComponent.svelte'
 	import { fly } from 'svelte/transition'
-	let sidebar = false
 	let dropdown = false
-	let fake = false
 
-	function fauxfake(){
-		fake = !fake
-	}
 
 	function toggleDropdown(){
 		dropdown = !dropdown
 	}
 
-	function toggleVisibility() {
-	  if (browser) {
-	    themeMode.update((mode) => {
-	      const newMode = !mode;
-	      localStorage.setItem('themeMode', JSON.stringify(newMode));
-	      return newMode;
-	    });
-	  }
-	}
 
 </script>
 
-<svelte:head>
-	<HeadComponent>
-		Fractal Maṇḍala at
-	</HeadComponent>
-</svelte:head>
-
-<Header sidebar={sidebar}>
+<Header>
 	<div slot="local" class="boxmidrow">
 		<a href="/mandala/aphorisms">Caturasūtra</a>
 		<a href="/mandala/ancestors">Ancestors</a>

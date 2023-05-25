@@ -34,7 +34,7 @@
 
 .blank-button
 	position: absolute
-	bottom: 64px
+	bottom: 128px
 	left: 32px
 	transition: 0.08s
 

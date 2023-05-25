@@ -1,11 +1,11 @@
 import supabase from '$lib/utils/db'
 
-export async function load({params}:{params: { dhatu:string }}){
+export async function load(){
 	const { data, error } = await supabase
-	.from('vw-coredhatus')
+	.from('brhat-actions')
 	.select()
-	.eq('dhatu',`${params.dhatu}`)
+	.eq('link','/openlibrary')
 	.single()
 	if (error) throw new Error(error.message)
 	return data	
-} 
+}

@@ -1,6 +1,7 @@
 ---
 title: Policy Research
 image: "/images/areas-pr.webp"
+about: About Policy Research, the second pillar at Bṛhat
 ---
 
 The growing consensus in public policy rejects the assumption that its formulation and analysis can be entirely uncommitted to, and removed from the interests, values, and cultures of the place.

@@ -1,5 +1,6 @@
 ---
 title: Privacy Policy
+about: General privacy policy information
 ---
 
 Our website address is: https://brhat.in. This Privacy Policy governs the manner in which Bṛhat collects, uses, maintains and discloses information collected from users (each, a “User”) of the https://www.brhat.in/ website (“Site”). This privacy policy applies to the Site and all products and services offered by Bṛhat.

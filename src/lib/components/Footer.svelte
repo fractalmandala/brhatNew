@@ -37,7 +37,7 @@
 </script>
 
 
-<div class="footer back" class:light={$themeMode} class:dark={!$themeMode}>
+<footer class="footer back" class:light={$themeMode} class:dark={!$themeMode}>
 	<div class="footertop">
 		<div class="topbutton" on:click={() => { window.scrollTo(0, 0)}} on:keydown={fauxfake}>
 			<IconTop></IconTop>
@@ -99,7 +99,7 @@
 		<small>Also visit <a href="https://www.brhateducation.in" target="_blank" rel="noreferrer" style="color: #fe4a49">Bṛhat Education.</a></small>
 		<small><a href="/about/privacy" style="color: white">Privacy</a> | contact@brhat.in</small>
 	</div>
-</div>
+</footer>
 {#if modalStatus}
 	<Contact/>
 {/if}

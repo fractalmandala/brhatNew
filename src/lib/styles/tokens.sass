@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap')
+
 //colors
 $black: #171717
 $grey07: #d7d7d7
@@ -503,11 +505,6 @@ body, html
 		padding-left: 280px
 		padding-right: 280px
 
-.type-thin
-	@media screen and (min-width: 1024px)
-		>h5
-			width: 70%
-
 .grid3
 	.rta-video
 		@media screen and (min-width: 1024px)
@@ -537,10 +534,6 @@ body, html
 	@media screen and (max-width: 1023px)
 		padding: 20px
 
-.dark
-	.rta-card
-		h5
-			color: white
 
 .bord-top
 	border-top: 1px solid var(--borderline)
@@ -624,39 +617,10 @@ body, html
 	--palio: #FAFAFA
 	--textone: #373737
 	--borderline: #474747
-	--greyish: #878787s
-	--themer: #575757
+	--greyish: #878787
+	--themer: #777777
 	--boxshadow: 4px 7px 12px #e1e1e1
 	--onlyblack: #a7a7a7
-	.is-text
-		color: #474747
-	p, pre, li, blockquote
-		color: $grey87
-	.mainstory p
-		color: #474747
-	h1, h2, h5, h3, h6
-		color: $grey47
-	small
-		color: $grey87
-	cite
-		color: $grey87
-	h4, em
-		color: $grey47
-	.in-blog
-		h4
-			color: #272727
-		h6
-			color: #474747
-	.rta-dhiti
-		p
-			color: #676767
-			line-height: 1.2
-	p.author
-		color: #272727
-		font-weight: bold
-	.is-black
-		color: #272727
-
 
 .dark
 	--dhiticolor: #0B6E4F
@@ -669,29 +633,7 @@ body, html
 	--borderline: #272727
 	--greyish: #878787
 	--onlyblack: #474747
-	.is-text
-		color: #FFFFFF
-	p, pre, li
-		color: $grey87
-	h5
-		color: $grey87
-	h1, h2
-		color: $grey07
-	h6, h3, h4, em, blockquote, li.em
-		color: $white
-	small, cite
-		color: $grey87
-	p.author
-		color: #FFFFFF
-		font-weight: bold
-	.is-black
-		color: #474747
-
-.insidelink
-	color: #878787
-	text-transform: capitalize
-	&:hover
-		color: #FFFFFF
+	--themer: #474747
 
 //buttons
 .blank-button
@@ -894,9 +836,6 @@ body, html
 
 .dark
 	.glass-bottom
-		background: rgba(255, 255, 255, 0.0)
-		border: 1px solid rgba(255, 255, 255, 0)
-		border-radius: 5px
 		position: relative
 		&::after
 			position: absolute
@@ -906,6 +845,64 @@ body, html
 			width: 100%
 			height: 2px
 			background: linear-gradient(90deg, rgba(17, 17, 17, 0), rgb(255, 255, 255) 50%, rgba(17, 17, 17, 0))
+	.glass-y
+		position: relative
+		&::after
+			position: absolute
+			top: 0
+			left: 0
+			content: ''
+			width: 100%
+			height: 1px
+			background: linear-gradient(90deg, rgba(17, 17, 17, 0), rgb(255, 255, 255) 50%, rgba(17, 17, 17, 0))
+		&::before
+			position: absolute
+			bottom: 0
+			left: 0
+			content: ''
+			width: 100%
+			height: 1px
+			background: linear-gradient(90deg, rgba(17, 17, 17, 0), rgb(255, 255, 255) 50%, rgba(17, 17, 17, 0))
+
+.light
+	.glass-bottom
+		position: relative
+		&::after
+			position: absolute
+			bottom: -2px
+			left: 0
+			content: ''
+			width: 100%
+			height: 2px
+			background: linear-gradient(90deg, rgba(17, 17, 17, 0), rgb(215, 215, 215) 50%, rgba(17, 17, 17, 0))
+	.glass-top
+		position: relative
+		&::after
+			position: absolute
+			top: 0
+			left: 0
+			content: ''
+			width: 100%
+			height: 1px
+			background: linear-gradient(90deg, rgba(17, 17, 17, 0.1), rgb(215, 215, 215) 50%, rgba(17, 17, 17, 0.1))
+	.glass-y
+		position: relative
+		&::after
+			position: absolute
+			top: 0
+			left: 0
+			content: ''
+			width: 100%
+			height: 1px
+			background: linear-gradient(90deg, rgba(17, 17, 17, 0.1), rgb(215, 215, 215) 50%, rgba(17, 17, 17, 0))
+		&::before
+			position: absolute
+			bottom: 0
+			left: 0
+			content: ''
+			width: 100%
+			height: 1px
+			background: linear-gradient(90deg, rgba(17, 17, 17, 0.1), rgb(215, 215, 215) 50%, rgba(17, 17, 17, 0))
 
 .dark
 	.glass-left
@@ -922,9 +919,6 @@ body, html
 			height: 100%
 			background: linear-gradient(180deg, rgba(17, 17, 17, 0), rgb(255, 255, 255) 50%, rgba(17, 17, 17, 0))
 	.glass-top
-		background: linear-gradient(90deg, rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 0.0) 50%, rgba(0, 0, 0, 0))
-		border: 1px solid rgba(255, 255, 255, 0)
-		border-radius: 5px
 		position: relative
 		&::after
 			position: absolute
@@ -949,3 +943,19 @@ body, html
 			//width: 2px
 			//height: 100%
 			//background: linear-gradient(180deg, rgba(17, 17, 17, 0), rgb(255, 255, 255) 50%, rgba(17, 17, 17, 0))
+
+
+.levelzero
+	align-items: center
+	padding-top: 128px
+	.carrier
+		width: 680px
+
+.levelone
+	align-items: center
+	padding-top: 128px
+	.carrier
+		width: 680px
+
+.leveltwo
+	padding: 128px 32px 64px 32px
