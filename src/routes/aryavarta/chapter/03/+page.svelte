@@ -15,11 +15,11 @@
 	let y:number
 
 
-	$: $metaUrl = $page.url.pathname
-	$: $metaTitle = 'Chapter 3 - Nasadīya Across Space and Time'
-	$: $metaDescription = 'A visual experiment in Ṛgvedic exploration.'
-	$: $metaImage = 'https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/nasadiya/1-2.webp'
-	$: $metaType = 'webpage'
+	$metaUrl = $page.url.pathname
+	$metaTitle = 'Chapter 3 - Nasadīya Across Space and Time'
+	$metaDescription = 'A visual experiment in Ṛgvedic exploration.'
+	$metaImage = 'https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/nasadiya/1-2.webp'
+	$metaType = 'webpage'
 
   function nextSlide(){
    SwipeComp.nextItem()

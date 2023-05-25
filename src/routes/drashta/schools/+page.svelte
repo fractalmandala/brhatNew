@@ -9,11 +9,11 @@
 	let drashtas:any
 	let selectedDrashta:boolean[] = Array().fill(false)
 
-	$: $metaUrl = $page.url.pathname
-	$: $metaTitle = 'Schools of Thought'
-	$: $metaDescription = 'At Bṛhat Draṣṭā'
-	$: $metaImage = 'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/06drashta/schoolsofthought.webp'
-	$: $metaType = 'webpage'
+	$metaUrl = $page.url.pathname
+	$metaTitle = 'Schools of Thought'
+	$metaDescription = 'At Bṛhat Draṣṭā'
+	$metaImage = 'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/06drashta/schoolsofthought.webp'
+	$metaType = 'webpage'
 
 
 	function toggleGenre(index:number) {

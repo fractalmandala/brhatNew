@@ -22,11 +22,11 @@
 
 	export let data
 
-	$: $metaUrl = $page.url.pathname
-	$: $metaTitle = data.name
-	$: $metaDescription = data.excerpt
-	$: $metaImage = data.image
-	$: $metaType = 'webpage'
+	$metaUrl = $page.url.pathname
+	$metaTitle = data.name
+	$metaDescription = data.excerpt
+	$metaImage = data.image
+	$metaType = 'webpage'
 
 	function fauxfake(){
 		fake = !fake

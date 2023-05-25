@@ -49,13 +49,6 @@
 	let drashtaFull = Array(10).fill(false)
 	drashtaFull[0] = true
 
-
-	$: $metaTitle = 'Bṛhat'
-	$: $metaDescription = 'the Culture Engine'
-	$: $metaUrl = ''
-	$: $metaImage = 'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/brhatheadcard.webp'
-	$: $metaType = 'webpage'
-
 	function toggleMenu(){
 		expandMenu = !expandMenu
 	}
@@ -91,6 +84,12 @@
 		} else {
 			breakPoint = false
 		}
+
+	$metaTitle = 'Bṛhat'
+	$metaDescription = 'the Culture Engine'
+	$metaUrl = ''
+	$metaImage = 'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/brhatheadcard.webp'
+	$metaType = 'webpage'
 
 	onMount(() => {
 		const { Textify } = Animations;

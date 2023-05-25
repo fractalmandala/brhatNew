@@ -15,11 +15,11 @@
 	let movement:number
 	let iW:number
 
-	$: $metaUrl = $page.url.pathname
-	$: $metaTitle = 'Chapter 2 - Sūta and Sudā'
-	$: $metaDescription = 'The great battle before the Great Battle, as remembered by a warrior-bard.'
-	$: $metaImage = 'https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/chapter2/1.webp'
-	$: $metaType = 'webpage'
+	$metaUrl = $page.url.pathname
+	$metaTitle = 'Chapter 2 - Sūta and Sudā'
+	$metaDescription = 'The great battle before the Great Battle, as remembered by a warrior-bard.'
+	$metaImage = 'https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/chapter2/1.webp'
+	$metaType = 'webpage'
 
 	$: if ( iW <= 1023 ){
 		movement = 5 

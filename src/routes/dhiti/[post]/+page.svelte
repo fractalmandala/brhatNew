@@ -13,11 +13,11 @@
 	
 	export let data
 
-	$: $metaUrl = $page.url.pathname
-	$: $metaTitle = data.title
-	$: $metaDescription = data.excerpt
-	$: $metaImage = data.image
-	$: $metaType = 'article'
+	$metaUrl = $page.url.pathname
+	$metaTitle = data.title
+	$metaDescription = data.excerpt
+	$metaImage = data.image
+	$metaType = 'article'
 
 	let posts:any
 	let thisAuthorPosts:any

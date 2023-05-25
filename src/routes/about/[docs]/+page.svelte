@@ -11,10 +11,10 @@
 	let mobileView:boolean = false
 	export let data	
 
-	$: $metaUrl = $page.url.pathname
-	$: $metaTitle = data.title
-	$: $metaDescription = data.about
-	$: $metaType = 'webpage'
+	$metaUrl = $page.url.pathname
+	$metaTitle = data.title
+	$metaDescription = data.about
+	$metaType = 'webpage'
 
 
 	$: if ( wide <= 1023 ) {

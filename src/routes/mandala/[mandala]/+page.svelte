@@ -36,11 +36,11 @@ import HeadLocal from '$lib/components/HeadLocal.svelte'
 
 	export let data	
 
-	$: $metaUrl = $page.url.pathname
-	$: $metaTitle = data.title
-	$: $metaDescription = 'An essay at Fractal Maṇḍala'
-	$: $metaImage = data.image
-	$: $metaType = 'article'
+	$metaUrl = $page.url.pathname
+	$metaTitle = data.title
+	$metaDescription = 'An essay at Fractal Maṇḍala'
+	$metaImage = data.image
+	$metaType = 'article'
 
 
 	onMount(async() => {

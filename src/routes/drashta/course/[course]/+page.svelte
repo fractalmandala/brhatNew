@@ -26,10 +26,10 @@
 
 	export let data	
 
-	$: $metaUrl = $page.url.pathname
-	$: $metaTitle = data.name
-	$: $metaDescription = data.excerpt
-	$: $metaType = 'course'
+	$metaUrl = $page.url.pathname
+	$metaTitle = data.name
+	$metaDescription = data.excerpt
+	$metaType = 'course'
 
 	function toggleMenu(){
 		expandMenu = !expandMenu

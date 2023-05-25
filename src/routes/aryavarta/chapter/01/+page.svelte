@@ -16,11 +16,11 @@
 	let movement:number
 	let iW:number
 
-	$: $metaUrl = $page.url.pathname
-	$: $metaTitle = `Chapter 1 - Kaśyapa's Lament`
-	$: $metaDescription = 'A visual tale through the premonitions of an ancient ṛṣī.'
-	$: $metaImage = 'https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/chapter1/4.webp'
-	$: $metaType = 'webpage'
+	$metaUrl = $page.url.pathname
+	$metaTitle = `Chapter 1 - Kaśyapa's Lament`
+	$metaDescription = 'A visual tale through the premonitions of an ancient ṛṣī.'
+	$metaImage = 'https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/chapter1/4.webp'
+	$metaType = 'webpage'
 
 	$: if ( iW <= 1023 ){
 		movement = 5 

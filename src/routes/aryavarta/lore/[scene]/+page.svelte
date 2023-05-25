@@ -12,11 +12,11 @@
 
 	export let data
 
-	$: $metaUrl = $page.url.pathname
-	$: $metaTitle = data.title
-	$: $metaDescription = data.snip
-	$: $metaImage = data.image
-	$: $metaType = 'article'
+	$metaUrl = $page.url.pathname
+	$metaTitle = data.title
+	$metaDescription = data.snip
+	$metaImage = data.image
+	$metaType = 'article'
 
 
 	function toggleDropdown(){

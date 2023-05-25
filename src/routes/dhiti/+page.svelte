@@ -28,11 +28,11 @@
 
 	export let data
 
-	$: $metaUrl = $page.url.pathname
-	$: $metaTitle = data.name
-	$: $metaDescription = data.shorts
-	$: $metaImage = data.image
-	$: $metaType = 'webpage'
+	$metaUrl = $page.url.pathname
+ 	$metaTitle = data.name
+	$metaDescription = data.shorts
+	$metaImage = data.image
+	$metaType = 'webpage'
 
 	$: anyCategoryOpen = categoryItems.some(item => item)
 

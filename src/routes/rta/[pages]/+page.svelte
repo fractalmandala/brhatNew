@@ -12,11 +12,11 @@
 	let mobileView:boolean = false
 
 
-	$: $metaUrl = $page.url.pathname
-	$: $metaTitle = data.title
-	$: $metaDescription = 'Essays at Ṛta in Design'
-	$: $metaImage = data.image
-	$: $metaType = 'webpage'
+	$metaUrl = $page.url.pathname
+	$metaTitle = data.title
+	$metaDescription = 'Essays at Ṛta in Design'
+	$metaImage = data.image
+	$metaType = 'webpage'
 
 	$: if ( wide <= 1023 ) {
 		mobileView = true
