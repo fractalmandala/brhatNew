@@ -136,6 +136,8 @@ The presentations were followed by a memorable valedictory ceremony with insight
 
 We conclude this synthesis of the fulfilling and enriching four day immersive Nītividhāna workshop with the idea that to create something great externally, we first need to look within, work hard and generate spiritual surplus. It is with this Sanātana Dṛṣti, that we must approach the world of public policy. 
 
+<img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/niti/unnamed%20(1).jpg" alt="elevent"/>
+
 
 <style lang="sass">
 
