@@ -104,7 +104,7 @@ Participants engaged in picking policies that caught their interest, identified 
 
 Continuing the thread of dialogue from speakers of the previous day, Raghava ji also offered a framework of looking at the cultural traditions of Bhāratavarṣa, such as our festivals, dinacaryā, the ideas of ṛṇa and tapas, etc as deep leverage points to be deployed when framing culturally rooted policies. 
 
-Shri Anurag Shukla further led us through the impact of colonisation that continues even today, and the urgent need to reclaim indigenous models of thinking and doing. Decades after independence, we continue to retain colonial artefacts within our law and police systems in the form of both the attire and the laws. While we make an attempt to reclaim education from colonial clutches, it is imperative that we extend the same to a central component of effective governance: policy-making. 
+Shri Anurag Shukla (Director - Policy & Education, Bṛhat) further led us through the impact of colonisation that continues even today, and the urgent need to reclaim indigenous models of thinking and doing. Decades after independence, we continue to retain colonial artefacts within our law and police systems in the form of both the attire and the laws. While we make an attempt to reclaim education from colonial clutches, it is imperative that we extend the same to a central component of effective governance: policy-making. 
 
 #### Paryanta - Synthesis of The Dhārmika Worldview | Day 3 & 4
 
