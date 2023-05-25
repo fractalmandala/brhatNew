@@ -214,7 +214,7 @@
 </div>
 
 {#if sidebar}
-	<div on:mouseleave={closeSidebar}>
+	<div on:mouseleave={closeSidebar} data-lenis-prevent>
 		<RIDSidebar sidebar={sidebar}/>
 	</div>
 {/if}
