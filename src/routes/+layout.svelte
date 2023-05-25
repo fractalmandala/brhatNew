@@ -50,7 +50,7 @@ $: ({ supabase, session } = data);
 		precap = prelocal.slice(2);
 		localpage = precap.charAt(0).toUpperCase() + precap.slice(1) + ' | ';
 		const lenis = new Lenis({
-			duration: 1.6,
+			duration: 0.6,
 			orientation: 'vertical',
 			gestureOrientation: 'vertical',
 			wheelMultiplier: 0.4,
@@ -79,6 +79,7 @@ export let data: LayoutData;
 <svelte:window bind:innerWidth={$innerWidth}/>
 
 <svelte:head>
+	<HeadComponent/>
 	<link href="https://cdn.jsdelivr.net/npm/textify.js/dist/Textify.min.css" rel="stylesheet"/>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-6NPMDTQVDE"></script>
 	<script>
@@ -88,7 +89,9 @@ export let data: LayoutData;
 
   	gtag('config', 'G-6NPMDTQVDE');
 	</script>
-	<HeadComponent/>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </svelte:head>
 
 <div id="appbox" class="themer" class:light={$themeMode} class:dark={!$themeMode}>

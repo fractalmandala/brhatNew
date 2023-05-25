@@ -2,10 +2,10 @@
 
 	import { onMount } from 'svelte'
 	import { browser } from '$app/environment'
-	import Header from '$lib/components/SubHeader.svelte'
+	import Header from '$lib/ridunits/BOLHeader.svelte'
  	import { page } from '$app/stores'
 	import { themeMode } from '$lib/stores/globalstores'
-import HeadLocal from '$lib/components/HeadLocal.svelte'
+	import HeadLocal from '$lib/components/HeadLocal.svelte'
 
 	let dropdown = false
 	let fake = false

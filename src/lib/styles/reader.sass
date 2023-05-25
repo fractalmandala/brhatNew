@@ -3,405 +3,154 @@
 	--read: #23c8b5
 	--sn: all 0.09s ease
 
-.generic
-	h4
-		font-family: 'Vesper Libre', serif
 
 
-.readingcontainer 
-	display: grid 
-	grid-template-columns: 1fr 1fr 1fr 
-	grid-template-rows: 96px 100%
-	gap: 0px 0px 
-	grid-auto-flow: row 
-	grid-template-areas: "learninghead learninghead learninghead" "learningrest learningrest learningrest"
-	@media screen and (min-width: 1024px)
-		padding-left: 48px
-		padding-right: 48px
-	@media screen and (max-width: 1023px)
-		grid-template-columns: 1fr
-		grid-template-rows: 88px auto
-		grid-template-areas: "learninghead" "learningrest"
-		padding-left: 24px
-		padding-right: 24px
-
-.learninghead 
-	display: grid 
-	grid-template-columns: 50% 1fr 1fr 
-	grid-template-rows: auto auto
-	gap: 0px 0px 
-	grid-auto-flow: row 
-	grid-template-areas: "learningheadmain learningheadrest learningheadrest" "learningheadmain learningheadrest learningheadrest"
-	grid-area: learninghead 
-	border-bottom: 1px solid #d7d7d7
-	@media screen and (max-width: 1023px)
-		overflow: hidden
-
-.learningheadmain 
-	grid-area: learningheadmain 
-	display: flex
-	@media screen and (min-width: 1024px)
-		flex-direction: row
-		align-items: center
-
-.learningheadrest 
-	grid-area: learningheadrest 
-	display: flex
-	@media screen and (min-width: 1024px)
-		flex-direction: row
-		justify-content: flex-end
-		gap: 16px
-		align-items: center
-	@media screen and (max-width: 1023px)
-		flex-direction: column
-		align-items: flex-end
-
-.learningrest 
-	display: grid 
-	grid-template-columns: 1fr 1fr 1fr 
-	grid-template-rows: auto
-	gap: 0px 0px 
-	grid-auto-flow: row 
-	grid-template-areas: "mainpage mainpage mainpage"
-	grid-area: learningrest 
-	@media screen and (min-width: 1024px)
-		align-content: start
-	@media screen and (max-width: 1023px)
-		grid-template-columns: 1fr
-		grid-template-rows: auto auto
-		grid-template-areas: "mainpage"
-
-.mainpage 
-	display: grid 
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
-	grid-template-rows: 100%
-	gap: 0px 0px 
-	grid-auto-flow: row 
-	grid-template-areas: "mainside mainside mainmain mainmain mainmain mainmain mainmain mainmain"
-	@media screen and (min-width: 1024px)
-		gap: 24px 48px
-		padding-top: 128px
-		min-height: 100vh
-	@media screen and (max-width: 1023px)
-		grid-template-columns: 1fr
-		grid-template-rows: 32px auto
-		grid-template-areas: "mainside" "mainmain"
-
-.mainside::-webkit-scrollbar, #items-list::-webkit-scrollbar
-	width: 2px
-
-.mainside::-webkit-scrollbar-thumb, #items-list::-webkit-scrollbar-thumb
-	background: #fe4a49
-
-.mainside 
-	grid-area: mainside 
-	@media screen and (min-width: 1024px)
-		overflow-y: scroll
-		overflow-x: hidden
-		row-gap: 0
-	@media screen and (max-width: 1023px)
-		display: flex
-		flex-direction: row
-		justify-content: space-between
-
-.mainside form
-	column-gap: 8px
-	margin-bottom: 32px
-	select
-		border: 1px solid #ececec
-		padding: 8px 16px
-		border-radius: 4px
-		color: #878787
-		
-
-.mainmain 
-	grid-area: mainmain
-	margin-bottom: 32px
-	.boxr
-		align-items: center
-	@media screen and (max-width: 1023px)
-		margin-top: 32px
-
-#pagebar
-	justify-content: flex-end
-	border-bottom: 1px solid #ececec
-	padding-bottom: 16px
-	text-transform: uppercase
-	font-size: 14px
-	font-weight: 400
-	margin-bottom: 64px
-	color: #878787
-	a
-		color: #fe4a49
-	.boxr
-		justify-content: flex-end
-
-
-.basicbox
-	display: flex
-	flex-direction: column
-
-.type
-	h1
-		margin: 0
-
-.dropped p
-	text-transform: uppercase
-	text-align: right
-	font-size: 18px
-	transition: var(--sn)
-	&:hover
-		color: #fe4a49
-
-.sideitems
-	border-bottom: 1px solid #ececec
-	h5
-		color: #272727
-		transition: var(--sn)
-		cursor: pointer
-		margin: 0
-		padding: 0 0 5px 0
-		font-weight: 400
-		&:hover
-			color: #fe4a49
-
-.sideitems
-	padding: 4px	
-	display: flex
-	flex-direction: column
-
-.dev h6
-	font-family: 'Vesper Libre', serif
-
-h6 .dev
-	font-family: 'Vesper Libre', serif
-
-h6.dev
-	font-family: 'Vesper Libre', serif
-
-p.dev, .dev p, p .dev
-	font-family: 'Vesper Libre', serif
-
-
-.generic
-	display: flex
-	flex-direction: column
-	border-bottom: 1px solid #ececec
-	padding-bottom: 12px
-	margin-bottom: 12px
-	a
-		&:hover
-			color: var(--strong)
-	h4.dev
-		font-family: 'Vesper Libre', serif
-		font-weight: 800
-		line-height: 1.6
-	h5.dev, .dev h5
-		font-weight: 700
-		font-family: 'Vesper Libre', serif
-		font-size: 1.8vw
-		margin-bottom: 5px
-		margin-top: 10px
-	h6.iast
-		font-weight: 400
-		color: #878787
-	cite
-		text-transform: uppercase
-		color: #b7b7b7
-		font-style: normal
-	@media screen and (max-width: 1023px)
-		h5.dev, .dev h5
-			font-size: 4vw
-
-.readingcard
-	button
-		background: white
-		border: none
-		text-transform: uppercase
-		color: var(--strong)
-		font-weight: bold
-		width: max-content
-		padding-left: 0
-		padding-top: 4px
-		margin-top: 24px
-		padding-bottom: 4px
-		cursor: pointer
-		&:hover
-			text-decoration: underline
-			background: #474747
-			color: white
-			padding-left: 4px
-		
-.mainmain
-	h5.dev, .dev h5
-		font-family: 'Vesper Libre', serif
-		.spl
-			font-family: 'Spline Sans', sans-serif
-			font-weight: 600
-
-.type
-	h5.dev
-		font-family: 'Vesper Libre', serif
-
-p.dev, h4.dev, h3.dev
-	font-family: 'Vesper Libre', serif
-
-
-.dev h4, h4 .dev
-	font-family: 'Vesper Libre', serif
-	color: var(--yellow)
-
-.dropper
-	display: flex
-	flex-direction: row
-	align-items: center
-	justify-content: space-between
-	&:hover
-		svg path
-			fill: #fe4a49
-
-.sargatray
+.formgrids
 	display: grid
 	grid-auto-flow: row
-	@media screen and (min-width: 1024px)
-		grid-template-columns: 1fr 1fr 1fr
-		grid-template-rows: auto
-		grid-template-areas: ". . ."
+	grid-template-columns: 1fr 1fr 1fr
+	grid-template-rows: auto auto
+	grid-template-areas: "label1 label2 label3" "select1 select2 select3"
+	gap: 8px 16px
+	justify-content: start
+	
 
-.words
-	font-size: 18px
+.label1, .label2, .label3
+	color: var(--opposite)
+	font-size: 12px
 
-.navbuttons
-	padding-top: 32px
-	display: flex
-	flex-direction: row
-	gap: 16px
-
-.navbuttons
-	width: 100%
-	justify-content: center
-	button
-		background: white
-		border: 1px solid #878787 !important
-		color: #878787
-		outline: none
-		border-radius: 2px
-		font-size: 12px
-		width: 80px
-		text-align: center
-		padding: 4px
-		text-transform: uppercase
-		cursor: pointer
-		transform-origin: center center
-		transition: 0.1s ease
-		&:hover
-			transform: scale(0.9)
-			background: var(--strong)
-			color: white
-			border: 1px solid #fe4a49 !important
-
-.formbutton
-	background: var(--strong)
-	border: 1px solid #fe4a49
-	color: white
-	padding: 4px 12px
-	border-radius: 2px
-	transition: all 0.1s ease
-	transform-origin: center center
+a
+	color: var(--opposite)
 	&:hover
-		transform: scale(0.9)
-		background: #fe4a49
-		border: 1px solid var(--strong)
+		color: #fe4a49
 
-.mainside
-	h5
-		position: relative
-		text-transform: uppercase
-		font-weight: 600
-		padding-bottom: 8px
-		line-height: 2
-
-
-.bread
-	justify-content: flex-end
-	align-items: center
-	gap: 8px
+.side 
 	select
-		background: white
-		border: 1px solid #ececec
-		color: #878787
+		background: none
+		border: 1px solid var(--contraster)
+		border-radius: 4px
+		color: var(--opposite)
+		font-size: 12px
+		padding: 2px
+
+
+.selector 
+	select
+		background: none
+		border: 1px solid var(--contraster)
+		border-radius: 4px
+		color: var(--opposite)
+		font-size: 12px
+		padding: 4px
+
+
+
+form.bol-search
+	background: white
+	border: 1px solid var(--borderline)
+	border-radius: 16px
+	input
+		width: calc(100% - 32px)
+		border: none
+		border-radius: 16px
+		padding: 0 8px
 		outline: none
 
-
-
-#pagebar
-	justify-content: flex-end
-	align-items: center
-
-
-.mainpage
-	padding-bottom: 48px
-	form
-		padding-top: 64px
-
-
-.sideitems
-	max-height: 400px
-	overflow-y: scroll
-	position: relative
-	padding-top: 0
-	a, p
-		text-transform: capitalize
-	h6
-		position: sticky
-		top: 0
-		background: white
-		text-transform: uppercase
-		font-weight: 400
-		padding: 12px 0
-		cursor: pointer
+.resultsarea
+	a
 		&:hover
 			color: #fe4a49
-	a
-		font-size: 16px
-		padding: 4px 16px
+	@media screen and (min-width: 1024px)
+		overflow-y: scroll
+		padding: 16px
+		max-height: 60vh
+		small
+			padding-bottom: 8px
+	@media screen and (max-width: 1023px)
+		padding: 16px
+		max-height: 60vh
+		overflow-y: scroll
+		small
+			padding-bottom: 16px
+
+
+.cleanbutton
+	border-bottom: 2px solid #fe4a49
+	width: 120px
+	color: var(--opposite)
+	padding-bottom: 4px
+	&:hover
+		color: #fe4a49
+
+
+.bolbox
+	box-sizing: border-box
+	cursor: pointer
+	display: flex
+	flex-direction: column
+	padding: 16px
+	border-radius: 4px
+	small
+		font-size: 12px
 		color: #878787
-		width: max-content
-		&:hover
-			background: #fe4a49
-			color: white
-	p
-		font-size: 16px
-		cursor: pointer
-		&:hover
-			color: white
-			background: #fe4a49
-			padding: 4px
-
-.readernavigation
-	justify-content: center
-	gap: 16px
-	button
-		border: 1px solid #676767
-		color: #474747
-		background: white
-		font-weight: 500
-		border-radius: 3px
-		padding: 5px 12px
-		width: 80px
-		transition: 0.18s
-		transform-origin: center center
-		cursor: pointer
-		&:hover
-			background: #fe4a49
-			border: 2px solid #fe4a49
-			color: white
-			transform: scale(0.9)
-			a
-				color: white
-
-
-.dhatusearch
-	.input-container
+	h5.dev
+		color: var(--opposite)
+		font-size: 32px
+		font-weight: 400
+		font-family: 'Martel', sans-serif
+		font-size: 24px
+	h5
+		font-weight: 400
+		padding-top: 5px
+		font-size: 24px
+		color: var(--onlyblack)
+	h6
+		font-weight: 400
+		line-height: 1.5
+	.bolbox-expand
 		display: flex
 		flex-direction: column
+		row-gap: 16px
+		padding-top: 16px
+
+.bolbox.opentab
+	border-bottom: 1px solid var(--contraster)
+	h5
+		color: var(--opposite)
+	h6
+		color: var(--onlyblack)
+		font-family: 'Space Grotesk', sans-serif
+
+
+.bol-page
+	display: flex
+	flex-direction: column
+	padding-top: 32px
+	justify-content: flex-start
+	@media screen and (min-width: 1024px)
+		text-align: left
+		padding-top: 32px
+		row-gap: 16px
+		h5.dev
+			color: var(--opposite)
+			font-size: 32px
+			font-weight: 400
+			font-family: 'Martel', sans-serif
+			font-size: 27px
+	@media screen and (max-width: 1023px)
+		h5.dev
+			font-size: 24px
+		h6
+			font-size: 20px
+
+
+.lemmabox
+	p
+		color: var(--opposite)
+
+.readernavigation
+	justify-content: flex-start
+	margin-top: 32px
+	display: flex
+	flex-direction: row
+	column-gap: 16px

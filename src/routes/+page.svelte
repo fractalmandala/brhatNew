@@ -180,7 +180,7 @@
 			<div class="rta-grid grid4 colgap400">
 				{#if threeactions && threeactions.length > 0}
 					{#each threeactions as item, i}
-						<div class="rta-column"
+						<div class="rta-column glass-top p-top-32"
 							use:reveal={{
 								transition: "fly",
 								y: 200,
@@ -202,7 +202,7 @@
 <!--latest anveshi chapters-->
 	<div class="rta-column ycenter rowgap600 outer-box minH" data-lenis-scroll-snap-align="start">
 		<!---name and description-->
-			<div class="rta-row row-col ycenter between rowgap100 colgap400 bord-top p-top-32 bord-bot p-bot-32">
+			<div class="rta-row row-col ycenter between rowgap100 colgap400 glass-top p-top-32 bord-bot p-bot-32">
 				<div class="rta-row row-col ycenter colgap300">
 					<h3 class="typett">BṚHAT ANVEṢĪ</h3>
 					<div class="holds-button-emerge" use:reveal>
@@ -298,7 +298,7 @@
 <!--latest drashta courses-->
 	<div class="rta-column rowgap600 ycenter outer-box minH" data-lenis-scroll-snap-align="start">
 		<!--name and description-->
-		<div class="rta-row row-col ycenter between rowgap100 bord-top p-top-32 bord-bot p-bot-32">
+		<div class="rta-row row-col ycenter between rowgap100 glass-top p-top-32 bord-bot p-bot-32">
 			<div class="rta-row row-col ycenter colgap300" use:autoAnimate>
 				<h3 class="typett">BṚHAT DRAṢṬĀ</h3>
 				<div class="holds-button-emerge" use:reveal>
@@ -377,7 +377,7 @@
 
 <!--explore visual content section-->
 	<div class="minH outer-box ycenter rowgap600 rta-column" id="brhad-mrdanga" data-lenis-scroll-snap-align="start">
-		<div class="rta-row row-col ycenter between bord-top p-top-32 bord-bot p-bot-32">
+		<div class="rta-row row-col ycenter between glass-top p-top-32 bord-bot p-bot-32">
 			<div class="rta-row row-col ycenter colgap200" use:autoAnimate>
 				<h3 class="typett">BṚHAD MṚDAṄGA</h3>
 				<div class="holds-button-emerge" use:reveal>
@@ -468,7 +468,7 @@ end-->
 <!--dhiti blog latest posts section-->
 	<div class="rta-column rowgap600 outer-box" data-lenis-scroll-snap-align="start">
 
-		<div class="rta-row row-col between ycenter bord-top p-top-32 bord-bot p-bot-32">
+		<div class="rta-row row-col between ycenter glass-top p-top-32 bord-bot p-bot-32">
 			<div class="rta-row row-col ycenter colgap200" use:autoAnimate>
 				<h3 class="typett">RECENT AT DHĪTI</h3>
 				<div class="holds-button-emerge" use:reveal>
@@ -538,7 +538,7 @@ end-->
 <!--open library latest posts section-->
 	<div class="rta-column rowgap600 ycenter outer-box minH" data-lenis-scroll-snap-align="start">
 
-		<div class="rta-row row-col bord-top p-top-32 bord-bot p-bot-32">
+		<div class="rta-row row-col glass-top p-top-32 bord-bot p-bot-32">
 			<div class="rta-row row-col ycenter colgap200" use:autoAnimate>
 				<h3 class="typett">BṚHAT OPEN LIBRARY</h3>
 				<div class="holds-button-emerge" use:reveal>

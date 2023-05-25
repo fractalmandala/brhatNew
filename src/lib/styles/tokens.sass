@@ -290,6 +290,9 @@ body, html
 .tt-c
 	text-transform: capitalize
 
+.tt-l
+	text-transform: lowercase
+
 //containers
 .rta-column
 	display: flex
@@ -331,6 +334,8 @@ body, html
 			justify-content: center
 	&.xend
 		justify-content: flex-end
+	&.xstart
+		justify-content: flex-start
 	&.between
 		justify-content: space-between
 	&.ytop
@@ -616,6 +621,13 @@ body, html
 	--contraster: #f7f7f7
 	--shadowline: #d7d7d7
 	--background: #FFFFFF
+	--palio: #FAFAFA
+	--textone: #373737
+	--borderline: #474747
+	--greyish: #878787s
+	--themer: #575757
+	--boxshadow: 4px 7px 12px #e1e1e1
+	--onlyblack: #a7a7a7
 	.is-text
 		color: #474747
 	p, pre, li, blockquote
@@ -649,9 +661,14 @@ body, html
 .dark
 	--dhiticolor: #0B6E4F
 	--opposite: #FFFFFF
-	--contraster: #272727
+	--contraster: #313131
 	--shadowline: #090909
 	--background: #171717
+	--palio: #FAFAFA
+	--textone: #a1a1a1
+	--borderline: #272727
+	--greyish: #878787
+	--onlyblack: #474747
 	.is-text
 		color: #FFFFFF
 	p, pre, li
@@ -681,6 +698,10 @@ body, html
 	background: none
 	border: none
 	padding: 0
+	cursor: pointer
+	&:hover
+		svg path
+			fill: #fe4a49
 	
 
 .drawer-item
@@ -870,3 +891,61 @@ body, html
 			transform: scale(0.9)
 			background: #fe4a49
 			color: white
+
+.dark
+	.glass-bottom
+		background: rgba(255, 255, 255, 0.0)
+		border: 1px solid rgba(255, 255, 255, 0)
+		border-radius: 5px
+		position: relative
+		&::after
+			position: absolute
+			bottom: -2px
+			left: 0
+			content: ''
+			width: 100%
+			height: 2px
+			background: linear-gradient(90deg, rgba(17, 17, 17, 0), rgb(255, 255, 255) 50%, rgba(17, 17, 17, 0))
+
+.dark
+	.glass-left
+		background: linear-gradient(90deg, rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 0.0) 50%, rgba(0, 0, 0, 0))
+		border: 1px solid rgba(255, 255, 255, 0)
+		border-radius: 5px
+		position: relative
+		&::after
+			position: absolute
+			top: 0
+			left: 0
+			content: ''
+			width: 2px
+			height: 100%
+			background: linear-gradient(180deg, rgba(17, 17, 17, 0), rgb(255, 255, 255) 50%, rgba(17, 17, 17, 0))
+	.glass-top
+		background: linear-gradient(90deg, rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 0.0) 50%, rgba(0, 0, 0, 0))
+		border: 1px solid rgba(255, 255, 255, 0)
+		border-radius: 5px
+		position: relative
+		&::after
+			position: absolute
+			top: 0
+			left: 0
+			content: ''
+			width: 100%
+			height: 1px
+			background: linear-gradient(90deg, rgba(17, 17, 17, 0), rgba(255, 255, 255, 1) 50%, rgba(17, 17, 17, 0))
+
+//.light
+	//.glass-left
+		//background: rgba(255, 255, 255, 0.0)
+		//border: 1px solid rgba(255, 255, 255, 0.05)
+		//border-radius: 5px
+		//position: relative
+		//&::after
+			//position: absolute
+			//top: 0
+			//left: 0
+			//content: ''
+			//width: 2px
+			//height: 100%
+			//background: linear-gradient(180deg, rgba(17, 17, 17, 0), rgb(255, 255, 255) 50%, rgba(17, 17, 17, 0))

@@ -1,6 +1,6 @@
 import supabase from '$lib/utils/db'
 
-export async function RVPagination(msr:any){
+export async function RVPagination(msr:string){
 		const { data, error} = await supabase
 		.from ('db-rvpagination')
 		.select()
@@ -10,17 +10,18 @@ export async function RVPagination(msr:any){
 		return data
 }
 
-export async function SuktasofMandalaFull(mandala: any){
+export async function SuktasofMandalaFull(mandala: number, limit: number){
 		const { data, error} = await supabase
 		.from ('db-rigveda')
 		.select()
 		.eq('mandala',mandala)
 		.order('primvalue')
+		.limit(limit)
 		if (error) throw new Error(error.message)
 		return data
 	}
 
-export async function SuktasofMandala(mandala: any){
+export async function SuktasofMandala(mandala: number){
 		const { data, error} = await supabase
 		.from ('db-rigvedasuktas')
 		.select()
@@ -130,7 +131,7 @@ export async function SuktasofMandala10(){
 		return data
 	}
 
-export async function RcasofMandala(ms:any){
+export async function RcasofMandala(ms:string){
 	const { data, error} = await supabase
 	.from('db-rigveda')
 	.select()
@@ -139,7 +140,7 @@ export async function RcasofMandala(ms:any){
 	return data
 }
 
-export async function RcasofSukta(mandala: any,sukta: any){
+export async function RcasofSukta(mandala: number,sukta: number){
 	const { data, error} = await supabase
 	.from('db-rigveda')
 	.select()
@@ -160,7 +161,7 @@ export async function Paginator(prim: number){
 	return data
 }
 
-export async function rvRishis(mandala: any,sukta: any,rca: any){
+export async function rvRishis(mandala: number,sukta: number,rca: number){
 	const { data, error } = await supabase
 	.from('vw-rvrishis')
 	.select()
@@ -171,7 +172,7 @@ export async function rvRishis(mandala: any,sukta: any,rca: any){
 	return data	
 }
 
-export async function rvDevatas(mandala: any,sukta: any,rca: any){
+export async function rvDevatas(mandala: number,sukta: number,rca: number){
 	const { data, error } = await supabase
 	.from('vw-rvdevatas')
 	.select()
@@ -182,7 +183,7 @@ export async function rvDevatas(mandala: any,sukta: any,rca: any){
 	return data	
 }
 
-export async function rvChandas(mandala: any,sukta: any,rca: any){
+export async function rvChandas(mandala: number,sukta: number,rca: number){
 	const { data, error } = await supabase
 	.from('vw-rvchandas')
 	.select()
@@ -219,7 +220,7 @@ export async function searchRV(inputword: string){
 	return data
 }
 
-export async function RVWords(msr:any){
+export async function RVWords(msr:string){
 	const { data, error } = await supabase
 	.from('vw-wordsofrv')
 	.select()
@@ -229,7 +230,7 @@ export async function RVWords(msr:any){
 	return data
 }
 
-	export async function padasofRamayana(kanda:any, sarga:any, verse:any){
+	export async function padasofRamayana(kanda:string, sarga:string, verse:string){
 		const { data, error} = await supabase
 		.from ('db-ramayana')
 		.select()
@@ -241,7 +242,7 @@ export async function RVWords(msr:any){
 		return data
 	}
 
-	export async function versesofRamayana(startat:any, kanda:any, sarga:any){
+	export async function versesofRamayana(startat:number, kanda:number, sarga:number){
 		const { data, error} = await supabase
 		.from ('db-ramayanaindex')
 		.select()
@@ -255,7 +256,7 @@ export async function RVWords(msr:any){
 		return data
 	}
 
-	export async function versesByKanda(kanda:any, limit:any){
+	export async function versesByKanda(kanda:number, limit:number){
 		const { data, error} = await supabase
 		.from ('db-ramayana')
 		.select()
@@ -266,7 +267,7 @@ export async function RVWords(msr:any){
 		return data
 	}
 
-	export async function sargasofRamayana(filteredKanda:any){
+	export async function sargasofRamayana(filteredKanda:number){
 		const { data, error} = await supabase
 		.from ('db-ramayanaindex')
 		.select()
@@ -287,7 +288,7 @@ export async function RVWords(msr:any){
 		return data
 	}
 
-	export async function verseSlug(id:any){
+	export async function verseSlug(id:number){
 		const { data, error} = await supabase
 		.from ('db-ramayanaindex')
 		.select()
@@ -297,7 +298,7 @@ export async function RVWords(msr:any){
 		return data
 	}
 
-	export async function entireRamayana(upperlimit:any, lowerlimit:any){
+	export async function entireRamayana(upperlimit:number, lowerlimit:number){
 		const { data, error} = await supabase
 		.from ('db-ramayana')
 		.select()
@@ -308,7 +309,7 @@ export async function RVWords(msr:any){
 		return data
 	}
 
-export async function vargaGroups(varga:any){
+export async function vargaGroups(varga:string){
 	const { data, error } = await supabase
 	.from('db-amarakosha')
 	.select()
@@ -318,7 +319,7 @@ export async function vargaGroups(varga:any){
 	return data
 }
 
-export async function dbDictionary(word:any){
+export async function dbDictionary(word:string){
 	const { data, error } = await supabase
 	.from('db-dictionary')
 	.select()
@@ -347,7 +348,7 @@ export async function dbDhatus(limit:number){
 	return data
  }
 
-export async function dhatuNode(dhatu:any){
+export async function dhatuNode(dhatu:string){
 	const { data, error } = await supabase
 	.from('db-dhatupathafixed')
 	.select()
@@ -357,7 +358,7 @@ export async function dhatuNode(dhatu:any){
 	return data
 }
 
-export async function dhatuKartari(id:any){
+export async function dhatuKartari(id:string){
 	const { data, error} = await supabase
 	.from('db-dhatustore')
 	.select()
@@ -367,7 +368,7 @@ export async function dhatuKartari(id:any){
 	return data
 }
 
-export async function dhatuReference(idx:any,idy:any){
+export async function dhatuReference(idx:string,idy:string){
 	const { data, error } = await supabase
 	.from('db-dhatureference')
 	.select()
@@ -378,7 +379,7 @@ export async function dhatuReference(idx:any,idy:any){
 	return data
 }
 
-export async function rmLemma(select:any){
+export async function rmLemma(select:string){
 	const { data, error } = await supabase
 	.from('vw-ramayanalemmawithmeanings')
 	.select()

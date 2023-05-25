@@ -12,7 +12,7 @@
     let resultsWindow = false;
     
     async function loadItems(){
-        searchitems = await allDhatus();
+        searchitems = await allDhatus(2);
     }
 
     loadItems();

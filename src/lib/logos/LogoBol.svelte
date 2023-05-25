@@ -89,11 +89,6 @@
 	100%
 		transform: scale(1.0)
 
-
-
-#bol-gol-white
-	stroke-width: 1px
-
 .rta-row
 	position: relative
 	align-items: center
