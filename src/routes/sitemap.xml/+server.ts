@@ -1,0 +1,207 @@
+export async function GET() {
+	return new Response(
+		`
+			<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
+<url>
+  <loc>https://www.brhat.in/</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/about/culturecreatives</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/about/policyresearch</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/about/leadershipdevelopment</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/about</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/anveshi</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/drashta</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/mrdanga</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/dhiti</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/openlibrary</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/about/svatahsiddha</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/about/anatomy</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/about/whatkrishnameanstous</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/about/namelogo</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/about/values</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/anveshi/chapter/karnataka</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/anveshi/chapter/odisha</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/anveshi/chapter/chamba</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/drashta/schools</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/drashta/course/shriramswarup</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/drashta/course/sitaramgoel</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/drashta/course/hinduiconography</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/drashta/course/valmikiramayana</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/aryavarta</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/aryavarta/chapter/01</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/aryavarta/chapter/02</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/aryavarta/chapter/03</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/rta</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/mandala</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/about/privacy</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/mandala/aphorisms</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/mandala/ancestors</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/mandala/synrec</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/mandala/macrohistoriccase</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/mandala/indiancivcon</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/mandala/rathaasbija</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/mandala/historyvsitihasa</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.brhat.in/mandala/ramasjourney</loc>
+  <lastmod>2023-05-25T08:44:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
+			`
+	);
+}
