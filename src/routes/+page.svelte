@@ -52,7 +52,7 @@
 
 
 	let title = 'Bṛhat'
-	let content:string = 'the Cultre Engine'
+	let content:string = 'the Culture Engine'
 	let url = 'https://www.brhat.in'
 	let type = 'website'
 	let description = 'Bṛhat is an Engine for Dhārmika Furtherance, Affordance and Deliverance'

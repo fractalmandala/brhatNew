@@ -27,7 +27,7 @@
 	let alignGrid = false
 
 	let title = 'About Bṛhat'
-	let content:string = 'the Cultre Engine'
+	let content:string = 'the Culture Engine'
 	let url = 'https://www.brhat.in/about'
 	let type = 'about'
 	let description = 'Bṛhat is an Engine for Dhārmika Furtherance, Affordance and Deliverance'
