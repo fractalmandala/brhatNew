@@ -55,9 +55,9 @@
 	</div>
 
 	<div class="plain-one x1">
-		<div class="boxr">
-			<cite>{data.tags}</cite><br>
+		<div class="rta-row colgap100">
 			<small>{data.category}</small>
+			<cite>{data.tags}</cite><br>
 		</div>
 		<h2 style="font-family: 'STIX Two Text', serif; font-weight: 700;">{data.title}</h2>
 		<div class="authorbox">{data.author}<br>
@@ -75,10 +75,10 @@
 	</div>
 
 	<div class="rta-column x22">
-			<div class="maincol dhitiblogbox" class:light={$themeMode} class:dark={!$themeMode} bind:this={ref}>
+			<div class="maincol dhitiblogbox p-top-32" class:light={$themeMode} class:dark={!$themeMode} bind:this={ref}>
 				<svelte:component this={data.content} class="dhitiblog"/>
 				<div class="rta-column rowgap300">
-					<h5>More from {data.author}:</h5>
+					<h5 class="serif">More from {data.author}:</h5>
 					{#if thisAuthorPosts && thisAuthorPosts.length > 0}
 						{#each thisAuthorPosts as item}
 						<a class="rta-row fixed colgap300 bord-bot p-bot-32" href="{item.path}">
@@ -87,7 +87,7 @@
 						</div>
 						<div class="rta-column w64 rowgap100">
 							<cite class="citeone">{item.meta.category}</cite>
-							<h6>{item.meta.title}</h6>
+							<h6 class="serif">{item.meta.title}</h6>
 							<cite class="citetwo">{item.meta.tags}</cite>
 						</div>
 						</a>
@@ -98,13 +98,13 @@
 	</div>
 
 	<div class="rta-column x3 dhitiouter">
-		<h4>Latest Posts:</h4>
+		<h4 class="serif">Latest Posts:</h4>
 			{#if posts && posts.length > 0}
 				{#each posts as item}
 					{#if item.meta.title !== data.title}
 					<div class="rta-column rowgap200 bord-bot p-bot-32 p-top-32">
 						<h6 class="heading hover-purple"><a href={item.path}>{item.meta.title}</a></h6>
-						<p class="tt-no">{item.meta.excerpt}</p>
+						<p class="tt-no serif">{item.meta.excerpt}</p>
 						<div class="rta-column">
 							<small class="is-purple">
 								<strong>
@@ -185,7 +185,7 @@
 
 .rta-column
 	h6
-		font-family: 'Playfair Display', serif
+		font-family: 'Adobe Devanagari', serif
 
 
 .authortwitter
@@ -209,7 +209,7 @@
 		opacity: 0
 
 .x1
-	.boxr
+	.rta-row
 		align-items: center
 		padding-bottom: 32px	
 		small

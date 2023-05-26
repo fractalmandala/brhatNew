@@ -36,7 +36,7 @@ export async function latestDhitiPost(){
 	return allPosts.slice(0, 1)
 } //single latest post
 
-export async function latestDhitiFour(){
+export async function latestDhitiFour(limit){
 	const allPostFiles = import.meta.glob('/src/routes/dhiti/*.md')
 	const iterablePostFiles = Object.entries(allPostFiles)
 	const allPosts = await Promise.all(
@@ -52,7 +52,7 @@ export async function latestDhitiFour(){
 	)
 	// @ts-ignore
 	allPosts.sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date))
-	return allPosts.slice(0, 4)
+	return allPosts.slice(0, limit)
 } //latest posts 2, 3 and 4
 
 export async function latestDhitiTen(){

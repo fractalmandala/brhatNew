@@ -50,8 +50,8 @@
 
 $home: 'Varta', sans-serif
 $hind: 'Martel', serif
-$stix: 'STIX Two Text', serif
-$libre: 'Libre Franklin', sans-serif
+$stix: 'Adobe Devanagari', serif
+$libre: 'Space Grotesk', sans-serif
 $grot: 'Space Grotesk', sans-serif
 
 body, html, li, pre
@@ -99,16 +99,22 @@ p, pre, li, input, small, cite
 	font-size: 1rem
 	color: var(--themer)
 
+p.cutheight
+	line-height: 1.2
+
 .null
 	p, small, h3, h4, h5, h6, cite, h2, h1
 		margin: 0
+
+.serif
+	font-family: 'Adobe Devanagari', serif 
 
 li.em
 	font-size: 1.12rem
 	font-weight: 400
 
 .mainstory p
-	font-family: 'STIX Two Text', sans-serif
+	font-family: 'Adobe Devanagari', sans-serif
 	font-size: 1.12rem
 	line-height: 1.4
 
@@ -163,6 +169,9 @@ p, h1, h2, h3, h4, h5, h6, blockquote
 p.linecut
 	line-height: 1.12
 
+p.serif
+	font-family: 'Adobe Devanagari', serif
+
 li
 	margin-bottom: 8px
 
@@ -184,6 +193,9 @@ h5
 	font-weight: 400
 	color: var(--greyish)
 
+h5.serif
+	font-size: 6vw
+
 h4
 	font-size: 2.16rem
 	color: var(--opposite)
@@ -192,6 +204,9 @@ h3
 	font-size: 3.2rem
 	letter-spacing: -1px
 	color: var(--themer)
+
+h3.black
+	color: var(--opposite)
 
 h2
 	font-size: 4.8rem
@@ -210,6 +225,8 @@ h1
 		font-size: 10vw
 	h5
 		font-size: 3.6vw
+	h5.serif
+		font-size: 4vw
 	h6
 		font-size: 3.2vw
 
@@ -218,6 +235,8 @@ h1
 		font-size: 8vw
 	h5
 		font-size: 3vw
+	h5.serif
+		font-size: 3.2vw
 	h6
 		font-size: 2.4vw
 
@@ -226,6 +245,8 @@ h1
 		font-size: 8vw
 	h5
 		font-size: 2.4vw
+	h5.serif
+		font-size: 2.8vw
 	h6
 		font-size: 2vw
 
@@ -234,8 +255,13 @@ h1
 		font-size: 6vw
 	h5
 		font-size: 1.8vw
+	h5.serif
+		font-size: 2.4vw
 	h6
 		font-size: 1.4vw
+	h6.serif
+		font-size: 1.6vw
+		line-height: 1.12
 
 .boxmidrow
 	a
@@ -279,6 +305,8 @@ h1
 		margin-bottom: 1.5rem
 		font-weight: bold
 		color: var(--opposite)
+	h3
+		color: var(--opposite)
 	@media screen and (min-width: 1024px)
 		blockquote
 			margin-left: 2.4rem
@@ -289,7 +317,7 @@ h1
 
 .light.maincol
 	p, p i, i
-		font-family: 'STIX Two Text', serif
+		font-family: 'Adobe Devanagari', serif
 		color: #272727
 		margin-bottom: 20px
 		font-weight: 400
@@ -302,10 +330,10 @@ h1
 			padding-top: 64px
 			margin-top: 32px
 	li
-		font-family: 'STIX Two Text', serif
+		font-family: 'Adobe Devanagari', serif
 		color: #272727
 	h4
-		font-family: 'STIX Two Text', serif
+		font-family: 'Adobe Devanagari', serif
 		color: #272727
 	blockquote
 		border-left: 4px solid #fe4a49
@@ -314,8 +342,8 @@ h1
 		letter-spacing: -0.25px
 	@media screen and (min-width: 1024px)
 		p, li, p i
-			font-size: 20px
-			line-height: 1.6
+			font-size: 24px
+			line-height: 1.4
 		h4
 			margin-top: 40px
 			margin-bottom: 20px
@@ -374,7 +402,7 @@ h1
 
 .dark.maincol
 	p, p i, i
-		font-family: 'STIX Two Text', serif
+		font-family: 'Adobe Devanagari', serif
 		color: #FFFFFF
 		margin-bottom: 20px
 	>.rta-column
@@ -386,10 +414,10 @@ h1
 			padding-top: 64px
 			margin-top: 32px
 	li
-		font-family: 'STIX Two Text', serif
+		font-family: 'Adobe Devanagari', serif
 		color: #FFFFFF
 	h4
-		font-family: 'STIX Two Text', serif
+		font-family: 'Adobe Devanagari', serif
 		color: #FFFFFF
 	blockquote
 		border-left: 4px solid #fe4a49

@@ -34,7 +34,7 @@
 </script>
 
 
-<Header sidebar={sidebar}>
+<Header>
 	<div slot="local" class="boxmidrow">
 		<a href="/about">About</a>
 		<a href="/about/svatahsiddha">Svataḥsiddha</a>

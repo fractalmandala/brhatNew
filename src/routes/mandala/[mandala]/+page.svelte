@@ -19,6 +19,7 @@ import HeadLocal from '$lib/components/HeadLocal.svelte'
 	let fake = false
 	let pageImage:any
 	let pageTitle:any
+	let ref:HTMLElement
 
 	function toggleLightMode(){
 		lightMode = !lightMode
@@ -80,124 +81,36 @@ import HeadLocal from '$lib/components/HeadLocal.svelte'
 <svelte:window bind:innerWidth={wide}/>
 
 <PageProgress --thispagebackground="#10C56D" --thispageheight="2px"/>
-<div class="type mandalatext heightmeasure">
+<div class="rta-column">
 	<div class="x0">
 		<ParallaxImage --parallax="url('{pageImage}')" --parallaxresp="url('{pageImage}')"></ParallaxImage>
 	</div>
-	<div class="plain-one x1 pads">
-		<div class="a-title">
-			<h2>
+	<div class="rta-column in-blog carrier heightmeasure p-top-64" bind:this={ref}>
+			<h3 class="glass-y p-top-32 p-bot-32 m-bot-32">
 			{pageTitle}
-			</h2>
-			<div class="toggler" class:togglered={lightMode} id="single" on:click={toggleLightMode} on:keydown={fauxfake}>
-				<div class="togglerball" class:toggled={lightMode}></div>
-			</div>
-		</div>
-	</div>
-	<div class="x2">
-		<div class="mainbar" class:light={lightMode} class:dark={!lightMode}>
-			<svelte:component this={data.content}/>
-		</div>
+			</h3>
+<svelte:component this={data.content}/>
 	</div>
 </div>
 
+
+
+
 <style lang="sass">
-
-.toggler
-	height: 32px
-	width: 80px
-	border-radius: 16px
-	background: #373737
-	padding-top: 4px
-	padding-left: 4px
-	margin-top: 24px
-	cursor: pointer
-	.togglerball
-		width: 24px
-		height: 24px
-		border-radius: 12px
-		transition: background 0.09s ease, transform 0.2s ease
-	&:hover
-		.togglerball
-			background: #10D56C
-	@media screen and (min-width: 1024px)
-		.togglerball.toggled
-			transform: translateX(48px)	
-		&:hover
-			.togglerball.toggled
-				background: white
-	@media screen and (max-width: 1023px)
-		height: 24px
-		width: 64px
-		padding-top: 2px
-		padding-left: 2px
-		.togglerball
-			width: 20px
-			height: 20px
-		&:hover
-			.togglerball
-				background: #10D56C
-			.togglerball.toggled
-				background: white
-		.togglerball.toggled
-			transform: translateX(38px)
-
-.togglerball
-	background: white
-
-.togglerball.toggled
-	background: white
-
-.togglered
-	@media screen and (min-width: 1024px)
-		background: #10D56C
-		
-
-	
-.mandalatext
-	background: #171717
 
 .x0
 	height: 100vh
 	overflow: hidden
+	width: 100vw
 	@media screen and (max-width: 1023px)
 		height: 50vh
 
-.x1
-	padding-top: 64px
-	padding-bottom: 64px
-	h2
-		color: #474747
-		text-align: left
+.carrier
+	place-self: center
 
-.x2
-	display: grid
-	grid-auto-flow: row
-	grid-template-rows: auto
-	.mainbar
-		grid-area: mainbar
-		border-radius: 4px
-	.mainbar.light
-		background: white
-	.mainbar.dark
-		background: #171717
-	@media screen and (min-width: 1024px)
-		grid-template-columns: 1fr
-		grid-template-areas: "mainbar"
-		padding: 64px 32vw 64px 6vw
-		.mainbar
-			padding: 64px
-			border: 1px solid #272727
+.in-blog
 	@media screen and (max-width: 1023px)
-		grid-template-columns: 1fr
-		grid-template-areas: "mainbar"
-		padding: 64px 6vw
-		gap: 32px 0
-		.mainbar
-			padding: 16px
+		padding: 32px
 
-.mainbar
-	padding-top: 80px
-	
 
 </style>
