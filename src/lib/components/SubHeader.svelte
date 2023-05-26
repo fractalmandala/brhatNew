@@ -12,7 +12,6 @@
 	let isInvisible = false
 	let mouseY:number
 	let latestScrollY:number
-	let iW:number
 	let breakPoint:boolean
 	let fake = false
 
@@ -64,11 +63,6 @@
 		latestScrollY = y
 	}
 
-	$: if ( iW <= 1023) {
-		breakPoint = true
-	} else {
-		breakPoint = false
-	}
 
 
 	onMount(() => {
@@ -87,7 +81,7 @@
 </script>
 
 
-<svelte:window bind:scrollY={y} bind:innerHeight={height} bind:innerWidth={iW}/>
+<svelte:window bind:scrollY={y} bind:innerHeight={height}/>
 
 <div class="appheader" class:hiddenHeader={isInvisible} class:light={$themeMode} class:dark={!$themeMode}>
 	<a class="applogo" href="/" data-sveltekit-reload>

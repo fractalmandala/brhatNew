@@ -1,10 +1,8 @@
 <script lang="ts">
 
 	import { onMount } from 'svelte'
-	import { invalidate } from '$app/navigation';
 	import HeadComponent from '$lib/components/MetaTag.svelte'
 	import RIDSidebar from '$lib/ridunits/RIDSidebar.svelte'
-	import { page } from '$app/stores'
 	import type { LayoutData } from './$types';
 	import { breakZero, breakOne, breakTwo, themeMode, innerWidth, sideMode, chipStore, showChip } from '$lib/stores/globalstores'
 	import { dev } from '$app/environment';
@@ -16,7 +14,6 @@
 	import Footer from '$lib/components/Footer.svelte'
 
 	let breakPointOn:boolean
-	let firstVisit = false
 	let fake = false
 
 	inject({ mode: dev ? 'development' : 'production' });
@@ -48,12 +45,7 @@
 			requestAnimationFrame(raf);
 		}
 		requestAnimationFrame(raf);
-		
-		firstVisit = localStorage.getItem('firstVisit') === null
 
-		if (firstVisit) {
-			localStorage.setItem('firstVisit', 'false')
-		}
 	});
 
 export let data: LayoutData;
@@ -81,9 +73,9 @@ export let data: LayoutData;
 	class:levelone={$breakOne}
 	class:leveltwo={$breakTwo}
 	>
-	<Chip/>
 	<slot></slot>
 	<RIDSidebar/>
+	<Chip/>
 	<Footer></Footer>
 </main>
 

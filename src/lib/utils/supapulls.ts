@@ -165,6 +165,7 @@ export async function latestVidsVar(count:number) {
 	const { data, error } = await supabase
   .from('brhat-youtube')
   .select()
+	.neq('bettag',true)
   .order('id',{ascending: false})
   .limit(count)
   if (error) throw new Error(error.message)
