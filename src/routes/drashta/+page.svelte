@@ -106,12 +106,12 @@
 			{#if courses && courses.length > 0}
 				{#each courses as item}
 					{#if item.status === 'upcoming' || item.status === 'Upcoming'}
-					<div class="rta-row row-col rowgap300 colgap300 bord-bot p-bot-32">
+					<div class="course-card rta-row stay rowgap300 colgap300 p-bot-32">
 						<div class="rta-image w32 height-40-20">
 							<img src={item.image} alt={item.name}/>
 						</div>
 						<div class="rta-column w64 rowgap100">
-							<small class="label">
+							<small class="label upcoming">
 								{item.status}
 							</small>
 							{#if fullText}
@@ -123,14 +123,14 @@
 						</div>
 					</div>
           {:else if item.status === 'open now'}
-          <div class="rta-row row-col rowgap300 colgap300 bord-bot p-bot-32">
+          <div class="course-card rta-row stay rowgap300 colgap300 p-bot-32">
 						<div class="rta-image w32 height-40-20">
 							<img src={item.image} alt={item.name}/>
 						</div>
 						<div class="rta-column w64 rowgap100">
-							<h6 class="label label-open">
+							<small class="label opennow">
 								{item.status}!
-							</h6>
+							</small>
 							{#if fullText}
 							<h6 class="serif tt-c hover-blue">
 								<a href="/drashta/course/{item.course}">
@@ -145,18 +145,18 @@
 							</h5>
 							{/if}
 							<p>
-								{item.content.slice(0,250)}...<a style="color: var(--yellow)" href="/drashta/course/{item.course}">READ MORE</a>
+								{item.content.slice(0,250)}...<a style="color: var(--betblue)" href="/drashta/course/{item.course}">READ MORE</a>
 							</p>
 							<cite class="sticker-blue">with {item.ins}</cite>
 						</div>
           </div>
 					{:else}
-					<div class="rta-row row-col rowgap300 colgap300 bord-bot p-bot-32">
+					<div class="course-card rta-row stay rowgap300 colgap300 p-bot-32">
 						<div class="rta-image w32 height-40-20">
 							<img src={item.image} alt={item.name}/>
 						</div>
 						<div class="rta-column w64 rowgap100">
-							<small class="label label-yellow">
+							<small class="label labelelse">
 								{item.status}
 							</small>
 							{#if fullText}
@@ -173,7 +173,7 @@
 							</h5>
 							{/if}
 							<p>
-								{item.content.slice(0,250)}...<a style="color: var(--yellow)" href="/drashta/course/{item.course}">READ MORE</a>
+								{item.content.slice(0,250)}...<a style="color: var(--betblue)" href="/drashta/course/{item.course}">READ MORE</a>
 							</p>
 							<cite class="sticker-blue">with {item.ins}</cite>
 						</div>
@@ -187,11 +187,24 @@
 
 <style lang="sass">
 
-.label-open
-	background: #E4A503
+small.label
+	font-weight: bold
+	width: max-content
+	max-width: 80%
+	padding: 2px 6px
+	border-radius: 6px
 	color: white
-	padding: 5px
+	
+.upcoming
+	background: var(--betblue)
 
+.opennow
+	background: var(--yellow)
+	font-size: 14px
+
+.labelelse
+	background: var(--themer)
+	
 
 .hover-blue
 	transition: 0.08s
@@ -199,25 +212,32 @@
 		color: #0170B9
 
 .sticker-blue
-	background: #0170B9
+	background: var(--themer)
 	color: white
-	padding-top: 2px
-	padding-left: 8px
-	width: 70%
+	padding: 2px 8px
+	border-radius: 6px
+	max-width: 70%
+	width: max-content
 
 .serif
-	font-family: 'STIX Two Text', serif
+	font-family: 'Adobe Devanagari', serif
+
+.course-card
+	h5.serif
+		color: var(--opposite)
+		line-height: 1.12
 
 h5.serif
 	font-weight: bold
 
 p.serif
-	font-size: 18px
+	font-size: 20px
 
 .x0
 	overflow: hidden
 	@media screen and (min-width: 1024px)
-		height: 100vh
+		height: calc(100vh - 72px)
+		margin-top: 72px
 	@media screen and (max-width: 1023px)
 		height: 50vh
 		margin-top: 64px

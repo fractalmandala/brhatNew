@@ -2,6 +2,7 @@
 
 	import { onMount, afterUpdate } from 'svelte'
   import { page } from '$app/stores'
+	import { slide } from 'svelte/transition'
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores'
 	import { fly } from 'svelte/transition'
 	import { backOut, backIn } from 'svelte/easing'
@@ -54,6 +55,17 @@
 		breakPoint = false
 	}
 
+	$: (async() => {
+			conts = await courseContents(dynamizer)
+			takes = await courseTakeaways(dynamizer)
+			instructor = await courseInstructor(dynamizer)
+			details = await courseDetails(dynamizer)
+			isFor = await courseWhoFor(dynamizer)
+			otherCourses = await allCourses()
+    	schedules = await newSRG(dynamizer)
+    	junes = await juneCalendar();
+		})();
+
 	onMount(async() => {
 		dynamizer = $page.url.pathname.slice(16,50)
 		conts = await courseContents(dynamizer)
@@ -77,8 +89,8 @@
 <svelte:window bind:scrollY={y} bind:innerWidth={iW}/>
 
 <!--page header with title and icons-->
-	<div id="headersection" class="rta-column outer-box minH p-top-64 rowgap600" data-lenis-scroll-snap-align="start">
-		<div class="rta-grid colgap600 grid2 right2" id="headersectionmaingrid">
+	<div id="headersection" class="rta-column outer-box minH rowgap600 p-top-64" data-lenis-scroll-snap-align="start">
+		<div class="rta-grid colgap600 grid2 right2 glass-bottom p-bot-64" id="headersectionmaingrid">
 			<div class="rta-column rowgap400">
 				<div id="heading" class="rta-column rowgap400 p-top-64 background">
 					<h2 class="heading">{data.name}</h2>
@@ -86,23 +98,25 @@
 						{data.excerpt}
 					</h5>
 				</div>
-				<div class="rta-grid grid4 colgap400 rowgap400">
+				<div class="rta-grid grid4 stay3 colgap400 rowgap400">
 					{#if details && details.length > 0}
 						{#each details as item}
 							<div class="rta-column xcenter rowgap100 bord-bot-m p-bot-16-m background">
 								<div class="rta-icon2 rta-column">
 									<img src={item.image} alt={item.name}/>
 								</div>
-								<h6 class="tt-uc ta-c-d">{item.content}</h6>
+								<p class="tt-uc ta-c-d ta-c-m"><b>{item.content}</b></p>
 								<small class="tt-uc ta-c-d"><b>{item.name}</b></small>
 							</div>
 						{/each}
             {#if data.status === 'open now'}
+							<div class="widening">
               <CompButton --thisbuttoncolor="#0170B9">
                 <a href="https://rzp.io/l/4OgbiD3Co" target="_blank" rel="noreferrer" style="font-size: 18px">
                   Register and Pay
                 </a>
               </CompButton>
+							</div>
             {/if}
 					{/if}
 				</div>
@@ -115,13 +129,13 @@
 <!--end-->
 
 <!--all course details area-->
-	<div class="rta-grid grid2 left0 colgap600 outer-box" data-lenis-scroll-snap-align="start">
-		<div id="columnofbuttons" class="rta-column bord-right-d rowgap300 p-bot-64">
+	<div class="rta-column outer-box x000" data-lenis-scroll-snap-align="start">
+		<div id="columnofbuttons" class="rta-column xcenter rowgap300 p-bot-32">
 			{#if breakPoint}
 			<button class="drawer-select" on:click={toggleMenu}>EXPAND DETAILS</button>
 			{/if}
 			{#if !breakPoint || expandMenu}
-			<div class="rta-column rowgap300" on:click={toggleMenu} on:keydown={fauxfake}>
+			<div class="rta-row colgap300" on:click={toggleMenu} on:keydown={fauxfake} transition:slide>
 			<button class="drawer-item2" on:click={() => toggleArea(1)} class:selected={area[1]}>
 					Introduction
 			</button>
@@ -143,29 +157,34 @@
 			</div>
 			{/if}
 		</div>
-		<div class="rta-column p-bot-64">
+		<div class="rta-column glass-top p-bot-64">
 			{#if area[1]}
-			<div class="rta-column rowgap300" in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut}} out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn}}>
-				<h4 class="heading is-blue">Course Introduction</h4>
+			<div class="rta-column p-top-32 carrier" in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut}} out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn}}>
+				<h4 class="serif p-bot-16">Course Introduction</h4>
 				<pre class="serif">
 				{data.content}
 				</pre>
 			</div>
 			{/if}
 			{#if area[2]}
-			<div class="rta-column rowgap300" in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut}} out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn}}>
-				<h4 class="heading is-blue">Course Contents</h4>
+			<div class="rta-column p-top-32 carrier" in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut}} out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn}}>
+				<h4 class="serif p-bot-16">Course Contents</h4>
 				{#if conts && conts.length > 0}
 					{#each conts as item}
-						<div class="rta-column rowgap-8 bord-bot p-bot-16">
+						<div class="rta-column rowgap100 rowgap-8 bord-bot p-bot-16 p-top-16">
 							<h6 class="tt-c heading">{item.name}</h6>
 							{#if item.content && item.content.length > 0}
 							<pre class="serif">{item.content}</pre>
 							{/if}
 							{#if item.books && item.books.length > 0}
-							<div class="rta-column">
-								<small>Books Consulted:</small>
-								<small style="color: #878787">{item.books}</small>
+							<div class="rta-row stay colgap100">
+								<div class="rta-image w32">
+									<img src="/images/iconbooks.png" alt="books"/>
+								</div>
+								<div class="rta-column w64">
+									<small>Books Consulted:</small>
+									<small style="color: #878787">{item.books}</small>
+								</div>
 							</div>
 							{/if}
 						</div>
@@ -174,8 +193,8 @@
 			</div>
 			{/if}
 			{#if area[3]}
-			<div class="rta-column rowgap100" in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut}} out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn}}>
-				<h4 class="heading is-blue">Who is the Course For</h4>
+			<div class="rta-column p-top-32 carrier" in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut}} out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn}}>
+				<h4 class="serif">Who is the Course For</h4>
 				{#if isFor && isFor.length > 0}
 					{#each isFor as item}
 						<pre class="serif bord-all all-p-16">
@@ -186,11 +205,11 @@
 			</div>
 			{/if}
 			{#if area[4]}
-			<div class="rta-column rowgap300" in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut}} out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn}}>
-				<h4 class="heading is-blue">Learner Takeaways</h4>
+			<div class="rta-column p-top-32 carrier" in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut}} out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn}}>
+				<h4 class="serif p-bot-16">Learner Takeaways</h4>
 				{#if takes && takes.length > 0}
 					{#each takes as item}
-						<div class="rta-column rowgap100 bord-bot p-bot-16">
+						<div class="rta-column null rowgap100 bord-bot p-top-32 p-bot-16">
 							<h6 class="heading">{item.name}</h6>
 							<pre class="serif">{item.content}</pre>
 						</div>
@@ -199,8 +218,8 @@
 			</div>
 			{/if}
 			{#if area[5]}
-			<div class="rta-column rowgap300" in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut}} out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn}}>
-				<h4 class="heading is-blue">Course Instructor</h4>
+			<div class="rta-column p-top-32 carrier" in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut}} out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn}}>
+				<h4 class="serif p-bot-16">Course Instructor</h4>
 				{#if instructor && instructor.length > 0}
 					{#each instructor as item}
 						<div class="rta-row row-col fixed rowgap300 colgap300 bord-bot p-bot-16">
@@ -217,9 +236,9 @@
 			</div>
 			{/if}
             {#if area[6]}
-                <div class="rta-column rowgap300" in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut}} out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn}}>
+                <div class="rta-column p-top-32 outer-box" in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut}} out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn}}>
                     {#if schedules && schedules.length > 0}
-                    <h4 class="heading is-blue">Session Schedule</h4>
+                    <h4 class="serif p-bot-16">Session Schedule</h4>
                     <div class="rta-grid grid7">
                       {#if junes && junes.length > 0}
                         {#each junes as item}
@@ -238,23 +257,22 @@
 		</div>
 	</div>
 <!--end-->
-	<div class="rta-column outer-box"><div class="line"></div></div>
 <!--all other courses list-->
-	<div class="rta-grid grid2 left0 rowgap400 outer-box colgap600 p-top-64" data-lenis-scroll-snap-align="start">
-		<div class="rta-column">
-			<h3 class="heading is-blue">All Courses</h3>
+	<div class="rta-column rowgap400 outer-box p-top-64" data-lenis-scroll-snap-align="start">
+		<div class="rta-column glass-y p-top-32 p-bot-32">
+			<h3 class="serif">All Courses</h3>
 		</div>
 		<div class="rta-grid grid3 colgap400 rowgap400 p-bot-64">
 		{#if otherCourses && otherCourses.length > 0}
 			{#each otherCourses as item}
 				<div class="rta-column rowgap100 bord-bot p-bot-16">
 					{#if item.status === 'upcoming' || item.status === 'Upcoming'}
-						<small class="label label-red">{item.status}</small>
+						<small class="label labelelse">{item.status}</small>
 						<h6 class="heading tt-c">{item.name}</h6>
 						<p>{item.datefrom} | with {item.ins}</p>
 					{:else}
-					<small class="label">{item.status}</small>
-					<h6 class="heading tt-c is-blue">
+					<small class="label labelelse">{item.status}</small>
+					<h6 class="heading tt-c">
 						<a href="/drashta/course/{item.course}">
 							{item.name}
 						</a>
@@ -270,6 +288,26 @@
 
 
 <style lang="sass">
+
+.x000
+	@media screen and (max-width: 1023px)
+		padding-top: 0
+		.drawer-select
+			width: 100%
+
+.rta-row.stay
+	.rta-image
+		height: 48px
+		width: 48px
+
+.label
+	font-size: 12px
+	background: var(--themer)
+	color: white
+	padding: 2px 6px
+	border-radius: 5px
+	max-width: 100%
+	width: max-content
 
 .drawer-select
 	background: #0170B9
@@ -288,7 +326,6 @@
 #headersectionmaingrid
 	@media screen and (max-width: 1023px)
 		grid-template-areas: "hero" "."
-		padding-top: 64px
 		#heroimage
 			grid-area: hero
 
@@ -303,6 +340,18 @@
 	background: var(--borderline)
 	small
 		color: #fe4a49
+
+.grid4.stay3
+	@media screen and (min-width: 1024px)
+		grid-template-areas: ". . . ." "button button . ."
+		.widening
+			grid-area: button
+	@media screen and (max-width: 1023px)
+		grid-template-areas: ". . ." "button button button"
+		.widening
+			grid-area: button
+			align-self: center
+			justify-self: center
 
 .datebox
 	@media screen and (min-width: 1024px)
@@ -325,16 +374,24 @@
 			color: var(--opposite)
 
 .drawer-item2
+	font-weight: bold
+	font-size: 18px
+	padding: 2px 6px
 	&::after
 		background: #0170B9
 	@media screen and (max-width: 1023px)
 		text-align: center
+		padding: 4px 6px
 
 #heroimage
 	@media screen and (min-width: 1024px)
 		justify-content: center
 		img
 			height: 80%
+	@media screen and (max-width: 1023px)
+		img
+			object-fit: cover
+			width: 100%
 
 .rta-icon2
 	img
@@ -359,16 +416,21 @@ h2
 		letter-spacing: -1px
 
 .serif
-	font-family: 'Nanum Myeongjo', serif
+	font-family: 'Adobe Devanagari', serif
 
 .heading
-	font-family: 'STIX Two Text', serif
+	font-family: 'Adobe Devanagari', serif
+
+h6.heading
+	line-height: 1.2
 
 pre.serif
 	font-weight: 400
-	font-size: 20px
+	font-size: 22px
+	font-family: 'Adobe Devanagari', serif
 
 .drawer-item2.selected
-	border: 1px solid var(--bord)
+	background: var(--betblue)
+	color: white
 
 </style>

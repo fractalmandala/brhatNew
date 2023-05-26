@@ -91,7 +91,10 @@
 		color: #0170B9
 
 .serif
-	font-family: 'STIX Two Text', serif
+	font-family: 'Adobe Devanagari', serif
+
+p.serif
+	font-size: 20px
 
 .x0
 	.screen

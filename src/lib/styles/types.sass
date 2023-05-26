@@ -24,6 +24,30 @@
 	src: url('/fonts/Varta-VariableFont_wght.ttf') format('ttf')
 	font-weight: 600
 
+@font-face
+	font-family: 'Adobe Devanagari'
+	src: url('/fonts/AdobeDevanagari-Regular.woff2') format('woff2'), url('/fonts/AdobeDevanagari-Regular.woff') format('woff')
+	font-weight: normal
+	font-style: normal
+
+@font-face
+	font-family: 'Adobe Devanagari'
+	src: url('/fonts/AdobeDevanagari-Italic.woff2') format('woff2'), url('/fonts/AdobeDevanagari-Italic.woff') format('woff')
+	font-weight: normal
+	font-style: italic
+
+@font-face
+	font-family: 'Adobe Devanagari'
+	src: url('/fonts/AdobeDevanagari-BoldItalic.woff2') format('woff2'), url('/fonts/AdobeDevanagari-BoldItalic.woff') format('woff')
+	font-weight: bold
+	font-style: italic
+
+@font-face
+	font-family: 'Adobe Devanagari'
+	src: url('/fonts/AdobeDevanagari-Bold.woff2') format('woff2'), url('/fonts/AdobeDevanagari-Bold.woff') format('woff')
+	font-weight: bold
+	font-style: normal
+
 $home: 'Varta', sans-serif
 $hind: 'Martel', serif
 $stix: 'STIX Two Text', serif
@@ -70,7 +94,7 @@ a
 h1, h2, h3, h4, h5, h6, button, input, textarea, select
 	font-family: 'Space Grotesk', sans-serif
 
-p, pre, li, input, small
+p, pre, li, input, small, cite
 	font-weight: 400
 	font-size: 1rem
 	color: var(--themer)
@@ -146,7 +170,7 @@ blockquote
 	font-style: italic
 
 h6
-	font-size: 3.6vw
+	font-size: 4vw
 	color: var(--opposite)
 
 h6.thin
@@ -156,7 +180,7 @@ pre.h5
 	font-size: 1.2rem
 
 h5
-	font-size: 4vw
+	font-size: 4.4vw
 	font-weight: 400
 	color: var(--greyish)
 
@@ -212,22 +236,6 @@ h1
 		font-size: 1.8vw
 	h6
 		font-size: 1.4vw
-
-@media screen and (max-width: 575px)
-	h4
-		font-size: 2rem
-	h3
-		font-size: 2.8rem
-	h2
-		font-size: 3.4rem
-
-@media screen and (max-width: 1023px) and (min-width: 576px)
-	h4
-		font-size: 2.4rem
-	h3
-		font-size: 3rem
-	h2
-		font-size: 3.6rem
 
 .boxmidrow
 	a

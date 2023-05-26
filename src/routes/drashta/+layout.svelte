@@ -4,11 +4,10 @@
 	import { themeMode } from '$lib/stores/globalstores'
 	import DrashtaLinks from '$lib/links/DrashtaLinks.svelte'
 	let onHead = true
-	let sidebar = false
 
 </script>
 
-<Header sidebar={sidebar}>
+<Header>
 	<div slot="local" class="boxmidrow">
 		<DrashtaLinks flytime={onHead}></DrashtaLinks>
 	</div>

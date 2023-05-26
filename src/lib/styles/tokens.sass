@@ -361,6 +361,13 @@ body, html
 			width: 60%
 		.in50
 			width: 50%
+	@media screen and (max-width: 1023px)
+		&.stay
+			flex-wrap: nowrap
+			.w32
+				width: 32%
+			.w64
+				width: 60%
 
 .rta-row
 	&.ytop-m
@@ -621,6 +628,9 @@ body, html
 	--themer: #777777
 	--boxshadow: 4px 7px 12px #e1e1e1
 	--onlyblack: #a7a7a7
+	--betblue: #0170B9
+	--mand: #538733
+	--yellow: #E4A503
 
 .dark
 	--dhiticolor: #0B6E4F
@@ -634,6 +644,9 @@ body, html
 	--greyish: #878787
 	--onlyblack: #474747
 	--themer: #474747
+	--betblue: #0170B9
+	--mand: #538733
+	--yellow: #E4A503
 
 //buttons
 .blank-button
@@ -947,15 +960,17 @@ body, html
 
 .levelzero
 	align-items: center
-	padding-top: 128px
 	.carrier
 		width: 680px
-
+		align-self: center
+		
 .levelone
 	align-items: center
-	padding-top: 128px
 	.carrier
 		width: 680px
 
-.leveltwo
-	padding: 128px 32px 64px 32px
+.levelzero
+	.course-card
+		border: 1px solid var(--borderline)
+		border-radius: 6px
+		padding: 16px

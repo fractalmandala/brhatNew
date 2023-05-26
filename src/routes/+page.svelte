@@ -40,7 +40,6 @@
 	let sY:number
 	let scyresp:number
 	let oH:number
-	let iW:number
 	let calib:number
 	let breakPoint:boolean
 	let fake = false
@@ -79,12 +78,6 @@
 		fake = !fake
 	}
 
-	$:	if ( iW <= 1023) {
-			breakPoint = true
-		} else {
-			breakPoint = false
-		}
-
 	$metaTitle = 'Bṛhat'
 	$metaDescription = 'the Culture Engine'
 	$metaUrl = ''
@@ -113,12 +106,6 @@
 			once: false,
 			scale: 2.5
 		});
-
-		if ( iW <= 1023) {
-			breakPoint = true
-		} else {
-			breakPoint = false
-		}
 	
 		(async () => {
 			threeactions = await createCurateConsult();
@@ -135,7 +122,7 @@
 
 
 
-<svelte:window bind:scrollY={sY} bind:outerHeight={oH} bind:innerWidth={iW}/>
+<svelte:window bind:scrollY={sY} bind:outerHeight={oH}/>
 
 
 <Header>

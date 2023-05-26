@@ -76,7 +76,11 @@ export let data: LayoutData;
 	</script>
 </svelte:head>
 
-<main id="appbox" class="themer" class:light={$themeMode} class:dark={!$themeMode}>
+<main id="appbox" class="themer" class:light={$themeMode} class:dark={!$themeMode}
+	class:levelzero={$breakZero}
+	class:levelone={$breakOne}
+	class:leveltwo={$breakTwo}
+	>
 	<Chip/>
 	<slot></slot>
 	<RIDSidebar/>

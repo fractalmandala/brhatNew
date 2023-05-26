@@ -8,7 +8,7 @@
 <Header>
 </Header>
 
-<div class="type" class:light={$themeMode} class:dark={!$themeMode}>
+<div class:light={$themeMode} class:dark={!$themeMode}>
 	<slot></slot>
 </div>
 

@@ -168,7 +168,7 @@
 
 <!--primary section featuring books-->
 	<div class="rta-column rowgap600 outer-box" data-lenis-scroll-snap-align="start">
-		<h3 class="typett ta-c-d bord-top p-top-32 p-bot-32 bord-bot">EXPLORE</h3>
+		<h3 class="typett ta-c-d glass-y p-top-32 p-bot-32">EXPLORE</h3>
 			{#if breakPoint}
 				<div class="rta-row colgap400 drawer-select" on:click={toggleMenu} on:keydown={fauxfake}>
 					Expand Groups
@@ -325,7 +325,7 @@
 
 <!--aryan issue section-->
 	<div class="rta-column minH rowgap600 outer-box p-top-64" data-lenis-scroll-snap-align="start">
-		<h3 class="typett p-top-32 p-bot-32 bord-top bord-bot ta-c-d">THE ĀRYAN ISSUE</h3>
+		<h3 class="typett p-top-32 p-bot-32 glass-y ta-c-d">THE ĀRYAN ISSUE</h3>
 			{#if breakPoint}
 				<div class="rta-row colgap400 drawer-select" on:click={toggleSecondMenu} on:keydown={fauxfake}>
 					Expand Genres

@@ -1,32 +1,46 @@
 <script lang="ts">
 
 	import { breakZero, breakOne, breakTwo } from '$lib/stores/globalstores'
+	let height:number
+
+	$: if ( $breakZero || $breakOne ) {
+		height = 720
+	} else {
+		height = 600
+	}
 
 	export let data
 
 </script>
 
-<div class="rta-column"
+<div class="bookpage rta-column"
 	class:levelzero={$breakZero}
 	class:levelone={$breakOne}
 	class:leveltwo={$breakTwo}
 	>
-	<div class="type">
-	<h3>
+	<div class="rta-row colgap100 glass-bottom p-bot-16 outer-box limit">
+		<div class="rta-column lib">
+			<small><a href="/openlibrary">Return</a></small>
+		</div>
+		<div class="rta-column genre">
+			<small>{data.Type}</small>
+		</div>
+	</div>
+	<h2 class="p-top-16 outer-box limit ta-c">
 		{data.Text}
-	</h3>
-	<div class="rta-row">
+	</h2>
+	<div class="rta-column p-bot-32 rowgap200 outer-box limit">
+		<h5 style="color: var(--mand)" class="glass-bottom p-bot-16">{data.author}</h5>
+		{#if data.Description && data.Description.length > 0}
 		<p>{data.Description}</p>
-		<h5>{data.author}</h5>
+		{/if}
 	</div>
-	</div>
-	<div class="boxc frameholder">
+	<div class="rta-column carrier">
 		<iframe 
-		data-lenis-prevent
 		title={data.Text}
 		src={data.Extract} 
 		width="100%"
-		height="720" 
+		height={height}
 		allow="autoplay">
 		</iframe>
 	</div>
@@ -34,56 +48,47 @@
 
 <style lang="sass">
 
-.levelzero
-	iframe
-		width: 720px
+.genre
+	background: var(--mand)
+	width: max-content
+	max-width: 80%
+	padding: 4px 12px
+	border-radius: 4px
+	small
+		color: white
 
-.levelone
-	iframe
-		width: 640px
+.lib
+	background: var(--themer)
+	width: max-content
+	max-width: 80%
+	padding: 4px 12px
+	border-radius: 4px
+	small
+		color: white
+	&:hover
+		background: #fe4a49
 
-.type
-	h3
-		font-family: 'Space Grotesk', sans-serif
-		border-bottom: 1px solid #d7d7d7
-		padding-bottom: 16px
+.bookpage.levelzero
+	padding-top: 0
+	align-items: center
+	h2
+		text-align: center
+		line-height: 1.2
 	h5, p
-	font-family: 'Space Grotesk', sans-serif
-	.rta-row
-		gap: 32px
-		padding-top: 24px
-		align-items: flex-start
-		h5
-			width: 35%
-			color: #474747
-			line-height: 1.5
-			font-weight: 400
-		p
-			width: calc(65% - 32px)
-			text-align: right
-	@media screen and (max-width: 1023px)
-		padding-top: 32px
-		h3
-			text-align: left
-		.rta-row
-			flex-wrap: wrap
-			flex-direction: column-reverse
-			column-gap: 0
-			row-gap: 16px
-			h5, p
-				width: 100%
-				text-align: left
+		text-align: center
 
-iframe
-	margin-top: 32px
+.bookpage.leveltwo
+	padding: 0
+	align-items: stretch
 
-.frameholder
-	display: flex
-	flex-direction: column
-	@media screen and (min-width: 1024px)
-		align-items: flex-start
-	@media screen and (max-width: 1023px)
-		align-items: center
+.carrier
+	border-radius: 8px
+	padding: 16px
+	background: var(--opposite)
+	iframe
+		border-radius: 8px
+		border: none
+	
 
 
 </style>
