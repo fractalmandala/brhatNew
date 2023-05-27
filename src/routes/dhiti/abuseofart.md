@@ -3,7 +3,7 @@ title: "The Abuse of Art: Propaganda in Shyam Singha Roy"
 author: Anshuman Panda
 category: Dharma Today
 tags: culture, movie review, critique
-excerpt: "The institution of marriage: a sacred yajña, a pathway to cosmic evolution, and the rhythmic balance between individuality and collective harmony."
+excerpt: "The Hindu conception of art is diametrically opposite to the movies being made today. This piece analyses the the abuse of art in the 2021 movie Shyam Singha Roy."
 date: "2023-05-27"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/shyamsingharoy?t=2023-05-27T12%3A40%3A50.377Z
 ---
@@ -11,7 +11,7 @@ image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwe
 <div align="center"> ॐ श्री अनिरुद्ध सरस्वती </div>
 
 
->*‘Today we are not drinking pure water, not breathing pure air, but we can hear pure bliss of you Panditji.*’
+>*Today we are not drinking pure water, not breathing pure air, but we can hear pure bliss of you Panditji.*
 
 This is a comment under a [song](https://www.youtube.com/watch?v=Si-6xyMYvhE) by Pandit Bhimsen Gururaj Joshi (1922-2011), one of the greatest Indian vocalists from the Hindustāni classical tradition. The comment was by no means solitary, nearly every commenter expressed their awe.
 
@@ -21,7 +21,7 @@ Evoking such bhāva is no mean feat, it takes an unreal level of dedication to r
 
 Hence, when art is laced with propaganda it not only becomes a tool to mislead, it does a disservice towards its higher purpose of unlocking beauty and thenceforth spiritual truths. It, therefore, becomes necessary for us to identify and check propaganda, not just to separate truth from untruths, but in the wider interest of preserving a gateway to divinity in human life.
 
-Examples are not wanting to demonstrate the deluge of propaganda that Hindus are subjected to through their own country’s cinemas: we have the *desert robber* edifying, brāhmaṇa vilifying [Shamshera](https://en.wikipedia.org/wiki/Shamshera), the Indian army denigrating, Forrest Gump ruining [Lal Singh Chadda](https://en.wikipedia.org/wiki/Laal_Singh_Chaddha) and the caste consciousness engendering [Jai Bhim](https://en.wikipedia.org/wiki/Jai_Bhim_(film)), among others. However, for the present examination, the 2021 Telugu movie [Shyam Singha Roy](https://en.wikipedia.org/wiki/Shyam_Singha_Roy) presents a suitable candidate.
+Examples are not wanting to demonstrate the deluge of propaganda that Hindus are subjected to through their own country’s cinemas: we have the desert robber edifying, brāhmaṇa vilifying [Shamshera](https://en.wikipedia.org/wiki/Shamshera), the Indian army denigrating, Forrest Gump ruining [Lal Singh Chadda](https://en.wikipedia.org/wiki/Laal_Singh_Chaddha) and the caste consciousness engendering [Jai Bhim](https://en.wikipedia.org/wiki/Jai_Bhim_(film)), among others. However, for the present examination, the 2021 Telugu movie [Shyam Singha Roy](https://en.wikipedia.org/wiki/Shyam_Singha_Roy) presents a suitable candidate.
 
 **Plot**
 
@@ -39,11 +39,11 @@ An organic dhārmika society is one which grows, reflects, rectifies and repeats
 
 One will observe that none of the evils outlined in the movie had been diagnosed as such before the European missionary contact with India in the early 16th century. They were broadly the mischievous result of misrepresentation and [atrocity literature](https://indiafacts.org/atrocity-literature-western-recipe-dismantle-india-hinduism/). 
 
-**Europe, coming out of Protestant Christian Reformation and empowered by Enlightenment, sought to discover and convert the world in its own image. **Therefore, it mapped various customs it encountered with its own customs back home; so Jāti Prathā<sup>1</sup> and Varṇāśrama Dharma<sup>2</sup> together were perverted as caste. And in the process of *casting* the jātis, institutions began distributing certificates so as to freeze the status of communities in the eyes of the State, and thus provided a permanent stick to beat the Hindu community with.
+**Europe, coming out of Protestant Christian Reformation and empowered by Enlightenment, sought to discover and convert the world in its own image. **Therefore, it mapped various customs it encountered with its own customs back home; so Jāti Prathā<sup>1</sup> and Varṇāśrama Dharma<sup>2</sup> together were perverted as caste. And in the process of casting the jātis, institutions began distributing certificates so as to freeze the status of communities in the eyes of the State, and thus provided a permanent stick to beat the Hindu community with.
 
 The Hindū jātis were a marker of occupational identity, along with providing social currency to the individual in the milieu. Different jātis had their own customs, and the system of hierarchical discrimination was less severe than the Western feudal system, where the division of people was much more concrete. Hindu society fell into decadence post the religiously motivated invasions, but this fact was quietly buried and Hindus were propped up as poster boys of the caste system along with untouchability.
 
-Europe had its own [untouchables](https://www.independent.co.uk/news/world/europe/the-last-untouchable-in-europe-878705.html), called cagots who lived in separate settlements called *cagoteries*. So did many Asian countries such as Japan. The discrimination meted out to untouchables in Europe was no less than that of their Indian counterparts, if not worse. This was apart from slavery, which has caused gigantic human suffering throughout the planet, and which has had no reparations till date.
+Europe had its own [untouchables](https://www.independent.co.uk/news/world/europe/the-last-untouchable-in-europe-878705.html), called cagots who lived in separate settlements called cagoteries. So did many Asian countries such as Japan. The discrimination meted out to untouchables in Europe was no less than that of their Indian counterparts, if not worse. This was apart from slavery, which has caused gigantic human suffering throughout the planet, and which has had no reparations till date.
 
 Europe was able to liberalize and abandon its castes through economic development via colonization. Inversely, the invaded, colonised and impoverished countries stiffened their societal faultlines. In Bhārat, caste was that faultline which was exploited to the hilt by the colonisers and subsequently by their collaborators. Calls for the removal of social evils have always been a natural phenomenon in Hindu society. But such efforts were hidden from sight through selective Western education generated blindness.
 
