@@ -10,7 +10,8 @@ image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwe
 
 <div align="center"> ॐ श्री अनिरुद्ध सरस्वती </div>
 
->‘Today we are not drinking pure water, not breathing pure air, but we can hear pure bliss of you Panditji.’
+
+>*‘Today we are not drinking pure water, not breathing pure air, but we can hear pure bliss of you Panditji.*’
 
 This is a comment under a [song](https://www.youtube.com/watch?v=Si-6xyMYvhE) by Pandit Bhimsen Gururaj Joshi (1922-2011), one of the greatest Indian vocalists from the Hindustāni classical tradition. The comment was by no means solitary, nearly every commenter expressed their awe.
 
@@ -20,7 +21,7 @@ Evoking such bhāva is no mean feat, it takes an unreal level of dedication to r
 
 Hence, when art is laced with propaganda it not only becomes a tool to mislead, it does a disservice towards its higher purpose of unlocking beauty and thenceforth spiritual truths. It, therefore, becomes necessary for us to identify and check propaganda, not just to separate truth from untruths, but in the wider interest of preserving a gateway to divinity in human life.
 
-Examples are not wanting to demonstrate the deluge of propaganda that Hindus are subjected to through their own country’s cinemas: we have the _desert robber_ edifying, brāhmaṇa vilifying [Shamshera](https://en.wikipedia.org/wiki/Shamshera), the Indian army denigrating, Forrest Gump ruining [Lal Singh Chadda](https://en.wikipedia.org/wiki/Laal_Singh_Chaddha) and the caste consciousness engendering [Jai Bhim](https://en.wikipedia.org/wiki/Jai_Bhim_(film)), among others. However, for the present examination, the 2021 Telugu movie [Shyam Singha Roy](https://en.wikipedia.org/wiki/Shyam_Singha_Roy) presents a suitable candidate.
+Examples are not wanting to demonstrate the deluge of propaganda that Hindus are subjected to through their own country’s cinemas: we have the *desert robber* edifying, brāhmaṇa vilifying [Shamshera](https://en.wikipedia.org/wiki/Shamshera), the Indian army denigrating, Forrest Gump ruining [Lal Singh Chadda](https://en.wikipedia.org/wiki/Laal_Singh_Chaddha) and the caste consciousness engendering [Jai Bhim](https://en.wikipedia.org/wiki/Jai_Bhim_(film)), among others. However, for the present examination, the 2021 Telugu movie [Shyam Singha Roy](https://en.wikipedia.org/wiki/Shyam_Singha_Roy) presents a suitable candidate.
 
 **Plot**
 
@@ -38,11 +39,11 @@ An organic dhārmika society is one which grows, reflects, rectifies and repeats
 
 One will observe that none of the evils outlined in the movie had been diagnosed as such before the European missionary contact with India in the early 16th century. They were broadly the mischievous result of misrepresentation and [atrocity literature](https://indiafacts.org/atrocity-literature-western-recipe-dismantle-india-hinduism/). 
 
-**Europe, coming out of Protestant Christian Reformation and empowered by Enlightenment, sought to discover and convert the world in its own image. **Therefore, it mapped various customs it encountered with its own customs back home; so Jāti Prathā<sup>1</sup> and Varṇāśrama Dharma<sup>2</sup> together were perverted as caste. And in the process of _casting_ the jātis, institutions began distributing certificates so as to freeze the status of communities in the eyes of the State, and thus provided a permanent stick to beat the Hindu community with.
+**Europe, coming out of Protestant Christian Reformation and empowered by Enlightenment, sought to discover and convert the world in its own image. **Therefore, it mapped various customs it encountered with its own customs back home; so Jāti Prathā<sup>1</sup> and Varṇāśrama Dharma<sup>2</sup> together were perverted as caste. And in the process of *casting* the jātis, institutions began distributing certificates so as to freeze the status of communities in the eyes of the State, and thus provided a permanent stick to beat the Hindu community with.
 
 The Hindū jātis were a marker of occupational identity, along with providing social currency to the individual in the milieu. Different jātis had their own customs, and the system of hierarchical discrimination was less severe than the Western feudal system, where the division of people was much more concrete. Hindu society fell into decadence post the religiously motivated invasions, but this fact was quietly buried and Hindus were propped up as poster boys of the caste system along with untouchability.
 
-Europe had its own [untouchables](https://www.independent.co.uk/news/world/europe/the-last-untouchable-in-europe-878705.html), called cagots who lived in separate settlements called _cagoteries_. So did many Asian countries such as Japan. The discrimination meted out to untouchables in Europe was no less than that of their Indian counterparts, if not worse. This was apart from slavery, which has caused gigantic human suffering throughout the planet, and which has had no reparations till date.
+Europe had its own [untouchables](https://www.independent.co.uk/news/world/europe/the-last-untouchable-in-europe-878705.html), called cagots who lived in separate settlements called *cagoteries*. So did many Asian countries such as Japan. The discrimination meted out to untouchables in Europe was no less than that of their Indian counterparts, if not worse. This was apart from slavery, which has caused gigantic human suffering throughout the planet, and which has had no reparations till date.
 
 Europe was able to liberalize and abandon its castes through economic development via colonization. Inversely, the invaded, colonised and impoverished countries stiffened their societal faultlines. In Bhārat, caste was that faultline which was exploited to the hilt by the colonisers and subsequently by their collaborators. Calls for the removal of social evils have always been a natural phenomenon in Hindu society. But such efforts were hidden from sight through selective Western education generated blindness.
 
@@ -64,7 +65,7 @@ Being a recipient and generator of propaganda, Adolf Hitler had explained the pu
 
 >“But the most brilliant propagandist technique will yield no success unless one fundamental principle is borne in mind constantly and with unflagging attention. It must confine itself to a few points and repeat them over and over. Here, as so often in this world, persistence is the first and most important requirement for success.” <sup>3</sup>
 
-The actual significance of the “few points” mentioned above can be understood by these dārśanika words of modern day Ṛṣi Ram Swarup:
+The actual significance of the “few points” mentioned above can be understood by these dārśanika words of modern day seer Ram Swarup:
 
 >"The alien rulers decided that the leading ideas of Hinduism were idolatry, polytheism, Brahmanism and other "superstitions''. The fact that these categories belong to Semitic thought and history and have never been used by the Hindus in discussing their fundamental ideas was completely disregarded. Similarly, the fact that the basic ideas that have occupied Hindu sages are Rita, Dharma, interchange between gods and men (parasparam bhavayantah). Brahmavada, Atma-vada, Advaita, Purusha-prakriti-jiva, Yoga, Mukti, the four purusharthas, Karma and Rebirth, the four stages, the four debts, the divine qualities (daivi sampada) like non-violence, truthfulness, friendliness and compassion for all (jiva daya), welfare of the world (loka samgrah), microcosm-macrocosm (pinda-brahamanda), multiple modes and planes of existence psychic and spiritual (lokas), cycles of creations and dissolutions set in a time-scale which should be the envy of modern astronomers and space geographers-all these did not count. The rulers arbitrarily decided that Hinduism was a miscellany of gods and creeds and castes and was idolatrous." <sup>4</sup>
 
@@ -76,11 +77,11 @@ Replacing Maitrī with Rosie is not only intended at erasing a culture, it signi
 
 References & Glossary:
 
-[1] ** _Jaati:_** Jati is a Sanskrit word meaning "birth." The term is used for the thousands of clans, communities, tribes and religious groups in India, and may also refer to a caste within Hindu society. An Indian person’s surname will often denote their jati association. Typically, each individual jati is associated with a traditional tribe, religious belief or job function. However, a jati within Indian and yogic philosophy can denote any group that is united by a set of generic characteristics.
+[1] **Jaati:** Jati is a Sanskrit word meaning "birth." The term is used for the thousands of clans, communities, tribes and religious groups in India, and may also refer to a caste within Hindu society. An Indian person’s surname will often denote their jati association. Typically, each individual jati is associated with a traditional tribe, religious belief or job function. However, a jati within Indian and yogic philosophy can denote any group that is united by a set of generic characteristics.
 
 What is Jati? - Definition from Yogapedia. (2016). Yogapedia.com. https://www.yogapedia.com/definition/5571/jati
 
-[2] **_Varnashrama Dharma: _**Varna, according to Hindu scriptures, refers to the classification of people based on their qualities. The term is derived from the Sanskrit word, vr, which means "to describe," "to classify" or "to cover."
+[2] **Varnashrama Dharma:** Varna, according to Hindu scriptures, refers to the classification of people based on their qualities. The term is derived from the Sanskrit word, vr, which means "to describe," "to classify" or "to cover."
 
 Varna is classified into four types: brahman, kshatriya, vaishya and shudra.
 
