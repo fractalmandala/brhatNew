@@ -8,7 +8,7 @@ date: "2022-06-02"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/aiarticle.webp
 ---
 
-#### 1- Reality, Nature
+### 1- Reality, Nature
 
 We begin with a simple truth- most contemporary speculations regarding the nature of reality share common foundational intuitions, even as each is articulated in its own lexicon. Modern science formulates a simulation hypothesis through mathematics, probability, theoretical physics and computational technology, Plato talked of reality as a moving image of eternity, while the dhārmika tradition intuited much the same through notions such as Māyā and Līlā. 
 
@@ -26,7 +26,7 @@ So unique is our creative ability that we use “man-made” as a notion separat
 
 ##### The above forms a broad landscape of what it means to speak of things *real* or *unreal*, *natural* or *unnatural*/*man-made*. It is the landscape that we necessarily tread on before we speak of *artificial intelligence.***
 
-#### 2- Intelligence, Consciousness
+### 2- Intelligence, Consciousness
 
 The titanic celestial entities of our cosmos- galaxies, nebulae, stars- manage to enact remarkable processes and events. A complex mesh of physical cycles, chemical reactions and more lie behind the mildest of lava eruptions. And meticulously detailed is the blueprint of what clouds may form under what conditions. But none of these constitute what we tend to think of as “life.” 
 
@@ -48,14 +48,14 @@ This phenomena of consciousness is captured in our language by the root dhātu o
 
 Further, the iterative cycle is accumulative usually for the duration of its existence- experienced by us as a consistent and continual memory stream of the self. It is this mental looping back, the self-reflection from the mirror, that generates the radiance of *cit. *Pāṇini knew this, of course, which is why he explicitly accorded to *cint *the evocation of “​smṛti,” or memory. *Cint *is simply *cit *in the reverse direction, cintana* *simply the image of cetanā gazing upon itself. It is why to this day, we tend to consider “true” art as that which we can “reflect” upon, or along with. 
 
-#### And in the elegant way that Sanskrit builds language, this is why when we create an image that another can gaze upon, it is called a *citra*- an instrument to generate radiance.
+##### And in the elegant way that Sanskrit builds language, this is why when we create an image that another can gaze upon, it is called a *citra*- an instrument to generate radiance.
 
 This universe, itself a radiance of Brahman’s *cit*, is the first citra. Consciousness as we experience it, which casts the illusion of being separate from Brahman, is the second citra*. *One of the many components of saṃskṛti, or of the subjective reality, is human-created citra, which evidences itself sometimes in the oldest caves we can find, is symbolic to us of what we club as “art,” and as a manifest trait of our species demonstrates our consciousness itself. An exceptional elephant or dolphin notwithstanding, the ability to imagine and create citras* *has not been found in other lifeforms. 
 
 And come thus far is when our current context actually begins. For we now live in a world containing non-human entities that can also generate citra. *We currently call them artificial, and concede to them degrees of intelligence. What happens of them, and by consequence of us and our existence, is (as far as we know) a wholly unprecedented matter in the entire history of saṃskṛtī, prakṛtī and ṛta- that is, of culture, nature and reality. This alone suffices to merit it pause, consideration, appraisal and caution.**
 
 
-#### 3- ~2080, Vikram Samvat. Present Day.
+### 3- ~2080, Vikram Samvat. Present Day.
 
 To the widely popular image-generation AI called Midjourney, submit the prompt “India travel and culture,” and you are near-certain to be returned with something that contains the Taj Mahal:
 
