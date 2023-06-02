@@ -80,12 +80,3 @@ Long before we arrive at the necessary consideration of AI’s existential threa
 Next….
 
 ##### Part 2 - From Now to Hence
-
-
-<style lang="sass">
-
-.blogimage
-	object-fit: contain
-	height: 160px
-
-</style>
