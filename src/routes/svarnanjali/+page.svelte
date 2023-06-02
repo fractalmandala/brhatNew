@@ -4,11 +4,13 @@
 	import { breakOne, breakZero, breakTwo } from '$lib/stores/globalstores';
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte';
 	import SvarLogo from '$lib/logos/Svarnanjali2.svelte';
+	import Youtuber from '$lib/components/Youtuber.svelte';
 
 	let fake = false;
 	let language = false;
 	let y: number;
 	let iW: number;
+	let idv = 'OeCFCHwSpd0';
 
 	function toggleLanguage() {
 		language = !language;
@@ -51,10 +53,7 @@
 >
 	<div class="rta-column rowgap300 minH ycenter xcenter">
 		<div class="video-container">
-			<video controls>
-				<source src="/images/svanim3.mp4" type="video/mp4" />
-				<track kind="captions" />
-			</video>
+			<Youtuber youTubeId={idv} />
 		</div>
 		<div class="rta-row colgap300 xcenter-d">
 			<div class="rta-column ta-c-d">
