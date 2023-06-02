@@ -18,6 +18,7 @@
 	<div slot="local" class="boxmidrow">
 		<a href="/svarnanjali/hindi">Hindi</a>
 		<a href="/svarnanjali/english">English</a>
+		<a href="/svarnanjali">Home</a>
 	</div>
 </Header>
 <div class="type" class:light={$themeMode} class:dark={!$themeMode}>

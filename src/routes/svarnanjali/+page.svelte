@@ -32,16 +32,23 @@
 <div class="x0" data-lenis-scroll-snap-align="start">
 	<ParallaxImage
 		--parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/krishnaradha.webp')"
+		--parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/krishnaradha.webp')"
 	>
 		<div class="my-screen rta-column">
 			<div class="goaway">
-				<SvarLogo />
+				<SvarLogo dimension={200} />
 			</div>
 		</div>
 	</ParallaxImage>
 </div>
 <!--end-->
-<div class:levelzero={$breakZero} class:levelone={$breakOne} class:leveltwo={$breakTwo}>
+<div
+	class:levelzero={$breakZero}
+	class:levelone={$breakOne}
+	class:leveltwo={$breakTwo}
+	class="back"
+	style="background-image: url('https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/batch1/522.webp')"
+>
 	<div class="rta-column rowgap300 minH ycenter xcenter">
 		<div class="video-container">
 			<video controls>
@@ -49,14 +56,12 @@
 				<track kind="captions" />
 			</video>
 		</div>
-		<div class="rta-row xcenter-d">
+		<div class="rta-row colgap300 xcenter-d">
 			<div class="rta-column ta-c-d">
-				<a href="/svarnanjali/english" class="genbutton">
-					Explore in English
-				</a>
+				<a href="/svarnanjali/english" class="genbutton-l"> Explore in English </a>
 			</div>
 			<div class="rta-column ta-c-d">
-				<a href="/svarnanjali/hindi" class="genbutton" on:click={changeLanguage}>
+				<a href="/svarnanjali/hindi" class="genbutton-l" on:click={changeLanguage}>
 					हिन्दी में पढ़े
 				</a>
 			</div>
@@ -66,13 +71,22 @@
 
 <style lang="sass">
 
+.genbutton-l
+	font-size: 24px
+	width: max-content
+	
+
+
+
 .levelzero
 	.video-container
 		width: 100%
 		max-width: 720px
 		height: 400px
+		border-radius: 24px
 		video
 			object-fit: cover
+			border-radius: 24px
 			width: 100%
 			height: 100%
 	.rta-row.xcenter-d
@@ -89,6 +103,14 @@
 		line-height: 1.08
 		&:hover
 			color: #fe4a49
+
+.levelone
+	.video-container video
+		height: 280px
+
+.leveltwo
+	.video-container video
+		height: 280px
 
 .my-screen
 	height: 100%
@@ -118,10 +140,15 @@
 	@media screen and (min-width: 1024px)
 		height: 100vh
 	@media screen and (max-width: 1023px)
-		height: 60vh
+		height: 70vh
+		.goaway
+			height: 200px
 
 .rta-column
 	overflow: hidden
+
+.minH
+	height: 100vh
 
 
 </style>

@@ -17,7 +17,7 @@
 	<div class="rta-row row-of-acco">
 		<div
 			class="acco-column back"
-			style="background-image: url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/womanmedi.webp')"
+			style="background-image: url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/web/2ndrow2ndfire.webp')"
 		>
 			<div
 				class="screen rta-column"
@@ -71,7 +71,7 @@
 
 		<div
 			class="acco-column back"
-			style="background-image: url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/praying.webp')"
+			style="background-image: url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/web/svo4.webp')"
 		>
 			<div
 				class="screen rta-column"
@@ -96,7 +96,7 @@
 
 		<div
 			class="acco-column back"
-			style="background-image: url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/painting.webp')"
+			style="background-image: url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/web/onlyganny.webp')"
 		>
 			<div
 				class="screen rta-column"

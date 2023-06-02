@@ -1,7 +1,7 @@
 <div class="rta-grid grid2 left colgap600 minH ycenter outer-box">
 	<div class="rta-column rta-image">
 		<img
-			src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/dancers.webp"
+			src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/web/svo1.webp"
 			alt="dancers"
 		/>
 	</div>

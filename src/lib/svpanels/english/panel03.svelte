@@ -16,7 +16,7 @@
 	</div>
 	<div class="rta-column rta-image ycenter">
 		<img
-			src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/people.webp"
+			src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/web/svo2.webp"
 			alt="people"
 		/>
 	</div>
@@ -25,7 +25,7 @@
 	<div class="rta-column">
 		<div class="rta-image">
 			<img
-				src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/story.webp"
+				src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/web/exceptcentral.webp"
 				alt="story"
 			/>
 		</div>
