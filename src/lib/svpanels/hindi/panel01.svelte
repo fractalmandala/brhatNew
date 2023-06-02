@@ -1,6 +1,6 @@
-<div class="rta-grid grid2 colgap600 minH ycenter outer-box">
-	<div class="rta-column ycenter rowgap100">
-		<div class="logobox">
+<div class="rta-grid colgap600 minH ycenter outer-box">
+	<div class="rta-column ycenter xcenter rowgap300">
+		<div class="logobox rta-column xcenter">
 			<img
 				src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/svarlogo.png"
 				alt="logo"
@@ -12,35 +12,52 @@
 		</h5>
 		<small class="hindiadobe">-श्री राम स्वरुप</small>
 	</div>
-	<div class="rta-column rta-image ycenter">
-
-			<img
-				src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/lotusgoddess.webp"
-				alt="lotus"
-			/>
-
-	</div>
 </div>
 
 <style lang="sass">
 
-h5
-	font-size: 32px
+.logobox
+	img
+		object-fit: contain
+		height: 40%
+		width: 50%
 
 small
 	font-size: 18px
 
-.grid2
-	align-items: stretch
-	.rta-image
-		img
-			height: 60%
-
-.logobox
-	img
-		object-fit: contain
-		width: 50%
-		height: 80%
-		margin-left: -32px
+.rta-grid
+	@media screen and (min-width: 768px) and (max-width: 1023px)
+		padding-top: 88px
+		grid-template-areas: "one" "two"
+		row-gap: 32px
+		padding-bottom: 64px
+		.rta-column
+			align-items: center
+			text-align: center
+		.logobox
+			display: flex
+			justify-content: center
+			height: 160px
+			width: 160px
+			img
+				width: 100%
+				height: 100%
+				margin-left: 0
+	@media screen and (max-width: 768px)
+		padding-top: 88px
+		grid-template-areas: "one" "two"
+		row-gap: 32px
+		.rta-column
+			align-items: center
+			text-align: center
+		.logobox
+			display: flex
+			justify-content: center
+			height: 160px
+			width: 160px
+			img
+				width: 100%
+				height: 100%
+				margin-left: 0
 
 </style>

@@ -1,107 +1,75 @@
-<div class="rta-column rowgap200 minH">
-<h2 class="hindiadobe">हमारे उद्देश्य</h2>
-
-
-<div class="rta-row row-of-acco outer-box">
-
-
-
-	<div class="rta-column">1
-		<h5>1</h5>
-				<div class="rta-icon">
-			<img
-				src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/icon01.png"
-				alt="icon01"
-			/>
-		</div>
+<div class="rta-grid grid2 right colgap600 ycenter p-bot-32 outer-box">
+	<div class="rta-column rowgap300">
+		<h3 class="hindiadobe">स्वर्णाञ्जलि क्यों</h3>
+		<p>
+			किसी भी संस्कृति की आकांक्षा एवं उसके मूल्य भाषा के माध्यम से समाज में प्रतिबिंबित होते
+			हैं। परन्तु आज के समय में भाषा का स्थान व्यापार ने ले लिया है।  
+			<br /><br />
+			आज भाषा का मूल्यांकन उसके सांस्कृतिक महत्त्व की अपेक्षा उसके व्यावसायिक मूल्य पर किया जाता है।
+		</p>
 		<h4 class="hindiadobe">
-			<span style="color: #D47915"> सौंदर्यबोध</span>
+			इससे उस <span style="color: #D47915">भूमि की चेतना</span>, उसकी संस्कृति एवं उसके लोगों को
+			क्षति पहुँचती है।
 		</h4>
-		<h5 class="hindiadobe">
-			सौन्दर्यानुभूति इस श्रृंखला का प्राथमिक उद्देश्य है।  दर्शक एक रसिक और एक नागरिक के रूप में
-			रसानुभूति कर पायें।
-		</h5>
 	</div>
-
-
-
-	<div class="rta-column">2
-		<div class="rta-icon">
-			<img
-				src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/icon03.png"
-				alt="icon03"
-			/>
-		</div>
-		<h4 class="hindiadobe">
-	<span style="color: #D47915">संस्कृतनिष्ठ हिंदी</span>का पुनर्स्थापन
-		</h4>
-		<h5 class="hindiadobe">
-				​हिंदी भाषा के चित्त में पुनः संस्कृत को स्थापित करना  ​जिससे वह फ़ारसी, अरबी एवं तुर्की
-			शब्दों से मुक्त हो और  ​धार्मिक जागरण का माध्यम बन सके
-		</h5>
-		<div class="rta-image">
-			<img
-				src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/praying.webp"
-				alt="womanpraying"
-			/>
-		</div>
+	<div class="rta-column rta-image ycenter">
+		<img
+			src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/people.webp"
+			alt="people"
+		/>
 	</div>
-
-
-
-	<div class="rta-column">3
-		<div class="rta-icon">
-			<img
-				src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/icon03.png"
-				alt="icon03"
-			/>
-		</div>
-		<h4 class="hindiadobe">
-				हिंदी साहित्य, कला, नाट्य, शिल्प एवं वास्तु को  <span style="color: #D47915">हिन्दू दृष्टिकोण</span>से देखने की क्षमता विकसित करना
-		</h4>
-		<div class="rta-image">
-			<img
-				src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/praying.webp"
-				alt="womanpraying"
-			/>
-		</div>
-	</div>
-	<div class="rta-column">4
-
-		<div class="rta-icon">
-			<img
-				src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/icon04.png"
-				alt="icon04"
-			/>
-		</div>
-		<h4 class="hindiadobe">
-		जीवन में <span style="color: #D47915">सौंदर्य से परिपूर्ण </span> करना
-		</h4>
-		<h5 class="hindiadobe">
-			मानव जीवन की समस्याओं को हिन्दू सौंदर्य मूल्य के दृष्टिकोण से देखना जो सभी को  आशावान एवं
-			उन्नत बनाने में सहायक हो।
-		</h5>
-		<div class="rta-image">
-			<img
-				src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/painting.webp"
-				alt="painting"
-			/>
-		</div>
-	</div>
-
 </div>
+<div class="rta-grid grid2 left colgap600 ycenter outer-box">
+	<div class="rta-column">
+		<div class="rta-image">
+			<img
+				src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/story.webp"
+				alt="story"
+			/>
+		</div>
+	</div>
+	<div class="rta-column rowgap300">
+		<p class="hindiadobe">
+			परन्तु हिन्दू चेतना का पुनर्जागरण आरंभ हो चुका है यह जागृति ज्वलंत हो रही है। दर्शन, समाज एवं
+			राजनीति को अब हिन्दू दृष्टि से देखा जा रहा है।
+		</p>
+		<h4 class="hindiadobe">
+			समय आ गया है कि इस हिन्दू चेतना कला एवं साहित्य में पुनः प्रस्फुटन हो
+		</h4>
+	</div>
 </div>
-
 
 <style lang="sass">
 
-h2
-	text-align: center
-	margin: 0
 
-.rta-column
+
+.rta-image
+	border-radius: 32px
 	img
-		object-fit: contain
-		width: 80%
+		border-radius: 32px
+
+
+
+.grid2
+	@media screen and (min-width: 768px) and (max-width: 1023px)
+		padding-top: 88px
+		grid-template-areas: "one" "two"
+		row-gap: 32px
+		.rta-image
+			grid-area: one
+			height: 50vh
+			img
+				height: 100%
+	@media screen and (max-width: 768px)
+		padding-top: 88px
+		grid-template-areas: "one" "two"
+		row-gap: 32px
+		.rta-image
+			grid-area: one
+			height: 40vh
+			img
+				height: 100%
+
+
 
 </style>

@@ -1,6 +1,6 @@
 <script lang="ts">
-import { breakZero, breakOne, breakTwo, themeMode } from '$lib/stores/globalstores'	
-import P01 from '$lib/svpanels/hindi/panel01.svelte';
+	import { breakZero, breakOne, breakTwo, themeMode } from '$lib/stores/globalstores';
+	import P01 from '$lib/svpanels/hindi/panel01.svelte';
 	import P02 from '$lib/svpanels/hindi/panel02.svelte';
 	import P03 from '$lib/svpanels/hindi/panel03.svelte';
 	import P04 from '$lib/svpanels/hindi/panel04.svelte';
@@ -15,10 +15,9 @@ import P01 from '$lib/svpanels/hindi/panel01.svelte';
 	class:lightmode={$themeMode}
 	class:darkmode={!$themeMode}
 >
-<P01 />
-<P02 />
-<P03 />
-<P04 />
-<P05 />
-<P06 />
+	<P01 />
+	<P02 />
+	<P03 />
+	<P04 />
+	<P05 />
 </div>
