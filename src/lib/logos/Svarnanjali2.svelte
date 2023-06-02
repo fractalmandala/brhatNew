@@ -1,7 +1,13 @@
+<script lang="ts">
+
+	export let dimension = 500
+
+</script>
+
 <div class="logo-svar">
 	<svg
-		width="500"
-		height="500"
+		width={dimension}
+		height={dimension}
 		viewBox="0 0 500 500"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"

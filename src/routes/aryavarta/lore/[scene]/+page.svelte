@@ -1,54 +1,52 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
+	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
+	import { loreAll } from '$lib/utils/localpulls';
+	import ParallaxImage from '$lib/components/ParallaxImage.svelte';
 
-	import { onMount } from 'svelte'
-	import { page } from '$app/stores'
-	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores'
-	import { loreAll } from '$lib/utils/localpulls'
-	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
+	let lores: any;
+	let sidebar = false;
+	let dropdown = false;
 
-	let lores:any
-	let sidebar = false
-	let dropdown = false
+	export let data;
 
-	export let data
+	$metaUrl = $page.url.pathname;
+	$metaTitle = data.title;
+	$metaDescription = data.snip;
+	$metaImage = data.image;
+	$metaType = 'article';
 
-	$metaUrl = $page.url.pathname
-	$metaTitle = data.title
-	$metaDescription = data.snip
-	$metaImage = data.image
-	$metaType = 'article'
-
-
-	function toggleDropdown(){
-		dropdown = !dropdown
+	function toggleDropdown() {
+		dropdown = !dropdown;
 	}
 
-	onMount(async() => {
-		lores = await loreAll()
-	})
-
-
+	onMount(async () => {
+		lores = await loreAll();
+	});
 </script>
-
 
 <div class="aryatext">
 	<div class="x0">
-		<ParallaxImage --parallax="url('{data.image}')" --parallaxresp="url('{data.image}')"></ParallaxImage>
+		<ParallaxImage --parallax="url('{data.image}')" --parallaxresp="url('{data.image}')" />
 	</div>
 	<div class="x1 rta-grid grid2 right0 rowgap400 outer-box p-top-64 colgap600">
-		<div class="mainstory rta-column rowgap300">
-			<h1 class="serif">
+		<div class="mainstory rta-column p-top-64 rowgap300">
+			<h1 class="hindiadobe">
 				{data.title}
 			</h1>
-			<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/quotemark.png" alt="{data.title}"/>
-			<svelte:component this={data.content}/>
+			<img
+				src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/quotemark.png"
+				alt={data.title}
+			/>
+			<svelte:component this={data.content} />
 		</div>
 		<div class="rta-column rowgap400 p-bot-64" id="stories">
 			{#if lores && lores.length > 0}
 				{#each lores as item}
 					<div class="rta-row fixed colgap300">
 						<div class="rta-image height-10 w32">
-							<img src={item.meta.image} alt={item.meta.title}/>
+							<img src={item.meta.image} alt={item.meta.title} />
 						</div>
 						<div class="rta-in-col w64">
 							<h6 class="serif tt-c"><a href={item.path}>{item.meta.title}</a></h6>
@@ -60,11 +58,10 @@
 	</div>
 </div>
 
-
 <style lang="sass">
 
-.serif
-	font-family: 'STIX Two Text', serif
+.hindiadobe
+	font-family: 'Adobe Devanagari', serif
 
 .mainstory
 	h1

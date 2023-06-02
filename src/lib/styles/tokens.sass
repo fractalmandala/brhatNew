@@ -43,6 +43,11 @@ $unit128: 128px
 :root
 	--strong: #B0413E
 
+.rta-image
+	img
+		object-fit: cover
+		width: 100%
+
 
 .rta-icon
 	width: 64px
@@ -980,3 +985,74 @@ body, html
 		border: 1px solid var(--borderline)
 		border-radius: 6px
 		padding: 16px
+
+
+
+.genbutton
+	border: 1px solid #fe4a49
+	background: #fe4a49
+	padding: 6px 16px
+	border-radius: 4px
+	font-size: 14px
+	max-width: 160px
+	width: max-content
+	min-width: 104px
+	letter-spacing: -0.8px
+	cursor: pointer
+	transform-origin: center center
+	transition: 0.05s
+	color: white
+	&:hover
+		transform: scale(0.96)
+		color: white
+	&:active
+		background: #fe4a49
+
+.levelzero
+	.row-of-acco
+		height: 72vh
+		gap: 16px
+		.acco-column
+			display: flex
+			border-radius: 32px
+			flex-direction: column
+			justify-content: center
+			transition: width 0.32s
+			height: 100%
+			width: calc(25% - 12px)
+			overflow: hidden
+			.screen
+				width: 100%
+				height: 100%
+				align-items: center
+				justify-content: center
+			&:hover
+				width: 40%
+		.contain
+			height: 120px	
+			svg
+				object-fit: contain
+				height: 64px
+
+.leveltwo
+	.row-of-acco
+		height: 72vh
+		gap: 16px
+		flex-wrap: wrap
+		.acco-column
+			display: flex
+			border-radius: 20px
+			flex-direction: column
+			justify-content: center
+			transition: 0.32s
+			height: calc(36vh - 16px)
+			width: calc(50% - 16px)
+			overflow: hidden
+			.screen
+				width: 100%
+				height: 100%
+				align-items: center
+				justify-content: center
+				border-radius: 20px
+				.box
+					border-radius: 20px

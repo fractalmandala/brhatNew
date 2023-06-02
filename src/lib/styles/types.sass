@@ -67,6 +67,12 @@ pre
 	word-break: break-word
 	overflow: hidden
 
+h5.hindiadobe, h4.hindiadobe, h3.hindiadobe, h2.hindiadobe, h1.hindiadobe, p.hindiadobe, small.hindiadobe, h1.hindiadobe
+	font-family: 'Adobe Devanagari', serif
+
+p.typett.hindiadobe
+	font-family: 'Adobe Devanagari', serif
+
 img
 	object-fit: cover
 	width: 100%
@@ -113,10 +119,22 @@ li.em
 	font-size: 1.12rem
 	font-weight: 400
 
-.mainstory p
+.mainstory p, .mainstory blockquote
 	font-family: 'Adobe Devanagari', sans-serif
-	font-size: 1.12rem
 	line-height: 1.4
+
+.mainstory
+	p
+		color: var(--opposite)
+	@media screen and (max-width: 768px)
+		p
+			font-size: 22px
+	@media screen and (min-width: 769px) and (max-width: 1023px)
+		p
+			font-size: 22px
+	@media screen and (min-width: 1024px)
+		p
+			font-size: 24px
 
 pre
 	line-height: 1.2
@@ -505,3 +523,29 @@ h1
 		&:hover
 			a
 				color: #fe4a49
+
+
+
+h3.hindiadobe, h4.hindiadobe
+	line-height: 1
+
+.levelzero
+	p.hindiadobe
+		font-size: 23px
+
+.leveltwo
+	h4.hindiadobe
+		font-size: 24px
+	h5.hindiadobe
+		font-size: 18px
+
+
+.lightmode
+	p.hindiadobe, h5.hindiadobe
+		color: #272727
+		line-height: 1.1
+	h3.hindiadobe
+		color: #272727
+	.row-of-acco
+		h5.hindiadobe
+			color: white
