@@ -14,7 +14,7 @@ These humbling structures do cater to one’s innate motivation to expand. To be
 
 This urge we have inherited from our animal ancestors. The primary motivation of the male birds and animals is occupying a territory not the pursuit of the opposite gender.  Territory brings social prestige and helps in gaining rank within the society and thus in turn having access to more resources and females. 
 
-It is the same as man’s pursuit to gain more resources, wealth, property and women. But generalizing every part of our lifestyle takes away the uniqueness. Costume,  food, sources of entertainment, education, along with architecture due to its focus on scale, have all been denuded of their identity in the name of modernization and urbanization. Identity, which is one of the primary needs of humans. 
+It is the same as man’s pursuit to gain more resources, wealth, and property. But generalizing every part of our lifestyle takes away the uniqueness. Costume,  food, sources of entertainment, education, along with architecture due to its focus on scale, have all been denuded of their identity in the name of modernization and urbanization. Identity, which is one of the primary needs of humans. 
 
 This does not mean that one has to go back to living in a mud house (although it wouldn’t be that bad). Nor does this glorify living in poverty without any resources. 
 
