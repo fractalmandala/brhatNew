@@ -1,127 +1,130 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
+	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
+	import { themeMode } from '$lib/stores/globalstores';
+	import { breakZero, breakOne, breakTwo } from '$lib/stores/globalstores';
+	import PageProgress from '$lib/components/PageProgress.svelte';
+	import { latestDhitiTen } from '$lib/utils/localpulls';
+	import ParallaxImage from '$lib/components/ParallaxImage.svelte';
+	import { brhatTeamMember } from '$lib/utils/supapulls';
+	import { authorfiltered } from '$lib/utils/localpulls';
 
-	import { onMount } from 'svelte'
-	import { page } from '$app/stores'
-	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores'
-	import { themeMode } from '$lib/stores/globalstores'
-	import { breakZero, breakOne, breakTwo } from '$lib/stores/globalstores'
-	import PageProgress from '$lib/components/PageProgress.svelte'
-	import { latestDhitiTen } from '$lib/utils/localpulls'
-	import ParallaxImage from '$lib/components/ParallaxImage.svelte'	
-	import { brhatTeamMember } from '$lib/utils/supapulls'
-	import { authorfiltered } from '$lib/utils/localpulls'
-	
-	export let data
+	export let data;
 
-	$metaUrl = $page.url.pathname
-	$metaTitle = data.title
-	$metaDescription = data.excerpt
-	$metaImage = data.image
-	$metaType = 'article'
+	$metaUrl = $page.url.pathname;
+	$metaTitle = data.title;
+	$metaDescription = data.excerpt;
+	$metaImage = data.image;
+	$metaType = 'article';
 
-	let posts:any
-	let thisAuthorPosts:any
-	let fake:boolean = false
-	let member:any
-  let ref:HTMLElement | null = null
-  let y:number
+	let posts: any;
+	let thisAuthorPosts: any;
+	let fake: boolean = false;
+	let member: any;
+	let ref: HTMLElement | null = null;
+	let y: number;
 
-	function fakefaux(){
-		fake = !fake
+	function fakefaux() {
+		fake = !fake;
 	}
 
-	onMount(async() => {
-		member = await brhatTeamMember(data.author)
-		posts = await latestDhitiTen()
-		thisAuthorPosts = await authorfiltered(data.author)
-	})
-
-
+	onMount(async () => {
+		member = await brhatTeamMember(data.author);
+		posts = await latestDhitiTen();
+		thisAuthorPosts = await authorfiltered(data.author);
+	});
 </script>
 
+<PageProgress --thispagebackground="#fe4a49" --thispageheight="4px" {ref} />
 
-<PageProgress --thispagebackground="#fe4a49" --thispageheight="4px" ref={ref}/>
-
-<div 
+<div
 	class="rta-column"
 	class:levelzero={$breakZero}
 	class:levelone={$breakOne}
 	class:leveltwo={$breakTwo}
-	>
-
+>
 	<div class="x0">
-		<ParallaxImage --parallax="url('{data.image}')" --parallaxresp="url('{data.image}')">
-		</ParallaxImage>
+		<ParallaxImage --parallax="url('{data.image}')" --parallaxresp="url('{data.image}')" />
 	</div>
 
 	<div class="plain-one x1">
 		<div class="rta-row colgap100">
 			<small>{data.category}</small>
-			<cite>{data.tags}</cite><br>
+			<cite>{data.tags}</cite><br />
 		</div>
-		<h2 style="font-family: 'STIX Two Text', serif; font-weight: 700;">{data.title}</h2>
-		<div class="authorbox">{data.author}<br>
+		<h2 style="serif; font-weight: 700;">{data.title}</h2>
+		<div class="authorbox">
+			{data.author}<br />
 			{#if member && member.length > 0}
-			{#each member as item}
-				<a href="{item.twitter}" target="_blank" rel="noreferrer">
-					<img class="authortwitter" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/122-twitter.png" alt={data.author}/>
-				</a>
-			{/each}
+				{#each member as item}
+					<a href={item.twitter} target="_blank" rel="noreferrer">
+						<img
+							class="authortwitter"
+							src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/122-twitter.png"
+							alt={data.author}
+						/>
+					</a>
+				{/each}
 			{/if}
 			{#if data.authortwo && data.authortwo.length > 0}
-			and {data.authortwo}
+				and {data.authortwo}
 			{/if}
 		</div>
 	</div>
 
 	<div class="rta-column x22">
-			<div class="maincol dhitiblogbox p-top-32" class:light={$themeMode} class:dark={!$themeMode} bind:this={ref}>
-				<svelte:component this={data.content} class="dhitiblog"/>
-				<div class="rta-column rowgap300">
-					<h5 class="serif">More from {data.author}:</h5>
-					{#if thisAuthorPosts && thisAuthorPosts.length > 0}
-						{#each thisAuthorPosts as item}
-						<a class="rta-row fixed colgap300 bord-bot p-bot-32" href="{item.path}">
-						<div class="rta-image w32 height-30-2">
-							<img src={item.meta.image} alt={item.meta.title}/>
-						</div>
-						<div class="rta-column w64 rowgap100">
-							<cite class="citeone">{item.meta.category}</cite>
-							<h6 class="serif">{item.meta.title}</h6>
-							<cite class="citetwo">{item.meta.tags}</cite>
-						</div>
+		<div
+			class="maincol dhitiblogbox p-top-32"
+			class:light={$themeMode}
+			class:dark={!$themeMode}
+			bind:this={ref}
+		>
+			<svelte:component this={data.content} class="dhitiblog" />
+			<div class="rta-column rowgap300">
+				<h5 class="serif">More from {data.author}:</h5>
+				{#if thisAuthorPosts && thisAuthorPosts.length > 0}
+					{#each thisAuthorPosts as item}
+						<a class="rta-row fixed colgap300 bord-bot p-bot-32" href={item.path}>
+							<div class="rta-image w32 height-30-2">
+								<img src={item.meta.image} alt={item.meta.title} />
+							</div>
+							<div class="rta-column w64 rowgap100">
+								<cite class="citeone">{item.meta.category}</cite>
+								<h6 class="serif">{item.meta.title}</h6>
+								<cite class="citetwo">{item.meta.tags}</cite>
+							</div>
 						</a>
-						{/each}
-					{/if}
-				</div>
+					{/each}
+				{/if}
 			</div>
+		</div>
 	</div>
 
 	<div class="rta-column x3 dhitiouter">
 		<h4 class="serif">Latest Posts:</h4>
-			{#if posts && posts.length > 0}
-				{#each posts as item}
-					{#if item.meta.title !== data.title}
+		{#if posts && posts.length > 0}
+			{#each posts as item}
+				{#if item.meta.title !== data.title}
 					<div class="rta-column rowgap200 bord-bot p-bot-32 p-top-32">
 						<h6 class="heading hover-purple"><a href={item.path}>{item.meta.title}</a></h6>
 						<p class="tt-no serif">{item.meta.excerpt}</p>
 						<div class="rta-column">
 							<small class="is-purple">
 								<strong>
-								{item.meta.author}
-								{#if item.meta.authortwo && item.meta.authortwo.length > 0}
-									<span> and {item.meta.authortwo}</span>
-								{/if}
+									{item.meta.author}
+									{#if item.meta.authortwo && item.meta.authortwo.length > 0}
+										<span> and {item.meta.authortwo}</span>
+									{/if}
 								</strong>
 							</small>
 							<cite class="citetwo">{item.meta.tags}</cite>
 						</div>
 					</div>
-					{/if}
-				{/each}
-			{/if}
+				{/if}
+			{/each}
+		{/if}
 	</div>
-
 </div>
 
 <style lang="sass">
