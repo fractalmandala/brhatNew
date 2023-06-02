@@ -129,6 +129,9 @@
 
 <style lang="sass">
 
+h2
+	font-family: 'Adobe Devanagari', sans-serif
+
 .x3.dhitiouter
 	h4
 		padding: 64px 0 12px 0

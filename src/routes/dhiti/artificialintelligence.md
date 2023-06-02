@@ -24,7 +24,7 @@ In what is fairly construed as nature’s benevolence from our point-of-view, it
 
 So unique is our creative ability that we use “man-made” as a notion separate to nature. To speak of something as man-made is to imply that it was not borne of the life-simulations the universe is playing out. Though we do not always say so, each such creation is by definition “unnatural.” Our abilities have demonstrated as destructive a potential as a creative one, and so we have come to use “unnatural” almost as a derogatory term. Since it has not emerged from the prākṛtika-life simulations of ṛta, we liken an unnatural creation to an “anṛta” object. Not from the great whirrings of *sat *has it emerged, but from elsewhere. This doubled-edged aspect to our capabilities has long been known to us, and so Pāṇini spoke of both- the root *kṛ *meaning *karaṇa*, or doing, and another *kṛ *meaning *hiṃsāyām*, or injuring. One of our species’ earliest great creations was agriculture, which involved ploughing or cutting into the earth, and so those who did so were called *kṛṣis*.
 
-##### The above forms a broad landscape of what it means to speak of things *real* or *unreal*, *natural* or *unnatural*/*man-made*. It is the landscape that we necessarily tread on before we speak of *artificial intelligence.***
+##### The above forms a broad landscape of what it means to speak of things *real* or *unreal*, *natural* or *unnatural*/*man-made*. It is the landscape that we necessarily tread on before we speak of *artificial intelligence.*
 
 #### 2- Intelligence, Consciousness
 
