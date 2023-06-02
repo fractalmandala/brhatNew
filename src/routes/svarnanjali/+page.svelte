@@ -93,16 +93,6 @@
 		width: 720px
 		column-gap: 128px
 		text-align: center
-		.blank-button
-			width: 200px
-	h5.hindiadobe
-		font-size: 36px
-		font-weight: bold
-		color: var(--opposite)
-		cursor: pointer
-		line-height: 1.08
-		&:hover
-			color: #fe4a49
 
 .levelone
 	.video-container video
