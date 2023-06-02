@@ -3,7 +3,7 @@ title: Artificial Intelligence is Here- Part 1, from Before to Now.
 author: Amritanshu Pandey
 category: Dharma Today
 tags: consciousness, technology
-excerpt: "The emergence of artificial intelligence and its impact on human existence, reflection on cultural representation and moral responsibility in the age of AI."
+excerpt: "The emergence of artificial intelligence and its impact on human existence, raising questions about cultural representation and moral responsibility in the age of AI."
 date: "2022-06-02"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/aiarticle.webp
 ---
