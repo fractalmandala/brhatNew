@@ -26,7 +26,7 @@ So unique is our creative ability that we use “man-made” as a notion separat
 
 ##### The above forms a broad landscape of what it means to speak of things *real* or *unreal*, *natural* or *unnatural*/*man-made*. It is the landscape that we necessarily tread on before we speak of *artificial intelligence.***
 
-### 2- Intelligence, Consciousness
+#### 2- Intelligence, Consciousness
 
 The titanic celestial entities of our cosmos- galaxies, nebulae, stars- manage to enact remarkable processes and events. A complex mesh of physical cycles, chemical reactions and more lie behind the mildest of lava eruptions. And meticulously detailed is the blueprint of what clouds may form under what conditions. But none of these constitute what we tend to think of as “life.” 
 
@@ -55,7 +55,7 @@ This universe, itself a radiance of Brahman’s *cit*, is the first citra. Consc
 And come thus far is when our current context actually begins. For we now live in a world containing non-human entities that can also generate citra. *We currently call them artificial, and concede to them degrees of intelligence. What happens of them, and by consequence of us and our existence, is (as far as we know) a wholly unprecedented matter in the entire history of saṃskṛtī, prakṛtī and ṛta- that is, of culture, nature and reality. This alone suffices to merit it pause, consideration, appraisal and caution.**
 
 
-### 3- ~2080, Vikram Samvat. Present Day.
+#### 3- ~2080, Vikram Samvat. Present Day.
 
 To the widely popular image-generation AI called Midjourney, submit the prompt “India travel and culture,” and you are near-certain to be returned with something that contains the Taj Mahal:
 
