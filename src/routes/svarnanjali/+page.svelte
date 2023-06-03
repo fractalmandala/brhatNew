@@ -1,10 +1,16 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { langMode, changeLanguage } from '$lib/stores/globalstores';
-	import { breakOne, breakZero, breakTwo } from '$lib/stores/globalstores';
+	import { breakOne, breakZero, breakTwo, themeMode } from '$lib/stores/globalstores';
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte';
 	import SvarLogo from '$lib/logos/Svarnanjali2.svelte';
 	import Youtuber from '$lib/components/Youtuber.svelte';
+	import P01 from '$lib/svpanels/english/panel01.svelte';
+	import P02 from '$lib/svpanels/english/panel02.svelte';
+	import P03 from '$lib/svpanels/english/panel03.svelte';
+	import P04 from '$lib/svpanels/english/panel04.svelte';
+	import P05 from '$lib/svpanels/english/panel05.svelte';
+	import P06 from '$lib/svpanels/english/panel06.svelte';
 
 	let fake = false;
 	let language = false;
@@ -20,13 +26,6 @@
 		fake = !fake;
 	}
 </script>
-
-<svelte:head>
-	<link
-		rel="stylesheet"
-		href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.css"
-	/>
-</svelte:head>
 
 <svelte:window bind:innerWidth={iW} bind:scrollY={y} />
 
@@ -55,10 +54,8 @@
 		<div class="video-container">
 			<Youtuber youTubeId={idv} />
 		</div>
-		<div class="rta-row colgap300 xcenter-d">
-			<div class="rta-column ta-c-d">
-				<a href="/svarnanjali/english" class="genbutton-l"> Explore in English </a>
-			</div>
+		<div class="rta-row colgap300 xcenter-d textarea">
+			<h5>Continue in English, or</h5>
 			<div class="rta-column ta-c-d">
 				<a href="/svarnanjali/hindi" class="genbutton-l" on:click={changeLanguage}>
 					हिन्दी में पढ़े
@@ -68,38 +65,43 @@
 	</div>
 </div>
 
+<div
+	class:levelzero={$breakZero}
+	class:levelone={$breakOne}
+	class:leveltwo={$breakTwo}
+	class:lightmode={$themeMode}
+	class:darkmode={!$themeMode}
+>
+	<P01 />
+	<P02 />
+	<P03 />
+	<P04 />
+	<P05 />
+</div>
+
 <style lang="sass">
+
+.textarea
+	background: rgba(0,0,0,0.8)
+	padding: 16px
+	h5
+		color: white
+	
 
 .genbutton-l
 	font-size: 24px
 	width: max-content
 	
-
-
-
 .levelzero
 	.video-container
 		width: 100%
 		max-width: 720px
 		height: 400px
 		border-radius: 24px
-		video
-			object-fit: cover
-			border-radius: 24px
-			width: 100%
-			height: 100%
 	.rta-row.xcenter-d
 		width: 720px
 		column-gap: 128px
 		text-align: center
-
-.levelone
-	.video-container video
-		height: 280px
-
-.leveltwo
-	.video-container video
-		height: 280px
 
 .my-screen
 	height: 100%
