@@ -110,10 +110,6 @@
 			<a class="mainlinks" href="/rta">Ṛta in Design</a>
 			<RtaLinks flytime={active} />
 		</div>
-		<div class="spacer">
-			<a class="mainlinks" href="/mandala">Fractal Maṇḍala</a>
-			<MandalaLinks flytime={active} />
-		</div>
 	</div>
 	<div class="footerbot">
 		<small>2023 Bṛhat | All Rights Reserved.</small>
