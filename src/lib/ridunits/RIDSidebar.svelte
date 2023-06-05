@@ -1,179 +1,189 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import {
+		themeMode,
+		sideMode,
+		breakZero,
+		breakOne,
+		breakTwo,
+		showChip,
+		chipStore
+	} from '$lib/stores/globalstores';
+	import { browser } from '$app/environment';
+	import { fly } from 'svelte/transition';
+	import { expoInOut } from 'svelte/easing';
+	import type { SearchItem } from '$lib/types/SearchItem';
+	import { searchitems } from '$lib/filed/searchindex';
+	import { slide } from 'svelte/transition';
+	import CompToggle from '$lib/ridunits/CompToggle.svelte';
+	import AboutLinks from '$lib/links/AboutLinks.svelte';
+	import AnveshiLinks from '$lib/links/AnveshiLinks.svelte';
+	import AryavartaLinks from '$lib/links/AryavartaLinks.svelte';
+	import DrashtaLinks from '$lib/links/DrashtaLinks.svelte';
+	import MandalaLinks from '$lib/links/MandalaLinks.svelte';
+	import RtaLinks from '$lib/links/RtaLinks.svelte';
 
-	import { onMount } from 'svelte'
-	import { themeMode, sideMode, breakZero, breakOne, breakTwo, showChip, chipStore } from '$lib/stores/globalstores'
-	import { browser } from '$app/environment'
-	import { fly } from 'svelte/transition'
-	import { expoInOut } from 'svelte/easing'
-  import type { SearchItem } from '$lib/types/SearchItem'
-	import { searchitems } from '$lib/filed/searchindex'
-	import { slide } from 'svelte/transition'
-	import CompToggle from '$lib/ridunits/CompToggle.svelte'
-	import AboutLinks from '$lib/links/AboutLinks.svelte'
-	import AnveshiLinks from '$lib/links/AnveshiLinks.svelte'
-	import AryavartaLinks from '$lib/links/AryavartaLinks.svelte'
-	import DrashtaLinks from '$lib/links/DrashtaLinks.svelte'
-	import MandalaLinks from '$lib/links/MandalaLinks.svelte'
-	import RtaLinks from '$lib/links/RtaLinks.svelte'
+	let iW: number;
+	let breakPoint: boolean;
+	let fake = false;
+	let xaxis: number;
+	let yaxis: number;
+	let inputElement: HTMLInputElement;
+	let inputValue = '';
+	let searchResults: SearchItem[] = [];
+	let isFocused = false;
+	let showResults = false;
 
-	let iW:number
-	let breakPoint:boolean
-	let fake = false
-	let xaxis:number
-	let yaxis:number
-	let inputElement: HTMLInputElement
-	let inputValue = ''
-  let searchResults: SearchItem[] = []
-  let isFocused = false
-	let showResults = false
-
-	function fauxfake(){
-		fake = !fake
+	function fauxfake() {
+		fake = !fake;
 	}
 
- async function handleInput() {
-    if (inputValue.length > 2) {
-      searchResults = searchitems.filter((item) =>
-        item.heading.toLowerCase().includes(inputValue.toLowerCase()),
-				showResults = true,
-      );
-    } else {
-      searchResults = [];
-    }
-  }
+	async function handleInput() {
+		if (inputValue.length > 2) {
+			searchResults = searchitems.filter(
+				(item) => item.heading.toLowerCase().includes(inputValue.toLowerCase()),
+				(showResults = true)
+			);
+		} else {
+			searchResults = [];
+		}
+	}
 
-  function handleFocus() {
-    isFocused = true;
-  }
+	function handleFocus() {
+		isFocused = true;
+	}
 
-	function handleBlur(){
-		inputValue = ''
-		isFocused = false
+	function handleBlur() {
+		inputValue = '';
+		isFocused = false;
 	}
 
 	function toggleVisibility() {
-	  if (browser) {
-	    themeMode.update((mode) => {
-	      const newMode = !mode;
-	      localStorage.setItem('themeMode', JSON.stringify(newMode));
-	      return newMode;
-	    });
-	  }
+		if (browser) {
+			themeMode.update((mode) => {
+				const newMode = !mode;
+				localStorage.setItem('themeMode', JSON.stringify(newMode));
+				return newMode;
+			});
+		}
 	}
 
-	function toggleSideBar(){
-		if ( browser ) {
+	function toggleSideBar() {
+		if (browser) {
 			sideMode.update((mode) => {
 				const newMode = !mode;
 				localStorage.setItem('sideMode', JSON.stringify(newMode));
 				return newMode;
-			})
+			});
 		}
 	}
 
-	function handleThemeAndClose(){
+	function handleThemeAndClose() {
 		toggleVisibility();
 		toggleSideBar();
 	}
 
-	function handleMouseLeave(){
+	function handleMouseLeave() {
 		if ($sideMode) {
-					sideMode.update((mode) => {
-						const newMode = !mode;
-						localStorage.setItem('sideMode', JSON.stringify(newMode));
-						return newMode;
-					})
+			sideMode.update((mode) => {
+				const newMode = !mode;
+				localStorage.setItem('sideMode', JSON.stringify(newMode));
+				return newMode;
+			});
 		}
 	}
 
-	$: if ( iW <= 1023 ) {
-		breakPoint = true 
+	$: if (iW <= 1023) {
+		breakPoint = true;
 	} else {
-		breakPoint = false
+		breakPoint = false;
 	}
 
-	$: if ( breakPoint === true ) {
+	$: if (breakPoint === true) {
 		xaxis = 0;
-		yaxis = -600
+		yaxis = -600;
 	} else {
 		xaxis = 480;
-		yaxis = 0
+		yaxis = 0;
 	}
 
 	onMount(() => {
-		if ( iW <= 1023 ) {
-			breakPoint = true
+		if (iW <= 1023) {
+			breakPoint = true;
 		}
-	})
-
+	});
 </script>
 
-<svelte:window bind:innerWidth={iW}/>
+<svelte:window bind:innerWidth={iW} />
 
 {#if $sideMode}
-<div class="appsidebar modal" class:light={$themeMode} class:dark={!$themeMode}
-	in:fly={{ x: xaxis, y: yaxis, duration: 650, easing: expoInOut }}
-	out:fly={{ x: xaxis, y: yaxis, duration: 650, easing: expoInOut }}
-	data-lenis-prevent
-	on:mouseleave={handleMouseLeave}
+	<div
+		class="appsidebar modal"
+		class:light={$themeMode}
+		class:dark={!$themeMode}
+		in:fly={{ x: xaxis, y: yaxis, duration: 650, easing: expoInOut }}
+		out:fly={{ x: xaxis, y: yaxis, duration: 650, easing: expoInOut }}
+		data-lenis-prevent
+		on:mouseleave={handleMouseLeave}
 	>
 		<div class="right" id="searcharea">
 			<form class="rta-row colgap200 xend">
-				<input type="text" placeholder="Search..."
+				<input
+					type="text"
+					placeholder="Search..."
 					bind:value={inputValue}
 					bind:this={inputElement}
 					on:blur={handleBlur}
-    			on:input={handleInput}
-    			on:focus={handleFocus}
+					on:input={handleInput}
+					on:focus={handleFocus}
 				/>
 			</form>
 		</div>
-	{#if searchResults.length && showResults}
-	  <div class="search-results rta-column all-p-16 rowgap100" transition:slide>
-			<h6 class="ta-r">Results:</h6>
-	    {#each searchResults as result}
-				<a href={result.url} on:click={toggleSideBar} on:keydown={fauxfake}>
-	      	<p class="tt-c ta-r">
-					{result.heading}
-					</p>
-				</a>	
-	    {/each}
-	  </div>
-	{/if}
-	<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
-		<h5><a href="/drashta">Bṛhat Draṣṭā</a></h5>
-		<DrashtaLinks flytime={$sideMode}/>
+		{#if searchResults.length && showResults}
+			<div class="search-results rta-column all-p-16 rowgap100" transition:slide>
+				<h6 class="ta-r">Results:</h6>
+				{#each searchResults as result}
+					<a href={result.url} on:click={toggleSideBar} on:keydown={fauxfake}>
+						<p class="tt-c ta-r">
+							{result.heading}
+						</p>
+					</a>
+				{/each}
+			</div>
+		{/if}
+		<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
+			<h5><a href="/drashta">Bṛhat Draṣṭā</a></h5>
+			<DrashtaLinks flytime={$sideMode} />
+		</div>
+		<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
+			<h5><a href="/anveshi">Bṛhat Anveṡī</a></h5>
+			<AnveshiLinks flytime={$sideMode} />
+		</div>
+		<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
+			<h5><a href="/mrdanga">Bṛhad Mṛdaṅga</a></h5>
+		</div>
+		<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
+			<h5><a href="/dhiti">Dhīti</a></h5>
+		</div>
+		<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
+			<h5><a href="/openlibrary">Bṛhat Open Library</a></h5>
+		</div>
+		<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
+			<h5><a href="/aryavarta">Scrolls of Āryavarta</a></h5>
+		</div>
+		<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
+			<h5><a href="/mandala">Fractal Maṇḍala</a></h5>
+			<MandalaLinks flytime={$sideMode} />
+		</div>
+		<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
+			<h5><a href="/rta">Ṛta in Design</a></h5>
+			<RtaLinks flytime={$sideMode} />
+		</div>
+		<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
+			<h5><a href="/about">About</a></h5>
+			<AboutLinks flytime={$sideMode} />
+		</div>
 	</div>
-	<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
-		<h5><a href="/anveshi">Bṛhat Anveṡī</a></h5>
-		<AnveshiLinks flytime={$sideMode}/>
-	</div>
-	<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
-		<h5><a href="/mrdanga">Bṛhad Mṛdaṅga</a></h5>
-	</div>
-	<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
-		<h5><a href="/dhiti">Dhīti</a></h5>
-	</div>
-	<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
-		<h5><a href="/openlibrary">Bṛhat Open Library</a></h5>
-	</div>
-	<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
-		<h5><a href="/aryavarta">Scrolls of Āryavarta</a></h5>
-		<AryavartaLinks flytime={$sideMode}/>	
-	</div>
-	<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
-		<h5><a href="/mandala">Fractal Maṇḍala</a></h5>
-		<MandalaLinks flytime={$sideMode}/>
-	</div>
-	<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
-		<h5><a href="/rta">Ṛta in Design</a></h5>
-		<RtaLinks flytime={$sideMode}/>
-	</div>
-	<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
-		<h5><a href="/about">About</a></h5>
-		<AboutLinks flytime={$sideMode}/>
-	</div>
-</div>
 {/if}
 
 <style lang="sass">

@@ -1,109 +1,136 @@
 <script lang="ts">
+	import { onMount, onDestroy } from 'svelte';
+	import { themeMode } from '$lib/stores/globalstores';
+	import { isModal } from '$lib/stores/modal';
+	import Contact from '$lib/ridunits/RIDContact.svelte';
+	import AboutLinks from '$lib/links/AboutLinks.svelte';
+	import AnveshiLinks from '$lib/links/AnveshiLinks.svelte';
+	import AryavartaLinks from '$lib/links/AryavartaLinks.svelte';
+	import DrashtaLinks from '$lib/links/DrashtaLinks.svelte';
+	import MandalaLinks from '$lib/links/MandalaLinks.svelte';
+	import RtaLinks from '$lib/links/RtaLinks.svelte';
+	import IconTop from '$lib/icons/IconTop.svelte';
 
-	import { onMount, onDestroy } from 'svelte'
-	import { themeMode } from '$lib/stores/globalstores'
-	import { isModal } from '$lib/stores/modal'
-	import Contact from '$lib/ridunits/RIDContact.svelte'
-	import AboutLinks from '$lib/links/AboutLinks.svelte'
-	import AnveshiLinks from '$lib/links/AnveshiLinks.svelte'
-	import AryavartaLinks from '$lib/links/AryavartaLinks.svelte'
-	import DrashtaLinks from '$lib/links/DrashtaLinks.svelte'
-	import MandalaLinks from '$lib/links/MandalaLinks.svelte'
-	import RtaLinks from '$lib/links/RtaLinks.svelte'
-	import IconTop from '$lib/icons/IconTop.svelte'
+	let fake: boolean = false;
+	let active: boolean = true;
+	let modalStatus: any;
 
-	let fake:boolean = false
-	let active:boolean = true
-	let modalStatus:any
+	const unsubscribe = isModal.subscribe((value) => {
+		modalStatus = value;
+	});
 
-	const unsubscribe = isModal.subscribe(value => {
-		modalStatus = value
-	})
-
-	function toggleModal(){
-		isModal.update(value => !value)
+	function toggleModal() {
+		isModal.update((value) => !value);
 	}
 
-	function fauxfake(){
-		fake = !fake
+	function fauxfake() {
+		fake = !fake;
 	}
 
 	onMount(() => {
-		active = true
-	})
+		active = true;
+	});
 
-	onDestroy(unsubscribe)
-
+	onDestroy(unsubscribe);
 </script>
-
 
 <footer class="footer back" class:light={$themeMode} class:dark={!$themeMode}>
 	<div class="footertop">
-		<div class="topbutton" on:click={() => { window.scrollTo(0, 0)}} on:keydown={fauxfake}>
-			<IconTop></IconTop>
+		<div
+			class="topbutton"
+			on:click={() => {
+				window.scrollTo(0, 0);
+			}}
+			on:keydown={fauxfake}
+		>
+			<IconTop />
 		</div>
 	</div>
 	<div class="footermain">
 		<div class="footerlogo">
 			<a class="logoimage" href="/">
-				<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/02brhatlogos/horizontal%20white-%20600.png" alt="logo of brhat"/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/02brhatlogos/horizontal%20white-%20600.png"
+					alt="logo of brhat"
+				/>
 			</a>
 			<div class="rta-row icons">
 				<a href="https://twitter.com/brhat_in" target="_blank" rel="noreferrer">
-					<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/twitter-red.png" alt="twitter"/>
+					<img
+						src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/twitter-red.png"
+						alt="twitter"
+					/>
 				</a>
 				<a href="https://www.facebook.com/brhat.in/" target="_blank" rel="noreferrer">
-					<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/facebook-red.png" alt="facebook"/>
+					<img
+						src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/facebook-red.png"
+						alt="facebook"
+					/>
 				</a>
 				<a href="https://www.linkedin.com/company/brhat" target="_blank" rel="noreferrer">
-					<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/linkedin-red.png" alt="linkedin"/>
+					<img
+						src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/linkedin-red.png"
+						alt="linkedin"
+					/>
 				</a>
-				<a href="https://www.youtube.com/channel/UCpmTZwM36xdAuHbBaaE2asg" target="_blank" rel="noreferrer">
-					<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/youtube-red.png" alt="youtube"/>
+				<a
+					href="https://www.youtube.com/channel/UCpmTZwM36xdAuHbBaaE2asg"
+					target="_blank"
+					rel="noreferrer"
+				>
+					<img
+						src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/youtube-red.png"
+						alt="youtube"
+					/>
 				</a>
 			</div>
 		</div>
 		<div>
 			<div class="spacer">
-			<p class="mainlinks" on:click={toggleModal} on:keydown={fauxfake}>Contact Us</p>
-			<a class="mainlinks" href="/dhiti">Dhīti</a>
-			<a class="mainlinks" href="/openlibrary">Bṛhat Open Library</a>
-			<a class="mainlinks" href="/mrdanga">Bṛhad Mṛdaṅga</a>
+				<p class="mainlinks" on:click={toggleModal} on:keydown={fauxfake}>Contact Us</p>
+				<a class="mainlinks" href="/dhiti">Dhīti</a>
+				<a class="mainlinks" href="/openlibrary">Bṛhat Open Library</a>
+				<a class="mainlinks" href="/mrdanga">Bṛhad Mṛdaṅga</a>
 			</div>
 			<div class="spacer">
-			<a class="mainlinks" href="/about">About</a>
-			<AboutLinks flytime={active}></AboutLinks>
+				<a class="mainlinks" href="/about">About</a>
+				<AboutLinks flytime={active} />
 			</div>
 		</div>
 		<div class="spacer">
 			<a class="mainlinks" href="/anveshi">Bṛhat Anveṣī</a>
-			<AnveshiLinks flytime={active}></AnveshiLinks>
-			<div class="creategap"></div>
+			<AnveshiLinks flytime={active} />
+			<div class="creategap" />
 			<a class="mainlinks" href="/drashta">Bṛhat Draṣṭā</a>
-			<DrashtaLinks flytime={active}></DrashtaLinks>
+			<DrashtaLinks flytime={active} />
 		</div>
 		<div class="spacer">
 			<a class="mainlinks" href="/aryavarta">Scrolls of Āryavarta</a>
-			<AryavartaLinks flytime={active}></AryavartaLinks>
-			<div class="creategap"></div>
+			<div class="creategap" />
 			<a class="mainlinks" href="/rta">Ṛta in Design</a>
-			<RtaLinks flytime={active}></RtaLinks>
+			<RtaLinks flytime={active} />
 		</div>
 		<div class="spacer">
 			<a class="mainlinks" href="/mandala">Fractal Maṇḍala</a>
-			<MandalaLinks flytime={active}></MandalaLinks>
+			<MandalaLinks flytime={active} />
 		</div>
 	</div>
 	<div class="footerbot">
 		<small>2023 Bṛhat | All Rights Reserved.</small>
-		<small>Also visit <a href="https://www.brhateducation.in" target="_blank" rel="noreferrer" style="color: #fe4a49">Bṛhat Education.</a></small>
+		<small
+			>Also visit <a
+				href="https://www.brhateducation.in"
+				target="_blank"
+				rel="noreferrer"
+				style="color: #fe4a49">Bṛhat Education.</a
+			></small
+		>
 		<small><a href="/about/privacy" style="color: white">Privacy</a> | contact@brhat.in</small>
 	</div>
 </footer>
 {#if modalStatus}
-	<Contact/>
+	<Contact />
 {/if}
-
 
 <style lang="sass">
 

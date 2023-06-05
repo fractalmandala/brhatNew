@@ -28,9 +28,9 @@
 		</div>
 		<div class="buttons rta-row colgap200">
 			{#if data.id !== 1}
-				<a class="genbutton" href="/aryavarta/chapter/01/{prevID}">Prev</a>
+				<a class="genbutton" href="/aryavarta/{prevID}">Prev</a>
 			{/if}
-			<a class="genbutton" href="/aryavarta/chapter/01/{nextID}">Next</a>
+			<a class="genbutton" href="/aryavarta/{nextID}">Next</a>
 		</div>
 	</div>
 </div>
