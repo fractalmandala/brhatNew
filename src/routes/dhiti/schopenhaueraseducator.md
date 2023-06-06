@@ -2,10 +2,10 @@
 title: "Knowledge, Self, and Liberation: Unveiling Schopenhauer's Pedagogical Paradigm"
 author: Anurag Shukla
 category: Indian Knowledge Systems
-tags: education, festivals
+tags: education, knowledge
 excerpt: "Nietzsche's captivating exploration of Schopenhauer's educational paradigm unveils a transformative vision that transcends mediocrity, emphasizing personalized learning, moral virtue in teachers, and the transformative power of education to reshape individuals and society."
 date: "2023-06-07"
-image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/schopenhaueraseducator1
+image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/schopenhaueraseducator?t=2023-06-06T18%3A27%3A03.984Z
 ---
 
 
