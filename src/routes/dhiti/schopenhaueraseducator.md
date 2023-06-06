@@ -4,7 +4,7 @@ author: Anurag Shukla
 category: Indian Knowledge Systems
 tags: education, festivals
 date: "2023-06-07"
-image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/schopenhaueraseducator
+image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/schopenhaueraseducator1
 ---
 
 
