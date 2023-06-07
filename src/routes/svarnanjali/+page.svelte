@@ -2,9 +2,11 @@
 	import { onMount } from 'svelte';
 	import { langMode, changeLanguage } from '$lib/stores/globalstores';
 	import { breakOne, breakZero, breakTwo, themeMode } from '$lib/stores/globalstores';
+	import { getSvarnanjali } from '$lib/utils/supapulls';
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte';
 	import SvarLogo from '$lib/logos/Svarnanjali2.svelte';
 	import Youtuber from '$lib/components/Youtuber.svelte';
+	import Youtuber2 from '$lib/components/Youtuber.svelte';
 	import P01 from '$lib/svpanels/english/panel01.svelte';
 	import P02 from '$lib/svpanels/english/panel02.svelte';
 	import P03 from '$lib/svpanels/english/panel03.svelte';
@@ -17,6 +19,7 @@
 	let y: number;
 	let iW: number;
 	let idv = 'OeCFCHwSpd0';
+	let vids: any;
 
 	function toggleLanguage() {
 		language = !language;
@@ -25,6 +28,10 @@
 	function fauxfake() {
 		fake = !fake;
 	}
+
+	onMount(async () => {
+		vids = await getSvarnanjali();
+	});
 </script>
 
 <svelte:window bind:innerWidth={iW} bind:scrollY={y} />
@@ -50,11 +57,11 @@
 	class="back"
 	style="background-image: url('https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/batch1/522.webp')"
 >
-	<div class="rta-column rowgap300 minH ycenter xcenter">
+	<div class="rta-column rowgap300 p-top-64 p-bot-64 ycenter xcenter">
 		<div class="video-container">
 			<Youtuber youTubeId={idv} />
 		</div>
-		<div class="rta-row colgap300 xcenter-d textarea">
+		<div class="rta-row colgap300 xcenter-d ycenter textarea">
 			<h5>Continue in English, or</h5>
 			<div class="rta-column ta-c-d">
 				<a href="/svarnanjali/hindi" class="genbutton-l" on:click={changeLanguage}>
@@ -64,7 +71,18 @@
 		</div>
 	</div>
 </div>
-
+<div class="rta-grid grid3 p-top-64 rowgap300 colgap300 outer-box ycenter">
+	{#if vids && vids.length > 0}
+		{#each vids as item}
+			<Youtuber2 youTubeId={item.videoid} />
+		{/each}
+	{/if}
+</div>
+<div class="rta-column holdsbutton">
+	<a class="genbutton" href="https://www.youtube.com/@brhat" target="_blank" rel="noreferrer">
+		View on YouTube
+	</a>
+</div>
 <div
 	class:levelzero={$breakZero}
 	class:levelone={$breakOne}
@@ -80,6 +98,9 @@
 </div>
 
 <style lang="sass">
+
+.holdsbutton
+	align-items: center
 
 .textarea
 	background: rgba(0,0,0,0.8)
@@ -137,9 +158,6 @@
 
 .rta-column
 	overflow: hidden
-
-.minH
-	height: 100vh
 
 
 </style>

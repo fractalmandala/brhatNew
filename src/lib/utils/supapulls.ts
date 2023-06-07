@@ -687,3 +687,13 @@ export async function getDescription(url:string){
   return data
 }
 
+export async function getSvarnanjali(){
+	const { data, error } = await supabase
+	.from('brhat-youtube')
+	.select()
+	.eq('type','svarnanjali')
+	.order('id',{ ascending: false})
+	.limit(3)
+  if (error) throw new Error(error.message)
+  return data	
+}
