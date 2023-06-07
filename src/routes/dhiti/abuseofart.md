@@ -5,7 +5,7 @@ category: Dharma Today
 tags: culture, movie review, critique
 excerpt: "The Hindu conception of art is diametrically opposite to the movies being made today. This piece analyses the the abuse of art in the 2021 movie Shyam Singha Roy."
 date: "2023-05-27"
-image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/shyamsingharoy?t=2023-05-27T12%3A40%3A50.377Z
+image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/shyamsingharoy.webp
 ---
 
 <div align="center"> ॐ श्री अनिरुद्ध सरस्वती </div>
