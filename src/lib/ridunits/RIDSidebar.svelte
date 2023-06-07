@@ -126,7 +126,10 @@
 		data-lenis-prevent
 		on:mouseleave={handleMouseLeave}
 	>
-		<div class="right" id="searcharea">
+		<div class="right colgap200" id="searcharea">
+			<div class="hidethis" on:click={toggleVisibility} on:keydown={fauxfake}>
+				<CompToggle />
+			</div>
 			<form class="rta-row colgap200 xend">
 				<input
 					type="text"
@@ -184,23 +187,33 @@
 
 <style lang="sass">
 
+.hidethis
+	@media screen and (min-width: 900px)
+		display: none
+
 #searcharea
 	position: relative
 	input
 		padding: 4px 8px
 		border-radius: 10px
 		font-size: 14px
-		width: 80%
+		width: 100%
 
 #searcharea
 	input
 		border: none
 
 .right
+	display: flex
+	flex-direction: row
+	align-items: center
 	@media screen and (min-width: 1024px)
 		padding: 8px 32px
+		justify-content: flex-end
 	@media screen and (max-width: 1023px)
 		padding: 8px 32px
+		.rta-row
+			width: calc(100% - 56px)
 
 .search-results
 	@media screen and (min-width: 1024px)
