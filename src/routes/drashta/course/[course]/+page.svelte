@@ -1,199 +1,237 @@
 <script lang="ts">
+	import { onMount, afterUpdate } from 'svelte';
+	import { page } from '$app/stores';
+	import { slide } from 'svelte/transition';
+	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
+	import { fly } from 'svelte/transition';
+	import { backOut, backIn } from 'svelte/easing';
+	import CompButton from '$lib/ridunits/RIDButton.svelte';
+	import {
+		courseContents,
+		juneCalendar,
+		courseTakeaways,
+		newSRG,
+		courseInstructor,
+		courseDetails,
+		courseWhoFor,
+		allCourses
+	} from '$lib/utils/supapulls';
+	let y: number;
+	let iW: number;
+	let breakPoint: boolean;
+	let dynamizer: any;
+	let details: any;
+	let conts: any;
+	let takes: any;
+	let junes: any;
+	let instructor: any;
+	let otherCourses: any;
+	let schedules: any;
+	let isFor: any;
+	let area: any = Array(5).fill(false);
+	area[1] = true;
+	let fake = false;
+	let expandMenu = false;
 
-	import { onMount, afterUpdate } from 'svelte'
-  import { page } from '$app/stores'
-	import { slide } from 'svelte/transition'
-	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores'
-	import { fly } from 'svelte/transition'
-	import { backOut, backIn } from 'svelte/easing'
-	import CompButton from '$lib/ridunits/RIDButton.svelte'
-	import { courseContents, juneCalendar, courseTakeaways, newSRG, courseInstructor, courseDetails, courseWhoFor, allCourses } from '$lib/utils/supapulls'
-	let y:number
-	let iW:number
-	let breakPoint:boolean
-	let dynamizer:any
-	let details:any
-	let conts: any
-	let takes: any
-  let junes:any
-	let instructor:any
-	let otherCourses:any
-  let schedules:any
-	let isFor:any
-	let area:any = Array(5).fill(false)
-	area[1] = true
-	let fake = false
-	let expandMenu = false
+	export let data;
 
-	export let data	
+	$metaUrl = $page.url.pathname;
+	$metaTitle = data.name;
+	$metaDescription = data.excerpt;
+	$metaType = 'course';
 
-	$metaUrl = $page.url.pathname
-	$metaTitle = data.name
-	$metaDescription = data.excerpt
-	$metaType = 'course'
-
-	function toggleMenu(){
-		expandMenu = !expandMenu
+	function toggleMenu() {
+		expandMenu = !expandMenu;
 	}
 
-	function fauxfake(){
-		fake = !fake
+	function fauxfake() {
+		fake = !fake;
 	}
 
-	function toggleArea(index:number) {
-		area[index] = !area[index]
-		for ( let i = 0; i < area.length; i ++ ) {
-			if ( i !== index && area[i] === true ) {
-				area[i] = false
+	function toggleArea(index: number) {
+		area[index] = !area[index];
+		for (let i = 0; i < area.length; i++) {
+			if (i !== index && area[i] === true) {
+				area[i] = false;
 			}
 		}
 	}
 
-	$: if ( iW <= 1023 ) {
-		breakPoint = true
+	$: if (iW <= 1023) {
+		breakPoint = true;
 	} else {
-		breakPoint = false
+		breakPoint = false;
 	}
 
-	$: (async() => {
-			conts = await courseContents(dynamizer)
-			takes = await courseTakeaways(dynamizer)
-			instructor = await courseInstructor(dynamizer)
-			details = await courseDetails(dynamizer)
-			isFor = await courseWhoFor(dynamizer)
-			otherCourses = await allCourses()
-    	schedules = await newSRG(dynamizer)
-    	junes = await juneCalendar();
-		})();
+	$: (async () => {
+		conts = await courseContents(dynamizer);
+		takes = await courseTakeaways(dynamizer);
+		instructor = await courseInstructor(dynamizer);
+		details = await courseDetails(dynamizer);
+		isFor = await courseWhoFor(dynamizer);
+		otherCourses = await allCourses();
+		schedules = await newSRG(dynamizer);
+		junes = await juneCalendar();
+	})();
 
-	onMount(async() => {
-		dynamizer = $page.url.pathname.slice(16,50)
-		conts = await courseContents(dynamizer)
-		takes = await courseTakeaways(dynamizer)
-		instructor = await courseInstructor(dynamizer)
-		details = await courseDetails(dynamizer)
-		isFor = await courseWhoFor(dynamizer)
-		otherCourses = await allCourses()
-    schedules = await newSRG(dynamizer)
-    junes = await juneCalendar();
-	})
+	onMount(async () => {
+		dynamizer = $page.url.pathname.slice(16, 50);
+		conts = await courseContents(dynamizer);
+		takes = await courseTakeaways(dynamizer);
+		instructor = await courseInstructor(dynamizer);
+		details = await courseDetails(dynamizer);
+		isFor = await courseWhoFor(dynamizer);
+		otherCourses = await allCourses();
+		schedules = await newSRG(dynamizer);
+		junes = await juneCalendar();
+	});
 
 	afterUpdate(() => {
-		dynamizer = $page.url.pathname.slice(16,50)
-	})
-
-	
-
+		dynamizer = $page.url.pathname.slice(16, 50);
+	});
 </script>
 
-<svelte:window bind:scrollY={y} bind:innerWidth={iW}/>
+<svelte:window bind:scrollY={y} bind:innerWidth={iW} />
 
 <!--page header with title and icons-->
-	<div id="headersection" class="rta-column outer-box minH rowgap600 p-top-64" data-lenis-scroll-snap-align="start">
-		<div class="rta-grid colgap600 grid2 right2 glass-bottom p-bot-64" id="headersectionmaingrid">
-			<div class="rta-column rowgap400">
-				<div id="heading" class="rta-column rowgap400 p-top-64 background">
-					<h2 class="heading">{data.name}</h2>
-					<h5 class="serif">
-						{data.excerpt}
-					</h5>
-				</div>
-				<div class="rta-grid grid4 stay3 colgap400 rowgap400">
-					{#if details && details.length > 0}
-						{#each details as item}
-							<div class="rta-column xcenter rowgap100 bord-bot-m p-bot-16-m background">
-								<div class="rta-icon2 rta-column">
-									<img src={item.image} alt={item.name}/>
-								</div>
-								<p class="tt-uc ta-c-d ta-c-m"><b>{item.content}</b></p>
-								<small class="tt-uc ta-c-d"><b>{item.name}</b></small>
-							</div>
-						{/each}
-            {#if data.status === 'open now'}
-							<div class="widening">
-              <CompButton --thisbuttoncolor="#0170B9">
-                <a href="https://rzp.io/l/4OgbiD3Co" target="_blank" rel="noreferrer" style="font-size: 18px">
-                  Register and Pay
-                </a>
-              </CompButton>
-							</div>
-            {/if}
-					{/if}
-				</div>
+<div
+	id="headersection"
+	class="rta-column outer-box minH rowgap600 p-top-64"
+	data-lenis-scroll-snap-align="start"
+>
+	<div class="rta-grid colgap600 grid2 right2 glass-bottom p-bot-64" id="headersectionmaingrid">
+		<div class="rta-column rowgap400">
+			<div id="heading" class="rta-column rowgap400 p-top-64 background">
+				<h2 class="heading">{data.name}</h2>
+				<h5 class="serif">
+					{data.excerpt}
+				</h5>
 			</div>
-			<div class="rta-column rta-image" id="heroimage">
-				<img src={data.image} alt={data.name}/>
+			<div class="rta-grid grid4 stay3 colgap400 rowgap400">
+				{#if details && details.length > 0}
+					{#each details as item}
+						<div class="rta-column xcenter rowgap100 bord-bot-m p-bot-16-m background">
+							<div class="rta-icon2 rta-column">
+								<img src={item.image} alt={item.name} />
+							</div>
+							<p class="tt-uc ta-c-d ta-c-m"><b>{item.content}</b></p>
+							<small class="tt-uc ta-c-d"><b>{item.name}</b></small>
+						</div>
+					{/each}
+					{#if data.status === 'open now'}
+						<div class="widening">
+							<form>
+								<p class="ta-c" style="color: var(--opposite); margin-bottom: 4px">
+									Indian Registrants:
+								</p>
+								<script
+									src="https://checkout.razorpay.com/v1/payment-button.js"
+									data-payment_button_id="pl_LzqAZVTLio5DOc"
+									async
+								>
+								</script>
+							</form>
+							<form>
+								<p class="ta-c" style="color: var(--opposite); margin-bottom: 4px">
+									International Registrants:
+								</p>
+								<script
+									src="https://checkout.razorpay.com/v1/payment-button.js"
+									data-payment_button_id="pl_LrRM691C2bz2zB"
+									async
+								>
+								</script>
+							</form>
+						</div>
+					{/if}
+				{/if}
 			</div>
 		</div>
+		<div class="rta-column rta-image" id="heroimage">
+			<img src={data.image} alt={data.name} />
+		</div>
 	</div>
+</div>
 <!--end-->
 
 <!--all course details area-->
-	<div class="rta-column outer-box x000" data-lenis-scroll-snap-align="start">
-		<div id="columnofbuttons" class="rta-column xcenter rowgap300 p-bot-32">
-			{#if breakPoint}
+<div class="rta-column outer-box x000" data-lenis-scroll-snap-align="start">
+	<div id="columnofbuttons" class="rta-column xcenter rowgap300 p-bot-32">
+		{#if breakPoint}
 			<button class="drawer-select" on:click={toggleMenu}>EXPAND DETAILS</button>
-			{/if}
-			{#if !breakPoint || expandMenu}
+		{/if}
+		{#if !breakPoint || expandMenu}
 			<div class="rta-row colgap300" on:click={toggleMenu} on:keydown={fauxfake} transition:slide>
-			<button class="drawer-item2" on:click={() => toggleArea(1)} class:selected={area[1]}>
+				<button class="drawer-item2" on:click={() => toggleArea(1)} class:selected={area[1]}>
 					Introduction
-			</button>
-			<button class="drawer-item2" on:click={() => toggleArea(2)} class:selected={area[2]}>
+				</button>
+				<button class="drawer-item2" on:click={() => toggleArea(2)} class:selected={area[2]}>
 					Course Contents
-			</button>
-			<button class="drawer-item2" on:click={() => toggleArea(3)} class:selected={area[3]}>
+				</button>
+				<button class="drawer-item2" on:click={() => toggleArea(3)} class:selected={area[3]}>
 					Course Audience
-			</button>
-			<button class="drawer-item2" on:click={() => toggleArea(4)} class:selected={area[4]}>
+				</button>
+				<button class="drawer-item2" on:click={() => toggleArea(4)} class:selected={area[4]}>
 					Learner Takeaways
-			</button>
-			<button class="drawer-item2" on:click={() => toggleArea(5)} class:selected={area[5]}>
+				</button>
+				<button class="drawer-item2" on:click={() => toggleArea(5)} class:selected={area[5]}>
 					Instructor Profile
-			</button>
-			<button class="drawer-item2" on:click={() => toggleArea(6)} class:selected={area[6]}>
+				</button>
+				<button class="drawer-item2" on:click={() => toggleArea(6)} class:selected={area[6]}>
 					Session Schedule
-			</button>
+				</button>
 			</div>
-			{/if}
-		</div>
-		<div class="rta-column glass-top p-bot-64">
-			{#if area[1]}
-			<div class="rta-column p-top-32 carrier" in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut}} out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn}}>
+		{/if}
+	</div>
+	<div class="rta-column glass-top p-bot-64">
+		{#if area[1]}
+			<div
+				class="rta-column p-top-32 carrier"
+				in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut }}
+				out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn }}
+			>
 				<h4 class="serif p-bot-16">Course Introduction</h4>
 				<pre class="serif">
 				{data.content}
 				</pre>
 			</div>
-			{/if}
-			{#if area[2]}
-			<div class="rta-column p-top-32 carrier" in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut}} out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn}}>
+		{/if}
+		{#if area[2]}
+			<div
+				class="rta-column p-top-32 carrier"
+				in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut }}
+				out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn }}
+			>
 				<h4 class="serif p-bot-16">Course Contents</h4>
 				{#if conts && conts.length > 0}
 					{#each conts as item}
 						<div class="rta-column rowgap100 rowgap-8 bord-bot p-bot-16 p-top-16">
 							<h6 class="tt-c heading">{item.name}</h6>
 							{#if item.content && item.content.length > 0}
-							<pre class="serif">{item.content}</pre>
+								<pre class="serif">{item.content}</pre>
 							{/if}
 							{#if item.books && item.books.length > 0}
-							<div class="rta-row stay colgap100">
-								<div class="rta-image w32">
-									<img src="/images/iconbooks.png" alt="books"/>
+								<div class="rta-row stay colgap100">
+									<div class="rta-image w32">
+										<img src="/images/iconbooks.png" alt="books" />
+									</div>
+									<div class="rta-column w64">
+										<small>Books Consulted:</small>
+										<small style="color: #878787">{item.books}</small>
+									</div>
 								</div>
-								<div class="rta-column w64">
-									<small>Books Consulted:</small>
-									<small style="color: #878787">{item.books}</small>
-								</div>
-							</div>
 							{/if}
 						</div>
 					{/each}
 				{/if}
 			</div>
-			{/if}
-			{#if area[3]}
-			<div class="rta-column p-top-32 carrier" in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut}} out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn}}>
+		{/if}
+		{#if area[3]}
+			<div
+				class="rta-column p-top-32 carrier"
+				in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut }}
+				out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn }}
+			>
 				<h4 class="serif">Who is the Course For</h4>
 				{#if isFor && isFor.length > 0}
 					{#each isFor as item}
@@ -203,9 +241,13 @@
 					{/each}
 				{/if}
 			</div>
-			{/if}
-			{#if area[4]}
-			<div class="rta-column p-top-32 carrier" in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut}} out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn}}>
+		{/if}
+		{#if area[4]}
+			<div
+				class="rta-column p-top-32 carrier"
+				in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut }}
+				out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn }}
+			>
 				<h4 class="serif p-bot-16">Learner Takeaways</h4>
 				{#if takes && takes.length > 0}
 					{#each takes as item}
@@ -216,15 +258,19 @@
 					{/each}
 				{/if}
 			</div>
-			{/if}
-			{#if area[5]}
-			<div class="rta-column p-top-32 carrier" in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut}} out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn}}>
+		{/if}
+		{#if area[5]}
+			<div
+				class="rta-column p-top-32 carrier"
+				in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut }}
+				out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn }}
+			>
 				<h4 class="serif p-bot-16">Course Instructor</h4>
 				{#if instructor && instructor.length > 0}
 					{#each instructor as item}
 						<div class="rta-row row-col fixed rowgap300 colgap300 bord-bot p-bot-16">
 							<div class="rta-image w32 height-30-3">
-								<img src={item.image} alt={item.name}/>
+								<img src={item.image} alt={item.name} />
 							</div>
 							<div class="rta-column w64">
 								<h6 class="heading">{item.name}</h6>
@@ -234,35 +280,39 @@
 					{/each}
 				{/if}
 			</div>
-			{/if}
-            {#if area[6]}
-                <div class="rta-column p-top-32 outer-box" in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut}} out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn}}>
-                    {#if schedules && schedules.length > 0}
-                    <h4 class="serif p-bot-16">Session Schedule</h4>
-                    <div class="rta-grid grid7">
-                      {#if junes && junes.length > 0}
-                        {#each junes as item}
-                          <div class="rta-column datebox {item.isyes}">
-                            <small>June {item.id}</small>
-                            {#if item.isyes === 'yes'}
-                            <p>{item.title}</p>
-                            {/if}
-                          </div>
-                        {/each}
-                      {/if}
-                    </div>
-                    {/if}
-                </div>
-            {/if}
-		</div>
+		{/if}
+		{#if area[6]}
+			<div
+				class="rta-column p-top-32 outer-box"
+				in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut }}
+				out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn }}
+			>
+				{#if schedules && schedules.length > 0}
+					<h4 class="serif p-bot-16">Session Schedule</h4>
+					<div class="rta-grid grid7">
+						{#if junes && junes.length > 0}
+							{#each junes as item}
+								<div class="rta-column datebox {item.isyes}">
+									<small>June {item.id}</small>
+									{#if item.isyes === 'yes'}
+										<p>{item.title}</p>
+									{/if}
+								</div>
+							{/each}
+						{/if}
+					</div>
+				{/if}
+			</div>
+		{/if}
 	</div>
+</div>
 <!--end-->
 <!--all other courses list-->
-	<div class="rta-column rowgap400 outer-box p-top-64" data-lenis-scroll-snap-align="start">
-		<div class="rta-column glass-y p-top-32 p-bot-32">
-			<h3 class="serif">All Courses</h3>
-		</div>
-		<div class="rta-grid grid3 colgap400 rowgap400 p-bot-64">
+<div class="rta-column rowgap400 outer-box p-top-64" data-lenis-scroll-snap-align="start">
+	<div class="rta-column glass-y p-top-32 p-bot-32">
+		<h3 class="serif">All Courses</h3>
+	</div>
+	<div class="rta-grid grid3 colgap400 rowgap400 p-bot-64">
 		{#if otherCourses && otherCourses.length > 0}
 			{#each otherCourses as item}
 				<div class="rta-column rowgap100 bord-bot p-bot-16">
@@ -271,21 +321,21 @@
 						<h6 class="heading tt-c">{item.name}</h6>
 						<p>{item.datefrom} | with {item.ins}</p>
 					{:else}
-					<small class="label labelelse">{item.status}</small>
-					<h6 class="heading tt-c">
-						<a href="/drashta/course/{item.course}">
-							{item.name}
-						</a>
-					</h6>
-					<p>with {item.ins}</p>
+						<small class="label labelelse">{item.status}</small>
+						<h6 class="heading tt-c">
+							<a href="/drashta/course/{item.course}">
+								{item.name}
+							</a>
+						</h6>
+						<p>with {item.ins}</p>
 					{/if}
 				</div>
 			{/each}
 		{/if}
-		</div>
 	</div>
-<!--end-->
+</div>
 
+<!--end-->
 
 <style lang="sass">
 
@@ -343,15 +393,26 @@
 
 .grid4.stay3
 	@media screen and (min-width: 1024px)
-		grid-template-areas: ". . . ." "button button . ."
-		.widening
-			grid-area: button
-	@media screen and (max-width: 1023px)
 		grid-template-areas: ". . ." "button button button"
 		.widening
 			grid-area: button
+			display: flex
+			column-gap: 16px
+			justify-content: center
+			border: 1px solid var(--opposite)
+			padding: 8px
+			form
+				border-radius: 32px
+	@media screen and (max-width: 1023px)
+		grid-template-areas: ". . ." "button button button"
+		.widening
+			display: flex
+			column-gap: 32px
+			grid-area: button
 			align-self: center
 			justify-self: center
+			form
+				border-radius: 16px
 
 .datebox
 	@media screen and (min-width: 1024px)
