@@ -484,24 +484,6 @@ export async function soaChapter1(){
 	return data
 }
 
-export async function soaChapter2(){
-	const { data, error } = await supabase
-	.from('soaChapter2')
-	.select()
-	.order('id')
-	if (error) throw new Error(error.message)
-	return data
-}
-
-export async function soaNasadiya(){
-	const { data, error } = await supabase
-	.from('soa-nasadiya')
-	.select()
-	.order('id')
-	if (error ) throw new Error(error.message)
-	return data
-}
-
 export async function brhatActions(link:string){
 	const { data, error } = await supabase
 	.from('brhat-actions')

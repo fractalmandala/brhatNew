@@ -519,7 +519,7 @@ end-->
 	<!--dhiti blog latest posts section-->
 	<div class="rta-column rowgap600 outer-box" data-lenis-scroll-snap-align="start">
 		<div class="rta-row row-col between ycenter glass-top p-top-32 bord-bot p-bot-32">
-			<div class="rta-row row-col ycenter colgap200" use:autoAnimate>
+			<div class="rta-row row-col ycenter colgap200">
 				<h3 class="typett">RECENT AT DHĪTI</h3>
 				<div class="holds-button-emerge" use:reveal>
 					<ButtonEmerge6><a href="/dhiti">All Posts</a></ButtonEmerge6>
@@ -565,15 +565,7 @@ end-->
 		<div class="rta-grid grid3 colgap400 rowgap400">
 			{#if posts && posts.length > 0}
 				{#each posts as item, i}
-					<div
-						class="rta-card rta-column ybetween rowgap200"
-						use:reveal={{
-							transition: 'fly',
-							y: 200,
-							easing: 'easeOutCirc',
-							delay: i * 50
-						}}
-					>
+					<div class="rta-card rta-column ybetween rowgap200">
 						<div class="rta-column rowgap200">
 							<div class="status-sticker">
 								<small>{item.meta.category}</small>

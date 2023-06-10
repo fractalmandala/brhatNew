@@ -146,7 +146,7 @@
 	z-index: 999
 	grid-template-rows: auto 1fr auto
 	grid-template-areas: "footertop" "footermain" "footerbot"
-	background: url('/images/glassdark.png')
+	background: url('/images/glassdark.webp')
 	background-size: cover
 	.footertop
 		grid-area: footertop
