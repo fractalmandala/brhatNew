@@ -1,150 +1,175 @@
 <script lang="ts">
+	import { onMount, afterUpdate } from 'svelte';
+	import { page } from '$app/stores';
+	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
+	import autoAnimate from '@formkit/auto-animate';
+	import { ChevronDown } from 'lucide-svelte';
+	import { chapterItinerary } from '$lib/utils/supapulls';
+	import { chapterTemples, chapterHighlight } from '$lib/utils/supapulls';
 
-	import { onMount, afterUpdate } from 'svelte'
-	import { page } from '$app/stores'
-	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores'
-	import autoAnimate from '@formkit/auto-animate'
-	import { ChevronDown } from 'lucide-svelte'
-	import { chapterItinerary } from '$lib/utils/supapulls'
-	import { chapterTemples } from '$lib/utils/supapulls'
+	let p: number;
+	let alignGrid = false;
+	let chapter: string;
+	let highlights: any;
+	let itins: string | any[];
+	let openedDay: boolean[] = Array(5).fill(false);
+	let temp: any;
+	let area: any = Array(2).fill(false);
+	area[1] = true;
+	let visibleTemple: any = Array(30).fill(false);
+	let fake = false;
+	let elementTop: HTMLElement;
 
-	let p:number
-	let alignGrid = false
-	let chapter:string 
-	let itins:string|any[]
-	let openedDay:boolean[] = Array(5).fill(false)
-	let temp:any
-	let area:any = Array(2).fill(false)
-	area[1] = true
-	let visibleTemple:any = Array(30).fill(false)
-	let fake = false
-	let elementTop: HTMLElement
+	export let data;
 
-	export let data
+	$metaUrl = $page.url.pathname;
+	$metaTitle = data.name;
+	$metaDescription = data.excerpt;
+	$metaImage = data.image;
+	$metaType = 'webpage';
 
-	$metaUrl = $page.url.pathname
-	$metaTitle = data.name
-	$metaDescription = data.excerpt
-	$metaImage = data.image
-	$metaType = 'webpage'
-
-	function fauxfake(){
-		fake = !fake
+	function fauxfake() {
+		fake = !fake;
 	}
 
-	let tempIndex = 0
+	let tempIndex = 0;
 
-	function toggleDay(index:number) {
-		openedDay[index] = !openedDay[index]
-		for ( let i = 0; i < openedDay.length; i ++ ) {
-			if ( i !== index && openedDay[i] === true ) {
-				openedDay[i] = false
+	function toggleDay(index: number) {
+		openedDay[index] = !openedDay[index];
+		for (let i = 0; i < openedDay.length; i++) {
+			if (i !== index && openedDay[i] === true) {
+				openedDay[i] = false;
 			}
 		}
-		if ( alignGrid === false ) {
-			alignGrid = true
+		if (alignGrid === false) {
+			alignGrid = true;
 		}
 	}
 
 	function toggleImage(index: number, element: HTMLElement) {
-		visibleTemple[index] = !visibleTemple[index]
-		for ( let i = 0; i < visibleTemple.length; i ++ ) {
-			if ( i !== index && visibleTemple[i] === true ) {
-				visibleTemple[i] = false
+		visibleTemple[index] = !visibleTemple[index];
+		for (let i = 0; i < visibleTemple.length; i++) {
+			if (i !== index && visibleTemple[i] === true) {
+				visibleTemple[i] = false;
 			}
 		}
 		element.scrollIntoView({ behavior: 'smooth', block: 'start' });
 	}
 
-	$: anyTempleOpen = visibleTemple.some((item: any) => item)
+	$: anyTempleOpen = visibleTemple.some((item: any) => item);
 
-	onMount(async() => {
-		chapter = data.chapter
-		itins = await chapterItinerary(chapter)
-		temp = await chapterTemples(chapter)
-	})
+	onMount(async () => {
+		chapter = data.chapter;
+		itins = await chapterItinerary(chapter);
+		temp = await chapterTemples(chapter);
+		highlights = await chapterHighlight(chapter);
+	});
 
 	afterUpdate(() => {
-		chapter = data.chapter
-	})
-
-
+		chapter = data.chapter;
+	});
 </script>
 
-<svelte:window bind:scrollY={p}/>
-
-
+<svelte:window bind:scrollY={p} />
 
 <!--heading image-->
-	<div class="rta-column x0 top-p-64" id="heading-image">
-		<img src="{data.image}" alt={data.name} />
-	</div>
+<div class="rta-column x0 top-p-64" id="heading-image">
+	<img src={data.image} alt={data.name} />
+</div>
 <!--end-->
 
 <!--header and metadetails-->
-	<div class="rta-column outer-box limit rowgap100" id="section1">
-		<div class="rta-column bord-bot p-bot-64">
-			<h3 class="tt-u ta-c-d p-bot-16">{data.name}</h3>
-			<em class="tt-u ta-c-d" id="section1line2">{data.status}. Next travelling {data.dates} | {data.duration} | {data.price}</em>
-		</div>
+<div class="rta-column outer-box limit rowgap100 serif" id="section1">
+	<div class="rta-column bord-bot p-bot-64">
+		<h3 class="hindiadobe tt-u ta-c-d p-bot-16">{data.name}</h3>
+		<em class="tt-u ta-c-d" id="section1line2"
+			>{data.status}. Next travelling {data.dates} | {data.duration} | {data.price}</em
+		>
 	</div>
+</div>
 <!--end-->
 
 <!--detailed content and itinerary-->
-	<div class="rta-column outer-box limit rowgap600">
-		<pre class="h5">
+<div class="rta-column outer-box limit rowgap600">
+	{#if highlights && highlights.length > 0}
+		<div class="rta-grid grid2 colgap600">
+			<pre class="h5 hindiadobe">
 			{data.content}
 		</pre>
-		<div class="rta-column top-p-32 rowgap300 bot-p-64">
-			<h4 class="tt-u ta-c-d p-bot-16">Itinerary</h4>
-			{#if itins && itins.length > 0}
-				{#each itins as item, i}
-				<div class="rta-column rowgap200 accordion-item" class:accordionOpen={openedDay[i]} on:click={() => toggleDay(i)} on:keydown={fauxfake} use:autoAnimate>
+			<div class="rta-column serif highlights">
+				<h4 class="hindiadobe p-top-16 p-bot-16">Highlights:</h4>
+				{#each highlights as item}
+					<h6 class="hindiadobe">{item.content}</h6>
+				{/each}
+			</div>
+		</div>
+	{:else}
+		<pre class="h5 hindiadobe">
+			{data.content}
+		</pre>
+	{/if}
+	<div class="rta-column top-p-32 rowgap300 bot-p-64">
+		<h4 class="tt-u ta-c-d p-bot-16 hindiadobe">Itinerary</h4>
+		{#if itins && itins.length > 0}
+			{#each itins as item, i}
+				<div
+					class="rta-column rowgap200 accordion-item"
+					class:accordionOpen={openedDay[i]}
+					on:click={() => toggleDay(i)}
+					on:keydown={fauxfake}
+					use:autoAnimate
+				>
 					<div class="rta-row colgap100 xcenter-d" class:opened={openedDay[i]}>
 						<div class="rta-column" class:rotated={openedDay[i]}>
-							<ChevronDown color="#878787"/>
+							<ChevronDown color="#878787" />
 						</div>
-						<h6>{item.name}</h6>
+						<h6 class="hindiadobe">{item.name}</h6>
 					</div>
 					{#if openedDay[i]}
-					<pre class="h5 ta-c-d">
+						<pre class="h5 ta-c-d hindiadobe">
 						{item.content}
 					</pre>
 					{/if}
-				</div>				
-				{/each}
-			{/if}
-		</div>
+				</div>
+			{/each}
+		{/if}
 	</div>
+</div>
 <!--end-->
 
 <!--temples-->
-	<div class="rta-column outer-box limit rowgap100 alt-pads p-top-64 p-bot-64" bind:this={elementTop}>
-		<h4 class="bot-p-16 tt-u ta-c-d bord-top p-top-32">Temples of {data.chapter}</h4>
-		<p class="ta-c-d p-bot-32">Click on the temples to open details.</p>
-		<div class="rta-grid grid3 stay2 colgap400 rowgap400" class:calibrated={anyTempleOpen}>
-			{#if temp && temp.length > 0}
-				{#each temp as item, i}
-					<div class="rta-column rowgap300" class:opentab={visibleTemple[i]} on:click={() => toggleImage(i, elementTop)} on:keydown={fauxfake} use:autoAnimate>
-						<div class="rta-image height-30-2">
-							<img src={item.image} alt={item.name}/>
-						</div>
-						<div class="rta-column rowgap100" use:autoAnimate>
-							{#if !visibleTemple[i]}
-							<p class="linecut"><strong>{item.name}</strong></p>
-							{/if}
-							{#if visibleTemple[i]}
-							<h6>{item.name}</h6>
-							<pre>{item.content}</pre>
-							{/if}
-						</div>
+<div class="rta-column outer-box limit rowgap100 alt-pads p-top-64 p-bot-64" bind:this={elementTop}>
+	<h4 class="bot-p-16 tt-u ta-c-d bord-top p-top-32 hindiadobe">Temples of {data.chapter}</h4>
+	<p class="ta-c-d p-bot-32 hindiadobe">Click on the temples to open details.</p>
+	<div class="rta-grid grid3 stay2 colgap400 rowgap400" class:calibrated={anyTempleOpen}>
+		{#if temp && temp.length > 0}
+			{#each temp as item, i}
+				<div
+					class="rta-column rowgap300"
+					class:opentab={visibleTemple[i]}
+					on:click={() => toggleImage(i, elementTop)}
+					on:keydown={fauxfake}
+					use:autoAnimate
+				>
+					<div class="rta-image height-30-2">
+						<img src={item.image} alt={item.name} />
 					</div>
-				{/each}
-			{/if}
-		</div>
+					<div class="rta-column rowgap100" use:autoAnimate>
+						{#if !visibleTemple[i]}
+							<p class="linecut hindiadobe"><strong>{item.name}</strong></p>
+						{/if}
+						{#if visibleTemple[i]}
+							<h6 class="hindiadobe">{item.name}</h6>
+							<pre class="hindiadobe">{item.content}</pre>
+						{/if}
+					</div>
+				</div>
+			{/each}
+		{/if}
 	</div>
-<!--end-->
+</div>
 
+<!--end-->
 
 <style lang="sass">
 
