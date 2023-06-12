@@ -1,7 +1,14 @@
 <script lang="ts">
 	import { onMount, afterUpdate } from 'svelte';
 	import { page } from '$app/stores';
-	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
+	import {
+		metaTitle,
+		metaDescription,
+		metaUrl,
+		metaImage,
+		metaType,
+		anveshiChapter
+	} from '$lib/stores/metastores';
 	import autoAnimate from '@formkit/auto-animate';
 	import { ChevronDown } from 'lucide-svelte';
 	import { chapterItinerary } from '$lib/utils/supapulls';
@@ -27,6 +34,7 @@
 	$metaDescription = data.excerpt;
 	$metaImage = data.image;
 	$metaType = 'webpage';
+	$anveshiChapter = data.chapter;
 
 	function fauxfake() {
 		fake = !fake;
@@ -58,15 +66,23 @@
 
 	$: anyTempleOpen = visibleTemple.some((item: any) => item);
 
+	$: if ($anveshiChapter) {
+		(async () => {
+			itins = await chapterItinerary($anveshiChapter);
+			temp = await chapterTemples($anveshiChapter);
+			highlights = await chapterHighlight($anveshiChapter);
+		})();
+	}
+
 	onMount(async () => {
-		chapter = data.chapter;
-		itins = await chapterItinerary(chapter);
-		temp = await chapterTemples(chapter);
-		highlights = await chapterHighlight(chapter);
+		$anveshiChapter = data.chapter;
+		itins = await chapterItinerary($anveshiChapter);
+		temp = await chapterTemples($anveshiChapter);
+		highlights = await chapterHighlight($anveshiChapter);
 	});
 
 	afterUpdate(() => {
-		chapter = data.chapter;
+		$anveshiChapter = data.chapter;
 	});
 </script>
 
@@ -82,6 +98,7 @@
 <div class="rta-column outer-box limit rowgap100 serif" id="section1">
 	<div class="rta-column bord-bot p-bot-64">
 		<h3 class="hindiadobe tt-u ta-c-d p-bot-16">{data.name}</h3>
+		{$anveshiChapter}
 		<em class="tt-u ta-c-d" id="section1line2"
 			>{data.status}. Next travelling {data.dates} | {data.duration} | {data.price}</em
 		>
