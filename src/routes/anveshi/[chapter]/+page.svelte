@@ -7,7 +7,8 @@
 		metaUrl,
 		metaImage,
 		metaType,
-		anveshiChapter
+		anveshiChapter,
+		anveshiColor
 	} from '$lib/stores/metastores';
 	import autoAnimate from '@formkit/auto-animate';
 	import { ChevronDown } from 'lucide-svelte';
@@ -40,6 +41,7 @@
 	$metaImage = data.image;
 	$metaType = 'webpage';
 	$anveshiChapter = data.chapter;
+	$anveshiColor = data.params;
 
 	function fauxfake() {
 		fake = !fake;
@@ -133,6 +135,7 @@
 			temp = await chapterTemples($anveshiChapter);
 			highlights = await chapterHighlight($anveshiChapter);
 		})();
+		$anveshiColor = data.params;
 	}
 
 	onMount(async () => {
@@ -160,7 +163,8 @@
 <div class="rta-column outer-box limit rowgap100 serif" id="section1">
 	<div class="rta-column bord-bot p-bot-64">
 		<h3 class="hindiadobe tt-u ta-c-d p-bot-16">{data.name}</h3>
-		<em class="tt-u ta-c-d" id="section1line2">{data.status}</em>
+		<em class="tt-u ta-c-d" id="section1line2" style="background: {$anveshiColor}">{data.status}</em
+		>
 		<div class="rta-row iconsrow">
 			<div class="rta-column rta-icon">
 				<img src="/images/anveshi-dates.png" alt="datesicon" />
@@ -293,8 +297,14 @@
 				{/each}
 			</SplideTrack>
 			<div class="splide__arrows rta-row p-top-16">
-				<button class="splide__arrow splide__arrow--prev genbutton">Prev</button>
-				<button class="splide__arrow splide__arrow--next genbutton">Next</button>
+				<button
+					class="splide__arrow splide__arrow--prev genbutton"
+					style="background: {$anveshiColor}; border: 1px solid {$anveshiColor}">Prev</button
+				>
+				<button
+					class="splide__arrow splide__arrow--next genbutton"
+					style="background: {$anveshiColor}; border: 1px solid {$anveshiColor}">Next</button
+				>
 			</div>
 		</Splide>
 	{/if}
@@ -416,7 +426,6 @@ pre
 			border-radius: 16px
 
 #section1line2
-	background: #FF9F1C
 	color: white
 	padding: 2px 0
 	@media screen and (max-width: 1023px)
