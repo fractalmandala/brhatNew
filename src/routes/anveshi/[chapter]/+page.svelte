@@ -11,12 +11,17 @@
 	} from '$lib/stores/metastores';
 	import autoAnimate from '@formkit/auto-animate';
 	import { ChevronDown } from 'lucide-svelte';
-	import { chapterItinerary } from '$lib/utils/supapulls';
+	import { chapterItinerary, allFaq } from '$lib/utils/supapulls';
 	import { chapterTemples, chapterHighlight } from '$lib/utils/supapulls';
+	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
+	import { EventInterface } from '@splidejs/splide';
+	import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
+	import '@splidejs/splide/css/core';
 
 	let p: number;
 	let alignGrid = false;
-	let chapter: string;
+	let faqs: string | any[];
+	let isFaqOpen: boolean[] = Array(15).fill(false);
 	let highlights: any;
 	let itins: string | any[];
 	let openedDay: boolean[] = Array(5).fill(false);
@@ -42,6 +47,18 @@
 
 	let tempIndex = 0;
 
+	function toggleFaq(index: number) {
+		isFaqOpen[index] = !isFaqOpen[index];
+		for (let i = 0; i < isFaqOpen.length; i++) {
+			if (i !== index && isFaqOpen[i] === true) {
+				isFaqOpen[i] = false;
+			}
+		}
+		if (alignGrid === false) {
+			alignGrid = true;
+		}
+	}
+
 	function toggleDay(index: number) {
 		openedDay[index] = !openedDay[index];
 		for (let i = 0; i < openedDay.length; i++) {
@@ -64,7 +81,51 @@
 		element.scrollIntoView({ behavior: 'smooth', block: 'start' });
 	}
 
-	$: anyTempleOpen = visibleTemple.some((item: any) => item);
+	export function MyTransition(Splide: any, Components: any) {
+		const { bind } = EventInterface(Splide);
+		const { Move } = Components;
+		const { list } = Components.Elements;
+
+		let endCallback: any;
+
+		function mount() {
+			bind(list, 'transitionend', (e) => {
+				if (e.target === list && endCallback) {
+					// Removes the transition property
+					cancel();
+
+					// Calls the `done` callback
+					endCallback();
+				}
+			});
+		}
+
+		function start(index: any, done: any) {
+			// Converts the index to the position
+			const destination = Move.toPosition(index, true);
+
+			// Applies the CSS transition
+			list.style.transition = 'transform 800ms cubic-bezier(.44,.65,.07,1.01)';
+
+			// Moves the carousel to the destination.
+			Move.translate(destination);
+
+			// Keeps the callback to invoke later.
+			endCallback = done;
+		}
+
+		function cancel() {
+			list.style.transition = '';
+		}
+
+		return {
+			mount,
+			start,
+			cancel
+		};
+	}
+
+	$: anyFaqOpen = isFaqOpen.some((item) => item);
 
 	$: if ($anveshiChapter) {
 		(async () => {
@@ -79,6 +140,7 @@
 		itins = await chapterItinerary($anveshiChapter);
 		temp = await chapterTemples($anveshiChapter);
 		highlights = await chapterHighlight($anveshiChapter);
+		faqs = await allFaq();
 	});
 
 	afterUpdate(() => {
@@ -98,32 +160,65 @@
 <div class="rta-column outer-box limit rowgap100 serif" id="section1">
 	<div class="rta-column bord-bot p-bot-64">
 		<h3 class="hindiadobe tt-u ta-c-d p-bot-16">{data.name}</h3>
-		<em class="tt-u ta-c-d" id="section1line2"
-			>{data.status}. Next travelling {data.dates} | {data.duration} | {data.price}</em
-		>
+		<em class="tt-u ta-c-d" id="section1line2">{data.status}</em>
+		<div class="rta-row iconsrow">
+			<div class="rta-column rta-icon">
+				<img src="/images/anveshi-dates.png" alt="datesicon" />
+				<p>{data.dates}</p>
+			</div>
+			<div class="rta-column rta-icon">
+				<img src="/images/anveshi-duration.png" alt="durationicon" />
+				<p>{data.duration}</p>
+			</div>
+			<div class="rta-column rta-icon">
+				<img src="/images/anveshi-price.png" alt="priceicon" />
+				{#if data.price}
+					<p>{data.price}</p>
+				{:else}
+					<p>Price TBD</p>
+				{/if}
+			</div>
+		</div>
+		{#if highlights && highlights.length > 0}
+			<div class="rta-column highlightscolumn p-top-64">
+				{#each highlights as item}
+					{#if item.name === 'temple'}
+						<div class="rta-row highlightsrow">
+							<div class="rta-icons">
+								<img src={item.image} alt="icons" />
+							</div>
+							<h6 class="hindiadobe">{item.content}</h6>
+						</div>
+					{/if}
+					{#if item.name === 'activity'}
+						<div class="rta-row highlightsrow">
+							<div class="rta-icons">
+								<img src={item.image} alt="icons" />
+							</div>
+							<h6 class="hindiadobe">{item.content}</h6>
+						</div>
+					{/if}
+					{#if item.name === 'person'}
+						<div class="rta-row highlightsrow">
+							<div class="rta-icons">
+								<img src={item.image} alt="icons" />
+							</div>
+							<h6 class="hindiadobe">{item.content}</h6>
+						</div>
+					{/if}
+				{/each}
+			</div>
+		{/if}
 	</div>
 </div>
 <!--end-->
 
 <!--detailed content and itinerary-->
 <div class="rta-column outer-box limit rowgap600">
-	{#if highlights && highlights.length > 0}
-		<div class="rta-grid grid2 colgap600">
-			<pre class="h5 hindiadobe">
+	<pre class="h5 hindiadobe">
 			{data.content}
 		</pre>
-			<div class="rta-column serif highlights">
-				<h4 class="hindiadobe p-top-16 p-bot-16">Highlights:</h4>
-				{#each highlights as item}
-					<h6 class="hindiadobe">{item.content}</h6>
-				{/each}
-			</div>
-		</div>
-	{:else}
-		<pre class="h5 hindiadobe">
-			{data.content}
-		</pre>
-	{/if}
+
 	<div class="rta-column top-p-32 rowgap300 bot-p-64">
 		<h4 class="tt-u ta-c-d p-bot-16 hindiadobe">Itinerary</h4>
 		{#if itins && itins.length > 0}
@@ -154,31 +249,80 @@
 <!--end-->
 
 <!--temples-->
-<div class="rta-column outer-box limit rowgap100 alt-pads p-top-64 p-bot-64" bind:this={elementTop}>
-	<h4 class="bot-p-16 tt-u ta-c-d bord-top p-top-32 hindiadobe">Temples of {data.chapter}</h4>
-	<p class="ta-c-d p-bot-32 hindiadobe">Click on the temples to open details.</p>
-	<div class="rta-grid grid3 stay2 colgap400 rowgap400" class:calibrated={anyTempleOpen}>
-		{#if temp && temp.length > 0}
-			{#each temp as item, i}
+<div class="rta-column outer-box rowgap100 p-top-64 p-bot-64">
+	<div class="rta-column bord-top p-top-32 p-bot-32">
+		<h4 class="bot-p-16 tt-u ta-c-d hindiadobe">
+			Temples of {data.chapter}
+		</h4>
+		<small class="ta-c-d" style="color: var(--opposite)"
+			>Use arrow keys/buttons to navigate, or drag/swipe</small
+		>
+	</div>
+	{#if temp && temp.length > 0}
+		<Splide
+			aria-label="midjourneys"
+			mount={{ AutoScroll }}
+			hasTrack={false}
+			options={{
+				drag: true,
+				keyboard: 'global',
+				waitForTransition: true,
+				type: 'slide',
+				wheelMinThreshold: 1.1,
+				speed: 900,
+				direction: 'ltr',
+				pagination: false,
+				autoplay: true,
+				pause: false,
+				width: '88vw'
+			}}
+		>
+			<SplideTrack>
+				{#each temp as item, i}
+					<SplideSlide>
+						<div class="rta-row templesrow">
+							<div class="rta-image">
+								<img src={item.image} alt={item.name} />
+							</div>
+							<div class="rta-column">
+								<h6 class="hindiadobe">{item.name}</h6>
+								<pre class="hindiadobe">{item.content}</pre>
+							</div>
+						</div>
+					</SplideSlide>
+				{/each}
+			</SplideTrack>
+			<div class="splide__arrows rta-row p-top-16">
+				<button class="splide__arrow splide__arrow--prev genbutton">Prev</button>
+				<button class="splide__arrow splide__arrow--next genbutton">Next</button>
+			</div>
+		</Splide>
+	{/if}
+</div>
+<!--end-->
+
+<!--faq-->
+<div class="rta-column outer-box limit rowgap100 serif">
+	<h4 class="bord-top p-bot-32 ta-c-d p-top-32 hindiadobe">FAQs</h4>
+	<div class="rta-grid rowgap400 colgap600" id="faqgrid" class:calibrated={anyFaqOpen}>
+		{#if faqs && faqs.length > 0}
+			{#each faqs as item, i}
 				<div
-					class="rta-column rowgap300"
-					class:opentab={visibleTemple[i]}
-					on:click={() => toggleImage(i, elementTop)}
-					on:keydown={fauxfake}
+					class="rta-column rowgap100"
+					class:opentab={isFaqOpen[i]}
+					on:click={() => toggleFaq(i)}
+					on:keydown={() => toggleFaq(i)}
 					use:autoAnimate
 				>
-					<div class="rta-image height-30-2">
-						<img src={item.image} alt={item.name} />
+					<div class="rta-row fixed ytop colgap100 rowgap400">
+						<div class="button-box" class:rotated={isFaqOpen[i]}>
+							<ChevronDown size="27" color="#878787" />
+						</div>
+						<h6 class="hindiadobe faqs">{item.name}</h6>
 					</div>
-					<div class="rta-column rowgap100" use:autoAnimate>
-						{#if !visibleTemple[i]}
-							<p class="linecut hindiadobe"><strong>{item.name}</strong></p>
-						{/if}
-						{#if visibleTemple[i]}
-							<h6 class="hindiadobe">{item.name}</h6>
-							<pre class="hindiadobe">{item.content}</pre>
-						{/if}
-					</div>
+					{#if isFaqOpen[i]}
+						<p class="hindiadobe faqs">{item.content}</p>
+					{/if}
 				</div>
 			{/each}
 		{/if}
@@ -188,6 +332,83 @@
 <!--end-->
 
 <style lang="sass">
+
+h6.faqs
+	cursor: pointer
+	margin: 0
+
+p.hindiadobe.faqs
+	font-size: 16px
+
+.highlightsrow
+	background: var(--contraster)
+	padding: 8px
+	border-radius: 8px
+	align-items: center
+	column-gap: 24px
+	.rta-icons
+		display: flex
+		align-items: center
+		width: 27px
+		height: 27px
+		img
+			object-fit: contain
+	h6
+		margin: 0
+		width: calc(100% - 56px)
+		font-weight: 400
+		line-height: 1.12
+
+.highlightscolumn
+	row-gap: 16px
+
+pre
+	box-sizing: border-box
+	white-space: pre-line
+	white-space: -moz-pre-line
+	white-space: -pre-line
+	white-space: -o-pre-line
+	word-wrap: break-word
+	word-break: break-word
+	overflow: hidden
+
+.splide__arrows
+	justify-content: center
+	column-gap: 16px
+
+.templesrow
+	@media screen and (min-width: 1024px)
+		column-gap: 32px
+		.rta-image
+			width: 32%
+			height: 30vh
+		.rta-column
+			width: 64%
+	@media screen and (max-width: 1023px)
+		flex-direction: column
+		row-gap: 16px
+		.rta-image, .rta-column
+			width: 100%
+		.rta-image
+			height: 30vh
+
+.iconsrow
+	justify-content: center
+	margin-top: 16px
+	.rta-icon
+		width: 104px
+
+.rta-icon
+	text-align: center
+	row-gap: 8px
+	img
+		width: 40px
+		height: 40px
+		margin: auto
+	p
+		font-family: 'Space Grotesk', sans-serif
+		color: var(--opposite)
+		font-size: 12px
 
 #heading-image
 	@media screen and (min-width: 1024px)
@@ -226,35 +447,6 @@
 			transition: 0.15s
 		.rta-column.rotated
 			transform: rotate(180deg)
-
-.grid3.calibrated
-	@media screen and (min-width: 1024px)
-		grid-template-columns: 1fr 1fr 1fr
-		grid-template-areas: "opentab opentab opentab" ". . ."
-		.opentab
-			grid-area: opentab
-	@media screen and (max-width: 1023px)
-		grid-template-columns: 1fr 1fr
-		grid-template-areas: "opentab opentab" ". ."
-		.opentab
-			grid-area: opentab
-
-.rta-column.opentab
-	@media screen and (min-width: 1024px)
-		display: grid
-		grid-auto-flow: row
-		grid-template-columns: 1fr 1fr 1fr
-		grid-template-rows: auto
-		grid-template-areas: "rta-image rta-column rta-column"
-		gap: 32px 32px
-		.rta-image
-			grid-area: rta-image
-		.rta-column
-			grid-area: rta-column
-	@media screen and (max-width: 1023px)
-		.height-30-2
-			height: 20vh
-	
 
 
 
