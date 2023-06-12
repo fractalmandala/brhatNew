@@ -98,7 +98,6 @@
 <div class="rta-column outer-box limit rowgap100 serif" id="section1">
 	<div class="rta-column bord-bot p-bot-64">
 		<h3 class="hindiadobe tt-u ta-c-d p-bot-16">{data.name}</h3>
-		{$anveshiChapter}
 		<em class="tt-u ta-c-d" id="section1line2"
 			>{data.status}. Next travelling {data.dates} | {data.duration} | {data.price}</em
 		>
