@@ -171,7 +171,7 @@
 				<p>{data.duration}</p>
 			</div>
 			<div class="rta-column rta-icon">
-				<img src="/images/anveshi-price.png" alt="priceicon" />
+				<img src="/images/icon-rupee.png" alt="priceicon" />
 				{#if data.price}
 					<p>{data.price}</p>
 				{:else}
