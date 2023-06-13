@@ -105,6 +105,7 @@
 		</div>
 		<div class="spacer">
 			<a class="mainlinks" href="/mrdanga">Bṛhad Mṛdaṅga</a>
+			<a class="mainlinks" href="/mandala">Fractal Maṇḍala</a>
 			<a class="mainlinks" href="/aryavarta">Scrolls of Āryavarta</a>
 			<a class="mainlinks" href="/rta">Ṛta in Design</a>
 			<div class="creategap" />

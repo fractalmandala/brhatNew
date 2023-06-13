@@ -175,6 +175,9 @@
 			<h5><a href="/aryavarta">Scrolls of Āryavarta</a></h5>
 		</div>
 		<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
+			<h5><a href="/mandala">Fractal Maṇḍala</a></h5>
+		</div>
+		<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
 			<h5><a href="/rta">Ṛta in Design</a></h5>
 		</div>
 		<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
