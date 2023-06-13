@@ -1,33 +1,41 @@
 <script lang="ts">
-
-	import { onMount } from 'svelte'
-	import HeadComponent from '$lib/components/MetaTag.svelte'
-	import RIDSidebar from '$lib/ridunits/RIDSidebar.svelte'
+	import { onMount } from 'svelte';
+	import HeadComponent from '$lib/components/MetaTag.svelte';
+	import RIDSidebar from '$lib/ridunits/RIDSidebar.svelte';
 	import type { LayoutData } from './$types';
-	import { breakZero, breakOne, breakTwo, themeMode, innerWidth, sideMode, chipStore, showChip } from '$lib/stores/globalstores'
+	import {
+		breakZero,
+		breakOne,
+		breakTwo,
+		themeMode,
+		innerWidth,
+		sideMode,
+		chipStore,
+		showChip
+	} from '$lib/stores/globalstores';
 	import { dev } from '$app/environment';
-	import Chip from '$lib/components/Chip.svelte'
+	import Chip from '$lib/components/Chip.svelte';
 	import { inject } from '@vercel/analytics';
-	import Lenis from '@studio-freight/lenis'
-	import '$lib/styles/types.sass'
-	import '$lib/styles/tokens.sass'
-	import Footer from '$lib/components/Footer.svelte'
+	import Lenis from '@studio-freight/lenis';
+	import '$lib/styles/types.sass';
+	import '$lib/styles/tokens.sass';
+	import Footer from '$lib/components/Footer.svelte';
 
-	let breakPointOn:boolean
-	let fake = false
+	let breakPointOn: boolean;
+	let fake = false;
 
 	inject({ mode: dev ? 'development' : 'production' });
 
-	function fauxfake(){
-		fake = !fake
+	function fauxfake() {
+		fake = !fake;
 	}
 
 	$: ({ supabase, session } = data);
 
-	$: if ( $innerWidth <= 1023 ) {
-		breakPointOn = true
- 	} else {
-		breakPointOn = false
+	$: if ($innerWidth <= 1023) {
+		breakPointOn = true;
+	} else {
+		breakPointOn = false;
 	}
 
 	onMount(() => {
@@ -45,38 +53,41 @@
 			requestAnimationFrame(raf);
 		}
 		requestAnimationFrame(raf);
-
 	});
 
-export let data: LayoutData;
-
+	export let data: LayoutData;
 </script>
 
-
-<svelte:window bind:innerWidth={$innerWidth}/>
+<svelte:window bind:innerWidth={$innerWidth} />
 
 <svelte:head>
-	<HeadComponent/>
-	<link href="https://cdn.jsdelivr.net/npm/textify.js/dist/Textify.min.css" rel="stylesheet"/>
+	<HeadComponent />
+	<link href="https://cdn.jsdelivr.net/npm/textify.js/dist/Textify.min.css" rel="stylesheet" />
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-6NPMDTQVDE"></script>
 	<script>
-  	window.dataLayer = window.dataLayer || [];
-  	function gtag(){dataLayer.push(arguments);}
-  	gtag('js', new Date());
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
 
-  	gtag('config', 'G-6NPMDTQVDE');
+		gtag('config', 'G-6NPMDTQVDE');
 	</script>
 </svelte:head>
 
-<main id="appbox" class="themer" class:light={$themeMode} class:dark={!$themeMode}
+<main
+	id="appbox"
+	class="themer"
+	class:light={$themeMode}
+	class:dark={!$themeMode}
 	class:levelzero={$breakZero}
 	class:levelone={$breakOne}
 	class:leveltwo={$breakTwo}
-	>
-	<slot></slot>
-	<RIDSidebar/>
-	<Chip/>
-	<Footer></Footer>
+>
+	<slot />
+	<RIDSidebar />
+	<Chip />
+	<Footer />
 </main>
 
 <style lang="sass">
@@ -90,4 +101,3 @@ export let data: LayoutData;
 	flex-direction: column
 
 </style>
-

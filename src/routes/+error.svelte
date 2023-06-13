@@ -1,56 +1,54 @@
 <script lang="ts">
+	import Header from '$lib/components/SubHeader.svelte';
+	import { themeMode } from '$lib/stores/globalstores';
+	import Search from '$lib/ridunits/CompSearch.svelte';
+	import type { SearchItem } from '$lib/types/SearchItem';
+	import { searchitems } from '$lib/filed/searchindex';
 
-	import Header from '$lib/components/SubHeader.svelte'
-	import { themeMode } from '$lib/stores/globalstores'
-	import Search from '$lib/ridunits/CompSearch.svelte'
-  import type { SearchItem } from '$lib/types/SearchItem'
-	import { searchitems } from '$lib/filed/searchindex'
+	let fake = false;
+	let inputElement: HTMLInputElement;
+	let inputValue = '';
+	let searchResults: SearchItem[] = [];
+	let isFocused = false;
 
-	let fake = false
-	let inputElement: HTMLInputElement
-	let inputValue = ''
-  let searchResults: SearchItem[] = []
-  let isFocused = false
-
- async function handleInput() {
-    if (inputValue.length > 2) {
-      searchResults = searchitems.filter((item) =>
-        item.heading.toLowerCase().includes(inputValue.toLowerCase())
-      );
-    } else {
-      searchResults = [];
-    }
-  }
-
-  function handleFocus() {
-    isFocused = true;
-  }
-
-	function handleBlur(){
-		inputValue = ''
-		isFocused = false
+	async function handleInput() {
+		if (inputValue.length > 2) {
+			searchResults = searchitems.filter((item) =>
+				item.heading.toLowerCase().includes(inputValue.toLowerCase())
+			);
+		} else {
+			searchResults = [];
+		}
 	}
-	let sidebar = false
 
+	function handleFocus() {
+		isFocused = true;
+	}
+
+	function handleBlur() {
+		inputValue = '';
+		isFocused = false;
+	}
+	let sidebar = false;
 </script>
 
-
-<Header sidebar={sidebar}>
-</Header>
+<Header />
 
 <div class="pageglobals" class:light={$themeMode} class:dark={!$themeMode}>
 	<h6 class="thin p-bot-32">
 		Sorry, this page does not exist. Please use the search below to find what you are looking for.
 	</h6>
 	<form class="rta-row colgap200 xstart">
-		<input type="text" placeholder="Search..."
+		<input
+			type="text"
+			placeholder="Search..."
 			bind:value={inputValue}
 			bind:this={inputElement}
 			on:blur={handleBlur}
-    	on:input={handleInput}
-    	on:focus={handleFocus}
+			on:input={handleInput}
+			on:focus={handleFocus}
 		/>
-			<!--
+		<!--
 			<button type="submit" class="blank-button">
 			<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path d="M14.8301 11.3222C14.8301 13.2552 13.2631 14.8222 11.3301 14.8222C9.39706 14.8222 7.83006 13.2552 7.83006 11.3222C7.83006 9.38925 9.39706 7.82225 11.3301 7.82225C13.2631 7.82225 14.8301 9.38925 14.8301 11.3222Z" fill="#676767"/>
@@ -59,29 +57,36 @@
 			</button>
 			-->
 	</form>
-	
-  {#if searchResults.length}
-    <div class="search-results rta-column all-p-16 rowgap100">
-			<h6>Results:</h6>
-      	{#each searchResults as result}
-				<a href={result.url}>
-        <p class="tt-c ta-r">
-					{result.heading}
-				</p>
-				</a>	
-      {/each}
-    </div>
-  {/if}
-</div>
 
+	{#if searchResults.length}
+		<div class="search-results rta-column all-p-16 rowgap100">
+			<h6>Results:</h6>
+			{#each searchResults as result}
+				<a href={result.url}>
+					<p class="tt-c ta-r">
+						{result.heading}
+					</p>
+				</a>
+			{/each}
+		</div>
+	{/if}
+</div>
 
 <style lang="sass">
 
+
 .pageglobals
 	height: 100vh
+	width: 100vw
 	padding-top: 128px
 	padding-left: 32px
 	padding-right: 32px
+
+.pageglobals.dark
+	background: #171717
+
+.pageglobals.light
+	background: #FFFFFF
 
 form
 	input
@@ -107,7 +112,6 @@ form
 		&:hover
 			color: #fe4a49
 	h6
-		color: #fe4a49
 		padding-bottom: 8px
 
 </style>

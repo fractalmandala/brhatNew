@@ -247,6 +247,14 @@ export async function allDiaryCards() {
 	return data
 }
 
+export async function allAuths(){
+	const { data, error } = await supabase
+	.from('brhat-authors')
+	.select()
+	if (error) throw new Error(error.message)
+	return data
+}
+
 
 export async function anveshiTempleArt() {
 	const { data, error } = await supabase

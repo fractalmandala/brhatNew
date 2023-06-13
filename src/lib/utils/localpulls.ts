@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 export async function completeDhiti(){
 	const allfiles = import.meta.glob('/src/routes/dhiti/*.md')
 	const filed = Object.entries(allfiles)
@@ -36,7 +38,7 @@ export async function latestDhitiPost(){
 	return allPosts.slice(0, 1)
 } //single latest post
 
-export async function latestDhitiFour(limit){
+export async function latestDhitiFour(limit:any){
 	const allPostFiles = import.meta.glob('/src/routes/dhiti/*.md')
 	const iterablePostFiles = Object.entries(allPostFiles)
 	const allPosts = await Promise.all(
@@ -495,6 +497,41 @@ export const authorSushant = async() => {
 	const authorPosts = allPosts.filter((post) => post.meta.author === "Sushant Gangoli" || post.meta.authortwo === "Sushant Gangoli")
 	return authorPosts
 } 
+
+export const authorGuest = async() => {
+    const authors = [
+        "Jash Dholani",
+        "Shri Ramachandra Roddam",
+        "Ghora Angirasa",
+        "Akshay Shankar",
+        "Kate Herse",
+        "Prabhav Paturi",
+        "Samyak Dixit",
+				"Deepak Srinivasan"
+    ];
+
+    const allPostFiles = import.meta.glob('/src/routes/dhiti/*.md');
+    const iterablePostFiles = Object.entries(allPostFiles);
+    
+    const allPosts = await Promise.all(
+        iterablePostFiles.map(async ([path, resolver]) => {
+            // @ts-ignore
+            const { metadata } = await resolver();
+            const postPath = path.slice(11,-3);
+            return {
+                meta: metadata,
+                path: postPath,
+            }
+        })
+    );
+    // @ts-ignore
+    allPosts.sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date));
+    
+    const authorPosts = allPosts.filter((post) => authors.includes(post.meta.author) || authors.includes(post.meta.authortwo));
+    
+    return authorPosts;
+} 
+
 
 export const authorRama = async() => {
 	const allPostFiles = import.meta.glob('/src/routes/dhiti/*.md')
