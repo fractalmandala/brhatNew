@@ -176,7 +176,6 @@
 		</div>
 		<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
 			<h5><a href="/rta">Ṛta in Design</a></h5>
-			<RtaLinks flytime={$sideMode} />
 		</div>
 		<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
 			<h5><a href="/about">About</a></h5>

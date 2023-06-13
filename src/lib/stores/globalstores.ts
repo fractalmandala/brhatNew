@@ -57,3 +57,18 @@ export function showChip(title: string, color: string) {
 export function hideChip() {
 	chipStore.update((state) => ({ ...state, isShown: false, title: '', color: '' }));
 }
+
+const iniModal = {
+	isShown: false,
+	ifPDF: false,
+}
+
+export const modalStore = writable(iniModal)
+
+export function showModal(ifPDF:boolean){
+	modalStore.update((state) => ({ ...state, isShown: true, ifPDF}));
+}
+
+export function hideModal(ifPDF:boolean){
+	modalStore.update((state) => ({ ...state, isShown: false, ifPDF}));
+}

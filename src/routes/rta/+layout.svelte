@@ -21,15 +21,17 @@
 		</svg>
 	</div>
 </Header>
-
-<div class="pagethemer" class:light={$themeMode} class:dark={!$themeMode}>
-	<div class="sidebar" />
-	<div class="mainpager">
-		<slot />
-	</div>
+<div class="p-top-64" class:light={$themeMode} class:dark={!$themeMode}>
+	<slot />
 </div>
 
 <style lang="sass">
+
+.light
+	background: white
+
+.dark
+	background: #171717
 
 .menusvg
 	cursor: pointer
@@ -37,32 +39,5 @@
 		svg path
 			fill: white
 
-.pagethemer
-	display: grid
-	grid-auto-flow: row
-	.sidebar
-		grid-area: sidebar
-	.mainpager
-		grid-area: mainpager
-	@media screen and (min-width: 900px)
-		grid-template-columns: 280px 1fr
-		grid-template-areas: "sidebar mainpager"
-		width: 100%
-		.sidebar
-			border-right: 1px solid var(--borderline)
-			border-left: 1px solid var(--borderline)
-			width: 280px
-		.mainpager
-			padding-top: 128px
-	@media screen and (max-width: 899px)
-		grid-template-columns: 1fr
-		grid-template-areas: "sidebar" "mainpager"
-		padding-top: 80px
-
-.light
-	background: white
-
-.dark
-	background: #171717
 
 </style>

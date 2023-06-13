@@ -90,7 +90,6 @@
 				<p class="mainlinks" on:click={toggleModal} on:keydown={fauxfake}>Contact Us</p>
 				<a class="mainlinks" href="/dhiti">Dhīti</a>
 				<a class="mainlinks" href="/openlibrary">Bṛhat Open Library</a>
-				<a class="mainlinks" href="/mrdanga">Bṛhad Mṛdaṅga</a>
 			</div>
 			<div class="spacer">
 				<a class="mainlinks" href="/about">About</a>
@@ -105,10 +104,10 @@
 			<DrashtaLinks flytime={active} />
 		</div>
 		<div class="spacer">
+			<a class="mainlinks" href="/mrdanga">Bṛhad Mṛdaṅga</a>
 			<a class="mainlinks" href="/aryavarta">Scrolls of Āryavarta</a>
-			<div class="creategap" />
 			<a class="mainlinks" href="/rta">Ṛta in Design</a>
-			<RtaLinks flytime={active} />
+			<div class="creategap" />
 		</div>
 	</div>
 	<div class="footerbot">
@@ -172,9 +171,9 @@
 	display: grid
 	grid-auto-flow: row
 	@media screen and (min-width: 1024px)
-		grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+		grid-template-columns: 1fr 1fr 1fr 1fr
 		grid-template-rows: auto auto
-		grid-template-areas: "footerlogo . . . ."
+		grid-template-areas: "footerlogo . . ."
 		padding: 64px 32px
 		gap: 0 40px
 		align-items: start
@@ -201,10 +200,11 @@
 	align-items: center
 	margin-top: 16px
 	column-gap: 16px
+	width: 80%
 
 .logoimage img
 	object-fit: contain
-	width: 100%
+	width: 80%
 
 .icons img
 	object-fit: contain
