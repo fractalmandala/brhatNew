@@ -49,7 +49,7 @@
 
 <div
 	id="top-panel"
-	class="rta-grid grid2 right outer-box minH bdr"
+	class="rta-grid grid2 right outer-box minH"
 	class:light={$themeMode}
 	class:dark={!$themeMode}
 	class:levelzero={$breakZero}
@@ -98,6 +98,12 @@
 </div>
 
 <style lang="sass">
+
+
+h3.serif.black
+	line-height: 1
+	@media screen and (max-width: 768px)
+		padding-bottom: 8px	
 
 .featured
 	display: flex
