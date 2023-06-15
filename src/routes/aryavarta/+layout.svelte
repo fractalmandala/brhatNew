@@ -42,16 +42,13 @@
 
 <style lang="sass">
 
-.dropper
-	position: relative
-
-.dropper-invisible
-	position: absolute
-
 .light
 	background: white
 
 .dark
 	background: #171717
+
+.type
+	width: 100vw
 
 </style>

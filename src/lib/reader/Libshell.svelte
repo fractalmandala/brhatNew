@@ -17,6 +17,7 @@
 			<a href="/openlibrary/dhatus">Dhātupāṭha</a>
 			<a href="/openlibrary/ramayana">Vālmīki Rāmāyaṇa</a>
 			<a href="/openlibrary/rigveda">Ṛgveda Saṃhitā</a>
+			<a href="/openlibrary/puranaindex">Purāṇa Index</a>
 			<div class="bord-top" />
 			<slot name="specificer" />
 		</div>

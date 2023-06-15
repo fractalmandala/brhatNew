@@ -31,12 +31,21 @@
 				>The Vedas - Pujya Swami Shri Chandrasekharendra Saraswati</a
 			>
 		</p>
-		<p>The Riks - Shri Paramasiva Iyer</p>
-		<p>Treatise on Ṛgveda - Vedāyana Bhāradvāja</p>
+		<p>
+			<a href="https://www.brhat.in/openlibrary/books/theriks"> The Riks - Shri Paramasiva Iyer</a>
+		</p>
+		<p>
+			<a href="https://www.brhat.in/openlibrary/books/treatiseonrigveda">
+				Treatise on Ṛgveda - Vedāyana Bhāradvāja
+			</a>
+		</p>
 		<p>
 			For any historical analysis of the Ṛgveda that neither violates the Indian view of its own
 			history, nor need distort the text for its conclusions, we see the works of Shri Srikant
-			Talageri as epitomic. One could begin at Rigveda - A Historical Analysis.
+			Talageri as epitomic. One could begin at
+			<a href="https://www.brhat.in/openlibrary/books/rigvedahistoricalanalysis">
+				Rigveda - A Historical Analysis.
+			</a>
 		</p>
 	</div>
 </div>
@@ -48,5 +57,7 @@
 		padding-right: 256px
 		p
 			line-height: 1.5
+			a 
+				color: #fe4a49
 
 </style>
