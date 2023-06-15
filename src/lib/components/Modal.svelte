@@ -25,7 +25,12 @@
 </script>
 
 {#if isShown}
-	<div class="modal-overlay" on:click={handleOverlayClick} on:keydown={handleOverlayClick}>
+	<div
+		class="modal-overlay"
+		on:click={handleOverlayClick}
+		on:keydown={handleOverlayClick}
+		data-lenis-prevent
+	>
 		<div class="modal null">
 			<div class="rta-row ycenter between">
 				<a

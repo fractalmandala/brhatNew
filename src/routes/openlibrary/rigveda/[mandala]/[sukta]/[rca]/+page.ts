@@ -1,6 +1,6 @@
 import supabase from '$lib/utils/db'
 
-export async function load({ fetch, params }:{ fetch: Function, params: { mandala: number, sukta: number, rca: number }}){
+export async function load({ params }:{ params: { mandala: number, sukta: number, rca: number }}){
 	
 	const { data, error } = await supabase
 	.from('db-rigveda')

@@ -10,13 +10,13 @@ export async function RVPagination(msr:string){
 		return data
 }
 
-export async function SuktasofMandalaFull(mandala: number, limit: number){
+export async function SuktasofMandalaFull(mandala: number, start: number, end: number){
 		const { data, error} = await supabase
 		.from ('db-rigveda')
 		.select()
 		.eq('mandala',mandala)
 		.order('primvalue')
-		.limit(limit)
+		.range(start, end)
 		if (error) throw new Error(error.message)
 		return data
 	}
@@ -242,27 +242,25 @@ export async function RVWords(msr:string){
 		return data
 	}
 
-	export async function versesofRamayana(startat:number, kanda:number, sarga:number){
+	export async function versesofRamayana(kanda:number, sarga:number, start:number, end: number){
 		const { data, error} = await supabase
-		.from ('db-ramayanaindex')
+		.from ('db-ramayana')
 		.select()
 		.eq('kanda',kanda)
 		.eq('sarga',sarga)
-		.eq('type','sargaverse')
 		.order('id')
-		.gte('id',startat)
-		.limit(9)
+		.range(start, end)
 		if (error) throw new Error(error.message)
 		return data
 	}
 
-	export async function versesByKanda(kanda:number, limit:number){
+	export async function versesByKanda(kanda:number, start:number, end:number){
 		const { data, error} = await supabase
 		.from ('db-ramayana')
 		.select()
 		.eq('kanda',kanda)
 		.order('id')
-		.limit(limit)
+		.range(start,end)
 		if (error) throw new Error(error.message)
 		return data
 	}
@@ -338,12 +336,12 @@ export async function allDhatus(){
 	return data	
 }
 
-export async function dbDhatus(limit:number){
+export async function dbDhatus(start:number, end:number){
 	const { data, error} = await supabase
 	.from('db-dhatupathafixed')
 	.select()
 	.order('id')
-	.limit(limit)
+	.range(start,end)
 	if (error) throw new Error(error.message)
 	return data
  }

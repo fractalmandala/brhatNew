@@ -20,6 +20,7 @@
 
 .cont
 	min-height: 100vh
+	width: 100vw
 
 .light
 	background: #FFFFFF

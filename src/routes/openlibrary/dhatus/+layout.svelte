@@ -1,40 +1,35 @@
 <script lang="ts">
-	import { themeMode, breakZero, breakOne, breakTwo } from '$lib/stores/globalstores';
-	import AllBol from '$lib/reader/AllBol.svelte';
+	import Libshell from '$lib/reader/Libshell.svelte';
+	import { thisLib } from '$lib/stores/metastores';
+	import { page } from '$app/stores';
+
+	let inthis: string;
+	let inthat = 'yes';
+
+	$: inthis = $page.url.pathname.slice(13, 18);
 </script>
 
-<div
-	class="rta-docs"
-	class:light={$themeMode}
-	class:dark={!$themeMode}
-	class:levelzero={$breakZero}
-	class:levelone={$breakOne}
-	class:leveltwo={$breakTwo}
->
-	<div class="side">
-		<AllBol />
+<Libshell>
+	<div slot="pagenamer" class="inthis">{inthis}</div>
+	<slot />
+	<div class="rta-column" slot="specificer">
+		{#if inthis === 'ramay'}
+			<h6>Vālmīki Rāmāyaṇa</h6>
+			<p>Kāṇḍa 1</p>
+		{/if}
+		{#if inthis === 'rigve'}
+			<h6>Ṛgveda Saṃhitā</h6>
+		{/if}
+		{#if inthis === 'dhatu'}
+			<h6>Dhātupāṭha</h6>
+		{/if}
 	</div>
-	<div class="main">
-		<slot />
-	</div>
-</div>
+</Libshell>
 
 <style lang="sass">
 
-
-.levelzero
-	padding: 128px 32px 64px 32px
-
-.rta-docs
-	display: grid
-	width: 100vw
-	grid-auto-flow: row
-	&.levelzero
-		grid-template-columns: 280px 1fr
-		grid-template-areas: "side main"
-		.side
-			grid-area: side
-		.main
-			grid-area: main
+.inthis
+	color: var(--opposite)
+	size: 100px
 
 </style>
