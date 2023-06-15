@@ -29,7 +29,7 @@
 	let schedules: any;
 	let isFor: any;
 	let area: any = Array(5).fill(false);
-	area[1] = true;
+	area[0] = true;
 	let fake = false;
 	let expandMenu = false;
 
@@ -61,6 +61,19 @@
 		breakPoint = true;
 	} else {
 		breakPoint = false;
+	}
+
+	$: if (data.name) {
+		(async () => {
+			conts = await courseContents(dynamizer);
+			takes = await courseTakeaways(dynamizer);
+			instructor = await courseInstructor(dynamizer);
+			details = await courseDetails(dynamizer);
+			isFor = await courseWhoFor(dynamizer);
+			otherCourses = await allCourses();
+			schedules = await newSRG(dynamizer);
+			junes = await juneCalendar();
+		})();
 	}
 
 	$: (async () => {
@@ -103,14 +116,14 @@
 		<div class="rta-column rowgap400">
 			<div id="heading" class="rta-column rowgap400 p-top-64 background">
 				<h2 class="heading">{data.name}</h2>
-				<h5 class="serif">
+				<h6 class="serif">
 					{data.excerpt}
-				</h5>
+				</h6>
 			</div>
 			<div class="rta-grid grid4 stay3 colgap400 rowgap400">
 				{#if details && details.length > 0}
 					{#each details as item}
-						<div class="rta-column xcenter rowgap100 bord-bot-m p-bot-16-m background">
+						<div class="rta-column xcenter rowgap100 bord-bot-m p-bot-16-m background iconboxes">
 							<div class="rta-icon2 rta-column">
 								<img src={item.image} alt={item.name} />
 							</div>
@@ -177,9 +190,11 @@
 				<button class="drawer-item2" on:click={() => toggleArea(5)} class:selected={area[5]}>
 					Instructor Profile
 				</button>
-				<button class="drawer-item2" on:click={() => toggleArea(6)} class:selected={area[6]}>
-					Session Schedule
-				</button>
+				{#if schedules && schedules.length > 0}
+					<button class="drawer-item2" on:click={() => toggleArea(6)} class:selected={area[6]}>
+						Session Schedule
+					</button>
+				{/if}
 			</div>
 		{/if}
 	</div>
@@ -292,8 +307,11 @@
 					<div class="rta-grid grid7">
 						{#if junes && junes.length > 0}
 							{#each junes as item}
-								<div class="rta-column datebox {item.isyes}">
-									<small>June {item.id}</small>
+								<div
+									class="rta-column datebox {item.isyes}"
+									class:thiscourse={item.dyn === dynamizer}
+								>
+									<small>{item.month} {item.data.slice(8)} | {item.day}</small>
 									{#if item.isyes === 'yes'}
 										<p>{item.title}</p>
 									{/if}
@@ -339,6 +357,10 @@
 
 <style lang="sass">
 
+.iconboxes
+	p
+		color: var(--opposite)
+
 .x000
 	@media screen and (max-width: 1023px)
 		padding-top: 0
@@ -374,10 +396,16 @@
 			font-size: 2.7rem
 
 #headersectionmaingrid
+	h6
+		font-weight: 400
 	@media screen and (max-width: 1023px)
 		grid-template-areas: "hero" "."
 		#heroimage
 			grid-area: hero
+
+#heroimage
+	@media screen and (min-width: 1024px)
+		height: 80vh
 
 .is-blue
 	color: #0170B9
@@ -386,10 +414,12 @@
 	@media screen and (min-width: 1024px)
 		padding-right: 32px
 
-.datebox.yes
+.datebox.yes.thiscourse
 	background: var(--borderline)
+	border: 1px solid white
 	small
 		color: #fe4a49
+
 
 .grid4.stay3
 	@media screen and (min-width: 1024px)
@@ -484,11 +514,13 @@ h2
 
 h6.heading
 	line-height: 1.2
+	font-size: 22px
 
 pre.serif
 	font-weight: 400
 	font-size: 22px
 	font-family: 'Adobe Devanagari', serif
+	color: var(--opposite)
 
 .drawer-item2.selected
 	background: var(--betblue)
