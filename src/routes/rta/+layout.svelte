@@ -39,5 +39,8 @@
 		svg path
 			fill: white
 
+.p-top-64
+	width: 100vw
+
 
 </style>

@@ -100,6 +100,7 @@
 .dark
 	background: #171717
 
-
+.type
+	width: 100vw
 
 </style>

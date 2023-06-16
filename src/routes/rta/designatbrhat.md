@@ -2,7 +2,7 @@
 title: Design at Bṛhat
 image: '/images/rid/panel4.webp'
 prev: '/rta/dharmaisdesign'
-next: '/rta'
+next: '/rta/fwork1.md'
 ---
 
 As a designer intiates a design journey then, as the svataḥ-siddha, she begins at the stage of 'preparation.' It is where we design to identify the broadest possible surface area of our:

@@ -669,11 +669,12 @@ export async function newSRG(dynamizer:string){
 }
 
 
-export async function juneCalendar(){
+export async function juneCalendar(dateToday:Date){
     const { data, error } = await supabase
     .from('brhat-june')
     .select()
     .order('id')
+		.gte('data',dateToday)
     if (error) throw new Error(error.message)
     return data
 }

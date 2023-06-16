@@ -2,7 +2,14 @@
 	import { onMount, afterUpdate } from 'svelte';
 	import { page } from '$app/stores';
 	import { slide } from 'svelte/transition';
-	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
+	import {
+		metaTitle,
+		metaDescription,
+		metaUrl,
+		metaImage,
+		metaType,
+		drashtaDyn
+	} from '$lib/stores/metastores';
 	import { fly } from 'svelte/transition';
 	import { backOut, backIn } from 'svelte/easing';
 	import CompButton from '$lib/ridunits/RIDButton.svelte';
@@ -19,7 +26,6 @@
 	let y: number;
 	let iW: number;
 	let breakPoint: boolean;
-	let dynamizer: any;
 	let details: any;
 	let conts: any;
 	let takes: any;
@@ -32,6 +38,8 @@
 	area[0] = true;
 	let fake = false;
 	let expandMenu = false;
+	let todayDate = new Date();
+	let todayForm: any;
 
 	export let data;
 
@@ -39,6 +47,7 @@
 	$metaTitle = data.name;
 	$metaDescription = data.excerpt;
 	$metaType = 'course';
+	$drashtaDyn = data.dynamizer;
 
 	function toggleMenu() {
 		expandMenu = !expandMenu;
@@ -57,50 +66,55 @@
 		}
 	}
 
+	function formatDate(date: any) {
+		let month = '' + (date.getMonth() + 1),
+			day = '' + date.getDate(),
+			year = date.getFullYear();
+
+		if (month.length < 2) month = '0' + month;
+		if (day.length < 2) day = '0' + day;
+
+		return [year, month, day].join('-');
+	}
+
+	todayForm = formatDate(todayDate);
+
 	$: if (iW <= 1023) {
 		breakPoint = true;
 	} else {
 		breakPoint = false;
 	}
 
-	$: if (data.name) {
+	$: if ($drashtaDyn) {
+		$metaUrl = $page.url.pathname;
+		$metaTitle = data.name;
+		$metaDescription = data.excerpt;
 		(async () => {
-			conts = await courseContents(dynamizer);
-			takes = await courseTakeaways(dynamizer);
-			instructor = await courseInstructor(dynamizer);
-			details = await courseDetails(dynamizer);
-			isFor = await courseWhoFor(dynamizer);
+			conts = await courseContents($drashtaDyn);
+			takes = await courseTakeaways($drashtaDyn);
+			instructor = await courseInstructor($drashtaDyn);
+			details = await courseDetails($drashtaDyn);
+			isFor = await courseWhoFor($drashtaDyn);
 			otherCourses = await allCourses();
-			schedules = await newSRG(dynamizer);
-			junes = await juneCalendar();
+			schedules = await newSRG($drashtaDyn);
+			junes = await juneCalendar(todayForm);
 		})();
 	}
 
-	$: (async () => {
-		conts = await courseContents(dynamizer);
-		takes = await courseTakeaways(dynamizer);
-		instructor = await courseInstructor(dynamizer);
-		details = await courseDetails(dynamizer);
-		isFor = await courseWhoFor(dynamizer);
-		otherCourses = await allCourses();
-		schedules = await newSRG(dynamizer);
-		junes = await juneCalendar();
-	})();
-
 	onMount(async () => {
-		dynamizer = $page.url.pathname.slice(16, 50);
-		conts = await courseContents(dynamizer);
-		takes = await courseTakeaways(dynamizer);
-		instructor = await courseInstructor(dynamizer);
-		details = await courseDetails(dynamizer);
-		isFor = await courseWhoFor(dynamizer);
+		$drashtaDyn = data.dynamizer;
+		conts = await courseContents($drashtaDyn);
+		takes = await courseTakeaways($drashtaDyn);
+		instructor = await courseInstructor($drashtaDyn);
+		details = await courseDetails($drashtaDyn);
+		isFor = await courseWhoFor($drashtaDyn);
 		otherCourses = await allCourses();
-		schedules = await newSRG(dynamizer);
-		junes = await juneCalendar();
+		schedules = await newSRG($drashtaDyn);
+		junes = await juneCalendar(todayForm);
 	});
 
 	afterUpdate(() => {
-		dynamizer = $page.url.pathname.slice(16, 50);
+		$drashtaDyn = data.dynamizer;
 	});
 </script>
 
@@ -309,7 +323,7 @@
 							{#each junes as item}
 								<div
 									class="rta-column datebox {item.isyes}"
-									class:thiscourse={item.dyn === dynamizer}
+									class:thiscourse={item.dyn === $drashtaDyn}
 								>
 									<small>{item.month} {item.data.slice(8)} | {item.day}</small>
 									{#if item.isyes === 'yes'}
@@ -455,9 +469,10 @@
 			font-weight: bold
 			color: var(--opposite)
 	@media screen and (max-width: 1023px)
-		height: 120px
+		min-height: 120px
 		border: 1px solid var(--borderline)
 		padding: 8px
+		width: 100%
 		p
 			font-size: 14px
 			line-height: 1.2
