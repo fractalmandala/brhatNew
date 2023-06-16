@@ -260,7 +260,7 @@
 					{#each chapters as item, i}
 						{#if anveshiFull[i]}
 							<div class="rta-row row-col colgap400 rowgap200">
-								<div class="rta-image w32 height-40">
+								<div class="rta-image w32 height-40-30">
 									<img src={item.image} alt={item.name} />
 								</div>
 								<div class="rta-column w64 rowgap200">
@@ -383,7 +383,7 @@
 							</div>
 						{:else}
 							<div class="rta-column rowgap200">
-								<div class="rta-image height-40">
+								<div class="rta-image height-40-30">
 									<img src={item.image} alt={item.name} style="object-fit: contain" />
 								</div>
 								<div class="rta-column rowgap200">
@@ -514,7 +514,7 @@
 				{/if}
 		</div>
 	</div>
-end-->
+	end-->
 
 	<!--dhiti blog latest posts section-->
 	<div class="rta-column rowgap600 outer-box" data-lenis-scroll-snap-align="start">

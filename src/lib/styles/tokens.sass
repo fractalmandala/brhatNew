@@ -228,6 +228,12 @@ body, html
 	@media screen and (min-width: 1024px)
 		min-height: 100vh
 
+.height-40-30
+	@media screen and (min-width: 1024px)
+		height: 50vh
+	@media screen and (max-width: 1023px)
+		height: 30vh
+
 .height-40
 	@media screen and (min-width: 1024px)
 		height: 50vh
@@ -520,24 +526,16 @@ body, html
 .grid3
 	.rta-video
 		@media screen and (min-width: 1024px)
-			height: 280px
-			iframe
-				height: 200px
+			height: 200px
 		@media screen and (max-width: 1023px)
-			height: 240px
-			iframe
-				height: 200px
+			height: 200px
 
 .grid4
 	.rta-video
 		@media screen and (min-width: 1024px)
 			height: 200px
-			iframe
-				height: 144px
 		@media screen and (max-width: 1023px)
-			height: 240px
-			iframe
-				height: 200px
+			height: 200px
 
 .rta-card
 	border-radius: 16px
