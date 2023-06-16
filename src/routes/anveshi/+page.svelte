@@ -195,14 +195,14 @@
 						</div>
 						<div class="rta-column rowgap100 w64"> 
 							<h6 style="font-weight: bold" class="hover-yellow">
-								<a href="/anveshi/chapter/{item.chapter}">
+								<a href="/anveshi/{item.chapter}">
 										{item.name}
 								</a>
 							</h6>
 							{#if !breakPoint}
 								{#if item.content && item.content.length > 0}
 								<p>
-									{item.content.slice(0,300)}...<span style="font-weight: bold; color: #FF9F1C"><a href="/anveshi/chapter/{item.chapter}">Know More</a></span>
+									{item.content.slice(0,300)}...<span style="font-weight: bold; color: #FF9F1C"><a href="/anveshi/{item.chapter}">Know More</a></span>
 								</p>
 								{/if}
 							{/if}
@@ -214,7 +214,7 @@
 									{item.dates}
 								</small>
 							</div>
-							<p class="is-yellow"><strong><a href="/anveshi/chapter/{item.chapter}">Visit Page</a></strong></p>
+							<p class="is-yellow"><strong><a href="/anveshi/{item.chapter}">Visit Page</a></strong></p>
 						</div>
 					</div>
 				{/each}
