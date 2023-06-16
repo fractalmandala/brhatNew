@@ -21,7 +21,8 @@
 		courseInstructor,
 		courseDetails,
 		courseWhoFor,
-		allCourses
+		allCourses,
+		coursePayment
 	} from '$lib/utils/supapulls';
 	let y: number;
 	let iW: number;
@@ -30,6 +31,7 @@
 	let conts: any;
 	let takes: any;
 	let junes: any;
+	let pays: any;
 	let instructor: any;
 	let otherCourses: any;
 	let schedules: any;
@@ -98,6 +100,7 @@
 			otherCourses = await allCourses();
 			schedules = await newSRG($drashtaDyn);
 			junes = await juneCalendar(todayForm);
+			pays = await coursePayment($drashtaDyn);
 		})();
 	}
 
@@ -111,6 +114,7 @@
 		otherCourses = await allCourses();
 		schedules = await newSRG($drashtaDyn);
 		junes = await juneCalendar(todayForm);
+		pays = await coursePayment($drashtaDyn);
 	});
 
 	afterUpdate(() => {
@@ -129,6 +133,9 @@
 	<div class="rta-grid colgap600 grid2 right2 glass-bottom p-bot-64" id="headersectionmaingrid">
 		<div class="rta-column rowgap400">
 			<div id="heading" class="rta-column rowgap400 p-top-64 background">
+				{#if data.status === 'open now'}
+					<div class="statuslabel">Open Now</div>
+				{/if}
 				<h2 class="heading">{data.name}</h2>
 				<h6 class="serif">
 					{data.excerpt}
@@ -146,30 +153,34 @@
 						</div>
 					{/each}
 					{#if data.status === 'open now'}
-						<div class="widening">
-							<form>
-								<p class="ta-c" style="color: var(--opposite); margin-bottom: 4px">
-									Indian Registrants:
-								</p>
-								<script
-									src="https://checkout.razorpay.com/v1/payment-button.js"
-									data-payment_button_id="pl_LzqAZVTLio5DOc"
-									async
-								>
-								</script>
-							</form>
-							<form>
-								<p class="ta-c" style="color: var(--opposite); margin-bottom: 4px">
-									International Registrants:
-								</p>
-								<script
-									src="https://checkout.razorpay.com/v1/payment-button.js"
-									data-payment_button_id="pl_LrRM691C2bz2zB"
-									async
-								>
-								</script>
-							</form>
-						</div>
+						{#if pays && pays.length > 0}
+							{#each pays as item}
+								<div class="widening">
+									<div class="rta-column rowgap50">
+										Indian Registrants:
+										<form>
+											<script
+												src="https://checkout.razorpay.com/v1/payment-button.js"
+												data-payment_button_id={item.paymentindia}
+												async
+											>
+											</script>
+										</form>
+									</div>
+									<div class="rta-column rowgap50">
+										International Registrants:
+										<form>
+											<script
+												src="https://checkout.razorpay.com/v1/payment-button.js"
+												data-payment_button_id={item.paymentintl}
+												async
+											>
+											</script>
+										</form>
+									</div>
+								</div>
+							{/each}
+						{/if}
 					{/if}
 				{/if}
 			</div>
@@ -371,6 +382,14 @@
 
 <style lang="sass">
 
+.statuslabel
+	background: #fe4a49
+	padding: 2px 8px
+	width: 120px
+	color: white
+	font-size: 20px
+	text-transform: uppercase
+
 .date-box
 	@media screen and (min-width: 1024px)
 		padding-left: 80px
@@ -463,8 +482,10 @@
 			display: flex
 			column-gap: 16px
 			justify-content: center
-			border: 1px solid var(--opposite)
 			padding: 8px
+			text-align: center
+			font-weight: bold
+			row-gap: 8px	
 			form
 				border-radius: 32px
 	@media screen and (max-width: 1023px)
@@ -475,6 +496,8 @@
 			grid-area: button
 			align-self: center
 			justify-self: center
+			text-align: center
+			font-weight: bold
 			form
 				border-radius: 16px
 

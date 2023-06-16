@@ -404,6 +404,17 @@ export async function courseContents(dynamizer:string){
 	return data
 }
 
+export async function coursePayment(dynamizer:string){
+	const { data, error } = await supabase
+	.from('brhat-drashta2')
+	.select()
+	.eq('type', 'payment')
+	.eq('dynamizer',dynamizer)
+	.order('sequence')
+	if (error) throw new Error(error.message)
+	return data
+}
+
 export async function courseTakeaways(dynamizer:string){
 	const { data, error } = await supabase
 	.from('brhat-drashta2')
