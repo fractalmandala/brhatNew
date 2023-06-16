@@ -134,7 +134,7 @@
 					{data.excerpt}
 				</h6>
 			</div>
-			<div class="rta-grid grid4 stay3 colgap400 rowgap400">
+			<div class="rta-grid grid4 stay3 rowgap400 features">
 				{#if details && details.length > 0}
 					{#each details as item}
 						<div class="rta-column xcenter rowgap100 bord-bot-m p-bot-16-m background iconboxes">
@@ -312,7 +312,7 @@
 		{/if}
 		{#if area[6]}
 			<div
-				class="rta-column p-top-32 outer-box"
+				class="rta-column p-top-32 date-box"
 				in:fly={{ duration: 500, delay: 400, x: -500, easing: backOut }}
 				out:fly={{ duration: 350, delay: 0, x: 500, easing: backIn }}
 			>
@@ -371,9 +371,29 @@
 
 <style lang="sass">
 
+.date-box
+	@media screen and (min-width: 1024px)
+		padding-left: 80px
+		padding-right: 80px
+		padding-bottom: 48px
+	@media screen and (max-width: 1023px) and (min-width: 768px)
+		padding-left: 48px
+		padding-right: 48px
+	@media screen and (max-width: 767px)
+		padding-left: 0px
+		padding-right: 0px
+		padding-top: 32px
+		padding-bottom: 32px
+
 .iconboxes
 	p
 		color: var(--opposite)
+	@media screen and (max-width: 1023px)
+		p
+			font-size: 12px
+		small
+			display: none
+	
 
 .x000
 	@media screen and (max-width: 1023px)
@@ -407,7 +427,7 @@
 #heading
 	h2
 		@media screen and (max-width: 1023px)
-			font-size: 2.7rem
+			font-size: 2.1rem
 
 #headersectionmaingrid
 	h6
@@ -460,7 +480,7 @@
 
 .datebox
 	@media screen and (min-width: 1024px)
-		height: 120px
+		min-height: 120px
 		border: 1px solid var(--borderline)
 		padding: 16px
 		p
@@ -471,13 +491,16 @@
 	@media screen and (max-width: 1023px)
 		min-height: 120px
 		border: 1px solid var(--borderline)
-		padding: 8px
+		padding: 4px
 		width: 100%
 		p
-			font-size: 14px
+			font-size: 12px
 			line-height: 1.2
 			font-weight: bold
 			color: var(--opposite)
+			word-break: break-word
+		small
+			font-size: 10px
 
 .drawer-item2
 	font-weight: bold
@@ -509,8 +532,8 @@
 			height: 80px
 	@media screen and (max-width: 1023px)
 		img
-			width: 80px
-			height: 80px
+			width: 48px
+			height: 48px
 
 h2
 	text-transform: capitalize
