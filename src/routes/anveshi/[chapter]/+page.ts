@@ -5,6 +5,7 @@ export async function load({ params }: { params: { chapter: string } }){
 	.from('brhat-anveshi')
 	.select()
 	.eq('type','chapter')
+	.eq('live', true)
 	.eq('chapter',`${params.chapter}`)
 	.single()
 	if (error) throw new Error(error.message)
