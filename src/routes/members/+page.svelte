@@ -83,32 +83,6 @@
 
 <style lang="sass">
 
-
-.appshell
-	display: grid
-	grid-auto-flow: row
-	min-height: 100vh
-
-.appshell.levelzero
-	grid-template-columns: 320px 1fr
-	grid-template-areas: "side main"
-	padding-left: 48px
-	padding-right: 48px
-	.rta-side
-		grid-area: side
-		padding-top: 128px
-		position: sticky
-		top: 0
-	.rta-main
-		grid-area: main
-
-.appshell.leveltwo
-	grid-template-columns: 1fr
-	grid-template-areas: "side" "main"
-	padding-top: 88px
-	padding-left: 32px
-	padding-right: 32px
-
 input
 	font-family: 'Space Grotesk', sans-serif
 

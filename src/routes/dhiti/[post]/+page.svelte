@@ -1,7 +1,14 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
-	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
+	import {
+		metaTitle,
+		metaDescription,
+		metaUrl,
+		metaImage,
+		metaType,
+		fontSize
+	} from '$lib/stores/metastores';
 	import { themeMode } from '$lib/stores/globalstores';
 	import { breakZero, breakOne, breakTwo } from '$lib/stores/globalstores';
 	import PageProgress from '$lib/components/PageProgress.svelte';
@@ -24,9 +31,24 @@
 	let member: any;
 	let ref: HTMLElement | null = null;
 	let y: number;
+	let fsize = Array(3).fill(false);
+	fsize[1] = true;
 
-	function fakefaux() {
-		fake = !fake;
+	function toggleFont(index: number) {
+		fsize[index] = !fsize[index];
+		for (let i = 0; i < fsize.length; i++) {
+			if (i !== index && fsize[i] === true) {
+				fsize[i] = false;
+			}
+		}
+	}
+
+	$: if (fsize[2] === true) {
+		$fontSize = 'big';
+	} else {
+		if (fsize[3] === true) {
+			$fontSize = 'small';
+		} else $fontSize = 'std';
 	}
 
 	onMount(async () => {
@@ -47,9 +69,26 @@
 	<div class="x0">
 		<ParallaxImage --parallax="url('{data.image}')" --parallaxresp="url('{data.image}')" />
 	</div>
-
+	<div class="fonter">
+		<small>Font<br />Size:</small>
+		<button class="blank-button" on:click={() => toggleFont(1)}>
+			{#if fsize[1]}
+				<div class="cir" />
+			{/if}
+		</button>
+		<button class="blank-button" on:click={() => toggleFont(2)}>
+			{#if fsize[2]}
+				<div class="cir" />
+			{/if}
+		</button>
+		<button class="blank-button" on:click={() => toggleFont(3)}>
+			{#if fsize[3]}
+				<div class="cir" />
+			{/if}
+		</button>
+	</div>
 	<div class="plain-one x1">
-		<div class="rta-row colgap100">
+		<div class="rta-row ycenter colgap100 thisguys">
 			<small>{data.category}</small>
 			<cite>{data.tags}</cite><br />
 		</div>
@@ -75,7 +114,7 @@
 
 	<div class="rta-column x22">
 		<div
-			class="maincol dhitiblogbox p-top-32"
+			class="maincol dhitiblogbox p-top-32 {$fontSize}"
 			class:light={$themeMode}
 			class:dark={!$themeMode}
 			bind:this={ref}
@@ -129,8 +168,55 @@
 
 <style lang="sass">
 
+.levelzero, .levelone
+	.fonter
+		position: fixed
+		top: 160px
+		left: 32px
+		display: flex
+		flex-direction: column
+		row-gap: 8px
+		.blank-button
+			border: 1px solid var(--opposite)
+			width: 20px
+			height: 20px
+			border-radius: 10px
+			display: flex
+			align-items: center
+			justify-content: center
+			.cir
+				display: flex
+				width: 12px
+				height: 12px
+				border-radius: 6px
+				background: #fe4a49
+
+.leveltwo
+	.fonter
+		display: flex
+		flex-direction: row
+		column-gap: 8px
+		padding-top: 16px
+		padding-left: 16px
+		.blank-button
+			border: 1px solid var(--opposite)
+			width: 20px
+			height: 20px
+			border-radius: 10px
+			display: flex
+			align-items: center
+			justify-content: center
+			.cir
+				display: flex
+				width: 12px
+				height: 12px
+				border-radius: 6px
+				background: #fe4a49
+
 h2
 	font-family: 'Adobe Devanagari', sans-serif
+
+
 
 .x3.dhitiouter
 	h4
@@ -221,13 +307,14 @@ h2
 		small
 			background: #fe4a49
 			color: white
-			padding: 4px 8px 0 8px
+			padding: 4px 8px 4px 8px
 			border-radius: 12px
 	h2
 		border-bottom: 1px solid var(--borderline)
 		padding-bottom: 32px
 		padding-top: 32px
 		border-top: 1px solid var(--borderline)
+		letter-spacing: 0 !important
 	@media screen and (min-width: 1024px)
 		display: flex
 		flex-direction: column
