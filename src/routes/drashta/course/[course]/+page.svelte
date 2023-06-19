@@ -418,6 +418,9 @@
 .widening
 	small
 		color: var(--opposite)
+	@media screen and (max-width: 1023px)
+		flex-direction: column
+		row-gap: 32px
 	
 
 .x000
