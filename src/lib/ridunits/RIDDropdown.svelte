@@ -1,56 +1,56 @@
 <script lang="ts">
-//@ts-nocheck
-	import { onMount } from 'svelte'
-	import { clickOutsideAction } from "svelte-legos"
-	import { fly } from 'svelte/transition'
-	import { themeMode } from '$lib/stores/globalstores'
-	let fake = false
-	let iW:number
-	let breakPoint:boolean
-	let expandMenu = false
+	//@ts-nocheck
+	import { onMount } from 'svelte';
+	import { clickOutsideAction } from 'svelte-legos';
+	import { fly } from 'svelte/transition';
+	import { themeMode } from '$lib/stores/globalstores';
+	let fake = false;
+	let iW: number;
+	let breakPoint: boolean;
+	let expandMenu = false;
 
 	function handleClickOutside() {
-	  expandMenu = !expandMenu
+		expandMenu = !expandMenu;
 	}
 
-	function fauxfake(){
-		fake = !fake
+	function fauxfake() {
+		fake = !fake;
 	}
 
-	function toggleMenu(){
-		expandMenu = !expandMenu
+	function toggleMenu() {
+		expandMenu = !expandMenu;
 	}
 
-	$: if ( iW <= 1023 ){
-		breakPoint = true
+	$: if (iW <= 1023) {
+		breakPoint = true;
 	} else {
-		breakPoint = false
+		breakPoint = false;
 	}
 
 	onMount(() => {
-		if ( iW <= 1023 ) {
-			breakPoint = true
+		if (iW <= 1023) {
+			breakPoint = true;
 		}
-	})
-
+	});
 </script>
 
-<svelte:window bind:innerWidth={iW}/>
+<svelte:window bind:innerWidth={iW} />
 
 <div class="rta-column rta-dropdown" class:light={$themeMode} class:dark={!$themeMode}>
 	<div on:click={toggleMenu} on:keydown={fauxfake}>
-		<slot name="visible">
-		</slot>
+		<slot name="visible" />
 	</div>
 	{#if expandMenu}
-	<div class="rta-column drops modal"
-		on:click={toggleMenu}
-		on:keydown={fauxfake}
-		use:clickOutsideAction
-		on:clickoutside={toggleMenu}
-		transition:fly={{ duration: 200, y: 80}}>
-		<slot name="invisible"></slot>
-	</div>
+		<div
+			class="rta-column drops modal"
+			on:click={toggleMenu}
+			on:keydown={fauxfake}
+			use:clickOutsideAction
+			on:clickoutside={toggleMenu}
+			transition:fly={{ duration: 200, y: 80 }}
+		>
+			<slot name="invisible" />
+		</div>
 	{/if}
 </div>
 
@@ -58,7 +58,7 @@
 
 .rta-dropdown
 	position: relative
-	z-index: 1000
+	z-index: 500
 	.rta-column
 		position: absolute
 		top: 48px

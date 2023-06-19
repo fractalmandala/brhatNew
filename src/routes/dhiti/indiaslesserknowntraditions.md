@@ -4,7 +4,7 @@ author: Sai Priya Chodavarapu
 category: Svayambodha
 tags: culture, tradition
 date: "2023-04-25"
-image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/ashtamatrika.webp
+image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/paithan.webp
 excerpt: "A review of Edward Hall's model of culture and its limitations, that explains how it doesn't fully capture cultural complexity. Reestablishing cultural context through knowledge systems in education policy can help preserve and revive cultural identity."
 ---
 
