@@ -13,15 +13,14 @@
 	import autoAnimate from '@formkit/auto-animate';
 	import { ChevronDown } from 'lucide-svelte';
 	import { chapterItinerary, allFaq } from '$lib/utils/supapulls';
-	import { chapterTemples, chapterHighlight } from '$lib/utils/supapulls';
-	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
+	import { chapterTemples, chapterHighlight, chapterFaq } from '$lib/utils/supapulls';
 	import { EventInterface } from '@splidejs/splide';
-	import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 	import '@splidejs/splide/css/core';
 
 	let p: number;
 	let alignGrid = false;
 	let faqs: string | any[];
+	let cfaqs: string | any[];
 	let isFaqOpen: boolean[] = Array(15).fill(false);
 	let highlights: any;
 	let itins: string | any[];
@@ -31,7 +30,6 @@
 	area[1] = true;
 	let visibleTemple: any = Array(30).fill(false);
 	let fake = false;
-	let elementTop: HTMLElement;
 
 	export let data;
 
@@ -46,8 +44,6 @@
 	function fauxfake() {
 		fake = !fake;
 	}
-
-	let tempIndex = 0;
 
 	function toggleFaq(index: number) {
 		isFaqOpen[index] = !isFaqOpen[index];
@@ -73,14 +69,13 @@
 		}
 	}
 
-	function toggleImage(index: number, element: HTMLElement) {
+	function toggleImage(index: number) {
 		visibleTemple[index] = !visibleTemple[index];
 		for (let i = 0; i < visibleTemple.length; i++) {
 			if (i !== index && visibleTemple[i] === true) {
 				visibleTemple[i] = false;
 			}
 		}
-		element.scrollIntoView({ behavior: 'smooth', block: 'start' });
 	}
 
 	export function MyTransition(Splide: any, Components: any) {
@@ -128,12 +123,14 @@
 	}
 
 	$: anyFaqOpen = isFaqOpen.some((item) => item);
+	$: anyTemp = visibleTemple.some((item: any) => item);
 
 	$: if ($anveshiChapter) {
 		(async () => {
 			itins = await chapterItinerary($anveshiChapter);
 			temp = await chapterTemples($anveshiChapter);
 			highlights = await chapterHighlight($anveshiChapter);
+			cfaqs = await chapterFaq($anveshiChapter);
 		})();
 		$anveshiColor = data.params;
 	}
@@ -144,6 +141,7 @@
 		temp = await chapterTemples($anveshiChapter);
 		highlights = await chapterHighlight($anveshiChapter);
 		faqs = await allFaq();
+		cfaqs = await chapterFaq($anveshiChapter);
 	});
 
 	afterUpdate(() => {
@@ -263,50 +261,21 @@
 		>
 	</div>
 	{#if temp && temp.length > 0}
-		<Splide
-			aria-label="midjourneys"
-			mount={{ AutoScroll }}
-			hasTrack={false}
-			options={{
-				drag: true,
-				keyboard: 'global',
-				waitForTransition: true,
-				type: 'slide',
-				wheelMinThreshold: 1.1,
-				speed: 900,
-				direction: 'ltr',
-				pagination: false,
-				autoplay: true,
-				pause: false,
-				width: '88vw'
-			}}
-		>
-			<SplideTrack>
-				{#each temp as item, i}
-					<SplideSlide>
-						<div class="rta-row templesrow">
-							<div class="rta-image">
-								<img src={item.image} alt={item.name} />
-							</div>
-							<div class="rta-column">
-								<h6 class="hindiadobe">{item.name}</h6>
-								<pre class="hindiadobe">{item.content}</pre>
-							</div>
+		<div class="rta-grid grid3 rowgap300 colgap300 templesgrid" class:calibgrid={anyTemp}>
+			{#each temp as item, i}
+				<div class="rta-row rowgap200" class:calibitem={visibleTemple[i]}>
+					<button class="rta-image blank-button" on:click={() => toggleImage(i)}>
+						<img src={item.image} alt={item.name} />
+					</button>
+					{#if visibleTemple[i]}
+						<div class="rta-column">
+							<h6 class="serif">{item.name}</h6>
+							<pre class="serif">{item.content}</pre>
 						</div>
-					</SplideSlide>
-				{/each}
-			</SplideTrack>
-			<div class="splide__arrows rta-row p-top-16">
-				<button
-					class="splide__arrow splide__arrow--prev genbutton"
-					style="background: {$anveshiColor}; border: 1px solid {$anveshiColor}">Prev</button
-				>
-				<button
-					class="splide__arrow splide__arrow--next genbutton"
-					style="background: {$anveshiColor}; border: 1px solid {$anveshiColor}">Next</button
-				>
-			</div>
-		</Splide>
+					{/if}
+				</div>
+			{/each}
+		</div>
 	{/if}
 </div>
 <!--end-->
@@ -317,23 +286,25 @@
 	<div class="rta-grid rowgap400 colgap600" id="faqgrid" class:calibrated={anyFaqOpen}>
 		{#if faqs && faqs.length > 0}
 			{#each faqs as item, i}
-				<div
-					class="rta-column rowgap100"
-					class:opentab={isFaqOpen[i]}
-					on:click={() => toggleFaq(i)}
-					on:keydown={() => toggleFaq(i)}
-					use:autoAnimate
-				>
-					<div class="rta-row fixed ytop colgap100 rowgap400">
-						<div class="button-box" class:rotated={isFaqOpen[i]}>
-							<ChevronDown size="27" color="#878787" />
+				{#if item.chapter === null || item.chapter === $anveshiChapter}
+					<div
+						class="rta-column rowgap100"
+						class:opentab={isFaqOpen[i]}
+						on:click={() => toggleFaq(i)}
+						on:keydown={() => toggleFaq(i)}
+						use:autoAnimate
+					>
+						<div class="rta-row fixed ytop colgap100 rowgap400">
+							<div class="button-box" class:rotated={isFaqOpen[i]}>
+								<ChevronDown size="27" color="#878787" />
+							</div>
+							<h6 class="hindiadobe faqs">{item.name}</h6>
 						</div>
-						<h6 class="hindiadobe faqs">{item.name}</h6>
+						{#if isFaqOpen[i]}
+							<p class="hindiadobe faqs">{item.content}</p>
+						{/if}
 					</div>
-					{#if isFaqOpen[i]}
-						<p class="hindiadobe faqs">{item.content}</p>
-					{/if}
-				</div>
+				{/if}
 			{/each}
 		{/if}
 	</div>
@@ -342,6 +313,16 @@
 <!--end-->
 
 <style lang="sass">
+
+.calibgrid
+	@media screen and (min-width: 1024px)
+		.calibitem
+			grid-column: span 3
+			column-gap: 32px
+			.rta-image
+				width: 32%
+			.rta-column
+				width: calc(66.67% - 32px)
 
 h6.faqs
 	cursor: pointer

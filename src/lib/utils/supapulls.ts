@@ -296,6 +296,17 @@ export async function chapterHighlight(chapter: string){
   return data
 }
 
+export async function chapterFaq(chapter: string){
+	const { data, error } = await supabase
+  .from('brhat-anveshi')
+  .select()
+	.eq('chapter',chapter)
+	.eq('type','faq')
+  .order('sequence')
+  if (error) throw new Error(error.message)
+  return data
+}
+
 
 export async function chapterItinerary(chapter: string){
 	const { data, error } = await supabase
