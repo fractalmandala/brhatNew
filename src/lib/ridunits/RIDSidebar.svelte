@@ -163,6 +163,9 @@
 			<AnveshiLinks flytime={$sideMode} />
 		</div>
 		<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
+			<h5><a href="/svarnanjali">Svarṇāñjali</a></h5>
+		</div>
+		<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
 			<h5><a href="/mrdanga">Bṛhad Mṛdaṅga</a></h5>
 		</div>
 		<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>

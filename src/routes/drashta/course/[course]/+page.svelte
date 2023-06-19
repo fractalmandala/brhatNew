@@ -156,8 +156,8 @@
 						{#if pays && pays.length > 0}
 							{#each pays as item}
 								<div class="widening">
-									<div class="rta-column rowgap50">
-										Indian Registrants:
+									<div class="rta-column rowgap100">
+										<small>Indian Registrants:</small>
 										<form>
 											<script
 												src="https://checkout.razorpay.com/v1/payment-button.js"
@@ -167,8 +167,8 @@
 											</script>
 										</form>
 									</div>
-									<div class="rta-column rowgap50">
-										International Registrants:
+									<div class="rta-column rowgap100">
+										<small>International Registrants:</small>
 										<form>
 											<script
 												src="https://checkout.razorpay.com/v1/payment-button.js"
@@ -223,7 +223,7 @@
 			</div>
 		{/if}
 	</div>
-	<div class="rta-column glass-top p-bot-64">
+	<div class="rta-column p-bot-64">
 		{#if area[1]}
 			<div
 				class="rta-column p-top-32 carrier"
@@ -407,11 +407,17 @@
 .iconboxes
 	p
 		color: var(--opposite)
+	small
+		color: var(--opposite)
 	@media screen and (max-width: 1023px)
 		p
 			font-size: 12px
 		small
 			display: none
+
+.widening
+	small
+		color: var(--opposite)
 	
 
 .x000

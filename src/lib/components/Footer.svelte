@@ -104,6 +104,7 @@
 			<DrashtaLinks flytime={active} />
 		</div>
 		<div class="spacer">
+			<a class="mainlinks" href="/svarnanjali">Svarṇāñjali</a>
 			<a class="mainlinks" href="/mrdanga">Bṛhad Mṛdaṅga</a>
 			<a class="mainlinks" href="/mandala">Fractal Maṇḍala</a>
 			<a class="mainlinks" href="/aryavarta">Scrolls of Āryavarta</a>
