@@ -99,5 +99,12 @@
 	height: 100%
 	display: flex
 	flex-direction: column
+	align-items: stretch
+
+#appbox.light
+	background: white
+
+#appbox.dark
+	background: #171717
 
 </style>

@@ -363,25 +363,6 @@ pre
 	word-break: break-word
 	overflow: hidden
 
-.splide__arrows
-	justify-content: center
-	column-gap: 16px
-
-.templesrow
-	@media screen and (min-width: 1024px)
-		column-gap: 32px
-		.rta-image
-			width: 32%
-			height: 30vh
-		.rta-column
-			width: 64%
-	@media screen and (max-width: 1023px)
-		flex-direction: column
-		row-gap: 16px
-		.rta-image, .rta-column
-			width: 100%
-		.rta-image
-			height: 30vh
 
 .iconsrow
 	justify-content: center

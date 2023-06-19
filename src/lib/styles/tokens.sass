@@ -565,6 +565,12 @@ body, html
 	@media screen and (max-width: 1023px)
 		padding-top: 32px
 
+.p-top-128
+	@media screen and (min-width: 1024px)
+		padding-top: 128px
+	@media screen and (max-width: 1023px)
+		padding-top: 88px
+
 .p-bot-64
 	@media screen and (min-width: 1024px)
 		padding-bottom: 64px
@@ -983,6 +989,30 @@ body, html
 		border: 1px solid var(--borderline)
 		border-radius: 6px
 		padding: 16px
+
+.transbutton
+	border: 1px solid var(--opposite)
+	background: transparent
+	padding: 2px 12px
+	border-radius: 4px
+	font-size: 14px
+	max-width: 160px
+	width: max-content
+	height: 32px
+	display: flex
+	align-items: center
+	justify-content: center
+	min-width: 104px
+	letter-spacing: -0.8px
+	cursor: pointer
+	transform-origin: center center
+	transition: 0.05s
+	color: var(--opposite)
+	&:hover
+		transform: scale(0.96)
+		color: var(--opposite)
+	&:active
+		background: transparent
 
 
 
