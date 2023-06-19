@@ -32,6 +32,7 @@
 	let ref: HTMLElement | null = null;
 	let y: number;
 	let fsize = Array(3).fill(false);
+	let ftitle = Array(3).fill(false);
 	fsize[1] = true;
 
 	function toggleFont(index: number) {
@@ -39,6 +40,15 @@
 		for (let i = 0; i < fsize.length; i++) {
 			if (i !== index && fsize[i] === true) {
 				fsize[i] = false;
+			}
+		}
+	}
+
+	function toggleTitle(index: number) {
+		ftitle[index] = !ftitle[index];
+		for (let i = 0; i < ftitle.length; i++) {
+			if (i !== index && ftitle[i] === true) {
+				ftitle[i] = false;
 			}
 		}
 	}
@@ -70,20 +80,50 @@
 		<ParallaxImage --parallax="url('{data.image}')" --parallaxresp="url('{data.image}')" />
 	</div>
 	<div class="fonter">
-		<small>Font<br />Size:</small>
-		<button class="blank-button" on:click={() => toggleFont(1)}>
-			{#if fsize[1]}
-				<div class="cir" />
+		<small>Font Size:</small>
+		<button
+			class="blank-button"
+			on:click={() => toggleFont(1)}
+			on:mouseenter={() => toggleTitle(1)}
+			on:mouseleave={() => toggleTitle(1)}
+		>
+			<div class="outercircle">
+				{#if fsize[1]}
+					<div class="cir" />
+				{/if}
+			</div>
+			{#if ftitle[1]}
+				<small>Standard</small>
 			{/if}
 		</button>
-		<button class="blank-button" on:click={() => toggleFont(2)}>
-			{#if fsize[2]}
-				<div class="cir" />
+		<button
+			class="blank-button"
+			on:click={() => toggleFont(2)}
+			on:mouseenter={() => toggleTitle(2)}
+			on:mouseleave={() => toggleTitle(2)}
+		>
+			<div class="outercircle">
+				{#if fsize[2]}
+					<div class="cir" />
+				{/if}
+			</div>
+			{#if ftitle[2]}
+				<small>Bigger</small>
 			{/if}
 		</button>
-		<button class="blank-button" on:click={() => toggleFont(3)}>
-			{#if fsize[3]}
-				<div class="cir" />
+		<button
+			class="blank-button"
+			on:click={() => toggleFont(3)}
+			on:mouseenter={() => toggleTitle(3)}
+			on:mouseleave={() => toggleTitle(3)}
+		>
+			<div class="outercircle">
+				{#if fsize[3]}
+					<div class="cir" />
+				{/if}
+			</div>
+			{#if ftitle[3]}
+				<small>Smaller</small>
 			{/if}
 		</button>
 	</div>
@@ -177,13 +217,22 @@
 		flex-direction: column
 		row-gap: 8px
 		.blank-button
-			border: 1px solid var(--opposite)
-			width: 20px
+			width: max-content
 			height: 20px
-			border-radius: 10px
 			display: flex
+			flex-direction: row
 			align-items: center
 			justify-content: center
+			column-gap: 4px
+			.outercircle
+				width: 20px
+				height: 20px
+				border: 1px solid var(--opposite)
+				border-radius: 10px
+				display: flex
+				flex-direction: row
+				align-items: center
+				justify-content: center
 			.cir
 				display: flex
 				width: 12px
@@ -195,23 +244,37 @@
 	.fonter
 		display: flex
 		flex-direction: row
-		column-gap: 8px
+		align-items: center
+		column-gap: 16px
 		padding-top: 16px
 		padding-left: 16px
 		.blank-button
-			border: 1px solid var(--opposite)
-			width: 20px
-			height: 20px
+			height: 48px
 			border-radius: 10px
 			display: flex
 			align-items: center
 			justify-content: center
+			flex-direction: column
+			row-gap: 4px
+			position: relative
+			.outercircle
+				width: 20px
+				height: 20px
+				border: 1px solid var(--opposite)
+				border-radius: 10px
+				display: flex
+				flex-direction: row
+				align-items: center
+				justify-content: center
 			.cir
 				display: flex
 				width: 12px
 				height: 12px
 				border-radius: 6px
 				background: #fe4a49
+			small
+				position: absolute
+				bottom: 0
 
 h2
 	font-family: 'Adobe Devanagari', sans-serif
