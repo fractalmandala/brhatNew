@@ -1,5 +1,5 @@
 ---
-title: The Navakalēvara Ceremony at Puri: Ritual Embodiment of Jagannātha 
+title: "The Navakalēvara Ceremony at Puri: Ritual Embodiment of Jagannātha" 
 author: Sai Priya Chodavarapu
 category: "Svayambodha"
 tags: culture, tradition
