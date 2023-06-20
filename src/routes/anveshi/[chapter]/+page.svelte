@@ -13,13 +13,19 @@
 	import autoAnimate from '@formkit/auto-animate';
 	import { ChevronDown } from 'lucide-svelte';
 	import { chapterItinerary, allFaq } from '$lib/utils/supapulls';
-	import { chapterTemples, chapterHighlight, chapterFaq } from '$lib/utils/supapulls';
+	import {
+		chapterTemples,
+		chapterHighlight,
+		chapterFaq,
+		anveshiGeneral
+	} from '$lib/utils/supapulls';
 	import { EventInterface } from '@splidejs/splide';
 	import '@splidejs/splide/css/core';
 
 	let p: number;
 	let alignGrid = false;
 	let faqs: string | any[];
+	let gens: string | any[];
 	let cfaqs: string | any[];
 	let isFaqOpen: boolean[] = Array(15).fill(false);
 	let highlights: any;
@@ -131,6 +137,7 @@
 			temp = await chapterTemples($anveshiChapter);
 			highlights = await chapterHighlight($anveshiChapter);
 			cfaqs = await chapterFaq($anveshiChapter);
+			gens = await anveshiGeneral();
 		})();
 		$anveshiColor = data.params;
 	}
@@ -142,6 +149,7 @@
 		highlights = await chapterHighlight($anveshiChapter);
 		faqs = await allFaq();
 		cfaqs = await chapterFaq($anveshiChapter);
+		gens = await anveshiGeneral();
 	});
 
 	afterUpdate(() => {
@@ -274,9 +282,9 @@
 		<div class="rta-grid grid3 rowgap300 colgap300 templesgrid" class:calibgrid={anyTemp}>
 			{#each temp as item, i}
 				<div class="rta-row rowgap200" class:calibitem={visibleTemple[i]}>
-					<button class="rta-image blank-button" on:click={() => toggleImage(i)}>
+					<div class="rta-image" on:click={() => toggleImage(i)} on:keydown={fauxfake}>
 						<img src={item.image} alt={item.name} />
-					</button>
+					</div>
 					{#if visibleTemple[i]}
 						<div class="rta-column">
 							<h6 class="serif">{item.name}</h6>
@@ -320,11 +328,41 @@
 	</div>
 </div>
 
+<!--general-->
+<div class="rta-column outer-box limit rowgap100 serif generales">
+	{#if gens && gens.length > 0}
+		{#each gens as item}
+			{#if item.name === 'Profile of the Tour Lead'}
+				<h4 class="bord-top ta-c-d p-top-32 hindiadobe">{item.name}</h4>
+				<div class="rta-row colgap400 tourlead">
+					<div class="rta-image">
+						<img src={item.image} alt="pankaj saxena" />
+					</div>
+					<div class="rta-column">
+						<pre class="serif">{item.content}</pre>
+					</div>
+				</div>
+			{:else}
+				<h4 class="bord-top ta-c-d p-top-32 hindiadobe">{item.name}</h4>
+				<pre class="serif">{item.content}</pre>
+			{/if}
+		{/each}
+	{/if}
+</div>
+
 <!--end-->
 
 <style lang="sass">
 
-.calibgrid
+.generales
+	pre
+		font-size: 20px
+
+.templesgrid
+	.rta-image
+		width: 100%
+
+.templesgrid.calibgrid
 	@media screen and (min-width: 1024px)
 		.calibitem
 			grid-column: span 3
@@ -434,7 +472,12 @@ pre
 		.rta-column.rotated
 			transform: rotate(180deg)
 
-
-
+.templesgrid
+	.rta-image
+		height: 30vh
+		img
+			object-fit: cover
+			width: 100%
+			height: 100%
 
 </style>
