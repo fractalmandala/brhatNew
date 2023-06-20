@@ -159,10 +159,20 @@
 
 <!--header and metadetails-->
 <div class="rta-column outer-box limit rowgap100 serif" id="section1">
-	<div class="rta-column bord-bot p-bot-64">
+	<div class="rta-column bord-bot p-bot-64 ta-c rowgap200">
 		<h3 class="hindiadobe tt-u ta-c-d p-bot-16">{data.name}</h3>
-		<em class="tt-u ta-c-d" id="section1line2" style="background: {$anveshiColor}">{data.status}</em
+		<em class="tt-u ta-c rta-column" id="section1line2" style="background: {$anveshiColor}"
+			>{data.status}</em
 		>
+		{#if data.status === 'open now'}
+			<a
+				href={data.kyc}
+				target="_blank"
+				rel="noreferrer"
+				class="rta-column"
+				style="align-self: center"><button class="genbutton-l">Register Here</button></a
+			>
+		{/if}
 		<div class="rta-row iconsrow">
 			<div class="rta-column rta-icon">
 				<img src="/images/anveshi-dates.png" alt="datesicon" />
@@ -390,6 +400,11 @@ pre
 #section1line2
 	color: white
 	padding: 2px 0
+	max-width: 100%
+	font-size: 14px
+	width: max-content
+	padding: 4px 8px
+	align-self: center
 	@media screen and (max-width: 1023px)
 		padding: 4px 8px
 

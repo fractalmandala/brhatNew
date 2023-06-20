@@ -23,7 +23,6 @@
 		out:fly={{ duration: 100, delay: 0, x: 128, y: 0, easing: quintIn }}
 		href="/anveshi/odisha">Odisha</a
 	>
-	<!--
 	<a
 		class="insidelink"
 		in:fly={{ duration: 150, delay: 90, x: 128, y: 0, easing: quintIn }}
@@ -42,7 +41,6 @@
 		out:fly={{ duration: 100, delay: 0, x: 128, y: 0, easing: quintIn }}
 		href="/anveshi/gwalior">Gwalior</a
 	>
-	-->
 	<a
 		class="insidelink"
 		in:fly={{ duration: 150, delay: 120, x: 128, y: 0, easing: quintIn }}
