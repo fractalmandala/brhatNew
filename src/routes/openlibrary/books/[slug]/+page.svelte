@@ -1,23 +1,31 @@
 <script lang="ts">
+	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
+	import { breakZero, breakOne, breakTwo } from '$lib/stores/globalstores';
+	let height: number;
 
-	import { breakZero, breakOne, breakTwo } from '$lib/stores/globalstores'
-	let height:number
-
-	$: if ( $breakZero || $breakOne ) {
-		height = 720
+	$: if ($breakZero || $breakOne) {
+		height = 720;
 	} else {
-		height = 600
+		height = 600;
 	}
 
-	export let data
+	export let data;
 
+	$metaUrl = `/openlibrary/${data.slug}`;
+	$metaTitle = data.Text;
+	$metaDescription =
+		'Bṛhat Open Library is an online repository of Books, Papers, Texts and Scriptures, made available under CC0 1.0 License. Gathering point for digitized scripture, Aryan Invasion/Migration, civilizational literature and more.';
+	$metaImage =
+		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/bolherobrhat.webp';
+	$metaType = 'webpage';
 </script>
 
-<div class="bookpage rta-column"
+<div
+	class="bookpage rta-column"
 	class:levelzero={$breakZero}
 	class:levelone={$breakOne}
 	class:leveltwo={$breakTwo}
-	>
+>
 	<div class="rta-row colgap100 glass-bottom p-bot-16 outer-box limit">
 		<div class="rta-column lib">
 			<small><a href="/openlibrary">Return</a></small>
@@ -32,17 +40,11 @@
 	<div class="rta-column p-bot-32 rowgap200 outer-box limit">
 		<h5 style="color: var(--mand)" class="glass-bottom p-bot-16">{data.author}</h5>
 		{#if data.Description && data.Description.length > 0}
-		<p>{data.Description}</p>
+			<p>{data.Description}</p>
 		{/if}
 	</div>
 	<div class="rta-column carrier">
-		<iframe 
-		title={data.Text}
-		src={data.Extract} 
-		width="100%"
-		height={height}
-		allow="autoplay">
-		</iframe>
+		<iframe title={data.Text} src={data.Extract} width="100%" {height} allow="autoplay" />
 	</div>
 </div>
 
