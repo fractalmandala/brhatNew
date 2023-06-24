@@ -81,7 +81,6 @@
 	<meta name="twitter:creator" content="@brhat_in" />
 	<meta name="twitter:image" content={$metaImage} />
 	<meta name="twitter:image:alt" content={$metaDescription} />
-	<link href="https://cdn.jsdelivr.net/npm/textify.js/dist/Textify.min.css" rel="stylesheet" />
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-6NPMDTQVDE"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];

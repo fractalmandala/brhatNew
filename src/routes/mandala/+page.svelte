@@ -3,7 +3,6 @@
 	import { page } from '$app/stores';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import Parallax from '$lib/components/ParallaxImage.svelte';
-	import Animations from 'textify.js';
 
 	let panel3: HTMLElement | null;
 	let panel2: HTMLElement | null;
@@ -128,41 +127,6 @@
 		window.addEventListener('scroll', updateFivePosition);
 		window.addEventListener('scroll', updateSixPosition);
 		window.addEventListener('scroll', updateNinePosition);
-		const { Textify, TextifyTitle } = Animations;
-		new Textify({
-			selector: '.typett',
-			duration: 1200,
-			stagger: 300,
-			fade: false,
-			top: false,
-			reveal: true,
-			threshold: 0.8,
-			once: false,
-			scale: 2.5
-		});
-		new Textify({
-			selector: '.typett2',
-			duration: 1200,
-			stagger: 300,
-			delay: 200,
-			fade: false,
-			top: false,
-			reveal: true,
-			threshold: 0.8,
-			once: false,
-			scale: 2.5
-		});
-		new Textify({
-			selector: '.onpagelinks h3',
-			duration: 1200,
-			stagger: 300,
-			fade: false,
-			top: false,
-			reveal: true,
-			delay: 200,
-			threshold: 0.8,
-			once: false
-		});
 	});
 </script>
 

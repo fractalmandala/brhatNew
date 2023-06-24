@@ -12,7 +12,6 @@
 	import ButtonEmerge4 from '$lib/anims/ButtonEmerge.svelte';
 	import ButtonEmerge5 from '$lib/anims/ButtonEmerge.svelte';
 	import ButtonEmerge6 from '$lib/anims/ButtonEmerge.svelte';
-	import Animations from 'textify.js';
 	import { reveal } from 'svelte-reveal';
 	import HomeAccordion from '$lib/components/HomeAccordion.svelte';
 	import CompButton from '$lib/ridunits/CompButton.svelte';
@@ -92,28 +91,6 @@
 	$metaType = 'webpage';
 
 	onMount(() => {
-		const { Textify } = Animations;
-		new Textify({
-			selector: '.typett',
-			duration: 1200,
-			fade: false,
-			top: false,
-			reveal: true,
-			threshold: 0.8,
-			once: false
-		});
-		new Textify({
-			selector: '.typett2',
-			duration: 1600,
-			stagger: 100,
-			fade: false,
-			top: false,
-			reveal: true,
-			threshold: 0.8,
-			once: false,
-			scale: 2.5
-		});
-
 		(async () => {
 			threeactions = await createCurateConsult();
 			updates = await brhatUpdates();

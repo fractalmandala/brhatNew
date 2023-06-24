@@ -1,65 +1,49 @@
 <script lang="ts">
+	import { onMount, afterUpdate } from 'svelte';
+	import { page } from '$app/stores';
+	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
+	import PageProgress from '$lib/components/PageProgress.svelte';
+	import tippy, { animateFill } from 'tippy.js';
+	import 'tippy.js/dist/tippy.css';
+	import 'tippy.js/animations/shift-away.css';
+	import { mandalaAll } from '$lib/utils/localpulls';
+	import ParallaxImage from '$lib/components/ParallaxImage.svelte';
+	import HeadLocal from '$lib/components/HeadLocal.svelte';
 
-	import { onMount, afterUpdate } from 'svelte'
-	import { page } from '$app/stores'
-	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores'
-	import PageProgress from '$lib/components/PageProgress.svelte'
-	import tippy, {animateFill} from 'tippy.js'
-	import 'tippy.js/dist/tippy.css'
-	import 'tippy.js/animations/shift-away.css'
-	import Animations from 'textify.js'
-	import { mandalaAll } from '$lib/utils/localpulls'
-	import ParallaxImage from '$lib/components/ParallaxImage.svelte'
-import HeadLocal from '$lib/components/HeadLocal.svelte'
+	let fractals: any;
+	let wide: number;
+	let mobileView: boolean = false;
+	let lightMode = false;
+	let fake = false;
+	let pageImage: any;
+	let pageTitle: any;
+	let ref: HTMLElement;
 
-	let fractals:any
-	let wide:number
-	let mobileView:boolean = false
-	let lightMode = false
-	let fake = false
-	let pageImage:any
-	let pageTitle:any
-	let ref:HTMLElement
-
-	function toggleLightMode(){
-		lightMode = !lightMode
-	}
-	
-	function fauxfake(){
-		fake = !fake
+	function toggleLightMode() {
+		lightMode = !lightMode;
 	}
 
-	$: if ( wide <= 1023 ) {
-		mobileView = true
+	function fauxfake() {
+		fake = !fake;
+	}
+
+	$: if (wide <= 1023) {
+		mobileView = true;
 	} else {
-		mobileView = false
+		mobileView = false;
 	}
 
-	export let data	
+	export let data;
 
-	$metaUrl = $page.url.pathname
-	$metaTitle = data.title
-	$metaDescription = 'An essay at Fractal Maṇḍala'
-	$metaImage = data.image
-	$metaType = 'article'
+	$metaUrl = $page.url.pathname;
+	$metaTitle = data.title;
+	$metaDescription = 'An essay at Fractal Maṇḍala';
+	$metaImage = data.image;
+	$metaType = 'article';
 
-
-	onMount(async() => {
-		fractals = await mandalaAll()
-		const { TextifyTitle } = Animations
-		new TextifyTitle({
-			selector: '.a-title h2',
-			duration: 500,
-			stagger: 30,
-			fade: true,
-			top: false,
-			reveal: true,
-			threshold: 0.1,
-			once: false,
-			scale: 2.5,
-			easing: "circInOut"
-		})
-		tippy ('#single', {
+	onMount(async () => {
+		fractals = await mandalaAll();
+		tippy('#single', {
 			content: 'Toggle Dark/Light Mode.',
 			duration: 300,
 			arrow: true,
@@ -67,34 +51,29 @@ import HeadLocal from '$lib/components/HeadLocal.svelte'
 			plugins: [animateFill],
 			placement: 'right',
 			theme: 'light'
-		})
-	})
-
+		});
+	});
 
 	afterUpdate(() => {
-		pageImage = data.image
-		pageTitle = data.title
-	})
+		pageImage = data.image;
+		pageTitle = data.title;
+	});
 </script>
 
+<svelte:window bind:innerWidth={wide} />
 
-<svelte:window bind:innerWidth={wide}/>
-
-<PageProgress --thispagebackground="#10C56D" --thispageheight="2px"/>
+<PageProgress --thispagebackground="#10C56D" --thispageheight="2px" />
 <div class="rta-column">
 	<div class="x0">
-		<ParallaxImage --parallax="url('{pageImage}')" --parallaxresp="url('{pageImage}')"></ParallaxImage>
+		<ParallaxImage --parallax="url('{pageImage}')" --parallaxresp="url('{pageImage}')" />
 	</div>
 	<div class="rta-column in-blog carrier heightmeasure p-top-64" bind:this={ref}>
-			<h3 class="glass-y p-top-32 p-bot-32 m-bot-32">
+		<h3 class="glass-y p-top-32 p-bot-32 m-bot-32">
 			{pageTitle}
-			</h3>
-<svelte:component this={data.content}/>
+		</h3>
+		<svelte:component this={data.content} />
 	</div>
 </div>
-
-
-
 
 <style lang="sass">
 
