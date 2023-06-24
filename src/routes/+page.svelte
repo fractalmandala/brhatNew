@@ -253,7 +253,7 @@
 									{#if item.content && item.content.length > 0}
 										<pre class="h6">{item.content}</pre>
 									{/if}
-									<CompButton><a href="/anveshi/chapter/{item.chapter}">Read More</a></CompButton>
+									<CompButton><a href="/anveshi/{item.chapter}">Read More</a></CompButton>
 								</div>
 							</div>
 						{/if}
