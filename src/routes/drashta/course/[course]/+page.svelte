@@ -50,6 +50,7 @@
 	$metaDescription = data.excerpt;
 	$metaType = 'course';
 	$drashtaDyn = data.dynamizer;
+	$metaImage = data.image;
 
 	function toggleMenu() {
 		expandMenu = !expandMenu;
@@ -91,6 +92,7 @@
 		$metaUrl = $page.url.pathname;
 		$metaTitle = data.name;
 		$metaDescription = data.excerpt;
+		$metaImage = data.image;
 		(async () => {
 			conts = await courseContents($drashtaDyn);
 			takes = await courseTakeaways($drashtaDyn);
