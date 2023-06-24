@@ -45,12 +45,11 @@
 
 	export let data;
 
-	$metaUrl = $page.url.pathname;
-	$metaTitle = data.name;
+	$metaTitle = data.name + '| Bṛhat Draṣṭā';
 	$metaDescription = data.excerpt;
-	$metaType = 'course';
-	$drashtaDyn = data.dynamizer;
+	$metaUrl = `/drashta/course/${data.dynamizer}`;
 	$metaImage = data.image;
+	$metaType = 'webpage';
 
 	function toggleMenu() {
 		expandMenu = !expandMenu;
@@ -89,9 +88,9 @@
 	}
 
 	$: if ($drashtaDyn) {
-		$metaUrl = $page.url.pathname;
-		$metaTitle = data.name;
+		$metaTitle = data.name + '| Bṛhat Draṣṭā';
 		$metaDescription = data.excerpt;
+		$metaUrl = `/drashta/course/${data.dynamizer}`;
 		$metaImage = data.image;
 		(async () => {
 			conts = await courseContents($drashtaDyn);
@@ -107,10 +106,6 @@
 	}
 
 	onMount(async () => {
-		$metaUrl = $page.url.pathname;
-		$metaTitle = data.name;
-		$metaDescription = data.excerpt;
-		$metaImage = data.image;
 		$drashtaDyn = data.dynamizer;
 		conts = await courseContents($drashtaDyn);
 		takes = await courseTakeaways($drashtaDyn);
@@ -125,10 +120,6 @@
 
 	afterUpdate(() => {
 		$drashtaDyn = data.dynamizer;
-		$metaUrl = $page.url.pathname;
-		$metaTitle = data.name;
-		$metaDescription = data.excerpt;
-		$metaImage = data.image;
 	});
 </script>
 

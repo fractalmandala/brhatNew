@@ -2,7 +2,7 @@
 	//@ts-nocheck
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
-	import { breakZero, breakOne, breakTwo } from '$lib/stores/globalstores'
+	import { breakZero, breakOne, breakTwo } from '$lib/stores/globalstores';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import {
 		latestDhitiFour,
@@ -37,18 +37,17 @@
 	let dharmas: any;
 	let openDrawer = false;
 	let limit = 6;
-	let openCat = false
+	let openCat = false;
 
-	function toggleCatOpen(){
-		openCat = !openCat
+	function toggleCatOpen() {
+		openCat = !openCat;
 	}
 
-	export let data;
-
-	$metaUrl = $page.url.pathname;
-	$metaTitle = data.name;
-	$metaDescription = data.shorts;
-	$metaImage = data.image;
+	$metaUrl = '/dhiti';
+	$metaTitle = 'Schools of Thought';
+	$metaDescription = 'At Bṛhat Draṣṭā';
+	$metaImage =
+		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/06drashta/schoolsofthought.webp';
 	$metaType = 'webpage';
 
 	$: anyCategoryOpen = categoryItems.some((item) => item);
@@ -160,38 +159,43 @@
 							<small><strong>Deselect to Return</strong></small>
 						{/if}
 					</div>
-						{#if $breakZero || $breakOne || openCat}
-					<div class="categories rta-row row-col colgap100" use:autoAnimate on:click={toggleCatOpen} on:keydown={fauxfake}>
-						<button
-							class="drawer-item"
-							class:light={$themeMode}
-							class:dark={!$themeMode}
-							on:click={() => toggleCategory(1)}
-							class:selected={categoryItems[1]}>Two Bodhas</button
+					{#if $breakZero || $breakOne || openCat}
+						<div
+							class="categories rta-row row-col colgap100"
+							use:autoAnimate
+							on:click={toggleCatOpen}
+							on:keydown={fauxfake}
 						>
-						<button
-							class="drawer-item"
-							class:light={$themeMode}
-							class:dark={!$themeMode}
-							on:click={() => toggleCategory(2)}
-							class:selected={categoryItems[2]}>Dharma Today</button
-						>
-						<button
-							class="drawer-item"
-							class:light={$themeMode}
-							class:dark={!$themeMode}
-							on:click={() => toggleCategory(3)}
-							class:selected={categoryItems[3]}>IKS</button
-						>
-						<button
-							class="drawer-item"
-							class:light={$themeMode}
-							class:dark={!$themeMode}
-							on:click={() => toggleCategory(4)}
-							class:selected={categoryItems[4]}
-							>Culture and Policy
-						</button>
-					</div>
+							<button
+								class="drawer-item"
+								class:light={$themeMode}
+								class:dark={!$themeMode}
+								on:click={() => toggleCategory(1)}
+								class:selected={categoryItems[1]}>Two Bodhas</button
+							>
+							<button
+								class="drawer-item"
+								class:light={$themeMode}
+								class:dark={!$themeMode}
+								on:click={() => toggleCategory(2)}
+								class:selected={categoryItems[2]}>Dharma Today</button
+							>
+							<button
+								class="drawer-item"
+								class:light={$themeMode}
+								class:dark={!$themeMode}
+								on:click={() => toggleCategory(3)}
+								class:selected={categoryItems[3]}>IKS</button
+							>
+							<button
+								class="drawer-item"
+								class:light={$themeMode}
+								class:dark={!$themeMode}
+								on:click={() => toggleCategory(4)}
+								class:selected={categoryItems[4]}
+								>Culture and Policy
+							</button>
+						</div>
 					{/if}
 				</div>
 				<div class="rta-column rowgap50 wt">
@@ -558,22 +562,25 @@
 	</div>
 	<div class="rta-column featured rowgap200 p-top-32">
 		{#if !$breakTwo}
-		<div class="rta-column introbox">
-			<small class="serif is-black"><b>Dharma</b></small>
-			<cite class="serif">The vast pool of culture we draw from, working for its furtherance.</cite>
-			<small class="serif is-black"><b>Policy</b></small>
-			<cite class="serif">The instrument of activating Dharma, providing it with affordance.</cite>
-			<small class="serif is-black"><b>Leadership</b></small>
-			<cite class="serif"
-				>The bearing forward and sustaining, that will take us to deliverance.</cite
-			>
-			<small class="serif is-black"
-				><b>Dhīti - a blog ranging all three through essays, research pieces and commentary.</b
-				></small
-			>
-		</div>
-		<SocialShare --socialcolor="#5A3261" />
-		<div class="rta-column"><div class="line" /></div>
+			<div class="rta-column introbox">
+				<small class="serif is-black"><b>Dharma</b></small>
+				<cite class="serif"
+					>The vast pool of culture we draw from, working for its furtherance.</cite
+				>
+				<small class="serif is-black"><b>Policy</b></small>
+				<cite class="serif">The instrument of activating Dharma, providing it with affordance.</cite
+				>
+				<small class="serif is-black"><b>Leadership</b></small>
+				<cite class="serif"
+					>The bearing forward and sustaining, that will take us to deliverance.</cite
+				>
+				<small class="serif is-black"
+					><b>Dhīti - a blog ranging all three through essays, research pieces and commentary.</b
+					></small
+				>
+			</div>
+			<SocialShare --socialcolor="#5A3261" />
+			<div class="rta-column"><div class="line" /></div>
 		{/if}
 		<h4 class="serif p-top-32 p-bot-16"><strong>Featured Posts:</strong></h4>
 		{#if featuredposts && featuredposts.length > 0}

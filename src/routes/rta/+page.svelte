@@ -8,7 +8,6 @@
 	import { slide } from 'svelte/transition';
 	import Modal from '$lib/components/Modal.svelte';
 
-	export let data;
 	let isPart = Array(3).fill(false);
 	let fake = false;
 
@@ -29,10 +28,12 @@
 		}
 	}
 
-	$metaUrl = $page.url.pathname;
-	$metaTitle = data.name;
-	$metaDescription = data.shorts;
-	$metaImage = data.image;
+	$metaTitle = 'Ṛta in Design';
+	$metaDescription =
+		'Ṛta in Design is a new framework for design thinking, centred on the mind of the designer. Inspired by universal principles of Dharma.';
+	$metaUrl = '/rta';
+	$metaImage =
+		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/ridhero1.webp';
 	$metaType = 'webpage';
 
 	let options: DragOptions = {

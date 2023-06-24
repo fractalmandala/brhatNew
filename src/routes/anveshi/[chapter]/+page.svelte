@@ -39,12 +39,11 @@
 
 	export let data;
 
-	$metaUrl = $page.url.pathname;
+	$metaUrl = `/anveshi/${data.chapter}`;
 	$metaTitle = data.name;
 	$metaDescription = data.excerpt;
 	$metaImage = data.image;
 	$metaType = 'webpage';
-	$anveshiChapter = data.chapter;
 	$anveshiColor = data.params;
 
 	function fauxfake() {
@@ -132,11 +131,11 @@
 	$: anyTemp = visibleTemple.some((item: any) => item);
 
 	$: if ($anveshiChapter) {
-		$metaUrl = $page.url.pathname;
+		$metaUrl = `/anveshi/${data.chapter}`;
 		$metaTitle = data.name;
 		$metaDescription = data.excerpt;
 		$metaImage = data.image;
-		$metaType = 'webpage';
+		$anveshiColor = data.params;
 		(async () => {
 			itins = await chapterItinerary($anveshiChapter);
 			temp = await chapterTemples($anveshiChapter);
@@ -144,15 +143,9 @@
 			cfaqs = await chapterFaq($anveshiChapter);
 			gens = await anveshiGeneral();
 		})();
-		$anveshiColor = data.params;
 	}
 
 	onMount(async () => {
-		$metaUrl = $page.url.pathname;
-		$metaTitle = data.name;
-		$metaDescription = data.excerpt;
-		$metaImage = data.image;
-		$metaType = 'webpage';
 		$anveshiChapter = data.chapter;
 		itins = await chapterItinerary($anveshiChapter);
 		temp = await chapterTemples($anveshiChapter);

@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { langMode, changeLanguage } from '$lib/stores/globalstores';
 	import { breakOne, breakZero, breakTwo, themeMode } from '$lib/stores/globalstores';
+	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte';
 	import SvarLogo from '$lib/logos/Svarnanjali2.svelte';
 	import Youtuber from '$lib/components/Youtuber.svelte';
@@ -17,6 +18,13 @@
 	let y: number;
 	let iW: number;
 	let idv = 'OeCFCHwSpd0';
+	$metaTitle = 'Svarṇāñjali';
+	$metaDescription =
+		'Svarṇāñjali is a weekly video series to discuss literature, arts, drama, architecture, sculpture, cinema and other fine arts from the point of view of rasikā, in Sanskṛta Niṣṭha Hindī.';
+	$metaUrl = '/svarnanjali';
+	$metaImage =
+		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/krishnaradha.webp';
+	$metaType = 'webpage';
 
 	function toggleLanguage() {
 		language = !language;

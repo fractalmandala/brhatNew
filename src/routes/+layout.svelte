@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import HeadComponent from '$lib/components/MetaTag.svelte';
 	import RIDSidebar from '$lib/ridunits/RIDSidebar.svelte';
+	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import type { LayoutData } from './$types';
 	import {
 		breakZero,
@@ -61,7 +62,25 @@
 <svelte:window bind:innerWidth={$innerWidth} />
 
 <svelte:head>
-	<HeadComponent />
+	<title>{$metaTitle}</title>
+	<meta name="description" content={$metaDescription} />
+	<meta property="og:title" content={$metaTitle} />
+	<meta property="og:description" content={$metaDescription} />
+	<meta property="og:url" content="https://www.brhat.in{$metaUrl}" />
+	<meta property="og:image" content={$metaImage} />
+	<meta property="og:image:alt" content="{$metaTitle} hero image" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="675" />
+	<meta property="og:locale" content="en_IN" />
+	<link rel="canonical" href="https://www.brhat.in{$metaUrl}" />
+	<meta property="og:type" content={$metaType} />
+	<meta name="robots" content="index,follow" />
+	<meta name="googlebot" content="index,follow" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@brhat_in" />
+	<meta name="twitter:creator" content="@brhat_in" />
+	<meta name="twitter:image" content={$metaImage} />
+	<meta name="twitter:image:alt" content={$metaDescription} />
 	<link href="https://cdn.jsdelivr.net/npm/textify.js/dist/Textify.min.css" rel="stylesheet" />
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-6NPMDTQVDE"></script>
 	<script>

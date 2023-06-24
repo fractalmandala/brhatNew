@@ -42,12 +42,12 @@
 	let alignGrid: boolean = false;
 	let fake = false;
 
-	export let data;
-
-	$metaUrl = $page.url.pathname;
-	$metaTitle = data.name;
-	$metaDescription = data.shorts;
-	$metaImage = data.image;
+	$metaTitle = 'Bṛhat Anveṣī';
+	$metaDescription =
+		'Bṛhat Anveṣī is our culture experience and discovery travel program, through curated and guided temple tours throughout India.';
+	$metaUrl = '/anveshi';
+	$metaImage =
+		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/brhatanveshi.webp';
 	$metaType = 'webpage';
 
 	function fauxfake() {
@@ -121,11 +121,6 @@
 	$: anyFaqOpen = isFaqOpen.some((item) => item);
 
 	onMount(() => {
-		$metaUrl = $page.url.pathname;
-		$metaTitle = data.name;
-		$metaDescription = data.shorts;
-		$metaImage = data.image;
-		$metaType = 'webpage';
 		if (iW <= 1023) {
 			breakPoint = true;
 		}

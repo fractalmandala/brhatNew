@@ -18,10 +18,6 @@ Paiṭhāṇ paintings have an audacious and striking visual impact. Vibrant pig
 
 > “a certain monumentality reminiscent of wall paintings”,<sup>3</sup>  while Eva Ray, in a similar vein, states that the style is best described as “muralistic”, where “the broad and clear forms vividly delineate the narrative scenes”.<sup>4</sup> The narrative purpose of these works is served exceedingly well by the monoscenic imagery. With the depiction of each episode in the tale arrested in the mind of the viewer, the narrator is then enabled to fill in the details and elaborate the scene depicted in each folio through song or recitation accompanied by a rhythm provided by musical instruments.
 
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-![alt*text](images/image2.jpg "image*tooltip")
-
 Figure 2. *Paiṭhaṇī story-telling painting, illustrating the story of Satya Hariścandra from the Mahābhārata. Hariścandra is poised to decapitate the queen, as the Gods watch from above. Paithan Style, opaque watercolor on paper, late 19th – 20th century, British Museum*
 
 Another painting from the same *pothi* (bundle) that illustrates the narrative effectiveness of these paintings is the one that depicts the climactic scene in the story, when Tārāmati is about to be decapitated by Hariścandra, seen in fig. 2. In the lower half of the painting, Hariścandra raises his sword and is on the verge of executing the queen, who stands demurely before him, her hands folded. In the panel above, the gods — Śiva wearing a *rudrākṣamāla*, seated with a *yogapaṭṭa*, with his hair in a coiled *jaṭa*; Viṣṇu holding a *śankha* and a *cakra*; the four-headed Brahma holding a scroll; and the Sage Vaṣiṣṭha, an advocate for Hariścandra, watch the queen's impending execution and contemplate an intervention. A decorative border divides both the worlds, similar to the manner in which horizontal compositions are often partitioned into two through the use of a vertical element<sup>5</sup>. Paiṭhāṇ paintings are almost always horizontally aligned, with few exceptions. This is the only page in this particular *pothī* which is vertically arranged. The change of format is due to the dramatic nature of the scene being depicted: it brings the viewer’s attention to the fact that the gods are watching the story as it plays out in the cremation ground. Hariścandra and Tāramati, on the other hand, despite the morose gravitas of the situation, are portrayed as if at the culmination of a marriage ceremony.
@@ -34,18 +30,6 @@ Valentina Stache-Rosen, in her posthumous work detailing the *Citrakathis* of Pi
 
 
 > A Chitrakathi's performance is accompanied by a *huduk* (a kind of drum), a three-stringed *tambura*, and cymbals, called *jhinj*. The performer squats on the ground and places a wooden board the size of the *pothi *against his knees as a support for the pictures; a piece of cloth prevents them from slipping. Sometimes the *pothi* will be placed on the ground near the performer, and the pictures will be taken up one by one as the story progresses. In other instances, the performer puts up the whole *pothi* against the wooden board and flings the pictures aside when he has finished with them. .. Every performance begins by showing a picture of Ganpati and that of Sarasvati on the reverse, but not every *pothi* has these pictures. These deities will be praised in a song before the actual performance starts. No special pujas are performed in the houses for the *pothis*, but during Navaratri the pujāri performs pūjā with arati, coconuts, flowers, red powder, and incense.
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt*text](images/image3.png "image*tooltip")
-<sup>Fig. 3  “A group of Chitrakathis from Pinguli”, taken from  Stache-Rosen, Valentina. “Story-Telling in Pingulī Paintings.” Artibus Asiae 45, no. 4 (1984): 261. <a href="https://doi.org/10.2307/3249740">https://doi.org/10.2307/3249740</a>.</sup>
-
-
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt*text](images/image4.jpg "image*tooltip")
 
 
 <sup><em>Figure 4. Paiṭhaṇī story-telling painting depicting Goddess Sarasvati. The Goddess is seated on a raised and decorated platform. Facing her is her vāhana, the swan, which is stylised such that its plumage resembles that of a peacock. She holds a manuscript, symbolizing knowledge, a pair of cymbals, and a vīṇa. Her vāhana, towers over the goddess, and is magnificently bejewelled, with a foliated and colourful tail and majestic talons. Paithan Style, opaque watercolour on paper, late 19th – 20th century, British Museum.</em></sup>
