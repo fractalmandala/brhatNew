@@ -132,6 +132,11 @@
 	$: anyTemp = visibleTemple.some((item: any) => item);
 
 	$: if ($anveshiChapter) {
+		$metaUrl = $page.url.pathname;
+		$metaTitle = data.name;
+		$metaDescription = data.excerpt;
+		$metaImage = data.image;
+		$metaType = 'webpage';
 		(async () => {
 			itins = await chapterItinerary($anveshiChapter);
 			temp = await chapterTemples($anveshiChapter);
@@ -143,6 +148,11 @@
 	}
 
 	onMount(async () => {
+		$metaUrl = $page.url.pathname;
+		$metaTitle = data.name;
+		$metaDescription = data.excerpt;
+		$metaImage = data.image;
+		$metaType = 'webpage';
 		$anveshiChapter = data.chapter;
 		itins = await chapterItinerary($anveshiChapter);
 		temp = await chapterTemples($anveshiChapter);
