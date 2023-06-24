@@ -107,6 +107,10 @@
 	}
 
 	onMount(async () => {
+		$metaUrl = $page.url.pathname;
+		$metaTitle = data.name;
+		$metaDescription = data.excerpt;
+		$metaImage = data.image;
 		$drashtaDyn = data.dynamizer;
 		conts = await courseContents($drashtaDyn);
 		takes = await courseTakeaways($drashtaDyn);
@@ -121,6 +125,10 @@
 
 	afterUpdate(() => {
 		$drashtaDyn = data.dynamizer;
+		$metaUrl = $page.url.pathname;
+		$metaTitle = data.name;
+		$metaDescription = data.excerpt;
+		$metaImage = data.image;
 	});
 </script>
 
