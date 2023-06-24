@@ -132,7 +132,7 @@
 			<small>{data.category}</small>
 			<cite>{data.tags}</cite><br />
 		</div>
-		<h2 style="serif; font-weight: 700;">{data.title}</h2>
+		<h1 style="serif; font-weight: 700;">{data.title}</h1>
 		<div class="authorbox">
 			{data.author}<br />
 			{#if member && member.length > 0}
@@ -276,7 +276,7 @@
 				position: absolute
 				bottom: 0
 
-h2
+h1
 	font-family: 'Adobe Devanagari', sans-serif
 
 
@@ -372,7 +372,7 @@ h2
 			color: white
 			padding: 4px 8px 4px 8px
 			border-radius: 12px
-	h2
+	h1
 		border-bottom: 1px solid var(--borderline)
 		padding-bottom: 32px
 		padding-top: 32px
@@ -382,11 +382,11 @@ h2
 		display: flex
 		flex-direction: column
 		justify-content: center
-		h2
+		h1
 			letter-spacing: -3px
 			line-height: 1.12
 	@media screen and (max-width: 1023px)
-		h2
+		h1
 			letter-spacing: -1px
 			font-size: 40px
 
