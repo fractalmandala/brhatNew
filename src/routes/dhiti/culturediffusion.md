@@ -1,7 +1,7 @@
 ---
 title: Cultural Transfer as Diffusion of Complexity
 author: Kriteesh Parashar
-category: Svayaṃbodha
+category: Svayambodha
 tags: new models
 date: "2023-06-24"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/culturediffusion.webp
