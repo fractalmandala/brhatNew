@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { langMode, changeLanguage } from '$lib/stores/globalstores';
+	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
+	import '@splidejs/splide/css/core';
 	import { breakOne, breakZero, breakTwo, themeMode } from '$lib/stores/globalstores';
 	import { getSvarnanjali } from '$lib/utils/supapulls';
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte';
@@ -45,25 +47,11 @@
 
 <svelte:window bind:innerWidth={iW} bind:scrollY={y} />
 
-<!--hero image-->
-<div class="x0" data-lenis-scroll-snap-align="start">
-	<ParallaxImage
-		--parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/krishnaradha.webp')"
-		--parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/krishnaradha.webp')"
-	>
-		<div class="my-screen rta-column">
-			<div class="goaway">
-				<SvarLogo dimension={200} />
-			</div>
-		</div>
-	</ParallaxImage>
-</div>
-<!--end-->
 <div
 	class:levelzero={$breakZero}
 	class:levelone={$breakOne}
 	class:leveltwo={$breakTwo}
-	class="back"
+	class="back p-top-64 minH firstone"
 	style="background-image: url('https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/batch1/522.webp')"
 >
 	<div class="rta-column rowgap300 p-top-64 p-bot-64 ycenter xcenter">
@@ -80,6 +68,64 @@
 		</div>
 	</div>
 </div>
+<div class="rta-column rowgap200 outer-box limit ycenter minH engager">
+	<h3 class="p-bot-32 p-top-64">Add Your Voice to Svarṇāñjali</h3>
+	<h5>
+		Have you observed your use of foreign words in your conversations in Hindi (and/or your regional
+		language)?
+	</h5>
+	<h5>
+		Have you tried replacing them? How was that experience? Fun, Daunting? We'd love to hear, share
+		it with us.
+	</h5>
+	<h5>What is your favorite book in Hindi and/or Regional Literature?</h5>
+	<h5>Who is your favorite Author in Hindi and/or Regional Literature?</h5>
+	<h5 class="bord-top p-top-32">
+		<span style="color: #fe4a49">Here is a fun challenge:</span><br /> Speak anything in Hindi for
+		atleast 30 seconds (max 1 minute) without using a single word of FATE (Farsi, Arabic, Turkish,
+		English) languages.<br />
+		Share the link of your video with us, we will put the most interesting ones on our Youtube channel
+		:)
+	</h5>
+	<form class="rta-column submitform rowgap100">
+		<input type="text" placeholder="Full Name" />
+		<input type="email" placeholder="Email ID" />
+		<input type="URL" placeholder="Link to Video" />
+		<button type="submit" class="genbutton">Send</button>
+	</form>
+</div>
+
+<!--
+<div class="rta-column rowgap300 minH outer-box limit">
+	<Splide
+		hasTrack={false}
+		options={{
+			drag: true,
+			keyboard: 'global',
+			waitForTransition: true,
+			wheel: true,
+			type: 'loop',
+			wheelMinThreshold: 1.1,
+			speed: 900,
+			direction: 'ltr',
+			perPage: 3,
+			easing: 'cubic-bezier(0.900, 0.005, 0.225, 1.035)'
+		}}
+	>
+		<SplideTrack>
+			<SplideSlide>
+				<div class="faker" style="background-image: url('/images/svthumbs/1.jpeg')">1</div>
+			</SplideSlide>
+			<SplideSlide>
+				<div class="faker" style="background-image: url('/images/svthumbs/2.jpeg')">2</div>
+			</SplideSlide>
+			<SplideSlide>
+				<div class="faker" style="background-image: url('/images/svthumbs/3.jpeg')">3</div>
+			</SplideSlide>
+		</SplideTrack>
+	</Splide>
+</div>
+-->
 <div class="rta-grid grid3 p-top-64 rowgap300 colgap300 outer-box ycenter">
 	{#if vids && vids.length > 0}
 		{#each vids as item}
@@ -87,6 +133,7 @@
 		{/each}
 	{/if}
 </div>
+
 <div class="rta-column holdsbutton">
 	<a class="genbutton" href="https://www.youtube.com/@brhat" target="_blank" rel="noreferrer">
 		View on YouTube
@@ -107,6 +154,33 @@
 </div>
 
 <style lang="sass">
+
+.firstone
+	height: 100vh
+	@media screen and (max-width: 1023px)
+		display: flex
+		flex-direction: column
+		justify-content: center
+
+.faker
+	background-position: center center
+	background-size: cover !important
+	background-repeat: no-repeat
+	@media screen and (min-width: 1024px)
+		width: 320px
+		height: 200px
+		background: #878787
+
+.submitform
+	@media screen and (min-width: 1024px)
+		width: 240px
+		input
+			font-size: 12px
+			padding: 4px 8px
+
+.engager
+	h3, h5
+		color: var(--opposite)
 
 .holdsbutton
 	align-items: center
@@ -132,6 +206,11 @@
 		width: 720px
 		column-gap: 128px
 		text-align: center
+
+.leveltwo
+	.video-container
+		width: 88%
+
 
 .my-screen
 	height: 100%
