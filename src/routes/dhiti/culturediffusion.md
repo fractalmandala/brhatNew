@@ -80,8 +80,8 @@ This dynamic assimilation is of specific interest to us, because it is precisely
 
 This higher differential in complexity allows for diffusion of components that may not be as abstract. This means we observe the diffusion of stories, prosody, calendars, temple architecture and even rituals. 
 
-Eg. It is known that local Javanese folklore and mythology engaged with plots of Itihāsa. This produced long narrative poems like Kakawin Arjuna Wiwāha. But the more notable point is that this work in Old Javanese incorporated chandas of Sanskrit like Anuṣṭubha, Vasanta Tilaka, and** **Śārdūlavikrīḍita.**
-**
+Eg. It is known that local Javanese folklore and mythology engaged with plots of Itihāsa. This produced long narrative poems like Kakawin Arjuna Wiwāha. But the more notable point is that this work in Old Javanese incorporated chandas of Sanskrit like Anuṣṭubha, Vasanta Tilaka, and **Śārdūlavikrīḍita.**
+
 Here we observe diffusion of not only broader items like stories of Arjuna Wiwāha, but also minor detailed aspects like metrical schemes. Not a crude exchange of goods, but a much deeper seeping of ācāra and vyavahāra, a thorough diffusion of complexity. 
 
 > yad yad ācarati śreṣṭhaḥ
