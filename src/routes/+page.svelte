@@ -563,7 +563,7 @@
 							<small style="text-transform: none">{item.meta.excerpt}</small>
 						</div>
 						<div class="rta-column">
-							<p>
+							<p class="writer">
 								<strong>
 									{item.meta.author}<span />
 									{#if item.meta.authortwo && item.meta.authortwo.length > 0}
@@ -649,6 +649,13 @@
 </div>
 
 <style lang="sass">
+
+.rta-card
+	h5
+		color: var(--opposite)
+		line-height: 1.1	
+	p.writer
+		color: #fe4a49
 
 #drashtascreen
 	@media screen and (max-width: 1023px)

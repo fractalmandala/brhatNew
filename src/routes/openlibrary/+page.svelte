@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { themeMode } from '$lib/stores/globalstores';
-	import { page } from '$app/stores';
+	import { themeMode, breakZero, breakOne, breakTwo } from '$lib/stores/globalstores';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import { ChevronDown } from 'lucide-svelte';
 	import autoAnimate from '@formkit/auto-animate';
@@ -13,6 +12,7 @@
 		BOLOthers,
 		AryanTag
 	} from '$lib/utils/supapulls';
+	import Sidebar from '$lib/reader/BOLSidebar.svelte';
 	import { fly, scale } from 'svelte/transition';
 	import { circIn } from 'svelte/easing';
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte';
@@ -149,7 +149,13 @@
 
 <svelte:window bind:innerWidth={iw} on:keydown={navigateList} />
 
-<div class:light={$themeMode} class:dark={!$themeMode}>
+<div
+	class:light={$themeMode}
+	class:dark={!$themeMode}
+	class:levelzero={$breakZero}
+	class:levelone={$breakOne}
+	class:leveltwo={$breakTwo}
+>
 	<div class="x0" data-lenis-scroll-snap-align="start">
 		<ParallaxImage
 			--parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/bolherobrhat.webp')"
@@ -176,6 +182,16 @@
 		</div>
 	</div>
 	<!--end-->
+
+	<!--
+	<div class="page3grid minH">
+		<div class="sideleft">
+			<Sidebar />
+		</div>
+		<div class="centerpage"><p>Center</p></div>
+		<div class="sideright"><p>Right</p></div>
+	</div>
+-->
 
 	<!--primary section featuring books-->
 	<div class="rta-column rowgap600 outer-box" data-lenis-scroll-snap-align="start">
@@ -557,7 +573,25 @@
 		font-weight: bold
 		font-size: 21px
 
+.page3grid
+	display: grid
+	grid-auto-flow: row
+	.sideleft
+		grid-area: left
+	.centerpage
+		grid-area: center
+	.sideright
+		grid-area: right
 
+.levelzero
+	.page3grid
+		grid-template-columns: 280px 1fr 256px
+		grid-template-areas: "left center right"
+		padding-left: 32px
+		padding-right: 32px
+		.sideleft
+			border-right: 1px solid var(--contraster)
+			padding-right: 32px
 
 
 .is-green

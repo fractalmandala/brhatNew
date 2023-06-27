@@ -52,13 +52,6 @@
 
 <svelte:window bind:innerWidth={$innerWidth} />
 
-<HeadComponent
-	title={$metaTitle}
-	metaDescription={$metaDescription}
-	metaUrl={$metaUrl}
-	metaImage={$metaImage}
-/>
-
 <main
 	id="appbox"
 	class="themer"
