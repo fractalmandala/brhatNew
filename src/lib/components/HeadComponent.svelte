@@ -15,6 +15,14 @@
 	<meta property="og:image:alt" content="{title} hero image" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="675" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={title} />
+	<meta name="twitter:description" content={metaDescription} />
+	<meta name="twitter:url" content={metaUrl} />
+	<meta name="twitter:image" content={metaImage} />
+	<meta name="twitter:image:alt" content="{title} hero image" />
+	<meta name="twitter:creator" content="@brhat_in" />
+	<meta name="twitter:site" content="@brhat_in" />
 	<meta property="og:locale" content="en_IN" />
 	<link rel="canonical" href="https://www.brhat.in{metaUrl}" />
 	<meta name="robots" content="index, follow" />
