@@ -1,0 +1,124 @@
+<script lang="ts">
+	import ButtonEmerge from '$lib/anims/ButtonEmerge.svelte';
+	import { reveal } from 'svelte-reveal';
+	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
+	import '@splidejs/splide/css/core';
+	import Youtuber from '$lib/components/Youtuber.svelte';
+</script>
+
+<div class="rta-column ycenter rowgap600 outer-box minH" data-lenis-scroll-snap-align="start">
+	<div
+		class="rta-row row-col ycenter between rowgap100 colgap400 glass-top p-top-32 bord-bot p-bot-32"
+	>
+		<div class="rta-row row-col ycenter colgap300">
+			<h3 class="typett">SVARṆĀÑJALI</h3>
+			<div class="holds-button-emerge" use:reveal>
+				<ButtonEmerge><a href="/svarnanjali">Learn More</a></ButtonEmerge>
+			</div>
+		</div>
+		<div class="colgap100 rta-row selfend xend ycenter">
+			<div class="arrowsanimation">
+				<svg
+					width="94"
+					height="24"
+					viewBox="0 0 94 32"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<g clip-path="url(#clip0_15_2638)">
+						<path
+							id="arrowl"
+							d="M94.0712 4.6096L90.4616 1L75.1016 16.36L90.4616 31.72L94.0712 28.1104L82.3464 16.36L94.0712 4.6096Z"
+							fill="#FE4A49"
+						/>
+						<path
+							id="arrowc"
+							d="M64.2839 5.29L61.1606 2L47.8701 16L61.1606 30L64.2839 26.71L54.1388 16L64.2839 5.29Z"
+							fill="#FE4A49"
+						/>
+						<path
+							id="arrowr"
+							d="M35.9675 8.4675L33.5 6L23 16.5L33.5 27L35.9675 24.5325L27.9525 16.5L35.9675 8.4675Z"
+							fill="#FE4A49"
+						/>
+					</g>
+					<defs>
+						<clipPath id="clip0_15_2638">
+							<rect width="94" height="32" fill="white" />
+						</clipPath>
+					</defs>
+				</svg>
+			</div>
+			<small class="typett2">Hindi Cultural Renaissance</small>
+		</div>
+	</div>
+	<div class="rta-column rowgap300">
+		<Splide
+			hasTrack={false}
+			options={{
+				drag: true,
+				keyboard: 'global',
+				waitForTransition: true,
+				wheel: true,
+				type: 'loop',
+				gap: '20px',
+				wheelMinThreshold: 1.1,
+				speed: 900,
+				direction: 'ltr',
+				perPage: 3
+			}}
+		>
+			<SplideTrack>
+				<SplideSlide>
+					<div class="rta-video">
+						<Youtuber youTubeId={'jZ6YddYWH9U'} />
+						<small>
+							<a href="https://youtu.be/jZ6YddYWH9U" target="_blank" rel="noreferrer">
+								E1 - Saundaryabodha - Bhasha, Kalaa aur Nagarika (Intro) - सौंदर्यबोध - भाषा, कला और
+								नागरिक
+							</a>
+						</small>
+					</div>
+				</SplideSlide>
+				<SplideSlide>
+					<div class="faker" style="background-image: url('/images/svthumbs/2.jpeg')">
+						<div class="inscreen">Coming Soon</div>
+					</div>
+				</SplideSlide>
+				<SplideSlide>
+					<div class="faker" style="background-image: url('/images/svthumbs/3.jpeg')">
+						<div class="inscreen">Coming Soon</div>
+					</div>
+				</SplideSlide>
+			</SplideTrack>
+		</Splide>
+	</div>
+	<div class="rta-row colgap200 xcenter-d">
+		<a href="https://youtu.be/jZ6YddYWH9U" target="_blank" rel="noreferrer">
+			<button class="genbutton">Subscribe Now</button>
+		</a>
+	</div>
+</div>
+
+<style lang="sass">
+
+.faker
+	background-position: center center
+	background-size: cover !important
+	background-repeat: no-repeat
+	border-radius: 16px
+	.inscreen
+		width: 100%
+		height: 100%
+		background: rgba(0,0,0,0.75)
+		border-radius: 16px
+		display: flex
+		align-items: center
+		justify-content: center
+		color: white
+	@media screen and (min-width: 1024px)
+		width: 400px
+		height: 204px
+		background: #878787
+
+</style>

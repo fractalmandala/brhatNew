@@ -1,7 +1,5 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
-	import '@splidejs/splide/css/core';
 	import { page } from '$app/stores';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import autoAnimate from '@formkit/auto-animate';
@@ -14,6 +12,7 @@
 	import ButtonEmerge4 from '$lib/anims/ButtonEmerge.svelte';
 	import ButtonEmerge5 from '$lib/anims/ButtonEmerge.svelte';
 	import ButtonEmerge6 from '$lib/anims/ButtonEmerge.svelte';
+	import SVCar from '$lib/components/SVCar.svelte';
 	import { reveal } from 'svelte-reveal';
 	import HomeAccordion from '$lib/components/HomeAccordion.svelte';
 	import CompButton from '$lib/ridunits/CompButton.svelte';
@@ -158,87 +157,7 @@
 	</div>
 	<!--end-->
 
-	<!--
-	<div class="rta-column ycenter rowgap600 outer-box minH" data-lenis-scroll-snap-align="start">
-		<div
-			class="rta-row row-col ycenter between rowgap100 colgap400 glass-top p-top-32 bord-bot p-bot-32"
-		>
-			<div class="rta-row row-col ycenter colgap300">
-				<h3 class="typett">SVARṆĀÑJALI</h3>
-				<div class="holds-button-emerge" use:reveal>
-					<ButtonEmerge2><a href="/svarnanjali">Learn More</a></ButtonEmerge2>
-				</div>
-			</div>
-			<div class="colgap100 rta-row selfend xend ycenter">
-				<div class="arrowsanimation">
-					<svg
-						width="94"
-						height="24"
-						viewBox="0 0 94 32"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<g clip-path="url(#clip0_15_2638)">
-							<path
-								id="arrowl"
-								d="M94.0712 4.6096L90.4616 1L75.1016 16.36L90.4616 31.72L94.0712 28.1104L82.3464 16.36L94.0712 4.6096Z"
-								fill="#FE4A49"
-							/>
-							<path
-								id="arrowc"
-								d="M64.2839 5.29L61.1606 2L47.8701 16L61.1606 30L64.2839 26.71L54.1388 16L64.2839 5.29Z"
-								fill="#FE4A49"
-							/>
-							<path
-								id="arrowr"
-								d="M35.9675 8.4675L33.5 6L23 16.5L33.5 27L35.9675 24.5325L27.9525 16.5L35.9675 8.4675Z"
-								fill="#FE4A49"
-							/>
-						</g>
-						<defs>
-							<clipPath id="clip0_15_2638">
-								<rect width="94" height="32" fill="white" />
-							</clipPath>
-						</defs>
-					</svg>
-				</div>
-				<small class="typett2">Hindi Cultural Renaissance</small>
-			</div>
-		</div>
-		<div class="rta-column rowgap300">
-			<Splide
-				hasTrack={false}
-				options={{
-					drag: true,
-					keyboard: 'global',
-					waitForTransition: true,
-					wheel: true,
-					type: 'loop',
-					wheelMinThreshold: 1.1,
-					speed: 900,
-					direction: 'ltr',
-					perPage: 3,
-					easing: 'cubic-bezier(0.900, 0.005, 0.225, 1.035)'
-				}}
-			>
-				<SplideTrack>
-					<SplideSlide>
-						<div class="faker" style="background-image: url('/images/svthumbs/1.jpeg')">1</div>
-					</SplideSlide>
-					<SplideSlide>
-						<div class="faker" style="background-image: url('/images/svthumbs/2.jpeg')">2</div>
-					</SplideSlide>
-					<SplideSlide>
-						<div class="faker" style="background-image: url('/images/svthumbs/3.jpeg')">3</div>
-					</SplideSlide>
-				</SplideTrack>
-			</Splide>
-		</div>
-		<div class="rta-row colgap200 xcenter-d">
-			<button>Subscribe</button>
-		</div>
-	</div>
-	-->
+	<SVCar />
 
 	<!--latest anveshi chapters-->
 	<div class="rta-column ycenter rowgap600 outer-box minH" data-lenis-scroll-snap-align="start">
@@ -730,15 +649,6 @@
 </div>
 
 <style lang="sass">
-
-.faker
-	background-position: center center
-	background-size: cover !important
-	background-repeat: no-repeat
-	@media screen and (min-width: 1024px)
-		width: 320px
-		height: 200px
-		background: #878787
 
 #drashtascreen
 	@media screen and (max-width: 1023px)

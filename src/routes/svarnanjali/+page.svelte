@@ -5,7 +5,8 @@
 	import '@splidejs/splide/css/core';
 	import { breakOne, breakZero, breakTwo, themeMode } from '$lib/stores/globalstores';
 	import { getSvarnanjali } from '$lib/utils/supapulls';
-	import ParallaxImage from '$lib/components/ParallaxImage.svelte';
+	import SVCar from '$lib/components/SVCar.svelte';
+	import ButtonEmerge from '$lib/anims/ButtonEmerge.svelte';
 	import SvarLogo from '$lib/logos/Svarnanjali2.svelte';
 	import Youtuber from '$lib/components/Youtuber.svelte';
 	import Youtuber2 from '$lib/components/Youtuber.svelte';
@@ -95,37 +96,7 @@
 	</form>
 </div>
 
-<!--
-<div class="rta-column rowgap300 minH outer-box limit">
-	<Splide
-		hasTrack={false}
-		options={{
-			drag: true,
-			keyboard: 'global',
-			waitForTransition: true,
-			wheel: true,
-			type: 'loop',
-			wheelMinThreshold: 1.1,
-			speed: 900,
-			direction: 'ltr',
-			perPage: 3,
-			easing: 'cubic-bezier(0.900, 0.005, 0.225, 1.035)'
-		}}
-	>
-		<SplideTrack>
-			<SplideSlide>
-				<div class="faker" style="background-image: url('/images/svthumbs/1.jpeg')">1</div>
-			</SplideSlide>
-			<SplideSlide>
-				<div class="faker" style="background-image: url('/images/svthumbs/2.jpeg')">2</div>
-			</SplideSlide>
-			<SplideSlide>
-				<div class="faker" style="background-image: url('/images/svthumbs/3.jpeg')">3</div>
-			</SplideSlide>
-		</SplideTrack>
-	</Splide>
-</div>
--->
+<SVCar />
 <div class="rta-grid grid3 p-top-64 rowgap300 colgap300 outer-box ycenter">
 	{#if vids && vids.length > 0}
 		{#each vids as item}
