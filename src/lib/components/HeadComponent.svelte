@@ -8,10 +8,7 @@
 <svelte:head>
 	<title>{title}</title>
 	<meta name="description" content={metaDescription} />
-	<meta
-		name="robots"
-		content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
-	/>
+	<meta name="robots" content="index, follow" />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={metaDescription} />
 	<meta property="og:url" content="https://www.brhat.in{metaUrl}" />
