@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { langMode, changeLanguage } from '$lib/stores/globalstores';
-	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
+	import supabase from '$lib/utils/db';
+	import { showChip } from '$lib/stores/globalstores';
 	import '@splidejs/splide/css/core';
 	import { breakOne, breakZero, breakTwo, themeMode } from '$lib/stores/globalstores';
 	import { getSvarnanjali } from '$lib/utils/supapulls';
@@ -24,6 +25,10 @@
 	let iW: number;
 	let idv = 'OeCFCHwSpd0';
 	let vids: any;
+	let name: string;
+	let submiturl: string;
+	let email: string;
+	let isValidEmail = false;
 
 	$metaTitle = 'Svarṇāñjali';
 	$metaDescription =
@@ -32,6 +37,17 @@
 	$metaImage =
 		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/krishnaradha.webp';
 	$metaType = 'webpage';
+
+	$: isValidEmail = Boolean(email && email.includes('@'));
+
+	async function handleSubmit() {
+		const { error } = await supabase
+			.from('forms-svarn')
+			.insert({ name: name, email: email, url: submiturl });
+		if (error) {
+			showChip('Error. Please check if you have filled all fields.', '#fe4a49');
+		} else showChip('Form Submitted! Dhanyavāda.', '#10D56C');
+	}
 
 	function toggleLanguage() {
 		language = !language;
@@ -88,11 +104,13 @@
 		Share the link of your video with us, we will put the most interesting ones on our Youtube channel
 		:)
 	</h5>
-	<form class="rta-column submitform rowgap100">
-		<input type="text" placeholder="Full Name" />
-		<input type="email" placeholder="Email ID" />
-		<input type="URL" placeholder="Link to Video" />
-		<button type="submit" class="genbutton">Send</button>
+	<form class="rta-column submitform rowgap100" on:submit|preventDefault>
+		<input type="text" placeholder="Full Name" bind:value={name} />
+		<input type="email" placeholder="Email ID" bind:value={email} />
+		<input type="URL" placeholder="Link to Video" bind:value={submiturl} />
+		{#if isValidEmail}
+			<button type="submit" class="genbutton" on:click={handleSubmit}>Send</button>
+		{/if}
 	</form>
 </div>
 
