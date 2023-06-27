@@ -21,11 +21,6 @@
 	<meta property="og:image:height" content="675" />
 	<meta property="og:locale" content="en_IN" />
 	<link rel="canonical" href="https://www.brhat.in{metaUrl}" />
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:site" content="@brhat_in" />
-	<meta name="twitter:creator" content="@brhat_in" />
-	<meta name="twitter:image" content={metaImage} />
-	<meta name="twitter:image:alt" content={metaDescription} />
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-6NPMDTQVDE"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
