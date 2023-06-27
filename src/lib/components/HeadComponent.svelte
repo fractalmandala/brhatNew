@@ -8,7 +8,6 @@
 <svelte:head>
 	<title>{title}</title>
 	<meta name="description" content={metaDescription} />
-	<meta name="robots" content="index, follow" />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={metaDescription} />
 	<meta property="og:url" content="https://www.brhat.in{metaUrl}" />
@@ -18,6 +17,7 @@
 	<meta property="og:image:height" content="675" />
 	<meta property="og:locale" content="en_IN" />
 	<link rel="canonical" href="https://www.brhat.in{metaUrl}" />
+	<meta name="robots" content="index, follow" />
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-6NPMDTQVDE"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
