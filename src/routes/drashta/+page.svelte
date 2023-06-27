@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import autoAnimate from '@formkit/auto-animate';
-	import { page } from '$app/stores';
+	import Head from '$lib/components/HeadComponent.svelte';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import { allCourses } from '$lib/utils/supapulls';
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte';
@@ -50,6 +50,13 @@
 </script>
 
 <svelte:window bind:scrollY={sY} bind:innerHeight={iH} bind:innerWidth={iW} />
+
+<Head
+	title={$metaTitle}
+	metaDescription={$metaDescription}
+	metaUrl={$metaUrl}
+	metaImage={$metaImage}
+/>
 
 <!--parallax section on top-->
 <div class="x0" data-lenis-scroll-snap-align="start">

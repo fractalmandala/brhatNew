@@ -7,8 +7,7 @@
 	import { breakOne, breakZero, breakTwo, themeMode } from '$lib/stores/globalstores';
 	import { getSvarnanjali } from '$lib/utils/supapulls';
 	import SVCar from '$lib/components/SVCar.svelte';
-	import ButtonEmerge from '$lib/anims/ButtonEmerge.svelte';
-	import SvarLogo from '$lib/logos/Svarnanjali2.svelte';
+	import Head from '$lib/components/HeadComponent.svelte';
 	import Youtuber from '$lib/components/Youtuber.svelte';
 	import Youtuber2 from '$lib/components/Youtuber.svelte';
 	import P01 from '$lib/svpanels/english/panel01.svelte';
@@ -63,6 +62,13 @@
 </script>
 
 <svelte:window bind:innerWidth={iW} bind:scrollY={y} />
+
+<Head
+	title={$metaTitle}
+	metaDescription={$metaDescription}
+	metaUrl={$metaUrl}
+	metaImage={$metaImage}
+/>
 
 <div
 	class:levelzero={$breakZero}
