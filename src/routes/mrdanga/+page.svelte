@@ -27,18 +27,10 @@
 	let iW: number;
 	let expandMenu = false;
 
-	export let data;
-
-	$metaUrl = $page.url.pathname;
-	$metaTitle = data.name;
-	$metaDescription = data.shorts;
-	$metaImage = data.image;
-	$metaType = 'webpage';
-
-	$metaTitle = 'Bṛhadmṛdaṅga';
+	$metaUrl = '/mrdanga';
+	$metaTitle = 'Bṛhad Mṛdaṅga';
 	$metaDescription =
 		'The fundamental human aesthetic experience, explored through visual and poetic content. Videos, posts, audio clips and more.';
-	$metaUrl = '/mrdanga';
 	$metaImage =
 		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/brhadmrdanga.webp';
 	$metaType = 'webpage';
