@@ -1,22 +1,18 @@
 <script lang="ts">
-
-	import Header from '$lib/components/SubHeader.svelte'
-	import { themeMode } from '$lib/stores/globalstores'
-	import AnveshiLinks from '$lib/links/AnveshiLinks.svelte'
-	let onHead = true
-	let sidebar = false
-
-
+	import Header from '$lib/components/SubHeader.svelte';
+	import { themeMode } from '$lib/stores/globalstores';
+	import AnveshiLinks from '$lib/links/AnveshiLinks.svelte';
+	let onHead = true;
+	let sidebar = false;
 </script>
 
-
-<Header sidebar={sidebar}>
+<Header>
 	<div slot="local" class="boxmidrow">
-		<AnveshiLinks flytime={onHead}></AnveshiLinks>
+		<AnveshiLinks flytime={onHead} />
 	</div>
 </Header>
 <div class="type" class:light={$themeMode} class:dark={!$themeMode}>
-	<slot></slot>
+	<slot />
 </div>
 
 <style lang="sass">

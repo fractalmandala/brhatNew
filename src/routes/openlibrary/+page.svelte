@@ -4,6 +4,7 @@
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import { ChevronDown } from 'lucide-svelte';
 	import autoAnimate from '@formkit/auto-animate';
+	import Head from '$lib/components/HeadComponent.svelte';
 	import {
 		BOLEssentials,
 		BOLBodhas,
@@ -148,6 +149,13 @@
 </script>
 
 <svelte:window bind:innerWidth={iw} on:keydown={navigateList} />
+
+<Head
+	title={$metaTitle}
+	metaDescription={$metaDescription}
+	metaUrl={$metaUrl}
+	metaImage={$metaImage}
+/>
 
 <div
 	class:light={$themeMode}

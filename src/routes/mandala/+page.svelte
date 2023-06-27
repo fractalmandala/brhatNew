@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
-	import { page } from '$app/stores';
+	import Head from '$lib/components/HeadComponent.svelte';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import Parallax from '$lib/components/ParallaxImage.svelte';
 
@@ -131,6 +131,13 @@
 </script>
 
 <svelte:window bind:scrollY={sY} bind:outerHeight={oH} bind:innerWidth={iW} />
+
+<Head
+	title={$metaTitle}
+	metaDescription={$metaDescription}
+	metaUrl={$metaUrl}
+	metaImage={$metaImage}
+/>
 
 <div class="section sec1" data-lenis-scroll-snap-align="start">
 	<Parallax

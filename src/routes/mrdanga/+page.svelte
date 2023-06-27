@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount, afterUpdate } from 'svelte';
 	import { themeMode } from '$lib/stores/globalstores';
-	import { page } from '$app/stores';
+	import Head from '$lib/components/HeadComponent.svelte';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import Youtuber from '$lib/components/Youtuber.svelte';
 	import Youtuber2 from '$lib/components/Youtuber.svelte';
@@ -86,6 +86,13 @@
 </script>
 
 <svelte:window bind:innerWidth={iw} />
+
+<Head
+	title={$metaTitle}
+	metaDescription={$metaDescription}
+	metaUrl={$metaUrl}
+	metaImage={$metaImage}
+/>
 
 <Header />
 

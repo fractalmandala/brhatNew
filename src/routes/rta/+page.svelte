@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { themeMode, breakOne, breakZero, breakTwo } from '$lib/stores/globalstores';
-	import { page } from '$app/stores';
+	import Head from '$lib/components/HeadComponent.svelte';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import { showModal } from '$lib/stores/globalstores';
 	import type { DragOptions } from '@neodrag/svelte';
@@ -41,6 +41,13 @@
 		bounds: 'parent'
 	};
 </script>
+
+<Head
+	title={$metaTitle}
+	metaDescription={$metaDescription}
+	metaUrl={$metaUrl}
+	metaImage={$metaImage}
+/>
 
 <div
 	class="x0"

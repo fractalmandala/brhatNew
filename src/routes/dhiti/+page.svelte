@@ -1,7 +1,7 @@
 <script lang="ts">
 	//@ts-nocheck
 	import { onMount } from 'svelte';
-	import { page } from '$app/stores';
+	import Head from '$lib/components/HeadComponent.svelte';
 	import { breakZero, breakOne, breakTwo } from '$lib/stores/globalstores';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import {
@@ -112,6 +112,13 @@
 		dharmas = await allDharmaToday();
 	});
 </script>
+
+<Head
+	title={$metaTitle}
+	metaDescription={$metaDescription}
+	metaUrl={$metaUrl}
+	metaImage={$metaImage}
+/>
 
 <div
 	id="top-panel"

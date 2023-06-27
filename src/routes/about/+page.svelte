@@ -11,6 +11,7 @@
 		brhatPartners
 	} from '$lib/utils/supapulls';
 	import PankajSaxena from '$lib/authors/PankajSaxena.svelte';
+	import Head from '$lib/components/HeadComponent.svelte';
 	import RaghavaKrishna from '$lib/authors/RaghavaKrishna.svelte';
 	import AkshayJha from '$lib/authors/AkshayJha.svelte';
 	import AmritPandey from '$lib/authors/AmritPandey.svelte';
@@ -72,6 +73,13 @@
 		})();
 	});
 </script>
+
+<Head
+	title={$metaTitle}
+	metaDescription={$metaDescription}
+	metaUrl={$metaUrl}
+	metaImage={$metaImage}
+/>
 
 <!--parallax header-->
 <div class="x0" data-lenis-scroll-snap-align="start">

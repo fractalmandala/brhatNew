@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { themeMode } from '$lib/stores/globalstores';
-	import { page } from '$app/stores';
+	import Head from '$lib/components/HeadComponent.svelte';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import { ChevronDown } from 'lucide-svelte';
 	import { scale } from 'svelte/transition';
@@ -136,6 +136,13 @@
 </script>
 
 <svelte:window bind:innerWidth={iW} />
+
+<Head
+	title={$metaTitle}
+	metaDescription={$metaDescription}
+	metaUrl={$metaUrl}
+	metaImage={$metaImage}
+/>
 
 <!--hero image-->
 <div class="x0" data-lenis-scroll-snap-align="start">

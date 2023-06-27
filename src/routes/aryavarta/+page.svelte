@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { register } from 'swiper/element/bundle';
-
+	import Head from '$lib/components/HeadComponent.svelte';
 	import { page } from '$app/stores';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
@@ -64,6 +64,13 @@
 </script>
 
 <svelte:window bind:scrollY={y} bind:innerWidth={iW} />
+
+<Head
+	title={$metaTitle}
+	metaDescription={$metaDescription}
+	metaUrl={$metaUrl}
+	metaImage={$metaImage}
+/>
 
 <div class="rta-column outer-box minH ycenter x1">
 	<p style="color: #ff3d00">Chapter 1</p>
