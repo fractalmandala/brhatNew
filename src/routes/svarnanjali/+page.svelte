@@ -133,15 +133,6 @@
 		flex-direction: column
 		justify-content: center
 
-.faker
-	background-position: center center
-	background-size: cover !important
-	background-repeat: no-repeat
-	@media screen and (min-width: 1024px)
-		width: 320px
-		height: 200px
-		background: #878787
-
 .submitform
 	@media screen and (min-width: 1024px)
 		width: 240px
@@ -182,18 +173,6 @@
 	.video-container
 		width: 88%
 
-
-.my-screen
-	height: 100%
-	width: 100%
-	align-items: center
-	justify-content: center
-	background: rgba(255, 255, 255, 1)
-	animation: fading 1.5s ease 5s forwards
-
-.goaway
-	animation: fading2 1s ease 5.5s forwards
-
 @keyframes fading2
 	0%
 		opacity: 1
@@ -206,14 +185,6 @@
 	100%
 		background: rgba(255, 255, 255, 0)
 
-.x0
-	overflow: hidden
-	@media screen and (min-width: 1024px)
-		height: 100vh
-	@media screen and (max-width: 1023px)
-		height: 70vh
-		.goaway
-			height: 200px
 
 .rta-column
 	overflow: hidden
