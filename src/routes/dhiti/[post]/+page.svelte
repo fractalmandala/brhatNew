@@ -62,6 +62,10 @@
 	}
 
 	onMount(async () => {
+		$metaUrl = $page.url.pathname;
+		$metaTitle = data.title;
+		$metaDescription = data.excerpt;
+		$metaImage = data.image;
 		member = await brhatTeamMember(data.author);
 		posts = await latestDhitiTen();
 		thisAuthorPosts = await authorfiltered(data.author);

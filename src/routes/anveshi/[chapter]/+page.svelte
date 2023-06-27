@@ -131,12 +131,12 @@
 	$: anyTemp = visibleTemple.some((item: any) => item);
 
 	$: if ($anveshiChapter) {
-		$metaUrl = `/anveshi/${data.chapter}`;
-		$metaTitle = data.name;
-		$metaDescription = data.excerpt;
-		$metaImage = data.image;
-		$anveshiColor = data.params;
 		(async () => {
+			$metaUrl = `/anveshi/${data.chapter}`;
+			$metaTitle = data.name;
+			$metaDescription = data.excerpt;
+			$metaImage = data.image;
+			$anveshiColor = data.params;
 			itins = await chapterItinerary($anveshiChapter);
 			temp = await chapterTemples($anveshiChapter);
 			highlights = await chapterHighlight($anveshiChapter);

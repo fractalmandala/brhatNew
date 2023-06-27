@@ -88,11 +88,11 @@
 	}
 
 	$: if ($drashtaDyn) {
-		$metaTitle = data.name + '| Bṛhat Draṣṭā';
-		$metaDescription = data.excerpt;
-		$metaUrl = `/drashta/course/${data.dynamizer}`;
-		$metaImage = data.image;
 		(async () => {
+			$metaTitle = data.name + '| Bṛhat Draṣṭā';
+			$metaDescription = data.excerpt;
+			$metaUrl = `/drashta/course/${data.dynamizer}`;
+			$metaImage = data.image;
 			conts = await courseContents($drashtaDyn);
 			takes = await courseTakeaways($drashtaDyn);
 			instructor = await courseInstructor($drashtaDyn);
