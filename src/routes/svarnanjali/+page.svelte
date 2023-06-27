@@ -33,8 +33,7 @@
 	$metaDescription =
 		'Svarṇāñjali is a weekly video series to discuss literature, arts, drama, architecture, sculpture, cinema and other fine arts from the point of view of rasikā, in Sanskṛta Niṣṭha Hindī.';
 	$metaUrl = '/svarnanjali';
-	$metaImage =
-		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/krishnaradha.webp';
+	$metaImage = '/images/keys/ki-sv.png';
 	$metaType = 'webpage';
 
 	$: isValidEmail = Boolean(email && email.includes('@'));
