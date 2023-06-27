@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount, afterUpdate } from 'svelte';
-	import { page } from '$app/stores';
+	import Head from '$lib/components/HeadComponent.svelte';
 	import {
 		metaTitle,
 		metaDescription,
@@ -161,6 +161,13 @@
 </script>
 
 <svelte:window bind:scrollY={p} />
+
+<Head
+	title={$metaTitle}
+	metaDescription={$metaDescription}
+	metaUrl={$metaUrl}
+	metaImage={$metaImage}
+/>
 
 <!--heading image-->
 <div class="rta-column x0 top-p-64" id="heading-image">

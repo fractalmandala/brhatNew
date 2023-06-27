@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount, afterUpdate } from 'svelte';
-	import { page } from '$app/stores';
+	import Head from '$lib/components/HeadComponent.svelte';
 	import { slide } from 'svelte/transition';
 	import {
 		metaTitle,
@@ -124,6 +124,13 @@
 </script>
 
 <svelte:window bind:scrollY={y} bind:innerWidth={iW} />
+
+<Head
+	title={$metaTitle}
+	metaDescription={$metaDescription}
+	metaUrl={$metaUrl}
+	metaImage={$metaImage}
+/>
 
 <!--page header with title and icons-->
 <div

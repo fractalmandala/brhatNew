@@ -1,6 +1,7 @@
 <script lang="ts">
 	export let data;
 	import { onMount } from 'svelte';
+	import Head from '$lib/components/HeadComponent.svelte';
 	import { page } from '$app/stores';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import { mandalaAll } from '$lib/utils/localpulls';
@@ -28,6 +29,13 @@
 </script>
 
 <svelte:window bind:innerWidth={wide} />
+
+<Head
+	title={$metaTitle}
+	metaDescription={$metaDescription}
+	metaUrl={$metaUrl}
+	metaImage={$metaImage}
+/>
 
 <div class="x0">
 	<ParallaxImage --parallax="url('{data.image}')" --parallaxresp="url('{data.image}')" />

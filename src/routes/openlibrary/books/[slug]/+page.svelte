@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import { breakZero, breakOne, breakTwo } from '$lib/stores/globalstores';
+	import Head from '$lib/components/HeadComponent.svelte';
 	let height: number;
 
 	$: if ($breakZero || $breakOne) {
@@ -19,6 +20,13 @@
 		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/bolherobrhat.webp';
 	$metaType = 'webpage';
 </script>
+
+<Head
+	title={$metaTitle}
+	metaDescription={$metaDescription}
+	metaUrl={$metaUrl}
+	metaImage={$metaImage}
+/>
 
 <div
 	class="bookpage rta-column"

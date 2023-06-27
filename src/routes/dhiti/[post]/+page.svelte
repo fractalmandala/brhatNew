@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
+	import Head from '$lib/components/HeadComponent.svelte';
 	import {
 		metaTitle,
 		metaDescription,
@@ -71,6 +72,13 @@
 		thisAuthorPosts = await authorfiltered(data.author);
 	});
 </script>
+
+<Head
+	title={$metaTitle}
+	metaDescription={$metaDescription}
+	metaUrl={$metaUrl}
+	metaImage={$metaImage}
+/>
 
 <PageProgress --thispagebackground="#fe4a49" --thispageheight="4px" {ref} />
 

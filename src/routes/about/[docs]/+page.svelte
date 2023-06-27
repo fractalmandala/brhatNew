@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 	import { mandalaAll } from '$lib/utils/localpulls';
+	import Head from '$lib/components/HeadComponent.svelte';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import { breakZero, breakOne, breakTwo } from '$lib/stores/globalstores';
 
@@ -30,6 +31,13 @@
 </script>
 
 <svelte:window bind:innerWidth={wide} />
+
+<Head
+	title={$metaTitle}
+	metaDescription={$metaDescription}
+	metaUrl={$metaUrl}
+	metaImage={$metaImage}
+/>
 
 <div
 	class="container-blog outer-box limit"

@@ -44,10 +44,11 @@
 	}
 
 	$metaUrl = '/dhiti';
-	$metaTitle = 'Schools of Thought';
-	$metaDescription = 'At Bṛhat Draṣṭā';
+	$metaTitle = 'Dhīti at Bṛhat';
+	$metaDescription =
+		'Our blog, Dhīti, is an attempt to decode the aesthetics of culture manifest in art and literature, in the intention they were originally perceived in.';
 	$metaImage =
-		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/06drashta/schoolsofthought.webp';
+		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/dhiti.webp';
 	$metaType = 'webpage';
 
 	$: anyCategoryOpen = categoryItems.some((item) => item);
