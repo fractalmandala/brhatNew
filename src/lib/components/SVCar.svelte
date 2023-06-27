@@ -65,7 +65,12 @@
 				wheelMinThreshold: 1.1,
 				speed: 900,
 				direction: 'ltr',
-				perPage: 3
+				perPage: 3,
+				breakpoints: {
+					1023: {
+						perPage: 1
+					}
+				}
 			}}
 		>
 			<SplideTrack>
@@ -102,6 +107,11 @@
 
 <style lang="sass">
 
+
+.holds-button-emerge
+	@media screen and (max-width: 1023px)
+		display: none
+
 .faker
 	background-position: center center
 	background-size: cover !important
@@ -120,5 +130,8 @@
 		width: 400px
 		height: 204px
 		background: #878787
+	@media screen and (max-width: 1023px)
+		width: 100%
+		height: 204px
 
 </style>
