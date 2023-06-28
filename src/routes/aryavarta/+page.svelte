@@ -40,7 +40,7 @@
 		isP[i] = true;
 	}
 
-	$metaUrl = '/aryavarta';
+	$metaUrl = 'https://www.brhat.in/aryavarta';
 	$metaTitle = `Chapter 1 - Kaśyapa's Lament`;
 	$metaDescription = 'A visual tale through the premonitions of an ancient ṛṣī.';
 	$metaImage =

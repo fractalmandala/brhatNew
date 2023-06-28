@@ -32,7 +32,7 @@
 	let fake = false;
 	let alignGrid = false;
 
-	$metaUrl = '/about';
+	$metaUrl = 'https://www.brhat.in/about';
 	$metaTitle = 'About Bṛhat';
 	$metaDescription =
 		'Bṛhat is a culture engine. To power creatives, research and design rooted in the Indian civilizational consciousness.';

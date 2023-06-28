@@ -39,7 +39,7 @@
 
 	export let data;
 
-	$metaUrl = `/anveshi/${data.chapter}`;
+	$metaUrl = `https://www.brhat.in/anveshi/${data.chapter}`;
 	$metaTitle = data.name;
 	$metaDescription = data.excerpt;
 	$metaImage = data.image;
@@ -132,7 +132,7 @@
 
 	$: if ($anveshiChapter) {
 		(async () => {
-			$metaUrl = `/anveshi/${data.chapter}`;
+			$metaUrl = `https://www.brhat.in/anveshi/${data.chapter}`;
 			$metaTitle = data.name;
 			$metaDescription = data.excerpt;
 			$metaImage = data.image;

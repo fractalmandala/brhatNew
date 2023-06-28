@@ -47,7 +47,7 @@
 
 	$metaTitle = data.name + '| Bṛhat Draṣṭā';
 	$metaDescription = data.excerpt;
-	$metaUrl = `/drashta/course/${data.dynamizer}`;
+	$metaUrl = `https://www.brhat.in/drashta/course/${data.dynamizer}`;
 	$metaImage = data.image;
 	$metaType = 'webpage';
 

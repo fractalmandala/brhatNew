@@ -27,7 +27,7 @@
 	let iW: number;
 	let expandMenu = false;
 
-	$metaUrl = '/mrdanga';
+	$metaUrl = 'https://www.brhat.in/mrdanga';
 	$metaTitle = 'Bṛhad Mṛdaṅga';
 	$metaDescription =
 		'The fundamental human aesthetic experience, explored through visual and poetic content. Videos, posts, audio clips and more.';

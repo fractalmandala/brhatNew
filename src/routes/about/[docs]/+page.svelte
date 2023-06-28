@@ -11,7 +11,7 @@
 	let mobileView: boolean = false;
 	export let data;
 
-	$metaUrl = $page.url.pathname;
+	$metaUrl = 'https://www.brhat.in' + $page.url.pathname;
 	$metaTitle = data.title;
 	$metaDescription = data.about;
 	$metaType = 'webpage';
@@ -23,7 +23,7 @@
 	}
 
 	onMount(async () => {
-		$metaUrl = $page.url.pathname;
+		$metaUrl = 'https://www.brhat.in' + $page.url.pathname;
 		$metaTitle = data.title;
 		$metaDescription = data.about;
 		fractals = await mandalaAll();

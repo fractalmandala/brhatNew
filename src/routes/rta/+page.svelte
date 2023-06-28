@@ -31,7 +31,7 @@
 	$metaTitle = 'Ṛta in Design';
 	$metaDescription =
 		'Ṛta in Design is a new framework for design thinking, centred on the mind of the designer. Inspired by universal principles of Dharma.';
-	$metaUrl = '/rta';
+	$metaUrl = 'https://www.brhat.in/rta';
 	$metaImage =
 		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/ridhero1.webp';
 	$metaType = 'webpage';

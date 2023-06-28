@@ -43,7 +43,7 @@
 		openCat = !openCat;
 	}
 
-	$metaUrl = '/dhiti';
+	$metaUrl = 'https://www.brhat.in/dhiti';
 	$metaTitle = 'Dhīti at Bṛhat';
 	$metaDescription =
 		'Our blog, Dhīti, is an attempt to decode the aesthetics of culture manifest in art and literature, in the intention they were originally perceived in.';

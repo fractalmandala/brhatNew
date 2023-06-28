@@ -45,7 +45,7 @@
 	$metaTitle = 'Bṛhat Anveṣī';
 	$metaDescription =
 		'Bṛhat Anveṣī is our culture experience and discovery travel program, through curated and guided temple tours throughout India.';
-	$metaUrl = '/anveshi';
+	$metaUrl = 'https://www.brhat.in/anveshi';
 	$metaImage =
 		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/brhatanveshi.webp';
 	$metaType = 'webpage';

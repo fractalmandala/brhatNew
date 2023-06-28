@@ -12,7 +12,7 @@
 
 	export let data;
 
-	$metaUrl = `/openlibrary/${data.slug}`;
+	$metaUrl = `https://www.brhat.in/openlibrary/books/${data.slug}`;
 	$metaTitle = data.Text;
 	$metaDescription =
 		'Bṛhat Open Library is an online repository of Books, Papers, Texts and Scriptures, made available under CC0 1.0 License. Gathering point for digitized scripture, Aryan Invasion/Migration, civilizational literature and more.';

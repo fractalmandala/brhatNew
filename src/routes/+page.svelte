@@ -87,7 +87,7 @@
 
 	$metaTitle = 'Bṛhat';
 	$metaDescription = 'the Culture Engine';
-	$metaUrl = '';
+	$metaUrl = 'https://www.brhat.in';
 	$metaImage =
 		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/brhatheadcard.webp';
 	$metaType = 'webpage';

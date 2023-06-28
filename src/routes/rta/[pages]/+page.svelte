@@ -11,7 +11,7 @@
 	let wide: number;
 	let mobileView: boolean = false;
 
-	$metaUrl = $page.url.pathname;
+	$metaUrl = 'https://www.brhat.in' + $page.url.pathname;
 	$metaTitle = data.title;
 	$metaDescription = 'Essays at Ṛta in Design';
 	$metaImage = data.image;

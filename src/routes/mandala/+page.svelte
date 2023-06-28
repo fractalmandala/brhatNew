@@ -33,7 +33,7 @@
 	$metaTitle = 'Fractal Maṇḍala';
 	$metaDescription =
 		'Civilization with multi-level coherence. Research, exploration, and furtherance of Indian civilizational consciousness.';
-	$metaUrl = '/mandala';
+	$metaUrl = 'https://www.brhat.in/mandala';
 	$metaImage =
 		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/fmhomehero.webp';
 	$metaType = 'webpage';

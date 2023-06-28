@@ -18,7 +18,7 @@
 	$metaTitle = 'Bṛhat Draṣṭā';
 	$metaDescription =
 		'A shared online learning program to develop civilizational svayaṃbodha and śatrubodha. Rampways for Hindu individual self-confidence.';
-	$metaUrl = '/drashta';
+	$metaUrl = 'https://www.brhat.in/drashta';
 	$metaImage =
 		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/brhatdrashta.webp';
 	$metaType = 'webpage';

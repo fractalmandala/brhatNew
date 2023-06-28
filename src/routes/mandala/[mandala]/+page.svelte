@@ -35,7 +35,7 @@
 
 	export let data;
 
-	$metaUrl = $page.url.pathname;
+	$metaUrl = 'https://www.brhat.in' + $page.url.pathname;
 	$metaTitle = data.title;
 	$metaDescription = 'An essay at Fractal Maṇḍala';
 	$metaImage = data.image;
