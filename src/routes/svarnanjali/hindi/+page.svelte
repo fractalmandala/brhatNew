@@ -4,8 +4,8 @@
 	import Head from '$lib/components/HeadComponent.svelte';
 	import { breakOne, breakZero, breakTwo, themeMode } from '$lib/stores/globalstores';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
-	import ParallaxImage from '$lib/components/ParallaxImage.svelte';
-	import SvarLogo from '$lib/logos/Svarnanjali2.svelte';
+	import supabase from '$lib/utils/db';
+	import { showChip } from '$lib/stores/globalstores';
 	import Youtuber from '$lib/components/Youtuber.svelte';
 	import P01 from '$lib/svpanels/hindi/panel01.svelte';
 	import P02 from '$lib/svpanels/hindi/panel02.svelte';
@@ -19,12 +19,28 @@
 	let y: number;
 	let iW: number;
 	let idv = 'OeCFCHwSpd0';
+	let name: string;
+	let submiturl: string;
+	let email: string;
+	let isValidEmail = false;
+
 	$metaTitle = 'Svarṇāñjali';
 	$metaDescription =
 		'Svarṇāñjali is a weekly video series to discuss literature, arts, drama, architecture, sculpture, cinema and other fine arts from the point of view of rasikā, in Sanskṛta Niṣṭha Hindī.';
 	$metaUrl = '/svarnanjali';
 	$metaImage = 'https://www.brhat.in/images/keys/ki-sv.png';
 	$metaType = 'webpage';
+
+	$: isValidEmail = Boolean(email && email.includes('@'));
+
+	async function handleSubmit() {
+		const { error } = await supabase
+			.from('forms-svarn')
+			.insert({ name: name, email: email, url: submiturl });
+		if (error) {
+			showChip('Error. Please check if you have filled all fields.', '#fe4a49');
+		} else showChip('Form Submitted! Dhanyavāda.', '#10D56C');
+	}
 
 	function toggleLanguage() {
 		language = !language;
@@ -44,25 +60,11 @@
 	metaImage={$metaImage}
 />
 
-<!--hero image-->
-<div class="x0" data-lenis-scroll-snap-align="start">
-	<ParallaxImage
-		--parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/krishnaradha.webp')"
-		--parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/16svarnanjali/krishnaradha.webp')"
-	>
-		<div class="my-screen rta-column">
-			<div class="goaway">
-				<SvarLogo dimension={200} />
-			</div>
-		</div>
-	</ParallaxImage>
-</div>
-<!--end-->
 <div
 	class:levelzero={$breakZero}
 	class:levelone={$breakOne}
 	class:leveltwo={$breakTwo}
-	class="back"
+	class="back p-top-64 minH firstone"
 	style="background-image: url('https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/batch1/522.webp')"
 >
 	<div class="rta-column rowgap300 minH ycenter xcenter">
@@ -79,7 +81,36 @@
 		</div>
 	</div>
 </div>
-
+<div class="rta-column rowgap200 outer-box limit ycenter minH engager">
+	<h3 class="p-bot-32 p-top-64 hindiadobe">स्वर्णांजलि में जोड़िए अपने स्वर</h3>
+	<h5 class="hindiadobe">
+		क्या आप अपनी बोलचाल की भाषा (हिंदी अथवा मातृ भाषा) में विदेशी शब्दों का प्रयोग करते हैं ?
+	</h5>
+	<h5 class="hindiadobe">
+		क्या आपने उनके स्थान पर शुद्ध हिंदी के शब्दों का प्रयोग करके देखा है ? कैसा रहा आपका अनुभव ?
+		रोचक या चुनौतीपूर्ण? हम जानने के लिए उत्सुक हैं, हमें बताइए।
+	</h5>
+	<h5 class="hindiadobe">
+		हिंदी साहित्य अथवा अन्य भारतीय प्रांतीय भाषाओँ के साहित्यों में आपकी सर्वाधिक प्रिय पुस्तक कौन
+		सी है ?
+	</h5>
+	<h5 class="hindiadobe">
+		हिंदी साहित्य अथवा अन्य भारतीय प्रांतीय भाषाओँ के साहित्यों में आपके सर्वाधिक प्रिय लेखक कौन हैं
+		?
+	</h5>
+	<h4 class="bord-top p-top-32 hindiadobe">
+		शुद्ध हिंदी का प्रयोग करते हुए एक मिनट से कम अवधि का वीडियो बनाएँ और हमें अपने वीडियो का लिंक
+		भेजें। अनुकूल वीडियो को हम अपनी वेबसाइट और सोशल मीडिया पर साझा करेंगे।
+	</h4>
+	<form class="rta-column submitform rowgap100" on:submit|preventDefault>
+		<input type="text" placeholder="Full Name" bind:value={name} />
+		<input type="email" placeholder="Email ID" bind:value={email} />
+		<input type="URL" placeholder="Link to Video" bind:value={submiturl} />
+		{#if isValidEmail}
+			<button type="submit" class="genbutton" on:click={handleSubmit}>Send</button>
+		{/if}
+	</form>
+</div>
 <div
 	class:levelzero={$breakZero}
 	class:levelone={$breakOne}
@@ -96,6 +127,23 @@
 
 <style lang="sass">
 
+.firstone
+	height: 100vh
+	@media screen and (max-width: 1023px)
+		display: flex
+		flex-direction: column
+		justify-content: center
+
+.submitform
+	@media screen and (min-width: 1024px)
+		width: 240px
+		input
+			font-size: 12px
+			padding: 4px 8px
+
+.engager
+	h3, h5
+		color: var(--opposite)
 
 .textarea
 	background: rgba(0,0,0,0.8)
@@ -119,17 +167,6 @@
 		column-gap: 128px
 		text-align: center
 
-.my-screen
-	height: 100%
-	width: 100%
-	align-items: center
-	justify-content: center
-	background: rgba(255, 255, 255, 1)
-	animation: fading 1.5s ease 5s forwards
-
-.goaway
-	animation: fading2 1s ease 5.5s forwards
-
 @keyframes fading2
 	0%
 		opacity: 1
@@ -141,15 +178,6 @@
 		background: rgba(255, 255, 255, 1)
 	100%
 		background: rgba(255, 255, 255, 0)
-
-.x0
-	overflow: hidden
-	@media screen and (min-width: 1024px)
-		height: 100vh
-	@media screen and (max-width: 1023px)
-		height: 70vh
-		.goaway
-			height: 200px
 
 .rta-column
 	overflow: hidden
