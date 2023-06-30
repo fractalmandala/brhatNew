@@ -231,8 +231,10 @@
 	overflow: hidden
 	@media screen and (min-width: 1024px)
 		height: 100vh
+		padding-top: 80px
 	@media screen and (max-width: 1023px)
-		height: 100vh
+		height: 40vh
+		padding-top: 64px
 
 
 pre.hindiadobe.adobes

@@ -1,9 +1,10 @@
 import { VITE_GITHUB_TOKEN } from '$env/static/private';
+import type { RequestHandler } from './$types'
 
-export async function GET() {
+export const get = (async ({ params }) => {
   const owner = 'fractalmandala';
   const repo = 'BrhatOpenLibrary';
-  const path = 'tree/main/teifiles';
+  const path = `tree/main/teifiles/${params}`;
 
   const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, {
     headers: {
@@ -11,11 +12,8 @@ export async function GET() {
     }
   });
 
-  const data = await response.json();
-  const content = atob(data.content);  // The content is base64 encoded
-
-  return { 
-    status: 200, 
-    body: content 
-  };
-}
+  const data = await response.text();
+    return {
+        body: data
+    };
+})
