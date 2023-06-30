@@ -11,8 +11,7 @@
 		anveshiChapter,
 		anveshiColor
 	} from '$lib/stores/metastores';
-	import autoAnimate from '@formkit/auto-animate';
-	import { ChevronDown } from 'lucide-svelte';
+	import ParallaxImage from '$lib/components/ParallaxImage.svelte';
 	import { chapterItinerary, allFaq } from '$lib/utils/supapulls';
 	import {
 		chapterTemples,
@@ -143,16 +142,14 @@
 
 <Header />
 
-<!--heading image-->
-<div class="rta-column x0 top-p-64" id="heading-image">
-	<img src={data.image} alt={data.name} />
+<div class="x0" data-lenis-scroll-snap-align="start">
+	<ParallaxImage --parallax="url('{data.image}')" --parallaxresp="url('{data.image}')" />
 </div>
-<!--end-->
 
 <!--header and metadetails-->
-<div class="rta-column outer-box limit rowgap100 serif" id="section1">
+<div class="rta-column outer-box limit rowgap100 serif p-top-64" id="section1">
 	<div class="rta-column rowgap200">
-		<h3 class="hindiadobe tt-u ta-c-d p-bot-16">{data.name}</h3>
+		<h3 class="hindiadobe tt-u ta-c-d ta-c-m p-bot-16">{data.name}</h3>
 		<em class="tt-u ta-c rta-column" id="section1line2" style="background: {$anveshiColor}"
 			>{data.status}</em
 		>
@@ -191,7 +188,7 @@
 							<div class="rta-icons">
 								<img src={item.image} alt="icons" />
 							</div>
-							<h6 class="hindiadobe">{item.content}</h6>
+							<h5 class="hindiadobe">{item.content}</h5>
 						</div>
 					{/if}
 					{#if item.name === 'activity'}
@@ -199,7 +196,7 @@
 							<div class="rta-icons">
 								<img src={item.image} alt="icons" />
 							</div>
-							<h6 class="hindiadobe">{item.content}</h6>
+							<h5 class="hindiadobe">{item.content}</h5>
 						</div>
 					{/if}
 					{#if item.name === 'person'}
@@ -207,7 +204,7 @@
 							<div class="rta-icons">
 								<img src={item.image} alt="icons" />
 							</div>
-							<h6 class="hindiadobe">{item.content}</h6>
+							<h5 class="hindiadobe">{item.content}</h5>
 						</div>
 					{/if}
 				{/each}
@@ -224,7 +221,7 @@
 		</pre>
 </div>
 <div class="rta-column outer-box rowgap200 limit p-top-32">
-	<div class="rta-column p-top-64 glass-top rowgap300">
+	<div class="rta-column p-top-32 glass-top rowgap300">
 		<h4 class="tt-u ta-c-d hindiadobe glass-bottom p-bot-32">Schedule</h4>
 	</div>
 	<div class="rta-grid grid4 colgap300 p-top-16">
@@ -246,38 +243,17 @@
 <style lang="sass">
 
 .x0
-	img
-		object-fit: cover
+	overflow: hidden
 	@media screen and (min-width: 1024px)
 		height: 100vh
-		justify-content: center
-		align-items: center
-		img
-			width: 80%
-			height: 80%
-			margin-top: 64px
 	@media screen and (max-width: 1023px)
-		height: 40vh
-		img
-			height: 100%
+		height: 100vh
 
-#heading-image
-	@media screen and (min-width: 1024px)
-		img
-			border-radius: 16px
 
 pre.hindiadobe.adobes
 	display: flex
 	flex-direction: column
 	row-gap: 12px
-
-.bigguy
-	height: 100vh
-	overflow: hidden
-	#heading-image
-		height: 100vh
-	.rta-column
-		padding-top: 128px
 
 .highlightsrow
 	background: var(--contraster)
@@ -292,11 +268,10 @@ pre.hindiadobe.adobes
 		height: 27px
 		img
 			object-fit: contain
-	h6
+	h5
+		color: var(--opposite)
 		margin: 0
 		width: calc(100% - 56px)
-		font-weight: 400
-		line-height: 1.12
 
 .highlightscolumn
 	row-gap: 16px
@@ -329,13 +304,6 @@ pre
 		color: var(--opposite)
 		font-size: 12px
 
-#heading-image
-	img
-		object-fit: contain
-	@media screen and (min-width: 1024px)
-		img
-			border-radius: 16px
-
 #section1line2
 	color: white
 	padding: 2px 0
@@ -347,30 +315,5 @@ pre
 	@media screen and (max-width: 1023px)
 		padding: 4px 8px
 
-.x0
-	img
-		object-fit: cover
-	@media screen and (min-width: 1024px)
-		height: 100vh
-		justify-content: center
-		align-items: center
-		img
-			width: 80%
-			height: 80%
-			margin-top: 64px
-	@media screen and (max-width: 1023px)
-		height: 40vh
-		img
-			height: 100%
-
-.accordion-item
-	border-bottom: 1px solid var(--borderline)
-	padding-bottom: 16px
-	.rta-row
-		cursor: pointer
-		.rta-column
-			transition: 0.15s
-		.rta-column.rotated
-			transform: rotate(180deg)
 
 </style>
