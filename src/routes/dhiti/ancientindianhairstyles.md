@@ -1,4 +1,3 @@
-
 ---
 title: "The Timeless Elegance of Ancient Indian Hairstyles: A Journey Through the Ages" 
 author: Anurag Shukla
@@ -9,43 +8,27 @@ date: "2023-06-30"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/ancientindianhairstyles/ancientindianhairstyles.webp
 ---
 
-_“O your hair, he said,_
+> “O your hair, he said,
+> It is like rain clouds
+> moving between branches of lightning.
+> It parts five ways
+> between gold ornaments
+> braided with a length of flowers
+> and the fragrant screwpine.”
+> <cite>From the Kalittokai, translation by AK Ramanujan</cite>
 
-_It is like rain clouds_
+> "The sight of me combing my long hair
+> brings you back to your country
+> where you tell me
+> girls sit in the open air
+> combing each other’s hair."
+> <cite>Poem for an Indian Scholar, from The Poems of Frances Chung</cite>
 
-_moving between branches of lightning._
-
-_It parts five ways_
-
-_between gold ornaments_
-
-_braided with a length of flowers_
-
-_and the fragrant screwpine.”_
-
-~ From the Kalittokai, translation by AK Ramanujan
-
-_"The sight of me combing my long hair_
-
-_brings you back to your country_
-
-_where you tell me_
-
-_girls sit in the open air_
-
-_combing each other’s hair." _
-
-~ Poem for an Indian Scholar, from The Poems of Frances Chung
-
-_“Adorned with golden koṉṟai<sup>1</sup> flowers and garland_
-
-_The new moon glittering on the long hair_
-
-_Accompanied by radiant Mother Mēkalāmbikā<sup>1</sup>_
-
-_My Lord will not leave Mēyaccūr<sup>1</sup> temple.”_
-
-~ Saint Tirunāvukkaracar<sup><em>1</em></sup>
+> “Adorned with golden koṉṟai<sup>1</sup> flowers and garland<br>
+> The new moon glittering on the long hair<br>
+> Accompanied by radiant Mother Mēkalāmbikā<sup>2</sup><br>
+> My Lord will not leave Mēyaccūr<sup>3</sup> temple.”<br>
+> <cite>~ Saint Tirunāvukkaracar<sup><em>4</em></sup></cite>
 
 The vast treasure trove of scriptures and mural representations, spanning from the Vedic period to Vardhana dynasty, provide us with an invaluable window into the everyday lives of the people of ancient India. These captivating works of art and literature are not mere relics of the past; they are portals that unlock the secrets of a bygone era, revealing the intricate tapestry of cultural practices, beliefs, and even the art of hairstyling. 
 
@@ -57,23 +40,27 @@ The Harappans were quite interested in unique hairstyles and using combs and mir
 
 <img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/ancientindianhairstyles/ancientindianhairstyles1.webp" alt="one"/>
 
-_The picture here shows a Mirror, hairpin & collyrium pot, dated 2700 BC. Credit: National Museum, New Delhi _
+<div class="imagecaption">The picture here shows a Mirror, hairpin & collyrium pot, dated 2700 BC. Credit: National Museum, New Delhi</div>
 
 Another fine example of hairstyling in Harappan period is the famous "Dancing Girl". Though her hairstyle is relatively simple, with her hair falling over the right shoulder in a thick mass, it reflects the significance given to hair presentation during that time. The meticulous attention to detail in depicting the hair indicates that hairstyles held cultural and aesthetic importance. 
 
-<img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/ancientindianhairstyles/ancientindianhairstyles2.webp" alt="two"/>
+<div class="rta-grid grid2 stay2">
+	<img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/ancientindianhairstyles/ancientindianhairstyles2.webp" alt="two"/>
+	<img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/ancientindianhairstyles/ancientindianhairstyles3.webp" alt="three"/>
+</div>
 
-<img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/ancientindianhairstyles/ancientindianhairstyles3.webp" alt="three"/>
-
-_Bronze dancing girl (front and back views). Credit: National Museum, New Delhi _
+<div class="imagecaption">
+Bronze dancing girl (front and back views). Credit: National Museum, New Delhi
+</div>
 
 Additionally, the statue known as the "Priest King" discovered at the archaeological site of Mohenjo-daro provides us with intriguing insights into the hairstyle of an individual of high status during the Harappan period. The Priest King statue features a trimmed beard and hair parted in the middle. The hair is depicted as being tied with a fillet on the forehead, further emphasizing the individual's authority and status. The depiction of the Priest King's hairstyle aligns with the broader patterns observed in Harappan art, which often focussed on the precision and attention to detail in representing hair and other physical attributes. 
 
 Kauṭilya's Arthaśāstra, though a treatise on governance, sheds light on the two distinct styles of hairdressing that adorned the heads of women, captivating the imagination, and serving as markers of social identity. One glimpse into this world of intricate hair arrangements can be found in the **graceful sculpture of Śālabhañjikā from Sāñcī**. Her hair, an embodiment of elegance and artistry, is meticulously fashioned into a top fan-shaped bun, exuding an air of regality and sophistication. The careful arrangement of the front bun harmoniously contrasts with the flowing tresses cascading down her back, a harmonious interplay between structure and fluidity. This sculpture encapsulates the elaborate nature of hairstyling practices prevalent in ancient India, where every strand was crafted with meticulous care. 
 
 <img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/ancientindianhairstyles/ancientindianhairstyles4.webp" alt="four"/>
-
-_Hair tied in a top fan-shaped bun, Sanchi, Madhya Pradesh. Credit: Archeological Survey of India, New Delhi_
+<div class="imagecaption">
+Hair tied in a top fan-shaped bun, Sanchi, Madhya Pradesh. Credit: Archeological Survey of India, New Delhi
+</div>
 
 
 The women immortalized in the** Bharhut sculptures **present a captivating tableau of hairstyling diversity. These artistic renditions showcase a cornucopia of styles, each one a unique expression of personal taste and cultural affiliation. The panel depicting the worship of the Bodhi tree reveals women with neatly tied hair, securing it with a loose knot at the back. This understated yet refined hairstyle speaks of a harmonious blend of simplicity and grace, reflecting the nuances of femininity cherished in those bygone times. 
@@ -81,9 +68,9 @@ The women immortalized in the** Bharhut sculptures **present a captivating table
 
 
 <img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/ancientindianhairstyles/ancientindianhairstyles5.webp" alt="five"/>
-
-
-_Ladies in the panel with neatly tied hair knotted at the back, Bharhut, Madhya Pradesh. Credit: Archeological Survey of India, New Delhi _
+<div class="imagecaption">
+Ladies in the panel with neatly tied hair knotted at the back, Bharhut, Madhya Pradesh. Credit: Archeological Survey of India, New Delhi
+</div>
 
 The magnificent Mauryan sculptures that are scattered across the diverse landscape of India, offer us a vivid imagery of the hairstyle and coiffures that adorned the heads of both men and women during the Mauryan period. These sculptures unveil a captivating array of masculine hairstyles, where each strand seems to embody an unwritten tale of grandeur. From flowing cascades of curls that delicately framed noble visages to neatly trimmed and coiffed hair, every choice of style conveyed a distinct message. These meticulously sculpted manes stood as symbols of authority, grace, and power, **capturing the essence of a society where aesthetics merged seamlessly with societal roles**. 
 
@@ -115,41 +102,25 @@ Within the ancient scrolls of Viṣnudharmottara Purāṇa's Citrasūtra, a divi
 
 In conclusion, the artistry of hairdressing stood as a treasured tradition in ancient India, where the mastery of intricate braiding and knotting techniques reigned supreme. While the accounts of men's hairstyles were less lavishly detailed, occasional glimpses of matted locks hinted at their distinctive allure. These diverse hairstyles acted as mirrors, reflecting the cultural and aesthetic sensibilities that flourished during that era, while simultaneously serving as potent tools to enhance the beauty and enchantment of individuals. Such has been the captivating power of lustrous, dark tresses, that even the eminent poet Rabindranath Tagore couldn't resist their allure, immortalizing their charm within the verses of his poetic praise.
 
-_Ma tomai dekhey dekhey _
+> Ma tomai dekhey dekhey<br>
+> Ankhi na firey<br>
+> Tomar duar aji khuley gachchay<br>
+> Sonar Mandirey<br>
+> Tomar mukta kesher punja meghey<br>
+> Lukai ashani,<br>
+> Tomar anchal jholey akash taley<br>
+> Roudra-basani
 
-_Ankhi na firey _
+> “Mother we cannot take our eyes off your beautiful face<br>
+> You have opened your door to all that is beautiful<br>
+> In the dark clouds of your hair are hidden the weapons of destruction<br>
+> Your ‘sāṛī is of the colour of golden sunlight<br>
+> Mother, we cannot take our eyes off your beautiful face!”
+> <cite>Tagore, translated by Ila Palchoudhuri</cite>
 
-_Tomar duar aji khuley gachchay _
+#### Footnotes and References:
 
-_Sonar Mandirey _
-
-_Tomar mukta kesher punja meghey _
-
-_Lukai ashani,_
-
-_Tomar anchal jholey akash taley _
-
-_Roudra-basani _
-
-_“Mother we cannot take our eyes off your beautiful face_
-
-_You have opened your door to all that is beautiful_
-
-_In the dark clouds of your hair are hidden the weapons of destruction _
-
-_Your ‘sāṛī is of the colour of golden sunlight _
-
-_Mother, we cannot take our eyes off your beautiful face!”_
-
-~ Tagore, translated by Ila Palchoudhuri
-
-**Footnotes:**
-
-
-
-1. For Tamiḻ words, ISO15919 standard has been used to add diacritics in English transliteration (as opposed to IAST standard which is used elsewhere in the paper for English transliteration of Sanskrit words).** **
-
-**References: **
+(For Tamiḻ words, ISO15919 standard has been used to add diacritics in English transliteration, as opposed to IAST standard which is used elsewhere in the paper for English transliteration of Sanskrit words.)
 
 (i) Hairstyles in Ancient Indian Art by K. Krishna Murthy
 
@@ -160,3 +131,12 @@ _Mother, we cannot take our eyes off your beautiful face!”_
 (iv) Indian Costume: From 500 B.C. to the Present" by Kamaladevi Chattopadhyay
 
 (v) Ancient Hair Styles of India by Ila Palchoudhuri
+
+<style lang="sass">
+
+.imageclass
+	object-fit: contain
+	weight: 200px
+	height: 400px
+
+</style>

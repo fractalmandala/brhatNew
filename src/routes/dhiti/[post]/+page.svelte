@@ -300,8 +300,8 @@ h1
 .levelzero
 	align-items: center
 	.x22, .x3
-		width: 720px
-		margin-left: -64px
+		width: 680px
+		margin-left: 0
 	.x3
 		padding-bottom: 128px
 	.x0

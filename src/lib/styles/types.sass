@@ -88,6 +88,15 @@ img
 	height: 100%
 	max-width: 100vw
 
+.maincol
+	.imagecaption
+		color: var(--themer)
+		font-size: 12px
+		text-align: center
+		margin-bottom: 32px
+	sup
+		color: #fe4a49
+
 .rta-image
 	img
 		object-fit: cover
@@ -320,6 +329,7 @@ h1
 		color: var(--opposite)
 		border-left: 3px solid #fe4a49
 		padding-left: 1rem
+		padding-bottom: 0
 	blockquote
 		margin-bottom: 1.5rem
 	cite
@@ -346,6 +356,15 @@ h1
 .maincol
 	a
 		word-break: break-word
+	blockquote
+		margin-bottom: 32px
+		p
+			margin-bottom: 0 !important
+		cite
+			margin: 0
+			padding: 0
+			text-transform: uppercase
+			font-style: normal
 
 .maincol.std
 	@media screen and (min-width: 1024px)

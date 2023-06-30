@@ -96,61 +96,46 @@ Back in Hyderabad when I look out of my window reminiscing on the sights and sou
     <div class="rta-image height-30-3">
         <img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gallery/01.jpg" alt="gallery"/>
     </div>
-    
     <div class="rta-image height-30-3">
         <img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gallery/02.jpg" alt="gallery"/>
     </div>
-    
     <div class="rta-image height-30-3">
         <img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gallery/03.jpg" alt="gallery"/>
     </div>
-    
     <div class="rta-image height-30-3">
         <img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gallery/04.jpg" alt="gallery"/>
     </div>
-    
     <div class="rta-image height-30-3">
         <img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gallery/05.jpg" alt="gallery"/>
     </div>
-    
      <div class="rta-image height-30-3">
         <img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gallery/06.jpg" alt="gallery"/>
     </div>
-    
     <div class="rta-image height-30-3">
         <img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gallery/07.jpg" alt="gallery"/>
     </div>
-    
     <div class="rta-image height-30-3">
         <img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gallery/08.jpg" alt="gallery"/>
     </div>
-    
     <div class="rta-image height-30-3">
         <img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gallery/09.jpg" alt="gallery"/>
     </div>
-    
     <div class="rta-image height-30-3">
         <img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gallery/10.jpg" alt="gallery"/>
     </div>
-    
     <div class="rta-image height-30-3">
         <img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gallery/11.jpg" alt="gallery"/>
     </div>
-    
     <div class="rta-image height-30-3">
         <img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gallery/12.jpg" alt="gallery"/>
     </div>
-    
     <div class="rta-image height-30-3">
         <img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gallery/13.jpg" alt="gallery"/>
     </div>
-    
     <div class="rta-image height-30-3">
         <img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gallery/14.jpg" alt="gallery"/>
     </div>
-    
     <div class="rta-image height-30-3">
         <img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gallery/15.jpg" alt="gallery"/>
     </div>
-    
-    </div>
+</div>
