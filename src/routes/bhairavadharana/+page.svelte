@@ -225,7 +225,7 @@
 </div>
 <div class="rta-column outer-box rowgap200 limit p-top-32">
 	<div class="rta-column p-top-64 glass-top rowgap300">
-		<h4 class="tt-u ta-c-d hindiadobe glass-bottom p-bot-32">Itinerary</h4>
+		<h4 class="tt-u ta-c-d hindiadobe glass-bottom p-bot-32">Schedule</h4>
 	</div>
 	<div class="rta-grid grid4 colgap300 p-top-16">
 		{#if itins && itins.length > 0}
