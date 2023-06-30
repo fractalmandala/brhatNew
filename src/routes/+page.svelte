@@ -664,6 +664,11 @@
 		line-height: 1.1	
 	p.writer
 		color: #fe4a49
+	.rta-image
+		height: 200px
+		border-radius: 6px
+		img
+			border-radius: 6px
 
 #drashtascreen
 	@media screen and (max-width: 1023px)
