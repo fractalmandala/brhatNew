@@ -160,6 +160,10 @@
 					<p>Price TBD</p>
 				{/if}
 			</div>
+			<div class="rta-column rta-icon">
+				<img src="/images/icon-tent.png" alt="tenticon" />
+				<p>{data.brochure}</p>
+			</div>
 		</div>
 		{#if highlights && highlights.length > 0}
 			<div class="rta-column highlightscolumn p-top-64">
