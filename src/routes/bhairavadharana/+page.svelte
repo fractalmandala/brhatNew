@@ -131,7 +131,7 @@
 <div class="rta-column outer-box limit rowgap100 serif p-top-64" id="section1">
 	<div class="rta-column rowgap200">
 		<h3 class="hindiadobe tt-u ta-c-d ta-c-m p-bot-16">{data.name}</h3>
-		<h5 class="hindiadobe">{data.excerpt}</h5>
+		<h6 class="hindiadobe">{data.excerpt}</h6>
 		<em class="tt-u ta-c rta-column" id="section1line2" style="background: #fe4a49"
 			>{data.status}</em
 		>
