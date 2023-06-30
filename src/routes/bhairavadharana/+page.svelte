@@ -8,8 +8,7 @@
 		metaUrl,
 		metaImage,
 		metaType,
-		anveshiChapter,
-		anveshiColor
+		anveshiChapter
 	} from '$lib/stores/metastores';
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte';
 	import { chapterItinerary, allFaq } from '$lib/utils/supapulls';
@@ -27,14 +26,12 @@
 	let faqs: string | any[];
 	let gens: string | any[];
 	let cfaqs: string | any[];
-	let isFaqOpen: boolean[] = Array(15).fill(false);
 	let highlights: any;
 	let itins: string | any[];
 	let openedDay: boolean[] = Array(5).fill(false);
 	let temp: any;
 	let area: any = Array(2).fill(false);
 	area[1] = true;
-	let visibleTemple: any = Array(30).fill(false);
 	let fake = false;
 
 	export let data;
@@ -45,22 +42,6 @@
 		'Bhairava Dhāraṇā is a three day sādhanā retreat designed to help participants learn about the basics of Bhairava upāsanā.';
 	$metaImage = data.image;
 	$metaType = 'webpage';
-
-	function fauxfake() {
-		fake = !fake;
-	}
-
-	function toggleDay(index: number) {
-		openedDay[index] = !openedDay[index];
-		for (let i = 0; i < openedDay.length; i++) {
-			if (i !== index && openedDay[i] === true) {
-				openedDay[i] = false;
-			}
-		}
-		if (alignGrid === false) {
-			alignGrid = true;
-		}
-	}
 
 	export function MyTransition(Splide: any, Components: any) {
 		const { bind } = EventInterface(Splide);
@@ -150,7 +131,7 @@
 <div class="rta-column outer-box limit rowgap100 serif p-top-64" id="section1">
 	<div class="rta-column rowgap200">
 		<h3 class="hindiadobe tt-u ta-c-d ta-c-m p-bot-16">{data.name}</h3>
-		<em class="tt-u ta-c rta-column" id="section1line2" style="background: {$anveshiColor}"
+		<em class="tt-u ta-c rta-column" id="section1line2" style="background: #fe4a49"
 			>{data.status}</em
 		>
 		{#if data.status === 'open now'}
@@ -312,6 +293,7 @@ pre
 	width: max-content
 	padding: 4px 8px
 	align-self: center
+	font-family: 'Space Grotesk', sans-serif
 	@media screen and (max-width: 1023px)
 		padding: 4px 8px
 
