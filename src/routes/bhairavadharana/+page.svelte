@@ -132,7 +132,7 @@
 	<div class="rta-column rowgap200">
 		<h3 class="hindiadobe tt-u ta-c-d ta-c-m p-bot-16">{data.name}</h3>
 		<em class="tt-u ta-c rta-column" id="section1line2" style="background: #fe4a49"
-		<h5 class="hindiadobe">{item.excerpt}</h5>
+		<h5 class="hindiadobe">{data.excerpt}</h5>
 			>{data.status}</em
 		>
 		{#if data.status === 'open now'}
