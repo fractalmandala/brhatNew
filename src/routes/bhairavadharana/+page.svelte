@@ -26,6 +26,7 @@
 	let faqs: string | any[];
 	let gens: string | any[];
 	let cfaqs: string | any[];
+	let isFaqOpen: boolean[] = Array(15).fill(false);
 	let highlights: any;
 	let itins: string | any[];
 	let openedDay: boolean[] = Array(5).fill(false);
@@ -42,6 +43,18 @@
 		'Bhairava Dhāraṇā is a three day sādhanā retreat designed to help participants learn about the basics of Bhairava upāsanā.';
 	$metaImage = data.image;
 	$metaType = 'webpage';
+
+	function toggleFaq(index: number) {
+		isFaqOpen[index] = !isFaqOpen[index];
+		for (let i = 0; i < isFaqOpen.length; i++) {
+			if (i !== index && isFaqOpen[i] === true) {
+				isFaqOpen[i] = false;
+			}
+		}
+		if (alignGrid === false) {
+			alignGrid = true;
+		}
+	}
 
 	export function MyTransition(Splide: any, Components: any) {
 		const { bind } = EventInterface(Splide);
@@ -86,7 +99,7 @@
 			cancel
 		};
 	}
-
+	$: anyFaqOpen = isFaqOpen.some((item) => item);
 	$: if ($anveshiChapter) {
 		(async () => {
 			itins = await chapterItinerary($anveshiChapter);
@@ -224,8 +237,36 @@
 	</div>
 </div>
 
+<!--faq-->
+<div class="rta-column outer-box limit rowgap100 serif">
+	<h4 class="bord-top p-bot-32 ta-c-d p-top-32 hindiadobe">FAQs</h4>
+	<div class="rta-grid rowgap400 colgap600" id="faqgrid" class:calibrated={anyFaqOpen}>
+		{#if faqs && faqs.length > 0}
+			{#each faqs as item, i}
+				{#if item.chapter === null || item.chapter === $anveshiChapter}
+					<div
+						class="rta-column rowgap100"
+						class:opentab={isFaqOpen[i]}
+						on:click={() => toggleFaq(i)}
+						on:keydown={() => toggleFaq(i)}
+						use:autoAnimate
+					>
+						<div class="rta-row fixed ytop colgap100 rowgap400">
+							<div class="button-box" class:rotated={isFaqOpen[i]}>
+								<ChevronDown size="27" color="#878787" />
+							</div>
+							<h6 class="hindiadobe faqs">{item.name}</h6>
+						</div>
+						{#if isFaqOpen[i]}
+							<p class="hindiadobe faqs">{item.content}</p>
+						{/if}
+					</div>
+				{/if}
+			{/each}
+		{/if}
+	</div>
+</div>
 <!--end-->
-
 <style lang="sass">
 
 .x0
@@ -240,6 +281,13 @@ pre.hindiadobe.adobes
 	display: flex
 	flex-direction: column
 	row-gap: 12px
+
+h6.faqs
+	cursor: pointer
+	margin: 0
+
+p.hindiadobe.faqs
+	font-size: 16px
 
 .highlightsrow
 	background: var(--contraster)
