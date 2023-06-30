@@ -720,3 +720,14 @@ export async function getSvarnanjali(){
   if (error) throw new Error(error.message)
   return data	
 }
+
+export async function newsletterItems(issueno:number){
+	const { data, error } = await supabase
+	.from('brhat-newsletter')
+	.select()
+	.eq('type','item')
+	.eq('issueno',issueno)
+	.order('id')
+  if (error) throw new Error(error.message)
+  return data	
+}
