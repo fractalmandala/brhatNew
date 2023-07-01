@@ -143,7 +143,6 @@
 <!--header and metadetails-->
 <div class="rta-column outer-box limit rowgap100 serif p-top-64" id="section1">
 	<div class="rta-column rowgap200">
-			{/if}
 		<div class="rta-row iconsrow">
 			<div class="rta-column rta-icon">
 				<img src="/images/anveshi-dates.png" alt="datesicon" />
@@ -175,7 +174,7 @@
 				class="rta-column"
 				style="align-self: center"><button class="genbutton-l">Register Here</button></a
 			>
-
+		{/if}
 		</div>
 		{#if highlights && highlights.length > 0}
 			<div class="rta-column highlightscolumn p-top-64">
@@ -221,10 +220,10 @@
 		</div>
 		<h4 class="hindiadobe">Rajarshi Nandy</h4>
 		<p class="hindiadobe">
-			Sh. Rajarshi Nandy is an sādhakā whose path is associated with tantric upasana of The Divine
-			Mother. He is also an author and columnist on several topics related to Indian religious and
-			spiritual thought. He has recently re-published his insightful book Adhyatmikta and manages a
-			popular Facebook page by same name.
+			Sh. Rajarshi Nandy is a sādhakā whose path is associated with tantric upasana of the 'Divine Mother'. 
+			He is also an author and columnist on several topics related to Indian religious and spiritual thought. 
+			He has recently re-published his insightful book 'Adhyātmiktā' and manages a popular Facebook page by 
+			the same name.
 		</p>
 		<p class="hindiadobe">
 			He has also helped co-author a paper exploring the links between Tantra and Modern
@@ -240,13 +239,13 @@
 		</div>
 		<h4 class="hindiadobe">Ramachandra Roddam</h4>
 		<p class="hindiadobe">
-			Sh. Ramachandra Roddam is an sādhakā of the Divine Mother. He is an invited faculty who
-			teaches on Indian Spirituality, Yoga and Sādhanā. He is the author of the book Devi Bhakti
-			Tarangini, which is a devotional offering of English poems to the Supreme Goddess.
+			Sh. Ramachandra Roddam is a sādhakā of the 'Divine Mother'. He is an invited faculty who 
+			teaches on Indian Spirituality, Yoga and Sādhanā. He is the author of the book 'Devi Bhakti Tarangini', 
+			which is a devotional offering of English poems to the Supreme Goddess.
 		</p>
 		<p class="hindiadobe">
-			Currently he is rendering Śevā at Sanatan Siddhashram, a traditional Gurukul for the ancient
-			Baul tradition located in Birbhum district, West Bengal.
+			Currently he is rendering Śevā at Sanatan Siddhashram, a traditional Gurukul for the ancient Baul tradition 
+			located in Birbhum district, West Bengal.
 		</p>
 	</div>
 </div>
