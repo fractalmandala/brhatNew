@@ -217,13 +217,13 @@
 		</div>
 		<h4 class="hindiadobe">Rajarshi Nandy</h4>
 		<p class="hindiadobe">
-			Sh. Rajarshi Nandy is an sādhakā whose path is associated with tantric upasana of The Divine
-			Mother. He is also an author and columnist on several topics related to Indian religious and
-			spiritual thought. He has recently re-published his insightful book Adhyatmikta and manages a
-			popular Facebook page by same name.
+			Sh. Rajarshi Nandy is a sādhakā whose path is associated with tāntrika upāsanā of the 'Divine Mother'. 
+			He is also an author and columnist on several topics related to Indian religious and spiritual thought. 
+			He has recently re-published his insightful book 'Adhyatmikta' and manages a popular Facebook page by 
+			the same name.
 		</p>
 		<p class="hindiadobe">
-			He has also helped co-author a paper exploring the links between Tantra and Modern
+			He has also helped co-author a paper exploring the links between Tantra and Modern 
 			Neuroscience which was published in Neurology India.
 		</p>
 	</div>
@@ -239,9 +239,13 @@
 			Sh. Ramachandra Roddam is a sādhakā of the 'Divine Mother'. He is an invited faculty who
 			teaches on Indian Spirituality, Yoga and Sādhanā. He is the author of the book 'Devi Bhakti
 			Tarangini', which is a devotional offering of English poems to the Supreme Goddess.
+
+			Sh. Ramachandra Roddam is a sādhakā of the 'Divine Mother'. He is an invited faculty who 
+			teaches on Indian Spirituality, Yoga and Sādhanā. He is the author of the book 'Devi Bhakti 
+			Tarangini', which is a devotional offering of English poems to the Supreme Goddess.
 		</p>
 		<p class="hindiadobe">
-			Currently he is rendering sevā at Sanatan Siddhashram, a traditional gurukula for the ancient
+			Currently he is rendering sevā at Sanatan Siddhashram, a traditional gurukula for the ancient 
 			Baul tradition located in Birbhum district, West Bengal.
 		</p>
 	</div>
