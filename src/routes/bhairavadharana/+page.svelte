@@ -217,7 +217,7 @@
 	<div class="rta-column rowgap200">
 		<div class="rta-image">
 			<img
-				src="https://static.wixstatic.com/media/94cd83_214e5107d6134f658dac03628c814e10~mv2.png/v1/fill/w_399,h_375,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Screenshot%202022-01-24%20at%2010_21_14.png"
+				src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/bhairavadharana/rajarshinandy"
 				alt="rajarshinandy"
 			/>
 		</div>
@@ -236,7 +236,7 @@
 	<div class="rta-column rowgap200">
 		<div class="rta-image">
 			<img
-				src="https://static.wixstatic.com/media/94cd83_b688190f231f48cc9e0f673b8e2cf59c~mv2.jpg/v1/fill/w_399,h_375,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/WhatsApp%20Image%202021-12-22%20at%207_48_edited.jpg"
+				src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/bhairavadharana/ramchandraroddam"
 				alt="ramachandraroddam"
 			/>
 		</div>
