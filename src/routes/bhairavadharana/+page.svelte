@@ -143,20 +143,7 @@
 <!--header and metadetails-->
 <div class="rta-column outer-box limit rowgap100 serif p-top-64" id="section1">
 	<div class="rta-column rowgap200">
-		<h3 class="hindiadobe tt-u ta-c-d ta-c-m p-bot-16">{data.name}</h3>
-		<h5 class="hindiadobe tt-u ta-c-d ta-c-m p-bot-16">{data.excerpt}</h5>
-		<em class="tt-u ta-c rta-column" id="section1line2" style="background: #fe4a49"
-			>{data.status}</em
-		>
-		{#if data.status === 'open now'}
-			<a
-				href={data.kyc}
-				target="_blank"
-				rel="noreferrer"
-				class="rta-column"
-				style="align-self: center"><button class="genbutton-l">Register Here</button></a
-			>
-		{/if}
+			{/if}
 		<div class="rta-row iconsrow">
 			<div class="rta-column rta-icon">
 				<img src="/images/anveshi-dates.png" alt="datesicon" />
@@ -178,6 +165,17 @@
 				<img src="/images/icon-tent.png" alt="tenticon" />
 				<p>{data.brochure}</p>
 			</div>
+		<h3 class="hindiadobe tt-u ta-c-d ta-c-m p-bot-16">{data.name}</h3>
+		<h5 class="hindiadobe tt-u ta-c-d ta-c-m p-bot-16">{data.excerpt}</h5>
+		{#if data.status === 'open now'}
+			<a
+				href={data.kyc}
+				target="_blank"
+				rel="noreferrer"
+				class="rta-column"
+				style="align-self: center"><button class="genbutton-l">Register Here</button></a
+			>
+
 		</div>
 		{#if highlights && highlights.length > 0}
 			<div class="rta-column highlightscolumn p-top-64">
@@ -255,7 +253,7 @@
 
 <!--detailed content and itinerary-->
 <div class="rta-column outer-box limit rowgap200">
-	<pre class="h5 hindiadobe glass-top p-top-32">
+	<pre class="h4 hindiadobe glass-top p-top-32">
 			{data.content}
 		</pre>
 </div>
