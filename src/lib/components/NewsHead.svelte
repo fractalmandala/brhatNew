@@ -57,12 +57,7 @@
 			<p><a href="/">Home</a></p>
 		</div>
 		<Social />
-		<div
-			class="search rta-row ycenter"
-			id="single"
-			on:click={toggleVisibility}
-			on:keydown={fauxfake}
-		>
+		<div class="search rta-row ycenter" on:click={toggleVisibility} on:keydown={fauxfake}>
 			<CompToggle />
 		</div>
 		<slot name="allbuttons" />
@@ -153,8 +148,6 @@
 			column-gap: 16px
 			padding-top: 8px
 			padding-bottom: 8px
-		.search
-			display: none
 
 .appheader.light
 	background: #FFFFFF
