@@ -239,10 +239,6 @@
 			Sh. Ramachandra Roddam is a sādhakā of the 'Divine Mother'. He is an invited faculty who
 			teaches on Indian Spirituality, Yoga and Sādhanā. He is the author of the book 'Devi Bhakti
 			Tarangini', which is a devotional offering of English poems to the Supreme Goddess.
-
-			Sh. Ramachandra Roddam is a sādhakā of the 'Divine Mother'. He is an invited faculty who 
-			teaches on Indian Spirituality, Yoga and Sādhanā. He is the author of the book 'Devi Bhakti 
-			Tarangini', which is a devotional offering of English poems to the Supreme Goddess.
 		</p>
 		<p class="hindiadobe">
 			Currently he is rendering sevā at Sanatan Siddhashram, a traditional gurukula for the ancient 
