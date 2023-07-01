@@ -1,9 +1,21 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { themeMode, breakZero, breakOne, breakTwo } from '$lib/stores/globalstores';
+	import { browser } from '$app/environment';
+	import CompToggle from '$lib/ridunits/TogToggle.svelte';
 
 	let url: string;
 	let scrollY: number;
+
+	function toggleVisibility() {
+		if (browser) {
+			themeMode.update((mode) => {
+				const newMode = !mode;
+				localStorage.setItem('themeMode', JSON.stringify(newMode));
+				return newMode;
+			});
+		}
+	}
 
 	onMount(() => {
 		url = encodeURIComponent(window.location.href);
@@ -54,6 +66,7 @@
 			/>
 		</svg>
 	</button>
+	<button class="blank-button" on:click={toggleVisibility}> <CompToggle /></button>
 </div>
 
 <style lang="sass">

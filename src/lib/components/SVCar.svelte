@@ -85,6 +85,18 @@
 						</small>
 					</div>
 				</SplideSlide>
+				<!--
+				<SplideSlide>
+					<div class="rta-video">
+						<Youtuber youTubeId={'gkAaT9XBURE'} />
+						<small>
+							<a href="https://youtu.be/gkAaT9XBURE" target="_blank" rel="noreferrer">
+								E2 - Ram Ki Shakti Puja - राम की शक्ति पूजा
+							</a>
+						</small>
+					</div>
+				</SplideSlide>
+				-->
 				<SplideSlide>
 					<div class="faker" style="background-image: url('/images/svthumbs/2.jpeg')">
 						<div class="inscreen">Coming Soon</div>

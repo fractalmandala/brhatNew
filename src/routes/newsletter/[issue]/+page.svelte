@@ -206,7 +206,7 @@
 				</div>
 			{/if}
 		{:else}
-			<div class="outer-box rta-column rowgap200 subsign m-bot-32">
+			<div class="outer-box rta-column rowgap200 subsign">
 				<h5>Please subscribe to access the newsletter.</h5>
 				<button class="genbutton" on:click={toggleSubscribe}> Subscribe </button>
 				<p class="bord-top p-top-16">Already subscribed? Sign In below:</p>
@@ -236,7 +236,7 @@
 				</form>
 			</div>
 		{/if}
-		<div class="outer-box">
+		<div class="outer-bo">
 			<div class="aboutstrip">
 				<h5>About Bṛhatadya</h5>
 				<p>
@@ -290,6 +290,9 @@
 
 <style lang="sass">
 
+.outer-bo
+	@media screen and (max-width: 1023px)
+		margin-bottom: 64px
 
 .aboutstrip
 	display: flex
@@ -427,9 +430,12 @@
 		.feat-head
 			border-bottom: none
 
-.levelzero
+.levelzero, .levelone
 	.subsign
 		width: 560px
+		h5
+			font-weight: bold
+			color: var(--opposite)
 	.singleitem
 		padding: 48px
 		border: 1px solid var(--forline)
@@ -441,6 +447,10 @@
 			img
 				min-height: 200px
 				object-fit: cover
+
+.leveltwo
+	.subsign
+		margin-top: 160px
 
 .leveltwo.mainletter
 	grid-template-columns: 1fr
