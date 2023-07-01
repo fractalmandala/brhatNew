@@ -217,7 +217,7 @@
 	<div class="rta-column rowgap200">
 		<div class="rta-image">
 			<img
-				src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/bhairavadharana/rajarshinandy"
+			        src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/bhairavadharana/rajarshinandy"
 				alt="rajarshinandy"
 			/>
 		</div>
