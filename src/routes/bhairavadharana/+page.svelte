@@ -142,7 +142,7 @@
 
 <!--header and metadetails-->
 <div class="rta-column outer-box limit rowgap100 serif p-top-64" id="section1">
-	<div class="rta-column rowgap200">
+	<div class="rta-column rowgap200"> 
 		<div class="rta-row iconsrow">
 			<div class="rta-column rta-icon">
 				<img src="/images/anveshi-dates.png" alt="datesicon" />
