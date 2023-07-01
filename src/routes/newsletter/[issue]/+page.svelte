@@ -274,6 +274,10 @@
 			padding: 16px
 			.rta-row
 				justify-content: flex-end
+		@media screen and (max-width: 1023px)
+			width: calc(100vw - 32px)
+			min-height: 200px
+			padding: 16px
 
 .thisform
 	input
