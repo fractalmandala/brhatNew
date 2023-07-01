@@ -1188,3 +1188,37 @@ body, html
 		font-size: 12px
 		h1, h2, p, pre, li
 			font-size: 14px
+
+
+.newbutton
+	min-width: 6.5em
+	height: 27px
+	background: #474747
+	color: white
+	border: none
+	border-radius: 6px
+	font-size: 12px
+	font-weight: bold
+	cursor: pointer
+	position: relative
+	z-index: 1
+	overflow: hidden
+	&:hover
+		color: white
+	&::after
+		content: ''
+		background: white
+		position: absolute
+		z-index: -1
+		left: -20%
+		right: -20%
+		top: 0
+		bottom: 0
+		transform: skewX(-45deg) scale(0, 1)
+		transition: all 0.5s
+	&:hover
+		&::after
+			transform: skewX(-45deg) scale(1, 1)
+			-webkit-transition: all 0.5s
+			transition: all 0.5s
+			background: #fe4a49

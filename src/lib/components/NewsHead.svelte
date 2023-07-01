@@ -34,19 +34,6 @@
 		}
 		latestScrollY = y;
 	}
-
-	onMount(() => {
-		const handleMouse = (event: { clientY: number }) => {
-			mouseY = event.clientY;
-			if (mouseY <= 128) {
-				isInvisible = false;
-			}
-		};
-		window.addEventListener('mousemove', handleMouse);
-		return () => {
-			window.removeEventListener('mousemove', handleMouse);
-		};
-	});
 </script>
 
 <svelte:window bind:scrollY={y} bind:innerHeight={height} />
@@ -59,7 +46,7 @@
 >
 	<div class="bigg p-top-64">
 		<div class="pagetitle">BṚHATADYA</div>
-		<div class="rta-row xcenter-d ycenter colgap100">
+		<div class="rta-row xcenter-d xcenter-m ycenter colgap100">
 			<div class="thinline" />
 			<div class="subtitle">Fortnightly Updates from the Culture Engine</div>
 			<div class="thinline" />
@@ -70,7 +57,12 @@
 			<p><a href="/">Home</a></p>
 		</div>
 		<Social />
-		<div class="search" id="single" on:click={toggleVisibility} on:keydown={fauxfake}>
+		<div
+			class="search rta-row ycenter"
+			id="single"
+			on:click={toggleVisibility}
+			on:keydown={fauxfake}
+		>
 			<CompToggle />
 		</div>
 		<slot name="allbuttons" />
@@ -107,6 +99,7 @@
 				font-family: 'Gandhi', serif
 				font-size: 104px
 				letter-spacing: -2px
+				color: var(--opposite)
 			.subtitle
 				text-align: center
 				color: var(--themer)
@@ -119,18 +112,47 @@
 			display: flex
 			flex-direction: row
 			justify-content: center
+			align-items: center
 			border-top: 1px solid var(--forline)
 			column-gap: 16px
 			padding-top: 8px
 			padding-bottom: 8px
 	@media screen and (max-width: 1023px)
-		grid-template-columns: 1fr 96px
-		grid-template-rows: 1fr
-		grid-template-areas: "applogo menuicon"
+		grid-template-columns: 1fr
+		grid-template-rows: auto auto
+		grid-template-areas: "bigg" "midrow"
+		align-content: center
+		align-items: center
 		min-height: 48px
-		align-content: start
-		padding: 8px 16px
-		justify-items: stretch
+		.bigg
+			grid-area: bigg
+			display: flex
+			flex-direction: column
+			margin-bottom: 32px
+			.pagetitle
+				text-align: center
+				font-weight: bold
+				font-family: 'Gandhi', serif
+				font-size: 56px
+				letter-spacing: -2px
+				color: var(--opposite)
+			.subtitle
+				text-align: center
+				color: var(--themer)
+				font-size: 12px
+			.thinline
+				height: 1px
+				width: 32px
+				background: var(--opposite)
+		.midrow
+			display: flex
+			flex-direction: row
+			justify-content: center
+			align-items: center
+			border-top: 1px solid var(--forline)
+			column-gap: 16px
+			padding-top: 8px
+			padding-bottom: 8px
 		.search
 			display: none
 
@@ -141,6 +163,15 @@
 	background: #171717
 
 .appheader.hiddenHeader
-	transform: translateY(-80px)
+	@media screen and (min-width: 1024px)
+		transform: translateY(-232px)
+	@media screen and (max-width: 1023px)
+		transform: translateY(-144px)
+
+.midrow
+	p, p a
+		margin: 0
+		padding: 0
+		font-size: 12px
 
 </style>

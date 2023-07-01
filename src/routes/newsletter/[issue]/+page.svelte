@@ -104,12 +104,12 @@
 >
 	<div class="main">
 		{#if data.user !== 'none'}
-			<div class="rta-column itemarea outer-box">
-				{#if newsitems && newsitems.length > 0}
-					{#each newsitems as item}
-						{#if $breakZero || $breakOne}
+			{#if $breakZero || $breakOne}
+				<div class="rta-column itemarea outer-box">
+					{#if newsitems && newsitems.length > 0}
+						{#each newsitems as item}
 							{#if item.tag === 'Featured'}
-								<div class="rta-row featured between">
+								<div class="rta-row featured between p-bot-64">
 									<div class="rta-column w64">
 										<div class="feat-tag">{item.tag}</div>
 										<div class="feat-head p-bot-16"><h1>{item.header}</h1></div>
@@ -123,55 +123,88 @@
 									</div>
 								</div>
 							{/if}
-							{#if item.tag !== 'Featured'}
-								<div class="rta-row between singleitem glass-bottom p-bot-32 m-bot-32">
-									<div class="rta-column w64">
+						{/each}
+
+						<div class="rta-grid grid2 colgap400 rowgap400 m-top-32">
+							{#each newsitems as item}
+								{#if item.tag !== 'Featured'}
+									<div class="rta-column singleitem">
 										{#if item.tag}
 											<div class="tagger" style="background: {item.color}">{item.tag}</div>
 										{/if}
-										<h4 class="bord-bot p-bot-8">{item.header}</h4>
-										<pre>
-								{item.content}
-							</pre>
-										{#if item.link}
-											<a href={item.link} target="_blank" rel="noreferrer">
-												<button class="newbutton"> Visit </button>
-											</a>
-										{/if}
+										<h4 class="p-bot-8">{item.header}</h4>
+										<div class="rta-row between bord-top m-top-16 p-top-16">
+											<div class="rta-column w64">
+												<pre>
+													{item.content}
+												</pre>
+												{#if item.link}
+													<a href={item.link} target="_blank" rel="noreferrer">
+														<button class="newbutton"> Visit </button>
+													</a>
+												{/if}
+											</div>
+											<div class="rta-image w32">
+												<img src={item.image} alt="heroimage" />
+											</div>
+										</div>
 									</div>
-									<div class="rta-image w32 height-40">
-										<img src={item.image} alt="heroimage" />
+								{/if}
+							{/each}
+						</div>
+					{/if}
+				</div>
+			{:else}
+				<div class="rta-column outer-box">
+					{#if newsitems && newsitems.length > 0}
+						{#each newsitems as item}
+							{#if item.tag === 'Featured'}
+								<div class="rta-column mobfeatured rowgap200 between p-bot-64">
+									<div class="rta-image">
+										<img src={item.image} alt="featuredhero" />
+									</div>
+									<div class="rta-column rowgap200">
+										<div class="feat-tag">{item.tag}</div>
+										<div class="feat-head"><h1>{item.header}</h1></div>
+										<div class="feat-text"><pre>{item.content}</pre></div>
+										<a href={item.link} target="_blank" rel="noreferrer"
+											><button class="newbutton">Read Now</button></a
+										>
 									</div>
 								</div>
 							{/if}
-						{:else}
-							<div class="rta-column singleitem glass-bottom p-bot-32 m-bot-32">
-								<div class="rta-column">
-									{#if item.tag}
-										<div class="tagger" style="background: {item.color}">{item.tag}</div>
-									{/if}
-									<h5 class="bord-bot p-bot-8">{item.header}</h5>
-								</div>
-								<div class="rta-row stay colgap300 p-top-16">
-									<div class="rta-column rowgap200 w50">
-										<pre>
-								{item.content}
-							</pre>
-										{#if item.link}
-											<a href={item.link} target="_blank" rel="noreferrer">
-												<button class="newbutton"> Visit </button>
-											</a>
+						{/each}
+
+						<div class="rta-grid grid2 colgap400 rowgap400 m-top-32">
+							{#each newsitems as item}
+								{#if item.tag !== 'Featured'}
+									<div class="rta-column singleitem">
+										{#if item.tag}
+											<div class="tagger" style="background: {item.color}">{item.tag}</div>
 										{/if}
+										<h4 class="p-bot-8">{item.header}</h4>
+										<div class="rta-row stay between">
+											<div class="rta-column w64">
+												<pre>
+													{item.content}
+												</pre>
+												{#if item.link}
+													<a href={item.link} target="_blank" rel="noreferrer">
+														<button class="newbutton"> Visit </button>
+													</a>
+												{/if}
+											</div>
+											<div class="rta-image w32">
+												<img src={item.image} alt="heroimage" />
+											</div>
+										</div>
 									</div>
-									<div class="rta-image w50 height-40-30">
-										<img src={item.image} alt="heroimage" />
-									</div>
-								</div>
-							</div>
-						{/if}
-					{/each}
-				{/if}
-			</div>
+								{/if}
+							{/each}
+						</div>
+					{/if}
+				</div>
+			{/if}
 		{:else}
 			<div class="rta-column rowgap200 subsign">
 				<h5>Please subscribe to access the newsletter.</h5>
@@ -321,10 +354,8 @@ h6
 		padding-top: 320px
 		padding-bottom: 96px
 		.featured
-			height: 64vh
 			width: 100%
 			.rta-image
-				height: 30vh
 				img
 					object-fit: cover
 					width: 100%
@@ -341,26 +372,51 @@ h6
 			h1
 				font-family: 'Gandhi', serif
 				font-size: 56px
-			pre
+
+
+.leveltwo.mainletter
+	h1
+		font-family: 'Gandhi', serif
+		font-size: 40px
+	pre
+		font-size: 14px
+	.mobfeatured
+		margin-top: 64px
+		border-bottom: 1px solid var(--forline)
+		.feat-tag
+			background: #fe4a49
+			color: white
+			text-transform: uppercase
+			font-size: 12px
+			padding: 4px 8px
+			width: max-content
+			max-width: 100%
+		.feat-head
+			border-bottom: none
 
 .levelzero
 	.subsign
 		width: 560px
+	.singleitem
+		padding: 24px
+		border: 1px solid var(--forline)
+		border-radius: 6px
+		.rta-row
+			border-top: 1px solid var(--forline)
+		.rta-image
+			min-height: 200px
+			img
+				min-height: 200px
+				object-fit: cover
 
 .leveltwo.mainletter
 	grid-template-columns: 1fr
-	grid-template-areas: "side" "main"
-	padding-left: 16px
-	padding-right: 16px
-	.side
-		min-height: 32px
-		border-bottom: 1px solid var(--forline)
-		padding-top: 72px
-		margin-bottom: 16px
-		padding-bottom: 8px
+	grid-template-areas: "main"
 	.main
 		min-height: 100vh
 		padding-top: 32px
+		padding-left: 0
+		padding-right: 0
 		h5
 			font-size: 27px
 			font-weight: bold
@@ -376,24 +432,36 @@ h6
 
 .dark
 	.singleitem
-		background-color: hsla(0,0%,9%,1)
-		background-image: radial-gradient(at 1% 0%, hsla(0,0%,9%,1) 0px, transparent 50%), radial-gradient(at 99% 97%, hsla(0,81%,14%,1) 0px, transparent 50%)
+		background: #171717
 	.insubmodal
 		input
 			border: 1px solid #e7e7e7
 
 .light
 	.singleitem
-		background-color: hsla(0,0%,100%,1)
-		background-image: radial-gradient(at 1% 0%, hsla(0,0%,100%,1) 0px, transparent 50%), radial-gradient(at 100% 100%, hsla(0,100%,54%,1) 0px, transparent 50%)
+		background: white
 	.insubmodal
 		input
 			border: 1px solid #272727
 	
 .leveltwo
 	.singleitem
+		border-bottom: 1px solid var(--forline)
+		padding-bottom: 24px
+		.rta-row
+			padding-top: 16px
+			pre
+				margin-top: 0
+				padding-top: 0
 		img
 			object-fit: cover
 			height: 100%
+			height: 160px
+
+.singleitem
+	pre
+		font-family: 'Authentic Sans', sans-serif
+		line-height: 1.4
+		font-size: 14px
 
 </style>

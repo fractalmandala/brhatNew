@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let dimension = 16;
+	export let dimension = 20;
 	export let color = 'var(--themer)';
 </script>
 

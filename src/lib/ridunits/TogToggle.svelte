@@ -74,8 +74,8 @@
 	align-items: center
 	position: relative
 	.icc
-		height: 16px
-		width: 16px
+		height: 20px
+		width: 20px
 
 .tooltip
 	position: absolute
