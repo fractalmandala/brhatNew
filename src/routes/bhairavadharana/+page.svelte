@@ -41,7 +41,6 @@
 	$metaDescription =
 		'Bhairava Dhāraṇā is a three day sādhanā retreat designed to help participants learn about the basics of Bhairava upāsanā.';
 	$metaImage = data.image;
-	$metaType = 'webpage';
 
 	export function MyTransition(Splide: any, Components: any) {
 		const { bind } = EventInterface(Splide);
@@ -142,21 +141,7 @@
 
 <!--header and metadetails-->
 <div class="rta-column outer-box limit rowgap100 serif p-top-64" id="section1">
-	<div class="rta-column rowgap200">
-		<h3 class="hindiadobe tt-u ta-c-d ta-c-m p-bot-16">{data.name}</h3>
-		<h5 class="hindiadobe tt-u ta-c-d ta-c-m p-bot-16">{data.excerpt}</h5>
-		<em class="tt-u ta-c rta-column" id="section1line2" style="background: #fe4a49"
-			>{data.status}</em
-		>
-		{#if data.status === 'open now'}
-			<a
-				href={data.kyc}
-				target="_blank"
-				rel="noreferrer"
-				class="rta-column"
-				style="align-self: center"><button class="genbutton-l">Register Here</button></a
-			>
-		{/if}
+	<div class="rta-column rowgap600">
 		<div class="rta-row iconsrow">
 			<div class="rta-column rta-icon">
 				<img src="/images/anveshi-dates.png" alt="datesicon" />
@@ -179,8 +164,17 @@
 				<p>{data.brochure}</p>
 			</div>
 		</div>
+		{#if data.status === 'open now'}
+			<a
+				href={data.kyc}
+				target="_blank"
+				rel="noreferrer"
+				class="rta-column"
+				style="align-self: center"><button class="genbutton-l">Register Here</button></a
+			>
+		{/if}
 		{#if highlights && highlights.length > 0}
-			<div class="rta-column highlightscolumn p-top-64">
+			<div class="rta-column highlightscolumn">
 				{#each highlights as item}
 					{#if item.name === 'temple'}
 						<div class="rta-row highlightsrow">
@@ -217,7 +211,7 @@
 	<div class="rta-column rowgap200">
 		<div class="rta-image">
 			<img
-				src="https://static.wixstatic.com/media/94cd83_214e5107d6134f658dac03628c814e10~mv2.png/v1/fill/w_399,h_375,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Screenshot%202022-01-24%20at%2010_21_14.png"
+				src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/bhairavadharana/rajarshinandy"
 				alt="rajarshinandy"
 			/>
 		</div>
@@ -236,18 +230,18 @@
 	<div class="rta-column rowgap200">
 		<div class="rta-image">
 			<img
-				src="https://static.wixstatic.com/media/94cd83_b688190f231f48cc9e0f673b8e2cf59c~mv2.jpg/v1/fill/w_399,h_375,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/WhatsApp%20Image%202021-12-22%20at%207_48_edited.jpg"
+				src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/bhairavadharana/ramchandraroddam"
 				alt="ramachandraroddam"
 			/>
 		</div>
 		<h4 class="hindiadobe">Ramachandra Roddam</h4>
 		<p class="hindiadobe">
-			Sh. Ramachandra Roddam is an sādhakā of the Divine Mother. He is an invited faculty who
-			teaches on Indian Spirituality, Yoga and Sādhanā. He is the author of the book Devi Bhakti
-			Tarangini, which is a devotional offering of English poems to the Supreme Goddess.
+			Sh. Ramachandra Roddam is a sādhakā of the 'Divine Mother'. He is an invited faculty who
+			teaches on Indian Spirituality, Yoga and Sādhanā. He is the author of the book 'Devi Bhakti
+			Tarangini', which is a devotional offering of English poems to the Supreme Goddess.
 		</p>
 		<p class="hindiadobe">
-			Currently he is rendering Śevā at Sanatan Siddhashram, a traditional Gurukul for the ancient
+			Currently he is rendering sevā at Sanatan Siddhashram, a traditional gurukula for the ancient
 			Baul tradition located in Birbhum district, West Bengal.
 		</p>
 	</div>
@@ -259,9 +253,10 @@
 			{data.content}
 		</pre>
 </div>
+
 <div class="rta-column outer-box rowgap200 limit">
 	<div class="rta-column p-top-32 glass-top rowgap300">
-		<h4 class="tt-u ta-c-d hindiadobe glass-bottom p-bot-32">Schedule</h4>
+		<h2 class="tt-u ta-c-d hindiadobe glass-bottom p-bot-32">Schedule</h2>
 	</div>
 	<div class="rta-grid grid4 colgap300 p-top-16">
 		{#if itins && itins.length > 0}
@@ -279,26 +274,30 @@
 
 <div class="rta-column outer-box limit rowgap100 serif">
 	<div class="rta-column p-top-32 glass-top rowgap300">
-		<h4 class="tt-u ta-c-d hindiadobe glass-bottom p-bot-32">FAQs</h4>
+		<h2 class="tt-u ta-c-d hindiadobe glass-bottom p-bot-32">FAQs</h2>
 	</div>
-	<div class="rta-grid rowgap400 colgap600 p-top-32" id="faqgrid" class:calibrated={anyFaqOpen}>
+	<div
+		class="rta-grid grid3 rowgap400 colgap600 p-top-32 p-bot-64"
+		id="faqgrid"
+		class:calibrated={anyFaqOpen}
+	>
 		{#if faqs && faqs.length > 0}
 			{#each faqs as item, i}
 				{#if item.chapter === null || item.chapter === $anveshiChapter}
 					<div
-						class="rta-column rowgap100"
+						class="rta-column null"
 						class:opentab={isFaqOpen[i]}
 						on:click={() => toggleFaq(i)}
 						on:keydown={() => toggleFaq(i)}
 					>
-						<div class="rta-row fixed ytop colgap100 rowgap400">
+						<div class="rta-row fixed ytop colgap100">
 							<div class="button-box" class:rotated={isFaqOpen[i]}>
-								<ChevronDown size="27" color="#878787" />
+								<ChevronDown size="20" color="#878787" />
 							</div>
 							<h6 class="hindiadobe faqs">{item.name}</h6>
 						</div>
 						{#if isFaqOpen[i]}
-							<p class="hindiadobe faqs">{item.content}</p>
+							<pre class="hindiadobe adobes faqs">{item.content}</pre>
 						{/if}
 					</div>
 				{/if}
@@ -310,6 +309,28 @@
 <!--end-->
 
 <style lang="sass">
+
+h2.hindiadobe
+	@media screen and (max-width: 1023px)
+		font-size: 48px
+
+.itin
+	@media screen and (max-width: 1023px)
+		border-bottom: 1px solid var(--forline)
+		h6
+			font-size: 20px
+			margin-top: 16px
+
+h6.faqs
+	margin: 0
+	padding: 0
+	@media screen and (max-width: 1023px)
+		font-size: 20px
+		padding-bottom: 8px
+
+pre.faqs
+	padding-top: 0
+	margin-top: 0
 
 .rta-grid.grid2
 	@media screen and (min-width: 1024px)
@@ -361,6 +382,7 @@ pre.hindiadobe.adobes
 	display: flex
 	flex-direction: column
 	row-gap: 12px
+	font-size: 18px
 
 .highlightsrow
 	background: var(--contraster)
@@ -407,7 +429,7 @@ pre
 		height: 40px
 		margin: auto
 	p
-		font-family: 'Space Grotesk', sans-serif
+		font-family: 'Authentic Sans', sans-serif
 		color: var(--opposite)
 		font-size: 12px
 
@@ -419,7 +441,7 @@ pre
 	width: max-content
 	padding: 4px 8px
 	align-self: center
-	font-family: 'Space Grotesk', sans-serif
+	font-family: 'Authentic Sans', sans-serif
 	@media screen and (max-width: 1023px)
 		padding: 4px 8px
 

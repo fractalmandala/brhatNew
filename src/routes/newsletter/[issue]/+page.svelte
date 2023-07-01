@@ -84,7 +84,15 @@
 	metaImage={$metaImage}
 />
 
-<Header />
+<Header>
+	<div slot="allbuttons">
+		{#if data.user !== 'none'}
+			<form class="thisform" method="post" action="?/signout">
+				<button class="newbutton"> Log Out </button>
+			</form>
+		{/if}
+	</div>
+</Header>
 
 <div
 	class="mainletter"
@@ -94,56 +102,48 @@
 	class:levelone={$breakOne}
 	class:leveltwo={$breakTwo}
 >
-	<div class="side">
-		<Social />
-		{#if data.user !== 'none'}
-			<form class="thisform" method="post" action="?/signout">
-				<button class="genbutton"> Log Out </button>
-			</form>
-			<div class="listofissues p-top-32 bord-top">
-				{#if newsissues && newsissues.length > 0}
-					<h6>All Issues</h6>
-					{#each newsissues as item}
-						<p>
-							<a href="/newsletter/{item.issueno}">
-								Issue No. {item.issueno}
-							</a>
-						</p>
-					{/each}
-				{/if}
-			</div>
-		{/if}
-	</div>
 	<div class="main">
-		<div class="glass-bottom m-bot-32 ta-r stripp">
-			<h6 class="thin">
-				Issue {data.issueData.issueno} | {data.issueData.datefrom} - {data.issueData.dateto}
-			</h6>
-		</div>
 		{#if data.user !== 'none'}
-			<div class="rta-column itemarea">
+			<div class="rta-column itemarea outer-box">
 				{#if newsitems && newsitems.length > 0}
 					{#each newsitems as item}
 						{#if $breakZero || $breakOne}
-							<div class="rta-row between singleitem glass-bottom p-bot-32 m-bot-32">
-								<div class="rta-column w64">
-									{#if item.tag}
-										<div class="tagger" style="background: {item.color}">{item.tag}</div>
-									{/if}
-									<h4 class="bord-bot p-bot-8">{item.header}</h4>
-									<pre>
+							{#if item.tag === 'Featured'}
+								<div class="rta-row featured between">
+									<div class="rta-column w64">
+										<div class="feat-tag">{item.tag}</div>
+										<div class="feat-head p-bot-16"><h1>{item.header}</h1></div>
+										<div class="feat-text"><pre>{item.content}</pre></div>
+										<a href={item.link} target="_blank" rel="noreferrer"
+											><button class="newbutton">Read Now</button></a
+										>
+									</div>
+									<div class="rta-image w32">
+										<img src={item.image} alt="featuredhero" />
+									</div>
+								</div>
+							{/if}
+							{#if item.tag !== 'Featured'}
+								<div class="rta-row between singleitem glass-bottom p-bot-32 m-bot-32">
+									<div class="rta-column w64">
+										{#if item.tag}
+											<div class="tagger" style="background: {item.color}">{item.tag}</div>
+										{/if}
+										<h4 class="bord-bot p-bot-8">{item.header}</h4>
+										<pre>
 								{item.content}
 							</pre>
-									{#if item.link}
-										<a href={item.link} target="_blank" rel="noreferrer">
-											<button class="newbutton"> Visit </button>
-										</a>
-									{/if}
+										{#if item.link}
+											<a href={item.link} target="_blank" rel="noreferrer">
+												<button class="newbutton"> Visit </button>
+											</a>
+										{/if}
+									</div>
+									<div class="rta-image w32 height-40">
+										<img src={item.image} alt="heroimage" />
+									</div>
 								</div>
-								<div class="rta-image w32 height-40">
-									<img src={item.image} alt="heroimage" />
-								</div>
-							</div>
+							{/if}
 						{:else}
 							<div class="rta-column singleitem glass-bottom p-bot-32 m-bot-32">
 								<div class="rta-column">
@@ -310,40 +310,42 @@ h6
 
 .mainletter
 	min-height: 100vh
-	display: grid
-	grid-auto-flow: row
-	.side
-		grid-area: side
-	.main
-		grid-area: main
+	display: flex
+	flex-direction: column
 
 .levelzero.mainletter, .levelone.mainletter
-	grid-template-columns: 200px 1fr
-	grid-template-areas: "side main"
 	padding-left: 32px
 	padding-right: 32px
-	align-items: stretch
-	.side
-		display: flex
-		flex-direction: column
-		row-gap: 8px
-		height: 100vh
-		border-right: 1px solid var(--forline)
-		padding-top: 96px
-		padding-right: 32px
-		position: sticky
-		top: 0
 	.main
 		min-height: 100vh
-		padding-top: 96px
-		padding-left: 64px
+		padding-top: 320px
 		padding-bottom: 96px
+		.featured
+			height: 64vh
+			width: 100%
+			.rta-image
+				height: 30vh
+				img
+					object-fit: cover
+					width: 100%
+			.feat-head
+				border-bottom: 1px solid #e7e7e7
+			.feat-tag
+				background: #fe4a49
+				color: white
+				text-transform: uppercase
+				font-size: 16px
+				padding: 4px 8px
+				width: max-content
+				max-width: 100%
+			h1
+				font-family: 'Gandhi', serif
+				font-size: 56px
+			pre
 
 .levelzero
 	.subsign
 		width: 560px
-	.thisform
-		width: 240px
 
 .leveltwo.mainletter
 	grid-template-columns: 1fr

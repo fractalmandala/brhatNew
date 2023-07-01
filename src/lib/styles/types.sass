@@ -73,17 +73,23 @@
 	src: url('/fonts/authentic/AUTHENTICSans-150.woff2') format('woff2'), url('/fonts/authentic/AUTHENTICSans-150.woff') format('woff'), url('/fonts/authentic/AUTHENTICSans-150.otf') format('otf')
 
 @font-face
-	font-family: 'Soliden', sans-serif
+	font-family: 'Gandhi', serif
 	font-style: normal
 	font-weight: regular
-	src: url('/fonts/soliden/soliden-reg.woff2') format('woff2'), url('/fonts/soliden/soliden-reg.woff') format('woff')
+	src: url('/fonts/gandhi/GandhiSerif-Regular.woff2') format('woff2'), url('/fonts/gandhi/GandhiSerif-Regular.woff') format('woff')
+
+@font-face
+	font-family: 'Gandhi', serif
+	font-style: normal
+	font-weight: bold
+	src: url('/fonts/gandhi/GandhiSerif-Bold.woff2') format('woff2'), url('/fonts/gandhi/GandhiSerif-Bold.woff') format('woff')
 
 
 $home: 'Varta', sans-serif
 $hind: 'Martel', serif
 $stix: 'Adobe Devanagari', serif
-$libre: 'Space Grotesk', sans-serif
-$grot: 'Space Grotesk', sans-serif
+$libre: 'Authentic Sans', sans-serif
+$grot: 'Authentic Sans', sans-serif
 
 body, html, li, pre
 	font-family: $grot
@@ -91,6 +97,9 @@ body, html, li, pre
 .mainletter
 	p, pre, li, em, caption, cite, blockquote, b, u, i, a, h1, h2, h3, h4, h5, h6, small
 		font-family: 'Authentic Sans', sans-serif
+	.singleitem
+		h4, pre, p
+			font-family: 'Gandhi', serif
 
 .ta-c
 	text-align: center
@@ -157,7 +166,7 @@ a
 		color: inherit
 
 h1, h2, h3, h4, h5, h6, button, input, textarea, select
-	font-family: 'Space Grotesk', sans-serif
+	font-family: 'Authentic Sans', sans-serif
 
 p, pre, li, input, small, cite
 	font-weight: 400
@@ -456,7 +465,7 @@ h1
 		font-style: italic
 	>.rta-column
 		p
-			font-family: 'Space Grotesk', serif
+			font-family: 'Authentic Sans', sans-serif
 			font-weight: bold
 			color: #878787
 			border-top: 1px solid var(--borderline)
@@ -550,7 +559,7 @@ h1
 		font-style: italic
 	>.rta-column
 		p
-			font-family: 'Space Grotesk', serif
+			font-family: 'Authentic Sans', sans-serif
 			font-weight: bold
 			color: #878787
 			border-top: 1px solid var(--borderline)

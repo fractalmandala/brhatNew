@@ -62,8 +62,6 @@
 	display: flex
 	flex-direction: row
 	column-gap: 12px
-	border-bottom: 1px solid var(--forline)
-	padding-bottom: 8px
 
 .leveltwo
 	display: flex

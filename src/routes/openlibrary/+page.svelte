@@ -576,7 +576,7 @@
 
 .light, .dark
 	p, h6, h5, h4, h3, small, .drawer-item
-		font-family: 'Space Grotesk', sans-serif
+		font-family: 'Authentic Sans', sans-serif
 	.drawer-item
 		font-weight: bold
 		font-size: 21px

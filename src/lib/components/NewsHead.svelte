@@ -3,6 +3,7 @@
 	import { themeMode } from '$lib/stores/globalstores';
 	import { browser } from '$app/environment';
 	import CompToggle from '$lib/ridunits/TogToggle.svelte';
+	import Social from '$lib/components/Social.svelte';
 
 	let y: number;
 	let height: number;
@@ -56,31 +57,27 @@
 	class:light={$themeMode}
 	class:dark={!$themeMode}
 >
-	<a class="applogo" href="/" data-sveltekit-reload>
-		<div class="title">
-			B<span style="color: #fe4a49"> ṛ</span>hat Fortnightly Dispatch
+	<div class="bigg p-top-64">
+		<div class="pagetitle">BṚHATADYA</div>
+		<div class="rta-row xcenter-d ycenter colgap100">
+			<div class="thinline" />
+			<div class="subtitle">Fortnightly Updates from the Culture Engine</div>
+			<div class="thinline" />
 		</div>
-		<slot name="currentissue" />
-	</a>
+	</div>
 	<div class="midrow">
-		<slot name="local" />
-	</div>
-	<div class="menuicon">
-		<p><a href="/">Bṛhat Main</a></p>
-	</div>
-	<div class="search" id="single" on:click={toggleVisibility} on:keydown={fauxfake}>
-		<CompToggle />
+		<div class="null">
+			<p><a href="/">Home</a></p>
+		</div>
+		<Social />
+		<div class="search" id="single" on:click={toggleVisibility} on:keydown={fauxfake}>
+			<CompToggle />
+		</div>
+		<slot name="allbuttons" />
 	</div>
 </div>
 
 <style lang="sass">
-
-.title
-	color: var(--opposite)
-	font-size: 18px
-	font-weight: bold
-	letter-spacing: 0.15px
-	font-family: 'Authentic Sans', sans-serif
 	
 .appheader
 	display: grid
@@ -91,22 +88,41 @@
 	top: 0
 	transition: 0.5s cubic-bezier(0.635, 0.405, 0.535, 0.035)
 	@media screen and (min-width: 1024px)
-		grid-template-columns: 400px 1fr 96px 20px
-		grid-template-rows: 1fr
-		grid-template-areas: "applogo midrow menuicon search"
-		height: 48px
+		grid-template-columns: 1fr
+		grid-template-rows: auto auto
+		grid-template-areas: "bigg" "midrow"
 		align-content: center
 		align-items: center
 		padding: 0 32px
 		gap: 0 12px
 		border-bottom: 1px solid var(--forline)
-		.applogo
-			grid-area: applogo
+		.bigg
+			grid-area: bigg
+			display: flex
+			flex-direction: column
+			margin-bottom: 32px
+			.pagetitle
+				text-align: center
+				font-weight: bold
+				font-family: 'Gandhi', serif
+				font-size: 104px
+				letter-spacing: -2px
+			.subtitle
+				text-align: center
+				color: var(--themer)
+				font-size: 12px
+			.thinline
+				height: 1px
+				width: 32px
+				background: var(--opposite)
 		.midrow
-			gap: 24px
-		.search
-			grid-area: search
-			width: 20px
+			display: flex
+			flex-direction: row
+			justify-content: center
+			border-top: 1px solid var(--forline)
+			column-gap: 16px
+			padding-top: 8px
+			padding-bottom: 8px
 	@media screen and (max-width: 1023px)
 		grid-template-columns: 1fr 96px
 		grid-template-rows: 1fr
@@ -126,52 +142,5 @@
 
 .appheader.hiddenHeader
 	transform: translateY(-80px)
-	
-.applogo
-	grid-area: applogo
-	display: flex
-	flex-direction: column
-	align-items: flex-start
-	text-align: left
-	justify-content: center
-	height: 100%
-	row-gap: 2px
-
-.midrow
-	grid-area: midrow
-	display: flex
-	@media screen and (min-width: 1024px)
-		display: row
-		height: 100%
-		align-items: center
-		justify-content: flex-end
-		margin-right: 24px
-	@media screen and (max-width: 1023px)
-		display: none
-
-.menuicon
-	grid-area: menuicon
-	display: flex
-	flex-direction: row
-	align-items: center
-	justify-content: flex-end
-	width: 96px
-	color: var(--themer)
-	text-transform: uppercase
-	cursor: pointer
-	height: 26px
-	padding: 2px 0
-	p
-		font-weight: 400
-		color: var(--themer)
-		text-align: right
-		font-family: 'Authentic Sans', sans-serif
-		font-size: 14px
-	@media screen and (max-width: 1023px)
-		height: 64px
-		width: 100%
-	&:hover
-		p
-			color: #fe4a49
 
 </style>

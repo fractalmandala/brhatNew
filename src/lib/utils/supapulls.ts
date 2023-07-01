@@ -291,7 +291,7 @@ export async function chapterHighlight(chapter: string){
   .select()
 	.eq('chapter',chapter)
 	.eq('type','highlight')
-  .order('id')
+  .order('sequence')
   if (error) throw new Error(error.message)
   return data
 }
