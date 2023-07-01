@@ -727,6 +727,16 @@ export async function newsletterItems(issueno:number){
 	.select()
 	.eq('type','item')
 	.eq('issueno',issueno)
+	.order('seq')
+  if (error) throw new Error(error.message)
+  return data	
+}
+
+export async function newsletterIssues(){
+	const { data, error } = await supabase
+	.from('brhat-newsletter')
+	.select()
+	.eq('type','issue')
 	.order('id')
   if (error) throw new Error(error.message)
   return data	

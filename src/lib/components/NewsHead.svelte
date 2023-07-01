@@ -111,9 +111,9 @@
 		grid-template-columns: 1fr 96px
 		grid-template-rows: 1fr
 		grid-template-areas: "applogo menuicon"
-		height: 64px
+		min-height: 48px
 		align-content: start
-		padding: 0 16px
+		padding: 8px 16px
 		justify-items: stretch
 		.search
 			display: none
