@@ -213,13 +213,53 @@
 </div>
 <!--end-->
 
+<div class="rta-grid grid2 colgap400 rowgap400 outer-box limit">
+	<div class="rta-column rowgap200">
+		<div class="rta-image">
+			<img
+				src="https://static.wixstatic.com/media/94cd83_214e5107d6134f658dac03628c814e10~mv2.png/v1/fill/w_399,h_375,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Screenshot%202022-01-24%20at%2010_21_14.png"
+				alt="rajarshinandy"
+			/>
+		</div>
+		<h4 class="hindiadobe">Rajarshi Nandy</h4>
+		<p class="hindiadobe">
+			Sh. Rajarshi Nandy is an sādhakā whose path is associated with tantric upasana of The Divine
+			Mother. He is also an author and columnist on several topics related to Indian religious and
+			spiritual thought. He has recently re-published his insightful book Adhyatmikta and manages a
+			popular Facebook page by same name.
+		</p>
+		<p class="hindiadobe">
+			He has also helped co-author a paper exploring the links between Tantra and Modern
+			Neuroscience which was published in Neurology India.
+		</p>
+	</div>
+	<div class="rta-column rowgap200">
+		<div class="rta-image">
+			<img
+				src="https://static.wixstatic.com/media/94cd83_b688190f231f48cc9e0f673b8e2cf59c~mv2.jpg/v1/fill/w_399,h_375,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/WhatsApp%20Image%202021-12-22%20at%207_48_edited.jpg"
+				alt="ramachandraroddam"
+			/>
+		</div>
+		<h4 class="hindiadobe">Ramachandra Roddam</h4>
+		<p class="hindiadobe">
+			Sh. Ramachandra Roddam is an sādhakā of the Divine Mother. He is an invited faculty who
+			teaches on Indian Spirituality, Yoga and Sādhanā. He is the author of the book Devi Bhakti
+			Tarangini, which is a devotional offering of English poems to the Supreme Goddess.
+		</p>
+		<p class="hindiadobe">
+			Currently he is rendering Śevā at Sanatan Siddhashram, a traditional Gurukul for the ancient
+			Baul tradition located in Birbhum district, West Bengal.
+		</p>
+	</div>
+</div>
+
 <!--detailed content and itinerary-->
-<div class="rta-column outer-box limit rowgap200 p-top-64">
-	<pre class="h5 hindiadobe">
+<div class="rta-column outer-box limit rowgap200">
+	<pre class="h5 hindiadobe glass-top p-top-32">
 			{data.content}
 		</pre>
 </div>
-<div class="rta-column outer-box rowgap200 limit p-top-32">
+<div class="rta-column outer-box rowgap200 limit">
 	<div class="rta-column p-top-32 glass-top rowgap300">
 		<h4 class="tt-u ta-c-d hindiadobe glass-bottom p-bot-32">Schedule</h4>
 	</div>
@@ -270,6 +310,40 @@
 <!--end-->
 
 <style lang="sass">
+
+.rta-grid.grid2
+	@media screen and (min-width: 1024px)
+		.rta-image
+			display: flex
+			flex-direction: column
+			align-items: center
+			img
+				object-fit: cover
+				height: 200px
+				width: 200px	
+				margin-left: auto
+				margin-right: auto	
+		.rta-column
+			h4
+				text-align: center
+			p
+				font-size: 18px
+	@media screen and (max-width: 1023px)
+		.rta-image
+			display: flex
+			flex-direction: column
+			align-items: center
+			img
+				object-fit: cover
+				height: 200px
+				width: 200px	
+				margin-left: auto
+				margin-right: auto	
+		.rta-column
+			h4
+				text-align: center
+			p
+				font-size: 18px
 
 .x0
 	overflow: hidden
