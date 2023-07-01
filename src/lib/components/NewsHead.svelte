@@ -145,10 +145,6 @@
 			column-gap: 16px
 			padding-top: 8px
 			padding-bottom: 8px
-			.search.rta-row
-				width: 18px
-				height: 18px
-				align-items: center
 
 .appheader.light
 	background: #FFFFFF

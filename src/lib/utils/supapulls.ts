@@ -727,6 +727,7 @@ export async function newsletterItems(issueno:number){
 	.select()
 	.eq('type','item')
 	.eq('issueno',issueno)
+	.eq('live', true)
 	.order('seq')
   if (error) throw new Error(error.message)
   return data	
