@@ -164,6 +164,7 @@
 				<img src="/images/icon-tent.png" alt="tenticon" />
 				<p>{data.brochure}</p>
 			</div>
+		</div>
 		<h3 class="hindiadobe tt-u ta-c-d ta-c-m p-bot-16">{data.name}</h3>
 		<h5 class="hindiadobe tt-u ta-c-d ta-c-m p-bot-16">{data.excerpt}</h5>
 		{#if data.status === 'open now'}
