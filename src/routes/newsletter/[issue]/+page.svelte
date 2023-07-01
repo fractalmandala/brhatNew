@@ -206,7 +206,7 @@
 				</div>
 			{/if}
 		{:else}
-			<div class="rta-column rowgap200 subsign">
+			<div class="outer-box rta-column rowgap200 subsign m-bot-32">
 				<h5>Please subscribe to access the newsletter.</h5>
 				<button class="genbutton" on:click={toggleSubscribe}> Subscribe </button>
 				<p class="bord-top p-top-16">Already subscribed? Sign In below:</p>
