@@ -236,6 +236,28 @@
 				</form>
 			</div>
 		{/if}
+		<div class="outer-box">
+			<div class="aboutstrip">
+				<h5>About Bṛhatadya</h5>
+				<p>
+					"Adya," meaning 'today, this day, now, at present', combines with Bṛhat to denote 'Bṛhat
+					Today,' or 'Bṛhat Now'- a fair name for a periodic newsletter that updates recent events
+					and activities at Bṛhat.
+				</p>
+				<p>
+					A second meaning lends deeper significance. With 'bṛhat' meaning 'great, formidable,
+					large, growing,' 'Bṛhat-Adya' means the "Great Now," or the "Great Moment," ie- the
+					civilizational moment we are currently in. Read more about this moment, and what it means
+					for all of us,
+					<a
+						style="color: #fe4a49"
+						href="https://www.brhat.in/about/anatomy"
+						target="_blank"
+						rel="noreferrer">here.</a
+					>
+				</p>
+			</div>
+		</div>
 	</div>
 </div>
 {#if submodal}
@@ -267,6 +289,27 @@
 {/if}
 
 <style lang="sass">
+
+
+.aboutstrip
+	display: flex
+	flex-direction: column
+	align-self: center
+	place-self: center
+	justify-self: center
+	border: 1px solid var(--forline)
+	padding: 24px
+	h5
+		font-weight: bold
+		color: var(--opposite)
+		margin-bottom: 16px
+		font-family: 'Gandhi', serif
+	p
+		margin-bottom: 16px
+		line-height: 1.4
+	margin-left: auto
+	margin-right: auto
+	border-radius: 6px
 
 .subscribemodal
 	display: flex
@@ -319,12 +362,6 @@
 		padding: 4px 8px
 		outline: none
 
-.listofissues
-	p
-		font-size: 14px
-		&:hover
-			a
-				color: #fe4a49
 
 .tagger
 	font-family: 'Authentic Sans', sans-serif
@@ -336,10 +373,6 @@
 	padding: 2px 6px
 	margin-bottom: 12px
 
-h6
-	color: var(--themer)
-	font-size: 16px
-	padding-bottom: 8px
 
 .mainletter
 	min-height: 100vh
@@ -398,7 +431,7 @@ h6
 	.subsign
 		width: 560px
 	.singleitem
-		padding: 24px
+		padding: 48px
 		border: 1px solid var(--forline)
 		border-radius: 6px
 		.rta-row
@@ -421,8 +454,6 @@ h6
 			font-size: 27px
 			font-weight: bold
 			color: var(--opposite)
-		.stripp
-			display: none
 	
 	
 .mainletter
