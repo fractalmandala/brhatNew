@@ -10,7 +10,7 @@
 		metaType,
 		anveshiChapter
 	} from '$lib/stores/metastores';
-	import ParallaxImage from '$lib/components/ParallaxImage.svelte';
+	import { ChevronDown } from 'lucide-svelte';
 	import { chapterItinerary, allFaq } from '$lib/utils/supapulls';
 	import {
 		chapterTemples,
@@ -28,7 +28,7 @@
 	let cfaqs: string | any[];
 	let highlights: any;
 	let itins: string | any[];
-	let openedDay: boolean[] = Array(5).fill(false);
+	let isFaqOpen: boolean[] = Array(15).fill(false);
 	let temp: any;
 	let area: any = Array(2).fill(false);
 	area[1] = true;
@@ -87,6 +87,20 @@
 		};
 	}
 
+	function toggleFaq(index: number) {
+		isFaqOpen[index] = !isFaqOpen[index];
+		for (let i = 0; i < isFaqOpen.length; i++) {
+			if (i !== index && isFaqOpen[i] === true) {
+				isFaqOpen[i] = false;
+			}
+		}
+		if (alignGrid === false) {
+			alignGrid = true;
+		}
+	}
+
+	$: anyFaqOpen = isFaqOpen.some((item) => item);
+
 	$: if ($anveshiChapter) {
 		(async () => {
 			itins = await chapterItinerary($anveshiChapter);
@@ -102,8 +116,7 @@
 		itins = await chapterItinerary($anveshiChapter);
 		temp = await chapterTemples($anveshiChapter);
 		highlights = await chapterHighlight($anveshiChapter);
-		faqs = await allFaq();
-		cfaqs = await chapterFaq($anveshiChapter);
+		faqs = await chapterFaq('bhairavadharana');
 		gens = await anveshiGeneral();
 	});
 
@@ -124,7 +137,7 @@
 <Header />
 
 <div class="x0" data-lenis-scroll-snap-align="start">
-	<ParallaxImage --parallax="url('{data.image}')" --parallaxresp="url('{data.image}')" />
+	<img src={data.image} alt="hero" />
 </div>
 
 <!--header and metadetails-->
@@ -224,12 +237,44 @@
 	</div>
 </div>
 
+<div class="rta-column outer-box limit rowgap100 serif">
+	<div class="rta-column p-top-32 glass-top rowgap300">
+		<h4 class="tt-u ta-c-d hindiadobe glass-bottom p-bot-32">FAQs</h4>
+	</div>
+	<div class="rta-grid rowgap400 colgap600 p-top-32" id="faqgrid" class:calibrated={anyFaqOpen}>
+		{#if faqs && faqs.length > 0}
+			{#each faqs as item, i}
+				{#if item.chapter === null || item.chapter === $anveshiChapter}
+					<div
+						class="rta-column rowgap100"
+						class:opentab={isFaqOpen[i]}
+						on:click={() => toggleFaq(i)}
+						on:keydown={() => toggleFaq(i)}
+					>
+						<div class="rta-row fixed ytop colgap100 rowgap400">
+							<div class="button-box" class:rotated={isFaqOpen[i]}>
+								<ChevronDown size="27" color="#878787" />
+							</div>
+							<h6 class="hindiadobe faqs">{item.name}</h6>
+						</div>
+						{#if isFaqOpen[i]}
+							<p class="hindiadobe faqs">{item.content}</p>
+						{/if}
+					</div>
+				{/if}
+			{/each}
+		{/if}
+	</div>
+</div>
+
 <!--end-->
 
 <style lang="sass">
 
 .x0
 	overflow: hidden
+	img
+		object-fit: contain
 	@media screen and (min-width: 1024px)
 		height: 100vh
 		padding-top: 80px
