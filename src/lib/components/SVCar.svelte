@@ -85,7 +85,7 @@
 						</small>
 					</div>
 				</SplideSlide>
-				<!--
+
 				<SplideSlide>
 					<div class="rta-video">
 						<Youtuber youTubeId={'gkAaT9XBURE'} />
@@ -96,7 +96,7 @@
 						</small>
 					</div>
 				</SplideSlide>
-				-->
+
 				<SplideSlide>
 					<div class="faker" style="background-image: url('/images/svthumbs/2.jpeg')">
 						<div class="inscreen">Coming Soon</div>

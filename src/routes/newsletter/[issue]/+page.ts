@@ -1,4 +1,5 @@
 import type { PageLoad } from './$types';
+import { redirect } from '@sveltejs/kit';
 import supabase from '$lib/utils/db'
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 let user:any
@@ -7,8 +8,7 @@ export const load: PageLoad = async ({ params, parent }) => {
     // parent-based operation
 	const { session, supabase: parentSupabase } = await parent();
 	if (!session) {
-		console.log('no!')
-		user = 'none'
+		redirect(303,'/')
 	} else {
 		user = session.user;
 	}

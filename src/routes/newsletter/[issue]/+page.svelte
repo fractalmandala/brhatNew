@@ -8,7 +8,6 @@
 	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/stores/metastores';
 	import Social from '$lib/components/Social.svelte';
 	import Head from '$lib/components/HeadComponent.svelte';
-	import Header from '$lib/components/NewsHead.svelte';
 	import Close from '$lib/icons/close.svelte';
 	import { newsletterItems, newsletterIssues } from '$lib/utils/supapulls';
 	import { showChip } from '$lib/stores/globalstores';
@@ -83,16 +82,6 @@
 	metaUrl={$metaUrl}
 	metaImage={$metaImage}
 />
-
-<Header>
-	<div slot="allbuttons">
-		{#if data.user !== 'none'}
-			<form class="thisform" method="post" action="?/signout">
-				<button class="newbutton"> Log Out </button>
-			</form>
-		{/if}
-	</div>
-</Header>
 
 <div
 	class="mainletter"
@@ -205,59 +194,7 @@
 					{/if}
 				</div>
 			{/if}
-		{:else}
-			<div class="outer-box rta-column rowgap200 subsign">
-				<h5>Please subscribe to access the newsletter.</h5>
-				<button class="genbutton" on:click={toggleSubscribe}> Subscribe </button>
-				<p class="bord-top p-top-16">Already subscribed? Sign In below:</p>
-				<form class="thisform" method="post" action="?/login">
-					<div class="rta-column rowgap100 null">
-						<input
-							id="email"
-							name="email"
-							value={form?.values?.email ?? ''}
-							class="input"
-							type="email"
-							placeholder="Email"
-							required
-						/>
-
-						<input
-							id="password"
-							name="password"
-							class="input"
-							type="password"
-							placeholder="Password"
-							required
-						/>
-
-						<button disabled={loading} class="genbutton">Sign in</button>
-					</div>
-				</form>
-			</div>
 		{/if}
-		<div class="outer-bo">
-			<div class="aboutstrip">
-				<h5>About Bṛhatadya</h5>
-				<p>
-					"Adya," meaning 'today, this day, now, at present', combines with Bṛhat to denote 'Bṛhat
-					Today,' or 'Bṛhat Now'- a fair name for a periodic newsletter that updates recent events
-					and activities at Bṛhat.
-				</p>
-				<p>
-					A second meaning lends deeper significance. With 'bṛhat' meaning 'great, formidable,
-					large, growing,' 'Bṛhat-Adya' means the "Great Now," or the "Great Moment," ie- the
-					civilizational moment we are currently in. Read more about this moment, and what it means
-					for all of us,
-					<a
-						style="color: #fe4a49"
-						href="https://www.brhat.in/about/anatomy"
-						target="_blank"
-						rel="noreferrer">here.</a
-					>
-				</p>
-			</div>
-		</div>
 	</div>
 </div>
 {#if submodal}
