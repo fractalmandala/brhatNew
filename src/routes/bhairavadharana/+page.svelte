@@ -142,7 +142,7 @@
 <!--header and metadetails-->
 <div class="rta-column outer-box limit rowgap100 serif p-top-64" id="section1">
 	<div class="rta-column rowgap600">
-		<em class="tt-u ta-c rta-column" id="section1line2" 
+		<em class="tt-u ta-c rta-column" id="section1line2" style="background: #FE4A49"
 			>{data.status}</em
 		>
 		<div class="rta-row iconsrow">
