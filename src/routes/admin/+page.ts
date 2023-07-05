@@ -3,7 +3,11 @@ import type { PageLoad } from './$types';
 export const load: PageLoad = async ({ parent }) => {
 	const { session, supabase } = await parent();
 	if (!session) {
-		console.log(session)
+		return {
+			a: 'not',
+			in: false,
+			ems: 'none'
+		}
 	}
 	const { data: testTable } = await supabase.from('test').select('*');
 	return {
@@ -11,6 +15,7 @@ export const load: PageLoad = async ({ parent }) => {
 		in: true,
 		testTable,
 		supabase, 
-		session, 
+		sessionID: session,
+		ems: session.user.email
 	};
 };

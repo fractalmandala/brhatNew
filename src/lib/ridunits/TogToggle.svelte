@@ -10,6 +10,7 @@
 	let breakPoint: boolean;
 	let flyX: number;
 	let flyY: number;
+	let dim = 16;
 
 	$: if (iW <= 1023) {
 		breakPoint = true;
@@ -60,9 +61,9 @@
 	{/if}
 	<div class="icc">
 		{#if $themeMode}
-			<Moon />
+			<Moon dimension={dim} />
 		{:else if !$themeMode}
-			<Sun />
+			<Sun dimension={dim} />
 		{/if}
 	</div>
 </div>

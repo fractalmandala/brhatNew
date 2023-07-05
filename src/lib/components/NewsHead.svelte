@@ -1,30 +1,12 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { themeMode } from '$lib/stores/globalstores';
-	import { browser } from '$app/environment';
-	import CompToggle from '$lib/ridunits/TogToggle.svelte';
 	import Social from '$lib/components/Social.svelte';
 
 	let y: number;
 	let height: number;
 	let isInvisible = false;
-	let mouseY: number;
 	let latestScrollY: number;
-	let fake = false;
-
-	function toggleVisibility() {
-		if (browser) {
-			themeMode.update((mode) => {
-				const newMode = !mode;
-				localStorage.setItem('themeMode', JSON.stringify(newMode));
-				return newMode;
-			});
-		}
-	}
-
-	function fauxfake() {
-		fake = !fake;
-	}
+	let changer = false;
 
 	$: {
 		if (y > 100 && y > latestScrollY) {
@@ -33,6 +15,12 @@
 			isInvisible = false;
 		}
 		latestScrollY = y;
+	}
+
+	$: if (y >= 600) {
+		changer = true;
+	} else {
+		changer = false;
 	}
 </script>
 
@@ -44,17 +32,23 @@
 	class:light={$themeMode}
 	class:dark={!$themeMode}
 >
-	<div class="bigg p-top-64">
-		<div class="pagetitle">BṚHATADYA</div>
+	<div class="bigg p-top-16">
+		<a href="/newsletter" class="pagetitle">BṚHATADYA</a>
 		<div class="rta-row xcenter-d xcenter-m ycenter colgap100">
 			<div class="thinline" />
 			<div class="subtitle">Fortnightly Updates from the Culture Engine</div>
 			<div class="thinline" />
 		</div>
 	</div>
-	<div class="midrow">
+	<div class="midrow" class:changed={changer}>
 		<div class="null">
-			<p><a href="/">Home</a></p>
+			<p><a href="/">Bṛhat Home</a></p>
+		</div>
+		<div class="null">
+			<p>|</p>
+		</div>
+		<div class="null">
+			<p><a href="/newsletter/1">ISSUE 1</a></p>
 		</div>
 		<Social />
 		<slot name="allbuttons" />
@@ -62,6 +56,14 @@
 </div>
 
 <style lang="sass">
+
+p
+	&:hover
+		a
+			color: #fe4a49
+
+.midrow.changed
+	background: var(--opposite)
 	
 .appheader
 	display: grid
@@ -77,7 +79,6 @@
 		grid-template-areas: "bigg" "midrow"
 		align-content: center
 		align-items: center
-		padding: 0 32px
 		gap: 0 12px
 		border-bottom: 1px solid var(--forline)
 		.bigg
@@ -89,7 +90,7 @@
 				text-align: center
 				font-weight: bold
 				font-family: 'Gandhi', serif
-				font-size: 104px
+				font-size: 80px
 				letter-spacing: -2px
 				color: var(--opposite)
 			.subtitle
@@ -154,9 +155,9 @@
 
 .appheader.hiddenHeader
 	@media screen and (min-width: 1024px)
-		transform: translateY(-232px)
+		transform: translateY(-156px)
 	@media screen and (max-width: 1023px)
-		transform: translateY(-144px)
+		transform: translateY(-128px)
 
 .midrow
 	p, p a

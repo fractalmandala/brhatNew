@@ -767,6 +767,8 @@ body, html
 	@media screen and (min-width: 1024px)
 		flex-direction: row
 		column-gap: 16px
+		p, a, p a
+			font-size: 14px
 
 .dropper-chevron
 	transition: 0.15s 
@@ -784,7 +786,7 @@ body, html
 		text-align: right
 		a
 			background: #171717
-			font-size: 18px
+			font-size: 16px
 			padding: 4px 8px
 			transition: 0.08s
 			&:hover
@@ -803,6 +805,7 @@ body, html
 	h3
 		border-bottom: 1px solid var(--borderline)
 		padding-bottom: 16px
+		color: var(--opposite)
 	@media screen and (max-width: 1023px)
 		h3
 			font-size: 2rem
@@ -1274,6 +1277,42 @@ body, html
 			-webkit-transition: all 0.25s
 			transition: all 0.25s
 			background: #fe4a49
+
+
+.newbutton.big
+	min-width: 7.2em
+	height: 32px
+	background: #474747
+	color: white
+	border: none
+	border-radius: 6px
+	font-size: 14px
+	font-weight: 400
+	cursor: pointer
+	position: relative
+	z-index: 1
+	overflow: hidden
+	font-family: 'Authentic Sans', sans-serif
+	&:hover
+		color: white
+	&::after
+		content: ''
+		background: white
+		position: absolute
+		z-index: -1
+		left: -20%
+		right: -20%
+		top: 0
+		bottom: 0
+		transform: skewX(-45deg) scale(0, 1)
+		transition: all 0.5s
+	&:hover
+		&::after
+			transform: skewX(-45deg) scale(1, 1)
+			-webkit-transition: all 0.5s
+			transition: all 0.5s
+			background: #fe4a49
+
 
 .newbutton.red.big
 	min-width: 7.2em

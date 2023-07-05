@@ -19,6 +19,23 @@ export async function completeDhiti(){
 	return eachfiled
 }
 
+export async function adminDocs(){
+	const allfiles = import.meta.glob('/src/routes/admin/*.md')
+	const filed = Object.entries(allfiles)
+	const eachfiled = await Promise.all(
+		filed.map(async([path, resolver]) => {
+			// @ts-ignore
+			const { metadata } = await resolver()
+			const postPath = path.slice(11,-3)
+			return {
+				meta: metadata,
+				path: postPath
+			}
+		})
+	)
+	return eachfiled
+}
+
 export async function latestDhitiPost(){
 	const allPostFiles = import.meta.glob('/src/routes/dhiti/*.md')
 	const iterablePostFiles = Object.entries(allPostFiles)

@@ -127,9 +127,6 @@
 		on:mouseleave={handleMouseLeave}
 	>
 		<div class="right colgap200" id="searcharea">
-			<div class="hidethis" on:click={toggleVisibility} on:keydown={fauxfake}>
-				<CompToggle />
-			</div>
 			<form class="rta-row colgap200 xend">
 				<input
 					type="text"
@@ -192,10 +189,6 @@
 
 <style lang="sass">
 
-.hidethis
-	@media screen and (min-width: 900px)
-		display: none
-
 #searcharea
 	position: relative
 	input
@@ -218,7 +211,7 @@
 	@media screen and (max-width: 1023px)
 		padding: 8px 32px
 		.rta-row
-			width: calc(100% - 56px)
+			width: 100%
 
 .search-results
 	@media screen and (min-width: 1024px)

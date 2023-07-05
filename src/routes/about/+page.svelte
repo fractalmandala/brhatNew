@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { page } from '$app/stores';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
+	import { themeMode } from '$lib/stores/globalstores';
 	import { scale } from 'svelte/transition';
 	import {
 		createCurateConsult,
@@ -31,6 +31,7 @@
 	let authorCardOn = Array(12).fill(false);
 	let fake = false;
 	let alignGrid = false;
+	let y: number;
 
 	$metaUrl = 'https://www.brhat.in/about';
 	$metaTitle = 'About Bṛhat';
@@ -74,6 +75,8 @@
 	});
 </script>
 
+<svelte:window bind:scrollY={y} />
+
 <Head
 	title={$metaTitle}
 	metaDescription={$metaDescription}
@@ -91,24 +94,44 @@
 <!--end-->
 
 <!--intro section with 3 actions-->
+<div class="rta-column rowgap300 ycenter outer-box limit minH glass-bottom">
+	<h1>Bṛhat is a Culture Engine</h1>
+	<h5>
+		To power creatives, research and design rooted in the Indian civilizational consciousness.
+	</h5>
+	<div class="motifimage rta-image">
+		{#if $themeMode}
+			<img
+				src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/02brhatlogos/motif-black.png"
+				alt="motifblack"
+				style="transform: rotate({y / 2}deg)"
+			/>
+		{:else}
+			<img
+				src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/02brhatlogos/motif-white.png"
+				alt="motifwhite"
+				style="transform: rotate({y / 2}deg)"
+			/>
+		{/if}
+	</div>
+</div>
+
 <div
-	class="x1 type-thin rta-column ycenter outer-box glass-bottom limit p-top-64 minH rowgap400"
+	class="x1 rta-column ycenter outer-box glass-bottom limit p-top-64 minH rowgap400"
 	data-lenis-scroll-snap-align="start"
 >
-	<h1>Bṛhat is a<br /><span>culture engine</span></h1>
 	<h5 class="typett">
-		To power creatives, research and design rooted in the Indian civilizational consciousness. We
-		convert individual, institutional and collective intent into action, across 3 dimensions.
+		We convert individual, institutional and collective intent into action, across 3 dimensions.
 	</h5>
-	<div class="rta-grid grid3 rowgap400 colgap400">
+	<div class="rta-column rowgap400">
 		{#if threeactions && threeactions.length > 0}
 			{#each threeactions as item}
-				<div class="rta-column col-row rowgap300">
-					<div class="rta-image" id="imagebox">
+				<div class="rta-row stay colgap300 p-top-16" id="specialone">
+					<div class="rta-image w32 imageboxabout">
 						<img src={item.image} alt={item.id} />
 					</div>
-					<div class="rta-column ta-c-d rowgap100">
-						<h6>{item.name}</h6>
+					<div class="rta-column null rowgap100 w64">
+						<h5 class="nohemi">{item.name}</h5>
 						<pre>{item.content}</pre>
 					</div>
 				</div>
@@ -120,23 +143,23 @@
 
 <!--three constraints-->
 <div
-	class="rta-column type-thin minH ycenter outer-box limit glass-bottom rowgap600"
+	class="rta-column p-top-64 minH p-bot-16 ycenter outer-box limit glass-bottom rowgap200"
 	data-lenis-scroll-snap-align="start"
 >
 	<h5 class="typett">
 		An engine is an instrument for transformation, and this engine is to build the self-perpetuating
 		civilizational moment. How does one go about doing that?
 	</h5>
-	<h4 class="typett">At Bṛhat, we're acutely aware of three constraints:</h4>
-	<div class="rta-grid grid3 rowgap400 colgap400">
+	<h3 class="typett p-bot-16 oppositer">At Bṛhat, we're acutely aware of three constraints:</h3>
+	<div class="rta-column rowgap400">
 		{#if threeareas && threeareas.length > 0}
 			{#each threeareas as item}
-				<div class="rta-column col-row rowgap200">
-					<div class="rta-image w32" id="imagebox2">
+				<div class="rta-row stay colgap300 bord-top p-top-32">
+					<div class="rta-image w32 imageboxabout">
 						<img src={item.image} alt={item.id} />
 					</div>
-					<div class="rta-column ta-c-d rowgap200 w64">
-						<h6>{item.name}</h6>
+					<div class="rta-column null rowgap100 w64">
+						<h5 class="nohemi">{item.name}</h5>
 						<p class="wide60">{item.content}</p>
 					</div>
 				</div>
@@ -148,7 +171,7 @@
 
 <!--severest constraint is time-->
 <div
-	class="rta-column type-thin p-top-64 ycenter outer-box glass-bottom limit rowgap400"
+	class="rta-column type-thin p-top-64 ycenter outer-box minH glass-bottom limit rowgap400"
 	data-lenis-scroll-snap-align="start"
 >
 	<h5 class="typett">
@@ -182,7 +205,7 @@
 <!--end-->
 
 <div class="rta-column ycenter rowgap600 outer-box minH limit" data-lenis-scroll-snap-align="start">
-	<h3 class="typett glass-y p-top-32 p-bot-32">ADVISORS</h3>
+	<h2 class="typett glass-y p-top-32 p-bot-32">ADVISORS</h2>
 	<div class="rta-grid grid4 rowgap400 colgap400" id="advisors">
 		{#if advisors && advisors.length > 0}
 			{#each advisors as item}
@@ -191,7 +214,7 @@
 						<img src={item.image} alt={item.id} />
 					</div>
 					<div class="rta-column rowgap100">
-						<h6>{item.name}</h6>
+						<h6 class="nohemi">{item.name}</h6>
 						<small>{item.title}</small>
 					</div>
 				</div>
@@ -200,8 +223,8 @@
 	</div>
 </div>
 
-<div class="rta-column rowgap600 outer-box limit" data-lenis-scroll-snap-align="start">
-	<h3 class="glass-y p-top-32 p-bot-32">PARTNERS</h3>
+<div class="rta-column rowgap600 outer-box minH ycenter limit" data-lenis-scroll-snap-align="start">
+	<h2 class="glass-y p-top-32 p-bot-32">PARTNERS</h2>
 	<div class="a-box gridnew" id="partners">
 		{#if partners && partners.length > 0}
 			{#each partners as item}
@@ -216,7 +239,7 @@
 </div>
 
 <div class="rta-column rowgap600 outer-box limit p-top-64" data-lenis-scroll-snap-align="start">
-	<h3 class="glass-y p-top-32 p-bot-32">TEAM</h3>
+	<h2 class="glass-y p-top-32 p-bot-32">TEAM</h2>
 	<div class="rta-grid grid3 colgap600 rowgap600 p-bot-64" class:calibrated={alignGrid} id="team">
 		{#if team && team.length > 0}
 			{#each team as item, i}
@@ -231,7 +254,7 @@
 							<img src={item.image} alt={item.id} />
 						</div>
 						<div class="rta-column p-top-8 rowgap100">
-							<h6>{item.name}</h6>
+							<h6 class="nohemi">{item.name}</h6>
 							<small class="bord-bot p-bot-16">{item.title}</small>
 						</div>
 						<div class="rta-column p-top-8 rowgap100">
@@ -354,17 +377,33 @@
 
 <style lang="sass">
 
-#imagebox, #imagebox2
+.motifimage
+	img
+		transform-origin: center center
 	@media screen and (min-width: 1024px)
-		border-radius: 80px
+		width: 200px
+		height: 200px
+	@media screen and (max-width: 1023px)
+		height: 144px
+		width: 144px
+
+.imageboxabout
+	@media screen and (min-width: 1024px)
+		height: 160px
+		width: 160px
+		img
+			object-fit: cover
+			height: 160px
+			width: 160px
+	@media screen and (max-width: 1023px)
+		height: 128px
+		width: 128px
 		img
 			object-fit: contain
-			height: 160px
-			border-radius: 80px
+		
 
 #imagebox3
 	@media screen and (min-width: 1024px)
-		border-radius: 80px
 		img
 			width: 200px
 			height: 200px

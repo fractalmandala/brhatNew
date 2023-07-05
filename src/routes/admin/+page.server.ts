@@ -26,13 +26,13 @@ export const actions: Actions = {
 			showChip('invalid credentials!', '#fe4a49');
 		}
 
-		throw redirect(303, '/newsletter/1');
+		throw redirect(303, '/admin');
 	},
 
 	signout: async ({ 
 		locals: { supabase } 
 	}) => {
 		await supabase.auth.signOut();
-		throw redirect(303, '/newsletter');
+		throw redirect(303, '/admin');
 	}
 };

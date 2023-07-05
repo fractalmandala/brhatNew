@@ -136,6 +136,26 @@
 				<button disabled={loading} class="newbutton red">Sign in</button>
 			</div>
 		</form>
+		<!--
+		<div class="rta-row ycenter colgap100">
+			<p>Or,</p>
+			<button
+				class="blank-button rta-row ycenter colgap100"
+				on:click={() => {
+					supabase.auth.signInWithOAuth({
+						provider: 'google',
+						options: {
+							scopes: 'https://www.googleapis.com/auth/userinfo.email',
+							redirectTo: window.location.href
+						}
+					});
+				}}
+			>
+				<p>Sign In with Google</p>
+				<img class="iconimage" src="/images/icongoogle.png" alt="google" />
+			</button>
+		</div>
+		-->
 	</div>
 
 	<div
@@ -202,6 +222,11 @@
 {/if}
 
 <style lang="sass">
+
+// .iconimage
+//	object-fit: contain
+//	width: 24px
+//	height: 24px
 
 .aboutstrip
 	.stripscreen
