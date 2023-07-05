@@ -13,6 +13,8 @@
 	import P04 from '$lib/svpanels/hindi/panel04.svelte';
 	import P05 from '$lib/svpanels/hindi/panel05.svelte';
 	import P06 from '$lib/svpanels/hindi/panel06.svelte';
+	import '@splidejs/splide/css/core';
+	import SVCar from '$lib/components/SVCar.svelte';
 
 	let fake = false;
 	let language = false;
@@ -111,6 +113,7 @@
 		{/if}
 	</form>
 </div>
+<SVCar />
 <div
 	class:levelzero={$breakZero}
 	class:levelone={$breakOne}

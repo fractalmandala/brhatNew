@@ -742,3 +742,13 @@ export async function newsletterIssues(){
   if (error) throw new Error(error.message)
   return data	
 }
+
+export async function testimonialsSvarn(){
+	const { data, error } = await supabase
+	.from('brhat-testimonials')
+	.select()
+	.eq('type', 'svarnanjali')
+	.order('id')
+	if ( error ) throw new Error(error.message)
+	return data
+}

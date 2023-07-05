@@ -28,7 +28,7 @@
 		allCourses
 	} from '$lib/utils/supapulls';
 	import { latestDhitiSix } from '$lib/utils/localpulls';
-	import '@splidejs/svelte-splide/css';
+	import '@splidejs/splide/css/core';
 	import 'tippy.js/dist/tippy.css';
 	import 'tippy.js/animations/shift-away.css';
 
