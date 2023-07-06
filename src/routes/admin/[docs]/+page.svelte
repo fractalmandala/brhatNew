@@ -2,8 +2,8 @@
 	export let data;
 </script>
 
-<div class="outer-box limit">
-	<h4>{data.title}</h4>
+<div class="outer-box limit doc-bar">
+	<h2 class="bord-bot p-bot-16 m-bot-16">{data.title}</h2>
 	<svelte:component this={data.content} />
 </div>
 

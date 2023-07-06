@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { page } from '$app/stores';
 	import Head from '$lib/components/HeadComponent.svelte';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import autoAnimate from '@formkit/auto-animate';
@@ -35,7 +34,6 @@
 	let threeactions: string | any[];
 	let expandMenu = false;
 	let expandMenu2 = false;
-	let sidebar: boolean;
 	let updates: string | any[];
 	let count: number = 3;
 	let videos: string | any[];
@@ -45,9 +43,7 @@
 	let chapters: any;
 	let courses: any;
 	let sY: number;
-	let scyresp: number;
 	let oH: number;
-	let calib: number;
 	let breakPoint: boolean;
 	let fake = false;
 	let anveshiFull = Array(10).fill(false);

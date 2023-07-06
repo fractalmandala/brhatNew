@@ -19,6 +19,10 @@ export function changeLanguage() {
 	}
 }
 
+const storedAuthState = browser ? JSON.parse(localStorage.getItem('authState') || 'false') : false;
+
+export const authState = writable(storedAuthState)
+
 const storedThemeMode = browser ? JSON.parse(localStorage.getItem('themeMode') || 'false') : false;
 
 export const themeMode = writable(storedThemeMode);
@@ -56,6 +60,21 @@ export function showChip(title: string, color: string) {
 }
 export function hideChip() {
 	chipStore.update((state) => ({ ...state, isShown: false, title: '', color: '' }));
+}
+
+const initialAuth = {
+	isShown: false,
+	type: false
+}
+
+export const authStore = writable(initialAuth)
+
+export function showAuth(type: boolean){
+	authStore.update((state) => ({ ...state, isShown: true, type}))
+}
+
+export function hideAuth(){
+	authStore.update((state) => ({ ...state, isShown: false}))
 }
 
 const iniModal = {

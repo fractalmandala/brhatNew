@@ -309,6 +309,9 @@ body, html
 .tt-l
 	text-transform: lowercase
 
+.tt-n
+	text-transform: none
+
 //containers
 .rta-column
 	display: flex
@@ -414,6 +417,10 @@ body, html
 		.w32, .w64
 			width: 100%
 		flex-direction: column
+
+.rta-row.row-col-rev
+	@media screen and (max-width: 1023px)
+		flex-direction: column-reverse
 
 .rta-grid
 	display: grid
@@ -625,6 +632,8 @@ body, html
 	padding-top: 16px
 .m-top-16
 	margin-top: 16px
+.m-bot-16
+	margin-bottom: 16px
 .m-bot-4
 	margin-bottom: 4px
 .m-bot-32
@@ -655,6 +664,7 @@ body, html
 	--dhiticolor: #0B6E4F
 	--opposite: #272727
 	--contraster: #f7f7f7
+	--contraster2: #d7d7d7
 	--shadowline: #d7d7d7
 	--background: #FFFFFF
 	--palio: #FAFAFA
@@ -673,6 +683,7 @@ body, html
 	--dhiticolor: #0B6E4F
 	--opposite: #FFFFFF
 	--contraster: #313131
+	--contraster2: #313131
 	--shadowline: #090909
 	--background: #171717
 	--palio: #FAFAFA
@@ -852,6 +863,37 @@ body, html
 		height: 100vh
 		top: 0
 		height: 0
+
+.rta-modaloverlay
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	width: 100vw
+	height: 100vh
+	backdrop-filter: blur(5px)
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 2000
+	.rta-modalinlay
+		z-index: 2000
+		display: flex
+		flex-direction: column
+		background: var(--opposite)
+		border: 1px solid var(--background)
+		border-radius: 6px
+	@media screen and (min-width: 1024px)
+		.rta-modalinlay
+			width: 400px
+			min-height: 200px
+			padding: 32px
+	@media screen and (max-width: 1023px)
+		.rta-modalinlay
+			width: calc(100% - 32px)
+			min-height: 200px
+			padding: 16px
+			
 		
 
 .light

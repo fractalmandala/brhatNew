@@ -733,12 +733,35 @@ export async function newsletterItems(issueno:number){
   return data	
 }
 
+export async function newsletterVideos(issueno:number){
+	const { data, error } = await supabase
+	.from('brhat-newsletter')
+	.select()
+	.eq('type','video')
+	.eq('issueno',issueno)
+	.eq('live', true)
+	.order('id')
+  if (error) throw new Error(error.message)
+  return data	
+}
+
 export async function newsletterIssues(){
 	const { data, error } = await supabase
 	.from('brhat-newsletter')
 	.select()
 	.eq('type','issue')
 	.order('id')
+  if (error) throw new Error(error.message)
+  return data	
+}
+
+export async function latestIssue(){
+	const { data, error } = await supabase
+	.from('brhat-newsletter')
+	.select()
+	.eq('type','issue')
+	.order('id', {ascending: false})
+	.limit(1)
   if (error) throw new Error(error.message)
   return data	
 }

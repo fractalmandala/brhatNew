@@ -83,8 +83,8 @@
 	flex-direction: row
 	align-items: center
 	justify-content: flex-start
-	column-gap: 24px
-	padding-top: 8px
+	column-gap: 12px
+	padding-top: 4px
 
 button
 	&:hover

@@ -63,10 +63,6 @@
 		}
 	}
 
-	async function navigateToLink() {
-		await goto('/');
-	}
-
 	async function letSignup() {
 		const { error } = await supabase.auth.signUp({
 			email: signupEmail,
@@ -97,46 +93,55 @@
 />
 
 <div
-	class="rta-grid grid2 colgap400 rowgap300 outer-box limit"
+	class="rta-column rowgap300 outer-box limit"
 	class:light={$themeMode}
 	class:dark={!$themeMode}
 	class:levelzero={$breakZero}
 	class:levelone={$breakOne}
 	class:leveltwo={$breakTwo}
 >
+	<div class="rta-image">
+		<img
+			src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/17newsletter/brhatadyabanner%20(1).webp"
+			alt="banner"
+		/>
+	</div>
 	<div class="rta-column rowgap200">
-		<p>
+		<h6 class="oppositer thin">
 			Bṛhatadya is a newsletter featuring the latest actions, events, launches, program
 			registrations, essays and more at Bṛhat. To access it, or to receive it fortnightly in your
-			inbox, please sign up.
-		</p>
+			inbox, please sign up or sign in.
+		</h6>
 		<button class="newbutton red" on:click={toggleSubscribe}>Sign Up</button>
-		<p class="bord-top p-top-16">Already signed up? Sign in below:</p>
-		<form class="thisforms" method="post" action="?/login">
-			<div class="rta-column rowgap100 null">
-				<input
-					id="email"
-					name="email"
-					value={form?.values?.email ?? ''}
-					class="input"
-					type="email"
-					placeholder="Email"
-					required
-				/>
+	</div>
+	<div class="rta-grid grid2 left glass-top p-top-32 rowgap300 colgap400">
+		<div class="rta-column rowgap200">
+			<p class="oppositer">Already signed up? Sign in below:</p>
+			<form class="thisforms" method="post" action="?/login">
+				<div class="rta-column rowgap100 null">
+					<input
+						id="email"
+						name="email"
+						value={form?.values?.email ?? ''}
+						class="input"
+						type="email"
+						placeholder="Email"
+						required
+					/>
 
-				<input
-					id="password"
-					name="password"
-					class="input"
-					type="password"
-					placeholder="Password"
-					required
-				/>
+					<input
+						id="password"
+						name="password"
+						class="input"
+						type="password"
+						placeholder="Password"
+						required
+					/>
 
-				<button disabled={loading} class="newbutton red">Sign in</button>
-			</div>
-		</form>
-		<!--
+					<button disabled={loading} class="newbutton red">Sign in</button>
+				</div>
+			</form>
+			<!--
 		<div class="rta-row ycenter colgap100">
 			<p>Or,</p>
 			<button
@@ -156,20 +161,14 @@
 			</button>
 		</div>
 		-->
-	</div>
-
-	<div
-		class="rta-column aboutstrip back"
-		style="background-image: url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/17newsletter/brhatadya.webp')"
-	>
-		<div class="stripscreen">
-			<h4 class="hindiadobe">बृहतद्यः</h4>
-			<p>
+		</div>
+		<div class="rta-column rowgap200">
+			<small class="tt-n">
 				"Adya," meaning 'today, this day, now, at present', combines with Bṛhat to denote 'Bṛhat
 				Today,' or 'Bṛhat Now'- a fair name for a periodic newsletter that updates recent events and
 				activities at Bṛhat.
-			</p>
-			<p>
+			</small>
+			<small class="tt-n">
 				A second meaning lends deeper significance. With 'bṛhat' meaning 'great, formidable, large,
 				growing,' 'Bṛhat-Adya' means the "Great Now," or the "Great Moment," ie- the civilizational
 				moment we are currently in. Read more about this moment, and what it means for all of us,
@@ -179,7 +178,7 @@
 					target="_blank"
 					rel="noreferrer">here.</a
 				>
-			</p>
+			</small>
 		</div>
 	</div>
 </div>
@@ -227,19 +226,6 @@
 //	object-fit: contain
 //	width: 24px
 //	height: 24px
-
-.aboutstrip
-	.stripscreen
-		background: rgba(0,0,0,0.57)
-		height: 100%
-		h4
-			font-weight: bold
-			color: #FFFFFF
-			margin-bottom: 16px
-		p
-			margin-bottom: 16px
-			line-height: 1.4
-			color: #FFFFFF
 
 .subscribemodal
 	display: flex
@@ -292,28 +278,22 @@
 		padding: 4px 8px
 		outline: none
 		border: 1px solid var(--forline)
-	@media screen and (min-width: 1024px)
-		width: 32%
+		@media screen and (min-width: 1024px)
+			width: 56%
 
-.levelzero.rta-grid.grid2, .levelone.rta-grid.grid2
+.levelzero, .levelone
 	padding-bottom: 96px
 	align-items: stretch
-	.aboutstrip
-		.stripscreen
-			padding: 24px
 
 .levelzero
-	height: calc(100vh - 320px)
-	padding-top: 320px
+	min-height: calc(100vh - 320px)
+	padding-top: 220px
 
 .levelone
 	padding-top: 240px
 
-.leveltwo.rta-grid.grid2
-	margin-top: 200px
-	.aboutstrip
-		.stripscreen
-			padding: 32px
+.leveltwo
+	margin-top: 160px
 	
 .dark
 	.insubmodal
