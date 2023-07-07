@@ -120,16 +120,27 @@ We can deny it all we want, bury our heads in sand, or shout ‘fascist’ or �
 
 
     >_1 Slaughter of POWs & civilians_
+    
     >_2 Burning people alive_
+    
     >_3 [ Sex slavery](https://twitter.com/DireARTOfGod/status/1660007503827017729) & slave markets_
+    
     >_4 Beheadings_
+    
     >_5 Genocide of [Yezidis](https://twitter.com/AzzatAlsaalem/status/1654913082903212034) & Shia_
+    
     >_6 Terrorist attacks globally_
+    
     >_7 Murder of children & babies_
+    
     >_8 Burying people alive_
+    
     >_9 Destruction of pre-Islam buildings_
+    
     >_10 Chopping off hands_
+    
     >_11 Throwing gay men from rooftops_
+    
     >_(This stuff is so horrific, Twitter won't let me post pictures of it, despite Twitter being the most permissive platform of all SM.)_
 
 
@@ -140,14 +151,12 @@ We can deny it all we want, bury our heads in sand, or shout ‘fascist’ or �
 
 What we see now as the response to [ #TheKeralaStory](https://twitter.com/hashtag/TheKeralaStory?src=hashtag_click) is in fact an extension of the response to ISIS type behaviour. **Converting Hindus using any means is fully encouraged in Muslim society**. And a movie which exposes these unholy tactics used will be panned under Islamophobia. This simply shows us how much tacit support there is for ISIS and Love Jihad within Muslim society. 
 
-[@taslimanasreen](https://twitter.com/taslimanasreen/status/1658841516247326727)
+
 <div class="rta-grid grid2 stay2 grdimg colgap200">
 	<img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/keralastory/keralastory4.webp" alt="four"/>  
 	<img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/keralastory/keralastory5.webp" alt="five"/>  
 </div>
-<div class="imagecaption">
-Dhaka University Students. 1967 and 2022. 
-</div>
+[@taslimanasreen](https://twitter.com/taslimanasreen/status/1658841516247326727), Dhaka University Students. 1967 and 2022. 
 
 Converting others to increase one’s flock is not a recent practice. It enjoys theological sanction both in Christianity and Islam, whose adherents have waged wars for it. As Prof. Vamsee Juluri [states ](https://americankahani.com/perspectives/when-do-you-remember-your-mother-should-the-question-be-when-do-you-ever-forget/) _I read Susan Jacoby’s epic history of religious conversion (“Strange Gods: A Secular History of Conversion,” Pantheon Books, 2016), Jacoby writes about the Inquisition, and one of its less-known later manifestations, the clandestine conversions and kidnappings of Jewish children in Italy till as late as the 1850s. A Christian nanny could “convert” a Jewish baby secretly, and the State could now claim that child as property of the dominant religion. One parent might convert to the dominant religion, and the children would now go with them to the new faith unilaterally; a situation that seems to have arisen in the case of a family in [Malaysia](https://www.ucanews.com/news/abuse-survivor-exposes-unilateral-conversions-in-malaysia/98165) even as I write. _ This explains why the support from the global community which otherwise cried buckets over human rights is a whimper at best. 
 
@@ -173,8 +182,10 @@ Professor Vamsee Juluri rightly [asks](https://www.firstpost.com/opinion/why-hin
 	height: 400px
 .first
 	object-fit: cover
+	weight: 400px
 .grdimg
 	margin: 0
+	padding: 0
 </style>
 
 
