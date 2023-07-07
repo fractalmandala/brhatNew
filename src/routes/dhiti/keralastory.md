@@ -116,10 +116,10 @@ We can deny it all we want, bury our heads in sand, or shout ‘fascist’ or �
 
 [@total_woke_](https://twitter.com/total_woke_)
 
->_Muslim denial of[ #LoveJihad](https://twitter.com/hashtag/LoveJihad?src=hashtag_click) is 100% consistent with their tactics. Same applies to ISIS too. Before ISIS was defeated under Trump, they did absolutely [horrible](https://twitter.com/GemsOfKCR/status/1661640513798410241) things in the name of Islam. These include:_
+_Muslim denial of[ #LoveJihad](https://twitter.com/hashtag/LoveJihad?src=hashtag_click) is 100% consistent with their tactics. Same applies to ISIS too. Before ISIS was defeated under Trump, they did absolutely [horrible](https://twitter.com/GemsOfKCR/status/1661640513798410241) things in the name of Islam. These include:_
 
 
-   > _1 Slaughter of POWs & civilians_
+    _1 Slaughter of POWs & civilians_
     _2 Burning people alive_
     _3 [ Sex slavery](https://twitter.com/DireARTOfGod/status/1660007503827017729) & slave markets_
     _4 Beheadings_
@@ -133,13 +133,14 @@ We can deny it all we want, bury our heads in sand, or shout ‘fascist’ or �
     _(This stuff is so horrific, Twitter won't let me post pictures of it, despite Twitter being the most permissive platform of all SM.)_
 
 
-   > _This did not happen 300 years ago, did not happen for gold from temples, this happened less than a decade ago, in almost 100% Muslim areas. It happened for Islam. Every single ISIS member fought for Islam. _
+    _This did not happen 300 years ago, did not happen for gold from temples, this happened less than a decade ago, in almost 100% Muslim areas. It happened for Islam. Every single ISIS member fought for Islam. _
 
 
-   > _Lakhs of people joined ISIS or tried to join. The Muslim response to ISIS was muted at best. More people protested against Nupur Sharma for her 20 second speech than for murder of lakhs by ISIS in the name of Islam. **A Kafir woman speaking the truth of Islam defamed Islam more than unthinkable atrocities in the name of Islam.** Think._
+    _Lakhs of people joined ISIS or tried to join. The Muslim response to ISIS was muted at best. More people protested against Nupur Sharma for her 20 second speech than for murder of lakhs by ISIS in the name of Islam. **A Kafir woman speaking the truth of Islam defamed Islam more than unthinkable atrocities in the name of Islam.** Think._
 
 What we see now as the response to [ #TheKeralaStory](https://twitter.com/hashtag/TheKeralaStory?src=hashtag_click) is in fact an extension of the response to ISIS type behaviour. **Converting Hindus using any means is fully encouraged in Muslim society**. And a movie which exposes these unholy tactics used will be panned under Islamophobia. This simply shows us how much tacit support there is for ISIS and Love Jihad within Muslim society. 
 
+[@taslimanasreen](https://twitter.com/taslimanasreen/status/1658841516247326727)
 <div class="rta-grid grid2 stay2 colgap200">
 	<img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/keralastory/keralastory4.webp" alt="four"/>  
 	<img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/keralastory/keralastory5.webp" alt="five"/>  
