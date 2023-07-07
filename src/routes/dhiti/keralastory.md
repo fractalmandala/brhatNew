@@ -7,21 +7,25 @@ tags: concerns, islam
 date: "2023-07-07"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/keralastory/keralastory.jpg
 ---
-<img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/keralastory/keralastory1.webp" alt="one"/>
+<img class="imageclass" first src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/keralastory/keralastory1.webp" alt="one"/>
 <div class="imagecaption">ISIS (Islamic State of Iraq and Syria, Daesh) came out in favour of PFI (Popular Front of India), after the Government of India banned PFI. This is a screen shot from the magazine ISIS magazine 'The Voice of Khurasan', page number 4</div>
 
 >**“A belief in the equal truth of all religions is equal ignorance of all religions.” **
+
 >**Sitaram Goel**
 
 >“Hinduism is said to divide people and in contrast Islam is said to bind people together. This is only a half-truth. For Islam divides as inexorably as it binds. Islam is a close corporation and the distinction that it makes between Muslims and non-Muslims is a very real, very positive and very alienating distinction. The brotherhood of Islam is not the universal brotherhood of man. It is brotherhood of Muslims for Muslims only. There is a fraternity, but its benefit is confined to those within that corporation. For those who are outside the corporation, there is nothing but contempt and enmity. The second defect of Islam is that it is a system of social self-government and is incompatible with local self-government, because the allegiance of a Muslim does not rest on his domicile in the country which is his but on the faith to which he belongs. To the Muslim ibi bene ibi patria [Where it is well with me, there is my country] is unthinkable. Wherever there is the rule of Islam, there is his own country. In other words, Islam [can never allow a true Muslim](http://www.columbia.edu/itc/mealac/pritchett/00ambedkar/ambedkar_partition/412d.html) to adopt India as his motherland and regard a Hindu as his kith and kin.” 
+
 >[Dr B. R. Ambedkar](https://www.anandranganathan.com/2017/04/14/ambedkar-on-islam-the-story-that-must-not-be-told/)
 
 
 >“Everything beyond that (in Islam) not only is bad, but must be destroyed forthwith; at a moment’s notice, every man or woman who does not exactly believe in that must be killed; everything that does not belong to this worship must be immediately broken; every book that teaches anything else must be burnt. From the Pacific to the Atlantic, for five hundred years blood ran all over the world. That is Mohammedanism!
+
 >[Swami Vivekananda](https://www.opindia.com/2020/09/scathing-remarks-of-saint-swami-vivekanada-on-mohammedans-muslims/)
 
 
 >He (Gandhi) lamented that the sword is too much in evidence among the Muslims despite the message of the Prophet. He advised that it must be sheathed if Islam is to be what it means - peace. (Gandhi, 1949, 131) He clarified that however good Islam may be in abstract the only way it can be judged is by the effect produced by each of its votaries considered as a whole. (Gandhi, 1949, 63) He told the Muslims that they cannot protect Islam with the lathi (stick) or sword. The age of lathi (stick) is gone. A religion will be tested by the purity of its adherents. He argued that if a religion is left to the goondas (criminals) to defend it, it will do serious harm to that religion including Islam. Islam will in that case no longer remain the faith of fakirs (mendicant monks) and worshippers of Allah. (Gandhi, 1949, 78) 
+
 >[Gandhi on Islam](https://www.mkgandhi.org/articles/gandhi-on-theory-and-practice-of-islam.html)
 
 
@@ -57,7 +61,7 @@ Kerala Story is not simply a story or a film, it is a mirror to what is happenin
 
 Whereas for us Hindus the very idea of [conversion, is violence](https://www.arshavidya.in/Newsletter/Mar21/5.pdf). In this hard hitting piece, Kalavai Venkat describes the ideology behind the innocuous term in horrifying [detail](https://www.indiafacts.org.in/love-jihad-the-kerala-story/): “Warraq cites Sheikh Nefzawi’s _[The Perfumed Garden](https://www.amazon.com/Perfumed-Garden-Sheikh-Nefzawi/dp/B085HM8B7C/ref=sr_1_1?crid=UQFMFVQMZQQM&keywords=the+perfumed+garden&qid=1684952297&s=books&sprefix=the+perfumed+garden%2Cstripbooks%2C96&sr=1-1)_ as a typical example of Muslim attitude toward women. Nefzawi considers women’s sexuality as a grave danger and asserts, “_Do you know that women’s religion is in their vaginas? They are insatiable as far as their vulvas are concerned, and so long as their lust is satisfied they do not care whether it be a buffoon, a Negro, a valet, or even a despised man. It is Satan who makes the juices flow from their vaginas_.” (chapter _The Arab Conquests and the Position of Non-Muslim Subjects_, pp. 214-240) Warraq argues that the combination of Islamic attitudes toward women and non-Muslims contributed to the Islamic subjugation and sexual enslavement of Hindu women.” 
 
-A good Muslim and citizen ought to surely have an issue with such coercive tactics and not cry victim at the slightest pretext, a good Muslim ought not be entitled to violent behaviour and supremacist tendencies. If one is so it begs the question, are such values inherent to Islam, if they are not then why is Nupur Sharma in hiding? For stating facts? Why was the tailor Kanhaiya Lal Teli or the doctor Umesh Kolhe beheaded by their own customers, neighbours, friends? What is this terrifying horrifying thought process that is okay with such gruesome murders in the name of the deen, why is sar tan se juda an acceptable slogan? Why do we witness more and more incidents of Shraddha Walkar and Nikita Tomar in our society today? Should this not be called out especially by those who profess to be practising Muslims? Especially if all this has nothing to do with Islam and it is indeed a religion of peace?  Thanks to a few sane [voices ](https://newindian.in/?p=80962)(Arshia Malik) which state that it is _high time Muslims grew mature, and developed confidence to tackle difficult subjects and not fall for the agenda of ‘vulture activists’ who want to sustain their jet-setting lifestyles based on the outrage industry while keeping the Indian Muslims’ mentality stuck in medieval times_. And [that ](https://www.spectator.co.uk/article/muslim-activists-have-no-right-to-cancel-the-kerala-story/)_ _(Jawad Iqbal) if someone of a particular religious persuasion doesn’t like a film they don’t have to watch it. Freedom of expression on religion — the right to debate religious ideas and beliefs without fear  — is too important to barter away in a fruitless attempt to placate the perpetually offended. _
+A good Muslim and citizen ought to surely have an issue with such coercive tactics and not cry victim at the slightest pretext, a good Muslim ought not be entitled to violent behaviour and supremacist tendencies. If one is so it begs the question, are such values inherent to Islam, if they are not then why is Nupur Sharma in hiding? For stating facts? Why was the tailor Kanhaiya Lal Teli or the doctor Umesh Kolhe beheaded by their own customers, neighbours, friends? What is this terrifying horrifying thought process that is okay with such gruesome murders in the name of the deen, why is sar tan se juda an acceptable slogan? Why do we witness more and more incidents of Shraddha Walkar and Nikita Tomar in our society today? Should this not be called out especially by those who profess to be practising Muslims? Especially if all this has nothing to do with Islam and it is indeed a religion of peace?  Thanks to a few sane [voices ](https://newindian.in/?p=80962)(Arshia Malik) which state that it is _high time Muslims grew mature, and developed confidence to tackle difficult subjects and not fall for the agenda of ‘vulture activists’ who want to sustain their jet-setting lifestyles based on the outrage industry while keeping the Indian Muslims’ mentality stuck in medieval times_. And [that ](https://www.spectator.co.uk/article/muslim-activists-have-no-right-to-cancel-the-kerala-story/) _(Jawad Iqbal) if someone of a particular religious persuasion doesn’t like a film they don’t have to watch it. Freedom of expression on religion — the right to debate religious ideas and beliefs without fear  — is too important to barter away in a fruitless attempt to placate the perpetually offended. _
 
 There is no place to hide anymore, no more fences to sit upon. Meanwhile Hindus must be vigilant and not let 1923 or 1947 be repeated. Unfortunately disinterest to comment on such important issues, or a plain disregard for what Hindus are going through, has given rise to people venting via satire and comedy on such dark topics. 
 
@@ -116,38 +120,16 @@ We can deny it all we want, bury our heads in sand, or shout ‘fascist’ or �
 
 
    > _1 Slaughter of POWs & civilians_
-
-
    > _2 Burning people alive_
-
-
    > _3 [ Sex slavery](https://twitter.com/DireARTOfGod/status/1660007503827017729) & slave markets_
-
-
    > _4 Beheadings_
-
-
    > _5 Genocide of [Yezidis](https://twitter.com/AzzatAlsaalem/status/1654913082903212034) & Shia_
-
-
    > _6 Terrorist attacks globally_
-
-
    > _7 Murder of children & babies_
-
-
    > _8 Burying people alive_
-
-
    > _9 Destruction of pre-Islam buildings_
-
-
    > _10 Chopping off hands_
-
-
    > _11 Throwing gay men from rooftops_
-
-
    > _(This stuff is so horrific, Twitter won't let me post pictures of it, despite Twitter being the most permissive platform of all SM.)_
 
 
@@ -158,15 +140,13 @@ We can deny it all we want, bury our heads in sand, or shout ‘fascist’ or �
 
 What we see now as the response to[ #TheKeralaStory](https://twitter.com/hashtag/TheKeralaStory?src=hashtag_click) is in fact an extension of the response to ISIS type behaviour. **Converting Hindus using any means is fully encouraged in Muslim society**. And a movie which exposes these unholy tactics used will be panned under Islamophobia. This simply shows us how much tacit support there is for ISIS and Love Jihad within Muslim society. 
 
-<div class="rta-grid grid2 stay2">
+<div class="rta-grid grid2 stay2 colgap100">
 	<img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/keralastory/keralastory4.webp" alt="four"/>  
 	<img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/keralastory/keralastory5.webp" alt="five"/>  
 </div>
 <div class="imagecaption">
 Dhaka University Students. 1967 and 2022. 
 </div>
-
-[@taslimanasreen](https://twitter.com/taslimanasreen/status/1658841516247326727)
 
 Converting others to increase one’s flock is not a recent practice. It enjoys theological sanction both in Christianity and Islam, whose adherents have waged wars for it. As Prof. Vamsee Juluri [states ](https://americankahani.com/perspectives/when-do-you-remember-your-mother-should-the-question-be-when-do-you-ever-forget/) _I read Susan Jacoby’s epic history of religious conversion (“Strange Gods: A Secular History of Conversion,” Pantheon Books, 2016), Jacoby writes about the Inquisition, and one of its less-known later manifestations, the clandestine conversions and kidnappings of Jewish children in Italy till as late as the 1850s. A Christian nanny could “convert” a Jewish baby secretly, and the State could now claim that child as property of the dominant religion. One parent might convert to the dominant religion, and the children would now go with them to the new faith unilaterally; a situation that seems to have arisen in the case of a family in [Malaysia](https://www.ucanews.com/news/abuse-survivor-exposes-unilateral-conversions-in-malaysia/98165) even as I write. _ This explains why the support from the global community which otherwise cried buckets over human rights is a whimper at best. 
 
@@ -190,6 +170,9 @@ Professor Vamsee Juluri rightly [asks](https://www.firstpost.com/opinion/why-hin
 	object-fit: contain
 	weight: 200px
 	height: 400px
-
+.first
+	weight: 400px
+	height: 500px
 </style>
-  
+
+
