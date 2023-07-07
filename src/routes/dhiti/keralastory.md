@@ -7,7 +7,7 @@ tags: concerns, islam
 date: "2023-07-07"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/keralastory/keralastory.jpg
 ---
-<img class="imageclass" first src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/keralastory/keralastory1.webp" alt="one"/>
+<img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/keralastory/keralastory1.webp" alt="one"/>
 <div class="imagecaption">ISIS (Islamic State of Iraq and Syria, Daesh) came out in favour of PFI (Popular Front of India), after the Government of India banned PFI. This is a screen shot from the magazine ISIS magazine 'The Voice of Khurasan', page number 4</div>
 
 >**“A belief in the equal truth of all religions is equal ignorance of all religions.” **
@@ -110,7 +110,7 @@ This type of immature thinking passes off as rational and scientific in today’
 
 Here is a [two](https://www.pgurus.com/deceived-brainwashed-converted-how-shruti-was-lured-into-islam-her-escape-part-1/) [part ](https://www.pgurus.com/deceived-brainwashed-converted-how-anagha-vishali-were-lured-into-islam-her-escape-part-2/)video series on how young gullible young women are brainwashed, sometimes fed on narcotic pills to keep them under control. Offices and colleges are used as recruitment centres to get pally with unsuspecting Hindu and Christian girls, targeted systematically by Islamic squads. One such is the Sathya Sarani's [Da'wa squad](https://www.indiatoday.in/magazine/the-big-story/story/20160829-isis-sleeper-cells-kerala-islam-radicalisation-829448-2016-08-17). In this unsavoury mix there is the utterly disgusting and regressive matter of the[ ‘rate card’](https://tfipost.com/2019/09/no-love-jihad-is-not-figment-of-imagination-heres-the-rate-card-for-christian-and-sikh-girls-and-the-situation-is-dire/) for various girls that they manage to trap; with Sikh, Punjabi, Brahmin, and [Christian ](https://www.hindustantimes.com/india-news/christian-girls-are-targeted-by-love-jihad-says-kerala-church/story-FX0OwjtSwoowz5pG5ltsdO.html)girls fetching top dollar.  All this is consistent with the teachings: _[Quran (4:24)](https://www.thereligionofpeace.com/quran/noble/sura4.html#24) and [Quran (33:50)](https://www.thereligionofpeace.com/quran/noble/sura33.html#50) - A man is permitted to take women as sex slaves outside of marriage. Note that the verse distinguishes wives from captives (those whom their right hand possesses)._
 
-We can deny it all we want, bury our heads in sand, or shout ‘fascist’ or ‘bhakt’ from rooftops, but ISIS in India is something even the [National Intelligence Agency](https://twitter.com/GemsOfKCR/status/1655064439857754113) talks and[ worries](https://www.youtube.com/watch?v=9s1hRVFR0t0) about. People have written [papers ](https://www.orfonline.org/research/the-islamic-state-in-indias-kerala-a-primer-56634/)on its recruitment in India. Instead of decrying the film, why don’t we hear moderate Muslims decry ISIS, its practices and its core ideology? Conversion to Islam, especially in Kerala, is in fact not simply restricted to religious beliefs but involves active recruitment to ISIS by brainwashing impressionable girls that [‘jihad’ is what Allah loves the most](https://twitter.com/AzzatAlsaalem/status/1655219232160751616). Thanks to the movie (and the ground work done by Acharya Manoj ji of AVS) [twenty six women](https://twitter.com/gpradeep_gee/status/1659006100103131136) came out in the open to talk of their [ordeal ](https://www.youtube.com/watch?v=yArjB2-pPyY)in dealing with this social malaise. 
+We can deny it all we want, bury our heads in sand, or shout ‘fascist’ or ‘bhakt’ from rooftops, but ISIS in India is something even the [National Intelligence Agency](https://twitter.com/GemsOfKCR/status/1655064439857754113) talks and [ worries](https://www.youtube.com/watch?v=9s1hRVFR0t0) about. People have written [papers ](https://www.orfonline.org/research/the-islamic-state-in-indias-kerala-a-primer-56634/)on its recruitment in India. Instead of decrying the film, why don’t we hear moderate Muslims decry ISIS, its practices and its core ideology? Conversion to Islam, especially in Kerala, is in fact not simply restricted to religious beliefs but involves active recruitment to ISIS by brainwashing impressionable girls that [‘jihad’ is what Allah loves the most](https://twitter.com/AzzatAlsaalem/status/1655219232160751616). Thanks to the movie (and the ground work done by Acharya Manoj ji of AVS) [twenty six women](https://twitter.com/gpradeep_gee/status/1659006100103131136) came out in the open to talk of their [ordeal ](https://www.youtube.com/watch?v=yArjB2-pPyY)in dealing with this social malaise. 
 
 **[Eminent Intellectual](https://twitter.com/total_woke_)**
 
@@ -120,17 +120,17 @@ We can deny it all we want, bury our heads in sand, or shout ‘fascist’ or �
 
 
    > _1 Slaughter of POWs & civilians_
-   > _2 Burning people alive_
-   > _3 [ Sex slavery](https://twitter.com/DireARTOfGod/status/1660007503827017729) & slave markets_
-   > _4 Beheadings_
-   > _5 Genocide of [Yezidis](https://twitter.com/AzzatAlsaalem/status/1654913082903212034) & Shia_
-   > _6 Terrorist attacks globally_
-   > _7 Murder of children & babies_
-   > _8 Burying people alive_
-   > _9 Destruction of pre-Islam buildings_
-   > _10 Chopping off hands_
-   > _11 Throwing gay men from rooftops_
-   > _(This stuff is so horrific, Twitter won't let me post pictures of it, despite Twitter being the most permissive platform of all SM.)_
+    _2 Burning people alive_
+    _3 [ Sex slavery](https://twitter.com/DireARTOfGod/status/1660007503827017729) & slave markets_
+    _4 Beheadings_
+    _5 Genocide of [Yezidis](https://twitter.com/AzzatAlsaalem/status/1654913082903212034) & Shia_
+    _6 Terrorist attacks globally_
+    _7 Murder of children & babies_
+    _8 Burying people alive_
+    _9 Destruction of pre-Islam buildings_
+    _10 Chopping off hands_
+    _11 Throwing gay men from rooftops_
+    _(This stuff is so horrific, Twitter won't let me post pictures of it, despite Twitter being the most permissive platform of all SM.)_
 
 
    > _This did not happen 300 years ago, did not happen for gold from temples, this happened less than a decade ago, in almost 100% Muslim areas. It happened for Islam. Every single ISIS member fought for Islam. _
@@ -138,9 +138,9 @@ We can deny it all we want, bury our heads in sand, or shout ‘fascist’ or �
 
    > _Lakhs of people joined ISIS or tried to join. The Muslim response to ISIS was muted at best. More people protested against Nupur Sharma for her 20 second speech than for murder of lakhs by ISIS in the name of Islam. **A Kafir woman speaking the truth of Islam defamed Islam more than unthinkable atrocities in the name of Islam.** Think._
 
-What we see now as the response to[ #TheKeralaStory](https://twitter.com/hashtag/TheKeralaStory?src=hashtag_click) is in fact an extension of the response to ISIS type behaviour. **Converting Hindus using any means is fully encouraged in Muslim society**. And a movie which exposes these unholy tactics used will be panned under Islamophobia. This simply shows us how much tacit support there is for ISIS and Love Jihad within Muslim society. 
+What we see now as the response to [ #TheKeralaStory](https://twitter.com/hashtag/TheKeralaStory?src=hashtag_click) is in fact an extension of the response to ISIS type behaviour. **Converting Hindus using any means is fully encouraged in Muslim society**. And a movie which exposes these unholy tactics used will be panned under Islamophobia. This simply shows us how much tacit support there is for ISIS and Love Jihad within Muslim society. 
 
-<div class="rta-grid grid2 stay2 colgap100">
+<div class="rta-grid grid2 stay2 colgap200">
 	<img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/keralastory/keralastory4.webp" alt="four"/>  
 	<img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/keralastory/keralastory5.webp" alt="five"/>  
 </div>
@@ -170,9 +170,6 @@ Professor Vamsee Juluri rightly [asks](https://www.firstpost.com/opinion/why-hin
 	object-fit: contain
 	weight: 200px
 	height: 400px
-.first
-	weight: 400px
-	height: 500px
 </style>
 
 
