@@ -83,6 +83,12 @@
 						in:fly={{ duration: 100, delay: 200, x: 0, y: 32 }}
 						out:fly={{ duration: 100, delay: 0, x: 0, y: 32 }}>Patañjali's Yoga Sūtras</a
 					>
+					<a
+						id="link66"
+						href="/drashta/course/comparativecivilisations"
+						in:fly={{ duration: 100, delay: 200, x: 0, y: 32 }}
+						out:fly={{ duration: 100, delay: 0, x: 0, y: 32 }}>Comparative Civilizations</a
+					>
 				</div>
 			{/if}
 		</div>

@@ -37,7 +37,7 @@
 	let schedules: any;
 	let isFor: any;
 	let area: any = Array(5).fill(false);
-	area[0] = true;
+	area[1] = true;
 	let fake = false;
 	let expandMenu = false;
 	let todayDate = new Date();

@@ -465,6 +465,9 @@
 	<div class="midrow">
 		<slot name="local" />
 	</div>
+	<div class="search rta-column xright" on:click={toggleVisibility} on:keydown={fauxfake}>
+		<CompToggle />
+	</div>
 	<div
 		class="menuicon colgap100"
 		on:click={toggleSideBar}
@@ -513,9 +516,6 @@
 			</div>
 		{/if}
 	</div>
-	<div class="search rta-column xright" on:click={toggleVisibility} on:keydown={fauxfake}>
-		<CompToggle />
-	</div>
 </div>
 
 <style lang="sass">
@@ -532,9 +532,9 @@
 	top: 0
 	transition: 0.5s cubic-bezier(0.635, 0.405, 0.535, 0.035)
 	@media screen and (min-width: 1024px)
-		grid-template-columns: 190px 1fr 144px 32px
+		grid-template-columns: 190px 1fr 32px 144px
 		grid-template-rows: 1fr
-		grid-template-areas: "applogo midrow menuicon search"
+		grid-template-areas: "applogo midrow search menuicon"
 		height: 72px
 		align-content: center
 		align-items: center
@@ -546,16 +546,15 @@
 			grid-area: search
 			width: 32px
 	@media screen and (max-width: 1023px)
-		grid-template-columns: 160px 1fr
+		grid-template-columns: 160px 1fr 144px
 		grid-template-rows: 1fr
-		grid-template-areas: "applogo menuicon search"
+		grid-template-areas: "applogo search menuicon"
 		height: 64px
 		align-items: center
 		padding: 0 16px
 		justify-items: stretch
 		.search
 			grid-area: search
-			width: 32px
 
 .appheader.light
 	background: #171717
