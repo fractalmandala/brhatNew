@@ -17,7 +17,7 @@
 		end -= 10;
 	}
 
-	$: if (start) {
+	$: if (start || end) {
 		(async () => {
 			dhatus = await dbDhatus(start, end);
 		})();
@@ -50,16 +50,18 @@
 			{#each dhatus as item}
 				<div class="rta-column">
 					<h6 class="hindiadobe serif">
-						<a href="/openlibrary/dhatus/{item.id}">
+						<a href="/openlibrary/discover/dhatupatha/{item.id}">
 							{item.dhatu}
 						</a>
 					</h6>
 				</div>
 			{/each}
 		{/if}
-		<div class="rta-row colgap100">
-			<button on:click={prevSet}>Previous</button>
-			<button on:click={nextSet}>Next</button>
+		<div class="rta-row colgap100 bord-top m-top-16 p-top-16">
+			{#if start >= 9}
+				<button class="newbutton" on:click={prevSet}>Previous</button>
+			{/if}
+			<button class="newbutton" on:click={nextSet}>Next</button>
 		</div>
 	</div>
 </div>
@@ -69,6 +71,11 @@
 small
 	a
 		color: #fe4a49
+
+h6
+	&:hover
+		a
+			color: #fe4a49
 
 .official
 	@media screen and (min-width: 1024px)

@@ -1,4 +1,8 @@
-<div class="rta-column official">
+<script lang="ts">
+	import { breakZero, breakOne, breakTwo } from '$lib/stores/globalstores';
+</script>
+
+<div class="official" class:lzero={$breakZero} class:lone={$breakOne} class:ltwo={$breakTwo}>
 	<div class="p-bot-32 rta-column rowgap200">
 		<p>
 			Tradition holds that the Ṛgvedic mantras are to be heard, not read. And while modernity allows
@@ -48,16 +52,51 @@
 			</a>
 		</p>
 	</div>
+	<div class="pagesider">
+		<p>p</p>
+	</div>
 </div>
 
 <style lang="sass">
 
 .official
-	@media screen and (min-width: 1024px)
-		padding-right: 256px
-		p
-			line-height: 1.5
-			a 
-				color: #fe4a49
+	display: flex
+	p
+		line-height: 1.5
+		color: var(--textone)
+		a 
+			color: var(--mand)
+
+.official.lzero, .official.lone
+	flex-direction: row
+
+.official.lzero
+	.pagesider
+		width: 320px
+		padding-left: 48px
+	.rta-column
+		width: calc(100% - 320px)
+		border-right: 1px solid var(--contraster)
+		padding-right: 64px
+
+.official.lone
+	.pagesider
+		max-width: 240px
+		min-width: 200px
+		padding-left: 32px
+	.rta-column
+		max-width: calc(100% - 240px)
+		min-width: calc(100% - 200px)
+		border-right: 1px solid var(--contraster)
+		padding-right: 48px
+
+.official.ltwo
+	flex-direction: column-reverse
+	.pagesider
+		width: 100%
+		height: 40px
+		border-bottom: 1px solid var(--contraster)
+	.rta-column
+		width: 100%
 
 </style>

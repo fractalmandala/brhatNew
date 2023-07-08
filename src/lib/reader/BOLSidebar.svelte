@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { slide } from 'svelte/transition';
+	import { breakZero, breakOne, breakTwo } from '$lib/stores/globalstores';
 	import {
 		BOLEssentials,
 		BOLBodhas,
@@ -60,9 +61,21 @@
 	});
 </script>
 
-<div class="rta-column rowgap100 stickyboi">
+<div
+	class="rta-column rowgap100 stickyboi"
+	class:levelone={$breakOne}
+	class:levelzero={$breakZero}
+	class:leveltwo={$breakTwo}
+>
+	{#if $breakTwo}
+		<slot name="closebutton" />
+	{/if}
 	<p class="authentic oppositer"><b>Discover</b></p>
-	<p><a href="/discover/dhatupatha">Dhātupāṭhaḥ</a></p>
+	<p><a href="/openlibrary/discover/dhatupatha">Dhātupāṭhaḥ</a></p>
+	<p><a href="/openlibrary/discover/puranaindex">Puranic Index</a></p>
+	<p><a href="/openlibrary/discover/rigveda">Ṛgveda</a></p>
+	<p><a href="/openlibrary/discover/ramayana">Vālmīki Rāmāyaṇa</a></p>
+	<p><a href="/openlibrary/discover/concordance">Vedic Concordance</a></p>
 	<p class="authentic oppositer p-top-16"><b>PDFs</b></p>
 	<div class="rta-column innerbox rowgap100">
 		<button class="blank-button" on:click={() => togglePDF(1)} class:openbutton={isPDF[1]}
@@ -156,9 +169,22 @@
 
 <style lang="sass">
 
-.stickyboi
+.levelone.stickyboi, .levelzero.stickyboi
 	position: sticky
 	top: 128px
+	align-items: flex-start
+
+.leveltwo.stickyboi
+	position: fixed
+	top: 0
+	left: 0
+	height: 100vh
+	overflow-y: scroll
+	width: 100vw
+	z-index: 3000
+	background: var(--background)
+	padding: 80px 32px
+	
 
 .blank-button
 	text-align: left

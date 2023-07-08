@@ -3,8 +3,8 @@
 </script>
 
 <div class="rta-column rowgap200 official">
-	<a href="/openlibrary/dhatus">
-		<button>Back</button>
+	<a href="/openlibrary/discover/dhatupatha">
+		<button class="newbutton">Back</button>
 	</a>
 	<h3 class="hindiadobe">{data.dhatu} | {data.dhatuiast}</h3>
 	<div class="rta-column">
