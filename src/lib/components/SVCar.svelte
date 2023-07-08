@@ -105,12 +105,17 @@
 				</SplideSlide>
 
 				<SplideSlide>
-					<div class="faker" style="background-image: url('/images/svthumbs/2.jpeg')">
-						<div class="inscreen">Coming Soon</div>
+					<div class="rta-video">
+						<Youtuber youTubeId={'weF2xsunKOs'} />
+						<small>
+							<a href="https://youtu.be/weF2xsunKOs" target="_blank" rel="noreferrer">
+								E3 - Ashadh Ka Ek Din
+							</a>
+						</small>
 					</div>
 				</SplideSlide>
 				<SplideSlide>
-					<div class="faker" style="background-image: url('/images/svthumbs/3.jpeg')">
+					<div class="faker" style="background-image: url('/images/svthumbs/4.jpeg')">
 						<div class="inscreen">Coming Soon</div>
 					</div>
 				</SplideSlide>
