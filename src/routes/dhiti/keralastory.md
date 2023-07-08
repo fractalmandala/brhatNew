@@ -119,43 +119,39 @@ We can deny it all we want, bury our heads in sand, or shout ‘fascist’ or �
 >_Muslim denial of [ #LoveJihad](https://twitter.com/hashtag/LoveJihad?src=hashtag_click) is 100% consistent with their tactics. Same applies to ISIS too. Before ISIS was defeated under Trump, they did absolutely [horrible](https://twitter.com/GemsOfKCR/status/1661640513798410241) things in the name of Islam. These include:_
 
 
-    >_1 Slaughter of POWs & civilians_
-    
-    >_2 Burning people alive_
-    
-    >_3 [ Sex slavery](https://twitter.com/DireARTOfGod/status/1660007503827017729) & slave markets_
-    
-    >_4 Beheadings_
-    
-    >_5 Genocide of [Yezidis](https://twitter.com/AzzatAlsaalem/status/1654913082903212034) & Shia_
-    
-    >_6 Terrorist attacks globally_
-    
-    >_7 Murder of children & babies_
-    
-    >_8 Burying people alive_
-    
-    >_9 Destruction of pre-Islam buildings_
-    
-    >_10 Chopping off hands_
-    
-    >_11 Throwing gay men from rooftops_
-    
-    >_(This stuff is so horrific, Twitter won't let me post pictures of it, despite Twitter being the most permissive platform of all SM.)_
+>_1 Slaughter of POWs & civilians_
 
+>_2 Burning people alive_
 
-    >_This did not happen 300 years ago, did not happen for gold from temples, this happened less than a decade ago, in almost 100% Muslim areas. It happened for Islam. Every single ISIS member fought for Islam. _
+>_3 [ Sex slavery](https://twitter.com/DireARTOfGod/status/1660007503827017729) & slave markets_
 
+>_4 Beheadings_
 
-    >_Lakhs of people joined ISIS or tried to join. The Muslim response to ISIS was muted at best. More people protested against Nupur Sharma for her 20 second speech than for murder of lakhs by ISIS in the name of Islam. **A Kafir woman speaking the truth of Islam defamed Islam more than unthinkable atrocities in the name of Islam.** Think._
+>_5 Genocide of [Yezidis](https://twitter.com/AzzatAlsaalem/status/1654913082903212034) & Shia_
+
+>_6 Terrorist attacks globally_
+
+>_7 Murder of children & babies_
+
+>_8 Burying people alive_
+
+>_9 Destruction of pre-Islam buildings_
+
+>_10 Chopping off hands_
+
+>_11 Throwing gay men from rooftops_
+
+>_(This stuff is so horrific, Twitter won't let me post pictures of it, despite Twitter being the most permissive platform of all SM.)
+
+>_This did not happen 300 years ago, did not happen for gold from temples, this happened less than a decade ago, in almost 100% Muslim areas. It happened for Islam. Every single ISIS member fought for Islam. _
+
+>_Lakhs of people joined ISIS or tried to join. The Muslim response to ISIS was muted at best. More people protested against Nupur Sharma for her 20 second speech than for murder of lakhs by ISIS in the name of Islam. **A Kafir woman speaking the truth of Islam defamed Islam more than unthinkable atrocities in the name of Islam.** Think._
 
 What we see now as the response to [ #TheKeralaStory](https://twitter.com/hashtag/TheKeralaStory?src=hashtag_click) is in fact an extension of the response to ISIS type behaviour. **Converting Hindus using any means is fully encouraged in Muslim society**. And a movie which exposes these unholy tactics used will be panned under Islamophobia. This simply shows us how much tacit support there is for ISIS and Love Jihad within Muslim society. 
 
+<img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/keralastory/keralastory4.webp" alt="four"/>  
 
-<div class="rta-grid grid2 stay2 grdimg colgap200">
-	<img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/keralastory/keralastory4.webp" alt="four"/>  
-	<img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/keralastory/keralastory5.webp" alt="five"/>  
-</div>
+<img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/keralastory/keralastory5.webp" alt="five"/>  
 
 [@taslimanasreen](https://twitter.com/taslimanasreen/status/1658841516247326727), Dhaka University Students. 1967 and 2022. 
 
@@ -179,14 +175,11 @@ Professor Vamsee Juluri rightly [asks](https://www.firstpost.com/opinion/why-hin
 
 .imageclass
 	object-fit: contain
-	weight: 200px
 	height: 400px
+
 .first
-	object-fit: cover
-	weight: 400px
-.grdimg
-	margin: 0
-	padding: 0
+	object-fit: contain
+
 </style>
 
 

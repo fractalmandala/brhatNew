@@ -220,6 +220,9 @@
 
 <style lang="sass">
 
+.x0
+	z-index: 300
+
 .levelzero, .levelone
 	.fonter
 		position: fixed
@@ -290,8 +293,6 @@
 
 h1
 	font-family: 'Adobe Devanagari', sans-serif
-
-
 
 .x3.dhitiouter
 	h4

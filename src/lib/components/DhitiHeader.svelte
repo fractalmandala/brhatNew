@@ -1,93 +1,84 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import { draw } from 'svelte/transition';
+	import { quintOut } from 'svelte/easing';
+	import { themeMode, sideMode } from '$lib/stores/globalstores';
+	import { browser } from '$app/environment';
+	import tippy, { animateFill } from 'tippy.js';
+	import LogDhiti from '$lib/logos/LogDhiti.svelte';
+	import LogDhitiD from '$lib/logos/LogDhiDark.svelte';
+	import 'tippy.js/dist/tippy.css';
+	import 'tippy.js/animations/shift-away.css';
+	import Sun from '$lib/icons/sun.svelte';
+	import Moon from '$lib/icons/moon.svelte';
+	import autoAnimate from '@formkit/auto-animate';
 
-	import { onMount } from 'svelte'
-	import { draw } from 'svelte/transition'
-	import { quintOut } from 'svelte/easing'
-	import { themeMode, sideMode } from '$lib/stores/globalstores'
-	import { browser } from '$app/environment'
-	import { fly } from 'svelte/transition'
-	import tippy, {animateFill} from 'tippy.js'
-	import LogDhiti from '$lib/logos/LogDhiti.svelte'
-	import LogDhitiD from '$lib/logos/LogDhiDark.svelte'
-	import 'tippy.js/dist/tippy.css'
-	import 'tippy.js/animations/shift-away.css'
-	import CompSearch from '$lib/ridunits/CompSearch.svelte'
-	import AboutLinks from '$lib/links/AboutLinks.svelte'
-	import AnveshiLinks from '$lib/links/AnveshiLinks.svelte'
-	import AryavartaLinks from '$lib/links/AryavartaLinks.svelte'
-	import DrashtaLinks from '$lib/links/DrashtaLinks.svelte'
-	import MandalaLinks from '$lib/links/MandalaLinks.svelte'
-	import RtaLinks from '$lib/links/RtaLinks.svelte'
-	import autoAnimate from '@formkit/auto-animate'
-
-	let showHome:boolean = false
-	let y:number
-	let circleIt:boolean = false
-	let height:number
-	let isInvisible = false
-	let mouseY:number
-	let latestScrollY:number
-	let iW:number
-	let breakPoint:boolean
-	let fake = false
+	let showHome: boolean = false;
+	let y: number;
+	let circleIt: boolean = false;
+	let height: number;
+	let isInvisible = false;
+	let mouseY: number;
+	let latestScrollY: number;
+	let iW: number;
+	let breakPoint: boolean;
+	let fake = false;
 
 	function toggleVisibility() {
-	  if (browser) {
-	    themeMode.update((mode) => {
-	      const newMode = !mode;
-	      localStorage.setItem('themeMode', JSON.stringify(newMode));
-	      return newMode;
-	    });
-	  }
+		if (browser) {
+			themeMode.update((mode) => {
+				const newMode = !mode;
+				localStorage.setItem('themeMode', JSON.stringify(newMode));
+				return newMode;
+			});
+		}
 	}
 
-	function toggleSideBar(){
-		if ( browser ) {
+	function toggleSideBar() {
+		if (browser) {
 			sideMode.update((mode) => {
 				const newMode = !mode;
 				localStorage.setItem('sideMode', JSON.stringify(newMode));
 				return newMode;
-			})
+			});
 		}
 	}
 
 	function handleKeyDownEvent(event: KeyboardEvent) {
-		if (event.key === 'F1' && browser ){
+		if (event.key === 'F1' && browser) {
 			sideMode.update((mode) => {
 				const newMode = !mode;
 				localStorage.setItem('sideMode', JSON.stringify(newMode));
 				return newMode;
-			})
+			});
 		}
 	}
 
-	function toggleCircle(){
-		circleIt = !circleIt
+	function toggleCircle() {
+		circleIt = !circleIt;
 	}
 
-	function fauxfake(){
-		fake = !fake
+	function fauxfake() {
+		fake = !fake;
 	}
 
 	$: {
-		if ( y > 100 && y > latestScrollY ) {
-			isInvisible = true
+		if (y > 100 && y > latestScrollY) {
+			isInvisible = true;
 		} else {
-			isInvisible = false
+			isInvisible = false;
 		}
-		latestScrollY = y
+		latestScrollY = y;
 	}
 
-
-	$: if ( iW <= 1023) {
-		breakPoint = true
+	$: if (iW <= 1023) {
+		breakPoint = true;
 	} else {
-		breakPoint = false
+		breakPoint = false;
 	}
-
 
 	onMount(() => {
-		tippy ('#single', {
+		tippy('#single', {
 			content: 'Toggle Dark/Light Mode.',
 			duration: 300,
 			arrow: true,
@@ -95,55 +86,82 @@
 			plugins: [animateFill],
 			placement: 'top',
 			theme: 'light'
-		})
-		const handleMouse = (event: {clientY: number;}) => {
-			mouseY = event.clientY
-			if ( mouseY <= 128 ) {
-				isInvisible = false
-			} 
-		}
-		window.addEventListener('mousemove', handleMouse)
-		return() => {
-			window.removeEventListener('mousemove',handleMouse)
-		}
-	})
- 
+		});
+		const handleMouse = (event: { clientY: number }) => {
+			mouseY = event.clientY;
+			if (mouseY <= 128) {
+				isInvisible = false;
+			}
+		};
+		window.addEventListener('mousemove', handleMouse);
+		return () => {
+			window.removeEventListener('mousemove', handleMouse);
+		};
+	});
 </script>
 
+<svelte:window bind:scrollY={y} bind:innerHeight={height} bind:innerWidth={iW} />
 
-<svelte:window bind:scrollY={y} bind:innerHeight={height} bind:innerWidth={iW}/>
-
-<div class="appheader" class:hiddenHeader={isInvisible} class:light={$themeMode} class:dark={!$themeMode}>
+<div
+	class="appheader"
+	class:hiddenHeader={isInvisible}
+	class:light={$themeMode}
+	class:dark={!$themeMode}
+>
 	<a class="applogo" href="/dhiti" class:fullcol={breakPoint}>
 		{#if $themeMode}
-		<LogDhiti></LogDhiti>
+			<LogDhiti />
 		{:else}
-		<LogDhitiD></LogDhitiD>
+			<LogDhitiD />
 		{/if}
 		{#if !breakPoint}
-		<p><a href="/">Bṛhat Home</a></p>
+			<p><a href="/">Bṛhat Home</a></p>
 		{/if}
 	</a>
-	<div class="toggling" id="single" on:click={toggleVisibility} on:keydown={fauxfake}>
-		<div class="switch rta-column" use:autoAnimate class:light={$themeMode} class:dark={!$themeMode}>
-		  <div class="slider rta-in-col"></div>
-		</div>
-	</div>
-	<div class="menuicon" on:click={toggleSideBar} on:keydown={handleKeyDownEvent} on:mouseenter={toggleCircle} on:mouseleave={toggleCircle}>
+	<button
+		class="blank-button toggling"
+		id="single"
+		on:click={toggleVisibility}
+		on:keydown={fauxfake}
+	>
+		{#if $themeMode}
+			<Moon />
+		{:else}
+			<Sun />
+		{/if}
+	</button>
+	<div
+		class="menuicon"
+		on:click={toggleSideBar}
+		on:keydown={handleKeyDownEvent}
+		on:mouseenter={toggleCircle}
+		on:mouseleave={toggleCircle}
+	>
 		<p>Our Cosmos</p>
 		<div id="menumainx" class:rotated={$sideMode}>
-			<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path d="M16.7747 11.795C15.7418 12.8549 15.7418 14.5731 16.7747 15.633L21.5164 20.4998L16.7747 25.3666C15.7418 26.4266 15.7418 28.1448 16.7747 29.2047C17.2906 29.7354 17.9678 30 18.645 30C19.3222 30 19.9994 29.7354 20.5152 29.2047L29 20.4998L20.5152 11.795C19.4835 10.735 17.8064 10.735 16.7747 11.795Z" fill="#fe4a49"/>
+			<svg
+				width="42"
+				height="42"
+				viewBox="0 0 42 42"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path
+					d="M16.7747 11.795C15.7418 12.8549 15.7418 14.5731 16.7747 15.633L21.5164 20.4998L16.7747 25.3666C15.7418 26.4266 15.7418 28.1448 16.7747 29.2047C17.2906 29.7354 17.9678 30 18.645 30C19.3222 30 19.9994 29.7354 20.5152 29.2047L29 20.4998L20.5152 11.795C19.4835 10.735 17.8064 10.735 16.7747 11.795Z"
+					fill="#fe4a49"
+				/>
 				{#if circleIt}
-				<path 
-					transition:draw={{ duration: 500, easing: quintOut }}
-					d="M41 21C41 32.0457 32.0457 41 21 41C9.95431 41 1 32.0457 1 21C1 9.95431 9.95431 1 21 1C32.0457 1 41 9.95431 41 21Z" stroke="#fe4a49" stroke-width="2"/>
+					<path
+						transition:draw={{ duration: 500, easing: quintOut }}
+						d="M41 21C41 32.0457 32.0457 41 21 41C9.95431 41 1 32.0457 1 21C1 9.95431 9.95431 1 21 1C32.0457 1 41 9.95431 41 21Z"
+						stroke="#fe4a49"
+						stroke-width="2"
+					/>
 				{/if}
 			</svg>
 		</div>
 	</div>
 </div>
-
 
 <style lang="sass">
 
@@ -169,6 +187,9 @@
 		border-bottom: 1px solid var(--borderline)
 		.menuicon
 			width: 180px
+		.toggling
+			display: flex
+			justify-content: flex-start
 	@media screen and (max-width: 1023px)
 		grid-template-columns: 1fr 200px
 		grid-template-rows: 1fr
@@ -196,7 +217,6 @@
 
 .appheader.hiddenHeader
 	transform: translateY(-128px)
-
 
 #menumainx
 	height: 32px
@@ -232,7 +252,6 @@
 		text-transform: uppercase
 		font-weight: 800
 		font-size: 14px
-		font-family: 'Varta', san-serif
 	@media screen and (min-width: 1024px)
 		row-gap: 0
 		justify-content: center
@@ -278,48 +297,4 @@
 .appheader.dark
 	.menuicon p
 		color: #878787
-
-.switch 
-	cursor: pointer
-	height: 20px
-	width: 48px
-	border-radius: 10px
-	padding-top: 1px
-	padding-right: 2px
-	padding-left: 2px
-	transition: all 0.23s ease
-
-.switch
-	&:hover
-		.slider
-			background: #0B6E4F
-
-.switch.light
-	align-items: flex-end
-	border: 1px solid #878787
-	&:hover
-		border: 1px solid #fe4a49
-		.slider
-			background: #fe4a49
-	.slider
-		background: #878787
-
-.switch.dark
-	align-items: flex-start
-	border: 1px solid #474747
-	&:hover
-		border: 1px solid #fe4a49
-	.slider
-		background: #fe4a49
-
-.slider 
-	width: 16px
-	height: 16px
-	border-radius: 8px
-	transition: all 0.23s ease
-	
-
-
-
-
 </style>

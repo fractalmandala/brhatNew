@@ -386,3 +386,13 @@ export async function rmLemma(select:string){
 	if (error) throw new Error(error.message)
 	return data	
 }
+
+export async function dynamicTable(name:string, limit:number){
+	const { data, error } = await supabase
+	.from(`db-${name}`)
+	.select()
+	.order('id')
+	.range(0,limit)
+	if (error) throw new Error(error.message)
+	return data	
+}

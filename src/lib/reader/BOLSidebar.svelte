@@ -60,8 +60,10 @@
 	});
 </script>
 
-<div class="rta-column rowgap100">
-	<p style="color: var(--opposite)">PDFs</p>
+<div class="rta-column rowgap100 stickyboi">
+	<p class="authentic oppositer"><b>Discover</b></p>
+	<p><a href="/discover/dhatupatha">Dhātupāṭhaḥ</a></p>
+	<p class="authentic oppositer p-top-16"><b>PDFs</b></p>
 	<div class="rta-column innerbox rowgap100">
 		<button class="blank-button" on:click={() => togglePDF(1)} class:openbutton={isPDF[1]}
 			><p>Essentials</p></button
@@ -154,10 +156,19 @@
 
 <style lang="sass">
 
+.stickyboi
+	position: sticky
+	top: 128px
+
 .blank-button
 	text-align: left
 	&:hover
 		p
+			color: var(--mand)
+
+p
+	&:hover
+		a
 			color: var(--mand)
 
 .blank-button.openbutton

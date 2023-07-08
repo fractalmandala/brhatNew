@@ -575,32 +575,9 @@
 <style lang="sass">
 
 .light, .dark
-	p, h6, h5, h4, h3, small, .drawer-item
-		font-family: 'Authentic Sans', sans-serif
 	.drawer-item
 		font-weight: bold
 		font-size: 21px
-
-.page3grid
-	display: grid
-	grid-auto-flow: row
-	.sideleft
-		grid-area: left
-	.centerpage
-		grid-area: center
-	.sideright
-		grid-area: right
-
-.levelzero
-	.page3grid
-		grid-template-columns: 280px 1fr 256px
-		grid-template-areas: "left center right"
-		padding-left: 32px
-		padding-right: 32px
-		.sideleft
-			border-right: 1px solid var(--contraster)
-			padding-right: 32px
-
 
 .is-green
 	color: #538733
