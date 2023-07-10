@@ -82,7 +82,7 @@
 		>
 			<SplideTrack>
 				<SplideSlide>
-					<div class="rta-video">
+					<div class="rta-column rowgap100">
 						<Youtuber youTubeId={'jZ6YddYWH9U'} />
 						<small>
 							<a href="https://youtu.be/jZ6YddYWH9U" target="_blank" rel="noreferrer">
@@ -94,7 +94,7 @@
 				</SplideSlide>
 
 				<SplideSlide>
-					<div class="rta-video">
+					<div class="rta-column rowgap100">
 						<Youtuber youTubeId={'gkAaT9XBURE'} />
 						<small>
 							<a href="https://youtu.be/gkAaT9XBURE" target="_blank" rel="noreferrer">
@@ -105,7 +105,7 @@
 				</SplideSlide>
 
 				<SplideSlide>
-					<div class="rta-video">
+					<div class="rta-column rowgap100">
 						<Youtuber youTubeId={'weF2xsunKOs'} />
 						<small>
 							<a href="https://youtu.be/weF2xsunKOs" target="_blank" rel="noreferrer">
@@ -210,7 +210,7 @@
 		color: white
 	@media screen and (min-width: 1024px)
 		width: 400px
-		height: 204px
+		height: 232px
 		background: #878787
 	@media screen and (max-width: 1023px)
 		width: 100%
