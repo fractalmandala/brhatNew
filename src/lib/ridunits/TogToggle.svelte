@@ -88,7 +88,6 @@
 	padding: 2px 8px
 	border-radius: 2px
 	font-weight: 400
-	font-family: 'Authentic Sans', sans-serif
 
 .tooltip.modile
 	left: 0

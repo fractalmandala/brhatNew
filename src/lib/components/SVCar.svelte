@@ -56,7 +56,7 @@
 					</defs>
 				</svg>
 			</div>
-			<small class="typett2">Hindi Cultural Renaissance</small>
+			<small class="typett2">Hindu Cultural Renaissance</small>
 		</div>
 	</div>
 	<div class="rta-column rowgap300 p-top-32">
@@ -186,9 +186,11 @@
 			transform: scale(0.9)
 			color: white
 			background: #fe4a49
+	@media screen and (max-width: 1023px)
+		padding-top: 16px
 
 
-.holds-button-emerge
+.holds-button-emerge, .arrowsanimation
 	@media screen and (max-width: 1023px)
 		display: none
 

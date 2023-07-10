@@ -143,7 +143,7 @@
 				{#if threeactions && threeactions.length > 0}
 					{#each threeactions as item, i}
 						<div
-							class="rta-column glass-top p-top-32"
+							class="rta-column glass-top p-top-16"
 							use:reveal={{
 								transition: 'fly',
 								y: 200,
@@ -175,7 +175,7 @@
 					<ButtonEmerge2><a href="/anveshi">Learn More</a></ButtonEmerge2>
 				</div>
 			</div>
-			<div class="colgap100 rta-row selfend xend ycenter">
+			<div class="colgap100 rta-row selfend xend-d ycenter" id="thissmall">
 				<div class="arrowsanimation">
 					<svg
 						width="94"
@@ -208,7 +208,7 @@
 						</defs>
 					</svg>
 				</div>
-				<small class="typett2">Culture Travel and Experience</small>
+				<small class="typett2" id="thissmall">Culture Travel and Experience</small>
 			</div>
 		</div>
 		<!--end-->
@@ -448,11 +448,11 @@
 			>
 		</h5>
 
-		<div class="rta-grid grid3 rowgap300 colgap400">
+		<div class="rta-grid grid3 rowgap600 colgap400">
 			{#if videos && videos.length > 0}
 				{#each videos as item, i}
 					<div
-						class="rta-video"
+						class="rta-column rowgap100"
 						use:reveal={{
 							transition: 'fly',
 							y: 200,
@@ -509,7 +509,7 @@
 					<ButtonEmerge6><a href="/dhiti">All Posts</a></ButtonEmerge6>
 				</div>
 			</div>
-			<div class="colgap100 rta-row ycenter">
+			<div class="colgap100 rta-row ycenter ta-c-m">
 				<div class="arrowsanimation">
 					<svg
 						width="94"
@@ -542,7 +542,7 @@
 						</defs>
 					</svg>
 				</div>
-				<small class="typett2">Dhīti is our Blog for Essays on Culture, Policy and Education</small>
+				<small class="typett2">our Blog on Culture, Policy and Education</small>
 			</div>
 		</div>
 
@@ -557,7 +557,7 @@
 							<div class="rta-image">
 								<img src={item.meta.image} alt={item.meta.title} />
 							</div>
-							<h5>
+							<h5 class="tt-c">
 								<strong>
 									<a href={item.path}>
 										{item.meta.title}
@@ -643,7 +643,7 @@
 						}}
 					>
 						<h6><a href="/openlibrary/books/{item.slug}" class="typett">{item.Text}</a></h6>
-						<p>{item.author}</p>
+						<small style="text-transform: none">{item.author}</small>
 					</div>
 				{/each}
 			{/if}
@@ -653,6 +653,10 @@
 </div>
 
 <style lang="sass">
+
+#thissmall
+	@media screen and (max-width: 1023px)
+		text-align: right !important
 
 .rta-card
 	h5

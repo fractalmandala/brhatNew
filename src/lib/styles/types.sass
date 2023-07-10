@@ -83,18 +83,84 @@
 	src: url('/fonts/nohemi/Nohemi-VF.woff') format('woff'), url('/fonts/nohemi/Nohemi-VF.woff2') format('woff2')
 	unicode-range: U+0020-007F, U+00A0-00FF, U+0100-017F, U+1E00-1EFF, U+2000-206F, U+20A0-20CF, U+2100-214F, U+2150-218F, U+2C60-2C7F, U+A720-A7FF
 
+@font-face
+	font-family: 'Hubot-Sans', sans-serif
+	font-style: normal
+	font-weight: normal
+	src: url('/fonts/hubot/Hubot-Sans-Regular.woff2') format('woff2')
 
-$home: 'Space Grotesk', sans-serif
+@font-face
+	font-family: 'Hubot-Sans', sans-serif
+	font-style: normal
+	font-weight: 300
+	src: url('/fonts/hubot/Hubot-Sans-Light.woff2') format('woff2')
+
+@font-face
+	font-family: 'Hubot-Sans', sans-serif
+	font-style: normal
+	font-weight: 500
+	src: url('/fonts/hubot/Hubot-Sans-Medium.woff2') format('woff2')
+
+@font-face
+	font-family: 'Hubot-Sans', sans-serif
+	font-style: normal
+	font-weight: 600
+	src: url('/fonts/hubot/Hubot-Sans-SemiBold.woff2') format('woff2')
+
+@font-face
+	font-family: 'Hubot-Sans', sans-serif
+	font-style: normal
+	font-weight: 700
+	src: url('/fonts/hubot/Hubot-Sans-Bold.woff2') format('woff2')
+
+@font-face
+	font-family: 'Hubot-Sans', sans-serif
+	font-style: normal
+	font-weight: 800
+	src: url('/fonts/hubot/Hubot-Sans-ExtraBold.woff2') format('woff2')
+
+@font-face
+	font-family: 'Hubot-Sans', sans-serif
+	font-style: italic
+	font-weight: normal
+	src: url('/fonts/hubot/Hubot-Sans-RegularItalic.woff2') format('woff2')
+
+@font-face
+	font-family: 'Hubot-Sans', sans-serif
+	font-style: italic
+	font-weight: 300
+	src: url('/fonts/hubot/Hubot-Sans-LightItalic.woff2') format('woff2')
+
+@font-face
+	font-family: 'Hubot-Sans', sans-serif
+	font-style: italic
+	font-weight: 500
+	src: url('/fonts/hubot/Hubot-Sans-MediumItalic.woff2') format('woff2')
+
+@font-face
+	font-family: 'Hubot-Sans', sans-serif
+	font-style: italic
+	font-weight: 600
+	src: url('/fonts/hubot/Hubot-Sans-SemiBoldItalic.woff2') format('woff2')
+
+@font-face
+	font-family: 'Hubot-Sans', sans-serif
+	font-style: italic
+	font-weight: 700
+	src: url('/fonts/hubot/Hubot-Sans-BoldItalic.woff2') format('woff2')
+
+@font-face
+	font-family: 'Hubot-Sans', sans-serif
+	font-style: italic
+	font-weight: 800
+	src: url('/fonts/hubot/Hubot-Sans-ExtraBoldItalic.woff2') format('woff2')
+
+
+$home: 'Hubot-Sans', sans-serif
 $hind: 'Adobe Devanagari', serif
 $stix: 'Adobe Devanagari', serif
-$libre: 'Space Grotesk', sans-serif
-$grot: 'Space Grotesk', sans-serif
-
-.nohemi
-	font-family: 'Nohemi', sans-serif
-
-.authentic
-	font-family: 'Authentic Sans', sans-serif
+$libre: 'Hubot-Sans', sans-serif
+$grot: 'Hubot-Sans', sans-serif
 
 h6.nohemi
 	font-weight: 700
@@ -117,11 +183,11 @@ body, html, li, pre
 		font-family: $grot
 	.singleitem
 		h3
-			font-family: 'Authentic Sans', sans-serif
+			font-family: $grot
 			letter-spacing: -1px
 			font-weight: bold
 		pre, p
-			font-family: 'Space Grotesk', sans-serif
+			font-family: $grot
 
 .ta-c
 	text-align: center
@@ -297,9 +363,12 @@ pre.h5
 	font-size: 1.2rem
 
 h5
-	font-size: 3.6vw
+	font-size: 4vw
 	font-weight: 400
 	color: var(--greyish)
+
+h5.bold
+	font-weight: bold
 
 h5.serif
 	font-size: 6vw
@@ -313,7 +382,7 @@ h4
 	color: var(--opposite)
 
 h3
-	font-size: 2.8rem
+	font-size: 2.1rem
 	letter-spacing: -1px
 	color: var(--themer)
 
@@ -687,7 +756,7 @@ h1
 		@media screen and (min-width: 1024px)
 			font-size: 18px
 		@media screen and (max-width: 1023px)
-			font-size: 24px
+			font-size: 18px
 			padding: 4px 0
 
 
@@ -786,9 +855,9 @@ button.greenbutton
 
 .doc-bar
 	code
-		font-family: 'Space Grotesk', sans-serif
+		font-family: $grot
 	h3, h4, h5, h6
-		font-family: 'Nohemi', sans-serif
+		font-family: $grot
 		text-transform: capitalize
 	ul, ol
 		margin-left: 0

@@ -226,7 +226,6 @@ p
 		font-size: 12px
 
 .pagetitle
-	font-family: 'Nohemi', sans-serif
 	&:hover
 		.text-animation
 			animation: colorchange 2s infinite forwards

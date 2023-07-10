@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { themeMode, sideMode } from '$lib/stores/globalstores';
+	import { themeMode, sideMode, breakTwo } from '$lib/stores/globalstores';
 	import { browser } from '$app/environment';
 	import CompToggle from '$lib/ridunits/CompToggle.svelte';
 	import IconClose from '$lib/icons/IconClose.svelte';
@@ -481,7 +481,9 @@
 			</div>
 			<IconClose />
 		{:else}
-			<p>OUR COSMOS</p>
+			{#if !$breakTwo}
+				<p>OUR COSMOS</p>
+			{/if}
 			<div id="menumainx">
 				<svg
 					id="pulsar"
@@ -539,20 +541,21 @@
 		align-content: center
 		align-items: center
 		padding: 0 32px
-		gap: 0
+		gap: 16px
 		.midrow
 			gap: 24px
 		.search
 			grid-area: search
 			width: 32px
 	@media screen and (max-width: 1023px)
-		grid-template-columns: 160px 1fr 144px
+		grid-template-columns: 1fr 24px 24px
 		grid-template-rows: 1fr
 		grid-template-areas: "applogo search menuicon"
 		height: 64px
 		align-items: center
 		padding: 0 16px
 		justify-items: stretch
+		gap: 16px
 		.search
 			grid-area: search
 
@@ -578,9 +581,9 @@
 		flex-direction: row
 		align-items: center
 	@media screen and (max-width: 1023px)
+		gap: 0
 		svg
-			height: 48px
-		width: 160px
+			height: 40px
 
 #backcircle, #frontcircle
 	transform-origin: center center
@@ -617,6 +620,8 @@
 	@media screen and (max-width: 1023px)
 		height: 64px
 		width: 100%
+		p
+			font-size: 14px
 	&:hover
 		p
 			color: #fe4a49

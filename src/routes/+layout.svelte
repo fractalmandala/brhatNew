@@ -1,5 +1,6 @@
 <script lang="ts">
 	import RIDSidebar from '$lib/ridunits/RIDSidebar.svelte';
+	import { afterNavigate, beforeNavigate } from '$app/navigation';
 	import type { LayoutData } from './$types';
 	import { breakZero, breakOne, breakTwo, themeMode, innerWidth } from '$lib/stores/globalstores';
 	import { dev } from '$app/environment';
@@ -8,9 +9,11 @@
 	import '$lib/styles/types.sass';
 	import '$lib/styles/tokens.sass';
 	import Footer from '$lib/components/Footer.svelte';
+	import PageTransition from '$lib/components/PageTransition.svelte';
 
 	let breakPointOn: boolean;
 	let fake = false;
+	let keyTrigger: any;
 
 	inject({ mode: dev ? 'development' : 'production' });
 
@@ -27,6 +30,8 @@
 	}
 
 	export let data: LayoutData;
+
+	$: keyTrigger = data.url;
 </script>
 
 <svelte:window bind:innerWidth={$innerWidth} />
@@ -40,7 +45,9 @@
 	class:levelone={$breakOne}
 	class:leveltwo={$breakTwo}
 >
-	<slot />
+	<PageTransition {keyTrigger}>
+		<slot />
+	</PageTransition>
 	<RIDSidebar />
 	<Chip />
 	<Footer />

@@ -105,7 +105,7 @@
 				{#if newsvideos && newsvideos.length > 0}
 					<div class="rta-grid grid3 colgap300 rowgap600 p-top-32">
 						{#each newsvideos as item}
-							<div class="rta-video">
+							<div class="rta-column rowgap100">
 								<Youtuber youTubeId={item.content} />
 								<small>
 									<a href={item.link} target="_blank" rel="noreferrer">
@@ -165,8 +165,6 @@
 	.feat-tag
 		font-size: 14px
 		padding: 4px 6px
-	.rta-video
-		height: 100%
 
 .feat-tag
 	background: #fe4a49
@@ -194,10 +192,6 @@
 				object-fit: cover
 				height: 100%
 
-.feat-head
-	h1
-		font-family: 'Authentic Sans', sans-serif
-
 .leveltwo.mainletter
 	grid-template-columns: 1fr
 	grid-template-areas: "main"
@@ -211,7 +205,6 @@
 .mainletter
 	h3
 		color: var(--opposite)
-		font-family: 'Authentic Sans', sans-serif
 
 .dark
 	.singleitem

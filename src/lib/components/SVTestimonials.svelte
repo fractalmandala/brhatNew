@@ -14,7 +14,7 @@
 </script>
 
 <div class="rta-column ycenter rowgap600" data-lenis-scroll-snap-align="start">
-	<h4 class="ta-c-d p-top-32">{tituling}</h4>
+	<h5 class="bold oppositer ta-c-d p-top-32">{tituling}</h5>
 	{#if tests && tests.length > 0}
 		<Splide
 			hasTrack={false}
@@ -47,7 +47,7 @@
 				{/each}
 			</SplideTrack>
 			<div
-				class="splide__arrows splide__arrows--ltr rta-row xcenter-d xcenter-m colgap200 bord-bot p-bot-16"
+				class="splide__arrows splide__arrows--ltr rta-row xcenter-d xcenter-m colgap200 p-bot-16"
 			>
 				<button
 					class="splide__arrow splide__arrow--prev"

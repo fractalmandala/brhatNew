@@ -271,7 +271,7 @@
 	padding-right: 32px
 
 input
-	font-family: 'Space Grotesk', sans-serif
+	font-family: 'Hubot-Sans', sans-serif
 
 input
 	border: 1px solid var(--borderline)

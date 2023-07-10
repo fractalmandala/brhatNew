@@ -436,7 +436,6 @@ pre
 		height: 40px
 		margin: auto
 	p
-		font-family: 'Authentic Sans', sans-serif
 		color: var(--opposite)
 		font-size: 12px
 

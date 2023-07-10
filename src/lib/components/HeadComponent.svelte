@@ -10,7 +10,7 @@
 	<meta name="description" content={metaDescription} />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={metaDescription} />
-	<meta property="og:url" content="https://www.brhat.in{metaUrl}" />
+	<meta property="og:url" content={metaUrl} />
 	<meta property="og:image" content={metaImage} />
 	<meta property="og:image:alt" content="{title} hero image" />
 	<meta property="og:image:width" content="1200" />
@@ -24,7 +24,7 @@
 	<meta name="twitter:creator" content="@brhat_in" />
 	<meta name="twitter:site" content="@brhat_in" />
 	<meta property="og:locale" content="en_IN" />
-	<link rel="canonical" href="https://www.brhat.in{metaUrl}" />
+	<link rel="canonical" href={metaUrl} />
 	<meta name="robots" content="index, follow" />
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-6NPMDTQVDE"></script>
 	<script>

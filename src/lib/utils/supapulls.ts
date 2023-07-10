@@ -20,8 +20,6 @@ export async function threeConvictions(){
 	return data
 }
 
-
-
 export async function brhatActionsSix(){
 	const { data, error } = await supabase
 	.from('brhat-actions')
@@ -31,7 +29,6 @@ export async function brhatActionsSix(){
 	if (error) throw new Error(error.message)
 	return data	
 }
-
 
 export async function BOLEssentials(limit:number){
 	const { data, error } = await supabase
@@ -132,7 +129,6 @@ export async function AryanTags() {
 	return data
 }
 
-
 export async function brhatUpdates() {
 	const { data, error } = await supabase
 	.from('brhat-updates')
@@ -181,7 +177,6 @@ export async function allmrdVids(limiter: number){
   if (error) throw new Error(error.message)
   return data
 }
-
 
 export async function mrdangaVids() {
 	const { data, error } = await supabase
@@ -255,7 +250,6 @@ export async function allAuths(){
 	return data
 }
 
-
 export async function anveshiTempleArt() {
 	const { data, error } = await supabase
 	.from('brhat-anveshi')
@@ -306,7 +300,6 @@ export async function chapterFaq(chapter: string){
   if (error) throw new Error(error.message)
   return data
 }
-
 
 export async function chapterItinerary(chapter: string){
 	const { data, error } = await supabase
@@ -593,7 +586,6 @@ export async function MJGallery2() {
 	return data
 }
 
-
 export async function events() {
 	const { data, error } = await supabase
 	.from('brhat-calendar')
@@ -603,43 +595,43 @@ export async function events() {
 	return data
 }
 
-	export async function bucket(folder:string){
-		const { data, error } = await supabase
-		.storage
-		.from('brhatwebsite')
-  	.list(folder, {
-    	limit: 100,
-    	offset: 0,
-    	sortBy: { column: 'name', order: 'asc' },
-  	})
-		if (error) throw new Error(error.message)
-		return data
-	}
+export async function bucket(folder:string){
+	const { data, error } = await supabase
+	.storage
+	.from('brhatwebsite')
+	.list(folder, {
+  	limit: 100,
+  	offset: 0,
+  	sortBy: { column: 'name', order: 'asc' },
+	})
+	if (error) throw new Error(error.message)
+	return data
+}
 
-	export async function getImage(link:string){
-		const { data } = await supabase
-		.storage
-		.from('brhatwebsite')
-		.getPublicUrl(link)
-		return data
-	}
+export async function getImage(link:string){
+	const { data } = await supabase
+	.storage
+	.from('brhatwebsite')
+	.getPublicUrl(link)
+	return data
+}
 
-	export async function getCalendar(){
-		const { data, error } = await supabase
-		.from('brhat-calendar')
-		.select()
-		if (error) throw new Error(error.message)
-		return data
-	}
+export async function getCalendar(){
+	const { data, error } = await supabase
+	.from('brhat-calendar')
+	.select()
+	if (error) throw new Error(error.message)
+	return data
+}
 
-	export async function brhatIndex(){
-		const { data, error } = await supabase
-		.from('brhatindex')
-		.select()
-		.order('heading')
-		if(error) throw new Error(error.message)
-		return data
-	}
+export async function brhatIndex(){
+	const { data, error } = await supabase
+	.from('brhatindex')
+	.select()
+	.order('heading')
+	if(error) throw new Error(error.message)
+	return data
+}
 
 export async function allDhatus(limit:number){
 	const { data, error } = await supabase
@@ -669,15 +661,14 @@ export async function dhatuStore(id:string){
 	return data	
 }
 
-	export async function allDictionary(){
-		const { data, error } = await supabase
-		.from('db-dictionary')
-		.select()
-		.order('id')
-		if(error) throw new Error(error.message)
-		return data
-	}
-
+export async function allDictionary(){
+	const { data, error } = await supabase
+	.from('db-dictionary')
+	.select()
+	.order('id')
+	if(error) throw new Error(error.message)
+	return data
+}
 
 export async function newSRG(dynamizer:string){
     const { data, error } = await supabase
@@ -690,15 +681,14 @@ export async function newSRG(dynamizer:string){
     return data
 }
 
-
 export async function juneCalendar(dateToday:Date){
-    const { data, error } = await supabase
-    .from('brhat-june')
-    .select()
-    .order('id')
-		.gte('data',dateToday)
-    if (error) throw new Error(error.message)
-    return data
+  const { data, error } = await supabase
+  .from('brhat-june')
+  .select()
+  .order('id')
+	.gte('data',dateToday)
+  if (error) throw new Error(error.message)
+  return data
 }
 
 export async function getDescription(url:string){
@@ -772,6 +762,17 @@ export async function testimonialsSvarn(){
 	.select()
 	.eq('type', 'svarnanjali')
 	.order('id')
+	if ( error ) throw new Error(error.message)
+	return data
+}
+
+export async function imageGallery(upperLimit:number){
+	const { data, error } = await supabase
+	.from('amrit-gallery')
+	.select()
+	.neq('genre', 'cancel')
+	.order('id', {ascending: false})
+	.range(0, upperLimit)
 	if ( error ) throw new Error(error.message)
 	return data
 }

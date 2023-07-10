@@ -244,7 +244,6 @@
 		background: var(--opposite)
 		h5, small
 			color: var(--background)
-			font-family: 'Authentic Sans', sans-serif
 			padding-bottom: 0
 		h5
 			font-weight: bold
@@ -253,10 +252,9 @@
 			text-transform: none
 			color: var(--themer)
 		p
-			font-family: 'Authentic Sans', sans-serif
 		form
 			input
-				font-family: 'Authentic Sans', sans-serif
+				font-family: 'Hubot-Sans', sans-serif
 				font-size: 12px
 				padding: 4px 8px
 				outline: none
@@ -273,7 +271,7 @@
 
 .thisforms
 	input
-		font-family: 'Authentic Sans', sans-serif
+		font-family: 'Hubot-Sans', sans-serif
 		font-size: 12px
 		padding: 4px 8px
 		outline: none

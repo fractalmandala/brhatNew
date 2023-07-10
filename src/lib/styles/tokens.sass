@@ -300,6 +300,10 @@ body, html
 	@media screen and (min-width: 1024px)
 		text-align: right
 
+.ta-r-m
+	@media screen and (max-width: 1023px)
+		text-align: right
+
 .tt-u
 	text-transform: uppercase
 
@@ -369,6 +373,8 @@ body, html
 			width: 32%
 		.w64
 			width: 60%
+		&.xend-d
+			justify-content: flex-end
 	@media screen and (max-width: 1023px)
 		flex-direction: row
 		flex-wrap: wrap
@@ -551,19 +557,13 @@ body, html
 		padding-left: 280px
 		padding-right: 280px
 
-.grid3
-	.rta-video
-		@media screen and (min-width: 1024px)
-			height: 200px
-		@media screen and (max-width: 1023px)
-			height: 200px
-
-.grid4
-	.rta-video
-		@media screen and (min-width: 1024px)
-			height: 200px
-		@media screen and (max-width: 1023px)
-			height: 200px
+.rta-video
+	small, a
+		margin: 0
+	@media screen and (min-width: 1024px)
+		height: 200px
+	@media screen and (max-width: 1023px)
+		height: 200px
 
 .rta-card
 	border-radius: 16px
@@ -1203,7 +1203,6 @@ body, html
 	h1, h2, p, pre, li
 		word-break: break-word
 		color: var(--themer)
-		font-family: 'Space Grotesk', serif
 
 .attribution
 	display: none
@@ -1334,7 +1333,6 @@ body, html
 	position: relative
 	z-index: 1
 	overflow: hidden
-	font-family: 'Authentic Sans', sans-serif
 	&:hover
 		color: white
 	&::after

@@ -1,27 +1,27 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
+	import { elasticOut } from 'svelte/easing';
+	import type { ChatCompletionRequestMessageRoleEnum } from 'openai';
 
-	import { onMount } from 'svelte'
-	import { fade } from 'svelte/transition'
-	import { elasticOut } from 'svelte/easing'
-	import type { ChatCompletionRequestMessageRoleEnum } from 'openai'
+	let sampler: any;
 
-	let sampler:any
+	onMount(async () => {
+		sampler = message;
+	});
 
-	onMount(async() => {
-		sampler = message
-	})
-
-	export let type: ChatCompletionRequestMessageRoleEnum
-	export let message: string
-
+	export let type: ChatCompletionRequestMessageRoleEnum;
+	export let message: string;
 </script>
 
-<div class="boxofchat {type === 'user' ? 'chat-end' : 'chat-start'}" in:fade={{ duration: 300, delay: 50, easing: elasticOut }}>
+<div
+	class="boxofchat {type === 'user' ? 'chat-end' : 'chat-start'}"
+	in:fade={{ duration: 300, delay: 50, easing: elasticOut }}
+>
 	<div class="commbody {type === 'user' ? 'user' : 'brhatGPT'}">
 		{@html message}
 	</div>
 </div>
-
 
 <style lang="sass">
 
@@ -30,7 +30,6 @@
 
 .commbody.user, .commbody.brhatGPT
 	color: #272727
-	font-family: 'Spline Sans', sans-serif
 
 .commbody.brhatGPT
 	font-size: 18px

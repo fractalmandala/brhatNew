@@ -289,7 +289,7 @@
 			font-weight: 700
 	@media screen and (max-width: 1023px)
 		h5
-			font-size: 32px
+			font-size: 24px
 			font-weight: 700
 
 @keyframes lineforward
