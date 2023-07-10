@@ -7,7 +7,7 @@ tags: concerns, islam
 date: "2023-07-07"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/keralastory/keralastory.jpg
 ---
-<img class="imageclass" first src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/keralastory/keralastory1.webp" alt="one"/>
+<img class="imageclass2" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/keralastory/keralastory1.webp" alt="one"/>
 <div class="imagecaption">ISIS (Islamic State of Iraq and Syria, Daesh) came out in favour of PFI (Popular Front of India), after the Government of India banned PFI. This is a screen shot from the magazine ISIS magazine 'The Voice of Khurasan', page number 4</div>
 
 >**“A belief in the equal truth of all religions is equal ignorance of all religions.” **
@@ -116,35 +116,34 @@ We can deny it all we want, bury our heads in sand, or shout ‘fascist’ or �
 
 [@total_woke_](https://twitter.com/total_woke_)
 
->_Muslim denial of [ #LoveJihad](https://twitter.com/hashtag/LoveJihad?src=hashtag_click) is 100% consistent with their tactics. Same applies to ISIS too. Before ISIS was defeated under Trump, they did absolutely [horrible](https://twitter.com/GemsOfKCR/status/1661640513798410241) things in the name of Islam. These include:_
-
-
->_1 Slaughter of POWs & civilians_
-
+> _Muslim denial of [ #LoveJihad](https://twitter.com/hashtag/LoveJihad?src=hashtag_click) is 100% consistent with their tactics. Same applies to ISIS too. Before ISIS was defeated under Trump, they did absolutely [horrible](https://twitter.com/GemsOfKCR/status/1661640513798410241) things in the name of Islam. These include:_
+>    
+> _1 Slaughter of POWs & civilians_
+>  
 >_2 Burning people alive_
-
+>   
 >_3 [ Sex slavery](https://twitter.com/DireARTOfGod/status/1660007503827017729) & slave markets_
-
+>   
 >_4 Beheadings_
-
+>   
 >_5 Genocide of [Yezidis](https://twitter.com/AzzatAlsaalem/status/1654913082903212034) & Shia_
-
+>   
 >_6 Terrorist attacks globally_
-
+>   
 >_7 Murder of children & babies_
-
+>   
 >_8 Burying people alive_
-
+>   
 >_9 Destruction of pre-Islam buildings_
-
+>   
 >_10 Chopping off hands_
-
->_11 Throwing gay men from rooftops_
-
->_(This stuff is so horrific, Twitter won't let me post pictures of it, despite Twitter being the most permissive platform of all SM.)
-
+>   
+> 11 Throwing gay men from rooftops 
+>   
+> (This stuff is so horrific, Twitter won't let me post pictures of it, despite Twitter being the most permissive platform of all SM.)
+>    
 >_This did not happen 300 years ago, did not happen for gold from temples, this happened less than a decade ago, in almost 100% Muslim areas. It happened for Islam. Every single ISIS member fought for Islam. _
-
+>   
 >_Lakhs of people joined ISIS or tried to join. The Muslim response to ISIS was muted at best. More people protested against Nupur Sharma for her 20 second speech than for murder of lakhs by ISIS in the name of Islam. **A Kafir woman speaking the truth of Islam defamed Islam more than unthinkable atrocities in the name of Islam.** Think._
 
 What we see now as the response to [ #TheKeralaStory](https://twitter.com/hashtag/TheKeralaStory?src=hashtag_click) is in fact an extension of the response to ISIS type behaviour. **Converting Hindus using any means is fully encouraged in Muslim society**. And a movie which exposes these unholy tactics used will be panned under Islamophobia. This simply shows us how much tacit support there is for ISIS and Love Jihad within Muslim society. 
@@ -153,7 +152,10 @@ What we see now as the response to [ #TheKeralaStory](https://twitter.com/hashta
 
 <img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/keralastory/keralastory5.webp" alt="five"/>  
 
-[@taslimanasreen](https://twitter.com/taslimanasreen/status/1658841516247326727), Dhaka University Students. 1967 and 2022. 
+<div class="imagecaption">
+	<a href="https://twitter.com/taslimanasreen/status/1658841516247326727" target="_blank" rel="noreferrer">@taslimanasreen</a>, Dhaka University Students. 1967 and 2022. 
+</div>
+
 
 Converting others to increase one’s flock is not a recent practice. It enjoys theological sanction both in Christianity and Islam, whose adherents have waged wars for it. As Prof. Vamsee Juluri [states ](https://americankahani.com/perspectives/when-do-you-remember-your-mother-should-the-question-be-when-do-you-ever-forget/) _I read Susan Jacoby’s epic history of religious conversion (“Strange Gods: A Secular History of Conversion,” Pantheon Books, 2016), Jacoby writes about the Inquisition, and one of its less-known later manifestations, the clandestine conversions and kidnappings of Jewish children in Italy till as late as the 1850s. A Christian nanny could “convert” a Jewish baby secretly, and the State could now claim that child as property of the dominant religion. One parent might convert to the dominant religion, and the children would now go with them to the new faith unilaterally; a situation that seems to have arisen in the case of a family in [Malaysia](https://www.ucanews.com/news/abuse-survivor-exposes-unilateral-conversions-in-malaysia/98165) even as I write. _ This explains why the support from the global community which otherwise cried buckets over human rights is a whimper at best. 
 

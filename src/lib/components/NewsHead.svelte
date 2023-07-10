@@ -9,10 +9,11 @@
 	let y: number;
 	let height: number;
 	let isInvisible = false;
+	let mouseY: number;
 	let latestScrollY: number;
 	let changer = false;
 	let current: any;
-	let letterTitle = 'BṚHATADYA';
+	let letterTitle = 'Bṛhatadya';
 	let signinWarn = false;
 
 	function toggleWarn() {
@@ -22,8 +23,6 @@
 	$: {
 		if (y > 100 && y > latestScrollY) {
 			isInvisible = true;
-		} else {
-			isInvisible = false;
 		}
 		latestScrollY = y;
 	}
@@ -34,8 +33,23 @@
 		changer = false;
 	}
 
-	onMount(async () => {
-		current = await latestIssue();
+	onMount(() => {
+		(async () => {
+			current = await latestIssue();
+		})();
+
+		const handleMouse = (event: { clientY: number }) => {
+			mouseY = event.clientY;
+			if (mouseY <= 128) {
+				isInvisible = false;
+			}
+		};
+
+		window.addEventListener('mousemove', handleMouse);
+
+		return () => {
+			window.removeEventListener('mousemove', handleMouse);
+		};
 	});
 </script>
 
@@ -47,6 +61,7 @@
 	class:light={$themeMode}
 	class:dark={!$themeMode}
 >
+	<div class="stripone">p</div>
 	<div class="bigg p-top-16">
 		<a href="/newsletter" class="pagetitle">
 			{#each letterTitle.split('') as char, i}
@@ -59,7 +74,7 @@
 			<div class="thinline" />
 		</div>
 	</div>
-	<div class="midrow" class:changed={changer}>
+	<div class="midrow">
 		<div class="null partleft">
 			<p><a href="/">Bṛhat Home</a></p>
 		</div>
@@ -98,26 +113,15 @@
 
 <style lang="sass">
 
+.partleft
+	p
+		color: var(--opposite)
+
 .isstagnull
 	padding: 2px 4px
 	border-radius: 2px
-	background: #fe4a49
-
-.isstag
-	color: white
-	a
-		color: white
-	&:hover
-		a
-			color: white
-
-p
-	&:hover
-		a
-			color: #fe4a49
-
-.midrow.changed
-	background: var(--opposite)
+	p
+		color: var(--opposite)
 	
 .appheader
 	display: grid
@@ -126,15 +130,18 @@ p
 	z-index: 1000
 	width: 100vw
 	top: 0
-	transition: 0.35s ease
+	transition: 0.65s ease
 	@media screen and (min-width: 1024px)
 		grid-template-columns: 1fr
-		grid-template-rows: auto auto
-		grid-template-areas: "bigg" "midrow"
+		grid-template-rows: auto auto auto
+		grid-template-areas: "stripone" "bigg" "midrow"
 		align-content: center
 		align-items: center
 		gap: 0 12px
-		border-bottom: 1px solid var(--forline)
+		border-bottom: 1px solid #272727
+		.stripone
+			grid-area: stripone
+			height: 64px
 		.bigg
 			grid-area: bigg
 			display: flex
@@ -142,9 +149,8 @@ p
 			margin-bottom: 32px
 			.pagetitle
 				text-align: center
-				font-weight: 600
-				font-size: 64px
-				letter-spacing: -2px
+				font-size: 120px
+				letter-spacing: -8px !important
 				color: var(--opposite)
 			.subtitle
 				text-align: center
@@ -159,10 +165,10 @@ p
 			flex-direction: row
 			justify-content: space-between
 			align-items: center
-			border-top: 1px solid var(--forline)
+			border-top: 1px solid #272727
 			column-gap: 16px
-			padding-top: 4px
-			padding-bottom: 4px
+			padding-top: 8px
+			padding-bottom: 8px
 			padding-left: 32px
 			padding-right: 32px
 			.partleft, .partright
@@ -181,9 +187,7 @@ p
 			margin-bottom: 32px
 			.pagetitle
 				text-align: center
-				font-weight: 600
 				font-size: 56px
-				letter-spacing: -2px
 				color: var(--opposite)
 			.subtitle
 				text-align: center
@@ -198,7 +202,7 @@ p
 			flex-direction: row
 			justify-content: space-between
 			align-items: center
-			border-top: 1px solid var(--forline)
+			border-top: 1px solid var(--opposite)
 			column-gap: 16px
 			padding-top: 4px
 			padding-bottom: 4px
@@ -209,13 +213,17 @@ p
 
 .appheader.light
 	background: #FFFFFF
+	.stripone
+		border-bottom: 16px solid #171717
 
 .appheader.dark
 	background: #171717
+	.stripone
+		border-bottom: 16px solid #272727
 
 .appheader.hiddenHeader
 	@media screen and (min-width: 1024px)
-		transform: translateY(-138px)
+		transform: translateY(-264px)
 	@media screen and (max-width: 1023px)
 		transform: translateY(-128px)
 
@@ -223,9 +231,11 @@ p
 	p, p a
 		margin: 0
 		padding: 0
-		font-size: 12px
+		font-size: 14px
 
 .pagetitle
+	font-family: 'Garomand'
+	font-weight: 700
 	&:hover
 		.text-animation
 			animation: colorchange 2s infinite forwards

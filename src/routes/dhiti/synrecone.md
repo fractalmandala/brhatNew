@@ -8,7 +8,7 @@ image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwe
 excerpt: "A preliminary schema to reconnect with civilizational consciousness. Developing a complete Ontology, Epistemology and Teleology for Bhārata."
 ---
 
-Like atheism, decolonization is a rejection, a creation of empty space. But unlike atheism, decolonization carries a forward implication. The empty space created must be filled with a native lens. In the Indian context we speak of a Dhārmika OET- ontology, epistemology, teleology¹. These technical terms make for a psychological and cultural paradigm, connecting things that are core to existential human queries. Simply put, ontology describes what we know- things that make up reality, epistemology studies how we come to know- the methods of acquiring knowledge, and teleology points us to purpose or value- what do we do with this knowledge, or what is it for?
+Like atheism, decolonization is a rejection, a creation of empty space. But unlike atheism, decolonization carries a forward implication. The empty space created must be filled with a native lens. In the Indian context we speak of a Dhārmika OET- ontology, epistemology, teleology<sup>1</sup>. These technical terms make for a psychological and cultural paradigm, connecting things that are core to existential human queries. Simply put, ontology describes what we know- things that make up reality, epistemology studies how we come to know- the methods of acquiring knowledge, and teleology points us to purpose or value- what do we do with this knowledge, or what is it for?
 
 Decolonization is the installation of an alternative psychological and cultural operating system, in our case one encoded with Dhārmika OET. And Dhārmika code is written in the language of Sanskrit. This is not a claim of superiority to inflame Sanskrit vs. Tamil debates, it is a simple statement of fact. The Indian civilizational consciousness has emerged with Sanskrit as its root, even as it has naturally found expression and aesthetic in a wide variety of languages.
 
@@ -21,7 +21,7 @@ Graham Hancock is right- we are a species with amnesia. And among our species, I
 
 To whatever extent it is true that language shapes reality, Sanskrit’s profound rooting and etymological web gives more insight into reality (cognitive reality, even if not the manifest) than does any other language. And by synaptic reconnection we mean the re-establishment of civilizational cognition, as it might have existed among our ancestors. What did the ṛgvedic ṛṣi hold in his mind’s eye when he chanted on Indra or Agni? What did the upaniṣadic guru mean by the advaita brahman and ātman? When our ancestors turned to īśvara and when they thought of bhagavān, what were the differences internalized in their minds, the ones all diluted to us in the modern world by speaking only of “god?” Not that ready answers are forthcoming in this piece. These questions reflect a larger intent that requires a personal learning curve and much project work, only a preliminary schema for which is being proposed here.
 
-In doing so we follow ancient footsteps, such as those of Amarasiṃha who wrote the Amarakoṣaḥ Nāmaliṅgānuśāsanam- a Sanskrit thesaurus with words classified into ontological categories. Even prior, systems such as Nyāya and Vaiśeṣika bequeathed well defined ontologies. And of course, we always live under the high shadow of Pāṇini, Yāska, Bhartṛhari and more- the earliest known linguist ṛṣis of India. As far as generalizations go, it is safe to say that Indian ontology is a flat one, relatively non hierarchical. It distinguishes only between that which is real – सत्, and that which is not – असत्[^2]. Even when it argues for the existence of more than one ontological, as Sāṅkhya does with puruṣa and prakṛti, the real is still the unchanging, the underived. Dualism/ non-dualism, monism, substance essentialism- all these and more have been considered by Indian thought over its long existence, and even if there are disagreements here and there, a coherence does emerge. Let us see how.
+In doing so we follow ancient footsteps, such as those of Amarasiṃha who wrote the Amarakoṣaḥ Nāmaliṅgānuśāsanam- a Sanskrit thesaurus with words classified into ontological categories. Even prior, systems such as Nyāya and Vaiśeṣika bequeathed well defined ontologies. And of course, we always live under the high shadow of Pāṇini, Yāska, Bhartṛhari and more- the earliest known linguist ṛṣis of India. As far as generalizations go, it is safe to say that Indian ontology is a flat one, relatively non hierarchical. It distinguishes only between that which is real – सत्, and that which is not – असत्<sup>2</sup>. Even when it argues for the existence of more than one ontological, as Sāṅkhya does with puruṣa and prakṛti, the real is still the unchanging, the underived. Dualism/ non-dualism, monism, substance essentialism- all these and more have been considered by Indian thought over its long existence, and even if there are disagreements here and there, a coherence does emerge. Let us see how.
 
 #### Preliminary Schema: Objective and Overview
 In its preliminary form, the schema is envisaged as a combination of classifying/qualifying layers and the design principles embedded in them. The first two layers are ontological classifications of reality. Doing this over two instead of one layer allows us to bring in the dimension of ontical vs. ontological- a distinction cardinal to the field ever since Martin Heidegger. In reductive terms, ontical describes objective, clinical categorisations- stuff that makes up existence; while ontological describes existing- Being- what a thing/entity is to itself, its innate nature or properties.
@@ -115,7 +115,7 @@ Notice a cognitive elegance to these derivations:
 
 No matter which angle we approach from, the Indian civilization makes it abundantly clear that at its center lies Mind, or Consciousness, or Intent– √man (considering, knowing, thinking).
 
-This is not a solipsistic paradigm, but one of extreme responsibility, engagement and empowerment[^3]. It also affirms that, as much as dharma is predicated upon community and tradition, it has exalted space for the individual. We give accord to this in L2 by affixing subjective meaning to the natural and lived orders, ie, mapping meaning along subjective aspects that differ person to person. Indeed, what is considered a technological ghṛta of humanity often leads to severe anṛta conditions for the individual. Our matrix must be able to capture these kinds of dissonances, because dissonance is antithetical to the civilizational imperative of being in consonance with ṛta- it is anṛta by definition.
+This is not a solipsistic paradigm, but one of extreme responsibility, engagement and empowerment<sup>3</sup>. It also affirms that, as much as dharma is predicated upon community and tradition, it has exalted space for the individual. We give accord to this in L2 by affixing subjective meaning to the natural and lived orders, ie, mapping meaning along subjective aspects that differ person to person. Indeed, what is considered a technological ghṛta of humanity often leads to severe anṛta conditions for the individual. Our matrix must be able to capture these kinds of dissonances, because dissonance is antithetical to the civilizational imperative of being in consonance with ṛta- it is anṛta by definition.
 
 We design this layer along the pattern set in the previous one. Every category in reality- the ontical- has a certain form in the experience of being- the ontological. Ever since Martin Heidegger used these notions, the Western mind has been trying to come to terms with them. But the Indian mind has grappled with the fact of consciousness long ago and to profound detail. The anecdote abounds that late in his life, when Heidegger encountered Zen Buddhism, he remarked- “this is what I’ve been trying to say all my life.”
 
@@ -184,7 +184,7 @@ If consciousness is what emerges when information inside an individual is proces
 
 ##### Among known life forms, the emergent phenomenon finds maximum expression in homo sapiens. Among known collective groups, it finds maximum expression in civilizational super-aggregates.
 
-This is how over a long course of time (itihāsa) a civilization (Bhārata) has come into consciousness (dharma). And this emergence is along four principles, or sūtras.[^4]
+This is how over a long course of time (itihāsa) a civilization (Bhārata) has come into consciousness (dharma). And this emergence is along four principles, or sūtras.<sup>4</sup>
 
 यथा स्मृति: चैतन्यं चैतन्य: जीवं च। तथा इतिहास: संस्कृतिं संस्कृति: समूहं च।।
 yathā smṛtiḥ caitanyaṃ caitanyaḥ jīvaṃ ca tathā itihāsaḥ saṃskṛtiṃ saṃskṛtiḥ samūhaṃ ca
@@ -247,3 +247,13 @@ And thus must the jīva and samūha follow their dharma, or the path of consonan
 Having begun with a grand ambition of outlining the schema for synaptic reconnection to civilizational consciousness, we have arrived at describing the principles that generate such consciousness to begin with. But we haven’t lost sight of the original aim- the parser and compiler we seek to build.
 
 ...continued in Part 2.
+
+<section class="dhitifootnotes">
+<h4>Endnotes/References</h4>
+<ol>
+<li>The more common third is theology, but for reasons we explain in due time, our preference is for teleology.</li>
+<li>There is also a third, māyā, but we take reductive liberty here.</li>
+<li>We sidestep a number of technical and grammatical considerations here and articulate in reductive generalization. The “man/manin” referred to is an affix, or pratyaya, and Mind- √man- is a dhātu. Our generalization leans on the contentious nature of the Uṇādi Sūtras (where derivations of these words are given) to highlight a larger, glaring symmetry.</li>
+</ol>
+</section>
+

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
+	import Header from '$lib/components/DhitiHeader.svelte';
 	import Head from '$lib/components/HeadComponent.svelte';
 	import {
 		metaTitle,
@@ -34,6 +35,7 @@
 	let y: number;
 	let fsize = Array(3).fill(false);
 	let ftitle = Array(3).fill(false);
+	let scY: number;
 	fsize[1] = true;
 
 	function toggleFont(index: number) {
@@ -73,12 +75,16 @@
 	});
 </script>
 
+<svelte:window bind:scrollY={scY} />
+
 <Head
 	title={$metaTitle}
 	metaDescription={$metaDescription}
 	metaUrl={$metaUrl}
 	metaImage={$metaImage}
 />
+
+<Header opacitor={scY} />
 
 <PageProgress --thispagebackground="#fe4a49" --thispageheight="4px" {ref} />
 
@@ -144,7 +150,7 @@
 			<small>{data.category}</small>
 			<cite>{data.tags}</cite><br />
 		</div>
-		<h1 style="serif; font-weight: 700;">{data.title}</h1>
+		<h1 class="tt-c" style="serif; font-weight: 700;">{data.title}</h1>
 		<div class="authorbox">
 			{data.author}<br />
 			{#if member && member.length > 0}
@@ -301,7 +307,7 @@ h1
 .levelzero
 	align-items: center
 	.x22, .x3
-		width: 680px
+		width: 640px
 		margin-left: 0
 	.x3
 		padding-bottom: 128px

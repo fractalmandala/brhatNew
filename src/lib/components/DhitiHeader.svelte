@@ -23,6 +23,10 @@
 	let iW: number;
 	let breakPoint: boolean;
 	let fake = false;
+	export let opacitor: number;
+	let opa: number;
+
+	$: opa = opacitor / 700;
 
 	function toggleVisibility() {
 		if (browser) {
@@ -107,6 +111,7 @@
 	class:hiddenHeader={isInvisible}
 	class:light={$themeMode}
 	class:dark={!$themeMode}
+	style="opacity: {opa}"
 >
 	<a class="applogo" href="/dhiti" class:fullcol={breakPoint}>
 		{#if $themeMode}

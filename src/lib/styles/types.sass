@@ -1,6 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap')
 
 @font-face
+	font-family: 'Gloock Regular'
+	src: url('/fonts/gloock/gloock-regular.woff2') format('woff2'), url('/fonts/gloock/gloock-regular.woff') format('woff'), url('/fonts/gloock/gloock-regular.tff') format('tff'), url('/fonts/gloock/gloock-regular.otf') format('otf')
+	font-weight: normal
+	font-style: normal
+
+@font-face
+	font-family: 'Garomand'
+	src: url('/fonts/garomand/garomand-bold.woff2') format('woff2')
+	font-style: normal
+	font-weight: bold
+
+@font-face
+	font-family: 'Garomand'
+	src: url('/fonts/garomand/garomand-bolditalic.woff2') format('woff2')
+	font-style: italic
+	font-weight: bold
+
+@font-face
+	font-family: 'Garomand'
+	src: url('/fonts/garomand/garomand.woff2') format('woff2')
+	font-style: normal
+	font-weight: normal
+
+@font-face
+	font-family: 'Garomand'
+	src: url('/fonts/garomand/garomand-italic.woff2') format('woff2')
+	font-style: italic
+	font-weight: normal
+
+@font-face
 	font-family: 'Adobe Devanagari'
 	src: url('/fonts/AdobeDevanagari-Regular.woff2') format('woff2'), url('/fonts/AdobeDevanagari-Regular.woff') format('woff')
 	font-weight: normal
@@ -365,7 +395,7 @@ pre.h5
 h5
 	font-size: 4vw
 	font-weight: 400
-	color: var(--greyish)
+	color: var(--themer)
 
 h5.bold
 	font-weight: bold
@@ -512,7 +542,8 @@ h1
 	blockquote
 		margin-bottom: 32px
 		p
-			margin-bottom: 0 !important
+			margin-bottom: 12px
+			margin-top: 0
 		cite
 			margin: 0
 			padding: 0
@@ -878,3 +909,16 @@ button.greenbutton
 		margin-top: 24px
 		margin-bottom: 16px
 		color: var(--contraster2)
+
+.maincol
+	.dhitifootnotes
+		border-top: 1px solid var(--contraster)
+		h4, li
+			font-family: 'Hubot-Sans', sans-serif
+		h4
+			font-size: 18px
+			color: var(--themer)
+			letter-spacing: 0
+		li
+			font-size: 14px
+			color: var(--onlyblack)

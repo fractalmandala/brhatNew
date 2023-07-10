@@ -1,3 +1,8 @@
+---
+title: Adyasave
+---
+
+```html
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { themeMode, breakZero, breakOne, breakTwo } from '$lib/stores/globalstores';
@@ -59,27 +64,20 @@
 		{#if data.user !== 'none'}
 			<div class="rta-column itemarea outer-box">
 				{#if newsitems && newsitems.length > 0}
-					<div class="featuredbanner bord-bot p-bot-8 rta-row ycenter between">
-						<h3>Featured Updates</h3>
-						<div class="rta-row ycenter colgap200">
-							<button class="blank-button"> Essay </button>
-							<div class="verticalspacer" />
-							<button class="blank-button"> Video </button>
-							<div class="verticalspacer" />
-							<button class="blank-button"> Event </button>
-						</div>
-					</div>
 					{#each newsitems as item}
 						{#if item.tag === 'Featured'}
-							<div class="rta-column rowgap100 featured between p-bot-64 p-top-32">
-								<div class="rta-image height-40-30 m-bot-16">
+							<div class="rta-row row-col-rev rowgap300 featured between p-bot-64">
+								<div class="rta-column w64 rowgap200">
+									<div class="feat-tag">{item.tag}</div>
+									<div class="feat-head p-bot-16"><h1>{item.header}</h1></div>
+									<div class="feat-text"><pre>{item.content}</pre></div>
+									<a href={item.link} target="_blank" rel="noreferrer"
+										><button class="newbutton big">Read Now</button></a
+									>
+								</div>
+								<div class="rta-image w32">
 									<img src={item.image} alt="featuredhero" />
 								</div>
-								<div class="feat-head p-bot-16"><h1>{item.header}</h1></div>
-								<div class="feat-text"><pre>{item.content}</pre></div>
-								<a href={item.link} target="_blank" rel="noreferrer"
-									><button class="newbutton big">Read Now</button></a
-								>
 							</div>
 						{:else}
 							<div class="singleitem p-top-64">
@@ -130,33 +128,14 @@
 
 <style lang="sass">
 
-.featuredbanner
-	h3
-		font-family: 'Garomand'
-		font-style: italic
-		font-weight: 400
-	.verticalspacer
-		width: 1px
-		background: var(--contraster)
-		height: 32px
-
-.feat-head
-	h1
-		font-family: 'Garomand'
-
-.feat-text
-	pre
-		margin-top: 0
-
 .tagger
 	text-transform: uppercase
 	font-size: 12px
 	color: white
 	width: max-content
 	max-width: 100%
-	padding: 4px 16px
+	padding: 2px 6px
 	margin-bottom: 12px
-	border-radius: 12px
 
 
 .mainletter
@@ -169,7 +148,7 @@
 	padding-right: 32px
 	.main
 		min-height: 100vh
-		padding-top: 360px
+		padding-top: 280px
 		padding-bottom: 96px
 		.featured
 			width: 100%
@@ -231,7 +210,6 @@
 .mainletter
 	h3
 		color: var(--opposite)
-		font-family: 'Garomand'
 
 .dark
 	.singleitem
@@ -263,3 +241,4 @@
 		font-size: 16px
 
 </style>
+```

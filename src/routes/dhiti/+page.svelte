@@ -1,6 +1,7 @@
 <script lang="ts">
 	//@ts-nocheck
 	import { onMount } from 'svelte';
+	import Header from '$lib/components/DhitiHeader.svelte';
 	import Head from '$lib/components/HeadComponent.svelte';
 	import { breakZero, breakOne, breakTwo } from '$lib/stores/globalstores';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
@@ -15,6 +16,7 @@
 		allDharmaToday
 	} from '$lib/utils/localpulls';
 	import { themeMode } from '$lib/stores/globalstores';
+	import { clickOutsideAction } from '$lib/utils/clickoutside';
 	import CompDrawer from '$lib/ridunits/CompDrawer.svelte';
 	import Button from '$lib/ridunits/CompButton.svelte';
 	import RIDDropdown from '$lib/ridunits/RIDDropdown.svelte';
@@ -36,7 +38,7 @@
 	let knows: any;
 	let dharmas: any;
 	let openDrawer = false;
-	let limit = 6;
+	let limit = 12;
 	let openCat = false;
 
 	function toggleCatOpen() {
@@ -96,6 +98,12 @@
 		limit += 6;
 	}
 
+	function onOutside() {
+		if (openCat === true) {
+			openCat = false;
+		}
+	}
+
 	$: if (limit) {
 		(async () => {
 			nextthreeposts = await latestDhitiFour(limit);
@@ -121,6 +129,8 @@
 	metaImage={$metaImage}
 />
 
+<Header />
+
 <div
 	id="top-panel"
 	class="rta-grid grid2 right outer-box minH"
@@ -130,10 +140,10 @@
 	class:levelone={$breakOne}
 	class:leveltwo={$breakTwo}
 >
-	<div class="rta-column bord-right-d main-area">
-		<div id="topsticky" class="rta-column bord-bot p-bot-32 p-top-64">
+	<div class="rta-column bord-right-d main-area rowgap400">
+		<div id="topsticky" class="rta-column p-top-16 p-bot-8">
 			<div class="rta-row between colgap100 ytop top-row">
-				<div class="strip rta-row colgap100 rowgap50 ct">
+				<div class="strip rta-row colgap100 rowgap50 ct ycenter">
 					<div class="rta-row">
 						<button class="blank-button iconfilter" on:click={toggleCatOpen}>
 							<svg
@@ -146,7 +156,7 @@
 								<g clip-path="url(#clip0_2422_105)">
 									<path
 										d="M9.57895 13.8947L2 2.52632V0H22.2105V2.52632L14.6316 13.8947V21.4737L9.57895 24V13.8947Z"
-										fill="#272727"
+										fill="#fe4a49"
 									/>
 								</g>
 								<defs>
@@ -161,11 +171,6 @@
 								</defs>
 							</svg>
 						</button>
-						{#if showDefault}
-							<small><strong>Filter Categories:</strong></small>
-						{:else}
-							<small><strong>Deselect to Return</strong></small>
-						{/if}
 					</div>
 					{#if $breakZero || $breakOne || openCat}
 						<div
@@ -173,6 +178,8 @@
 							use:autoAnimate
 							on:click={toggleCatOpen}
 							on:keydown={fauxfake}
+							use:clickOutsideAction
+							on:clickOutside={onOutside}
 						>
 							<button
 								class="drawer-item"
@@ -208,13 +215,15 @@
 				</div>
 				<div class="rta-column rowgap50 wt">
 					{#if !showWriters}
-						<RIDDropdown --dropdownbackground="var(--dhiticolor)">
-							<div slot="visible" class="rta-row filter">
-								<small>Filter Writers</small>
+						<RIDDropdown --dropdownbackground="#fe4a49">
+							<div slot="visible" class="rta-row filter ycenter xend colgap200">
+								<div class="drawer-item" class:light={$themeMode} class:dark={!$themeMode}>
+									Filter Writers
+								</div>
 								<div class="iconfilter">
 									<svg
-										width="25"
-										height="25"
+										width="24"
+										height="24"
 										viewBox="0 0 25 25"
 										fill="none"
 										xmlns="http://www.w3.org/2000/svg"
@@ -222,7 +231,7 @@
 										<g clip-path="url(#clip0_2422_105)">
 											<path
 												d="M9.57895 13.8947L2 2.52632V0H22.2105V2.52632L14.6316 13.8947V21.4737L9.57895 24V13.8947Z"
-												fill="#272727"
+												fill="#fe4a49"
 											/>
 										</g>
 										<defs>
@@ -375,7 +384,7 @@
 					{/if}
 				</div>
 			</div>
-			<div class="rta-column bottom-row p-top-32">
+			<div class="rta-column bottom-row">
 				{#if showWriters}
 					<em>Posts by</em>
 					<h4 class="serif">{writer}</h4>
@@ -393,12 +402,14 @@
 						<h4 class="serif">Culture and Policy</h4>
 					{/if}
 					{#if !anyCategoryOpen}
-						<h3 class="serif black">Latest Posts</h3>
+						<div class="latestposts">
+							<h2>Latest Posts</h2>
+						</div>
 					{/if}
 				{/if}
 			</div>
 		</div>
-		<div class="rta-column p-top-64" use:autoAnimate>
+		<div class="rta-column holdscards rowgap400" use:autoAnimate>
 			{#if showWriters}
 				<div class="rta-column articlesarea">
 					{#if authorposts && authorposts.length > 0}
@@ -431,7 +442,7 @@
 			{#if showDefault}
 				{#if nextthreeposts && nextthreeposts.length > 0}
 					{#each nextthreeposts as item}
-						<div class="rta-dhiti rta-row rowgap300 ytop between bord-bot p-bot-32 p-top-32">
+						<div class="rta-dhiti rta-row rowgap300 ytop between">
 							<div class="rta-column w70 rowgap200">
 								<small class="citeone">{item.meta.category}</small>
 								<h5 class="heading" class:light={$themeMode} class:dark={!$themeMode}>
@@ -448,20 +459,18 @@
 									<cite class="citetwo">{item.meta.tags}</cite>
 								</div>
 							</div>
-							<div class="rta-image rta-column ytop w32 height-24">
+							<div class="rta-image rta-column ytop w32 height-30-stay">
 								<img src={item.meta.image} alt={item.meta.title} />
 							</div>
 						</div>
 					{/each}
-					<button class="blank-button m-top-32" on:click={handleMore}>
-						<Button>Load More</Button>
-					</button>
+					<button class="newbutton red big m-top-32" on:click={handleMore}> Load More </button>
 				{/if}
 			{/if}
 			{#if categoryItems[1]}
 				{#if bodhas && bodhas.length > 0}
 					{#each bodhas as item}
-						<div class="rta-dhiti rta-row rowgap300 ytop between bord-bot p-bot-32 p-top-32">
+						<div class="rta-dhiti rta-row rowgap300 ytop between">
 							<div class="rta-column w70 rowgap200">
 								<small class="citeone">{item.meta.category}</small>
 								<h5 class="heading" class:light={$themeMode} class:dark={!$themeMode}>
@@ -488,7 +497,7 @@
 			{#if categoryItems[2]}
 				{#if dharmas && dharmas.length > 0}
 					{#each dharmas as item}
-						<div class="rta-dhiti rta-row rowgap300 ytop between bord-bot p-bot-32 p-top-32">
+						<div class="rta-dhiti rta-row rowgap300 ytop between">
 							<div class="rta-column w70 rowgap200">
 								<small class="citeone">{item.meta.category}</small>
 								<h5 class="heading" class:light={$themeMode} class:dark={!$themeMode}>
@@ -515,7 +524,7 @@
 			{#if categoryItems[3]}
 				{#if knows && knows.length > 0}
 					{#each knows as item}
-						<div class="rta-dhiti rta-row rowgap300 ytop between bord-bot p-bot-32 p-top-32">
+						<div class="rta-dhiti rta-row rowgap300 ytop between">
 							<div class="rta-column w70 rowgap200">
 								<small class="citeone">{item.meta.category}</small>
 								<h5 class="heading" class:light={$themeMode} class:dark={!$themeMode}>
@@ -542,7 +551,7 @@
 			{#if categoryItems[4]}
 				{#if caps && caps.length > 0}
 					{#each caps as item}
-						<div class="rta-dhiti rta-row rowgap300 ytop between bord-bot p-bot-32 p-top-32">
+						<div class="rta-dhiti rta-row rowgap300 ytop between">
 							<div class="rta-column w70 rowgap200">
 								<small class="citeone">{item.meta.category}</small>
 								<h5 class="heading" class:light={$themeMode} class:dark={!$themeMode}>
@@ -570,34 +579,29 @@
 	</div>
 	<div class="rta-column featured rowgap200 p-top-32">
 		{#if !$breakTwo}
-			<div class="rta-column introbox">
-				<small class="serif is-black"><b>Dharma</b></small>
-				<cite class="serif"
-					>The vast pool of culture we draw from, working for its furtherance.</cite
-				>
-				<small class="serif is-black"><b>Policy</b></small>
-				<cite class="serif">The instrument of activating Dharma, providing it with affordance.</cite
-				>
-				<small class="serif is-black"><b>Leadership</b></small>
-				<cite class="serif"
-					>The bearing forward and sustaining, that will take us to deliverance.</cite
-				>
-				<small class="serif is-black"
+			<div class="rta-column introbox rowgap50">
+				<small class="is-black"><b>Dharma</b></small>
+				<cite>The vast pool of culture we draw from, working for its furtherance.</cite>
+				<small class="is-black"><b>Policy</b></small>
+				<cite>The instrument of activating Dharma, providing it with affordance.</cite>
+				<small class="is-black"><b>Leadership</b></small>
+				<cite>The bearing forward and sustaining, that will take us to deliverance.</cite>
+				<small class="is-black"
 					><b>Dhīti - a blog ranging all three through essays, research pieces and commentary.</b
 					></small
 				>
 			</div>
-			<SocialShare --socialcolor="#5A3261" />
+			<SocialShare --socialcolor="#fe4a49" />
 			<div class="rta-column"><div class="line" /></div>
 		{/if}
-		<h4 class="serif p-top-32 p-bot-16"><strong>Featured Posts:</strong></h4>
+		<h4 class="p-top-32 p-bot-16"><strong>Featured Posts:</strong></h4>
 		{#if featuredposts && featuredposts.length > 0}
 			{#each featuredposts as item}
-				<div class="rta-column rowgap100 bord-bot p-bot-32 p-top-16">
+				<div class="rta-column rowgap100 p-bot-32 p-top-16 infeatured">
 					<h6 class="serif hover-purple"><a href={item.path}>{item.meta.title}</a></h6>
 					<p class="cutheight serif tt-no">{item.meta.excerpt}</p>
 					<div class="rta-column">
-						<small class="is-purple">
+						<small>
 							<strong>
 								{item.meta.author}
 								{#if item.meta.authortwo && item.meta.authortwo.length > 0}
@@ -615,22 +619,44 @@
 
 <style lang="sass">
 
+#topsticky
+	@media screen and (min-width: 1024px)
+		row-gap: 24px
+	@media screen and (max-width: 1023px)
+		row-gap: 16px
+
 .leveltwo
 	.strip
 		position: relative
 		.categories
 			position: absolute
 			border-radius: 4px
-			top: 18px
+			top: 24px
 			left: 0
+			width: 200px
+			padding: 8px
 
 
 .top-row
 	@media screen and (min-width: 1024px)
 		.ct
-			width: 85%
+			width: 75%
 		.wt
-			width: 18%
+			width: 25%
+
+.bottom-row
+	h2
+		color: var(--contraster2)
+	@media screen and (min-width: 1024px)
+		h2
+			margin: 0
+			padding: 0
+			font-size: 3.2vw
+	@media screen and (max-width: 1023px)
+		h2
+			margin: 0
+			padding: 0
+			font-size: 8vw
 		
 
 .authors, .spaced
@@ -651,17 +677,21 @@
 .spaced
 	margin-top: 32px
 
-.iconfilter svg
-	height: 16px
+.iconfilter
+	padding: 2px
+	display: flex
+	align-items: center
+	border-radius: 4px
+	transition: 0.08s
+	svg
+		height: 14px
+	&:hover
+		svg 
+			path
+				fill: #FFFFFF
 
 .filter
 	cursor: pointer
-	&:hover
-		svg path
-			fill: var(--dhiticolor)
-
-.is-purple
-	color: var(--teal)
 
 .hover-purple
 	transition: 0.08s
@@ -676,16 +706,33 @@
 		padding-bottom: 2px
 		color: var(--opposite)
 
-#top-panel
+.rta-grid.grid2
 	@media screen and (min-width: 1024px)
-		padding-left: 104px
-		padding-right: 104px
+		padding-left: 6vw
+		padding-right: 6vw
+		align-items: start
 		.main-area
-			padding-right: 80px
+			padding-right: 5vw
 		.featured
-			padding-left: 80px
-	@media screen and (max-width: 1023px)
+			padding-left: 5vw
+			justify-content: flex-start
+			.infeatured
+				justify-content: flex-start
+				height: 100%
+	@media screen and (max-width: 1023px) and (min-width: 900px)
 		padding-top: 80px
+		padding-left: 6vw
+		padding-right: 6vw
+		align-items: start
+		.main-area
+			padding-right: 4vw
+			width: 760px
+		.featured
+			padding-left: 4vw
+			justify-content: flex-start
+			.infeatured
+				justify-content: flex-start
+				height: 100%
 
 .rta-dhiti
 	.rta-image
@@ -725,7 +772,7 @@
 small.citeone
 	text-transform: uppercase
 	font-size: 14px
-	color: var(--teal)
+	color: var(--themer)
 	font-weight: bold
 	@media screen and (min-width: 1024px)
 		width: max-content
@@ -734,46 +781,123 @@ small.citeone
 		font-size: 12px
 		width: max-content
 
+.citetwo
+	color: #fe4a49
+
 
 .drawer-item
 	text-decoration: none
 	transition: 0.08s
 	@media screen and (min-width: 1024px)
 		font-size: 12px
-		padding: 2px 8px
+		padding: 4px 8px
 		border-radius: 4px
-		color: white
+		color: var(--opposite)
 		text-transform: uppercase
 		font-weight: bold
 	@media screen and (max-width: 1023px)
-		text-align: left
-		border: none
-		padding: 8px
-		font-size: 16px
+		font-size: 12px
+		padding: 4px 8px
+		border-radius: 4px
+		color: var(--opposite)
+		text-transform: uppercase
+		font-weight: bold
+
+.light
+	@media screen and (min-width: 1024px)
+		.iconfilter
+			background: none
+			border: 1px solid #FFFFFF
+			box-shadow: 6px 8px 12px #f1f1f1, -5px -8px 12px #fbfbfb
+			&:hover
+				box-shadow: 0px 0px 0px #e7e7e7, 0px 0px 0px #efefef
+				background: #fe4a49
+		.latestposts
+			padding: 4px 16px
+			border-radius: 8px
+			box-shadow: 6px 8px 12px #f1f1f1, -5px -8px 12px #fbfbfb
+		.rta-dhiti
+			padding: 16px
+			border-radius: 8px
+			box-shadow: 6px 8px 12px #f1f1f1, -5px -8px 12px #fbfbfb
+			transition: 0.26s
+			&:hover
+				box-shadow: 0px 0px 0px #f1f1f1, 0px 0px 0px #fbfbfb
+	@media screen and (max-width: 1023px)
+		.iconfilter
+			background: none
+			border: 1px solid #FFFFFF
+			box-shadow: 6px 8px 12px #f1f1f1, -5px -8px 12px #fbfbfb
+			&:hover
+				box-shadow: 0px 0px 0px #e7e7e7, 0px 0px 0px #efefef
+				background: #fe4a49
+
+.light.leveltwo
+	.categories
+		z-index: 200
+		background: #FFFFFF
+		border: 1px solid var(--contraster)
+
+.dark.leveltwo
+	.categories
+		z-index: 200
+		background: #111111
+		border: 1px solid var(--contraster)
+
+.dark
+	@media screen and (min-width: 1024px)
+		.iconfilter
+			background: none
+			border: 1px solid #171717
+			box-shadow: 6px 8px 12px #070707, -5px -8px 12px #212121
+			&:hover
+				box-shadow: 0px 0px 0px #070707, 0px 0px 0px #212121
+				background: #fe4a49
+		.latestposts
+			padding: 4px 16px
+			border-radius: 8px
+			box-shadow: 6px 8px 12px #070707, -5px -8px 12px #191919
+		.rta-dhiti
+			padding: 16px
+			border-radius: 8px
+			box-shadow: 6px 8px 12px #070707, -5px -8px 12px #191919
+			transition: 0.26s
+			&:hover
+				box-shadow: 0px 0px 0px #070707, 0px 0px 0px #212121
+	@media screen and (max-width: 1023px)
+		.iconfilter
+			background: none
+			border: 1px solid #171717
+			box-shadow: 6px 8px 12px #070707, -5px -8px 12px #191919
+			&:hover
+				box-shadow: 0px 0px 0px #070707, 0px 0px 0px #191919
+				background: #fe4a49
 
 .light.drawer-item
 	@media screen and (min-width: 1024px)
-		background: #676767
-		border: 2px solid #676767
+		background: none
+		border: 1px solid #FFFFFF
+		box-shadow: 6px 8px 12px #f1f1f1, -5px -8px 12px #fbfbfb
 		&:hover
-			border: 2px solid var(--dhiticolor)
-			background: white
-			color: var(--dhiticolor)
+			box-shadow: 0px 0px 0px #e7e7e7, 0px 0px 0px #efefef
+			border: 1px solid var(--shadowline)
 	@media screen and (max-width: 1023px)
-		background: var(--dhiticolor)
-		color: #FFFFFF
+		background: #FFFFFF
+		border: none
+		text-align: left
 
 .dark.drawer-item
 	@media screen and (min-width: 1024px)
-		background: #474747
-		border: 2px solid #474747
+		background: none
+		border: 1px solid #171717
+		box-shadow: 6px 8px 12px #070707, -5px -8px 12px #212121
 		&:hover
-			border: 2px solid var(--dhiticolor)
-			background: #171717
-			color: var(--dhiticolor)
+			border: 1px solid var(--contraster)
+			box-shadow: 0px 0px 0px #070707, 0px 0px 0px #212121
 	@media screen and (max-width: 1023px)
-		background: var(--dhiticolor)
-		color: #FFFFFF
+		background: #111111
+		border: none
+		text-align: left
 
 .light.drawer-item.selected
 	background: var(--dhiticolor)
@@ -788,6 +912,8 @@ small.citeone
 #top-panel
 	@media screen and (min-width: 1024px)
 		padding-top: 128px
+	@media screen and (max-width: 1023px)
+		padding-top: 96px
 
 .heading
 	font-family: 'Adobe Devanagari', serif
@@ -795,7 +921,8 @@ small.citeone
 h5.heading
 	font-weight: bold
 	font-size: 2rem
-	line-height: 1.12
+	line-height: 1
+	text-transform: capitalize
 
 h5.heading.light
 	color: #272727
