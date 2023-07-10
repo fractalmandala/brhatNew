@@ -3,8 +3,9 @@
 	import Head from '$lib/components/HeadComponent.svelte';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import autoAnimate from '@formkit/auto-animate';
-	import { ChevronDown } from 'lucide-svelte';
-	import { themeMode } from '$lib/stores/globalstores';
+	import Chevron from '$lib/icons/chevrond.svelte';
+	import Chevron2 from '$lib/icons/chevrond.svelte';
+	import { themeMode, breakZero } from '$lib/stores/globalstores';
 	import Header from '$lib/components/SubHeader.svelte';
 	import ButtonEmerge from '$lib/anims/ButtonEmerge.svelte';
 	import ButtonEmerge2 from '$lib/anims/ButtonEmerge.svelte';
@@ -112,7 +113,12 @@
 
 <Header />
 
-<div class="pageglobals" class:light={$themeMode} class:dark={!$themeMode}>
+<div
+	class="pageglobals"
+	class:light={$themeMode}
+	class:dark={!$themeMode}
+	class:breaker={$breakZero}
+>
 	<!--top accordion of 3 sections-->
 	<HomeAccordion />
 	<!--end-->
@@ -215,15 +221,19 @@
 
 		<div class="rta-column rowgap300" use:autoAnimate>
 			{#if chapters && chapters.length > 0}
-				{#if breakPoint}
-					<div class="rta-row colgap400 drawer-select" on:click={toggleMenu} on:keydown={fauxfake}>
+				{#if !$breakZero}
+					<div
+						class="rta-row colgap400 ycenter drawer-select"
+						on:click={toggleMenu}
+						on:keydown={fauxfake}
+					>
 						Expand Tours
-						<div class="button-box" class:rotated={expandMenu}>
-							<ChevronDown size="27" />
+						<div class="rta-row ycenter" class:rotated={expandMenu}>
+							<Chevron2 />
 						</div>
 					</div>
 				{/if}
-				{#if expandMenu || !breakPoint}
+				{#if expandMenu || $breakZero}
 					<div
 						class="rta-row row-col ycenter rta-drawer-items colgap400 rowgap100 p-bot-16"
 						use:autoAnimate
@@ -321,15 +331,19 @@
 
 		<div class="rta-grid left grid2 rowgap400 colgap500" use:autoAnimate>
 			{#if courses && courses.length > 0}
-				{#if breakPoint}
-					<div class="rta-row colgap400 drawer-select" on:click={toggleMenu2} on:keydown={fauxfake}>
+				{#if !$breakZero}
+					<div
+						class="rta-row colgap400 ycenter drawer-select"
+						on:click={toggleMenu2}
+						on:keydown={fauxfake}
+					>
 						Expand Courses
-						<div class="button-box" class:rotated={expandMenu2}>
-							<ChevronDown size="27" />
+						<div class="rta-row ycenter" class:rotated={expandMenu2}>
+							<Chevron />
 						</div>
 					</div>
 				{/if}
-				{#if expandMenu2 || !breakPoint}
+				{#if expandMenu2 || $breakZero}
 					<div
 						class="rta-column rta-drawer-items rowgap200 bord-right-d"
 						id="drashta-drawer"
@@ -794,27 +808,23 @@
 .drawer-select
 	display: flex
 	text-decoration: none
-	font-size: 20px
+	font-size: 18px
 	text-transform: uppercase
 	justify-content: space-between
-	background: #fe4a49
+	background: none
+	border: 1px solid var(--contraster)
 	color: white
 	align-items: center
-	padding: 6px 12px 0px 12px
+	padding: 4px 12px
 	border-radius: 20px
+	height: 36px
+	.rta-row
+		transition: 0.1s
+		transform-origin: center center
 	.rotated
 		transform: rotate(180deg)
 		transform-origin: center center
-		.button-box
-			padding-bottom: 4px
-
-.button-box
-	height: 30px
-	display: flex
-	justify-content: center
-	align-items: center
-	padding: 0
-	transition: 0.08s
+		transition: 0.1s
 
 .drawer-item2
 	&::after
