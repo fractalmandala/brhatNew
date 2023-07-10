@@ -82,6 +82,7 @@
 	class:hiddenHeader={isInvisible}
 	class:light={$themeMode}
 	class:dark={!$themeMode}
+	class:opened={$sideMode}
 >
 	<a class="applogo" href="/" data-sveltekit-reload>
 		<div class="logomotif">
@@ -475,15 +476,8 @@
 		on:mouseenter={toggleCircle}
 		on:mouseleave={toggleCircle}
 	>
-		{#if $sideMode && breakPoint}
-			<div class="givemarg" on:click={toggleVisibility} on:keydown={fauxfake}>
-				<CompToggle />
-			</div>
-			<IconClose />
-		{:else}
-			{#if !$breakTwo}
-				<p>OUR COSMOS</p>
-			{/if}
+		<div class="rta-row stay ycenter colgap100">
+			<p class="hideonmobile">OUR COSMOS</p>
 			<div id="menumainx">
 				<svg
 					id="pulsar"
@@ -516,14 +510,20 @@
 					/>
 				</svg>
 			</div>
-		{/if}
+		</div>
 	</div>
+	{#if $sideMode && $breakTwo}
+		<button class="blank-button closebutton" on:click={toggleSideBar}>
+			<IconClose />
+		</button>
+	{/if}
 </div>
 
 <style lang="sass">
 
-.givemarg
-	margin-right: 16px
+.hideonmobile
+	@media screen and (max-width: 768px)
+		display: none
 
 .appheader
 	display: grid
@@ -548,9 +548,9 @@
 			grid-area: search
 			width: 32px
 	@media screen and (max-width: 1023px)
-		grid-template-columns: 1fr 24px 24px
+		grid-template-columns: 160px 1fr 24px 24px
 		grid-template-rows: 1fr
-		grid-template-areas: "applogo search menuicon"
+		grid-template-areas: "applogo midrow search menuicon"
 		height: 64px
 		align-items: center
 		padding: 0 16px
@@ -558,6 +558,11 @@
 		gap: 16px
 		.search
 			grid-area: search
+		&.opened
+			grid-template-columns: 160px 1fr 24px 24px 24px
+			grid-template-areas: "applogo midrow search menuicon close"
+			.closebutton
+				grid-area: close
 
 .appheader.light
 	background: #171717

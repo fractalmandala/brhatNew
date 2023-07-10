@@ -208,6 +208,8 @@
 	@media screen and (min-width: 1024px)
 		padding: 8px 32px
 		justify-content: flex-end
+		form
+			width: 64%
 	@media screen and (max-width: 1023px)
 		padding: 8px 32px
 		.rta-row
