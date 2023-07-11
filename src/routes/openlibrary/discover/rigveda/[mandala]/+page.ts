@@ -1,6 +1,6 @@
 import supabase from '$lib/utils/db'
 
-export async function load({params}:{params: { mandala:any }}){
+export async function load({params}:{params: { mandala:number }}){
 	const { data, error } = await supabase
 	.from('mandalalinks')
 	.select()

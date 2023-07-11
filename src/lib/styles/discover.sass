@@ -1,0 +1,100 @@
+.searcher
+	input
+		border: none
+		outline: none
+		border-radius: 6px
+		padding: 2px 8px
+		font-size: 14px
+
+.official
+	display: flex
+	p
+		line-height: 1.4
+		color: var(--textone)
+	h3
+		color: var(--opposite)
+
+.pagesider
+	.stripsticky
+		.blank-button
+			color: var(--onlyblack)
+			&:hover
+				color: #fe4a49
+		.blank-button.selected
+			font-weight: bold
+			color: var(--opposite)
+
+.list
+	p
+		font-size: 16px
+		color: var(--contraster2)
+		text-transform: capitalize
+		&:hover
+			a
+				color: var(--opposite)
+	.list
+		p
+			font-size: 16px
+			color: var(--contraster2)
+			text-transform: capitalize
+			&:hover
+				a
+					color: var(--opposite)
+
+.results
+	p
+		font-size: 16px
+		color: var(--contraster2)
+		text-transform: capitalize
+		&:hover
+			a
+				color: var(--opposite)
+
+
+.official.lzero, .official.lone
+	flex-direction: row
+
+.official.lzero
+	.pagesider
+		width: 320px
+		padding-left: 48px
+		height: calc(100vh - 160px)
+		overflow-y: scroll
+		position: sticky
+		top: 128px
+		.stripsticky
+			position: sticky
+			top: 0
+			background: var(--background)
+			padding-bottom: 16px
+	>.rta-column
+		width: calc(100% - 320px)
+		border-right: 1px solid var(--contraster)
+		padding-right: 64px
+
+.official.lone
+	.pagesider
+		max-width: 240px
+		min-width: 200px
+		padding-left: 32px
+	>.rta-column
+		max-width: calc(100% - 240px)
+		min-width: calc(100% - 200px)
+		border-right: 1px solid var(--contraster)
+		padding-right: 48px
+
+.official.ltwo
+	flex-direction: column-reverse
+	padding-top: 80px
+	>.rta-column
+		width: 100%
+	.p-bot-32.rta-column.rowgap300
+		padding-bottom: 0
+		h3
+			margin-top: 0
+			padding-top: 0
+
+.conts
+	border: 1px solid var(--contraster)
+	padding: 24px
+	border-radius: 6px

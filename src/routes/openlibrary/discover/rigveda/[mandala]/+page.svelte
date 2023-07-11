@@ -57,42 +57,44 @@
 	export let data;
 </script>
 
-<div class="rta-row colgap200 forlegend">
-	<h3 class="hindiadobe p-bot-32 bord-bot">Maṇḍala {data.mandala}</h3>
-	<small on:click={showSuktas} on:keydown={fauxfake}>Show Sūktas</small>
-	{#if visSuktas}
-		{#if suktasformenu && suktasformenu.length > 0}
-			<div class="rta-grid grid2" use:clickOutsideAction on:clickOutside={showSuktas}>
-				{#each suktasformenu as item}
-					<p>
-						<a href="/openlibrary/rigveda/{item.mandala}/{item.sukta}">{item.sukta}</a>
-					</p>
-				{/each}
-			</div>
+<div class="rta-column rowgap300">
+	<div class="conts rta-column rowgap200">
+		<small on:click={showSuktas} on:keydown={fauxfake}>Show Sūktas</small>
+		{#if visSuktas}
+			{#if suktasformenu && suktasformenu.length > 0}
+				<div class="rta-grid grid2" use:clickOutsideAction on:clickOutside={showSuktas}>
+					{#each suktasformenu as item}
+						<p>
+							<a href="/openlibrary/discover/rigveda/{item.mandala}/{item.sukta}">{item.sukta}</a>
+						</p>
+					{/each}
+				</div>
+			{/if}
 		{/if}
-	{/if}
+		<div class="rta-column rowgap300 p-top-16 thekey">
+			{#if suktas && suktas.length > 0}
+				{#each suktas as item, i}
+					<GenCard>
+						<div slot="small">
+							{item.msr}
+						</div>
+						<div slot="header5">
+							{item.devanagari}
+						</div>
+						<div slot="header6">
+							{item.iast}
+						</div>
+					</GenCard>
+				{/each}
+			{/if}
+		</div>
+	</div>
+
+	<div class="rta-row ycenter colgap200">
+		<a href="/openlibrary/discover/dhatupatha"><button class="newbutton">Previous</button></a>
+		<a href="/openlibrary/discover/dhatupatha"><button class="newbutton">Next</button></a>
+	</div>
 </div>
-<div class="rta-column rowgap300 p-top-16 thekey">
-	{#if suktas && suktas.length > 0}
-		{#each suktas as item, i}
-			<GenCard>
-				<div slot="small">
-					{item.msr}
-				</div>
-				<div slot="header5">
-					{item.devanagari}
-				</div>
-				<div slot="header6">
-					{item.iast}
-				</div>
-			</GenCard>
-		{/each}
-	{/if}
-</div>
-<ReaderNav>
-	<button slot="prev" on:click={isPrev}>Prev</button>
-	<button slot="next" on:click={isNext}>Next</button>
-</ReaderNav>
 
 <style lang="sass">
 

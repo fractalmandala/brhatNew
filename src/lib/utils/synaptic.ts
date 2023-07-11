@@ -286,11 +286,14 @@ export async function RVWords(msr:string){
 		return data
 	}
 
-	export async function verseSlug(id:number){
+	export async function verseSlug(kanda:number, sarga:number, verse:number){
 		const { data, error} = await supabase
 		.from ('db-ramayanaindex')
 		.select()
-		.eq('id', id)
+		.eq('type','sargaverse')
+		.eq('kanda', kanda)
+		.eq('sarga', sarga)
+		.eq('verse', verse)
 		.order('id')
 		if (error) throw new Error(error.message)
 		return data
@@ -336,12 +339,22 @@ export async function allDhatus(){
 	return data	
 }
 
-export async function dbDhatus(start:number, end:number){
+export async function dbDhatus(limit:number){
 	const { data, error} = await supabase
 	.from('db-dhatupathafixed')
 	.select()
 	.order('id')
-	.range(start,end)
+	.range(0,limit)
+	if (error) throw new Error(error.message)
+	return data
+ }
+
+export async function dbRigveda(limit:number){
+	const { data, error} = await supabase
+	.from('db-rigveda')
+	.select()
+	.order('primvalue')
+	.range(0,limit)
 	if (error) throw new Error(error.message)
 	return data
  }
@@ -449,12 +462,12 @@ export async function dbPuranaindex(limit:number){
 	return data	
 }
 
-export async function dbPuranaindexspecific(id:number){
+export async function dbConcordance(limit:number){
 	const { data, error } = await supabase
-	.from('db-puranaindex')
+	.from('vedicconcordance2')
 	.select()
-	.eq('id',id)
+	.order('uid')
+	.range(0, limit)
 	if (error) throw new Error(error.message)
 	return data	
-
 }

@@ -13,11 +13,6 @@
 <style lang="sass">
 
 h5, h6
-	font-family: 'Adobe Devanagari', sans-serif
-	font-weight: 400
-
-h6
-	width: max-content
-	max-width: 100%
+	font-weight: 500
 
 </style>

@@ -4,6 +4,7 @@
 	import Menu from '$lib/icons/menu.svelte';
 	import Close from '$lib/icons/close.svelte';
 	import BOLSidebar from '$lib/reader/BOLSidebar.svelte';
+	import '$lib/styles/discover.sass';
 
 	let y: number;
 	let mouseY: number;

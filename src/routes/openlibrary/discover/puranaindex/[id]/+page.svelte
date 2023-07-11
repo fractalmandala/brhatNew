@@ -1,18 +1,10 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { dbPuranaindexspecific } from '$lib/utils/synaptic';
 	import Breaker from '$lib/components/Breaker.svelte';
+	import { secondSide } from '$lib/stores/globalstores';
 	export let data;
 
 	let prevID = data.id - 1;
 	let nextID = data.id + 1;
-	let prev: any;
-	let next: any;
-
-	onMount(async () => {
-		prev = await dbPuranaindexspecific(prevID);
-		next = await dbPuranaindexspecific(nextID);
-	});
 </script>
 
 <div class="rta-column rowgap300">

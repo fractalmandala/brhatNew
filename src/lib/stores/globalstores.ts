@@ -5,6 +5,20 @@ const storedSideMode = browser ? JSON.parse(localStorage.getItem('sideMode') || 
 
 export const sideMode = writable(storedSideMode);
 
+const storedsecondsidemode = browser ? JSON.parse(localStorage.getItem('sideMode') || 'false') : false;
+
+export const secondSide = writable(storedsecondsidemode);
+
+export function toggleSecondSide() {
+	if (browser) {
+		secondSide.update((mode) => {
+			const newMode = !mode;
+			localStorage.setItem('secondSide', JSON.stringify(newMode));
+			return newMode;
+		});
+	}
+}
+
 const storedLanguage = browser ? JSON.parse(localStorage.getItem('langMode') || 'false') : false;
 
 export const langMode = writable(storedLanguage);

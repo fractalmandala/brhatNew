@@ -5,10 +5,14 @@
 		breakOne,
 		breakTwo,
 		langMode,
-		changeLanguage
+		changeLanguage,
+		secondSide
 	} from '$lib/stores/globalstores';
 	import { dbPuranaindex } from '$lib/utils/synaptic';
 	import supabase from '$lib/utils/db';
+	import SecondSide from '$lib/reader/SecondSide.svelte';
+	import Menu from '$lib/icons/menu.svelte';
+	import Close from '$lib/icons/close.svelte';
 
 	let purs: any;
 	let limit = 99;
@@ -16,6 +20,7 @@
 	let input = '';
 	let searchResults: any;
 	let searching = false;
+	let fake = false;
 
 	async function searchPuranas() {
 		searching = true;
@@ -42,6 +47,19 @@
 
 	function setEnglish() {
 		changeLanguage();
+		closeSearch();
+	}
+
+	function toggleSecond() {
+		$secondSide = !$secondSide;
+	}
+
+	function closeSecond() {
+		$secondSide = false;
+	}
+
+	function fauxfake() {
+		fake = !fake;
 	}
 
 	function loadMore() {
@@ -50,6 +68,12 @@
 
 	function loadLess() {
 		limit -= 100;
+	}
+
+	function closeSearch() {
+		if (isSearch === true) {
+			isSearch = false;
+		}
 	}
 
 	$: if (limit) {
@@ -65,70 +89,82 @@
 
 <div class="official" class:lzero={$breakZero} class:lone={$breakOne} class:ltwo={$breakTwo}>
 	<div class="p-bot-32 rta-column rowgap300">
-		<h3 class="bord-bot p-bot-16">Puranic Index</h3>
+		<div class="rta-row ycenter between bord-bot p-bot-16">
+			<h3>Puranic Index</h3>
+			{#if $breakTwo}
+				<button class="blank-button" on:click={toggleSecond}><Menu /></button>
+			{/if}
+		</div>
 		<slot />
 	</div>
 	<div class="pagesider" data-lenis-prevent>
-		<div class="rta-row colgap200 stripsticky">
-			<button class="blank-button" on:click={setEnglish} class:selected={!$langMode && !isSearch}
-				>English</button
-			>
-			<button class="blank-button" on:click={setEnglish} class:selected={$langMode && !isSearch}
-				>Hindi</button
-			>
-			<button class="blank-button" on:click={toggleSearch} class:selected={isSearch}>Search</button>
-		</div>
-		<div class="list p-top-16 rta-column rowgap50">
-			{#if $langMode && !isSearch}
-				{#if purs && purs.length > 0}
-					{#each purs as item}
-						<p>
-							<a href="/openlibrary/discover/puranaindex/{item.id}">{item.hindi}</a>
-						</p>
-					{/each}
+		<SecondSide>
+			<div class="rta-row colgap200 stripsticky">
+				<button class="blank-button" on:click={setEnglish} class:selected={!$langMode && !isSearch}
+					>English</button
+				>
+				<button class="blank-button" on:click={setEnglish} class:selected={$langMode && !isSearch}
+					>Hindi</button
+				>
+				<button class="blank-button" on:click={toggleSearch} class:selected={isSearch}
+					>Search</button
+				>
+				{#if $breakTwo && $secondSide}
+					<button class="blank-button" on:click={toggleSecond}>Close</button>
 				{/if}
-				<div class="rta-row ycenter colgap200 bord-top bord-bot p-top-8 p-bot-8">
-					<button class="blank-button" on:click={loadLess}>Less</button>
-					<button class="blank-button" on:click={loadMore}>More</button>
-				</div>
-			{:else if !$langMode && !isSearch}
-				{#if purs && purs.length > 0}
-					{#each purs as item}
-						<p>
-							<a href="/openlibrary/discover/puranaindex/{item.id}">{item.iast}</a>
-						</p>
-					{/each}
+			</div>
+			<div class="list p-top-16 rta-column rowgap50" on:click={closeSecond} on:keydown={fauxfake}>
+				{#if $langMode && !isSearch}
+					{#if purs && purs.length > 0}
+						{#each purs as item}
+							<p>
+								<a href="/openlibrary/discover/puranaindex/{item.id}">{item.hindi}</a>
+							</p>
+						{/each}
+					{/if}
+					<div class="rta-row ycenter colgap200 bord-top bord-bot p-top-8 p-bot-8">
+						<button class="blank-button" on:click={loadLess}>Less</button>
+						<button class="blank-button" on:click={loadMore}>More</button>
+					</div>
+				{:else if !$langMode && !isSearch}
+					{#if purs && purs.length > 0}
+						{#each purs as item}
+							<p>
+								<a href="/openlibrary/discover/puranaindex/{item.id}">{item.iast}</a>
+							</p>
+						{/each}
+					{/if}
+					<div class="rta-row ycenter colgap200 bord-top bord-bot p-top-8 p-bot-8">
+						<button class="blank-button" on:click={loadLess}>Less</button>
+						<button class="blank-button" on:click={loadMore}>More</button>
+					</div>
 				{/if}
-				<div class="rta-row ycenter colgap200 bord-top bord-bot p-top-8 p-bot-8">
-					<button class="blank-button" on:click={loadLess}>Less</button>
-					<button class="blank-button" on:click={loadMore}>More</button>
-				</div>
-			{/if}
 
-			{#if isSearch}
-				<div class="rta-column rowgap50">
-					<form
-						class="searcher rta-row ycenter colgap100 p-bot-32"
-						on:submit|preventDefault={handleSearch}
-					>
-						<input type="text" bind:value={input} />
-						<button class="blank-button" type="submit">Go</button>
-					</form>
-					{#if searching}
-						<p>Searching...</p>
-					{/if}
-					{#if searchResults && searchResults.length > 0}
-						<div class="results">
-							{#each searchResults as item}
-								<p>
-									<a href="/openlibrary/discover/puranaindex/{item.id}">{item.iast}</a>
-								</p>
-							{/each}
-						</div>
-					{/if}
-				</div>
-			{/if}
-		</div>
+				{#if isSearch}
+					<div class="rta-column rowgap50">
+						<form
+							class="searcher rta-row ycenter colgap100 p-bot-32"
+							on:submit|preventDefault={handleSearch}
+						>
+							<input type="text" bind:value={input} />
+							<button class="blank-button" type="submit">Go</button>
+						</form>
+						{#if searching}
+							<p>Searching...</p>
+						{/if}
+						{#if searchResults && searchResults.length > 0}
+							<div class="results">
+								{#each searchResults as item}
+									<p>
+										<a href="/openlibrary/discover/puranaindex/{item.id}">{item.iast}</a>
+									</p>
+								{/each}
+							</div>
+						{/if}
+					</div>
+				{/if}
+			</div>
+		</SecondSide>
 	</div>
 </div>
 
@@ -204,8 +240,6 @@ h3
 .official.ltwo
 	flex-direction: column-reverse
 	padding-top: 80px
-	.pagesider
-		display: none
 	>.rta-column
 		width: 100%
 	.p-bot-32.rta-column.rowgap300
