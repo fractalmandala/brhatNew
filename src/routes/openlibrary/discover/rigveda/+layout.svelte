@@ -82,7 +82,7 @@
 </script>
 
 <Discover>
-	<h3 slot="sectiontitle">Vālmīki Rāmāyaṇa</h3>
+	<h3 slot="sectiontitle">Ṛgveda Saṃhitā</h3>
 	<slot />
 	<div slot="listhindi" class="list">
 		<p><a href="/openlibrary/discover/rigveda/1">मंडल १</a></p>

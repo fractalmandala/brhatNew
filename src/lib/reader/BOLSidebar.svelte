@@ -70,7 +70,7 @@
 	{#if $breakTwo}
 		<slot name="closebutton" />
 	{/if}
-	<p class="authentic oppositer"><b>Discover</b></p>
+	<p class="authentic oppositer"><b><a href="/openlibrary/discover">Discover</a></b></p>
 	<p><a href="/openlibrary/discover/dhatupatha">Dhātupāṭhaḥ</a></p>
 	<p><a href="/openlibrary/discover/puranaindex">Puranic Index</a></p>
 	<p><a href="/openlibrary/discover/rigveda">Ṛgveda</a></p>

@@ -1,7 +1,15 @@
 <script lang="ts">
 	import HeadComponent from '$lib/components/HeadComponent.svelte';
 	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/stores/metastores';
-	import { themeMode, breakZero, breakOne, breakTwo } from '$lib/stores/globalstores';
+	import {
+		themeMode,
+		breakZero,
+		breakOne,
+		breakTwo,
+		showAuth,
+		authState
+	} from '$lib/stores/globalstores';
+	import AuthModal from '$lib/components/AuthModal.svelte';
 	import Cursor from '$lib/anims/Cursor.svelte';
 
 	$metaTitle = 'Discover at Bṛhat Open Library';
