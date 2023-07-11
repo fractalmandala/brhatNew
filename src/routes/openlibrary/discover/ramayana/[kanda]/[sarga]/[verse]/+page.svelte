@@ -1,10 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { page } from '$app/stores';
-	import IconLoading from '$lib/icons/IconLoading.svelte';
 	import { padasofRamayana, verseSlug, rmLemma } from '$lib/utils/synaptic';
-	import GenCard from '$lib/reader/GenCard.svelte';
-	import ReaderNav from '$lib/reader/ReaderNav.svelte';
+	import HeadComponent from '$lib/components/HeadComponent.svelte';
+	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/stores/metastores';
 	export let data;
 	let url: any;
 	let url2: any;
@@ -24,6 +22,13 @@
 
 	$: newID = data.id;
 
+	$metaTitle = 'Vālmīki Rāmāyaṇa at Bṛhat Open Library';
+	$metaDescription =
+		'Explore Vālmīki Rāmāyaṇa at the open source library for Indic Knowledge Systems';
+	$metaImage =
+		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/bolherobrhat.webp';
+	$metaUrl = 'https://www.brhat.in/openlibrary/discover/ramayana';
+
 	onMount(async () => {
 		newID = data.id;
 		pads = await padasofRamayana(data.kanda, data.sarga, data.verse);
@@ -32,6 +37,13 @@
 		lemmas = await rmLemma(url2);
 	});
 </script>
+
+<HeadComponent
+	title={$metaTitle}
+	metaDescription={$metaDescription}
+	metaUrl={$metaUrl}
+	metaImage={$metaImage}
+/>
 
 <div class="rta-column rowgap300">
 	<div class="conts rta-column rowgap400">

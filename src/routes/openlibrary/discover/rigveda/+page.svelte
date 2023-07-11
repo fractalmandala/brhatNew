@@ -1,3 +1,21 @@
+<script lang="ts">
+	import HeadComponent from '$lib/components/HeadComponent.svelte';
+	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/stores/metastores';
+	$metaTitle = 'Ṛgveda Saṃhitā at Bṛhat Open Library';
+	$metaDescription =
+		'Explore Ṛgveda Saṃhitā at the open source library for Indic Knowledge Systems';
+	$metaImage =
+		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/bolherobrhat.webp';
+	$metaUrl = 'https://www.brhat.in/openlibrary/discover/rigveda';
+</script>
+
+<HeadComponent
+	title={$metaTitle}
+	metaDescription={$metaDescription}
+	metaUrl={$metaUrl}
+	metaImage={$metaImage}
+/>
+
 <p>
 	Tradition holds that the Ṛgvedic mantras are to be heard, not read. And while modernity allows us
 	to view it as a "book" with "chapters," it is to our tradition a śruti- something to be heard.

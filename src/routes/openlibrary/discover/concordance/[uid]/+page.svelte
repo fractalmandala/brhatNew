@@ -1,11 +1,25 @@
 <script lang="ts">
-	import Breaker from '$lib/components/Breaker.svelte';
-	import { secondSide } from '$lib/stores/globalstores';
+	import HeadComponent from '$lib/components/HeadComponent.svelte';
+	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/stores/metastores';
 	export let data;
 
 	let prevID = data.uid - 1;
 	let nextID = data.uid + 1;
+
+	$metaTitle = 'Vedic Concordance at Bṛhat Open Library';
+	$metaDescription =
+		'Explore Vedic Concordance at the open source library for Indic Knowledge Systems';
+	$metaImage =
+		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/bolherobrhat.webp';
+	$metaUrl = 'https://www.brhat.in/openlibrary/discover/concordance';
 </script>
+
+<HeadComponent
+	title={$metaTitle}
+	metaDescription={$metaDescription}
+	metaUrl={$metaUrl}
+	metaImage={$metaImage}
+/>
 
 <div class="rta-column rowgap300">
 	<div class="conts rta-column rowgap200">

@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
-	import { slide } from 'svelte/transition';
+	import HeadComponent from '$lib/components/HeadComponent.svelte';
+	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/stores/metastores';
 	import { SuktasofMandalaFull, SuktasofMandala } from '$lib/utils/synaptic';
 	import { clickOutsideAction } from '$lib/utils/clickoutside';
 	import GenCard from '$lib/reader/GenCard.svelte';
-	import ReaderNav from '$lib/reader/ReaderNav.svelte';
 
 	let linking: any;
 	let suktas: any;
@@ -14,6 +14,13 @@
 	let visSuktas = false;
 	let start = 0;
 	let end = 10;
+	export let data;
+	$metaTitle = 'Ṛgveda Saṃhitā at Bṛhat Open Library';
+	$metaDescription =
+		'Explore Ṛgveda Saṃhitā at the open source library for Indic Knowledge Systems';
+	$metaImage =
+		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/bolherobrhat.webp';
+	$metaUrl = 'https://www.brhat.in/openlibrary/discover/rigveda';
 
 	function isNext() {
 		start += 10;
@@ -53,9 +60,14 @@
 		suktas = await SuktasofMandalaFull(data.mandala, start, end);
 		suktasformenu = await SuktasofMandala(data.mandala);
 	});
-
-	export let data;
 </script>
+
+<HeadComponent
+	title={$metaTitle}
+	metaDescription={$metaDescription}
+	metaUrl={$metaUrl}
+	metaImage={$metaImage}
+/>
 
 <div class="rta-column rowgap300">
 	<div class="conts rta-column rowgap200">
@@ -95,30 +107,3 @@
 		<a href="/openlibrary/discover/dhatupatha"><button class="newbutton">Next</button></a>
 	</div>
 </div>
-
-<style lang="sass">
-
-.forlegend
-	position: relative
-	.rta-grid
-		position: absolute
-		top: 24px
-		left: 128px
-		width: 160px
-		background: var(--background)
-		border: 1px solid var(--contraster)
-		padding: 16px
-		text-align: center
-		border-radius: 5px
-		row-gap: 8px
-		a
-			&:hover
-				color: var(--opposite)
-
-.rta-row
-	small
-		cursor: pointer
-		&:hover
-			color: var(--opposite)
-
-</style>

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { scale } from 'svelte/transition';
+	import HeadComponent from '$lib/components/HeadComponent.svelte';
+	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/stores/metastores';
 	import { versesByKanda, sargasofRamayana } from '$lib/utils/synaptic';
 	import ReaderNav from '$lib/reader/ReaderNav.svelte';
 	import GenCard from '$lib/reader/GenCard.svelte';
@@ -11,6 +12,7 @@
 	let visSarga = false;
 	let start = 0;
 	let end = 10;
+	export let data;
 
 	function showSargas() {
 		visSarga = !visSarga;
@@ -43,13 +45,25 @@
 		})();
 	}
 
+	$metaTitle = 'Vālmīki Rāmāyaṇa at Bṛhat Open Library';
+	$metaDescription =
+		'Explore Vālmīki Rāmāyaṇa at the open source library for Indic Knowledge Systems';
+	$metaImage =
+		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/bolherobrhat.webp';
+	$metaUrl = 'https://www.brhat.in/openlibrary/discover/ramayana';
+
 	onMount(async () => {
 		varskand = await versesByKanda(data.kanda, start, end);
 		thisSargas = await sargasofRamayana(data.kanda);
 	});
-
-	export let data;
 </script>
+
+<HeadComponent
+	title={$metaTitle}
+	metaDescription={$metaDescription}
+	metaUrl={$metaUrl}
+	metaImage={$metaImage}
+/>
 
 <div class="rta-row colgap200 forlegend">
 	<h3 class="hindiadobe p-bot-32 bord-bot">Kāṇḍa {data.kanda}</h3>

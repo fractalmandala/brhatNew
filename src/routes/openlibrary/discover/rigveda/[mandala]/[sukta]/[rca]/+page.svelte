@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
-	import { fly } from 'svelte/transition';
+	import HeadComponent from '$lib/components/HeadComponent.svelte';
+	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/stores/metastores';
 	import IconLoading from '$lib/icons/IconLoading.svelte';
 	import { rvRishis, rvDevatas, rvChandas, RVWords, RVPagination } from '$lib/utils/synaptic';
 	let textDev: any;
@@ -26,6 +27,12 @@
 	} else {
 		showPrev = false;
 	}
+	$metaTitle = 'Ṛgveda Saṃhitā at Bṛhat Open Library';
+	$metaDescription =
+		'Explore Ṛgveda Saṃhitā at the open source library for Indic Knowledge Systems';
+	$metaImage =
+		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/bolherobrhat.webp';
+	$metaUrl = 'https://www.brhat.in/openlibrary/discover/rigveda';
 
 	$: (async () => {
 		pagination = await RVPagination(msr);
@@ -75,6 +82,13 @@
 		joinIAST = breakIAST.join('<br>');
 	});
 </script>
+
+<HeadComponent
+	title={$metaTitle}
+	metaDescription={$metaDescription}
+	metaUrl={$metaUrl}
+	metaImage={$metaImage}
+/>
 
 <div class="rta-row colgap200 forlegend p-bot-16 bord-bot">
 	<small>
