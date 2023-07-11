@@ -67,10 +67,15 @@ h3
 
 .levelzero
 	.insidethepage
-		width: 720px
+		max-width: 720px
 
 .levelone
 	.insidethepage
-		width: 560px
+		max-width: 560px
+
+.leveltwo
+	.insidethepage
+		width: 100%
+		padding-top: 96px
 
 </style>

@@ -121,6 +121,7 @@
 		padding-right: 16px
 		padding-left: 16px
 		min-height: 100vh
+		width: 100%
 
 
 </style>

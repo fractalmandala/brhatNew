@@ -43,3 +43,10 @@
 		Rigveda - A Historical Analysis.
 	</a>
 </p>
+
+<style lang="sass">
+
+a
+	color: #fe4a49
+
+</style>
