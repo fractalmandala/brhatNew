@@ -396,3 +396,45 @@ export async function dynamicTable(name:string, limit:number){
 	if (error) throw new Error(error.message)
 	return data	
 }
+
+export async function apteDevanagari(word: string){
+	const { data, error } = await supabase
+	.from('db-dictionaryapte')
+	.select()
+	.textSearch('line1devanagari', `${word}`)
+	.order('mainindexhelp')
+	if (error) throw new Error(error.message)
+	return data	
+}
+
+export async function apteIAST(word: string){
+	const { data, error } = await supabase
+	.from('db-dictionaryapte')
+	.select()
+	.ilike('line1iast', `${word}`)
+	.order('mainindexhelp')
+	if (error) throw new Error(error.message)
+	console.log(`${word}`)
+	return data	
+}
+
+export async function apteITRANS(word: string){
+	const { data, error } = await supabase
+	.from('db-dictionaryapte')
+	.select()
+	.textSearch('itrans', `${word}`)
+	.order('mainindexhelp')
+	if (error) throw new Error(error.message)
+	return data	
+}
+
+
+export async function apteRomanized(word: string){
+	const { data, error } = await supabase
+	.from('db-dictionaryapte')
+	.select()
+	.textSearch('line1romanized', `${word}`)
+	.order('mainindexhelp')
+	if (error) throw new Error(error.message)
+	return data	
+}

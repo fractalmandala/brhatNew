@@ -670,6 +670,15 @@ export async function allDictionary(){
 	return data
 }
 
+export async function allApte(){
+	const { data, error } = await supabase
+	.from('db-dictionaryapte')
+	.select()
+	.order('mainindexhelp')
+	if(error) throw new Error(error.message)
+	return data
+}
+
 export async function newSRG(dynamizer:string){
     const { data, error } = await supabase
     .from('brhat-drashta2')
