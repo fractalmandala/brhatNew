@@ -117,9 +117,6 @@ p
 	max-width: 320px
 
 input
-	font-family: 'Hubot-Sans', sans-serif
-
-input
 	border: 1px solid var(--borderline)
 	padding: 4px 8px
 

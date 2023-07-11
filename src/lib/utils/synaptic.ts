@@ -438,3 +438,23 @@ export async function apteRomanized(word: string){
 	if (error) throw new Error(error.message)
 	return data	
 }
+
+export async function dbPuranaindex(limit:number){
+	const { data, error } = await supabase
+	.from('db-puranaindex')
+	.select()
+	.order('id')
+	.range(0, limit)
+	if (error) throw new Error(error.message)
+	return data	
+}
+
+export async function dbPuranaindexspecific(id:number){
+	const { data, error } = await supabase
+	.from('db-puranaindex')
+	.select()
+	.eq('id',id)
+	if (error) throw new Error(error.message)
+	return data	
+
+}

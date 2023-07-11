@@ -256,7 +256,6 @@
 
 .thisforms
 	input
-		font-family: 'Hubot-Sans', sans-serif
 		font-size: 12px
 		padding: 4px 8px
 		outline: none

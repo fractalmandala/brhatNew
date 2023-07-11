@@ -271,9 +271,6 @@
 	padding-right: 32px
 
 input
-	font-family: 'Hubot-Sans', sans-serif
-
-input
 	border: 1px solid var(--borderline)
 	border-radius: 4px
 	padding: 5px

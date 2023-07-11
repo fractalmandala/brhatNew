@@ -96,9 +96,9 @@
 		padding-left: 64px
 
 .rta-row.ltwo
-	min-height: 100vh
 	padding-top: 0
 	width: 100%
+	row-gap: 0
 	.row-side
 		width: 100%
 		border-bottom: 1px solid var(--contraster)
@@ -119,7 +119,7 @@
 		padding-bottom: 64px
 		padding-right: 16px
 		padding-left: 16px
-		padding-top: 88px
+		min-height: 100vh
 
 
 </style>

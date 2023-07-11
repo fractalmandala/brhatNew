@@ -190,12 +190,12 @@
 	text-align: left
 	&:hover
 		p
-			color: var(--mand)
+			color: #fe4a49
 
 p
 	&:hover
 		a
-			color: var(--mand)
+			color: #fe4a49
 
 .blank-button.openbutton
 	p
