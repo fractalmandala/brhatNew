@@ -52,7 +52,7 @@ export async function periodicDhiti(band:string){
 		filed.map(async([path, resolver]) => {
 			// @ts-ignore
 			const { metadata } = await resolver()
-			const pathitem = path
+			const pathitem = path.slice(11,-3)
 			const date = new Date(metadata.date as string)
 			const month = date.toLocaleString('default', { month: 'long' })
 			const year = date.getFullYear().toString()

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { LayoutData } from './$types';
 	import type { ActionData } from './$types';
-	import Header from '$lib/components/NewsHead.svelte';
+	import Header from '$lib/components/SubHeader.svelte';
 	import Logout from '$lib/icons/logout.svelte';
 	import Login from '$lib/icons/login.svelte';
 	import AuthModal from '$lib/components/AuthModal.svelte';
@@ -36,28 +36,11 @@
 </script>
 
 <Header>
-	<div slot="allbuttons" class="allbuttons">
-		{#if $authState}
-			<button on:click={toggleLogout}><Logout color={logColor} /></button>
-		{:else}
-			<button on:click={toggleLogin}><Login color={logColor} /></button>
-		{/if}
+	<div slot="local" class="boxmidrow">
+		<a href="/newsletter">Adya</a>
 	</div>
 </Header>
 <div class="minH">
 	<slot />
 </div>
 <AuthModal {form} />
-
-<style lang="sass">
-
-
-.allbuttons
-	height: 16px
-	button
-		padding: 0
-		background: none
-		border: none
-		cursor: pointer
-
-</style>

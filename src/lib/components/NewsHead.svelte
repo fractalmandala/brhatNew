@@ -150,7 +150,6 @@
 			.pagetitle
 				text-align: center
 				font-size: 120px
-				letter-spacing: -8px !important
 				color: var(--opposite)
 			.subtitle
 				text-align: center
@@ -234,7 +233,6 @@
 		font-size: 14px
 
 .pagetitle
-	font-family: 'Garomand'
 	font-weight: 700
 	&:hover
 		.text-animation

@@ -26,15 +26,19 @@
 
 {#if isShown}
 	<div class="rta-column authmodaloverlay" class:light={$themeMode} class:dark={!$themeMode}>
-		<div class="rta-column authmodal" use:clickOutsideAction on:clickOutside={handleCloseClick}>
-			<div class="rta-row xend">
+		<div
+			class="rta-column authmodal rowgap100"
+			use:clickOutsideAction
+			on:clickOutside={handleCloseClick}
+		>
+			<div class="rta-row between">
+				<p class="oppositer"><b>Are you sure you want to log out?</b></p>
 				<button class="blank-button" on:click={handleCloseClick}>
 					<Close dimension={closeDimension} {color} />
 				</button>
 			</div>
 			<div class="rta-column rowgap100 areaofforms">
 				{#if $authState}
-					<h6 class="nohemi">Are you sure you want to log out?</h6>
 					<form class="thisform" method="post" action="?/signout">
 						<button class="newbutton red">Yes</button>
 					</form>
@@ -92,6 +96,7 @@
 			width: 400px
 			min-height: 120px
 			padding: 24px
+			justify-content: center
 	@media screen and (max-width: 1023px)
 		.authmodal
 			width: calc(100% - 64px)

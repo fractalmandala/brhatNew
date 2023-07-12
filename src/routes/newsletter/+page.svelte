@@ -3,7 +3,14 @@
 	import { slide } from 'svelte/transition';
 	import type { ActionData } from './$types';
 	import { goto } from '$app/navigation';
-	import { themeMode, breakZero, breakOne, breakTwo } from '$lib/stores/globalstores';
+	import {
+		themeMode,
+		breakZero,
+		breakOne,
+		breakTwo,
+		authState,
+		showAuth
+	} from '$lib/stores/globalstores';
 	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/stores/metastores';
 	import Head from '$lib/components/HeadComponent.svelte';
 	import Close from '$lib/icons/close.svelte';
@@ -35,6 +42,10 @@
 
 	function toggleSubscribe() {
 		submodal = !submodal;
+	}
+
+	function toggleLogout() {
+		showAuth(true);
 	}
 
 	function focusName() {
@@ -93,55 +104,61 @@
 />
 
 <div
-	class="rta-column rowgap300 outer-box limit"
+	class="rta-column rowgap300"
 	class:light={$themeMode}
 	class:dark={!$themeMode}
 	class:levelzero={$breakZero}
 	class:levelone={$breakOne}
 	class:leveltwo={$breakTwo}
 >
-	<div class="rta-image">
-		<img
-			src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/17newsletter/brhatadyabanner%20(1).webp"
-			alt="banner"
-		/>
-	</div>
+	<h3 class="h3-big bord-bot p-bot-16">Bṛhatadya</h3>
 	<div class="rta-column rowgap200">
-		<h6 class="oppositer thin">
-			Bṛhatadya is a newsletter featuring the latest actions, events, launches, program
-			registrations, essays and more at Bṛhat. To access it, or to receive it fortnightly in your
-			inbox, please sign up or sign in.
-		</h6>
-		<button class="newbutton red" on:click={toggleSubscribe}>Sign Up</button>
+		<p>
+			Bṛhatadya is your fortnightly update on the latest actions, events, launches, program
+			registrations, essays at Bṛhat. Use this as your reference point for course registrations,
+			calendar of upcoming tours, the latest content at Svarñānjali and more. To access it, or to
+			receive it fortnightly in your inbox, please sign up or sign in.
+		</p>
+		{#if !$authState}
+			<button class="newbutton red" on:click={toggleSubscribe}>Sign Up</button>
+		{/if}
+		{#if $authState}
+			<h6 class="bord-top p-top-16 bord-bot p-bot-16">
+				<a href="/newsletter/1">Read the </a>Current Issue: Issue 1.1 - July
+			</h6>
+		{:else}
+			<h6 class="bord-top p-top-16 bord-bot p-bot-16">Current Issue: Issue 1.1 - July</h6>
+		{/if}
 	</div>
-	<div class="rta-grid grid2 left glass-top p-top-32 rowgap300 colgap400">
-		<div class="rta-column rowgap200">
-			<p class="oppositer">Already signed up? Sign in below:</p>
-			<form class="thisforms" method="post" action="?/login">
-				<div class="rta-column rowgap100 null">
-					<input
-						id="email"
-						name="email"
-						value={form?.values?.email ?? ''}
-						class="input"
-						type="email"
-						placeholder="Email"
-						required
-					/>
+	<div class="rta-grid grid2 left rowgap300 colgap400" class:flatt={$authState}>
+		{#if !$authState}
+			<div class="rta-column rowgap200 first">
+				<small class="oppositer tt-c">Already signed up? Sign in below:</small>
+				<form class="thisforms" method="post" action="?/login">
+					<div class="rta-column rowgap100 null">
+						<input
+							id="email"
+							name="email"
+							value={form?.values?.email ?? ''}
+							class="input"
+							type="email"
+							placeholder="Email"
+							required
+						/>
 
-					<input
-						id="password"
-						name="password"
-						class="input"
-						type="password"
-						placeholder="Password"
-						required
-					/>
+						<input
+							id="password"
+							name="password"
+							class="input"
+							type="password"
+							placeholder="Password"
+							required
+						/>
 
-					<button disabled={loading} class="newbutton red">Sign in</button>
-				</div>
-			</form>
-			<!--
+						<button disabled={loading} class="newbutton red">Sign in</button>
+					</div>
+				</form>
+				<!--
 		<div class="rta-row ycenter colgap100">
 			<p>Or,</p>
 			<button
@@ -161,14 +178,15 @@
 			</button>
 		</div>
 		-->
-		</div>
-		<div class="rta-column rowgap200">
-			<small class="tt-n">
+			</div>
+		{/if}
+		<div class="rta-column rowgap200 second">
+			<p>
 				"Adya," meaning 'today, this day, now, at present', combines with Bṛhat to denote 'Bṛhat
 				Today,' or 'Bṛhat Now'- a fair name for a periodic newsletter that updates recent events and
 				activities at Bṛhat.
-			</small>
-			<small class="tt-n">
+			</p>
+			<p>
 				A second meaning lends deeper significance. With 'bṛhat' meaning 'great, formidable, large,
 				growing,' 'Bṛhat-Adya' means the "Great Now," or the "Great Moment," ie- the civilizational
 				moment we are currently in. Read more about this moment, and what it means for all of us,
@@ -178,8 +196,11 @@
 					target="_blank"
 					rel="noreferrer">here.</a
 				>
-			</small>
+			</p>
 		</div>
+		{#if $authState}
+			<button class="newbutton red" on:click={toggleLogout}>Log Out</button>
+		{/if}
 	</div>
 </div>
 {#if submodal}
@@ -222,10 +243,33 @@
 
 <style lang="sass">
 
+.rta-grid.grid2.left.flatt
+	display: flex
+	flex-direction: column
+	.second
+		width: 100%
+	.first
+		display: none
+
 // .iconimage
 //	object-fit: contain
 //	width: 24px
 //	height: 24px
+
+h3
+	color: var(--opposite)
+	letter-spacing: 0
+
+h6
+	a
+		color: #fe4a49
+
+p
+	line-height: 1.8
+
+.second
+	p
+		font-size: 14px
 
 .subscribemodal
 	display: flex
@@ -251,7 +295,6 @@
 		small
 			text-transform: none
 			color: var(--themer)
-		p
 		form
 			input
 				font-size: 12px
@@ -268,14 +311,16 @@
 			min-height: 200px
 			padding: 16px
 
-.thisforms
+form.thisforms
 	input
 		font-size: 12px
 		padding: 4px 8px
+		border-radius: 4px
+		background: none
 		outline: none
-		border: 1px solid var(--forline)
+		border: none
 		@media screen and (min-width: 1024px)
-			width: 56%
+			width: 80%
 
 .levelzero, .levelone
 	padding-bottom: 96px
@@ -283,13 +328,22 @@
 
 .levelzero
 	min-height: calc(100vh - 320px)
-	padding-top: 220px
+	padding-top: 112px
+	padding-left: 360px
+	padding-right: 360px
+	padding-bottom: 64px
 
 .levelone
 	padding-top: 240px
+	padding-left: 32px
+	padding-right: 32px
+	padding-bottom: 64px
 
 .leveltwo
 	margin-top: 160px
+	padding-left: 32px
+	padding-right: 32px
+	padding-bottom: 64px
 	
 .dark
 	.insubmodal

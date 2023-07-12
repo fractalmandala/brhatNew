@@ -26,7 +26,7 @@ export const actions: Actions = {
 			showChip('invalid credentials!', '#fe4a49');
 		}
 
-		throw redirect(303, '/newsletter/1');
+		throw redirect(303, '/newsletter');
 	},
 
 	signout: async ({ 
