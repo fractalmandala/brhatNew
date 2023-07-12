@@ -31,6 +31,7 @@
 	let thisAuthorPosts: any;
 	let fake: boolean = false;
 	let member: any;
+	let member2: any;
 	let ref: HTMLElement | null = null;
 	let y: number;
 	let fsize = Array(3).fill(false);
@@ -73,6 +74,7 @@
 
 		(async () => {
 			member = await brhatTeamMember(data.author);
+			member2 = await brhatTeamMember(data.authortwo);
 			posts = await latestDhitiTen();
 			thisAuthorPosts = await authorfiltered(data.author);
 
@@ -161,26 +163,47 @@
 		</button>
 	</div>
 	<div class="plain-one x1">
-		<div class="rta-row ycenter colgap100 thisguys">
-			<small>{data.category}</small>
-			<cite>{data.tags}</cite><br />
+		<div class="rta-column thisguys">
+			<h5 class="serif" style="font-weight: bold; font-style: italic; color: var(--onlyblack)">
+				{data.category}
+			</h5>
 		</div>
-		<h1 class="tt-c" style="serif; font-weight: 700;">{data.title}</h1>
+		<h1 class="tt-c" style="serif; font-weight: bold;">{data.title}</h1>
+		<div class="rta-row colgap200 ycenter bord-bot p-bot-64">
+			{#each data.tags as item}
+				<cite class="citeone">{item}</cite><br />
+			{/each}
+		</div>
 		<div class="authorbox">
-			{data.author}<br />
-			{#if member && member.length > 0}
-				{#each member as item}
-					<a href={item.twitter} target="_blank" rel="noreferrer">
-						<img
-							class="authortwitter"
-							src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/122-twitter.png"
-							alt={data.author}
-						/>
-					</a>
-				{/each}
-			{/if}
+			<div class="rta-row ycenter colgap100">
+				{data.author}<br />
+				{#if member && member.length > 0}
+					{#each member as item}
+						<a href={item.twitter} target="_blank" rel="noreferrer">
+							<img
+								class="authortwitter"
+								src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/122-twitter.png"
+								alt={data.author}
+							/>
+						</a>
+					{/each}
+				{/if}
+			</div>
 			{#if data.authortwo && data.authortwo.length > 0}
-				and {data.authortwo}
+				<div class="rta-row ycenter colgap100">
+					{data.authortwo}
+					{#if member2 && member2.length > 0}
+						{#each member2 as item}
+							<a href={item.twitter} target="_blank" rel="noreferrer">
+								<img
+									class="authortwitter"
+									src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/122-twitter.png"
+									alt={data.authortwo}
+								/>
+							</a>
+						{/each}
+					{/if}
+				</div>
 			{/if}
 		</div>
 	</div>
@@ -314,6 +337,8 @@
 
 h1
 	font-family: 'Adobe Devanagari', sans-serif
+	line-height: 1
+	padding-bottom: 16px
 
 .x3.dhitiouter
 	h4
@@ -368,9 +393,11 @@ h1
 		color: var(--dhiticolor)
 
 .authorbox
-	text-transform: uppercase
 	color: #878787
 	padding-top: 16px
+	font-size: 21px
+	@media screen and (max-width: 1023px)
+		font-size: 16px
 
 .rta-column
 	h6
@@ -379,10 +406,12 @@ h1
 
 .authortwitter
 	object-fit: contain
+	transform: scale(0.8)
 	&:hover
-		animation: ping 0.8s ease-in-out infinite both
+		transform: scale(1)
 	@media screen and (min-width: 1024px)
 		width: 32px
+		height: 27px
 	@media screen and (max-width: 1023px)
 		width: 24px
 
@@ -398,27 +427,21 @@ h1
 		opacity: 0
 
 .x1
-	.rta-row
-		align-items: center
-		padding-bottom: 32px	
-		small
-			background: #fe4a49
-			color: white
-			padding: 4px 8px 4px 8px
-			border-radius: 12px
+	.thisguys
+		h5
+			margin: 0
+			padding: 0	
+		padding-bottom: 16px
 	h1
-		border-bottom: 1px solid var(--borderline)
-		padding-bottom: 32px
 		padding-top: 32px
 		border-top: 1px solid var(--borderline)
-		letter-spacing: 0 !important
+		letter-spacing: -1px
 	@media screen and (min-width: 1024px)
 		display: flex
 		flex-direction: column
 		justify-content: center
 		h1
-			letter-spacing: -3px
-			line-height: 1.12
+			letter-spacing: -1px
 	@media screen and (max-width: 1023px)
 		h1
 			letter-spacing: -1px
@@ -466,5 +489,12 @@ h1
 		transition: var(--snap)
 		&:hover
 			color: #fe4a49
+
+.citeone
+	background: #fe4a49
+	color: white
+	text-transform: uppercase
+	font-style: normal
+	padding: 2px 8px
 
 </style>
