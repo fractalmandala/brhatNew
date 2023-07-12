@@ -298,6 +298,15 @@ export async function anveshiGeneral() {
 	return data
 }
 
+export async function anveshiLead() {
+	const { data, error } = await supabase
+	.from('brhat-anveshi')
+	.select()
+	.eq('type','lead')
+	if (error) throw new Error(error.message)
+	return data
+}
+
 export async function chapterHighlight(chapter: string){
 	const { data, error } = await supabase
   .from('brhat-anveshi')
@@ -338,6 +347,17 @@ export async function chapterTemples(chapter: string){
 	.eq('chapter',chapter)
 	.eq('type','temple')
   .order('id')
+  if (error) throw new Error(error.message)
+  return data
+}
+
+export async function chapterProfiles(chapter: string){
+	const { data, error } = await supabase
+  .from('brhat-anveshi')
+  .select()
+	.eq('chapter',chapter)
+	.eq('type','profile')
+  .order('sequence')
   if (error) throw new Error(error.message)
   return data
 }
