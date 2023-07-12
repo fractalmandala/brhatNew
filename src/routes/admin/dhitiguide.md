@@ -1,5 +1,6 @@
 ---
 title: dhiti flow
+sections: one
 ---
 
 1. input of text and metadata at front end, data goes to supabase table 'brhat-dhiti'. Values:

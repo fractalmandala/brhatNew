@@ -1,5 +1,12 @@
 ---
 title: Bṛhat and Dhīti Typography Guidelines
+sections: 
+- one
+- two
+- three
+- four
+- five
+- six
 ---
 
 <div class="p-bot-32">
@@ -128,6 +135,7 @@ this<sup>in sup tags</sup>
 <img class="imageclass" src="/images/header6.png" alt="h6"/>
 
 ###### It does NOT matter what font/size/styling you use in the Google Document, it's the above that IS IMPORTANT.
+Here is a [wonderfully lucid video](https://www.loom.com/share/8d6c49027b2e4b0fb51bb03d9e01797b?sid=7f56f8ce-e5e8-4b90-853a-3a10859e1349) explaining what this means.
 
 ###### Posters MUST change all Header 6 above, to blockquote tags.
 
