@@ -306,9 +306,10 @@
 <!--end-->
 
 <!--profiles-->
-<div class="rta-grid grid2 p-top-64 rowgap300 colgap200 profiles serif">
+<div class="rta-row outer-box limit colgap100 serif">
 	{#if profiles && profiles.length > 0}
 		{#each profiles as item}
+			<div class="rta-column rowgap400"
 				<h4 class="bord-top ta-c-d p-top-32 hindiadobe">{item.name}</h4>
 				<div class="rta-row colgap400">
 					<div class="rta-image">
@@ -318,6 +319,7 @@
 						<pre class="serif">{item.content}</pre>
 					</div>
 				</div>
+			</div>
 		{/each}
 	{/if}
 </div>
