@@ -10,13 +10,16 @@ title: Bṛhat and Dhīti Typography Guidelines
 Contents:
 </div>
 <div class="contentlist">
-	<p>1. General Rules</p>
-	<p>2. Submission Rules</p>	
-	<p>3. Diacritics</p>
-	<p>4. Images</p>
-	<p>5. Typography</p>
-	<p>6. Suggest Changes</p>
+	<p><a href=#one>1. General</a></p>
+	<p><a href=#two>2. Submission Rules</p>	
+	<p><a href=#three>3. Diacritics</p>
+	<p><a href=#four>4. Images</p>
+	<p><a href=#five>5. Typography</p>
+	<p><a href=#six>6. Suggest Changes</p>
 </div>
+
+<div id="one"></div>
+
 
 This document is a living reference sheet for all rules, guidelines, open points and ongoing issues for the typography on Bṛhat website in general, and on Dhīti in detail. The guidelines in broad:
 
@@ -28,6 +31,9 @@ This document is a living reference sheet for all rules, guidelines, open points
 ##### 6. The hero image for a post must be in 1200 x 630 dimension (done by poster, not writer), and this plus any other images should all be in .webp format. 
 ##### 7. The recommended location for all article Google Documents is [this shared folder.](https://drive.google.com/drive/folders/1hj763vEa-__O2649T0ZO96jJqnaqdonj?usp=sharing). 
 
+
+<div id="two"></div>
+
 ### Submission Rules
 - An article is not ready for posting unless the writer has resolved/closed all comments and suggestions on the source Google Document.
 - An article is not ready for posting unless the hero and any other relevant images have been shared via email, and they are all authorized for usage.
@@ -36,6 +42,9 @@ This document is a living reference sheet for all rules, guidelines, open points
 - It is preferred that the writer share a draft for a less than 200-character tweet, or a thread of no more than 3 tweets, for posting their article on Twitter.
 - Editors must share all requisites above with the poster.
 - We do not "generate AI" images for writers- internal or otherwise.
+
+
+<div id="three"></div>
 
 ### Diacritics
 For all usage of Sanskrit words on the website, and especially in Dhīti posts, we follow the International Alphabet of Sanskrit Transliteration system containing characters with diacritic marks, such as- ā, ṛ, ḥ. Some relevant links:
@@ -52,10 +61,14 @@ For all usage of Sanskrit words on the website, and especially in Dhīti posts, 
 ###### General Terms
 - We do NOT diacritize Hindi words. 
 
+<div id="four"></div>
+
 ### Images
 All hero images must be in 1200 x 630 resolution. Easy tools to crop/resize images are Canva, Figma or online sites like [this](https://picresize.com/en/edit). 
 These and any other image must be in .webp compressed form. Generally, an image should not be more than around 100-150kb in size.
 The ideal storage place for all images is [this Supabase storage bucket](https://app.supabase.com/project/rnfvzaelmwbbvfbsppir/storage/buckets/brhatwebsite), but one can use any public image storage solution. All image links should end in .webp ( or .png/.jpg/.jpeg at minimum.)
+
+<div id="five"></div>
 
 ### Typography
 All posts are stored as markdown files for formatting-agnosticism. Post sub-headers are in H4, that is:
@@ -117,6 +130,8 @@ this<sup>in sup tags</sup>
 ###### It does NOT matter what font/size/styling you use in the Google Document, it's the above that IS IMPORTANT.
 
 ###### Posters MUST change all Header 6 above, to blockquote tags.
+
+<div id="six"></div>
 
 ### Suggest Changes
 To suggest changes/additions/resolutions to this document, please add comments [in this file](https://docs.google.com/document/d/13dfTYcXPqDRLgOlmw55ldMvvvch1597TR9DLCF3Jnsc/edit?usp=sharing), and tag "Amrit." The file is open for editing when logged in with a brhat ID. To receive edit access, write to amrit.pandey@brhat.in  
