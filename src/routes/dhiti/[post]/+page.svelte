@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { onMount, onDestroy } from 'svelte';
 	import { page } from '$app/stores';
 	import Header from '$lib/components/DhitiHeader.svelte';
 	import Head from '$lib/components/HeadComponent.svelte';
@@ -37,6 +37,7 @@
 	let ftitle = Array(3).fill(false);
 	let scY: number;
 	fsize[1] = true;
+	let observer: any;
 
 	function toggleFont(index: number) {
 		fsize[index] = !fsize[index];
@@ -64,14 +65,28 @@
 		} else $fontSize = 'std';
 	}
 
-	onMount(async () => {
+	onMount(() => {
 		$metaUrl = $page.url.pathname;
 		$metaTitle = data.title;
 		$metaDescription = data.excerpt;
 		$metaImage = data.image;
-		member = await brhatTeamMember(data.author);
-		posts = await latestDhitiTen();
-		thisAuthorPosts = await authorfiltered(data.author);
+
+		(async () => {
+			member = await brhatTeamMember(data.author);
+			posts = await latestDhitiTen();
+			thisAuthorPosts = await authorfiltered(data.author);
+
+			document.querySelectorAll('a').forEach((a) => {
+				a.setAttribute('target', '_blank');
+				a.setAttribute('rel', 'noopener noreferrer');
+			});
+		})();
+	});
+
+	onDestroy(() => {
+		if (observer) {
+			observer.disconnect();
+		}
 	});
 </script>
 

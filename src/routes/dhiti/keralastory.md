@@ -7,6 +7,7 @@ tags: concerns, islam
 date: "2023-07-07"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/keralastory/keralastory.jpg
 ---
+
 <img class="imageclass2" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/keralastory/keralastory1.webp" alt="one"/>
 <div class="imagecaption">ISIS (Islamic State of Iraq and Syria, Daesh) came out in favour of PFI (Popular Front of India), after the Government of India banned PFI. This is a screen shot from the ISIS magazine 'The Voice of Khurasan', page number 4</div>
 

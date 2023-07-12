@@ -2,14 +2,27 @@
 	export let data;
 </script>
 
-<div class="outer-box limit doc-bar">
+<div class="doc-bar">
 	<h2 class="bord-bot p-bot-16 m-bot-16">{data.title}</h2>
-	<svelte:component this={data.content} />
+	<div class="doc-in">
+		<svelte:component this={data.content} />
+	</div>
 </div>
 
 <style lang="sass">
 
-.limit
+.doc-bar
 	padding-top: 128px
+	padding-bottom: 128px
+
+.doc-bar
+	@media screen and (min-width: 1024px)
+		padding-left: 360px
+		padding-right: 360px
+		h2
+			font-size: 48px
+	@media screen and (max-width: 1023px)
+		padding-left: 32px
+		padding-right: 32px
 
 </style>

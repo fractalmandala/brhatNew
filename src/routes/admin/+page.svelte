@@ -80,9 +80,11 @@
 		<p>Sorry, this area is for internal admin. Please return to <a href="/">Home.</a></p>
 	{/if}
 	{#if $page.data.session}
-		<form class="thisform" method="post" action="?/signout">
-			<button class="newbutton"> Log Out </button>
-		</form>
+		{#if data.ems === 'design@brhat.in'}
+			<form class="thisform" method="post" action="?/signout">
+				<button class="newbutton"> Log Out </button>
+			</form>
+		{/if}
 		<button class="newbutton red" on:click={toggleExpand}>
 			{#if expansion}
 				CONTRACT
@@ -100,7 +102,7 @@
 		<div class="rta-column">
 			{#if docs && docs.length > 0}
 				{#each docs as item}
-					<p><a href={item.path}>{item.meta.title}</a></p>
+					<h5 class="tt-c"><a href={item.path}>{item.meta.title}</a></h5>
 				{/each}
 			{/if}
 		</div>
@@ -109,9 +111,11 @@
 
 <style lang="sass">
 
-p
+h5
+	color: var(--opposite)
 	a
-		color: #fe4a49
+		&:hover
+			color: #fe4a49
 
 #cutform
 	max-width: 320px
