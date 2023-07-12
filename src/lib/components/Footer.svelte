@@ -122,7 +122,11 @@
 				style="color: #fe4a49">Bṛhat Education.</a
 			></small
 		>
-		<small><a href="/about/privacy" style="color: white">Privacy</a> | contact@brhat.in</small>
+		<small
+			><a href="/about/privacy" style="color: white">Privacy</a> |
+			<a href="/about/termsandconditions" style="color: white">T & C</a> |
+			<a href="/about/refunds" style="color: white">Refunds Policy</a> | contact@brhat.in</small
+		>
 	</div>
 </footer>
 {#if modalStatus}
