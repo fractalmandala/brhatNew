@@ -1,5 +1,12 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import Prism from 'prismjs';
+	import '$lib/styles/prism.css';
 	export let data;
+
+	onMount(() => {
+		Prism.highlightAll();
+	});
 </script>
 
 <div class="doc-bar">
