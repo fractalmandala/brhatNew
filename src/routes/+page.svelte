@@ -560,27 +560,25 @@
 			</div>
 		</div>
 
-		<div class="rta-grid grid3 colgap400 rowgap400">
+		<div class="rta-column rowgap400">
 			{#if posts && posts.length > 0}
 				{#each posts as item, i}
-					<div class="rta-card rta-column ybetween rowgap200">
-						<div class="rta-column rowgap200">
-							<div class="status-sticker">
+					<div class="rta-card">
+						<div class="rta-card-image">
+							<img src={item.meta.image} alt={item.meta.title} />
+						</div>
+						<div class="rta-card-body">
+							<div class="category">
 								<small>{item.meta.category}</small>
 							</div>
-							<div class="rta-image">
-								<img src={item.meta.image} alt={item.meta.title} />
-							</div>
-							<h5 class="tt-c">
+							<h4 class="tt-c">
 								<strong>
 									<a href={item.path}>
 										{item.meta.title}
 									</a></strong
 								>
-							</h5>
-							<small style="text-transform: none">{item.meta.excerpt}</small>
-						</div>
-						<div class="rta-column">
+							</h4>
+							<p class="exc">{item.meta.excerpt}</p>
 							<p class="writer">
 								<strong>
 									{item.meta.author}<span />
@@ -589,7 +587,11 @@
 									{/if}</strong
 								>
 							</p>
-							<cite>{item.meta.tags}</cite>
+							<div class="rta-row ycenter tags colgap200">
+								{#each item.meta.tags as taggie}
+									<cite>{taggie}</cite>
+								{/each}
+							</div>
 						</div>
 					</div>
 				{/each}
@@ -673,16 +675,67 @@
 		text-align: right !important
 
 .rta-card
+	display: flex
+	border-radius: 0
 	h5
 		color: var(--opposite)
 		line-height: 1.1	
 	p.writer
-		color: #fe4a49
+		color: var(--onlyblack)
 	.rta-image
 		height: 200px
 		border-radius: 6px
 		img
 			border-radius: 6px
+	padding: 0
+	@media screen and (min-width: 769px)
+		flex-direction: row
+		column-gap: 32px
+		border-bottom: 1px solid var(--contraster2)
+		padding-bottom: 32px
+		.rta-card-image
+			width: 36%
+		.rta-card-body
+			width: 60%
+			display: flex
+			flex-direction: column
+			row-gap: 16px
+			.tags
+				cite
+					background: #fe4a49
+					color: white
+					text-transform: uppercase
+					font-size: 10px
+					font-style: normal
+					padding: 2px 4px
+	@media screen and (max-width: 768px)
+		flex-direction: row
+		column-gap: 24px
+		border-bottom: 1px solid var(--contraster2)
+		padding-bottom: 32px
+		.rta-card-image
+			width: 30%
+			height: 200px
+		.rta-card-body
+			width: calc(70% - 24px)
+			display: flex
+			flex-direction: column
+			row-gap: 16px
+			.tags
+				cite
+					background: #fe4a49
+					color: white
+					text-transform: uppercase
+					font-size: 10px
+					font-style: normal
+					padding: 2px 4px
+			h4
+				font-size: 21px
+			p.exc
+				font-size: 12px
+			p.writer
+				font-size: 14px
+		
 
 #drashtascreen
 	@media screen and (max-width: 1023px)
@@ -704,30 +757,8 @@
 	small
 		color: white
 
-.pageglobals.dark
-	background: #171717
-
 .rta-card
 	transition: all 0.18s cubic-bezier(0.795, 1.270, 0.590, 0.945)
-
-.light
-	.rta-card
-		border: 1px solid #d7d7d7
-		&:hover
-			background: linear-gradient(135deg, #fff8ee 0%,#fffaef 100%)
-			box-shadow: 4px 6px 8px #e1e1e1
-			border: 1px solid transparent
-
-.dark
-	.rta-card
-		background: rgba(11,11,11,0.6)
-		backdrop-filter: blur(10px)
-		border: 1px solid #474747
-		box-shadow: 9px 6px 12px #101010
-		&:hover
-			box-shadow: 0px 0px 0px #121212
-			border: 1px solid #171717
-			background: #101010
 
 #arrowl
 	animation: arrow1 16s ease infinite forwards
