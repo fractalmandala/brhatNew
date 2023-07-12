@@ -92,286 +92,249 @@
 	/>
 </div>
 <!--end-->
-
-<!--intro section with 3 actions-->
-<div class="rta-column rowgap300 ycenter outer-box limit minH glass-bottom">
-	<h1>Bṛhat is a Culture Engine</h1>
-	<h5>
-		To power creatives, research and design rooted in the Indian civilizational consciousness.
-	</h5>
-	<div class="motifimage rta-image">
-		{#if $themeMode}
-			<img
-				src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/02brhatlogos/motif-black.png"
-				alt="motifblack"
-				style="transform: rotate({y / 2}deg)"
-			/>
-		{:else}
-			<img
-				src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/02brhatlogos/motif-white.png"
-				alt="motifwhite"
-				style="transform: rotate({y / 2}deg)"
-			/>
-		{/if}
-	</div>
-</div>
-
-<div
-	class="x1 rta-column ycenter outer-box glass-bottom limit p-top-64 minH rowgap400"
-	data-lenis-scroll-snap-align="start"
->
-	<h5 class="typett">
-		We convert individual, institutional and collective intent into action, across 3 dimensions.
-	</h5>
-	<div class="rta-column rowgap400">
-		{#if threeactions && threeactions.length > 0}
-			{#each threeactions as item}
-				<div class="rta-row stay colgap300 p-top-16" id="specialone">
-					<div class="rta-image w32 imageboxabout">
-						<img src={item.image} alt={item.id} />
-					</div>
-					<div class="rta-column null rowgap100 w64">
-						<h5 class="nohemi">{item.name}</h5>
+<div class="rta-column stout p-top-128">
+	<div class="rta-column rowgap400 instout pagila">
+		<div class="rta-column rowgap400 bord-bot p-bot-64">
+			<h1>Bṛhat is a Culture Engine</h1>
+			<h5>
+				To power creatives, research and design rooted in the Indian civilizational consciousness.
+			</h5>
+			<div class="motifimage rta-image">
+				{#if $themeMode}
+					<img
+						src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/02brhatlogos/motif-black.png"
+						alt="motifblack"
+						style="transform: rotate({y / 2}deg)"
+					/>
+				{:else}
+					<img
+						src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/02brhatlogos/motif-white.png"
+						alt="motifwhite"
+						style="transform: rotate({y / 2}deg)"
+					/>
+				{/if}
+			</div>
+		</div>
+		<div class="rta-column rowgap400 p-top-64 bord-bot p-bot-64">
+			<h5>
+				We convert individual, institutional and collective intent into action, across 3 dimensions.
+			</h5>
+			{#if threeactions && threeactions.length > 0}
+				{#each threeactions as item}
+					<div class="rta-column null rowgap100 p-bot-32">
+						<h6>{item.name}</h6>
 						<pre>{item.content}</pre>
 					</div>
-				</div>
-			{/each}
-		{/if}
-	</div>
-</div>
-<!--end-->
-
-<!--three constraints-->
-<div
-	class="rta-column p-top-64 minH p-bot-16 ycenter outer-box limit glass-bottom rowgap200"
-	data-lenis-scroll-snap-align="start"
->
-	<h5 class="typett">
-		An engine is an instrument for transformation, and this engine is to build the self-perpetuating
-		civilizational moment. How does one go about doing that?
-	</h5>
-	<h3 class="typett p-bot-16 oppositer">At Bṛhat, we're acutely aware of three constraints:</h3>
-	<div class="rta-column rowgap400">
-		{#if threeareas && threeareas.length > 0}
-			{#each threeareas as item}
-				<div class="rta-row stay colgap300 bord-top p-top-32">
-					<div class="rta-image w32 imageboxabout">
-						<img src={item.image} alt={item.id} />
+				{/each}
+			{/if}
+		</div>
+		<div class="rta-column rowgap400 p-top-64 bord-bot p-bot-64">
+			<h5 class="typett">
+				An engine is an instrument for transformation, and this engine is to build the
+				self-perpetuating civilizational moment.
+			</h5>
+			<h5 class="typett">How does one go about doing that?</h5>
+			<h5>At Bṛhat, we're acutely aware of three constraints:</h5>
+			{#if threeareas && threeareas.length > 0}
+				{#each threeareas as item}
+					<div class="rta-column null rowgap100 p-bot-32">
+						<h6>{item.name}</h6>
+						<pre style="width: 60%; margin-bottom: 0">{item.content}</pre>
 					</div>
-					<div class="rta-column null rowgap100 w64">
-						<h5 class="nohemi">{item.name}</h5>
-						<p class="wide60">{item.content}</p>
-					</div>
-				</div>
-			{/each}
-		{/if}
-	</div>
-</div>
-<!--end-->
-
-<!--severest constraint is time-->
-<div
-	class="rta-column type-thin p-top-64 ycenter outer-box minH glass-bottom limit rowgap400"
-	data-lenis-scroll-snap-align="start"
->
-	<h5 class="typett">
-		But the severest constraint of them all is Time, and more specifically – Moment.
-	</h5>
-	<h5 class="typett">
-		The time for a Culture Engine is now, because we are in the midst of a civilizational moment.
-		What is a civilizational moment? How rare or regular are such moments? How must we respond to
-		them?
-	</h5>
-	<h4 class="typett">
-		Read more on the need we see, why we think this is the time to address it, and about our
-		self-identity:
-	</h4>
-</div>
-<!--end-->
-
-<!--all links listed-->
-<div class="rta-column outer-box limit p-top-64" data-lenis-scroll-snap-align="start">
-	<div class="onpagelinks rta-column rowgap400">
-		<h3><a href="/about/svatahsiddha">SVATAḤSIDDHA</a></h3>
-		<h3><a href="/about/anatomy">ANATOMY OF A CIVILIZATIONAL MOMENT</a></h3>
-		<h3><a href="/about/whatkrishnameanstous">WHAT ŚRĪ KṚṢṆA MEANS TO US</a></h3>
-		<h3><a href="/about/namelogo">NĀMARŪPA - NAME AND LOGO</a></h3>
-		<h3><a href="/about/values">PRATIJÑĀ - VALUES</a></h3>
-		<h3><a href="/about/#advisors">ADVISORS</a></h3>
-		<h3><a href="/about/#partners">PARTNERS</a></h3>
-		<h3><a href="/about/#team">TEAM</a></h3>
-	</div>
-</div>
-<!--end-->
-
-<div class="rta-column ycenter rowgap600 outer-box minH limit" data-lenis-scroll-snap-align="start">
-	<h2 class="typett glass-y p-top-32 p-bot-32">ADVISORS</h2>
-	<div class="rta-grid grid4 rowgap400 colgap400" id="advisors">
-		{#if advisors && advisors.length > 0}
-			{#each advisors as item}
-				<div class="rta-column col-row rowgap200">
-					<div class="rta-image height-30" id="imagebox4">
-						<img src={item.image} alt={item.id} />
-					</div>
-					<div class="rta-column rowgap100">
-						<h6 class="nohemi">{item.name}</h6>
-						<small>{item.title}</small>
-					</div>
-				</div>
-			{/each}
-		{/if}
-	</div>
-</div>
-
-<div class="rta-column rowgap600 outer-box minH ycenter limit" data-lenis-scroll-snap-align="start">
-	<h2 class="glass-y p-top-32 p-bot-32">PARTNERS</h2>
-	<div class="a-box gridnew" id="partners">
-		{#if partners && partners.length > 0}
-			{#each partners as item}
-				<div class="box partner-bb">
-					<a href={item.link} target="_blank" rel="noreferrer">
-						<img src={item.image} alt={item.id} />
-					</a>
-				</div>
-			{/each}
-		{/if}
-	</div>
-</div>
-
-<div class="rta-column rowgap600 outer-box limit p-top-64" data-lenis-scroll-snap-align="start">
-	<h2 class="glass-y p-top-32 p-bot-32">TEAM</h2>
-	<div class="rta-grid grid3 colgap600 rowgap600 p-bot-64" class:calibrated={alignGrid} id="team">
-		{#if team && team.length > 0}
-			{#each team as item, i}
-				<div
-					class="rta-column rowgap400"
-					class:openedcard={authorCardOn[i]}
-					on:click={scrollToTeam}
-					on:keydown={fauxfake}
-				>
-					<strong>
-						<div class="rta-image" id="imagebox3">
-							<img src={item.image} alt={item.id} />
+				{/each}
+			{/if}
+		</div>
+		<div class="rta-column rowgap400 p-top-64">
+			<h4 class="typett">
+				But the severest constraint of them all is Time, and more specifically – Moment.
+			</h4>
+			<h5 class="typett">
+				The time for a Culture Engine is now, because we are in the midst of a civilizational
+				moment. What is a civilizational moment? How rare or regular are such moments? How must we
+				respond to them?
+			</h5>
+			<h6 class="typett">
+				Read more on the need we see, why we think this is the time to address it, and about our
+				self-identity:
+			</h6>
+		</div>
+		<div class="onpagelinks rta-column rowgap400 p-top-64">
+			<h3><a href="/about/svatahsiddha">SVATAḤSIDDHA</a></h3>
+			<h3><a href="/about/anatomy">ANATOMY OF A CIVILIZATIONAL MOMENT</a></h3>
+			<h3><a href="/about/whatkrishnameanstous">WHAT ŚRĪ KṚṢṆA MEANS TO US</a></h3>
+			<h3><a href="/about/namelogo">NĀMARŪPA - NAME AND LOGO</a></h3>
+			<h3><a href="/about/values">PRATIJÑĀ - VALUES</a></h3>
+			<h3><a href="/about/#advisors">ADVISORS</a></h3>
+			<h3><a href="/about/#partners">PARTNERS</a></h3>
+			<h3><a href="/about/#team">TEAM</a></h3>
+		</div>
+		<div class="rta-column rowgap400 p-top-64">
+			<h2 class="p-bot-32">Advisors</h2>
+			{#if advisors && advisors.length > 0}
+				<div class="rta-column rowgap600" id="advisors">
+					{#each advisors as item}
+						<div class="rta-row stay rowgap400">
+							<div class="rta-image w32" id="imagebox4">
+								<img src={item.image} alt={item.id} />
+							</div>
+							<div class="rta-column w64 rowgap100">
+								<h6>{item.name}</h6>
+								<small>{item.title}</small>
+							</div>
 						</div>
-						<div class="rta-column p-top-8 rowgap100">
-							<h6 class="nohemi">{item.name}</h6>
-							<small class="bord-bot p-bot-16">{item.title}</small>
-						</div>
-						<div class="rta-column p-top-8 rowgap100">
-							<p>{item.bio}</p>
-							{#if item.name === 'Pankaj Saxena'}
-								<p
-									style="color: #fe4a49; cursor: pointer"
-									on:click={() => openAuthorCard(i)}
-									on:keydown={fauxfake}
-								>
-									<strong>Writings by Pankaj</strong>
-								</p>
-							{:else if item.name === 'Raghava Krishna'}
-								<p
-									style="color: #fe4a49; cursor: pointer"
-									on:click={() => openAuthorCard(i)}
-									on:keydown={fauxfake}
-								>
-									<strong>Writings by Raghava</strong>
-								</p>
-							{:else if item.name === 'Amritanshu Pandey'}
-								<p
-									style="color: #fe4a49; cursor: pointer"
-									on:click={() => openAuthorCard(i)}
-									on:keydown={fauxfake}
-								>
-									<strong>Writings by Amrit</strong>
-								</p>
-							{:else if item.name === 'Kavita Krishna Meegama'}
-								<p
-									style="color: #fe4a49; cursor: pointer"
-									on:click={() => openAuthorCard(i)}
-									on:keydown={fauxfake}
-								>
-									<strong>Writings by Kavita</strong>
-								</p>
-							{:else if item.name === 'Anurag Shukla'}
-								<p
-									style="color: #fe4a49; cursor: pointer"
-									on:click={() => openAuthorCard(i)}
-									on:keydown={fauxfake}
-								>
-									<strong>Writings by Anurag</strong>
-								</p>
-							{:else if item.name === 'Nivedita Tiwari'}
-								<p
-									style="color: #fe4a49; cursor: pointer"
-									on:click={() => openAuthorCard(i)}
-									on:keydown={fauxfake}
-								>
-									<strong>Writings by Nivedita</strong>
-								</p>
-							{:else if item.name === 'Sai Priya Chodavarapu'}
-								<p
-									style="color: #fe4a49; cursor: pointer"
-									on:click={() => openAuthorCard(i)}
-									on:keydown={fauxfake}
-								>
-									<strong>Writings by Sai</strong>
-								</p>
-							{:else if item.name === 'Akshay Jha'}
-								<p
-									style="color: #fe4a49; cursor: pointer"
-									on:click={() => openAuthorCard(i)}
-									on:keydown={fauxfake}
-								>
-									<strong>Writings by Akshay</strong>
-								</p>
-							{:else if item.name === 'Anshuman Panda'}
-								<p
-									style="color: #fe4a49; cursor: pointer"
-									on:click={() => openAuthorCard(i)}
-									on:keydown={fauxfake}
-								>
-									<strong>Writings by Anshuman</strong>
-								</p>
-							{:else if item.name === 'Sushant Gangoli'}
-								<p
-									style="color: #fe4a49; cursor: pointer"
-									on:click={() => openAuthorCard(i)}
-									on:keydown={fauxfake}
-								>
-									<strong>Writings by Sushant</strong>
-								</p>
-							{/if}
-						</div>
-					</strong>
+					{/each}
 				</div>
-				{#if authorCardOn[i]}
-					<div class="opentab teampage" in:scale={{ duration: 300, delay: 100 }}>
-						{#if item.name === 'Pankaj Saxena'}
-							<PankajSaxena />
-						{:else if item.name === 'Raghava Krishna'}
-							<RaghavaKrishna />
-						{:else if item.name === 'Anurag Shukla'}
-							<AnuragShukla />
-						{:else if item.name === 'Kavita Krishna Meegama'}
-							<KavitaKrishna />
-						{:else if item.name === 'Nivedita Tiwari'}
-							<NiveditaTiwari />
-						{:else if item.name === 'Akshay Jha'}
-							<AkshayJha />
-						{:else if item.name === 'Anshuman Panda'}
-							<AnshumanPanda />
-						{:else if item.name === 'Sai Priya Chodavarapu'}
-							<SaiPriya />
-						{:else if item.name === 'Sushant Gangoli'}
-							<SushantGangoli />
-						{:else if item.name === 'Amritanshu Pandey'}
-							<AmritPandey />
-						{:else}
-							<div />
+			{/if}
+		</div>
+		<div class="rta-column rowgap400 p-top-64">
+			<h2 class="p-bot-32">Partners</h2>
+			{#if partners && partners.length > 0}
+				<div class="rta-grid grid4 stay4" id="partners">
+					{#each partners as item}
+						<div class="box partner-bb">
+							<a href={item.link} target="_blank" rel="noreferrer">
+								<img src={item.image} alt={item.id} />
+							</a>
+						</div>
+					{/each}
+				</div>
+			{/if}
+		</div>
+		<div class="rta-column rowgap400 p-top-64">
+			<h2 class="p-bot-32">Team</h2>
+			{#if team && team.length > 0}
+				<div class="rta-column rowgap600" id="team">
+					{#each team as item, i}
+						<div
+							class="rta-row rowgap400 colgap300"
+							class:openedcard={authorCardOn[i]}
+							on:keydown={fauxfake}
+						>
+							<div class="rta-image w32">
+								<img src={item.image} alt={item.id} />
+							</div>
+							<div class="rta-column p-top-8 rowgap100 w64">
+								<h6 class="nohemi">{item.name}</h6>
+								<small class="bord-bot p-bot-16">{item.title}</small>
+								<div class="rta-column rowgap100">
+									<p style="font-size: 14px">{item.bio}</p>
+									{#if item.name === 'Pankaj Saxena'}
+										<p
+											style="color: var(--textone); cursor: pointer; font-size: 16px"
+											on:click={() => openAuthorCard(i)}
+											on:keydown={fauxfake}
+										>
+											<strong>Writings by Pankaj</strong>
+										</p>
+									{:else if item.name === 'Raghava Krishna'}
+										<p
+											style="color: var(--textone); cursor: pointer; font-size: 16px"
+											on:click={() => openAuthorCard(i)}
+											on:keydown={fauxfake}
+										>
+											<strong>Writings by Raghava</strong>
+										</p>
+									{:else if item.name === 'Amritanshu Pandey'}
+										<p
+											style="color: var(--textone); cursor: pointer; font-size: 16px"
+											on:click={() => openAuthorCard(i)}
+											on:keydown={fauxfake}
+										>
+											<strong>Writings by Amrit</strong>
+										</p>
+									{:else if item.name === 'Kavita Krishna Meegama'}
+										<p
+											style="color: var(--textone); cursor: pointer; font-size: 16px"
+											on:click={() => openAuthorCard(i)}
+											on:keydown={fauxfake}
+										>
+											<strong>Writings by Kavita</strong>
+										</p>
+									{:else if item.name === 'Anurag Shukla'}
+										<p
+											style="color: var(--textone); cursor: pointer; font-size: 16px"
+											on:click={() => openAuthorCard(i)}
+											on:keydown={fauxfake}
+										>
+											<strong>Writings by Anurag</strong>
+										</p>
+									{:else if item.name === 'Nivedita Tiwari'}
+										<p
+											style="color: var(--textone); cursor: pointer; font-size: 16px"
+											on:click={() => openAuthorCard(i)}
+											on:keydown={fauxfake}
+										>
+											<strong>Writings by Nivedita</strong>
+										</p>
+									{:else if item.name === 'Sai Priya Chodavarapu'}
+										<p
+											style="color: var(--textone); cursor: pointer; font-size: 16px"
+											on:click={() => openAuthorCard(i)}
+											on:keydown={fauxfake}
+										>
+											<strong>Writings by Sai</strong>
+										</p>
+									{:else if item.name === 'Akshay Jha'}
+										<p
+											style="color: var(--textone); cursor: pointer; font-size: 16px"
+											on:click={() => openAuthorCard(i)}
+											on:keydown={fauxfake}
+										>
+											<strong>Writings by Akshay</strong>
+										</p>
+									{:else if item.name === 'Anshuman Panda'}
+										<p
+											style="color: var(--textone); cursor: pointer; font-size: 16px"
+											on:click={() => openAuthorCard(i)}
+											on:keydown={fauxfake}
+										>
+											<strong>Writings by Anshuman</strong>
+										</p>
+									{:else if item.name === 'Sushant Gangoli'}
+										<p
+											style="color: var(--textone); cursor: pointer; font-size: 16px"
+											on:click={() => openAuthorCard(i)}
+											on:keydown={fauxfake}
+										>
+											<strong>Writings by Sushant</strong>
+										</p>
+									{/if}
+								</div>
+							</div>
+						</div>
+						{#if authorCardOn[i]}
+							<div
+								class="rta-column rowgap400"
+								class:openedcard={authorCardOn[i]}
+								on:keydown={fauxfake}
+							>
+								{#if item.name === 'Pankaj Saxena'}
+									<PankajSaxena />
+								{:else if item.name === 'Raghava Krishna'}
+									<RaghavaKrishna />
+								{:else if item.name === 'Anurag Shukla'}
+									<AnuragShukla />
+								{:else if item.name === 'Kavita Krishna Meegama'}
+									<KavitaKrishna />
+								{:else if item.name === 'Nivedita Tiwari'}
+									<NiveditaTiwari />
+								{:else if item.name === 'Akshay Jha'}
+									<AkshayJha />
+								{:else if item.name === 'Anshuman Panda'}
+									<AnshumanPanda />
+								{:else if item.name === 'Sai Priya Chodavarapu'}
+									<SaiPriya />
+								{:else if item.name === 'Sushant Gangoli'}
+									<SushantGangoli />
+								{:else if item.name === 'Amritanshu Pandey'}
+									<AmritPandey />
+								{/if}
+							</div>
 						{/if}
-					</div>
-				{/if}
-			{/each}
-		{/if}
+					{/each}
+				</div>
+			{/if}
+		</div>
 	</div>
 </div>
 
@@ -386,74 +349,35 @@
 	@media screen and (max-width: 1023px)
 		height: 144px
 		width: 144px
-
-.imageboxabout
-	@media screen and (min-width: 1024px)
-		height: 160px
-		width: 160px
-		img
-			object-fit: cover
-			height: 160px
-			width: 160px
-	@media screen and (max-width: 1023px)
-		height: 128px
-		width: 128px
-		img
-			object-fit: contain
-		
-
-#imagebox3
-	@media screen and (min-width: 1024px)
-		img
-			width: 200px
-			height: 200px
-			border-radius: 100px
-	@media screen and (max-width: 1023px)
-		img
-			width: 128px
-			height: 128px
-			border-radius: 64px
+		margin: auto
+	
 
 #imagebox4
-	@media screen and (max-width: 1023px)
-		height: 104px
+	@media screen and (min-width: 769px)
+		img
+			width: 160px
+			height: 160px
+	@media screen and (max-width: 768px)
+		img
+			width: 120px
+			height: 120px
+
+
+#team
+	.rta-image
+		img
+		@media screen and (min-width: 1024px)
+			width: 160px
+			height: 160px
+		@media screen and (max-width: 1023px)
+			width: 120px
+			height: 120px
+	
 
 .x0
 	height: 100vh
 	overflow: hidden
 
-.gridnew
-	display: grid
-	grid-auto-flow: row
-	grid-template-rows: auto
-	@media screen and (min-width: 1024px)
-		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
-		grid-template-areas: ". . . . . . . ."
-		gap: 0 32px
-	@media screen and (max-width: 1023px)
-		grid-template-columns: 1fr 1fr 1fr 1fr
-		grid-template-areas: ". . . ." ". . . ."
-		gap: 16px 16px
-	
-
-.grid3.calibrated
-	@media screen and (min-width: 1024px)
-		grid-template-areas: "opentab opentab openedcard" ". . ."
-		grid-template-rows: auto auto
-		.opentab
-			grid-area: opentab
-		.openedcard
-			grid-area: openedcard
-	@media screen and (max-width: 1023px)
-		grid-template-areas: "opentab" "openedcard" "."
-		grid-template-rows: auto auto
-		.opentab
-			grid-area: opentab
-
-.opentab.teampage
-	display: flex
-	flex-direction: column
-	justify-content: center
 
 .onpagelinks h3
 	transition: 0.15s

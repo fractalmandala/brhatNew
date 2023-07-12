@@ -9,14 +9,17 @@
 	});
 </script>
 
-<div class="authormodal type">
-	{#if articles && articles.length > 0}
-		{#each articles as item}
-			<div class="listing">
-				<h6 class="nohemi thinner">
-					<a href={item.path}>{item.meta.title}</a>
-				</h6>
-			</div>
-		{/each}
-	{/if}
-</div>
+{#if articles && articles.length > 0}
+	{#each articles as item}
+		<p>
+			<a href={item.path}>{item.meta.title}</a>
+		</p>
+	{/each}
+{/if}
+
+<style lang="sass">
+
+p
+	font-size: 12px
+
+</style>
