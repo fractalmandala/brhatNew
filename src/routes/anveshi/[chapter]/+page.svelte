@@ -309,7 +309,7 @@
 <div class="rta-row outer-box limit colgap100 serif">
 	{#if profiles && profiles.length > 0}
 		{#each profiles as item}
-			<div class="rta-column rowgap400"
+			<div class="rta-column rowgap400">
 				<h4 class="bord-top ta-c-d p-top-32 hindiadobe">{item.name}</h4>
 				<div class="rta-row colgap400">
 					<div class="rta-image">
