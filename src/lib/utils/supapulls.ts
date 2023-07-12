@@ -298,6 +298,15 @@ export async function anveshiGeneral() {
 	return data
 }
 
+export async function anveshiLead() {
+	const { data, error } = await supabase
+	.from('brhat-anveshi')
+	.select()
+	.eq('type','lead')
+	if (error) throw new Error(error.message)
+	return data
+}
+
 export async function chapterHighlight(chapter: string){
 	const { data, error } = await supabase
   .from('brhat-anveshi')
