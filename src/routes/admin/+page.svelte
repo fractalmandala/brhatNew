@@ -76,11 +76,11 @@
 			{/if}
 		{/if}
 	</div>
-	{#if data.ems !== 'design@brhat.in'}
+	{#if data.ems !== 'design@brhat.in' && data.ems !== 'authorized@brhat.in'}
 		<p>Sorry, this area is for internal admin. Please return to <a href="/">Home.</a></p>
 	{/if}
 	{#if $page.data.session}
-		{#if data.ems === 'design@brhat.in'}
+		{#if data.ems === 'design@brhat.in' || data.ems === 'authorized@brhat.in'}
 			<form class="thisform" method="post" action="?/signout">
 				<button class="newbutton"> Log Out </button>
 			</form>
@@ -98,7 +98,7 @@
 			<pre>{JSON.stringify(loadedData, null, 2)}</pre>
 		{/if}
 	{/if}
-	{#if data.ems === 'design@brhat.in'}
+	{#if data.ems === 'design@brhat.in' || data.ems === 'authorized@brhat.in'}
 		<div class="rta-column">
 			{#if docs && docs.length > 0}
 				{#each docs as item}
