@@ -61,15 +61,8 @@
 	/>
 </div>
 
-<div
-	class="rta-column minH p-bot-64"
-	class:light={$themeMode}
-	class:dark={!$themeMode}
-	class:levelzero={$breakZero}
-	class:levelone={$breakOne}
-	class:leveltwo={$breakTwo}
->
-	<div class="rta-column holding p-top-64">
+<div class="rta-column stout minH p-top-128">
+	<div class="instout rta-column rowgap200 newrta">
 		<div class="rta-column">
 			{#if $themeMode}
 				<img
@@ -87,7 +80,7 @@
 			{/if}
 			<p class="p-bot-16 ta-c-d ta-c-m">A model for approaching design, rooted to Dharma</p>
 		</div>
-		<div class="rta-column rowgap400 one-section glass-top p-top-64 outer-box limit">
+		<div class="rta-column rowgap400 one-section glass-top p-top-64">
 			<blockquote class="ta-c-d">
 				“We are approaching the power of gods, without the wisdom of gods.”
 				<br /><cite>Daniel Schmachtenberger</cite>
@@ -97,7 +90,7 @@
 				<br /><cite>Daniel Christian Wahl</cite>
 			</blockquote>
 		</div>
-		<div class="rta-column one-section p-top-32 outer-box limit">
+		<div class="rta-column one-section p-top-32">
 			<em>
 				Never before in the history of humanity has there been such an urgent need of 'awareness of
 				intent.’ No longer can we let our world be created by what The Conscilience Project calls
@@ -121,12 +114,12 @@
 				believe the case to reorient design by Dharma is strong.
 			</h6>
 		</div>
-		<div class="onpagelinks outer-box limit rta-column rowgap100">
+		<div class="onpagelinks rta-column rowgap100">
 			<button class="blank-button" on:click={() => togglePart(1)}>
 				<h3>1 - Prologue</h3>
 			</button>
 			{#if isPart[1]}
-				<div class="rta-grid grid2 left bord-bot p-bot-32" transition:slide>
+				<div class="rta-column bord-bot p-bot-32" transition:slide>
 					<div class="rta-column">
 						<div class="rta-image">
 							<img
@@ -204,7 +197,7 @@
 				<h3>2 - Dharma is Design</h3>
 			</button>
 			{#if isPart[2]}
-				<div class="rta-grid grid2 left bord-bot p-bot-32" transition:slide>
+				<div class="rta-column bord-bot p-bot-32" transition:slide>
 					<div class="rta-column">
 						<div class="rta-image">
 							<img
@@ -292,32 +285,15 @@
 .is-green
 	color: #10D56c
 
-.dark
-	p
-		color: white
-	h5
-		color: #676767
 
 .one-section
 	blockquote
 		margin-left: 0
 		margin-right: 0
 
-.levelzero
-	align-items: flex-start
-	.thistheimage
-		width: 400px
-		margin: auto
-
-.levelone
-	.thistheimage
-		width: 400px
-		margin: auto
-
-.leveltwo
-	.thistheimage
-		width: 240px
-		margin: auto
+.thistheimage
+	width: 240px
+	margin: auto
 
 .rta-column
 	row-gap: 20px

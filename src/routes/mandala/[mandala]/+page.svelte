@@ -67,11 +67,13 @@
 	<div class="x0">
 		<ParallaxImage --parallax="url('{pageImage}')" --parallaxresp="url('{pageImage}')" />
 	</div>
-	<div class="rta-column in-blog carrier heightmeasure p-top-64" bind:this={ref}>
-		<h3 class="glass-y p-top-32 p-bot-32 m-bot-32">
-			{pageTitle}
-		</h3>
-		<svelte:component this={data.content} />
+	<div class="p-top-128 minH stout rta-column" bind:this={ref}>
+		<div class="instout rta-column rowgap200 mandy">
+			<h2 class="glass-y p-top-32 p-bot-32 m-bot-32">
+				{pageTitle}
+			</h2>
+			<svelte:component this={data.content} />
+		</div>
 	</div>
 </div>
 
@@ -84,12 +86,7 @@
 	@media screen and (max-width: 1023px)
 		height: 50vh
 
-.carrier
-	place-self: center
 
-.in-blog
-	@media screen and (max-width: 1023px)
-		padding: 32px
 
 
 </style>

@@ -40,41 +40,22 @@
 <div class="x0">
 	<ParallaxImage --parallax="url('{data.image}')" --parallaxresp="url('{data.image}')" />
 </div>
-<div class="rta-column outer-box p-top-64 limit">
-	<h3>
-		{data.title}
-	</h3>
-</div>
-<div class="rta-column">
-	<div class="carrier p-bot-64 newrta">
+<div class="rta-column stout minH p-top-128">
+	<div class="instout rta-column rowgap200 newrta">
+		<h3>
+			{data.title}
+		</h3>
 		<svelte:component this={data.content} />
-	</div>
-	<div
-		class="rta-row colgap100 outer-box limit xcenter-d"
-		style="padding-top: 16px; border-top: 1px solid #ececec"
-	>
-		<button class="greenbutton"><a href={data.prev}>Prev</a></button>
-		<button class="greenbutton"><a href={data.next}>Next</a></button>
 	</div>
 </div>
 
 <style lang="sass">
 
-.carrier
-	place-self: center
 
 .x0
 	height: 100vh
 	overflow: hidden
 
-.limit
-	h3
-		color: var(--opposite)
 
-.greenbutton a
-	color: white
-	&:hover
-		text-decoration: none
-	
 
 </style>

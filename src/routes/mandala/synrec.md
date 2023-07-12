@@ -374,18 +374,18 @@ It also gives us a few lessons on physics and philosophy along the way- in intui
 
 #### Endnotes:
 
-[^1] The more common third is theology, but for reasons we explain in due time, our preference is for teleology.
-[^2] There is also a third, māyā, but we take reductive liberty here.
-[^3] We sidestep a number of technical and grammatical considerations here and articulate in reductive generalization. The “man/manin” referred to is an affix, or pratyaya, and Mind- √man– is a dhātu. Our generalization leans on the contentious nature of the Uṇādi Sūtras (where derivations of these words are given) to highlight a larger, glaring symmetry.
-[^4] Indian thought has penetrated this to great depths, and it is a tragedy McKenna never heard of Bhartṛhari and the Śabda Brahman. We will visit this in due time. McKenna’s quote here in fact is a direct affirmation of the Indian worldview on mantra and ṛṣi.
-[^5] Heidegger himself abandoned this terminology later in his life.
-[^6] (Ontic)[https//www.researchgate.net/%20publication/%20331641911_ONTIC_Heidegger_Lexicon]
-[^7] (Between Ontic and Ontologic)[https://philosophy-question.com/library/l%20ecture/read/90056-what-is-the-difference%20-between-ontic-and-ontological%20https://philosophy.stackexchange.com/%20questions/47711/ontic-vs-ontological]
-[^8] (Ontic vs. Ontologic)[https://thephilosophyforum.com/%20discussion/6557/ontic-versus-ontological]
-[^9] The relevance to us should be visible by now, we’re only a few steps away from speaking of Puruṣa-Prakṛti, or even of Brahman-Ātman.
-[^10] Reformatted a different way, this is sat, cit, ānanda. More on this later.
-[^11] (Sanskrit Dictionary)[https://sanskritdictionary.com/roots.php]
-[^12] The syntax of language begins to trip and stumble at this stage. We use tense-forms as if time existed in the “time we are talking of,” – there is no other way to express it, even if it technically makes no sense.
-[^13] These involve free-thinking speculations which are not meant as claims of authority on any of the darśanas, or as technical points on comprehensive ontologies such as Nyāya or Vaiśeśikā.
-[^14] Parallel to Sat is the idea of Brahman, which best derives as swelling, expansion, outpouring. One interpretation of brahman is as √bṛṃḥ + √an, where √an is prāṇane– breathing. √bṛṃḥ + √an is the the expansion or swelling of breathing, a vision of the inflationary-deflationary universe. It is remarkable that such cosmological intuitions can be found at the absolute root of Sanskrit language.
-[^15] These are not exclusive and definitive meanings.
+1. The more common third is theology, but for reasons we explain in due time, our preference is for teleology.
+2. here is also a third, māyā, but we take reductive liberty here.
+3. We sidestep a number of technical and grammatical considerations here and articulate in reductive generalization. The “man/manin” referred to is an affix, or pratyaya, and Mind- √man– is a dhātu. Our generalization leans on the contentious nature of the Uṇādi Sūtras (where derivations of these words are given) to highlight a larger, glaring symmetry.
+4. Indian thought has penetrated this to great depths, and it is a tragedy McKenna never heard of Bhartṛhari and the Śabda Brahman. We will visit this in due time. McKenna’s quote here in fact is a direct affirmation of the Indian worldview on mantra and ṛṣi.
+5. Heidegger himself abandoned this terminology later in his life.
+6. [Ontic](https//www.researchgate.net/%20publication/%20331641911_ONTIC_Heidegger_Lexicon)
+7. [Between Ontic and Ontologic](https://philosophy-question.com/library/l%20ecture/read/90056-what-is-the-difference%20-between-ontic-and-ontological%20https://philosophy.stackexchange.com/%20questions/47711/ontic-vs-ontological)
+8. [Ontic vs. Ontologic](https://thephilosophyforum.com/%20discussion/6557/ontic-versus-ontological)
+9. The relevance to us should be visible by now, we’re only a few steps away from speaking of Puruṣa-Prakṛti, or even of Brahman-Ātman.
+10. Reformatted a different way, this is sat, cit, ānanda. More on this later.
+11. [Sanskrit Dictionary](https://sanskritdictionary.com/roots.php)
+12. The syntax of language begins to trip and stumble at this stage. We use tense-forms as if time existed in the “time we are talking of,” – there is no other way to express it, even if it technically makes no sense.
+13. These involve free-thinking speculations which are not meant as claims of authority on any of the darśanas, or as technical points on comprehensive ontologies such as Nyāya or Vaiśeśikā.
+14. Parallel to Sat is the idea of Brahman, which best derives as swelling, expansion, outpouring. One interpretation of brahman is as √bṛṃḥ + √an, where √an is prāṇane– breathing. √bṛṃḥ + √an is the the expansion or swelling of breathing, a vision of the inflationary-deflationary universe. It is remarkable that such cosmological intuitions can be found at the absolute root of Sanskrit language.
+15. These are not exclusive and definitive meanings.
