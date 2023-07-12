@@ -2,9 +2,20 @@
 title: Bṛhat and Dhīti Typography Guidelines
 ---
 
-
 <div class="p-bot-32">
 <small>Last Updated: 12 July '23</small>
+</div>
+
+<div class="contents null">
+Contents:
+</div>
+<div class="contentlist">
+	<p>1. General Rules</p>
+	<p>2. Submission Rules</p>	
+	<p>3. Diacritics</p>
+	<p>4. Images</p>
+	<p>5. Typography</p>
+	<p>6. Suggest Changes</p>
 </div>
 
 This document is a living reference sheet for all rules, guidelines, open points and ongoing issues for the typography on Bṛhat website in general, and on Dhīti in detail. The guidelines in broad:
@@ -98,3 +109,9 @@ All images are in img class "imageclass" if landscape, and img class "imageclass
 ###### It does NOT matter what font/size/styling you use in the Google Document, it's the above that IS IMPORTANT.
 
 ###### Posters MUST change all Header 6 above, to blockquote tags.
+
+### Suggest Changes
+To suggest changes/additions/resolutions to this document, please add comments [in this file](https://docs.google.com/document/d/13dfTYcXPqDRLgOlmw55ldMvvvch1597TR9DLCF3Jnsc/edit?usp=sharing), and tag "Amrit." The file is open for editing when logged in with a brhat ID. To receive edit access, write to amrit.pandey@brhat.in  
+
+
+If you find an error in any post, please write to contact@brhat.in
