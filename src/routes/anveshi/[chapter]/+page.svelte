@@ -18,6 +18,7 @@
 		chapterHighlight,
 		chapterFaq,
 		chapterProfiles,
+		anveshiLead,
 		anveshiGeneral
 	} from '$lib/utils/supapulls';
 	import { EventInterface } from '@splidejs/splide';
@@ -30,6 +31,7 @@
 	let cfaqs: string | any[];
 	let isFaqOpen: boolean[] = Array(15).fill(false);
 	let highlights: any;
+	let lead: string | any[];
 	let profiles: string | any[];
 	let itins: string | any[];
 	let openedDay: boolean[] = Array(5).fill(false);
@@ -142,6 +144,7 @@
 			itins = await chapterItinerary($anveshiChapter);
 			temp = await chapterTemples($anveshiChapter);
 			highlights = await chapterHighlight($anveshiChapter);
+			lead = await anveshiLead();
 			profiles = await chapterProfiles($anveshiChapter);
 			cfaqs = await chapterFaq($anveshiChapter);
 			gens = await anveshiGeneral();
@@ -153,6 +156,7 @@
 		itins = await chapterItinerary($anveshiChapter);
 		temp = await chapterTemples($anveshiChapter);
 		highlights = await chapterHighlight($anveshiChapter);
+		lead = await anveshiLead();
 		profiles = await chapterProfiles($anveshiChapter);
 		faqs = await allFaq();
 		cfaqs = await chapterFaq($anveshiChapter);
@@ -282,6 +286,43 @@
 </div>
 <!--end-->
 
+<!--lead-->
+<div class="rta-column outer-box limit rowgap100 serif">
+	{#if lead && lead.length > 0}
+		{#each lead as item}
+				<h4 class="bord-top ta-c-d p-top-32 hindiadobe">{item.name}</h4>
+				<div class="rta-row colgap400 tourlead">
+					<div class="rta-image">
+						<img src={item.image} alt="pankaj saxena" />
+					</div>
+					<div class="rta-column">
+						<pre class="serif">{item.content}</pre>
+					</div>
+				</div>
+		{/each}
+	{/if}
+</div>
+
+<!--end-->
+
+<!--profiles-->
+<div class="rta-grid grid2 p-top-64 rowgap300 colgap200 outer-box ycenter serif">
+	{#if profiles && profiles.length > 0}
+		{#each profiles as item}
+				<h4 class="bord-top ta-c-d p-top-32 hindiadobe">{item.name}</h4>
+				<div class="rta-row colgap400">
+					<div class="rta-image">
+						<img src={item.image} alt=item.name />
+					</div>
+					<div class="rta-column">
+						<pre class="serif">{item.content}</pre>
+					</div>
+				</div>
+		{/each}
+	{/if}
+</div>
+<!--end-->
+
 <!--temples-->
 <div class="rta-column outer-box rowgap100 p-top-64 p-bot-64">
 	<div class="rta-column bord-top p-top-32 p-bot-32">
@@ -346,20 +387,8 @@
 <div class="rta-column outer-box limit rowgap100 serif generales">
 	{#if gens && gens.length > 0}
 		{#each gens as item}
-			{#if item.name === 'Profile of the Tour Lead'}
-				<h4 class="bord-top ta-c-d p-top-32 hindiadobe">{item.name}</h4>
-				<div class="rta-row colgap400 tourlead">
-					<div class="rta-image">
-						<img src={item.image} alt="pankaj saxena" />
-					</div>
-					<div class="rta-column">
-						<pre class="serif">{item.content}</pre>
-					</div>
-				</div>
-			{:else}
 				<h4 class="bord-top ta-c-d p-top-32 hindiadobe">{item.name}</h4>
 				<pre class="serif">{item.content}</pre>
-			{/if}
 		{/each}
 	{/if}
 </div>
