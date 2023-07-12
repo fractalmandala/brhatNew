@@ -815,14 +815,10 @@ small.citeone
 		.latestposts
 			padding: 4px 16px
 			border-radius: 8px
-			box-shadow: 6px 8px 12px #f1f1f1, -5px -8px 12px #fbfbfb
 		.rta-dhiti
 			padding: 16px
 			border-radius: 8px
-			box-shadow: 6px 8px 12px #f1f1f1, -5px -8px 12px #fbfbfb
 			transition: 0.26s
-			&:hover
-				box-shadow: 0px 0px 0px #f1f1f1, 0px 0px 0px #fbfbfb
 	@media screen and (max-width: 1023px)
 		.iconfilter
 			background: none
@@ -856,14 +852,10 @@ small.citeone
 		.latestposts
 			padding: 4px 16px
 			border-radius: 8px
-			box-shadow: 6px 8px 12px #070707, -5px -8px 12px #191919
 		.rta-dhiti
 			padding: 16px
 			border-radius: 8px
-			box-shadow: 6px 8px 12px #070707, -5px -8px 12px #191919
 			transition: 0.26s
-			&:hover
-				box-shadow: 0px 0px 0px #070707, 0px 0px 0px #212121
 	@media screen and (max-width: 1023px)
 		.iconfilter
 			background: none
