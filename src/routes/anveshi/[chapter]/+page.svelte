@@ -306,7 +306,7 @@
 <!--end-->
 
 <!--profiles-->
-<div class="rta-grid grid2 p-top-64 rowgap300 colgap200 outer-box ycenter serif">
+<div class="rta-grid grid2 p-top-64 rowgap300 colgap200 profiles serif">
 	{#if profiles && profiles.length > 0}
 		{#each profiles as item}
 				<h4 class="bord-top ta-c-d p-top-32 hindiadobe">{item.name}</h4>
