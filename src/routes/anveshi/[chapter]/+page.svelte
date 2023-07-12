@@ -17,6 +17,7 @@
 		chapterTemples,
 		chapterHighlight,
 		chapterFaq,
+		chapterProfiles,
 		anveshiGeneral
 	} from '$lib/utils/supapulls';
 	import { EventInterface } from '@splidejs/splide';
@@ -29,6 +30,7 @@
 	let cfaqs: string | any[];
 	let isFaqOpen: boolean[] = Array(15).fill(false);
 	let highlights: any;
+	let profiles: string | any[];
 	let itins: string | any[];
 	let openedDay: boolean[] = Array(5).fill(false);
 	let temp: any;
@@ -140,6 +142,7 @@
 			itins = await chapterItinerary($anveshiChapter);
 			temp = await chapterTemples($anveshiChapter);
 			highlights = await chapterHighlight($anveshiChapter);
+			profiles = await chapterProfiles($anveshiChapter);
 			cfaqs = await chapterFaq($anveshiChapter);
 			gens = await anveshiGeneral();
 		})();
@@ -150,6 +153,7 @@
 		itins = await chapterItinerary($anveshiChapter);
 		temp = await chapterTemples($anveshiChapter);
 		highlights = await chapterHighlight($anveshiChapter);
+		profiles = await chapterProfiles($anveshiChapter);
 		faqs = await allFaq();
 		cfaqs = await chapterFaq($anveshiChapter);
 		gens = await anveshiGeneral();
