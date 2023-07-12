@@ -342,6 +342,17 @@ export async function chapterTemples(chapter: string){
   return data
 }
 
+export async function chapterProfiles(chapter: string){
+	const { data, error } = await supabase
+  .from('brhat-anveshi')
+  .select()
+	.eq('chapter',chapter)
+	.eq('type','profile')
+  .order('sequence')
+  if (error) throw new Error(error.message)
+  return data
+}
+
 export async function anveshiImages() {
 	const { data, error } = await supabase
 	.from('brhat-anveshi')
