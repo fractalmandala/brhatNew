@@ -23,6 +23,28 @@ export async function completeDhiti(){
 	return eachfiled
 }
 
+export async function getAllTags() {
+    const allPostFiles = import.meta.glob('/src/routes/dhiti/*.md');
+    const files = Object.entries(allPostFiles);
+
+    const allTags = await Promise.all(
+        files.map(async(file) => { // here, we're not destructuring the array
+            // @ts-ignore
+            const { metadata } = await file[1](); // access the resolver directly
+            return metadata.tags; // return the tags of each post
+        })
+    );
+
+    // allTags is an array of arrays, so we need to flatten it into a single array
+		const flattenedTags = [].concat(...allTags);
+
+    // remove duplicates using a Set
+    const uniqueTags = Array.from(new Set(flattenedTags));
+
+    return uniqueTags;
+}
+
+
 export async function periodicDhiti(band:string){
 	const allfiles = import.meta.glob('/src/routes/dhiti/*.md')
 	const filed = Object.entries(allfiles)
@@ -44,6 +66,29 @@ export async function periodicDhiti(band:string){
 	)
 	eachfiled.sort((a, b) => b.date.getTime() - a.date.getTime()) // compare Date objects directly
 	const featuredPosts = eachfiled.filter((post) => post.formattedDate === band)
+	return featuredPosts
+}
+
+export async function singleTagDhiti(band:string){
+	const allfiles = import.meta.glob('/src/routes/dhiti/*.md')
+	const filed = Object.entries(allfiles)
+	const eachfiled = await Promise.all(
+		filed.map(async([path, resolver]) => {
+			// @ts-ignore
+			const { metadata } = await resolver()
+			const pathitem = path
+			const date = new Date(metadata.date as string)
+
+			return {
+				date,
+				meta: metadata,
+				linkpath: pathitem,
+				tags: metadata.tags,
+			}
+		})
+	)
+	eachfiled.sort((a, b) => b.date.getTime() - a.date.getTime()) // compare Date objects directly
+	const featuredPosts = eachfiled.filter((post) => post.tags.includes(band));
 	return featuredPosts
 }
 

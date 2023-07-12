@@ -14,7 +14,8 @@
 		authorName,
 		categoryName,
 		dateBand,
-		archiveFilter
+		archiveFilter,
+		tagName
 	} from '$lib/stores/metastores';
 	import { allAuths } from '$lib/utils/supapulls';
 	import {
@@ -24,7 +25,9 @@
 		authorGuest,
 		allBodhas,
 		completeDhiti,
-		periodicDhiti
+		periodicDhiti,
+		getAllTags,
+		singleTagDhiti
 	} from '$lib/utils/localpulls';
 	import { themeMode } from '$lib/stores/globalstores';
 	let nextthreeposts: string | any[];
@@ -39,6 +42,8 @@
 	let allByCat: any;
 	let allByDate: any;
 	let allauthor: any;
+	let allByTag: any;
+	let allBySingle: any;
 	let isCut = Array(3).fill(false);
 	isCut[0] = true;
 	let isToggledOpen = false;
@@ -91,8 +96,25 @@
 		window.scrollTo(0, 0);
 	}
 
+	function setTag(name: string) {
+		$tagName = name;
+		window.scrollTo(0, 0);
+	}
+
 	function fauxfake() {
 		fake = !fake;
+	}
+
+	$: if ($archiveFilter === 'Tags') {
+		(async () => {
+			allByTag = await getAllTags();
+		})();
+	}
+
+	$: if ($tagName) {
+		(async () => {
+			allBySingle = await singleTagDhiti($tagName);
+		})();
 	}
 
 	$: if ($dateBand) {
@@ -183,6 +205,13 @@
 			on:click={() => setFilter('Dates')}
 		>
 			<h6>Dates</h6>
+		</button>
+		<button
+			class="blank-button"
+			class:activetype={$archiveFilter === 'Tags'}
+			on:click={() => setFilter('Tags')}
+		>
+			<h6>Tags</h6>
 		</button>
 	</div>
 	<div class="rta-grid grid2 left000 bord-top m-top-16 p-top-32">
@@ -351,6 +380,19 @@
 							<p class="tt-u">May 2022</p>
 						</button>
 					{/if}
+					{#if $archiveFilter === 'Tags'}
+						{#if allByTag && allByTag.length > 0}
+							{#each allByTag as item}
+								<button
+									class="blank-button ta-l"
+									on:click={() => setTag(item)}
+									class:active={$tagName === item}
+								>
+									<p class="tt-c">{item}</p>
+								</button>
+							{/each}
+						{/if}
+					{/if}
 				</div>
 			{/if}
 		</div>
@@ -443,6 +485,35 @@
 				{#if $dateBand === 'All Posts'}
 					<button class="genbutton" on:click={loadMore}>Load More</button>
 				{/if}
+			{:else if $archiveFilter === 'Tags'}
+				{#if allBySingle && allBySingle.length > 0}
+					{#each allBySingle as item}
+						<div class="rta-dhiti rta-row">
+							<div class="rta-column rowgap200">
+								<h5 class="heading" class:light={$themeMode} class:dark={!$themeMode}>
+									<a href={item.path}>{item.meta.title}</a>
+								</h5>
+								<p>{item.meta.excerpt}</p>
+								<div class="rta-column p-top-16 rowgap100">
+									<p class="author" style="color: var(--onlyblack); margin: 0">
+										{item.meta.author}
+										{#if item.meta.authortwo && item.meta.authortwo.length > 0}
+											<span> and {item.meta.authortwo}</span>
+										{/if}
+									</p>
+									<div class="citetwo rta-row ycenter colgap200">
+										{#each item.meta.tags as taggie}
+											<div class="taggie">{taggie}</div>
+										{/each}
+									</div>
+								</div>
+							</div>
+							<div class="rta-image">
+								<img src={item.meta.image} alt={item.meta.title} />
+							</div>
+						</div>
+					{/each}
+				{/if}
 			{/if}
 		</div>
 	</div>
@@ -481,6 +552,7 @@
 			position: sticky
 			top: 240px
 			height: 60vh
+			overflow-y: scroll
 	@media screen and (max-width: 1023px)
 		padding-top: 120px
 		padding-left: 4vw
