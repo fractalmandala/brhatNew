@@ -7,6 +7,7 @@
 	import { inject } from '@vercel/analytics';
 	import '$lib/styles/types.sass';
 	import '$lib/styles/tokens.sass';
+	import '$lib/styles/standard.sass';
 	import Footer from '$lib/components/Footer.svelte';
 	import PageTransition from '$lib/components/PageTransition.svelte';
 

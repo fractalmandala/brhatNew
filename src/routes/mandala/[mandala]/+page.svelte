@@ -68,8 +68,8 @@
 		<ParallaxImage --parallax="url('{pageImage}')" --parallaxresp="url('{pageImage}')" />
 	</div>
 	<div class="p-top-128 minH stout rta-column" bind:this={ref}>
-		<div class="instout rta-column rowgap200 mandy">
-			<h2 class="glass-y p-top-32 p-bot-32 m-bot-32">
+		<div class="instout rta-column rowgap200 pagila2 green">
+			<h2 class="p-bot-64">
 				{pageTitle}
 			</h2>
 			<svelte:component this={data.content} />

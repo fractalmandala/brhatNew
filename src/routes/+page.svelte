@@ -677,16 +677,8 @@
 .rta-card
 	display: flex
 	border-radius: 0
-	h5
-		color: var(--opposite)
-		line-height: 1.1	
 	p.writer
 		color: var(--onlyblack)
-	.rta-image
-		height: 200px
-		border-radius: 6px
-		img
-			border-radius: 6px
 	padding: 0
 	@media screen and (min-width: 769px)
 		flex-direction: row

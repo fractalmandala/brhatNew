@@ -576,9 +576,9 @@ body, html
 	small, a
 		margin: 0
 	@media screen and (min-width: 1024px)
-		height: 200px
+		height: 160px
 	@media screen and (max-width: 1023px)
-		height: 200px
+		height: 120px
 
 .rta-card
 	border-radius: 16px
@@ -695,6 +695,7 @@ body, html
 	--yellow: #E4A503
 	--teal: #0B6E4F
 	--forline: #e7e7e7
+	--texttwo: #474747
 
 .dark
 	--dhiticolor: #0B6E4F
@@ -705,6 +706,7 @@ body, html
 	--background: #171717
 	--palio: #FAFAFA
 	--textone: #a1a1a1
+	--texttwo: #474747
 	--greyish: #878787
 	--onlyblack: #474747
 	--themer: #676767
@@ -832,12 +834,12 @@ body, html
 .onpagelinks
 	h3
 		border-bottom: 1px solid var(--borderline)
-		padding-bottom: 16px
-		color: var(--opposite)
+		padding-bottom: 24px
+		color: var(--contraster2)
 	@media screen and (max-width: 1023px)
 		h3
-			font-size: 2rem
-			padding-bottom: 8px
+			font-size: 1.7rem
+			padding-bottom: 24px
 
 .rta-carousel
 	display: grid
@@ -1416,6 +1418,9 @@ body, html
 		padding-bottom: 128px
 		.instout
 			width: 640px
+			.rta-grid
+				column-gap: 32px
+				row-gap: 32px
 	@media screen and (max-width: 768px)
 		align-items: center
 		min-height: 100vh
@@ -1424,4 +1429,7 @@ body, html
 		padding-bottom: 64px
 		.instout
 			width: 100%
+			.rta-grid
+				column-gap: 24px
+				row-gap: 32px
 		
