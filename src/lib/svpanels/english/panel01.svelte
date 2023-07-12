@@ -6,7 +6,7 @@
 				alt="logo"
 			/>
 		</div>
-		<h5 class="hindiadobe">
+		<h5>
 			A word is like a thought, seemingly insubstantial but in reality incarnating a deep truth of
 			mind, life, and consciousness.
 		</h5>

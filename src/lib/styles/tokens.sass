@@ -1342,6 +1342,45 @@ body, html
 			background: #fe4a49
 
 
+.newbutton.svar
+	min-width: 6.5em
+	height: 27px
+	background: #D47915
+	width: max-content
+	color: white
+	border: 1px solid #D47915
+	border-radius: 4px
+	font-size: 12px
+	font-weight: bold
+	cursor: pointer
+	position: relative
+	z-index: 1
+	overflow: hidden
+	transition: all 0.25s
+	transform-origin: center center
+	&:hover
+		color: white
+		background: white
+		transform: scale(0.9)
+	&::after
+		content: ''
+		background: white
+		position: absolute
+		z-index: -1
+		left: -20%
+		right: -20%
+		top: 0
+		bottom: 0
+		transform: skewX(-45deg) scale(0, 1)
+		transition: all 0.25s
+	&:hover
+		&::after
+			transform: skewX(-45deg) scale(1, 1)
+			-webkit-transition: all 0.25s
+			transition: all 0.25s
+			background: #D47915
+
+
 .newbutton.big
 	min-width: 7.2em
 	height: 32px

@@ -2,7 +2,16 @@
 	import Header from '$lib/components/SubHeader.svelte';
 	import { themeMode } from '$lib/stores/globalstores';
 	import SvarLinks from '$lib/links/SvarnanjaliLinks.svelte';
+	import { userLang } from '$lib/stores/metastores';
 	let onHead = true;
+
+	function setHindi() {
+		$userLang = 'Hindi';
+	}
+
+	function setEnglish() {
+		$userLang = 'English';
+	}
 </script>
 
 <svelte:head>
@@ -16,8 +25,12 @@
 
 <Header>
 	<div slot="local" class="boxmidrow">
-		<a href="/svarnanjali/hindi">Hindi</a>
-		<a href="/svarnanjali">English</a>
+		<button class="blank-button" class:activated={$userLang === 'Hindi'} on:click={setHindi}
+			>Hindi</button
+		>
+		<button class="blank-button" class:activated={$userLang === 'English'} on:click={setEnglish}
+			>English</button
+		>
 	</div>
 </Header>
 <div class="type" class:light={$themeMode} class:dark={!$themeMode}>
@@ -34,5 +47,11 @@
 
 .dark
 	background: #171717
+
+.boxmidrow
+	.blank-button
+		color: #575757
+	.blank-button.activated
+		color: white
 
 </style>
