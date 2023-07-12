@@ -25,10 +25,20 @@ Contents:
 	<p><a href=#six>6. Suggest Changes</p>
 </div>
 
+
+
 <div id="one"></div>
 
 
-This document is a living reference sheet for all rules, guidelines, open points and ongoing issues for the typography on Bṛhat website in general, and on Dhīti in detail. The guidelines in broad:
+This document is a living reference sheet for all rules, guidelines, open points and ongoing issues for the typography on Bṛhat website in general, and on Dhīti in detail. The content here documents material for **Writers**, **Editors** and **Posters** of our articles. Any text in this document contained within boxed areas like so:
+
+```markdown
+this is boxed text
+```
+
+is technical content pertaining only to **Posters**. Writers and Editors need not look into this content.
+
+The guidelines in broad:
 
 ##### 1. We represent Sanskrit words in their IAST forms (see below).
 ##### 2. For quoting other writers/authors within an essay, we represent the quotes EXACTLY as they are found. That is, if the quoted text does not use IAST, then we do not diacritize it either.

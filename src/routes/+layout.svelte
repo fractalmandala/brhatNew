@@ -1,6 +1,5 @@
 <script lang="ts">
 	import RIDSidebar from '$lib/ridunits/RIDSidebar.svelte';
-	import { afterNavigate, beforeNavigate } from '$app/navigation';
 	import type { LayoutData } from './$types';
 	import { breakZero, breakOne, breakTwo, themeMode, innerWidth } from '$lib/stores/globalstores';
 	import { dev } from '$app/environment';
@@ -16,12 +15,6 @@
 	let keyTrigger: any;
 
 	inject({ mode: dev ? 'development' : 'production' });
-
-	function fauxfake() {
-		fake = !fake;
-	}
-
-	$: ({ supabase, session } = data);
 
 	$: if ($innerWidth <= 1023) {
 		breakPointOn = true;

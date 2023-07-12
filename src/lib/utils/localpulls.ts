@@ -109,25 +109,6 @@ export async function adminDocs(){
 	return eachfiled
 }
 
-export async function latestDhitiPost(){
-	const allPostFiles = import.meta.glob('/src/routes/dhiti/*.md')
-	const iterablePostFiles = Object.entries(allPostFiles)
-	const allPosts = await Promise.all(
-		iterablePostFiles.map(async ([path, resolver]) => {
-			// @ts-ignore
-			const { metadata } = await resolver()
-			const postPath = path.slice(11,-3)
-			return {
-				meta: metadata,
-				path: postPath,
-			}
-		})
-	)
-	// @ts-ignore
-	allPosts.sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date))
-	return allPosts.slice(0, 1)
-} //single latest post
-
 export async function latestDhitiFour(limit:any){
 	const allPostFiles = import.meta.glob('/src/routes/dhiti/*.md')
 	const iterablePostFiles = Object.entries(allPostFiles)
@@ -206,25 +187,6 @@ export const allFeaturedPosts = async() => {
 	return featuredPosts
 } //all posts in featured category
 
-export const dhitiBodhaTwo = async() => {
-	const allPostFiles = import.meta.glob('/src/routes/dhiti/*.md')
-	const iterablePostFiles = Object.entries(allPostFiles)
-	const allPosts = await Promise.all(
-		iterablePostFiles.map(async ([path, resolver]) => {
-			// @ts-ignore
-			const { metadata } = await resolver()
-			const postPath = path.slice(11,-3)
-			return {
-				meta: metadata,
-				path: postPath,
-			}
-		})
-	)
-	// @ts-ignore
-	allPosts.sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date))
-	const featuredPosts = allPosts.filter((post) => post.meta.category === "Svayambodha" || post.meta.category === "Shatrubodha")
-	return featuredPosts.slice(0, 2)
-} //two posts in Svayambodha and Shatrubodha category
 
 export async function allBodhas() {
 	const allPostFiles = import.meta.glob('/src/routes/dhiti/*.md')
@@ -307,65 +269,6 @@ export async function allDharmaToday() {
 	return featuredPosts
 } 
 
-export const dhitiCandPTwo = async() => {
-	const allPostFiles = import.meta.glob('/src/routes/dhiti/*.md')
-	const iterablePostFiles = Object.entries(allPostFiles)
-	const allPosts = await Promise.all(
-		iterablePostFiles.map(async ([path, resolver]) => {
-			// @ts-ignore
-			const { metadata } = await resolver()
-			const postPath = path.slice(11,-3)
-			return {
-				meta: metadata,
-				path: postPath,
-			}
-		})
-	)
-	// @ts-ignore
-	allPosts.sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date))
-	const featuredPosts = allPosts.filter((post) => post.meta.category === "Culture and Policy")
-	return featuredPosts.slice(0, 2)
-} //two posts in Culture and Policy category
-
-export const dhitiDharmaTwo = async() => {
-	const allPostFiles = import.meta.glob('/src/routes/dhiti/*.md')
-	const iterablePostFiles = Object.entries(allPostFiles)
-	const allPosts = await Promise.all(
-		iterablePostFiles.map(async ([path, resolver]) => {
-			// @ts-ignore
-			const { metadata } = await resolver()
-			const postPath = path.slice(11,-3)
-			return {
-				meta: metadata,
-				path: postPath,
-			}
-		})
-	)
-	// @ts-ignore
-	allPosts.sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date))
-	const featuredPosts = allPosts.filter((post) => post.meta.category === "Dharma Today")
-	return featuredPosts.slice(0, 2)
-} //two posts in Dharma Today category
-
-export const dhitiIKSTwo = async() => {
-	const allPostFiles = import.meta.glob('/src/routes/dhiti/*.md')
-	const iterablePostFiles = Object.entries(allPostFiles)
-	const allPosts = await Promise.all(
-		iterablePostFiles.map(async ([path, resolver]) => {
-			// @ts-ignore
-			const { metadata } = await resolver()
-			const postPath = path.slice(11,-3)
-			return {
-				meta: metadata,
-				path: postPath,
-			}
-		})
-	)
-	// @ts-ignore
-	allPosts.sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date))
-	const featuredPosts = allPosts.filter((post) => post.meta.category === "Indian Knowledge Systems")
-	return featuredPosts.slice(0, 2)
-} //two posts in IKS category
 
 export const filterChosen = async(category:string) => {
 	const allPostFiles = import.meta.glob('/src/routes/dhiti/*.md')
@@ -783,68 +686,6 @@ export const authorAmrit = async() => {
 	return authorPosts
 } 
 
-
-export const loreAll = async() => {
-	const allPostFiles = import.meta.glob('/src/routes/aryavarta/lore/*.md')
-	const iterablePostFiles = Object.entries(allPostFiles)
-	const allPosts = await Promise.all(
-		iterablePostFiles.map(async ([path, resolver]) => {
-			// @ts-ignore
-			const { metadata } = await resolver()
-			const postPath = path.slice(11,-3)
-			return {
-				meta: metadata,
-				path: postPath,
-			}
-		})
-	)
-	// @ts-ignore
-	return allPosts
-} //latest 10 posts
-
-
-export const dhitiPaginated= async(currentPage:number, pageSize:number) => {
-	const allPostFiles = import.meta.glob('/src/routes/dhiti/*.md')
-	const iterablePostFiles = Object.entries(allPostFiles)
-	const allPosts = await Promise.all(
-		iterablePostFiles.map(async ([path, resolver]) => {
-			// @ts-ignore
-			const { metadata } = await resolver()
-			const postPath = path.slice(11,-3)
-			return {
-				meta: metadata,
-				path: postPath,
-			}
-		})
-	)
-	// @ts-ignore
-	allPosts.sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date))
-	
-	const startIndex = (currentPage - 1) * pageSize;
-  const endIndex = startIndex + pageSize;
-  const paginatedPosts = allPosts.slice(startIndex, endIndex);
-
-	return paginatedPosts
-
-}
-
-export const bolFiles = async() => {
-	const allPostFiles = import.meta.glob('/src/routes/openlibrary/scripture/*.md')
-	const iterablePostFiles = Object.entries(allPostFiles)
-	const allPosts = await Promise.all(
-		iterablePostFiles.map(async ([path, resolver]) => {
-			// @ts-ignore
-			const { metadata } = await resolver()
-			const postPath = path.slice(11,-3)
-			return {
-				meta: metadata,
-				path: postPath,
-			}
-		})
-	)
-	// @ts-ignore
-	return allPosts
-}
 
 export const mandalaAll = async() => {
 	const allPostFiles = import.meta.glob('/src/routes/mandala/*.md')

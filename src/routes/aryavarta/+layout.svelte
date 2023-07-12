@@ -3,10 +3,8 @@
 	import autoAnimate from '@formkit/auto-animate';
 	import { themeMode } from '$lib/stores/globalstores';
 	import { fly } from 'svelte/transition';
-	import { loreAll } from '$lib/utils/localpulls';
 	import Header from '$lib/components/SubHeader.svelte';
 	let dropdown = false;
-	let lores: any;
 	let fake = false;
 
 	function fauxfake() {
@@ -28,10 +26,6 @@
 			dropdown = true;
 		}
 	}
-
-	onMount(async () => {
-		lores = await loreAll();
-	});
 </script>
 
 <Header />

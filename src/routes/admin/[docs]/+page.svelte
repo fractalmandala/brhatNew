@@ -40,12 +40,35 @@
 
 .doc-bar
 	@media screen and (min-width: 1024px)
-		padding-left: 360px
-		padding-right: 360px
+		display: flex
+		flex-direction: column
+		align-items: center
 		h2
 			font-size: 48px
+			width: 640px
+		.doc-in
+			width: 640px
 	@media screen and (max-width: 1023px)
 		padding-left: 32px
 		padding-right: 32px
+		display: flex
+		flex-direction: column
+		align-items: center
+		h2
+			font-size: 36px
+			width: 640px
+		.doc-in	
+			width: 640px
+	@media screen and (max-width: 768px)
+		padding-left: 24px
+		padding-right: 24px
+		display: flex
+		flex-direction: column
+		align-items: center
+		h2
+			font-size: 28px
+			width: 100%
+		.doc-in
+			width: 100%
 
 </style>
