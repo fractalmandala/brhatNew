@@ -2,7 +2,9 @@
 title: Chaṭh - A Living Tradition and Cultural Homecoming
 author: Akshay Jha
 category: Svayambodha
-tags: festivals, tradition
+tags:
+- festivals
+- tradition
 date: "2022-11-14"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/53.webp
 excerpt: "We owe a lot to our mothers and grandmothers, who carry forth traditions year after year diligently. In the case of Chath, it involves fasting for more than thirty six hours and standing in cold water, all for the wellbeing of their family. Even amidst apathy towards culture by many, Chaṭh gives me hope."

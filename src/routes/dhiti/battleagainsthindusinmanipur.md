@@ -2,7 +2,9 @@
 title: The Battle Against Hindus in Manipur
 author: Pankaj Saxena
 category: Dharma Today
-tags: tradition, concerns
+tags:
+- tradition
+- shatruobodha
 date: "2023-05-06"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/battle.webp
 excerpt: "Ostensibly, the civil war in Manipur is a clash between Kuki and Meitei tribes over poppy plantation disputes and Scheduled Tribe categorization. Behind these tribal rivalries, however, lies a broader civilizational struggle, with Christianity playing a significant role. Only by understanding these arcs can we create long-term strategies for survival and peace."

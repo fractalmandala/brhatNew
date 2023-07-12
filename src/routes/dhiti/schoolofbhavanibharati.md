@@ -2,7 +2,9 @@
 title: Sri Aurobindo’s School of Bhavānī Bhāratī
 author: Shri Ramachandra Roddam
 category: Svayambodha
-tags: aurobindo, civilizational consciousness
+tags:
+- aurobindo
+- civilization
 date: "2022-06-26"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/30.webp
 excerpt: "The 2nd in our schools of thought series is on Sri Aurobindo, who gave us the method of attaining true svarāja."

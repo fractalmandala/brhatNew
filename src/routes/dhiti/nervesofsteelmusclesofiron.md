@@ -2,7 +2,10 @@
 title: Nerves of Steel, Muscles of Iron and Minds like Thunderbolt - A Hindu Monk’s Quest for Education
 author: Anurag Shukla
 category: Indian Knowledge Systems
-tags: education, tradition, vivekananda
+tags:
+- education
+- tradition
+- vivekananda
 date: "2023-01-12"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/61.webp
 excerpt: "Learn about the educational philosophy of Svāmī Vivekānanda, as influenced by his guru Śrī Rāmakṛṣṇa Paramahaṃsa, who emphasized the importance of developing the physical, moral, and spiritual dimensions of individuals. Discover how Svāmījī's ideas on self-discovery and inner realization were shaped by his guru, and the importance of purity, patience, and perseverance on the path to knowledge and wisdom."

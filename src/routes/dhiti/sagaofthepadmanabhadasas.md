@@ -3,7 +3,10 @@ title: The Saga of the Padmanabhadasas - A Glimpse of the History of Travancore 
 author: Akshay Shankar
 authortwo: Kavita Krishna Meegama
 category: Svayambodha
-tags: history, rajya, tradition
+tags:
+- history
+- raja dharma
+- tradition
 date: "2022-11-12"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/45.webp
 excerpt: "A journey through the history of Travancore's royal family, beginning from the Chera eras. And a reminder of the gratitude we owe to the ancient nobles who embodied vīra rasa and sevā bhāva."

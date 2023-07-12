@@ -2,7 +2,10 @@
 title: Glossing Mind through Yoga 1 – Towards Happiness and Quality-of-Life Enhancement
 author: Dr. Richa Chopra, PhD.
 category: Indian Knowledge Systems
-tags: mental health, patañjali, yoga
+tags:
+- mental health
+- patanjali
+- yoga
 date: "2022-10-27"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/08.webp
 excerpt: "Dr. Richa Chopra continues her series on Patañjali’s Yoga Sūtras and tells us why 'the quality of life is how the mind perceives it' and how to go about acquiring a better quality of life. By consciously building mental and physical habits that awaken us to the great goals of human life. Step by step, day by day, thought by thought. There is no easy way out."

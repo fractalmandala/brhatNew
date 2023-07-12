@@ -2,7 +2,10 @@
 title: Gurukulavāsa – Making a Śiṣya Out of a Vidyārthī
 author: Kavita Krishna Meegama
 category: Indian Knowledge Systems
-tags: education, vedic, gurukula
+tags:
+- education
+- vedic
+- gurukula
 date: "2022-07-06"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/20.webp
 excerpt: "The thrust of all gurukula education of yore was towards self knowledge. Only by knowing our true selves can we claim to be wholesome."

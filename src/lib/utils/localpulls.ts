@@ -8,15 +8,43 @@ export async function completeDhiti(){
 			// @ts-ignore
 			const { metadata } = await resolver()
 			const pathitem = path
+			const date = new Date(metadata.date as string)
+			const month = date.toLocaleString('default', { month: 'long' })
+			const year = date.getFullYear().toString()
 			return {
+				date,
 				meta: metadata,
-				date: new Date(metadata.date as string), // parse date string into Date object
+				formattedDate: `${month}, ${year}`,
 				linkpath: pathitem
 			}
 		})
 	)
 	eachfiled.sort((a, b) => b.date.getTime() - a.date.getTime()) // compare Date objects directly
 	return eachfiled
+}
+
+export async function periodicDhiti(band:string){
+	const allfiles = import.meta.glob('/src/routes/dhiti/*.md')
+	const filed = Object.entries(allfiles)
+	const eachfiled = await Promise.all(
+		filed.map(async([path, resolver]) => {
+			// @ts-ignore
+			const { metadata } = await resolver()
+			const pathitem = path
+			const date = new Date(metadata.date as string)
+			const month = date.toLocaleString('default', { month: 'long' })
+			const year = date.getFullYear().toString()
+			return {
+				date,
+				meta: metadata,
+				formattedDate: `${month}, ${year}`,
+				linkpath: pathitem
+			}
+		})
+	)
+	eachfiled.sort((a, b) => b.date.getTime() - a.date.getTime()) // compare Date objects directly
+	const featuredPosts = eachfiled.filter((post) => post.formattedDate === band)
+	return featuredPosts
 }
 
 export async function adminDocs(){

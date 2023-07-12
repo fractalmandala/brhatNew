@@ -2,7 +2,9 @@
 title: Cultural Transfer as Diffusion of Complexity
 author: Kriteesh Parashar
 category: Svayambodha
-tags: new models
+tags:
+- culture
+- new ideas
 date: "2023-06-24"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/culturediffusion.webp
 excerpt: "Not all societies in this world manage to become a civilization: the ingredients which make a society evolve from barbaric to civilised have been subject to interest of anthropologists and complexity theorists alike. However, what we know empirically is that the cultural complexity varies across civilizations, even regions within civilizations."

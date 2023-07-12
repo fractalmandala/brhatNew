@@ -3,7 +3,9 @@ title: Conversion to Hindu Dharma 2 - An Example from Eugene, USA
 author: Kate Herse
 authortwo: Kavita Krishna Meegama
 category: Featured
-tags: conversion, dharma, religion
+tags:
+- conversion
+- svayambodha
 date: "2022-09-27"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/41.webp
 excerpt: "We read here a personal account from Smt. Kate Herse, and find that being born in the United States did not prevent her from learning the Upaniṣads, leading a dhārmika life, and living as a Hindu. Caste played no part at all in her journey. What is required though is adherence to duties and norms of the sampradāya that she has chosen."

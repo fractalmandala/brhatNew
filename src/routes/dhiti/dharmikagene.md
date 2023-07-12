@@ -2,7 +2,10 @@
 title: The Dhārmika Gene
 author: Amritanshu Pandey
 category: Featured
-tags: science, culture, civilizational consciousness
+tags:
+- science
+- culture
+- civilization
 date: "2023-01-07"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/56.webp
 excerpt: "A novel re-articulation of the understanding of Dharma, and Bhāratīya culture, as a quest for harmony. Here we contrast the 'Standard Model of Reality' and the biological concept of a 'selfish gene' with the Indian Model of Reality, and the consequent imperative it yields."

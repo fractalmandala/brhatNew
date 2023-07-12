@@ -2,7 +2,8 @@
 title: The Ideals of Learning, Learners, and Methods in Ancient Indian Education
 author: Anurag Shukla
 category: Indian Knowledge Systems
-tags: education
+tags:
+- education
 date: "2022-06-07"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/23.webp
 excerpt: "Learning has long been valued and pursued in India, not only as part of dharma and philosophy, but for its own sake—knowledge itself was a pursuit in Indian education."

@@ -3,7 +3,10 @@ title: The Saga of the Padmanabhadasas - A Glimpse of the History of Travancore 
 author: Akshay Shankar
 authortwo: Kavita Krishna Meegama
 category: Svayambodha
-tags: history, rajya, tradition
+tags:
+- history
+- raja dharma
+- tradition
 date: "2023-01-16"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/45.webp
 excerpt: "A continuation article that details an account of the Nair brigade, a group of personal troops for the Travancore Maharajas, and their role in the Indian army. Additionally, the article delves into the ambitious plans of Marthanda Varma, the king of Travancore, to conquer all of Kerala and re-establish the Chera kingdom."

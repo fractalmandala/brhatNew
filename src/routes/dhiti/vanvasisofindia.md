@@ -2,7 +2,9 @@
 title: The Vanvāsīs of India - Past to Present, Realities and Possibilities
 author: Sushant Gangoli
 category: Culture and Policy
-tags: culture, ecology
+tags:
+- culture
+- ecology
 date: "2023-01-24"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/vanavasis.webp
 excerpt: "Vanavāsis, the essential component of Bharatiya society, have faced displacement & poverty due to colonialism and state actions. To understand and solve their problems, we must acknowledge their traditional regenerative way of life and their place within the Dhārmika fold."

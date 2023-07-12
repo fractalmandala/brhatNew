@@ -2,7 +2,9 @@
 title: “Swarnakamalam” and the Value of the Performing Arts
 author: Sai Priya Chodavarapu
 category: Culture and Policy
-tags: ancient arts, cinema
+tags:
+- movie review
+- aesthetics
 date: "2022-10-31"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/51.webp
 excerpt: "A glimpse into the timelessness of the traditional arts, conveyed through superior cinema: Swarnakamalam; and the discussion of modernity threatening the value of traditional systems in its lyrical expositions."

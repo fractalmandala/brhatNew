@@ -2,7 +2,10 @@
 title: How Gurukulam Learning Differs from Regular Education - What I Learnt at AVG Part 3
 author: Kavita Krishna Meegama
 category: Indian Knowledge Systems
-tags: education, tradition
+tags:
+- education
+- tradition
+- gurukula
 date: "2023-02-08"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/57.webp
 excerpt: "A personal reflection of the writer's experience studying at the Arsha Vidya Gurukulam, and the transformative impact it had on her understanding of the self and her relationship with the world and God. Part 3 of 4."

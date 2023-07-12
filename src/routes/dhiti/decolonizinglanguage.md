@@ -2,7 +2,9 @@
 title: "Decolonizing Language"
 author: Pankaj Saxena
 category: Svayambodha
-tags: language, hindi
+tags:
+- language
+- hindi
 excerpt: "The role of colonialism in hindering the linguistic evolution in North India and the need to re-infuse the spirit of Sanskṛta into Hindī language and to free it from FATE words"
 date: "2023-05-28"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/decolonizinglanguage.webp

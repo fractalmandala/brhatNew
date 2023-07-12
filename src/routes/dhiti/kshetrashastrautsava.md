@@ -2,7 +2,10 @@
 title: Kṣetra, Śāstra, Utsava
 author: Pankaj Saxena
 category: Dharma Today
-tags: festival, krishna, tradition
+tags:
+- festivals
+- tradition
+- krishna
 date: "2022-08-19"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/02.webp
 excerpt: "On this Aṣṭamī, we look at how festivals are to time what temples are to space - they are gradients of divinity."

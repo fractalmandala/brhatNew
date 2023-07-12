@@ -2,7 +2,10 @@
 title: Conserving the Texts, Transmitting the Knowledge - The Place of Gurus in Ancient Indian Education
 author: Anurag Shukla
 category: Indian Knowledge Systems
-tags: education, guru, knowledge
+tags:
+- education
+- guru
+- knowledge
 date: "2022-06-19"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/22.webp
 excerpt: "The uninterrupted transmission of knowledge would not have been possible without the intervention of excellent teachers, called gurus in Indian traditions."

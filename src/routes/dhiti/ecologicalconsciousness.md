@@ -2,7 +2,9 @@
 title: Ecological Consciousness - The root of Indic Environmentalism
 author: Anshuman Panda
 category: Svayambodha
-tags: ecology, tradition
+tags:
+- ecology
+- tradition
 date: "2023-01-16"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/ecoconsciousness.webp
 excerpt: "An exploration of the question of what makes humans unique and different from other animals. We are taken through several possibilities- the capacity for thought and emotions, industrious nature, and more before arriving at the true discernment of our ability to navigate Dharma while avoiding Adharma."

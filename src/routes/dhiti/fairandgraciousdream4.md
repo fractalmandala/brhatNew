@@ -2,7 +2,10 @@
 title: A Fair and Gracious Dream, 4 - The Parts and the Whole
 author: Samyak Dixit
 category: Culture and Policy
-tags: tradition
+tags:
+- tradition
+- new ideas
+- new elite
 date: "2023-07-02"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/fairandgraciousdream3.webp
 excerpt: "Anecdotally, every Bhāratīya who has grown up in an urban setting knows people who can only visualize their own lives through the language and events of American TV shows like FRIENDS and The Office. Let's call this American Homogeneity. This is the concluding part of Samyak Dixit's ongoing series reminiscing on the past, present, and future of the Indian psyche."

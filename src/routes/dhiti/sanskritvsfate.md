@@ -2,7 +2,12 @@
 title: Sanskṛta vs. FATE Languages
 author: Pankaj Saxena
 category: Svayambodha
-tags: soundaryabodha, aesthetics, language, literature, hindi
+tags:
+- soundaryabodha
+- aesthetics
+- language
+- literature
+- hindi
 date: "2023-06-25"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/svpost.webp
 excerpt: "The battle between Sanskṛta and FATE languages (Farsi, Arabic, Turkish, English) for the domination of the Śiva tattva of our languages is the battle which will decide the cultural fate of Bhāratavarśa. The victory of Sanskṛta in this battle will be a linguistic equivalent of decolonizing India."

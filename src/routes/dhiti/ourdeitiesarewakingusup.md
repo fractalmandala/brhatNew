@@ -2,7 +2,8 @@
 title: Our Deities are Waking Us Up – What Kantara Means to Hindus
 author: Shri Ramachandra Roddam
 category: Culture and Policy
-tags: cinema, cultural review
+tags:
+- movie review
 date: "2022-10-28"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/44.webp
 excerpt: "Have no doubt; the deities are waking us up to their presence like never before. They are willing to travel from their forests, kśetras onto the screen and talk to us, to tell us: Oh children, don't remain blind anymore to our presence. Take refuge in us. We are here with you every moment."

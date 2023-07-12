@@ -2,7 +2,10 @@
 title: Colonial Education, Cultural Amnesia and Pathologies of the Raj
 author: Anurag Shukla
 category: Indian Knowledge Systems
-tags: british raj, colonization, education
+tags:
+- british raj
+- colonization
+- education
 date: "2022-10-21"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/48.webp
 excerpt: "Education in post-colonial India, as Ashis Nandy argues, has become a means to inculcate a 'shared culture' in which, ‘the ruled are constantly tempted to fight their rulers within the psychological limits set by the latter.' This demonstrates the durability of the psychological aspect of colonial conquest, one that continues to remain below the surface all this while and cannot be repelled by force."

@@ -2,7 +2,8 @@
 title: As Seen on TV – Cultural Review of Cinema
 author: Sai Priya Chodavarapu
 category: Dharma Today
-tags: cinema
+tags:
+- movie review
 date: "2022-08-02"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/13.webp
 excerpt: "As Seen on TV introduces Bṛhat's cultural review of cinema lens, where we examine the impact movies have played in shaping India."

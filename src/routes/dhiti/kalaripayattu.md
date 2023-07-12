@@ -2,7 +2,9 @@
 title: Kalaripayattu
 author: Sai Priya Chodavarapu
 category: Svayambodha
-tags: ancient arts, tradition
+tags:
+- tradition
+- ancient arts
 date: "2022-11-08"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/06.webp
 excerpt: "Kalaripayaṭṭu must be elevated, as a traditional psychophysiological discipline, as a ‘scientific’ system of physical culture, and as an arena of experience and self-transformation: the crucible of the individual’s experience where embodied practice helps shape a self."

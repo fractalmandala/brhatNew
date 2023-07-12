@@ -2,7 +2,11 @@
 title: Kula, Jāti, Varṇa, Āśrama - Perspective from Principles of Games Design
 author: Raghava Krishna
 category: Svayambodha
-tags: dharma, gaming, purushartha
+tags:
+- dharma
+- gaming
+- purushartha
+- new ideas
 date: "2022-10-15"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/43.webp
 excerpt: "Our individual and social conundrums are as old as time, but civilizational essence is timeless. What can we learn from new arenas of creative activity, to rediscover the eternal essence? This essay is an exploration of the meta and meaning-making significance of culture and Dharma, via game design."

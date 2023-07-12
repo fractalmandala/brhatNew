@@ -2,7 +2,10 @@
 title: A Fair and Gracious Dream, 3 - A New Claim on the Land
 author: Samyak Dixit
 category: Culture and Policy
-tags: tradition
+tags:
+- tradition
+- new ideas
+- new elite
 date: "2023-06-27"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/fairandgraciousdream3.webp
 excerpt: "Anecdotally, every Bhāratīya who has grown up in an urban setting knows people who can only visualize their own lives through the language and events of American TV shows like FRIENDS and The Office. Let's call this American Homogeneity. Samyak Dixit's article, the third installment in his ongoing series, reminisces on the past, present, and future of the Indian psyche."

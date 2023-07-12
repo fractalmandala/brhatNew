@@ -2,7 +2,9 @@
 title: The True Price of Freedom
 author: Anshuman Panda
 category: Dharma Today
-tags: nation, freedom
+tags:
+- nation
+- freedom
 date: "2023-04-08"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/priceoffreedom.webp
 excerpt: "Freedom is not beseeched, it is seized. In his book Revolutionaries, Sanjeev Sanyal describes the true import of this statement, through the lives, wills and actions of our lesser-known freedom fighters."

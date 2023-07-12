@@ -2,7 +2,8 @@
 title: Tantra Vimarśa
 author: Giriratna Mishra
 category: Svayambodha
-tags: tradition
+tags:
+- tradition
 date: "2023-04-18"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/ashtamatrika.webp
 excerpt: "Tantra, often misunderstood as dark mysticism, is deeply embedded in the fabric of Bhāratavarṣa's spiritual practices, transcending rituals, schools of thought, and deities. Inextricably linked to Bhakti, Karma Yoga, and Vedānta, Tantra's extrinsic and intrinsic techniques inspire diverse worship methods across religions."

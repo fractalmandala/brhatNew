@@ -2,7 +2,10 @@
 title: Indic Environmentalism - A Balance between Tradition and Innovation
 author: Akshay Jha
 category: Culture and Policy
-tags: design, environment, indic
+tags:
+- ecology
+- design
+- indic
 date: "2023-02-28"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/indicenvironmentalism.webp
 excerpt: "Sanātana Dharma always works within the universal principles but it provides enough room for creativity and innovation. To move the discourse on environmentalism further, we have to apply the framework which has existed from time immemorial to design our actions and processes, the design of Dharma itself, Ṛta in Design."

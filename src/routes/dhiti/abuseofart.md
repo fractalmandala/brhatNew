@@ -2,7 +2,10 @@
 title: "The Abuse of Art: Propaganda in Shyam Singha Roy"
 author: Anshuman Panda
 category: Dharma Today
-tags: culture, movie review, critique
+tags:
+- culture
+- movie review
+- critiques
 excerpt: "The Hindu conception of art is diametrically opposite to the movies being made today. This piece analyses the the abuse of art in the 2021 movie Shyam Singha Roy."
 date: "2023-05-27"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/shyamsingharoy.webp

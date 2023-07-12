@@ -2,7 +2,8 @@
 title: Sri Aurobindo on What the West and India Have to Teach Each Other
 author: Jash Dholani
 category: Śatrubodha
-tags: aurobindo
+tags:
+- aurobindo
 date: "2022-06-26"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/30.webp
 excerpt: "What should sit in the driver’s seat: Ideas or Matter? Must the reason of philosophy and the energy of religion always be at odds? Can Europe and India teach each other anything, or are they distinct civilizations, drifting off on divergent paths?"

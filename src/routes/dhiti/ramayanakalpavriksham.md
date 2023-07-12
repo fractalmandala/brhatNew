@@ -2,7 +2,8 @@
 title: Bhaavayaami Raghuramam - Ramayana Kalpavriksham March 31st - April 2nd 2023
 author: Kavita Krishna Meegama
 category: Culture and Policy
-tags: events
+tags:
+- events
 date: "2023-04-07"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/rmkal.webp
 excerpt: "The Rāmāyaṇa Kalpavṛikṣam in Bhagyanagar showcased a range of creative activities based on the theme of Rāmāyaṇa, evoking bhakti and śraddhā in participants, highlighting the importance of sustaining and upholding dharma, and showcasing the timeless beauty and universality of Indian culture. Here we share a detailed coverage."

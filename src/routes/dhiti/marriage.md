@@ -2,7 +2,9 @@
 title: "Marriage: The Institution of Sacrifice"
 author: Abhishek Kumar Panda
 category: Culture and Policy
-tags: culture, marriage
+tags:
+- culture
+- tradition
 excerpt: "The institution of marriage: a sacred yajña, a pathway to cosmic evolution, and the rhythmic balance between individuality and collective harmony."
 date: "2023-05-26"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/marriage.webp

@@ -2,7 +2,9 @@
 title: Colonial Alienation and the Making of Docile Bodies
 author: Anurag Shukla
 category: Svayambodha
-tags: civilizational, decolonization
+tags:
+- civilizational
+- decolonization
 date: "2022-09-13"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/36.webp
 excerpt: "Why do Indians display cultural and historical amnesia regarding their own past? What historical processes have led to the situation where we must constantly feel stunted by a deeply implanted sense of degradation and inferiority?"

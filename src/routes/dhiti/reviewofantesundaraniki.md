@@ -3,7 +3,8 @@ title: A Review of Ante Sundaraniki
 author: Anshuman Panda
 authortwo: Kavita Krishna Meegama
 category: Dharma Today
-tags: cinema
+tags:
+- movie review
 date: "2022-08-03"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/14.webp
 excerpt: "A Review of Ante Sundaraniki, the second piece in our cultural reviews of Indian cinema, puts the Telugu film 'Ante Sundaraniki' under lens."

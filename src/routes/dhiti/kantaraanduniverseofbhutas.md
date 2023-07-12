@@ -2,7 +2,8 @@
 title: Kāntāra and Universe of the Bhūtas
 author: Sai Priya Chodavarapu
 category: Dharma Today
-tags: cinema, cultural review, storytelling
+tags:
+- movie review
 date: "2022-11-05"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/09.webp
 excerpt: "A review of the massively successful Kāntāra, appreciating the film’s foray into Karnataka’s lesser known Bhūta universe, along with an account of the tradition itself."

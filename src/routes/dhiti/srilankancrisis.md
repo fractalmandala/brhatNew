@@ -2,7 +2,10 @@
 title: The Sri Lankan Crisis and Organic Farming
 author: Sai Priya Chodavarapu
 category: Culture and Policy
-tags: policy, sri lanka
+tags:
+- policy
+- sri lanka
+- ecology
 date: "2022-06-29"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/21.webp
 excerpt: "The Sri Lankan crisis and the subsequent economic turmoil question the abrupt policy shift of the government toward organic farming."

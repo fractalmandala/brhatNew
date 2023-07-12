@@ -2,7 +2,9 @@
 title: What Carl Jung Learnt from India
 author: Jash Dholani
 category: Dharma Today
-tags: india to outsiders, jung
+tags:
+- jung
+- science
 date: "2022-07-26"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/12.webp
 excerpt: "Jung once wrote on India - It is quite possible that India is the real world, and that the white man lives in a madhouse of abstractions."

@@ -1,5 +1,24 @@
 import supabase from '$lib/utils/db'
 
+export async function allAuthors(){
+	const { data, error } = await supabase
+	.from('brhat-authors')
+	.select()
+	.order('name')
+	if (error) throw new Error(error.message)
+	return data
+}
+
+export async function specificAuthor(name:string){
+	const { data, error } = await supabase
+	.from('brhat-authors')
+	.select()
+	.eq('name',name)
+	.single()
+	if (error) throw new Error(error.message)
+	return data
+}
+
 export async function createCurateConsult(){
 	const { data, error } = await supabase
 	.from('brhat-about')

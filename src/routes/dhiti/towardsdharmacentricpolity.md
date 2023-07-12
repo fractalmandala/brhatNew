@@ -2,7 +2,9 @@
 title: Towards Dharma-centric Polity - Lokmanya Tilak and the Universalization of Gaṇeśa Utsava
 author: Pankaj Saxena
 category: Dharma Today
-tags: festival, ganesha
+tags:
+- festivals
+- ganesha
 date: "2022-09-08"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/34.webp
 excerpt: "As dharma disappears from daily personal life, and from specific regions, universalized Hindu festivals are capable of bringing dharma back again at the center. As temples become the primary vehicle of Hindu regeneration all over Bhāratavarṣa, festivals can become the Hindu regenerators in the north."

@@ -2,7 +2,9 @@
 title: Dharma in the Bhāratīya Frontier - Multan, Part 2
 author: Deepak Srinivasan
 category: Svayambodha
-tags: reclaimed history, dharma
+tags:
+- history
+- dharma
 date: "2023-04-21"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/multandharma.png
 excerpt: "Deepak Srinivasan presents an in-depth analysis of the rich history of the ancient Bhāratīya city of Multan (now in Pakistan). In a part 2 of a captivating story of a land long-forgotten, we read of Sikh rebellions, demographic shifts, and post-Partition ruins."

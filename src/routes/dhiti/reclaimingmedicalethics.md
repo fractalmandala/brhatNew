@@ -2,7 +2,9 @@
 title: Reclaiming Medical Ethics
 author: Sai Priya Chodavarapu
 category: Svayambodha
-tags: charaka, ethics
+tags:
+- charaka
+- ethics
 date: "2022-05-28"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/24.webp
 excerpt: "The medical ethics was an important feature of the Āyurvedic curriculum, duly emphasized by ancient practitioners. Caraka’s Oath can be regarded as the summation of this tradition, and veritably, its epitome."

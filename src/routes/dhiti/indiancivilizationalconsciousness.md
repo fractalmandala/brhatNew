@@ -2,7 +2,9 @@
 title: Indian Civilizational Consciousness
 author: Amritanshu Pandey
 category: Svayambodha
-tags: civilization, consciousness
+tags:
+- new ideas
+- civilization
 date: "2022-08-15"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/01.webp
 excerpt: "A short essay on this Independence Day, that re-examines the meaning of 'Indian civilizational consciousness' from the dhātus."

@@ -2,7 +2,10 @@
 title: Fractal Maṇḍala 1- the Macrohistoric Case for India's Civilizational Primacy
 author: Amritanshu Pandey
 category: Svayambodha
-tags: decolonization, history
+tags:
+- decolonization
+- new ideas
+- history
 date: "2022-08-04"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/16.webp
 excerpt: "The Fractal Maṇḍala is Indian civilizational consciousness: multi-level coherent. Here we draw from Indian macrohistory to evidence this."

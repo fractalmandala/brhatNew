@@ -2,7 +2,8 @@
 title: Balagam - A Telugu Film on Kula Rituals that Belies Marxist Sociology - and no, it is not Scientific Hindutva or Hindutva as Modernity either
 author: Raghava Krishna
 category: Culture and Policy
-tags: cinema review
+tags:
+- movie review
 date: "2023-04-20"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/balagam.webp
 excerpt: "This movie demands a dispelling of the niceties though. It compels us to sit up and shake things a bit. It does so not with any explicit agenda but just by being itself, by ignoring us. In fact, it is the precise absence of any agenda, that easy self-awareness that lends authenticity. It is like our Civilization - Organic, Flowing and Continuous."

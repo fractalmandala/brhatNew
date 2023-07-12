@@ -1,9 +1,12 @@
 ---
 title: Kerala Story - A horrifying tale of supremacist ideology in practice
 author: Kavita Krishna Meegama
-category: "Shatrubodha"
+category: Shatrubodha
 excerpt: "Here is a thought experiment, read this without thinking ‘Islamophobia’. Read this with an intent to learn facts. A review of the film The Kerala Story from the ground up."
-tags: concerns, islam
+tags:
+- shatrubodha
+- islam
+- movie review
 date: "2023-07-07"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/keralastory/keralastory.jpg
 ---

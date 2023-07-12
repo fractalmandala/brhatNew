@@ -2,7 +2,9 @@
 title: Ṛgvedic Education - Creating Civilizational Foundations for the Future
 author: Anurag Shukla
 category: Indian Knowledge Systems
-tags: education, vedic
+tags:
+- education
+- vedic
 date: "2022-07-21"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/15.webp
 excerpt: "Results of the tapas and intellectuality of our ṛṣis and and how, through education, they imparted essential faculties."

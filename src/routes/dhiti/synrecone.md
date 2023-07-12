@@ -2,7 +2,10 @@
 title: Preliminary Schema for Synaptic Reconnection to Civilizational Consciousness - Part 1
 author: Amritanshu Pandey
 category: Svayambodha
-tags: decolonization, history
+tags:
+- decolonization
+- history
+- new ideas
 date: "2022-06-02"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/59.webp
 excerpt: "A preliminary schema to reconnect with civilizational consciousness. Developing a complete Ontology, Epistemology and Teleology for Bhārata."

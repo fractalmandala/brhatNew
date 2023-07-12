@@ -2,7 +2,9 @@
 title: "The Timeless Elegance of Ancient Indian Hairstyles: A Journey Through the Ages" 
 author: Anurag Shukla
 category: "Svayambodha"
-tags: culture, tradition
+tags:
+- culture
+- tradition
 excerpt: "Through the strands of time, the article unravels the secrets of these ancient Indian coiffures, discovering a captivating world where hair was not just an accessory but a medium for artistic expression and cultural significance."
 date: "2023-06-30"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/ancientindianhairstyles/ancientindianhairstyles.webp

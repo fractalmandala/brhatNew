@@ -2,7 +2,9 @@
 title: Swami Vivekananda - a Psychologist for Our Times
 author: Jash Dholani
 category: Dharma Today
-tags: vivekandanda, vedanta
+tags:
+- vivekandanda
+- vedanta
 date: "2023-01-19"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/vivekananda.webp
 excerpt: "Explore the ideas of Swami Vivekananda on the importance of direct experience in religious inquiry and the dangers of materialism. Discover Vivekananda's inner conflict on the subject of Vedānta and its potential as the future religion."

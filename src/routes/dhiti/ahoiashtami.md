@@ -2,7 +2,9 @@
 title: Ahoi Aṣtamī – How Hindu Dharma Teaches Deep Ecology Through Festivals
 author: Pankaj Saxena
 category: Svayambodha
-tags: ecology, festivals
+tags:
+- ecology
+- festivals
 date: "2022-10-17"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/47.webp
 excerpt: "The festival of Ahoi Aṣṭamī instills the deep sense in Hindus that our actions have consequences; that human civilization destroys Nature by the sheer act of living in great groups and thus has to make extra efforts to respect and protect Nature; and that we have to give back to Nature as we take much from it."

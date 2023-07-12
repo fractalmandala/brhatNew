@@ -2,7 +2,9 @@
 title: The Culture Iceberg - A Discussion and Critique
 author: Sai Priya Chodavarapu
 category: Śatrubodha
-tags: culture, turned gaze
+tags:
+- culture
+- turned gaze
 date: "2023-04-01"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/cultureiceberg.webp
 excerpt: "A review of Edward Hall's model of culture and its limitations, that explains how it doesn't fully capture cultural complexity. Reestablishing cultural context through knowledge systems in education policy can help preserve and revive cultural identity."

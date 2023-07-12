@@ -2,7 +2,8 @@
 title: ‘Savages’ Civilizing the ‘Civilized’ - Knowledge Appropriation, Colonial Consciousness and the Production of ‘Hybridized Indians’
 author: Anurag Shukla
 category: Svayambodha
-tags: decolonization, colonization, svayambodha
+tags:
+- decolonization
 date: "2022-12-10"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/55.webp
 excerpt: "Colonization should be understood as both a process and an event. The svayaṃbodha that emerges from such a realization would make us understand how colonization was not just about the subordination of people and their traditions or the colonization of land and resources, but also about colonizing people's knowledge, their daily experiences, and collective imaginations."

@@ -2,7 +2,9 @@
 title: S. Radhakrishnan on What Makes Art, Science and Religion Work
 author: Jash Dholani
 category: Indian Knowledge Systems
-tags: radhakrishnan, teacher
+tags:
+- radhakrishnan
+- guru
 date: "2022-09-05"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/37.webp
 excerpt: "On this Teacher's Day, we scope some views of the man behind the legacy. His wide range, his exposure to Western civilization, his own readings of Dharma- these gave to Shri Radhakrishnan a unique view, a distinct voice. Art, intuition, science - he had insights on all."

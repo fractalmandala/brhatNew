@@ -3,7 +3,10 @@ title: Eco-feminism - Roots in Ancient Hindu Philosophy
 author: Anurag Shukla
 authortwo: Kavita Krishna Meegama
 category: Svayambodha
-tags: ecology, feminism, mother
+tags:
+- ecology
+- feminism
+- mother
 date: "2022-05-31"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/11.webp
 excerpt: "Eco Feminism, stemming from the Upanishads is the natural consequence of looking at the world as the Divine Mother."

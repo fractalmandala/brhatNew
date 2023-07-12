@@ -3,7 +3,9 @@ title: On Statecraft - Madhava Rao’s Hints on the Art and Science of Governmen
 author: Anshuman Panda
 authortwo: Kavita Krishna Meegama
 category: Culture and Policy
-tags: policy, statecraft
+tags:
+- policy
+- statecraft
 date: "2022-09-29"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/42.webp
 excerpt: "Madhava Rao is widely hailed as a foremost statesman of nineteenth century India. While there may be differences over his subservient attitude towards the British and his lack of incorporation of Dhārmika elements, it is irrefutable these hints serve as an important beacon for statecraft and the general qualities of leadership at large."

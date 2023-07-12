@@ -2,7 +2,9 @@
 title: "The Navakalēvara Ceremony at Puri: Ritual Embodiment of Jagannātha" 
 author: Sai Priya Chodavarapu
 category: "Svayambodha"
-tags: culture, tradition
+tags:
+- culture
+- tradition
 excerpt : "This piece describes the fascinating ritual of Navakalēvara that happens periodically — with special attention paid to the involvement and crucial importance of all jātis and tribes in the ritual — which speaks to the syncretism and inter-dependence of castes at the shrine."
 date: "2023-06-19"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/navakalevaraceremony.webp

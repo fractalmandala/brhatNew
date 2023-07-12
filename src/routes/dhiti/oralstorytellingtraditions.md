@@ -2,7 +2,9 @@
 title: Oral Storytelling Traditions
 author: Sai Priya Chodavarapu
 category: Culture and Policy
-tags: storytelling, tradition
+tags:
+- culture
+- tradition
 date: "2022-08-17"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/29.webp
 excerpt: "A rounded coverage of the oral storytelling traditions that prevail among old cultures around the world, and especially in India."

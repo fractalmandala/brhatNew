@@ -2,7 +2,10 @@
 title: Nītividhāna - A 4-Day Immersion in Culture Compatible Public Policy
 author: Lakshmi Sivaraman
 category: Culture and Policy
-tags: events
+tags:
+- events
+- policy
+- civilization
 date: "2023-05-25"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/nitividhanacover.webp
 excerpt: "Nītividhana, was Bṛhat’s first ever offering on Civilizational Public Policy, in collaboration with Chinmaya International Foundation. Here’s a comprehensive account of the animated discussions that transpired amongst a young, enthusiastic cohort guided by expert mentors on the fundamentals of policy-making and the collective desire to create policies anchored in Indian cultural worldviews."

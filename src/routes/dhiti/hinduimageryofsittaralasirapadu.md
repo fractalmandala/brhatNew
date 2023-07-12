@@ -3,7 +3,8 @@ title: The Subtle Hindu Imagery of Sittarala Sirapadu
 author: Sai Priya Chodavarapu
 authortwo: Amritanshu Pandey
 category: Culture and Policy
-tags: dharma, cinema, storytelling
+tags:
+- movie review
 date: "2022-07-18"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/10.webp
 excerpt: "The movie Ala Vaikunthapurramuloo and its climactic song as an example of cinema that furthers cultural belonging."

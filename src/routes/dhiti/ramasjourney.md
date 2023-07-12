@@ -2,7 +2,10 @@
 title: Rāma’s Journey – the Avatāra in You, a Fractal Maṇḍala Essay
 author: Amritanshu Pandey
 category: Svayambodha
-tags: civilizational consciousness, festivals
+tags:
+- festivals
+- new ideas
+- civilization
 date: "2022-10-24"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/49.webp
 excerpt: "We celebrate the return of Rāma with a Festival of Lights, for if his journey- Rāma’s Ayaṇa- is recreated within us, it generates within us the Supreme Light. His journey within us is the journey from untruth to truth. From Darkness to Light. It is the rising of Agni from earth to sky, the ultimate union, or Yoga."

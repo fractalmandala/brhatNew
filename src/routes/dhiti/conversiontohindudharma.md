@@ -3,7 +3,9 @@ title: Conversion to Hindu Dharma - Past Precedents, Present Challenges and Futu
 author: Ghora Angirasa
 authortwo: Kavita Krishna Meegama
 category: Featured
-tags: conversion
+tags:
+- conversion
+- svayambodha
 date: "2022-08-23"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/27.webp
 excerpt: "Can one (particularly a non-Indian foreigner) convert to Hindu Dharma? How does caste feature in this (if at all)? What are the basic duties of a Hindu convert, who may not have any particular sampradāya affiliation?"

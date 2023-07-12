@@ -2,7 +2,10 @@
 title: A Fair and Gracious Dream, 1 - Understanding the Bangla Dream (বাঙালির কল্পতরু)
 author: Samyak Dixit
 category: Culture and Policy
-tags: tradition
+tags:
+- tradition
+- new ideas
+- new elite
 date: "2023-02-01"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/fairdream.webp
 excerpt: "The Bangla Dream, or Kalpataru, was a bolt of lightning that transformed Hindu Bengal. Understanding it can help us understand the future, and the role of elites in Dhārmika politics."

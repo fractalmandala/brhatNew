@@ -2,7 +2,9 @@
 title: The Unity of Knowledge - A Tribute to E.O Wilson
 author: Anshuman Panda
 category: Culture and Policy
-tags: science, tradition
+tags:
+- science
+- tradition
 date: "2022-12-26"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/54.webp
 excerpt: "A vision is not an easy thing to cultivate, especially when being tied up in the mundanities of life. Thankfully, we have the work of great men to guide us. This is our tribute to the great humanist and naturalist, Edward Wilson."

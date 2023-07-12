@@ -2,7 +2,9 @@
 title: India’s Storytelling Tradition and its Influence on World Literature
 author: Sai Priya Chodavarapu
 category: Svayambodha
-tags: storytelling, tradition
+tags:
+- culture
+- tradition
 date: "2022-07-03"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/26.webp
 excerpt: "Ancient Indian storytelling disseminated functional genres (religious and scientific) and fictional genres: poetry, drama, and stories."
