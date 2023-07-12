@@ -93,6 +93,14 @@ All images are in img class "imageclass" if landscape, and img class "imageclass
 <img class="imageclass2" src="imagelinkhere" alt="imagealt"/>
 ```
 
+For all article endnotes/ references/ footnotes, the recommendation is to place them all at the END of article, and within the Google Document to use superscripts<sup>1</sup> `<--` as seen here. Posters must use superscripts in markdown like so:
+
+```html
+this<sup>in sup tags</sup>
+
+<!--and at end of articles as a numbered list-->
+```
+
 ###### Editors are requested to follow the below guidelines in the source Google Documents:
 1. For all text that needs emphasis, please style it as Header 5:
 
