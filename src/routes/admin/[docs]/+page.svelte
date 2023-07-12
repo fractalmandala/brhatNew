@@ -1,13 +1,29 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import Head from '$lib/components/HeadComponent.svelte';
+	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import Prism from 'prismjs';
 	import '$lib/styles/prism.css';
 	export let data;
+
+	$metaTitle = data.title;
+	$metaDescription = 'Internal Admin Links';
+	$metaUrl = `https://www.brhat.in${data.url.pathname}`;
+	$metaImage =
+		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/brhatheadcard.webp';
+	$metaType = 'webpage';
 
 	onMount(() => {
 		Prism.highlightAll();
 	});
 </script>
+
+<Head
+	title={$metaTitle}
+	metaDescription={$metaDescription}
+	metaUrl={$metaUrl}
+	metaImage={$metaImage}
+/>
 
 <div class="doc-bar">
 	<h2 class="bord-bot p-bot-16 m-bot-16">{data.title}</h2>

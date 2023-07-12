@@ -3,6 +3,8 @@
 	import { page } from '$app/stores';
 	import type { ActionData } from './$types';
 	import Header from '$lib/components/SubHeader.svelte';
+	import Head from '$lib/components/HeadComponent.svelte';
+	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import { adminDocs } from '$lib/utils/localpulls';
 	import { breakZero, breakOne, breakTwo, themeMode, innerWidth } from '$lib/stores/globalstores';
 	import ButtonF from '$lib/anims/ButtonFlashes.svelte';
@@ -15,6 +17,13 @@
 	let expansion = false;
 	let loading = false;
 	let docs: any;
+
+	$metaTitle = 'Bṛhat Admin';
+	$metaDescription = 'Internal Admin Links';
+	$metaUrl = 'https://www.brhat.in/admin';
+	$metaImage =
+		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/brhatheadcard.webp';
+	$metaType = 'webpage';
 
 	function toggleExpand() {
 		expansion = !expansion;
@@ -30,6 +39,13 @@
 		docs = await adminDocs();
 	});
 </script>
+
+<Head
+	title={$metaTitle}
+	metaDescription={$metaDescription}
+	metaUrl={$metaUrl}
+	metaImage={$metaImage}
+/>
 
 <Header />
 <div class="p-top-128 rta-column rowgap200 minH outer-box">
