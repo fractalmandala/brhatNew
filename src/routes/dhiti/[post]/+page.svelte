@@ -395,7 +395,8 @@ h1
 .authorbox
 	color: #878787
 	padding-top: 16px
-	font-size: 21px
+	font-size: 18px
+	font-weight: 300
 	@media screen and (max-width: 1023px)
 		font-size: 16px
 

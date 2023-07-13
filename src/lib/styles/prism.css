@@ -28,7 +28,7 @@ pre[class*="language-"] {
 /* Code blocks */
 pre[class*="language-"] {
 	padding: 1em;
-	margin: 32px 0;
+	margin: 16px 0 24px 0;
 	overflow: auto;
 	border-radius: 0.3em;
 }

@@ -14,14 +14,11 @@ image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwe
 <img class="imageclass2" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/keralastory/keralastory1.webp" alt="one"/>
 <div class="imagecaption">ISIS (Islamic State of Iraq and Syria, Daesh) came out in favour of PFI (Popular Front of India), after the Government of India banned PFI. This is a screen shot from the ISIS magazine 'The Voice of Khurasan', page number 4</div>
 
->**“A belief in the equal truth of all religions is equal ignorance of all religions.” **
-
->**Sitaram Goel**
+> “A belief in the equal truth of all religions is equal ignorance of all religions.”
+<cite>Sitaram Goel</cite>
 
 >“Hinduism is said to divide people and in contrast Islam is said to bind people together. This is only a half-truth. For Islam divides as inexorably as it binds. Islam is a close corporation and the distinction that it makes between Muslims and non-Muslims is a very real, very positive and very alienating distinction. The brotherhood of Islam is not the universal brotherhood of man. It is brotherhood of Muslims for Muslims only. There is a fraternity, but its benefit is confined to those within that corporation. For those who are outside the corporation, there is nothing but contempt and enmity. The second defect of Islam is that it is a system of social self-government and is incompatible with local self-government, because the allegiance of a Muslim does not rest on his domicile in the country which is his but on the faith to which he belongs. To the Muslim ibi bene ibi patria [Where it is well with me, there is my country] is unthinkable. Wherever there is the rule of Islam, there is his own country. In other words, Islam [can never allow a true Muslim](http://www.columbia.edu/itc/mealac/pritchett/00ambedkar/ambedkar_partition/412d.html) to adopt India as his motherland and regard a Hindu as his kith and kin.” 
-
->[Dr B. R. Ambedkar](https://www.anandranganathan.com/2017/04/14/ambedkar-on-islam-the-story-that-must-not-be-told/)
-
+<a href="https://www.anandranganathan.com/2017/04/14/ambedkar-on-islam-the-story-that-must-not-be-told/" class="cite">Dr B. R. Ambedkar</a>
 
 >“Everything beyond that (in Islam) not only is bad, but must be destroyed forthwith; at a moment’s notice, every man or woman who does not exactly believe in that must be killed; everything that does not belong to this worship must be immediately broken; every book that teaches anything else must be burnt. From the Pacific to the Atlantic, for five hundred years blood ran all over the world. That is Mohammedanism!
 

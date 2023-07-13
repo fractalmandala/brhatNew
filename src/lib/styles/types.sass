@@ -287,9 +287,15 @@ em, blockquote
 	font-weight: 400
 	color: var(--opposite)
 
-cite
-	font-size: 0.75rem
+cite, a.cite
+	font-size: 0.7rem
 	font-weight: 500
+
+a.cite
+	color: #fe4a49
+
+div.cite
+	font-size: 0.7rem
 
 .light
 	.sticker-black
@@ -509,6 +515,9 @@ h1
 			padding: 0
 			text-transform: uppercase
 			font-style: normal
+	a.cite, div.cite
+		text-transform: uppercase
+		font-style: normal
 
 .maincol.std
 	@media screen and (min-width: 1024px)
@@ -580,9 +589,15 @@ h1
 		line-height: 1.12
 	blockquote
 		border-left: 4px solid #fe4a49
+		p
+			font-weight: 300
 	h5
 		font-weight: 600
 		letter-spacing: -0.25px
+	cite
+		color: #a7a7a7
+	div.cite
+		color: #a7a7a7
 	@media screen and (min-width: 1024px)
 		p, li, p i, i, u
 			line-height: 1.4
@@ -594,7 +609,8 @@ h1
 		blockquote
 			padding-left: 16px
 			p
-				color: #878787
+				color: #474747
+				line-height: 1.4
 		h5
 			padding-top: 20px
 			padding-bottom: 20px
@@ -677,6 +693,8 @@ h1
 	h5
 		font-weight: 600
 		letter-spacing: -0.25px
+	cite
+		color: #414141
 	@media screen and (min-width: 1024px)
 		p, li, p i, i, u
 			line-height: 1.4
@@ -688,7 +706,8 @@ h1
 		blockquote
 			padding-left: 16px
 			p
-				color: #878787
+				color: #676767
+				font-weight: 300
 		h5
 			padding-top: 20px
 			padding-bottom: 20px

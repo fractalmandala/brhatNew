@@ -290,15 +290,17 @@
 <div class="rta-column outer-box limit rowgap100 serif">
 	{#if lead && lead.length > 0}
 		{#each lead as item}
+			<div class="rta-column rowgap400">
 				<h4 class="bord-top ta-c-d p-top-32 hindiadobe">{item.name}</h4>
-				<div class="rta-row colgap400 tourlead">
-					<div class="rta-image">
+				<div class="rta-row colgap200 rowgap300 schedule1">
+					<div class="rta-image w32">
 						<img src={item.image} alt="pankaj saxena" />
 					</div>
-					<div class="rta-column">
+					<div class="rta-column w64">
 						<pre class="serif">{item.content}</pre>
 					</div>
 				</div>
+			</div>
 		{/each}
 	{/if}
 </div>
@@ -306,16 +308,16 @@
 <!--end-->
 
 <!--profiles-->
-<div class="rta-row outer-box limit colgap100 serif">
+<div class="rta-column outer-box limit colgap100 serif">
 	{#if profiles && profiles.length > 0}
 		{#each profiles as item}
-			<div class="rta-column rowgap400">
+			<div class="rta-column rowgap400 p-bot-32">
 				<h4 class="bord-top ta-c-d p-top-32 hindiadobe">{item.name}</h4>
-				<div class="rta-row colgap400">
-					<div class="rta-image">
-						<img src={item.image} alt=item.name />
+				<div class="rta-row colgap200 rowgap300 schedule1">
+					<div class="rta-image w32">
+						<img src={item.image} alt="item.name" />
 					</div>
-					<div class="rta-column">
+					<div class="rta-column w64">
 						<pre class="serif">{item.content}</pre>
 					</div>
 				</div>
@@ -389,8 +391,8 @@
 <div class="rta-column outer-box limit rowgap100 serif generales">
 	{#if gens && gens.length > 0}
 		{#each gens as item}
-				<h4 class="bord-top ta-c-d p-top-32 hindiadobe">{item.name}</h4>
-				<pre class="serif">{item.content}</pre>
+			<h4 class="bord-top ta-c-d p-top-32 hindiadobe">{item.name}</h4>
+			<pre class="serif">{item.content}</pre>
 		{/each}
 	{/if}
 </div>

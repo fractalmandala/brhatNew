@@ -7,7 +7,6 @@
 	import SVLogo from '$lib/logos/Svarnanjali2.svelte';
 	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
 	import { testimonialsSvarn } from '$lib/utils/supapulls';
-	import '@splidejs/splide/css/core';
 	import Youtuber from '$lib/components/Youtuber.svelte';
 	import Head from '$lib/components/HeadComponent.svelte';
 	import Prev1 from '$lib/icons/IconPrev.svelte';
@@ -28,7 +27,6 @@
 	let language = false;
 	let y: number;
 	let iW: number;
-	let idv = 'OeCFCHwSpd0';
 	let eps: any;
 	let vids: any;
 	let name: string;
@@ -37,10 +35,6 @@
 	let isValidEmail = false;
 	let goF = false;
 	let tests: any;
-
-	function toggleGo() {
-		goF = !goF;
-	}
 
 	function setHindi() {
 		$userLang = 'Hindi';

@@ -23,6 +23,7 @@ Contents:
 	<p><a href=#four>4. Images</p>
 	<p><a href=#five>5. Typography</p>
 	<p><a href=#six>6. Suggest Changes</p>
+	<p><a href=#seven>7. Technical Records</p>
 </div>
 
 
@@ -156,3 +157,33 @@ To suggest changes/additions/resolutions to this document, please add comments [
 
 
 If you find an error in any post, please write to contact@brhat.in
+
+<div id="seven"></div>
+
+### Technical Records
+This section is a reference sheet only for **Posters** and can be safely ignored by **Writers** or **Editors.**
+
+###### Reference for Quote Citations
+We have instances in Dhīti posts where there is a citation of text/author following a blockquote, like so:
+<img class="imageclass m-bot-16" src="/images/quotecite.png" alt="quotecite"/>
+
+For such cases, the text to be used must be placed inside `<cite>` tags just below the blockquote, like so:
+```markdown
+> “A belief in the equal truth...”
+<cite>Sitaram Goel</cite>
+```
+
+There are also instances where the citation itself is a link:
+<img class="imageclass m-bot-16" src="/images/quotecitelink.png" alt="quotecitelink"/>
+
+Here too we use a "cite" class, but this time it is as an `<a>` tag, like so:
+```html
+<a href="https://www.anandranganathan.com/2017/04/14/ambedkar-on-islam-the-story-that-must-not-be-told/" class="cite">Dr B. R. Ambedkar</a>
+```
+
+A final case is where the citation contains a link and a text- both. Now it is all inside a `div` tag, but still containing the class of "cite", like so:
+```html
+<div class="cite">
+The <a href="https://www.brhat.in">link</a> is linked.
+</div>
+```
