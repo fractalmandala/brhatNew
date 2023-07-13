@@ -1,19 +1,15 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { themeMode, sideMode, configMode } from '$lib/stores/globalstores';
+	import { themeMode, sideMode } from '$lib/stores/globalstores';
 	import { browser } from '$app/environment';
 	import { fly } from 'svelte/transition';
 	import { expoInOut } from 'svelte/easing';
 	import type { SearchItem } from '$lib/types/SearchItem';
 	import { searchitems } from '$lib/filed/searchindex';
 	import { slide } from 'svelte/transition';
-	import CompToggle from '$lib/ridunits/CompToggle.svelte';
 	import AboutLinks from '$lib/links/AboutLinks.svelte';
 	import AnveshiLinks from '$lib/links/AnveshiLinks.svelte';
-	import AryavartaLinks from '$lib/links/AryavartaLinks.svelte';
 	import DrashtaLinks from '$lib/links/DrashtaLinks.svelte';
-	import MandalaLinks from '$lib/links/MandalaLinks.svelte';
-	import RtaLinks from '$lib/links/RtaLinks.svelte';
 
 	let iW: number;
 	let breakPoint: boolean;
@@ -28,16 +24,6 @@
 
 	function fauxfake() {
 		fake = !fake;
-	}
-
-	function toggleConfig() {
-		if (browser) {
-			configMode.update((mode) => {
-				const newMode = !mode;
-				localStorage.setItem('configMode', JSON.stringify(newMode));
-				return newMode;
-			});
-		}
 	}
 
 	async function handleInput() {
@@ -78,11 +64,6 @@
 				return newMode;
 			});
 		}
-	}
-
-	function handleThemeAndClose() {
-		toggleVisibility();
-		toggleSideBar();
 	}
 
 	function handleMouseLeave() {
@@ -185,9 +166,6 @@
 		<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
 			<h5><a href="/about">About</a></h5>
 			<AboutLinks flytime={$sideMode} />
-		</div>
-		<div class="linksbox xright rta-column">
-			<button class="newbutton" on:click={toggleConfig}> Open User Config </button>
 		</div>
 	</div>
 {/if}
