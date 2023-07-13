@@ -187,3 +187,93 @@ A final case is where the citation contains a link and a text- both. Now it is a
 The <a href="https://www.brhat.in">link</a> is linked.
 </div>
 ```
+
+###### Reference for Images in Posts
+Key/Hero image must always be 1200x630, best compressed version. For other images:
+1. Portrait ratio images must be in img class "imageclass2" tags.
+2. Landscape ration images must be in img class "imageclass" tags.
+
+##### Alt captions of an image should not contain the word "image" in them. Like so:
+```html
+<img class="imageclass" src="put link here" alt="put an alt caption describing this landscape"/>
+<img class="imageclass" src="put link here" alt="put an alt caption describing this portrait"/>
+```
+
+###### Reference for Links inside Posts
+There are 2 types of instances for links inside of Dhīti posts:
+1. The link is within the general text body, that is- as part of the general markdown content, or
+2. The link is within a specific tag being used, such as in a `<cite>` tag, or when an `<a>` tag exists inside a `<div>`
+
+For the first instance, the markdown syntax is [text being linked](the actual link), like so:
+```markdown
+[this](https://www.brhat.in) being the linked text
+```
+
+The above will appear on a page as [this](https://www.brhat.in) being the linked text! :)
+
+In the second instance, where the link is inside a tag:
+```html
+<div class="cite">then we use it like <a href="put link here">this</a> being the linked text.</div>
+```
+
+###### Reference for Markdown
+Double check final files for some basic markdown requirements:
+1. All text to be italicized is inside *a single asterix symbol* on either side of the text- *
+2. Alternately, it can be inside _a single underscore symbol_ on either side- _
+3. All bold text must be inside **double asterix symbols on either side**
+4. For italics, you can use either asterix or underscore, but **use the same standard throughout the whole file**
+5. All quotations are italic **by default**. This means you must ensure they do not have asterix/underscore at the beginning or end of lines.
+6. <span style="color: #fe4a49">If you have a symbol at one end of the line but not the other, ie., you opened them but did not close or closed an unopen tag, the symbol will appear in the final front-text!</span>
+
+Here is how these instances appear within the markdown body:
+```markdown
+1. All text to be italicized is inside *a single asterix symbol* on either side of the text- *
+2. Alternately, it can be inside _a single underscore symbol_ on either side- _
+3. All bold text must be inside **double asterix symbols on either side**
+4. For italics, you can use either asterix or underscore, but **use the same standard throughout the whole file**
+5. All quotations are italic **by default**. This means you must ensure they do not have asterix/underscore at the beginning or end of lines.
+6. <span style="color: #fe4a49">If you have a symbol at one end of the line but not the other, ie., you opened them but did not close or closed an unopen tag, the symbol will appear in the final front-text!</span>
+```
+
+###### Special Notice on Markdown Frontmatter:
+All Dhīti markdown files must contain essential frontmatter at the **absolute top of the file**. Make sure the files do not have a blank first line. The frontmatter must begin at the first. The frontmatter contains post metadata- title, author(s), key image link, post date, category, tag(s) and an excerpt. The excerpt appears in post cards throughout the website, and along with the tags is visible on post SEO data to global search indices. **ALL OF THEM ARE MANDATORY**
+
+Here is the exact syntax to follow within markdown, beginning at first line of the file:
+```markdown
+---
+title: Title of the Post, Preferably in Camel Case Like This
+author: Author Name
+category: Category Name
+tags:
+- tag 1
+- tag 2
+date: "YYYY-MM-DD"
+image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/47.webp
+excerpt: "The festival of Ahoi Aṣṭamī instills the deep sense in Hindus that our actions have consequences; that human civilization destroys Nature by the sheer act of living in great groups and thus has to make extra efforts to respect and protect Nature; and that we have to give back to Nature as we take much from it."
+---
+```
+
+##### If there are two authors, add second author's name in a following line, like this:
+```markdown
+title: Title of the Post, Preferably in Camel Case Like This
+author: Author Name
+authortwo: Second Author
+...rest of frontmatter below...
+```
+
+##### There can only be 1 category, but there can be multiple tags, each following the same below syntax:
+```markdown
+tags:
+- tag 1
+- tag 2
+- tag 3
+- and so on
+```
+
+##### Only the date and excerpt need to be within quotation marks, and the rest **should never be!**
+
+These are some helpful links for markdown syntax. 
+1. A very helpful [Markdown Guide](https://www.markdownguide.org/cheat-sheet/), mark it down.
+2. Basic and easy markdown [Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet), mark it down.
+
+<img class="iconimage m-top-32" src="/images/iconcoder2.png" alt="coder"/>
