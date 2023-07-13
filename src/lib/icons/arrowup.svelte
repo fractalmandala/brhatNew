@@ -1,6 +1,6 @@
 <script lang="ts">
-	export let dimension = 16;
-	export let color = 'var(--themer)';
+	export let dimension = 20;
+	export let color = 'var(--darkseven)';
 </script>
 
 <svg
@@ -13,8 +13,8 @@
 	stroke-width="2"
 	stroke-linecap="round"
 	stroke-linejoin="round"
-	class="feather feather-x"
-	><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg
+	class="feather feather-arrow-up"
+	><line x1="12" y1="19" x2="12" y2="5" /><polyline points="5 12 12 5 19 12" /></svg
 >
 
 <style lang="sass">
@@ -22,4 +22,5 @@
 svg
 	&:hover
 		stroke: #fe4a49
+
 </style>

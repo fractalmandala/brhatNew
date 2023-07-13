@@ -41,6 +41,9 @@ const storedThemeMode = browser ? JSON.parse(localStorage.getItem('themeMode') |
 
 export const themeMode = writable(storedThemeMode);
 
+const storedConfigMode = browser ? JSON.parse(localStorage.getItem('configMode') || 'false') : false;
+export const configMode = writable(storedConfigMode);
+
 const storedReadingMode = browser
 	? JSON.parse(localStorage.getItem('readingMode') || 'false')
 	: false;

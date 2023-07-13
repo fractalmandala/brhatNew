@@ -26,13 +26,38 @@ export const actions: Actions = {
 			showChip('invalid credentials!', '#fe4a49');
 		}
 
-		throw redirect(303, '/gallery');
+		throw redirect(303, '/newsletter');
 	},
+
+	signup: async({
+		request,
+		locals: { supabase }
+	}): Promise<ActionFailure<{ error: string; values?: { email: string } }>> => {
+			const signupData = await request.formData();
+			const email = signupData.get('email') as string;
+			const password = signupData.get('password') as string;
+			if (!email) {
+				showChip('enter email!', '#fe4a49');
+			}
+			if (!password) {
+				showChip('password!', '#fe4a49');
+			}
+			const { error } = await supabase.auth.signUp({
+				email: email,
+				password: password,
+				options: { emailRedirectTo: '/' }
+			});
+		if (error) {
+			showChip('Error! Please check submitted details again.', '#fe4a49');
+		} 
+
+		throw redirect(303, '/');
+		},
 
 	signout: async ({ 
 		locals: { supabase } 
 	}) => {
 		await supabase.auth.signOut();
-		throw redirect(303, '/gallery');
+		throw redirect(303, '/newsletter');
 	}
-};
+	};
