@@ -357,6 +357,10 @@ h6.thin
 pre.h5
 	font-size: 1.2rem
 
+pre.h6
+	font-size: 15px
+	line-height: 1.4
+
 h5
 	font-size: 4vw
 	font-weight: 400
@@ -369,9 +373,9 @@ h5.serif
 	font-size: 6vw
 
 h4
-	font-size: 2.16rem
+	font-size: 3em
 	color: var(--opposite)
-	line-height: 1.2
+	line-height: 1
 
 .oppositer
 	color: var(--opposite)
@@ -522,18 +526,6 @@ h1
 		text-transform: uppercase
 		font-style: normal
 
-.maincol.std
-	@media screen and (min-width: 1024px)
-		p, li, p i, i, u
-			font-size: 21px
-	@media screen and (max-width: 1023px) and (min-width: 787px)
-		p, li, p i, i, u
-			font-size: 20px
-	@media screen and (max-width: 786px)
-		p, li, p i, i, u
-			font-size: 20px
-		h5
-			font-size: 27px
 
 .blank-button.std
 	@media screen and (min-width: 1024px)
@@ -594,16 +586,60 @@ h1
 		p
 			font-size: 24px
 
+.maincol
+	@media screen and (min-width: 1024px)
+		h4
+			margin: 80px 0 24px 0
+			letter-spacing: -1px
+	@media screen and (max-width: 1023px) and (min-width: 787px)
+		h4
+			margin: 80px 0 24px 0
+			letter-spacing: -1px		
+	@media screen and (max-width: 786px)
+		h4
+			margin: 64px 0 20px 0
+			letter-spacing: 0
+		blockquote
+			margin-left: 0
+			margin-right: 0
+		ol, ul
+			padding-left: 16px
+
+.maincol.std
+	@media screen and (min-width: 1024px)
+		p, li, p i, i, u
+			font-size: 21px
+		h4
+			font-size: 48px
+	@media screen and (max-width: 1023px) and (min-width: 787px)
+		p, li, p i, i, u
+			font-size: 20px
+		h4
+			font-size: 48px
+	@media screen and (max-width: 786px)
+		p, li, p i, i, u
+			font-size: 20px
+		h4
+			font-size: 32px
+		h5
+			font-size: 27px
+
 .maincol.small
 	@media screen and (min-width: 1024px)
 		p, li, p i, i, u
 			font-size: 18px
+		h4
+			font-size: 36px
 	@media screen and (max-width: 1023px) and (min-width: 787px)
 		p, li, p i, i, u
 			font-size: 18px
+		h4
+			font-size: 36px
 	@media screen and (max-width: 786px)
 		p, li, p i, i, u
 			font-size: 18px
+		h4
+			font-size: 28px
 		h5
 			font-size: 24px
 
@@ -611,21 +647,29 @@ h1
 	@media screen and (min-width: 1024px)
 		p, li, p i, i, u
 			font-size: 24px
+		h4
+			font-size: 56px
 	@media screen and (max-width: 1023px) and (min-width: 787px)
 		p, li, p i, i, u
 			font-size: 24px
+		h4
+			font-size: 56px
 	@media screen and (max-width: 786px)
 		p, li, p i, i, u 
 			font-size: 24px
+		h4
+			font-size: 36px
 		h5
 			font-size: 32px
 
-.light.maincol
+.maincol
 	p, p i, i, u
 		font-family: 'Adobe Devanagari', serif
-		color: #272727
 		margin-bottom: 20px
 		font-weight: 400
+	li
+		font-family: inherit
+		font-weight: inherit
 	em
 		font-family: inherit
 		font-size: inherit
@@ -638,17 +682,13 @@ h1
 		p
 			font-family: $grot
 			font-weight: bold
-			color: #878787
-			border-top: 1px solid var(--borderline)
 			padding-top: 64px
 			margin-top: 32px
 	li
 		font-family: 'Adobe Devanagari', serif
-		color: #272727
 	h4
 		font-family: 'Adobe Devanagari', serif
-		color: #272727
-		line-height: 1.12
+		line-height: 1
 	blockquote
 		border-left: 4px solid #fe4a49
 		p
@@ -656,22 +696,12 @@ h1
 	h5
 		font-weight: 600
 		letter-spacing: -0.25px
-	cite
-		color: #a7a7a7
-	div.cite
-		color: #a7a7a7
 	@media screen and (min-width: 1024px)
 		p, li, p i, i, u
 			line-height: 1.4
-			font-family: 'Adobe Devanagari', serif
-		h4
-			margin-top: 40px
-			margin-bottom: 20px
-			letter-spacing: -0.5px
 		blockquote
 			padding-left: 16px
 			p
-				color: #474747
 				line-height: 1.4
 		h5
 			padding-top: 20px
@@ -683,15 +713,10 @@ h1
 	@media screen and (max-width: 1023px) and (min-width: 787px)
 		p, li, p i, i, u
 			line-height: 1.5
-			font-family: 'Adobe Devanagari', serif
-		h4
-			margin-top: 40px
-			margin-bottom: 20px
-			letter-spacing: -0.5px
 		blockquote
 			padding-left: 16px
 			p
-				color: #878787
+				line-height: 1.4
 		h5
 			padding-top: 20px
 			padding-bottom: 20px
@@ -702,16 +727,10 @@ h1
 	@media screen and (max-width: 786px)
 		p, li, p i, i, u
 			line-height: 1.5
-			font-family: 'Adobe Devanagari', serif
-		h4
-			margin-top: 40px
-			margin-bottom: 20px
-			letter-spacing: -0.5px
 		blockquote
 			padding-left: 16px
-			margin-left: 0
 			p
-				color: #878787
+				line-height: 1.24
 		h5
 			padding-top: 20px
 			padding-bottom: 20px
@@ -719,109 +738,48 @@ h1
 			margin-bottom: 40px
 			border-top: 1px solid var(--borderline)
 			border-bottom: 1px solid var(--borderline)
-	
+		
+.light.maincol
+	p, p i, i, u
+		color: #272727
+	>.rta-column
+		p
+			color: #878787
+			border-top: 1px solid var(--borderline)
+	li
+		color: #272727
+	h4
+		color: #272727
+	cite
+		color: #a7a7a7
+	div.cite
+		color: #a7a7a7
+	blockquote
+		p
+			color: #474747
 
 .dark.maincol
 	p, p i, i, u
-		font-family: 'Adobe Devanagari', serif
-		color: #FFFFFF
-		margin-bottom: 20px
-		font-weight: 400
-	em
-		font-family: inherit
-		font-size: inherit
-		font-weight: inherit
-		line-height: inherit
-		color: inherit
-		margin-bottom: 20px
-		font-style: italic
+		color: #777777
 	>.rta-column
 		p
-			font-family: $grot
-			font-weight: bold
-			color: #878787
+			color: #575757
 			border-top: 1px solid var(--borderline)
-			padding-top: 64px
-			margin-top: 32px
 	li
-		font-family: 'Adobe Devanagari', serif
-		color: #FFFFFF
+		color: #777777
 	h4
-		font-family: 'Adobe Devanagari', serif
 		color: #FFFFFF
-		line-height: 1.12
-	blockquote
-		border-left: 4px solid #fe4a49
-	h5
-		font-weight: 600
-		letter-spacing: -0.25px
 	cite
-		color: #414141
-	@media screen and (min-width: 1024px)
-		p, li, p i, i, u
-			line-height: 1.4
-			font-family: 'Adobe Devanagari', serif
-		h4
-			margin-top: 40px
-			margin-bottom: 20px
-			letter-spacing: -0.5px
-		blockquote
-			padding-left: 16px
-			p
-				color: #676767
-				font-weight: 300
-		h5
-			padding-top: 20px
-			padding-bottom: 20px
-			margin-top: 40px
-			margin-bottom: 40px
-			border-top: 1px solid var(--borderline)
-			border-bottom: 1px solid var(--borderline)
-	@media screen and (max-width: 1023px) and (min-width: 787px)
-		p, li, p i, i, u
-			line-height: 1.5	
-			font-family: 'Adobe Devanagari', serif
-		h4
-			margin-top: 40px
-			margin-bottom: 20px
-			letter-spacing: -0.5px
-		blockquote
-			padding-left: 16px
-			p
-				color: #878787
-		h5
-			padding-top: 20px
-			padding-bottom: 20px
-			margin-top: 40px
-			margin-bottom: 40px
-			border-top: 1px solid var(--borderline)
-			border-bottom: 1px solid var(--borderline)
-	@media screen and (max-width: 786px)
-		p, li, p i, i, u
-			line-height: 1.5
-			font-family: 'Adobe Devanagari', serif
-		h4
-			margin-top: 40px
-			margin-bottom: 20px
-			letter-spacing: -0.5px
-		blockquote
-			padding-left: 16px
-			margin-left: 0
-			p
-				color: #878787
-		h5
-			padding-top: 20px
-			padding-bottom: 20px
-			margin-top: 40px
-			margin-bottom: 40px
-			border-top: 1px solid var(--borderline)
-			border-bottom: 1px solid var(--borderline)
+		color: #474747
+	div.cite
+		color: #474747
+	blockquote
+		p
+			color: #a7a7a7
 	
 .menu-row
 	color: var(--opposite)
 	text-transform: uppercase
-
-
 
 .linksbox
 	.insidelink
@@ -963,6 +921,8 @@ button.greenbutton
 		li
 			font-size: 14px
 			color: var(--onlyblack)
+	h4
+		text-transform: capitalize
 
 .doc-in
 	p, li
@@ -1068,3 +1028,83 @@ button.greenbutton
 			p
 				font-size: 21px
 				font-weight: 300
+
+.levelzero, .levelone
+	.singleitem
+		display: flex
+		flex-direction: row
+		width: 100%
+		margin-bottom: 64px
+		column-gap: 32px
+		.rta-image
+			width: 28%
+			height: 280px
+			img
+				object-fit: cover
+				width: 100%
+		.body
+			width: calc(72% - 32px)
+			padding-left: 0
+			h6
+				font-size: 28px
+
+.leveltwo
+	.singleitem
+		display: flex
+		flex-direction: column
+		border-bottom: 1px solid var(--forline)
+		padding-bottom: 24px
+		.rta-image
+			margin-bottom: 16px
+		.rta-row
+			padding-top: 16px
+			pre
+				margin-top: 0
+				padding-top: 0
+		img
+			object-fit: cover
+			height: 100%
+			height: 160px
+		h3
+			font-size: 32px
+		h6
+			font-size: 24px
+			font-family: 'Libre Franklin', sans-serif
+	.pagila
+		.haslink
+			font-size: 24px
+
+.dhitistuff
+	small
+		background: #fe4a49
+		color: white
+		font-size: 12px
+		font-weight: bold
+		padding: 2px 4px
+		width: max-content
+
+.dhitistuff
+	row-gap: 8px
+	padding-bottom: 12px
+	border-bottom: 1px solid var(--contraster)
+	.rta-row
+		column-gap: 12px
+	cite
+		color: var(--onlyblack)
+		padding: 0
+		margin: 0
+	margin-bottom: 16px
+
+.leveltwo
+	.dhitistuff
+		row-gap: 8px
+		justify-content: flex-start
+
+pre.excerpt
+	font-size: 14px
+	color: var(--onlyblack)
+
+.haslink
+	&:hover
+		a
+			text-decoration: underline

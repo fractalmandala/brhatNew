@@ -56,3 +56,14 @@
 		/>
 	</div>
 </GeneralObserver>
+
+<style lang="sass">
+
+.rta-video
+	@media screen and (max-width: 768px)
+		width: 320px
+		iframe
+			object-fit: contain
+			width: 240px
+
+</style>

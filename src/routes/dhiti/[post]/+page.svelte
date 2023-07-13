@@ -216,56 +216,71 @@
 			bind:this={ref}
 		>
 			<svelte:component this={data.content} class="dhitiblog" />
-			<div class="rta-column rowgap300">
-				<h5 class="serif">More from {data.author}:</h5>
+		</div>
+	</div>
+	<div class="stout bord-top p-top-64">
+		<div class="instout pagila rta-column">
+			<div class="rta-column rowgap400">
 				{#if thisAuthorPosts && thisAuthorPosts.length > 0}
+					<h3 class="p-bot-16">More from {data.author}:</h3>
 					{#each thisAuthorPosts as item}
-						<a class="rta-row fixed colgap300 bord-bot p-bot-32" href={item.path}>
-							<div class="rta-image w32 height-30-2">
-								<img src={item.meta.image} alt={item.meta.title} />
+						{#if item.meta.title !== data.title}
+							<div class="rta-column body">
+								<div class="rta-row between dhitistuff rowgap100">
+									<small>{item.meta.category}</small>
+									<div class="rta-row ycenter">
+										{#each item.meta.tags as taggie}
+											<cite>{taggie}</cite>
+										{/each}
+									</div>
+								</div>
+								<h5 style="line-height: 1.2; color: var(--opposite)" class="haslink">
+									<strong> <a href={item.path}>{item.meta.title}</a></strong>
+								</h5>
+								<pre class="excerpt">{item.meta.excerpt}</pre>
 							</div>
-							<div class="rta-column w64 rowgap100">
-								<cite class="citeone">{item.meta.category}</cite>
-								<h6 class="serif">{item.meta.title}</h6>
-								<cite class="citetwo">{item.meta.tags}</cite>
+						{/if}
+					{/each}
+				{/if}
+				<h3 class="p-top-64 bord-top">Latest Posts:</h3>
+				{#if posts && posts.length > 0}
+					{#each posts as item}
+						<div class="rta-column body p-bot-32">
+							<div class="rta-row between dhitistuff">
+								<small>{item.meta.category}</small>
+								<div class="rta-row ycenter">
+									{#each item.meta.tags as taggie}
+										<cite>{taggie}</cite>
+									{/each}
+								</div>
 							</div>
-						</a>
+							<h5 style="line-height: 1.2; color: var(--opposite)" class="haslink">
+								<strong>
+									<a href={item.path} target="_blank" rel="noreferrer">{item.meta.title}</a>
+								</strong>
+							</h5>
+							<pre class="excerpt">{item.meta.excerpt}</pre>
+							<p class="author p-top-8">
+								{item.meta.author}
+								{#if item.meta.authortwo && item.meta.authortwo.length > 0}
+									<span> and {item.meta.authortwo}</span>
+								{/if}
+							</p>
+						</div>
 					{/each}
 				{/if}
 			</div>
 		</div>
 	</div>
-
-	<div class="rta-column x3 dhitiouter">
-		<h4 class="serif">Latest Posts:</h4>
-		{#if posts && posts.length > 0}
-			{#each posts as item}
-				{#if item.meta.title !== data.title}
-					<div class="rta-column rowgap200 bord-bot p-bot-32 p-top-32">
-						<h6 class="heading hover-purple"><a href={item.path}>{item.meta.title}</a></h6>
-						<p class="tt-no serif">{item.meta.excerpt}</p>
-						<div class="rta-column">
-							<small class="is-purple">
-								<strong>
-									{item.meta.author}
-									{#if item.meta.authortwo && item.meta.authortwo.length > 0}
-										<span> and {item.meta.authortwo}</span>
-									{/if}
-								</strong>
-							</small>
-							<cite class="citetwo">{item.meta.tags}</cite>
-						</div>
-					</div>
-				{/if}
-			{/each}
-		{/if}
-	</div>
 </div>
 
 <style lang="sass">
 
-.x0
+.x0, .x1
 	z-index: 300
+
+.x1
+	background: var(--background)
 
 .levelzero, .levelone
 	.fonter
@@ -340,10 +355,6 @@ h1
 	line-height: 1
 	padding-bottom: 16px
 
-.x3.dhitiouter
-	h4
-		padding: 64px 0 12px 0
-
 .levelzero
 	align-items: center
 	.x22, .x3
@@ -359,7 +370,7 @@ h1
 .levelone
 	align-items: center
 	.x22, .x3
-		width: 690px
+		width: 640px
 		margin-left: 0
 	.x3
 		padding-bottom: 128px
@@ -377,20 +388,20 @@ h1
 		width: 100vw
 		overflow: hidden
 	.x1, .x22, .x3
-		padding-left: 32px
-		padding-right: 32px
+		padding-left: 20px
+		padding-right: 20px
 
 
 .rta-column
 	box-sizing: border-box
 
 .is-purple
-	color: var(--dhiticolor)
+	color: #fe4a49
 
 .hover-purple
 	transition: 0.08s
 	&:hover
-		color: var(--dhiticolor)
+		color: #fe4a49
 
 .authorbox
 	color: #878787
@@ -399,11 +410,6 @@ h1
 	font-weight: 300
 	@media screen and (max-width: 1023px)
 		font-size: 16px
-
-.rta-column
-	h6
-		font-family: 'Adobe Devanagari', serif
-
 
 .authortwitter
 	object-fit: contain

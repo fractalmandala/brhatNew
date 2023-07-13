@@ -5,7 +5,7 @@
 	import autoAnimate from '@formkit/auto-animate';
 	import Chevron from '$lib/icons/chevrond.svelte';
 	import Chevron2 from '$lib/icons/chevrond.svelte';
-	import { themeMode, breakZero } from '$lib/stores/globalstores';
+	import { themeMode, breakZero, breakTwo } from '$lib/stores/globalstores';
 	import { listUsers } from '$lib/utils/supapulls';
 	import Header from '$lib/components/SubHeader.svelte';
 	import ButtonEmerge from '$lib/anims/ButtonEmerge.svelte';
@@ -17,6 +17,8 @@
 	import SVCar from '$lib/components/SVCar.svelte';
 	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
 	import { reveal } from 'svelte-reveal';
+	import { slide } from 'svelte/transition';
+	import { quintOut, quintIn } from 'svelte/easing';
 	import HomeAccordion from '$lib/components/HomeAccordion.svelte';
 	import CompButton from '$lib/ridunits/CompButton.svelte';
 	import CompButton2 from '$lib/ridunits/CompButton.svelte';
@@ -56,10 +58,6 @@
 	anveshiFull[0] = true;
 	let drashtaFull = Array(10).fill(false);
 	drashtaFull[0] = true;
-	export let data;
-
-	let { user, tableData } = data;
-	$: ({ user, tableData } = data);
 
 	function toggleMenu() {
 		expandMenu = !expandMenu;
@@ -130,18 +128,6 @@
 
 <div class="stout rta-column p-top-128 minH" class:light={$themeMode} class:dark={!$themeMode}>
 	<div class="instout rta-column rowgap400 pagila">
-		<div class="rta-column rowgap400 p-bot-64">
-			{#if users && users.length > 0}
-				<div class="rta-column">
-					{#each users as user}
-						<p>{user.id}</p>
-					{/each}
-				</div>
-			{/if}
-			<div>Protected content for {user.email}</div>
-			<pre>{JSON.stringify(tableData, null, 2)}</pre>
-			<pre>{JSON.stringify(user, null, 2)}</pre>
-		</div>
 		<div class="rta-column rowgap400 xcenter ta-c p-bot-64">
 			<h1>
 				Bṛhat is a<br />
@@ -166,8 +152,8 @@
 		</div>
 	</div>
 	<div class="glass-top" style="height: 2px; width: 80%" />
-	<div class="instout rta-column rowgap400 pagila">
-		<div class="rta-column rowgap400 xcenter ta-c p-top-64">
+	<div class="instout rta-column rowgap400 pagila p-bot-64">
+		<div class="rta-column rowgap200 xcenter ta-c p-top-64">
 			<h2 class="p-bot-32">Svarṇāñjali</h2>
 			{#if eps && eps.length > 0}
 				<Splide
@@ -178,6 +164,7 @@
 						waitForTransition: true,
 						type: 'loop',
 						gap: '20px',
+						width: '100%',
 						wheelMinThreshold: 1.1,
 						speed: 900,
 						direction: 'ltr',
@@ -193,14 +180,14 @@
 					<SplideTrack>
 						{#each eps as item}
 							<SplideSlide>
-								<div class="rta-column rowgap100">
-									<Youtuber youTubeId={item.videoid} />
-									<p class="ta-c">
+								<Youtuber youTubeId={item.videoid} />
+								<p class="ta-c small p-top-16">
+									<strong>
 										<a href={item.link} target="_blank" rel="noreferrer">
 											{item.name}
-										</a>
-									</p>
-								</div>
+										</a></strong
+									>
+								</p>
 							</SplideSlide>
 						{/each}
 					</SplideTrack>
@@ -208,7 +195,7 @@
 						class="splide__arrows splide__arrows--ltr rta-row xcenter-d xcenter-m colgap200 p-top-16 m-top-16 bord-top"
 					>
 						<button
-							class="splide__arrow splide__arrow--prev newbutton-sv"
+							class="splide__arrow splide__arrow--prev newbutton red"
 							type="button"
 							aria-label="Previous slide"
 							aria-controls="splide01-track"
@@ -216,7 +203,7 @@
 							PREV
 						</button>
 						<button
-							class="splide__arrow splide__arrow--next newbutton-sv"
+							class="splide__arrow splide__arrow--next newbutton red"
 							type="button"
 							aria-label="Next slide"
 							aria-controls="splide01-track"
@@ -224,12 +211,12 @@
 							NEXT
 						</button>
 						<a href="https://www.youtube.com/@brhat" target="_blank" rel="noreferrer">
-							<button class="newbutton-sv"> Youtube </button>
+							<button class="newbutton red"> Youtube </button>
 						</a>
 					</div>
 				</Splide>
 			{/if}
-			<div class="rta-column rowgap50 xcenter bord-bot p-bot-16">
+			<div class="rta-column rowgap50 xcenter p-bot-16">
 				<small>Subscribe:</small>
 				<div
 					class="g-ytsubscribe"
@@ -242,25 +229,35 @@
 	</div>
 	<div class="glass-top" style="height: 2px; width: 80%" />
 	<div class="instout rta-column rowgap400 pagila">
-		<div class="rta-column rowgap400 xcenter ta-c p-top-64">
-			<h2 class="p-bot-32">Bṛhat Anveṣī</h2>
+		<div class="rta-column rowgap200 xcenter ta-c p-top-64">
+			<h2>Bṛhat Anveṣī</h2>
 			{#if chapters && chapters.length > 0}
 				{#if !$breakZero}
 					<div
 						class="rta-row colgap400 ycenter drawer-select"
+						class:isactive={expandMenu}
 						on:click={toggleMenu}
 						on:keydown={fauxfake}
 					>
-						Expand Tours
+						{#if expandMenu}
+							Close Tours
+						{:else}
+							Expand Tours
+						{/if}
 						<div class="rta-row ycenter" class:rotated={expandMenu}>
-							<Chevron2 />
+							{#if expandMenu}
+								<Chevron2 dimension={24} onToggle={true} />
+							{:else}
+								<Chevron2 dimension={24} />
+							{/if}
 						</div>
 					</div>
 				{/if}
 				{#if expandMenu || $breakZero}
 					<div
 						class="rta-row row-col ycenter rta-drawer-items colgap400 rowgap100 p-bot-16"
-						use:autoAnimate
+						in:slide={{ axis: 'y', easing: quintOut }}
+						out:slide={{ axis: 'y', easing: quintIn }}
 						on:click={toggleMenu}
 						on:keydown={fauxfake}
 					>
@@ -274,124 +271,40 @@
 						{/each}
 					</div>
 				{/if}
-			{/if}
-		</div>
-	</div>
-</div>
-
-<SVCar />
-
-<!--latest anveshi chapters-->
-<div class="rta-column ycenter rowgap600 outer-box minH" data-lenis-scroll-snap-align="start">
-	<!---name and description-->
-	<div
-		class="rta-row row-col ycenter between rowgap100 colgap400 glass-top p-top-32 bord-bot p-bot-32"
-	>
-		<div class="rta-row row-col ycenter colgap300">
-			<h3 class="typett">BṚHAT ANVEṢĪ</h3>
-			<div class="holds-button-emerge" use:reveal>
-				<ButtonEmerge2><a href="/anveshi">Learn More</a></ButtonEmerge2>
-			</div>
-		</div>
-		<div class="colgap100 rta-row selfend xend-d ycenter" id="thissmall">
-			<div class="arrowsanimation">
-				<svg
-					width="94"
-					height="24"
-					viewBox="0 0 94 32"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-				>
-					<g clip-path="url(#clip0_15_2638)">
-						<path
-							id="arrowl"
-							d="M94.0712 4.6096L90.4616 1L75.1016 16.36L90.4616 31.72L94.0712 28.1104L82.3464 16.36L94.0712 4.6096Z"
-							fill="#FE4A49"
-						/>
-						<path
-							id="arrowc"
-							d="M64.2839 5.29L61.1606 2L47.8701 16L61.1606 30L64.2839 26.71L54.1388 16L64.2839 5.29Z"
-							fill="#FE4A49"
-						/>
-						<path
-							id="arrowr"
-							d="M35.9675 8.4675L33.5 6L23 16.5L33.5 27L35.9675 24.5325L27.9525 16.5L35.9675 8.4675Z"
-							fill="#FE4A49"
-						/>
-					</g>
-					<defs>
-						<clipPath id="clip0_15_2638">
-							<rect width="94" height="32" fill="white" />
-						</clipPath>
-					</defs>
-				</svg>
-			</div>
-			<small class="typett2" id="thissmall">Culture Travel and Experience</small>
-		</div>
-	</div>
-	<!--end-->
-
-	<div class="rta-column rowgap300" use:autoAnimate>
-		{#if chapters && chapters.length > 0}
-			{#if !$breakZero}
-				<div
-					class="rta-row colgap400 ycenter drawer-select"
-					on:click={toggleMenu}
-					on:keydown={fauxfake}
-				>
-					Expand Tours
-					<div class="rta-row ycenter" class:rotated={expandMenu}>
-						<Chevron2 />
-					</div>
-				</div>
-			{/if}
-			{#if expandMenu || $breakZero}
-				<div
-					class="rta-row row-col ycenter rta-drawer-items colgap400 rowgap100 p-bot-16"
-					use:autoAnimate
-					on:click={toggleMenu}
-					on:keydown={fauxfake}
-				>
+				<div class="rta-column p-top-16 rowgap200" use:autoAnimate>
 					{#each chapters as item, i}
-						<button
-							class="drawer-item"
-							on:click={() => toggleAnveshi(i)}
-							on:keydown={fauxfake}
-							class:drawerselection={anveshiFull[i]}>{item.name}</button
-						>
+						{#if anveshiFull[i]}
+							<h3>{item.name}</h3>
+							<div class="rta-row colgap400 rowgap200">
+								<div class="rta-image w32 height-40-30">
+									<img src={item.image} alt={item.name} />
+								</div>
+								<div class="rta-column w64 rowgap200">
+									<div class="rta-row ycenter colgap100">
+										<div class="status-sticker">
+											<small class="tt-u">{item.status}</small>
+										</div>
+										<cite>Next in Plan - {item.dates}</cite>
+									</div>
+									{#if item.content && item.content.length > 0}
+										{#if $breakTwo}
+											<pre class="h6 ta-l">{item.content.slice(0, 320)}...</pre>
+										{:else}
+											<pre class="h6 ta-l">{item.content}</pre>
+										{/if}
+									{/if}
+									<a class="rta-column xleft" href="/anveshi/{item.chapter}"
+										><button class="newbutton big">Read More</button></a
+									>
+								</div>
+							</div>
+						{/if}
 					{/each}
 				</div>
 			{/if}
-			<div class="rta-column" use:autoAnimate>
-				{#each chapters as item, i}
-					{#if anveshiFull[i]}
-						<div class="rta-row row-col colgap400 rowgap200">
-							<div class="rta-image w32 height-40-30">
-								<img src={item.image} alt={item.name} />
-							</div>
-							<div class="rta-column w64 rowgap200">
-								<div class="rta-row ycenter colgap100">
-									<div class="status-sticker">
-										<small class="tt-u">{item.status}</small>
-									</div>
-									<cite>{item.dates}</cite>
-								</div>
-								{#if breakPoint}
-									<h4>{item.name}</h4>
-								{/if}
-								{#if item.content && item.content.length > 0}
-									<pre class="h6">{item.content}</pre>
-								{/if}
-								<CompButton><a href="/anveshi/{item.chapter}">Read More</a></CompButton>
-							</div>
-						</div>
-					{/if}
-				{/each}
-			</div>
-		{/if}
+		</div>
 	</div>
 </div>
-<!--end-->
 
 <!--latest drashta courses-->
 <div class="rta-column rowgap600 ycenter outer-box minH" data-lenis-scroll-snap-align="start">
@@ -802,8 +715,28 @@
 	&:hover
 		&::after, &::before
 			width: 100%
-	@media screen and (max-width: 1023px)
+	@media screen and (max-width: 768px)
 		width: 100%
+		font-size: 16px
+		font-weight: 400
+		border-radius: 4px
+		
+
+.drawer-select
+	background: #fe4a49
+	color: white
+	width: 80%
+	justify-content: center
+	padding: 4px 8px
+	text-transform: uppercase
+	font-size: 16px
+	font-weight: bold
+	border-radius: 4px
+
+.drawer-select.isactive
+	background: none
+	border: 1px solid var(--contraster2)
+	color: var(--contraster2)
 
 .light
 	.drawer-item

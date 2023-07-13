@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { draw } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
-	import { themeMode, sideMode } from '$lib/stores/globalstores';
+	import { themeMode, sideMode, breakTwo } from '$lib/stores/globalstores';
 	import { browser } from '$app/environment';
 	import tippy, { animateFill } from 'tippy.js';
 	import LogDhiti from '$lib/logos/LogDhiti.svelte';
@@ -26,7 +26,11 @@
 	export let opacitor: number;
 	let opa: number;
 
-	$: opa = opacitor / 700;
+	$: if (!$breakTwo) {
+		opa = opacitor / 700;
+	} else {
+		opa = 1;
+	}
 
 	function toggleVisibility() {
 		if (browser) {

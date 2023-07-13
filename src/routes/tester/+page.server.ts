@@ -26,7 +26,7 @@ export const actions: Actions = {
 			showChip('invalid credentials!', '#fe4a49');
 		}
 
-		throw redirect(303, '/newsletter');
+		throw redirect(303, '/tester');
 	},
 
 	signup: async({
@@ -45,19 +45,19 @@ export const actions: Actions = {
 			const { error } = await supabase.auth.signUp({
 				email: email,
 				password: password,
-				options: { emailRedirectTo: '/' }
+				options: { emailRedirectTo: '/tester' }
 			});
 		if (error) {
 			showChip('Error! Please check submitted details again.', '#fe4a49');
 		} 
 
-		throw redirect(303, '/');
+		throw redirect(303, '/tester');
 		},
 
 	signout: async ({ 
 		locals: { supabase } 
 	}) => {
 		await supabase.auth.signOut();
-		throw redirect(303, '/newsletter');
+		throw redirect(303, '/tester');
 	}
 	};
