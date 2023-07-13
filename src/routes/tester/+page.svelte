@@ -6,6 +6,7 @@
 	import Chevron from '$lib/icons/chevrond.svelte';
 	import Chevron2 from '$lib/icons/chevrond.svelte';
 	import { themeMode, breakZero } from '$lib/stores/globalstores';
+	import { listUsers } from '$lib/utils/supapulls';
 	import Header from '$lib/components/SubHeader.svelte';
 	import ButtonEmerge from '$lib/anims/ButtonEmerge.svelte';
 	import ButtonEmerge2 from '$lib/anims/ButtonEmerge.svelte';
@@ -49,11 +50,16 @@
 	let eps: any;
 	let oH: number;
 	let breakPoint: boolean;
+	let users: any;
 	let fake = false;
 	let anveshiFull = Array(10).fill(false);
 	anveshiFull[0] = true;
 	let drashtaFull = Array(10).fill(false);
 	drashtaFull[0] = true;
+	export let data;
+
+	let { user, tableData } = data;
+	$: ({ user, tableData } = data);
 
 	function toggleMenu() {
 		expandMenu = !expandMenu;
@@ -102,6 +108,7 @@
 			chapters = await allChapters();
 			courses = await allCourses();
 			eps = await svEpisodes();
+			users = await listUsers();
 		})();
 	});
 </script>
@@ -123,6 +130,18 @@
 
 <div class="stout rta-column p-top-128 minH" class:light={$themeMode} class:dark={!$themeMode}>
 	<div class="instout rta-column rowgap400 pagila">
+		<div class="rta-column rowgap400 p-bot-64">
+			{#if users && users.length > 0}
+				<div class="rta-column">
+					{#each users as user}
+						<p>{user.id}</p>
+					{/each}
+				</div>
+			{/if}
+			<div>Protected content for {user.email}</div>
+			<pre>{JSON.stringify(tableData, null, 2)}</pre>
+			<pre>{JSON.stringify(user, null, 2)}</pre>
+		</div>
 		<div class="rta-column rowgap400 xcenter ta-c p-bot-64">
 			<h1>
 				Bṛhat is a<br />

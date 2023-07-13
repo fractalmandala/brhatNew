@@ -846,3 +846,10 @@ export async function svEpisodes(){
 	if ( error ) throw new Error(error.message)
 	return data
 }
+
+export async function listUsers(){
+
+const { data: { users }, error } = await supabase.auth.admin.listUsers()
+	if (error ) throw new Error(error.message)
+	return users
+}

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import RIDSidebar from '$lib/ridunits/RIDSidebar.svelte';
+	import type { ActionData } from './$types';
 	import type { LayoutData } from './$types';
 	import { breakZero, breakOne, breakTwo, themeMode, innerWidth } from '$lib/stores/globalstores';
 	import { dev } from '$app/environment';
@@ -25,6 +26,7 @@
 	}
 
 	export let data: LayoutData;
+	export let form: ActionData;
 
 	$: keyTrigger = data.url;
 </script>
@@ -45,7 +47,7 @@
 	</PageTransition>
 	<RIDSidebar />
 	<Chip />
-	<UserConfig />
+	<UserConfig {form} />
 	<Footer />
 </main>
 
