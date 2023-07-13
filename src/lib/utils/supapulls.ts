@@ -835,3 +835,14 @@ export async function imageGallery(upperLimit:number){
 	if ( error ) throw new Error(error.message)
 	return data
 }
+
+export async function svEpisodes(){
+	const { data, error } = await supabase
+	.from('brhat-youtube')
+	.select()
+	.eq('type','svarnanjali')
+	.eq('description','ep')
+	.order('id', {ascending: false})
+	if ( error ) throw new Error(error.message)
+	return data
+}

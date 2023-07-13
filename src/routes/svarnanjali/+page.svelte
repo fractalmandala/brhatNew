@@ -1,30 +1,20 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { langMode, changeLanguage } from '$lib/stores/globalstores';
 	import supabase from '$lib/utils/db';
 	import { showChip } from '$lib/stores/globalstores';
 	import '@splidejs/splide/css/core';
-	import { breakOne, breakZero, breakTwo, themeMode } from '$lib/stores/globalstores';
-	import { getSvarnanjali } from '$lib/utils/supapulls';
-	import SVCar from '$lib/components/SVCar.svelte';
+	import { getSvarnanjali, svEpisodes } from '$lib/utils/supapulls';
 	import SVLogo from '$lib/logos/Svarnanjali2.svelte';
 	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
 	import { testimonialsSvarn } from '$lib/utils/supapulls';
 	import '@splidejs/splide/css/core';
 	import Youtuber from '$lib/components/Youtuber.svelte';
-	import SVTemple from '$lib/anims/SVTemple.svelte';
 	import Head from '$lib/components/HeadComponent.svelte';
-	import Youtuber2 from '$lib/components/Youtuber.svelte';
 	import Prev1 from '$lib/icons/IconPrev.svelte';
 	import Prev2 from '$lib/icons/IconPrev.svelte';
 	import Next1 from '$lib/icons/IconNext.svelte';
 	import Next2 from '$lib/icons/IconNext.svelte';
-	import P01 from '$lib/svpanels/english/panel01.svelte';
-	import P02 from '$lib/svpanels/english/panel02.svelte';
-	import P03 from '$lib/svpanels/english/panel03.svelte';
-	import P04 from '$lib/svpanels/english/panel04.svelte';
 	import P05 from '$lib/svpanels/english/panel05.svelte';
-	import P06 from '$lib/svpanels/english/panel06.svelte';
 	import {
 		metaTitle,
 		metaDescription,
@@ -39,6 +29,7 @@
 	let y: number;
 	let iW: number;
 	let idv = 'OeCFCHwSpd0';
+	let eps: any;
 	let vids: any;
 	let name: string;
 	let submiturl: string;
@@ -77,10 +68,6 @@
 		} else showChip('Form Submitted! Dhanyavāda.', '#10D56C');
 	}
 
-	function toggleLanguage() {
-		language = !language;
-	}
-
 	function fauxfake() {
 		fake = !fake;
 	}
@@ -88,6 +75,7 @@
 	onMount(async () => {
 		vids = await getSvarnanjali();
 		tests = await testimonialsSvarn();
+		eps = await svEpisodes();
 	});
 </script>
 
@@ -119,85 +107,66 @@
 			{/if}
 		</div>
 		<div class="rta-column rowgap200 p-top-64 bord-top">
-			<Splide
-				hasTrack={false}
-				options={{
-					drag: true,
-					keyboard: 'global',
-					waitForTransition: true,
-					type: 'loop',
-					gap: '20px',
-					wheelMinThreshold: 1.1,
-					speed: 900,
-					direction: 'ltr',
-					perPage: 1,
-					pagination: false,
-					breakpoints: {
-						1023: {
-							perPage: 1
+			{#if eps && eps.length > 0}
+				<Splide
+					hasTrack={false}
+					options={{
+						drag: true,
+						keyboard: 'global',
+						waitForTransition: true,
+						type: 'loop',
+						gap: '20px',
+						wheelMinThreshold: 1.1,
+						speed: 900,
+						direction: 'ltr',
+						perPage: 1,
+						pagination: false,
+						breakpoints: {
+							1023: {
+								perPage: 1
+							}
 						}
-					}
-				}}
-			>
-				<SplideTrack>
-					<SplideSlide>
-						<div class="rta-column rowgap100">
-							<Youtuber youTubeId={'jZ6YddYWH9U'} />
-							<p class="ta-c">
-								<a href="https://youtu.be/jZ6YddYWH9U" target="_blank" rel="noreferrer">
-									E1 - Saundaryabodha - Bhasha, Kalaa aur Nagarika (Intro) - सौंदर्यबोध - भाषा, कला
-									और नागरिक
-								</a>
-							</p>
-						</div>
-					</SplideSlide>
-
-					<SplideSlide>
-						<div class="rta-column rowgap100">
-							<Youtuber youTubeId={'gkAaT9XBURE'} />
-							<p class="ta-c">
-								<a href="https://youtu.be/gkAaT9XBURE" target="_blank" rel="noreferrer">
-									E2 - Ram Ki Shakti Puja - राम की शक्ति पूजा
-								</a>
-							</p>
-						</div>
-					</SplideSlide>
-
-					<SplideSlide>
-						<div class="rta-column rowgap100">
-							<Youtuber youTubeId={'weF2xsunKOs'} />
-							<p class="ta-c">
-								<a href="https://youtu.be/weF2xsunKOs" target="_blank" rel="noreferrer">
-									E3 - Ashadh Ka Ek Din
-								</a>
-							</p>
-						</div>
-					</SplideSlide>
-				</SplideTrack>
-				<div
-					class="splide__arrows splide__arrows--ltr rta-row xcenter-d xcenter-m colgap200 p-top-16 m-top-16 bord-top"
+					}}
 				>
-					<button
-						class="splide__arrow splide__arrow--prev newbutton"
-						type="button"
-						aria-label="Previous slide"
-						aria-controls="splide01-track"
+					<SplideTrack>
+						{#each eps as item}
+							<SplideSlide>
+								<div class="rta-column rowgap100">
+									<Youtuber youTubeId={item.videoid} />
+									<p class="ta-c">
+										<a href={item.link} target="_blank" rel="noreferrer">
+											{item.name}
+										</a>
+									</p>
+								</div>
+							</SplideSlide>
+						{/each}
+					</SplideTrack>
+					<div
+						class="splide__arrows splide__arrows--ltr rta-row xcenter-d xcenter-m colgap200 p-top-16 m-top-16 bord-top"
 					>
-						PREV
-					</button>
-					<button
-						class="splide__arrow splide__arrow--next newbutton"
-						type="button"
-						aria-label="Next slide"
-						aria-controls="splide01-track"
-					>
-						NEXT
-					</button>
-					<a href="https://www.youtube.com/@brhat" target="_blank" rel="noreferrer">
-						<button class="newbutton svar"> Youtube </button>
-					</a>
-				</div>
-			</Splide>
+						<button
+							class="splide__arrow splide__arrow--prev newbutton-sv"
+							type="button"
+							aria-label="Previous slide"
+							aria-controls="splide01-track"
+						>
+							PREV
+						</button>
+						<button
+							class="splide__arrow splide__arrow--next newbutton-sv"
+							type="button"
+							aria-label="Next slide"
+							aria-controls="splide01-track"
+						>
+							NEXT
+						</button>
+						<a href="https://www.youtube.com/@brhat" target="_blank" rel="noreferrer">
+							<button class="newbutton-sv"> Youtube </button>
+						</a>
+					</div>
+				</Splide>
+			{/if}
 			<div class="rta-column rowgap50 xcenter bord-bot p-bot-16">
 				<small>Subscribe:</small>
 				<div
@@ -241,7 +210,7 @@
 						{/each}
 					</SplideTrack>
 					<div
-						class="splide__arrows splide__arrows--ltr rta-row xcenter-d xcenter-m colgap200 p-top-16 m-top-16 bord-top"
+						class="splide__arrows splide__arrows--ltr rta-row xcenter-d xcenter-m colgap200 p-bot-32 bord-bot"
 					>
 						<button
 							class="splide__arrow splide__arrow--prev blank-button"
@@ -266,11 +235,11 @@
 		<div class="rta-column rowgap100 xcenter p-top-64">
 			{#if $userLang === 'Hindi'}
 				<h4>हिंदी में आगे बढ़ें, अथवा,</h4>
-				<button class="newbutton big" on:click={setEnglish}> Read in English </button>
+				<button class="newbutton-sv" on:click={setEnglish}> Read in English </button>
 			{/if}
 			{#if $userLang === 'English'}
 				<h4>Continue in English, or,</h4>
-				<button class="newbutton big" on:click={setHindi}>हिन्दी में पढ़ें</button>
+				<button class="newbutton-sv" on:click={setHindi}>हिन्दी में पढ़ें</button>
 			{/if}
 		</div>
 		{#if $userLang === 'English'}
@@ -335,7 +304,7 @@
 					<input type="email" placeholder="Email ID" bind:value={email} />
 					<input type="URL" placeholder="Link to Video" bind:value={submiturl} />
 					{#if isValidEmail}
-						<button type="submit" class="genbutton" on:click={handleSubmit}>Send</button>
+						<button type="submit" class="newbutton-sv" on:click={handleSubmit}>Send</button>
 					{/if}
 				</form>
 			</div>
@@ -513,7 +482,7 @@
 					<input type="email" placeholder="Email ID" bind:value={email} />
 					<input type="URL" placeholder="Link to Video" bind:value={submiturl} />
 					{#if isValidEmail}
-						<button type="submit" class="genbutton" on:click={handleSubmit}>Send</button>
+						<button type="submit" class="newbutton-sv" on:click={handleSubmit}>Send</button>
 					{/if}
 				</form>
 			</div>

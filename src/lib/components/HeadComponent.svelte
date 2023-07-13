@@ -36,4 +36,5 @@
 
 		gtag('config', 'G-6NPMDTQVDE');
 	</script>
+	<script src="https://apis.google.com/js/platform.js"></script>
 </svelte:head>

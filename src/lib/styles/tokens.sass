@@ -699,6 +699,7 @@ body, html
 	--teal: #0B6E4F
 	--forline: #e7e7e7
 	--texttwo: #474747
+	--svara: #D47915
 
 .dark
 	--dhiticolor: #0B6E4F
@@ -718,6 +719,7 @@ body, html
 	--yellow: #E4A503
 	--teal: #0B6E4F
 	--forline: #272727
+	--svara: #D47915
 
 //buttons
 .blank-button
@@ -1475,3 +1477,36 @@ body, html
 				column-gap: 24px
 				row-gap: 32px
 		
+
+.newbutton-sv
+	min-width: 6.5em
+	height: 27px
+	background: #474747
+	color: white
+	border: none
+	border-radius: 6px
+	font-size: 12px
+	font-weight: bold
+	cursor: pointer
+	position: relative
+	z-index: 1
+	overflow: hidden
+	&:hover
+		color: white
+	&::after
+		content: ''
+		background: white
+		position: absolute
+		z-index: -1
+		left: -20%
+		right: -20%
+		top: 0
+		bottom: 0
+		transform: skewX(-45deg) scale(0, 1)
+		transition: all 0.5s
+	&:hover
+		&::after
+			transform: skewX(-45deg) scale(1, 1)
+			-webkit-transition: all 0.5s
+			transition: all 0.5s
+			background: var(--svara)
