@@ -320,11 +320,8 @@
 					<div class="rta-column rowgap100 firstrow p-top-32 p-bot-16">
 						<p class="small">Select Font Size: only for Dhīti Blog Posts.</p>
 						<small class="tt-l">Current Font Size is <strong>{$fontSize}</strong></small>
-						<button
-							class="blank-button m-top-16 {$fontSize}"
-							style="font-family: 'Adobe Devanagari'"
-						>
-							<p>This is the current text size.</p>
+						<button class="blank-button m-top-16" style="font-family: 'Adobe Devanagari'">
+							<p class="changings-{$fontSize}">This is the current text size.</p>
 						</button>
 						<div class="rta-row ycenter xcenter-d xcenter-m colgap200">
 							{#if fsize[1]}
