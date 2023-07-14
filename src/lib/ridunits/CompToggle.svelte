@@ -11,6 +11,7 @@
 	let flyX: number;
 	let flyY: number;
 	let dim = 20;
+	export let color = '#d7d7d7';
 
 	$: if (iW <= 1023) {
 		breakPoint = true;
@@ -51,9 +52,9 @@
 	on:mouseleave={toggleLeave}
 >
 	{#if $themeMode}
-		<Moon dimension={dim} />
+		<Moon dimension={dim} {color} />
 	{:else}
-		<Sun dimension={dim} />
+		<Sun dimension={dim} {color} />
 	{/if}
 
 	{#if tooltip && $themeMode}
@@ -67,7 +68,7 @@
 	{/if}
 	{#if tooltip && !$themeMode}
 		<div
-			class="rta-column tooltip"
+			class="rta-column tooltip rota"
 			transition:fly={{ duration: 100, x: flyX, y: flyY, easing: backOut }}
 			class:modile={breakPoint}
 		>
@@ -82,6 +83,7 @@
 	position: relative
 	width: 24px
 	justify-content: flex-end
+	margin-bottom: 2px
 
 .tooltip
 	position: absolute
@@ -90,22 +92,19 @@
 	font-size: 12px
 	min-width: 120px
 	text-align: center
-	padding: 2px 8px 0 8px
+	padding: 2px
 	border-radius: 2px
-	font-weight: 600
-
-.tooltip.modile
-	left: 0
-	bottom: -32px
+	font-family: 'Rota'
+	text-transform: uppercase
+	letter-spacing: 1px
+	font-weight: bold
 
 .light
 	.tooltip
-		background: white
-		color: #272727
+		color: #a7a7a7
 
 .dark
 	.tooltip
-		background: white
-		color: #272727
+		color: #575757
 
 </style>

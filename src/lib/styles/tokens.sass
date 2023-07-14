@@ -39,6 +39,8 @@ $unit128: 128px
 .light
 	--dhiticolor: #0B6E4F
 	--opposite: #272727
+	--grade2: #474747
+	--grade3: #a7a7a7
 	--contraster: #f7f7f7
 	--contraster2: #d7d7d7
 	--shadowline: #d7d7d7
@@ -57,10 +59,13 @@ $unit128: 128px
 	--texttwo: #474747
 	--svara: #D47915
 	--darkseven: #575757
+	--hilite: #FF9F1C
 
 .dark
 	--dhiticolor: #0B6E4F
 	--opposite: #FFFFFF
+	--grade2: #d7d7d7
+	--grade3: #414141
 	--contraster: #313131
 	--contraster2: #313131
 	--shadowline: #090909
@@ -78,6 +83,7 @@ $unit128: 128px
 	--forline: #272727
 	--svara: #D47915
 	--darkseven: #d7d7d7
+	--hilite: #FF9F1C
 
 
 .dhitiblogbox
@@ -92,6 +98,9 @@ $unit128: 128px
 	object-fit: contain
 	height: 600px
 	margin-bottom: 24px
+
+.img-std
+	object-fit: contain
 
 :root
 	--strong: #B0413E
@@ -276,6 +285,17 @@ body, html
 .is-svar
 	color: #D47915
 
+.min100
+	&.rta-column
+		justify-content: center
+	&.rta-row
+		align-items: center
+	@media screen and (min-width: 769px)
+		min-height: 100vh
+	@media screen and (max-width: 768px)
+		padding-top: 64px
+		padding-bottom: 64px
+
 //sizing
 .minH
 	@media screen and (min-width: 1024px)
@@ -298,6 +318,12 @@ body, html
 		height: 20vh
 	@media screen and (max-width: 1023px)
 		height: 20vh
+
+.image-20-20
+	@media screen and (min-width: 769px)
+		height: 200px
+	@media screen and (max-width: 768px)
+		height: 200px
 
 .height-30
 	@media screen and (min-width: 1024px)
@@ -489,6 +515,29 @@ body, html
 	grid-auto-flow: row
 	grid-template-rows: auto
 	width: 100%
+	
+.side-l
+	display: grid
+	grid-auto-flow: row
+	grid-template-rows: auto
+	@media screen and (min-width: 1200px)
+		grid-template-columns: 280px 1fr
+		grid-template-areas: ". ."
+		column-gap: 32px
+	@media screen and (max-width: 1199px) and (min-width: 1024px)
+		grid-template-columns: 240px 1fr
+		grid-template-areas: ". ."
+		column-gap: 32px
+	@media screen and (max-width: 1023px) and (min-width: 769px)
+		grid-template-columns: 216px 1fr
+		grid-template-areas: ". ."
+		column-gap: 24px
+	@media screen and (max-width: 768px)
+		grid-template-columns: 1fr
+		grid-template-areas: "." "."
+		row-gap: 16px
+		.left-main
+			padding-top: 16px
 
 .rta-grid.ycenter
 	align-items: center
@@ -677,6 +726,8 @@ body, html
 	padding-top: 32px
 .p-bot-32
 	padding-bottom: 32px
+.p-bot-24
+	padding-bottom: 24px
 .p-bot-32-m
 	@media screen and (max-width: 1023px)
 		padding-bottom: 32px
@@ -1417,6 +1468,11 @@ body, html
 			transition: all 0.5s
 			background: #fe4a49
 
+.newbutton.big.open
+	&:hover
+		&::after
+			background: var(--hilite)
+
 
 .newbutton.red.big
 	min-width: 7.2em
@@ -1511,3 +1567,7 @@ body, html
 			-webkit-transition: all 0.5s
 			transition: all 0.5s
 			background: var(--svara)
+
+
+.br6
+	border-radius: 6px

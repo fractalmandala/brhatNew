@@ -166,6 +166,17 @@ export async function Shabdavali() {
   return data 
 }
 
+export async function latestMrdanga() {
+	const { data, error } = await supabase
+  .from('brhat-youtube')
+  .select()
+	.eq('type','mrdanga')
+  .order('id',{ascending: false})
+  .limit(6)
+  if (error) throw new Error(error.message)
+  return data
+}
+
 export async function latestVidsFour() {
 	const { data, error } = await supabase
   .from('brhat-youtube')
@@ -247,6 +258,7 @@ export async function allChapters() {
 	.from('brhat-anveshi')
 	.select()
 	.eq('type','chapter')
+	.order('sequence', {ascending: false})
 	if (error) throw new Error(error.message)
 	return data
 }

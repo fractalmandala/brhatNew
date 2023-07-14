@@ -216,6 +216,24 @@ In the second instance, where the link is inside a tag:
 <div class="cite">then we use it like <a href="put link here">this</a> being the linked text.</div>
 ```
 
+###### Reference for Endnotes and Superscripts
+Superscripts are the tiny text at top-right of a word like 1<sup class="nonce">st</sup>, 19<sup class="nonce">th</sup> and this<sup>1</sup>. Notice, that the final superscript is colored red, but the earlier ones are not. How?
+1. Superscripts that mark points which are Endnotes at the end of any post, are put in `<sup>` tags. That is, these are only numbers.
+2. Any other superscripts, such as those in words like "19<sup class="nonce">th</sup> century" are put inside `<sup>` tags with the classname = "nonce".
+
+Examples:
+```markdown
+This is how we insert superscripts for endnote markers<sup>1</sup>.
+
+And the 2<sup class="nonce">nd</sup> instance is how we put all other superscripts.
+```
+These would appear on a page like so:
+
+<div class="rta-grid grid2">
+<img style="height: 48px" class="img-std" src="/images/superscriptendnote.png" alt="superscript endnote"/>
+<img style="height: 48px" class="img-std" src="/images/superscriptother.png" alt="superscript other"/>
+</div>
+
 ###### Reference for Markdown
 Double check final files for some basic markdown requirements:
 1. All text to be italicized is inside *a single asterix symbol* on either side of the text- *
@@ -224,6 +242,7 @@ Double check final files for some basic markdown requirements:
 4. For italics, you can use either asterix or underscore, but **use the same standard throughout the whole file**
 5. All quotations are italic **by default**. This means you must ensure they do not have asterix/underscore at the beginning or end of lines.
 6. <span style="color: #fe4a49">If you have a symbol at one end of the line but not the other, ie., you opened them but did not close or closed an unopen tag, the symbol will appear in the final front-text!</span>
+7. All superscripts for endnotes must be inside `<sup>` tags, any other superscripts should be inside `<sup>` tags with classname = "nonce".
 
 Here is how these instances appear within the markdown body:
 ```markdown
@@ -233,6 +252,7 @@ Here is how these instances appear within the markdown body:
 4. For italics, you can use either asterix or underscore, but **use the same standard throughout the whole file**
 5. All quotations are italic **by default**. This means you must ensure they do not have asterix/underscore at the beginning or end of lines.
 6. <span style="color: #fe4a49">If you have a symbol at one end of the line but not the other, ie., you opened them but did not close or closed an unopen tag, the symbol will appear in the final front-text!</span>
+7. Superscripts for endnote markers<sup>1</sup>; and for others like 2<sup class="nonce">nd</sup>.
 ```
 
 ###### Special Notice on Markdown Frontmatter:

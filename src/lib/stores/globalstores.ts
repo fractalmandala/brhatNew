@@ -44,11 +44,7 @@ export const themeMode = writable(storedThemeMode);
 const storedConfigMode = browser ? JSON.parse(localStorage.getItem('configMode') || 'false') : false;
 export const configMode = writable(storedConfigMode);
 
-const storedReadingMode = browser
-	? JSON.parse(localStorage.getItem('readingMode') || 'false')
-	: false;
-
-export const readingMode = writable(storedReadingMode);
+export const menuMode = writable(false);
 
 const initialWidth = browser ? window.innerWidth : 1024;
 export const innerWidth = writable(initialWidth);

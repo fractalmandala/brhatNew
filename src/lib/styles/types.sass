@@ -1,5 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap')
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap')
+
+@font-face
+	font-family: 'Rota'
+	src: url('/fonts/rota-regular.woff2') format('woff2')
+	font-weight: normal
+	font-style: normal
+
+@font-face
+	font-family: 'Rota'
+	src: url('/fonts/rota-bold.woff2') format('woff2')
+	font-weight: 700
+	font-style: normal
 
 @font-face
 	font-family: 'Oak-Sans'
@@ -139,14 +150,20 @@
 	font-weight: bold
 	font-style: normal
 
-$home: 'Libre Franklin', sans-serif
+$home: 'Readex Pro', sans-serif
 $hind: 'Adobe Devanagari', serif
 $stix: 'Adobe Devanagari', serif
-$libre: 'Libre Franklin', sans-serif
-$grot: 'Libre Franklin', sans-serif
+$libre: 'Readex Pro', sans-serif
+$grot: 'Readex Pro', sans-serif
+
+.rota
+	font-family: 'Rota'
+
+p.rota
+	letter-spacing: 0.25px
 
 input
-	font-family: 'Libre Franklin', sans-serif
+	font-family: 'Readex Pro', sans-serif
 
 h6.nohemi
 	font-weight: 700
@@ -360,6 +377,7 @@ pre.h5
 pre.h6
 	font-size: 15px
 	line-height: 1.4
+	font-weight: 300
 
 h5
 	font-size: 4vw
@@ -401,7 +419,7 @@ h1
 	letter-spacing: -1px
 	color: var(--opposite)
 	line-height: 1
-	font-weight: 700
+	font-weight: 600
 
 @media screen and (min-width: 576px)
 	h1
@@ -945,6 +963,10 @@ button.greenbutton
 			font-style: italic
 	a
 		color: #fe4a49
+	sup
+		color: #fe4a49
+	sup.nonce
+		color: var(--themer)
 	h6
 		margin-top: 36px
 		margin-bottom: 16px
