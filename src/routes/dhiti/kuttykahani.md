@@ -1,11 +1,10 @@
 ---
 title: Kutty Kahani
-author: Padmavathy Manavazhahan
+author: Brhat
 category: Dharma Today
-excerpt: "A short review of the video embedded e-book 'Kutty Kahani' produced by Padma Śrī Ananda Shankar Jayant"
+excerpt: "A short intro of the video embedded e-book 'Kutty Kahani' produced by Padma Śrī Ananda Shankar Jayant"
 tags:
 - storytelling
-- book review
 date: "2023-07-14"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/kuttykahani/1
 ---
