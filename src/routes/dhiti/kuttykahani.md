@@ -46,8 +46,7 @@ Reading it is an immersive experience with brief ‘Did You Know’ text and che
 
 #### Where can I get this for my loved ones?
 
-Kutty Kahani is a Kindle ebook available on Amazon, **globally** - not only on[ Amazon India](https://www.amazon.in/Kutty-Kahani-Storytellers-multi-lingual-book-ebook/dp/B0C1T3L6PR/ref=sr_1_3?crid=2DZBLBZQQG4LV&keywords=kutty+kahani&qid=1689191545&sprefix=kutty+kaha%2Caps%2C336&sr=8-3) or [Amazon.com](https://www.amazon.com/Kutty-Kahani-Storytellers-multi-lingual-book-ebook/dp/B0C1T3L6PR/ref=sr_1_1?crid=1AE7U7RQ7L4WH&keywords=kutty+kahani&qid=1689191505&sprefix=kutty+kahan%2Caps%2C243&sr=8-1), but across other the global Amazon portals as well.
-
+Kutty Kahani is a Kindle ebook available on Amazon, **globally** - not only on [ Amazon India](https://www.amazon.in/Kutty-Kahani-Storytellers-multi-lingual-book-ebook/dp/B0C1T3L6PR/ref=sr_1_3?crid=2DZBLBZQQG4LV&keywords=kutty+kahani&qid=1689191545&sprefix=kutty+kaha%2Caps%2C336&sr=8-3) or [Amazon.com](https://www.amazon.com/Kutty-Kahani-Storytellers-multi-lingual-book-ebook/dp/B0C1T3L6PR/ref=sr_1_1?crid=1AE7U7RQ7L4WH&keywords=kutty+kahani&qid=1689191505&sprefix=kutty+kahan%2Caps%2C243&sr=8-1), but across other the global Amazon portals as well.
 
 #### What makes it so relevant today? 
 
