@@ -12,7 +12,7 @@ image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwe
 
 >###### It is said that the shortest distance between two people is a story. And India is a treasure
 >###### house of such stories. Alas, our children know more about Harry Potter than the
->###### Pañcatantra; more about Superman than Hanumān.**Kutty Kahani** is a valiant effort to plug
+>###### Pañcatantra; more about Superman than Hanumān. **Kutty Kahani** is a valiant effort to plug
 >###### this gap by bringing our ancient wisdom to children through children.”
 <cite>Ashwin Sanghi, Author</cite>
 
