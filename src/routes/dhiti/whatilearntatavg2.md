@@ -29,13 +29,8 @@ What happens when we constantly dwell on our joy, our completeness, our fullness
 
 Sitting in the front row to the right of Pūjya Svāmīji, as he sat facing us on his chair, I had to be extra vigilant to be attentive, not to nod off into a quick nap. What with getting up early to make it in time for the 5.30am abhiśekam for Lord Dakṣiṇāmūrti followed by dhyānam, followed by a slew of Vedānta and Sanskṛtam classes the whole day, the Śrīmadbhagavad‌gītā class at 5.00pm seemed to help ease some of us into happy slumber! I shook myself awake just in time to see a figure rushing in and whisper something in Pūjya Svāmīji’s ear. This was unheard of! No one dare interrupt any class in this gurukulam, so how did this happen? Everyone was loud enough in their eager silence. Yet Svāmīji continued with his class after the man had left, as though nothing untoward had transpired, giving us no explanation. He cracked his usual jokes, he burst into cackles, he taught us
 
-<div class="hindi">
-
-##### गतासूनगतासूंश्च नानुशोचन्ति पण्डिता:
-
-</div>
-
-##### gatāsūn-agatāsūnśh-ca nānuśhochanti paṇḍitāḥ
+> गतासूनगतासूंश्च नानुशोचन्ति पण्डिता:  
+> gatāsūn-agatāsūnśh-ca nānuśhochanti paṇḍitāḥ
 
 And left after an hour of enthralling us with the truth of our svarūpā. After a few days we had a feast in the dining hall, there was a photo of a recently departed person garlanded with fresh flowers, a lit lamp, burning agarbattī and lunch offerings were arranged in front of his picture. People started whispering – *Pūjya Svāmīji’s pūrvāśrama brother died it seems, did you know?* So that was what it was about, that man the other day rushing in to give Svāmīji the news. Note, I did not say ‘sad’ news. Looking at life as is, as facts, with open eyes, is what Vedānta teaches us. And it indeed did with a live example. It taught me to shift my question from ‘why me’ to ‘why not me’? From ‘what! Oh my god!’ to ‘so what!’. This drastically helped reduce the latent victim complex that lay in the deep recesses of my subconscious. Grief is cathartic upto a point but after that critical point dwelling on it constantly as a habit, that is victimhood. My gurus taught me by example to break that bad habit of indulging in pain and sorrow.
 
@@ -43,30 +38,23 @@ And left after an hour of enthralling us with the truth of our svarūpā. After 
 
 Not everything at the gurukulam was so grim! Far from it. In fact I learnt more about living with ānanda staying under my guru’s loving affectionate care than anywhere else. One of the joys of living is eating delicious, nutritious food. And Pūjya Svāmīji was as much of a rasika of good culinary skills as he was of dance and music, or even cricket. When he talked of cooking, he would often say that a **house is a home only when its kitchen fires are burning.** When we cook daily we do it not just for us but for the pañca maha yajñas that we must perform everyday-to offer food to our devatās, ṛṣis, pitṛs, bhūtas, manuṣyas.
 
-<div class="hindi">
-
-##### यज्ञशिष्टाशिन: सन्तो मुच्यन्ते सर्वकिल्बिषै:
-##### भुञ्जते ते त्वघं पापा ये पचन्त्यात्मकारणात्
-
-</div>
-
-##### yajña-śiṣṭāśinaḥ santo mucyante sarva-kilbiṣaiḥ
-##### bhuñjate te tvaghaṁ pāpā ye pacantyātma-kāraṇāt
-
-##### The spiritually-minded, who eat food that is first offered, are released from all kinds of pāpa. Others, who cook food for their own enjoyment, verily eat only pāpa.
+> यज्ञशिष्टाशिन: सन्तो मुच्यन्ते सर्वकिल्बिषै:  
+> भुञ्जते ते त्वघं पापा ये पचन्त्यात्मकारणात्
+>    
+> yajña-śiṣṭāśinaḥ santo mucyante sarva-kilbiṣaiḥ  
+> bhuñjate te tvaghaṁ pāpā ye pacantyātma-kāraṇāt  
+>    
+> The spiritually-minded, who eat food that is first offered, are released from all kinds of pāpa. Others, who cook food for their own enjoyment, verily eat only pāpa.
 
 After I left the gurukulam I began cooking daily, thrice a day, not to simply satiate my tastebuds, not for trying out a variety of cuisines because I am bored with regularity but to feed those who depend on me. They eat and then I eat, else it is as good as my being a thief stealing food from nature’s kitchen. Apart from cooking fresh food for every meal, the kind of food I ate also changed. I was always a vegetarian but the intake of sātvika āhāra increased. It meant no more cheese, no more accepting engili bhojanam, not eating somebody’s leftovers, not eating food from the previous night, etc., all tāmasika food was out. Eating out was limited to office lunches and celebrations with friends. In the current day such strict practices are laughed at but it helps to surround ourselves with likeminded people who respect our choices and appreciate us for who we are and not mock us if we think or act differently.
 
-<div class="hindi">
-
-##### यातयामं गतरसं पूति पर्युषितं च यत्
-##### उच्छिष्टमपि चामेध्यं भोजनं तामसप्रियम्
-
-</div>
-
-##### yāta-yāmaṁ gata-rasaṁ pūti paryuṣitaṁ ca yat
-##### uchiṣṭam api cāmedhyaṁ bhojanaṁ tāmasa-priyam
-##### Foods that are overcooked, stale, putrid, polluted, and impure are dear to persons in the mode of ignorance
+> यातयामं गतरसं पूति पर्युषितं च यत्    
+> उच्छिष्टमपि चामेध्यं भोजनं तामसप्रियम्   
+>    
+> yāta-yāmaṁ gata-rasaṁ pūti paryuṣitaṁ ca yat  
+> uchiṣṭam api cāmedhyaṁ bhojanaṁ tāmasa-priyam  
+>    
+> Foods that are overcooked, stale, putrid, polluted, and impure are dear to persons in the mode of ignorance
 
 I started treating the kitchen, food, and cooking as a sacred space and activity not as a hobby. Talking while cooking stopped, so did getting up in the middle of a meal. There was no more eating while walking, standing, watching TV – **as <span class="hindi">अन्नं ब्रह्म इति व्यजानात्</span> annaṁ brahmeti vyajānāt, annam is brahman.** food sustains and nourishes us, so we are ever reverential towards it. This would mean that we ought not to plaster cakes on our faces at birthday parties, ought not to throw food about or play with it, nor to critique food items and categorize them as good or bad, as tasty or terrible and we ought to definitely make sure that our plates are clean when we are done eating. And that we ought to share food easily and freely.
 
@@ -80,15 +68,11 @@ Now a major issue at the gurukulam was that we had women from all over the world
 
 Go with the flow without disturbing anything. Individually you can and are free to practise what you will but in public spaces follow rules to maintain harmony. At a certain level none of this matters, but until then all of this does matter. The wise should not create discord in the minds of ignorant people, who are attached to certain actions.
 
-<div class="hindi">
-
-##### नबुद्धिभेदं जनयेदज्ञानां कर्मसङ्गिनाम्
-##### जोषयेत्सर्वकर्माणि विद्वान्युक्त: समाचरन्
-
-</div>
-
-##### na buddhi-bhedaṁ janayed ajñānāṁ karma-saṅginām
-##### joṣayet sarva-karmaṇi vidvān yuktaḥ samācaran
+> नबुद्धिभेदं जनयेदज्ञानां कर्मसङ्गिनाम्   
+> जोषयेत्सर्वकर्माणि विद्वान्युक्त: समाचरन्   
+> 
+> na buddhi-bhedaṁ janayed ajñānāṁ karma-saṅginām   
+> joṣayet sarva-karmaṇi vidvān yuktaḥ samācaran
 
 People would be confused at the various answers given by Pūjya Svāmīji. They would expect him to be either all excusing or extremely strict. But this is not how great people behave, they do not conform to our idea of how they should be. I learnt an important lesson that I cannot expect my guru to be infallible, just as we must not expect god to be infallible. We were taught something very path breaking; īśvara is not infallible, so that we do not expect a perfect being called god who can do no wrong only to get disappointed the moment we see some wrongdoing in the world. We start lamenting, beating our chest and cry; how can a god in heaven allow this to happen! Instead we say; **that which is infallible is īśvara.** Although this seems contradictory, pay attention to what we consider infallible: not a figurehead who can do no wrong, because when this god allows something terrible in the world, we express anger and disappointment. Instead what we actually consider infallible is that which is so, that which never fails to show up and do what it is supposed to do, that which is always working and for everyone, not just for a select group, and that which makes sure we are offered just desserts come what may if we go against the universal law.
 

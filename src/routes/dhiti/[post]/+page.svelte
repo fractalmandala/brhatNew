@@ -29,6 +29,7 @@
 
 	let posts: any;
 	let thisAuthorPosts: any;
+	let secondAuthorPosts: any;
 	let fake: boolean = false;
 	let member: any;
 	let member2: any;
@@ -39,6 +40,7 @@
 	let scY: number;
 	fsize[1] = true;
 	let observer: any;
+	let auth2check = false;
 
 	function toggleFont(index: number) {
 		fsize[index] = !fsize[index];
@@ -66,6 +68,10 @@
 		} else $fontSize = 'std';
 	}
 
+	$: if (data.authortwo !== '' || data.authortwo !== undefined) {
+		auth2check = true;
+	}
+
 	onMount(() => {
 		$metaUrl = $page.url.pathname;
 		$metaTitle = data.title;
@@ -77,6 +83,10 @@
 			member2 = await brhatTeamMember(data.authortwo);
 			posts = await latestDhitiTen();
 			thisAuthorPosts = await authorfiltered(data.author);
+			secondAuthorPosts = await authorfiltered(data.authortwo);
+			if (data.authortwo !== '') {
+				auth2check = true;
+			}
 
 			document.querySelectorAll('a').forEach((a) => {
 				a.setAttribute('target', '_blank');
@@ -221,8 +231,8 @@
 	<div class="stout bord-top p-top-64">
 		<div class="instout pagila rta-column">
 			<div class="rta-column rowgap400">
+				<h3 class="p-bot-16">More by Same Author(s):</h3>
 				{#if thisAuthorPosts && thisAuthorPosts.length > 0}
-					<h3 class="p-bot-16">More from {data.author}:</h3>
 					{#each thisAuthorPosts as item}
 						{#if item.meta.title !== data.title}
 							<div class="rta-column body">
@@ -242,6 +252,7 @@
 						{/if}
 					{/each}
 				{/if}
+
 				<h3 class="p-top-64 bord-top">Latest Posts:</h3>
 				{#if posts && posts.length > 0}
 					{#each posts as item}

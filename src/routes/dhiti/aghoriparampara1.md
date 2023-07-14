@@ -25,8 +25,6 @@ Given his <u>first-hand experience with the Aghorī sampradāya,</u> Shri Prabha
 
 The first article in this three part series takes a comprehensive and detailed look at the Aghorī-s. The second article debunks and counters certain baised and ignorant narratives made notorious by various news, and entertainment channels/ organizations. The third article, albeit shorter, promises to be interesting as it deals with his personal experience and how he got the insider’s knowledge of this rare and much misunderstood tradition.
 
-### Part 1- Towards Understanding The Aghorī Paramparā
-
 #### Who are the Aghorī-s?
 They are an independent tāntrika sect that claims its lineage from Guru Dattātreya to whom Sadāśiva revealed the knowledge of his aghora mukha or his aghora face.They are vāma panthi-s, who do not follow the vaidika strictures of society, hence causing a lot of fear and loathing amongst people, more so in non-Hindus who may not know the origins and the philosophy behind the various practices of the Aghorī-s.
 
@@ -34,19 +32,21 @@ Aghora is a **form of Śiva,** the Supreme God of Yoga, the destroyer. The Aghor
 
 As per ‘The Practical English Sanskrit Dictionary’ by Vaman Shivaram Apte (Pg No.34):
 
->Aghora (अघोर).—a. Not terrific [terrifying] or fearful. -raḥ [nāsti ghoro yasmāt]
+> Aghora (अघोर).—a. Not terrific [terrifying] or fearful. -raḥ [nāsti ghoro yasmāt]
 > 
-> 1) Name of Śiva or of one of his forms, (īśānāghoranā- mānau vāmadevastataḥ param | sadyojāta iti proktaḥ kramaśo’rcanakarmaṇi ||)
+> 1) Name of Śiva or of one of his forms, (īśānāghoranā- mānau vāmadevastataḥ param |  
+> sadyojāta iti proktaḥ kramaśo’rcanakarmaṇi ||)
 > 
 > 2) A worshipper of Śiva and Durgā.
 > -rā [aghoraḥ śivaḥ upāsyatvena asyāṃ sā, aghora-ac]
 > 
-> The fourteenth day of the dark half of Bhādra sacred to Śiva (bhādramāsyasite pakṣe hyaghorākhyā caturdaśī | tasyāmārādhitaḥ sthāṇurnayocchivapuraṃ dhruvam ||).
+> The fourteenth day of the dark half of Bhādra sacred to Śiva (bhādramāsyasite pakṣe hyaghorākhyā caturdaśī |  
+> tasyāmārādhitaḥ sthāṇurnayocchivapuraṃ dhruvam ||).
 > 
-> iha no likhitaṃ vyāsabhayāccānupayogataḥ /
-> tā eva nirmalāḥ śuddhā aghorāḥ parikīrtitāḥ // 257
-> ghoraghoratarāṇāṃ tu sotṛtvācca tadātmikāḥ /
-> sṛṣṭau sthitau ca saṃhāre tadupādhitrayātyaye // 258 
+> iha no likhitaṃ vyāsabhayāccānupayogataḥ /  
+> tā eva nirmalāḥ śuddhā aghorāḥ parikīrtitāḥ // 257  
+> ghoraghoratarāṇāṃ tu sotṛtvācca tadātmikāḥ /  
+> sṛṣṭau sthitau ca saṃhāre tadupādhitrayātyaye // 258   
 > <cite>Tantrāloka Chapter 3, (tṛtīyamāhnikam)</cite>
 
 The relevant part roughly translates to: those forces that are flawless and have the quality of the aghora (fearless) delve deep into more horrifying depths of the human mind to emerge as courageous on that auspicious occasion.
@@ -135,57 +135,49 @@ We keep hearing the phrase ‘Nāga Sādhus and Aghorī-s’ bandied about as th
 
 ###### Lineage
 **Aghorī-s**
-Starts from the guru Jalandhara Nāth
-
+Starts from the guru Jalandhara Nāth  
 **Nāga Sādhu-s**
 Starts from Adi Śankarācārya
 
 ###### Tradition
 **Aghorī-s**
-Primarily nātha sampradāya
-
+Primarily nātha sampradāya  
 **Nāga Sādhu-s**
 Daśanāmi order established by Adi Śankarācārya
 
 ###### Primary Deities of Worship
 **Aghorī-s**
-Sarveśvari, Mahākāl, and Kālabhairava
-
+Sarveśvari, Mahākāl, and Kālabhairava  
 **Nāga Sādhu-s**
 Sadāśiva
 
 ###### Application of Holy Ash
 **Aghorī-s**
-They apply it all over their body only for specific rituals, else wearing it as tripuṇḍa (three horizontal lines) or ūrdhvadhara aekapaṅkita (a single horizontal line)
-
+They apply it all over their body only for specific rituals, else wearing it as tripuṇḍa (three horizontal lines) or ūrdhvadhara aekapaṅkita (a single horizontal line)  
 **Nāga Sādhu-s**
 Apply it all over their body, all the time
 
 ###### Being naked
 **Aghorī-s**
-Almost never naked, covering themselves at the very least with a loin cloth, and mostly remaining fully clothed.
-
+Almost never naked, covering themselves at the very least with a loin cloth, and mostly remaining fully clothed.  
 **Nāga Sādhu-s**
 Loin cloth at the beginning of their journey and fully naked thereafter
 
 ###### Consumption of Marijuana	
 **Aghorī-s**
-Rarely ever	
-
+Rarely ever	  
 **Nāga Sādhu-s**
 As part of their sādhanā
 
 ###### Smoking and Drinking
 **Aghorī-s**
-As part of their rituals and sādhanā
-
+As part of their rituals and sādhanā  
 **Nāga Sādhu-s**
 Never
 
 ###### Consumption of Meat
 **Aghorī-s**
-As part of their sādhanā, being mindful of causing the least amount of pain and suffering to the living being killed for meat
-
+As part of their sādhanā, being mindful of causing the least amount of pain and suffering to the living being killed for meat  
 **Nāga Sādhu-s**
 Rarely ever. Primarily vegetarian
 

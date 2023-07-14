@@ -11,28 +11,23 @@ image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwe
 excerpt: "The thrust of all gurukula education of yore was towards self knowledge. Only by knowing our true selves can we claim to be wholesome."
 ---
 
-<div class="hindi">
-
-##### मायां तु प्रकृतिं विद्यान्मायिनं च महेश्वरम् ।
-##### तस्यावयवभूतैस्तु व्याप्तं सर्वमिदं जगत् ॥
-
-</div>
-
-
-##### māyāṃ tu prakṛtiṃ vidyānmāyinaṃ ca maheśvaram
-##### tasyāvayavabhūtaistu vyāptaṃ sarvamidaṃ jagat
-
+> मायां तु प्रकृतिं विद्यान्मायिनं च महेश्वरम् ।  
+> तस्यावयवभूतैस्तु व्याप्तं सर्वमिदं जगत् ॥   
+>    
+> māyāṃ tu prakṛtiṃ vidyānmāyinaṃ ca maheśvaram   
+> tasyāvayavabhūtaistu vyāptaṃ sarvamidaṃ jagat   
+>   
 > Know, then, that prakṛti is māyā and that Great God is the Lord of māyā. The whole universe is filled with objects which are parts of its being. (māyā is the Energy (prakṛti), while God is the Energetic)
-> ŚVETĀŚVATARA UPANIṢAD 4.10
+<cite>ŚVETĀŚVATARA UPANIṢAD 4.10</cite>
 
 Indigenous Knowledge Traditions, or for us Indic Knowledge Systems (IKS) is a cultural memeplex composed of the Vaidika, Jaina, Bauddha, Vanavāsi and Folk knowledge systems who share the foundation of Dharma metaphysics. This evolved as a result of complex interactions and lived experiences between these cultures. It is a symphony between bottom up feedback loop and a highly sophisticated systematization.
 
 > As many of us are aware, the ancient knowledge in India was preserved and transmitted ‘orally’ until a few centuries back. There was an uninterrupted lineage of ‘Guru–Śiṣya’ that took responsibility for the preservation and transmission of knowledge down the generations. Quite often, the teacher student was a father-son combination and a group of related family members. These people formed a clan, who preserved the knowledge, practiced it by making a living, and transmitted it to their offspring. The use of print media in recent history and the palm leaf scripts earlier have served to formally capture this oral knowledge and store it. Unfortunately, due to major changes in the educational system introduced in India about 200 years back, there was an abrupt end to this process of knowledge transmission and the continuity is mostly lost.
-
+>    
 > The newly introduced educational system demanded the society acquire only such knowledge as made available through the educational system. Those who aligned themselves to the new educational system were assured of jobs and salaries by the ruling class. Arguably, it would have taken about 50 years for most of the population to abandon old ways of doing things and come ‘on board’ the new system that promises economic prosperity. Once this transition happened, the oral transmission dwindled dramatically, creating a sudden void and loss of continuity, thereby confining the knowledge to whatever was available in palm leaf manuscripts and other archives and personal collections.
-
+>   
 > We have continued with the British system of education in independent India, by keeping the ancient knowledge repository out of consideration. Therefore, today’s formal educational system in India has, for historical reasons partly attributable to the British policymakers on education, has kept the ancient Indian knowledge heritage out of the reach of the education system, arguably citing reasons of lack of rigour and scientific value.
-> INTRO TO INDIAN KNOWLEDGE SYSTEMS BY B MAHADEVAN
+<cite>INTRO TO INDIAN KNOWLEDGE SYSTEMS BY B MAHADEVAN</cite>
 
 At Bṛhat we center ourselves in this purpose to bring dormant civilizational vision to light, through stories and ideas that ignite imagination and rekindle cultural belonging.
 
@@ -64,16 +59,12 @@ A gurukulam encourages truth seeking and truth speaking above all, all prayers a
 
 How does one get to be a part of such an ideal accommodation? What are the qualifications required to survive and thrive in such lodgings?
 
-<div class="hindi">
-
-##### तद्विद्धि प्रणिपातेन परिप्रश्नेन सेवया |
-##### उपदेक्ष्यन्ति ते ज्ञानं ज्ञानिनस्तत्त्वदर्शिन: ||
-
-</div>
-
-##### tad viddhi praṇipātena paripraśnena sevayā
-##### upadekṣyanti te jñānaṃ jñāninas tattva-darśinaḥ
-##### <small>CHAPTER FOUR OF THE BHAGAVAD GĪTA (4.34)</small>
+> तद्विद्धि प्रणिपातेन परिप्रश्नेन सेवया |   
+> उपदेक्ष्यन्ति ते ज्ञानं ज्ञानिनस्तत्त्वदर्शिन: ||   
+>     
+> tad viddhi praṇipātena paripraśnena sevayā   
+> upadekṣyanti te jñānaṃ jñāninas tattva-darśinaḥ    
+<cite>CHAPTER FOUR OF THE BHAGAVAD GĪTA (4.34)</cite>
 
 The above verse talks of how to approach a guru. praṇipātena, with humility, which is a hallmark of a true scholar. One is a brāhmaṇa when one is full of vidyā and vinaya, possessing a vision of oneness along with humility. In a gurukulam there is ample opportunity to bend, to bow, to fall at one’s guru’s feet. Others may say they bow only before god. But we say everyone is god, everyone is divine, there is nothing but god (Pujya Swami Dayananda Saraswati ji, Arsha Vidya Gurukulam), so we bow to that divinity in all. And we bow to that scholarship and goodness represented by such knowledge.
 
@@ -85,16 +76,12 @@ Lastly, sevayā, by service. Doing sevā to the teacher and the gurukulam is a t
 
 These three: praṇipātena, paripraśnena, sevayā, are external factors of how one can become a model student in a gurukulam. What about the internal values that s/he must possess for the much touted total transformation? (Swami Sadatmananda Saraswati, Arsha Vidya Gurukulam)
 
-<div class="hindi">
-
-##### श्रद्धावान् लभते ज्ञानं तत्पर: संयतेन्द्रिय: |
-##### ज्ञानं लब्ध्वा परां शान्तिमचिरेणाधिगच्छति ||
-
-</div>
-
-##### śraddhāvānlabhate jñānaṃ tat-paraḥ saṃyatendriyaḥ
-##### jñānaṃ labdhvā parāṃ śāntim acireṇādhigacchati
-##### <small>CHAPTER FOUR OF THE BHAGAVAD GĪTA (4.39)</small>
+> श्रद्धावान् लभते ज्ञानं तत्पर: संयतेन्द्रिय: |   
+> ज्ञानं लब्ध्वा परां शान्तिमचिरेणाधिगच्छति ||  
+>    
+> śraddhāvānlabhate jñānaṃ tat-paraḥ saṃyatendriyaḥ  
+> jñānaṃ labdhvā parāṃ śāntim acireṇādhigacchati
+<cite>CHAPTER FOUR OF THE BHAGAVAD GĪTA (4.39)</cite>
 
 Śraddhā, tatparatā, and saṃyatendriya are three qualities mentioned in the same Chapter Four (4.39). These are internal factors that completely transform a person. Having faith in the texts and in the guru (who of course is śrotriya and brahmaniṣṭha) and doing all that the śāstra expects of us as students is śraddhā, which is not blind faith but faith pending understanding (Swamini Svatmavidyananada Saraswati, Arsha Vijnana Gurukulam). Tatparatā is having the commitment to the goal of mokṣa. Most of our society’s problems today stem from the lack of that tatparatā, not having that commitment towards mokṣa instead falling for the lure of short term finite material benefits. Appreciating what mokṣa really means makes everything else fall into place, mokṣa is freedom from want. Any want. It is freedom from insecurity and fear. It is freedom while living our day-to-day lives. It is freedom from validation of others, from acceptance by others, it is freedom to be one’s own person. It is freedom to be joyful all the time in every place, in any situation.
 

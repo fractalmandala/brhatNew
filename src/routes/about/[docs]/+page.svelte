@@ -90,7 +90,7 @@
 =animate-path($i)
 	path:nth-child(#{$i})
 		animation: fill-color 16s linear infinite
-		animation-delay: 16s / 5 * ($i - 1)
+		animation-delay: calc(16s / 5) * ($i - 1)
 		fill: #878787
 
 .svgbox

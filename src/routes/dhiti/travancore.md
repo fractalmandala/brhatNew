@@ -16,43 +16,32 @@ image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwe
 
 Just as Perumchoṭṭu Udayan, the great king from this land during Mahābhārata’s Kurukṣetra war, fed the armies of both the warring factions; today too, annadānam continues in Śrī Padmanābhasvāmī’s name. On all the days, we students were also treated to the traditional Keraḻa sadya on banana leaves with other sumptuous delicacies including a variety of pāyasams. For me, this was one of the highlights of the whole programme apart from the dance workshop itself! One day we would be treated with the naivedyam offered to Śrī Padmanābha Himself from the temple kitchens, and on another day we would relish a special Bōli-pāyasam treat, and yet another day there would be a totally unique version with palm jaggery from the palace since it was a royal’s birthday. It was a culinary delight to explore such unknown rasas, especially after a whole day spent in sweating it out on our feet.  
 
->“Despite its famed tolerance, for a very long time Travancore headed by Thiruvananthapuram was probably the only country in this part of India where Hindu tradition, manners and custom, Hindu learning and Hindu religion were preserved in their original simplicity and purity owing chiefly to the continuous and prosperous rule of a long line of Hindu Kings from old.” (Chapter VI of the State Manual of Travancore, V. Nagam Aiya)  
+> “Despite its famed tolerance, for a very long time Travancore headed by Thiruvananthapuram was probably the only country in this part of India where Hindu tradition, manners and custom, Hindu learning and Hindu religion were preserved in their original simplicity and purity owing chiefly to the continuous and prosperous rule of a long line of Hindu Kings from old.”
+<cite>Chapter VI of the State Manual of Travancore, V. Nagam Aiya</cite>  
 
 Even as the world is witness to the coronation of Prince Charles as King, and many probably are taken in by the [glamour of it all](https://twitter.com/MumukshuSavitri/status/1654891305850540033), history does not excuse the British Royalty of the crimes committed against humanity. Seeing their sad example, one might assume that monarchy and royalty all over the world suffers from such delusions of grandeur, and that power and wealth make most kings and queens victims of their own might. Such was the fall of the Mughals, undoubtedly either due to fanaticism or to narcissism. But there are many examples in India, of those who were just and able rulers; who were cultivated and cultured; who developed their kingdoms not only economically, but also artistically and aesthetically; and who ruled with dharma as their ideal. Brhat has singled out one such, the Travancore Royals, in [Part 1](https://www.brhat.in/dhiti/sagaofthepadmanabhadasas) and [Part 2](https://www.brhat.in/dhiti/sagaofthepadmanabhadasas2) for a detailed look. Here in Part 3 we take you through a personal journey, of a first-hand lived experience, of learning dance from one among them. 
 
 >“Even in the mid-1970s, we had a sizeable number of people who earned their livelihood as poets or singers or bards, performing Bhāgavata Melās, Rām Kathā, Purāṇās, Harikathās, etc. These artists were largely illiterate but they had an unmatched power to swoon thousands of people with their renditions and storytelling prowess. The entire society respected them solely for that reason, because they had that education. They carried copious amounts of our cultural treasure in their head and heart — the Rāmāyaṇa, Mahābhārata, stories from our Purāṇās, Kritis, Devāranāmas, folklore, etc. Sadly, their “educated” children and grandchildren became poorly-paid labourers in mills and factories or worked as waiters in bars and restaurants. But on the larger canvas of our cultural landscape, the loss was primarily twofold. These descendants not only lost the **sublime and ennobling education** that their forefathers had but their lives were not economically better either. This is how the destruction of cultural education and memory translates into, in real life.
-
+> 
 >This is savagery, not education.” 
+<a class="cite" href="https://www.dharmadispatch.in/commentary/dharmic-education-in-an-era-of-planned-de-hinduisation-of-india">Dharmic Education in the Era of Planned De-Hinduisation of India by Sandeep Balakrishna</a>
 
-([Dharmic Education in the Era of Planned De-Hinduisation of India by Sandeep Balakrishna ](https://www.dharmadispatch.in/commentary/dharmic-education-in-an-era-of-planned-de-hinduisation-of-india))
+> यतो हस्तः ततो दृष्टिः
+> यतो दृष्टिः ततो मनः
+> यतो मनः ततो भावः
+> यतो भावः ततो रसः॥
+<cite>नाट्य शास्त्र</cite> 
 
-यतो हस्तः ततो दृष्टिः
-
-यतो दृष्टिः ततो मनः
-
-यतो मनः ततो भावः
-
-यतो भावः ततो रसः॥
-
-(नाट्य शास्त्र) 
-
-yato hastaḥ tato dṛṣṭiḥ
-
-yato dṛṣṭiḥ tato manaḥ
-
-yato manaḥ tato bhāvaḥ
-
-yato bhāvaḥ tato rasaḥ
-
-(Nāṭyaśāstra)
-
-Where your hands go, your eyes follow
-
-Where your eyes go, your mind follows 
-
-Where your mind goes, it gives rise to feelings 
-
-Wherever there is a feeling, there is a particular mood
+> yato hastaḥ tato dṛṣṭiḥ
+> yato dṛṣṭiḥ tato manaḥ
+> yato manaḥ tato bhāvaḥ
+> yato bhāvaḥ tato rasaḥ  
+>
+> Where your hands go, your eyes follow
+> Where your eyes go, your mind follows 
+> Where your mind goes, it gives rise to feelings 
+> Wherever there is a feeling, there is a particular mood
+<cite>Nāṭyaśāstra</cite>
 
 And nowhere do the eyes play such an important role in performing arts as in the dance forms of Keraḻa. In Mōhiniāṭṭam, the dance of the enchantress, quite suited for ekāhāra abhinaya of a solo performance, the swaying graceful movements of the upper torso is accentuated. Endowed with kaiśiki vṛtti which is said to stem from Sāma Veda itself, expressing tender emotions in a soft manner, dancers imitate apsaras who engage in such sensuous movements. Also mimicking the abundant coconut trees in the region and the lush lulling tempo of the oceanic waves kissing the verdant landscape, this is a dance form that is not in a rush. It takes its time to establish itself, to fix its feet, and when it does, it allows the body to undulate to its heart’s content. With an all white and gold dress and the hairdo stylishly to the side, Guru Gopika Varma ji exudes lāsya. This is the gentle feminine response of Pārvatī to the vigorous tāṇḍava performed by Naṭarājā, the Lord of Dance. It is no wonder that this innovation by Devī herself caters to women of all sizes, shapes, and ages, to indulge in expressing themselves via dance without having to be lithe and young. 
 
@@ -70,12 +59,11 @@ It was very refreshing to see that there was no cut-throat competition amongst t
 
 The three-day workshop began on April 21st 2023 and was [inaugurated](https://www.youtube.com/watch?v=DkObrAgsC30) by [H.H. Princess Pooyam Thirunāḻ Gowri Parvathy Bayi](https://youtu.be/hPh1IuW8X9I) in the presence of [Śrī Soorya Krishnamoorthy](https://youtu.be/MCn075ZYYWg) (founder of the Soorya Dance Festival). There were lectures by [Dr. Kannan Parameswaran ](https://youtu.be/DbxnbkvOWNw)(Kathakaḻi exponent) on ‘mukhaja abhinaya’ and by Prof. Achuthsankar S. Nair (academician) about Swathi Thirunāḻ. Present also were honourable observers [Śrī. Venugopal S K,](https://narthaki.com/info/rev23/rev2881.html) Śrī. Vinod Mankara (film maker) and Śrī. Dinesh Koduvayur (founder of Gowri Creations). The [valedictory function](https://youtu.be/bTesxyE0UY4) was presided over by [H.H. Princess Aswathy Thirunāḻ Lakshmi Bayi](https://youtu.be/QJN81pqLYkY) in the presence of Pūjya Svāmī Śrī Hariprasād jī. Along with their blessings all the participants also received a certificate of participation. 
 
-**बलं बलवतां चाहं कामरागविवर्जितम् |
-|| 7.11 B.G||**
-
-**balaṁ balavatāṁ cāhaṁ kāma-rāga-vivarjitam**
-
-…Any balam (power, strength) which is free from kāma (desire) and rāga (attachment) is the manifestation of īśvara. It is bestowed onto me and I am the trustee of this power, I may be the user but am not the owner. Ownership is only my notion. Nothing belongs to me, If I assume so I will suffer….everything belongs to HIM alone…
+> बलं बलवतां चाहं कामरागविवर्जितम् || 7.11 B.G ||
+>  
+> balaṁ balavatāṁ cāhaṁ kāma-rāga-vivarjitam  
+>    
+> Any balam (power, strength) which is free from kāma (desire) and rāga (attachment) is the manifestation of īśvara. It is bestowed onto me and I am the trustee of this power, I may be the user but am not the owner. Ownership is only my notion. Nothing belongs to me, If I assume so I will suffer….everything belongs to HIM alone…
 
 This, the Travancore Royals have completely internalized, and exhibit this belief in their day-to-day behaviour. To be a witness on how they conduct themselves in everyday life and to learn from them on how to care for the arts and live a fulfilling life, to watch them pursuing it with sincerity, all this made me ask myself if dhārmika monarchs are not the answer to our cultural and civilizational woes. By giving up on them for a westernised notion of a nation-state called democracy, we have indeed been remiss. 
 
@@ -85,7 +73,8 @@ Hindu classical dance as explained [here ](https://www.youtube.com/watch?v=LDTSV
 
 A consummate dancer moves very quickly from first person to second to third person, and then to no person when she is the dance itself and she has completely sublimated her ego and her being, and finally to oneness where she recognizes the aikyam of who she is in reality with respect to the cosmic whole. There is a spiritual message in each of the acts performed, they are not merely stories for entertainment - they are that too, yet something more. Humility is built in the learning pedagogy itself where one is reprimanded in front of other co-students even for a single misstep and there is no room for hurt pride. For those who take it in their stride, there is a lot to gain: energy, flexibility, agility, quick thinking, intuition, body and self awareness, not to speak of mokṣa, if that is what one ‘seeks’. 
 
-**“Julius Lipner has likened Vedic culture with all its branches to a Banyan tree, a species that grows wide and puts down new aerial roots that in turn become trees, and so grow into a huge polycentric organism.** ….The 1975 film [Altar of Fire](https://www.youtube.com/watch?v=RYvkYk7GvJ0) made by the Dutch scholar Frits Staal captures some of this culture of memorisation and deployment. More than three thousand years after the texts were first set down in this way, we can still see [Nambūdiri brahmin](https://www.britannica.com/topic/Nambudiri) families of Kerala keeping alive the purely oral form of the canon, reciting verses in baroque patterns, dancing out the verbal structure as well as chanting it. The time and chronology, the precise geometric shapes of the altar, the actions, the sounds and their grammar, all had to be exact. If it was not perfect, then the Gods would not reciprocate with their own gifts of rain, food, health, safety and sons. Sciences of perfection evolved around the ritual: astronomy evolved to calculate the proper time, and Pythagoras’ theorem was discovered (some time before Pythagoras) to ensure the bricks of the altar were set just right. The words had to be spoken in pristine pronunciation, metre, and linguistic form. Sciences of phonetics, prosody and grammar were developed. Eventually even the theoretical and metaphysical implications of these sciences came to be captured in some of the world’s earliest philosophical texts. The ritual inspired its own canon, growing from the small seedlings of action into saplings of word and theory...” [(The Vedic Cannon by Jessica Frazier, April 26, 2023)](https://engelsbergideas.com/notebook/the-vedic-canon/) 
+> Julius Lipner has likened Vedic culture with all its branches to a Banyan tree, a species that grows wide and puts down new aerial roots that in turn become trees, and so grow into a huge polycentric organism.** ….The 1975 film [Altar of Fire](https://www.youtube.com/watch?v=RYvkYk7GvJ0) made by the Dutch scholar Frits Staal captures some of this culture of memorisation and deployment. More than three thousand years after the texts were first set down in this way, we can still see [Nambūdiri brahmin](https://www.britannica.com/topic/Nambudiri) families of Kerala keeping alive the purely oral form of the canon, reciting verses in baroque patterns, dancing out the verbal structure as well as chanting it. The time and chronology, the precise geometric shapes of the altar, the actions, the sounds and their grammar, all had to be exact. If it was not perfect, then the Gods would not reciprocate with their own gifts of rain, food, health, safety and sons. Sciences of perfection evolved around the ritual: astronomy evolved to calculate the proper time, and Pythagoras’ theorem was discovered (some time before Pythagoras) to ensure the bricks of the altar were set just right. The words had to be spoken in pristine pronunciation, metre, and linguistic form. Sciences of phonetics, prosody and grammar were developed. Eventually even the theoretical and metaphysical implications of these sciences came to be captured in some of the world’s earliest philosophical texts. The ritual inspired its own canon, growing from the small seedlings of action into saplings of word and theory...
+<a href="https://engelsbergideas.com/notebook/the-vedic-canon/" class="cite">The Vedic Cannon by Jessica Frazier, April 26, 2023</a>
 
 Nowhere is this exactness and continuation of ancient form and tradition more apparent than in Keraḻa, which has kept the vaidika sampradāya alive in its Architecture, in Ayurveda, in Temple rituals, in Textiles, in Kaḻarīpayaṭṭu, in Kathakaḻi, Kūdiyāṭṭam, Mudiyēṭṭu,Theyyam, Mōhiniāṭṭam and more. 
 

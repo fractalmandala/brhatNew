@@ -65,7 +65,7 @@ Hair tied in a top fan-shaped bun, Sanchi, Madhya Pradesh. Credit: Archeological
 </div>
 
 
-The women immortalized in the** Bharhut sculptures **present a captivating tableau of hairstyling diversity. These artistic renditions showcase a cornucopia of styles, each one a unique expression of personal taste and cultural affiliation. The panel depicting the worship of the Bodhi tree reveals women with neatly tied hair, securing it with a loose knot at the back. This understated yet refined hairstyle speaks of a harmonious blend of simplicity and grace, reflecting the nuances of femininity cherished in those bygone times. 
+The women immortalized in the **Bharhut sculptures** present a captivating tableau of hairstyling diversity. These artistic renditions showcase a cornucopia of styles, each one a unique expression of personal taste and cultural affiliation. The panel depicting the worship of the Bodhi tree reveals women with neatly tied hair, securing it with a loose knot at the back. This understated yet refined hairstyle speaks of a harmonious blend of simplicity and grace, reflecting the nuances of femininity cherished in those bygone times. 
 
 
 

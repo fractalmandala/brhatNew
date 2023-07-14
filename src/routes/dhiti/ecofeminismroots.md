@@ -12,38 +12,30 @@ image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwe
 excerpt: "Eco Feminism, stemming from the Upanishads is the natural consequence of looking at the world as the Divine Mother."
 ---
 
-<div class="hindi">
+> मायां तु प्रकृतिं विद्यान्मायिनं च महेश्वरम् ।
+> तस्यावयवभूतैस्तु व्याप्तं सर्वमिदं जगत् ॥
 
-##### मायां तु प्रकृतिं विद्यान्मायिनं च महेश्वरम् ।
-##### तस्यावयवभूतैस्तु व्याप्तं सर्वमिदं जगत् ॥
-
-</div>
-
-##### māyāṃ tu prakṛtiṃ vidyānmāyinaṃ ca maheśvaram
-##### tasyāvayavabhūtaistu vyāptaṃ sarvamidaṃ jagat
+> māyāṃ tu prakṛtiṃ vidyānmāyinaṃ ca maheśvaram
+> tasyāvayavabhūtaistu vyāptaṃ sarvamidaṃ jagat
 
 > Know, then, that prakṛti is māyā and that Great God is the Lord of māyā. The whole universe is filled with objects which are parts of its being. (māyā is the Energy (prakṛti), while God is the Energetic)
 > ŚVETĀŚVATARA UPANIṢAD 4.10
 
-<div class="hindi">
+> दैवी ह्येषा गुणमयी मम माया दुरत्यया ।
+> मामेव ये प्रपद्यन्ते मायामेतां तरन्ति ते ॥
 
-##### दैवी ह्येषा गुणमयी मम माया दुरत्यया ।
-##### मामेव ये प्रपद्यन्ते मायामेतां तरन्ति ते ॥
-
-</div>
-
-##### daivī hyeṣhā guṇa-mayī mama māyā duratyayā
-##### mām eva ye prapadyante māyām etāṃ taranti te
+> daivī hyeṣhā guṇa-mayī mama māyā duratyayā
+> mām eva ye prapadyante māyām etāṃ taranti te
 
 > My divine energy māyā, consisting of the three modes of nature, is very difficult to overcome. But those who surrender unto Me/brahman/Self cross over it easily.
-> BHAGAVAD GĪTĀ 7.14
+<cite>BHAGAVAD GĪTĀ 7.14</cite>
 
 Feminism, in its western universalistic sense, has long been a colonial and imperial project. It has, historically, undermined indigenous knowledge, and the way various communities conceptualized themselves, and their relationships with other entities. The imposition of Western frameworks, often as a civilizing act, resulted in the disintegration of traditional meanings and identities, resulting in a complete break with their past.
 
 As women were the bearers of culture and ways of life, this had the greatest impact on them. The tools that were readily available to them before, which helped them self-define themselves in relation to others, gradually disappeared under the onslaught of industrialization and modernity. Various religious, legal, and educational interventions ensured that the indigenous worldviews, which traditionally saw nature as an integral part of their being and women as its expression, were completely obliterated. Linda Tuhiwai Smith (1999), locates this willful destruction in the acts of colonialists to-
 
 > Desire, extract, and claim ownership of indigenous ways of knowing, their imagery, the things they created and produced,” and yet, “rejecting the people who created and developed those ideas and seeking to deny them the right to be creators of their own cultures and own nations.
-> LINDA TUHIWAI SMITH (1999)
+<cite>LINDA TUHIWAI SMITH (1999)</cite>
 
 This epistemic injustice can be seen in the case of eco-feminism, which was long ignored despite its effectiveness in reimagining human-nature relationships, and its roots in ancient Hindu philosophy, many indigenous eastern/African and South American cultures, were actively denied. Whether it is the **Chipko movement** in Uttarakhand or the **Bishnoi community** in Rajasthan known for their environmental awareness (Shiva, 1989), they all draw their conceptual resources from ancient Indian thinking where **nature (sṛṣṭi) is not seen as separate from vyakti (person)**, the śakti temples in various parts of India didn’t just have their spiritual value but also protected the environment in areas around these śakti-pīṭhas, as people believed that violating the environment around these areas would be a violation of Śakti (Devi) herself (James, 2000). Additionally, even in Indian households, it is the women who act as the protectors of the environment. **Within Hindu philosophy, nature/environment has always remained a feminist issue.**
 
@@ -74,13 +66,13 @@ Even the mighty **Incas made regular offerings of pago a la tierra, a payment to
 **The Mother Earth Law,** which is a Bolivian legislation dedicated to sustainable development, respects the balance of human life and the natural environment. It prioritizes the rights and knowledge of the country’s majority indigenous population, and its stated objective is **integral development in harmony and balance with Mother Earth to Live Well.** “Environmental Violence” against Women is a term developed by the women of RENAMAT (National Network of Women Defending Mother Earth) which means:
 
 > All action or omission caused by people that, by damaging the environment, prevents or restricts the exercise of women’s rights and, in turn, harms their quality of life, integrity, health, economy, work, heritage, and cultural identity.
-> ENVIRONMENTAL VIOLENCE
+<cite>ENVIRONMENTAL VIOLENCE</cite>
 
 *“In the Judeo-Christian paradigm, nature is pitted against culture in an eternal struggle.”* In Bhāratavarṣa, as in many other indigenous cultures, culture goes in harmony with nature and even improves on it, not by destroying it, but by observing its physical rules while spiritually transcending them. This paradigm of culture can be called the Nature-Culture Continuum Paradigm…*“all modern problems exist because, currently, the Nature-Culture Conflict Paradigm reigns supreme, and is trying to completely obliterate cultures and societies and institutions which espouse and propagate the Nature-Culture Continuum Paradigm”* in the words of Pankaj Saxena, Director, Culture Research, Bṛhat.
 
 Peace, harmony, and a healthy planet are very much possible when living traditions such as those in India, Kenya, Peru, and Bolivia, among others, are given a chance to flourish and prioritized over universal globalizing forces. This would naturally empower women and nature in their wake. This is how **Eco Feminism** is celebrated and duly acknowledged via honouring indigenous festivals, their cultures, customs, and pilgrimages, all of which are related to nature and the environment.
 
-Endnotes:
+#### Endnotes:
 1. Ann R. David, Gendering the Divine: New Forms of Feminine Hindu Worship, International Journal of Hindu Studies (2009)
 2. David R. Kinsley, Hindu Goddesses: Visions of the Divine Feminine in the Hindu Religious Tradition, University of California Press (1986) 3. Hastorf, C. A. (2007). Archaeological Andean rituals: Performance, liturgy, and meaning. The archaeology of ritual.
 3. 77-107. 

@@ -66,39 +66,40 @@ The Gāruḍa-purāṇa has a remarkably similar passage about the characteristi
 
 That this Paurāṇika testimony was not just hyperbole or lip service is clear from the example of the Heliodorus’ inscription at Besnagar, Madhya Pradesh, India. Heliodorus was an ambassador of the Indo-Greek King, Antialkidas Nikephoros who ruled from Takṣaśilā (Taxila). He became a Bhāgavata and, as a sign of his devotion, dedicated a pillar to Vāsudeva at Vidiśā (modern-day Besnagar). The original and translation of the Prākrit-language inscription on this pillar are reproduced from Indian Epigraphy (1998) by Richard Salomon. The letters in square brackets are readings for missing characters as suggested by Salomon.
 
-##### (de)vadevasa v(ā)(*sude)vasa garuḍadhvaje ayaṃ
-##### This Garuda-pillar of Vāsudeva, the god of gods,
-##### kārit(e) i(a?) heliodoreṇa bhāgavatena diyasa putrena ta(khkha)silākena was constructed here by Heliodora (Heliodoros), the Bhāgavata, son of Diya (Dion), of Takshasila (Taxila), yonadūtena āgatena mahārājasa the Greek ambassador who came from the Great King amtalikitasa upa(ṃ)ta sakāsaṃ raño Amtalikita (Antialkidas) to King Kāsīput(r)asa bhāgabhadrasa trātārasa Kāsīputra (Kāśīputra) Bhagabhadra, the Saviour, vasena ca(tu)dasena rājena vadhamānasa prospering in (his) fourteenth regnal year.
+> (de)vadevasa v(ā)(*sude)vasa garuḍadhvaje ayaṃ  
+> This Garuda-pillar of Vāsudeva, the god of gods,  
+> kārit(e) i(a?) heliodoreṇa bhāgavatena diyasa putrena ta(khkha)silākena was constructed here by Heliodora (Heliodoros), the Bhāgavata, son of Diya (Dion), of Takshasila (Taxila), yonadūtena āgatena mahārājasa the Greek ambassador who came from the Great King amtalikitasa upa(ṃ)ta sakāsaṃ raño Amtalikita (Antialkidas) to King Kāsīput(r)asa bhāgabhadrasa trātārasa Kāsīputra (Kāśīputra) Bhagabhadra, the Saviour, vasena ca(tu)dasena rājena vadhamānasa prospering in (his) fourteenth regnal year.
 
 Here, a person of Greek ethnic origin converted into the Bhāgavata system with a genuine theological conviction as can be seen from the epithet “Devadeva” applied to Vāsudeva (Kṛṣṇa).
 
 In the mūlasūtra of the Niḥśvāsatattvasaṃhitā, which is one of the oldest Śaivatantra (and possibly oldest Siddhānta-Śaiva text), we have the following:
 
-##### brāhmaṇo māyavāṃ yastu mlecchaścaiva tvamāyavān /
-##### mlecchasyaiva tu dātavyaṃ na tu viprāya dāpayet //
+> brāhmaṇo māyavāṃ yastu mlecchaścaiva tvamāyavān /
+> mlecchasyaiva tu dātavyaṃ na tu viprāya dāpayet //
 
-##### “(Between) a Brāhmaṇa who is deceitful and a mleccha who is indeed without deceit, it is (befitting) of the mleccha for (the Śaiva initiation) to be given [to him] and to the vipra (i.e. the brāhmaṇa), it shall not be given.”
+> (Between) a Brāhmaṇa who is deceitful and a mleccha who is indeed without deceit, it is (befitting) of the mleccha for (the Śaiva initiation) to be given [to him] and to the vipra (i.e. the brāhmaṇa), it shall not be given.
 
 ##### This universalist attitude towards inducting those of atypical, foreign backgrounds into the fold continued to shape the Śaiva tradition.
 
 For instance, we have a verse from the Kiraṇa-Āgama, which was commented upon in tenth-century Kashmir which emphasizes that the mantras employed during an initiation effect their grace on even those living at the margins or peripheries of the social order:
 
-##### yathāsthitena bhāvena mantrāḥ kurvanty anugraham /
-##### yatas tato ‘ntyajasyāpi dīkṣā kiṃ tv atra mānasī //
+> yathāsthitena bhāvena mantrāḥ kurvanty anugraham /
+> yatas tato ‘ntyajasyāpi dīkṣā kiṃ tv atra mānasī //
 
-##### “As per the emotional state (or mental disposition), the mantras (employed during initiation) do [the act of granting their] grace / Since [that is the case], therefore even to an antyaja (one existing at the margins of the social order), there is initiation but through the mind//”
+> As per the emotional state (or mental disposition), the mantras (employed during initiation) do [the act of granting their] grace /  
+> Since [that is the case], therefore even to an antyaja (one existing at the margins of the social order), there is initiation but through the mind//
 
 Although this verse does not expressly mention foreigners, the term, *“antyaja”* can be read broadly to refer to not just those who live at the margins within Bhārata but also foreigners who were similarly born far removed from any traditional social order such as the varṇāśrama-dharma.
 
 In the Uttara-Kāmika (the later portion of the Kāmika-Āgama used in a majority of Śiva temples in Tamil Nadu), after a lengthy description of the initiation that confers liberation (nirvāṇa-dīkṣā) on the initiate’s soul, we have the following concluding verses which affirm an eligibility for the nirvāṇa-dīkṣā:
 
-##### ityevaṃ kathitā dīkṣā sarvapāpavimocanī |
-##### catvāro brāhmaṇādyāścāpyanulomāśca ye matāḥ || 220 ||
-##### nyāyajā gūḍhajātā vā dīkṣāyāmadhikāriṇaḥ |
-##### antyajānāṃ na hotrī syāt kiṃ tu teṣāṃ tu cākṣuṣī || 222 ||
-##### <small> – 23RD CHAPTER OF UTTARA-KĀMIKA</small>
+> ityevaṃ kathitā dīkṣā sarvapāpavimocanī |  
+> catvāro brāhmaṇādyāścāpyanulomāśca ye matāḥ || 220 ||  
+> nyāyajā gūḍhajātā vā dīkṣāyāmadhikāriṇaḥ |  
+> antyajānāṃ na hotrī syāt kiṃ tu teṣāṃ tu cākṣuṣī || 222 ||  
+<cite>– 23RD CHAPTER OF UTTARA-KĀMIKA</cite>
 
-##### “Thus has been told, the initiation that releases one from all sins. The four varṇa-s beginning with brāhmaṇa-s and anuloma-s (those with mixed varṇa heritage where the father is of a higher varṇa than the mother), those who have been born legitimately, those born secretly (i.e. illegitimately) are considered eligible (recipients) of initiation. For antyaja-s, the initiation should not be done as a fire-ritual but for them, it is by vision (the initiating guru initiates them by seeing them).”
+> Thus has been told, the initiation that releases one from all sins. The four varṇa-s beginning with brāhmaṇa-s and anuloma-s (those with mixed varṇa heritage where the father is of a higher varṇa than the mother), those who have been born legitimately, those born secretly (i.e. illegitimately) are considered eligible (recipients) of initiation. For antyaja-s, the initiation should not be done as a fire-ritual but for them, it is by vision (the initiating guru initiates them by seeing them).
 
 That these textual prescriptions and directives are not entirely theoretical, but can be given life to in the form of actual initiation, is clear from the fact that persons of non-Indian origin have been initiated into specific Śaiva and Vaiṣṇava sampradāya-s in even recent times.
 
@@ -112,10 +113,15 @@ Now, that leaves us with the question as to whether it is possible for a foreign
 In this regard, we can see an interesting passage from the Mahābhārata in Śānti-parvan, where the god Indra, in his discourse to the king Māndhātṛ, an ancestor of Śrī Rāma, delineates the religious obligations of seventeen groups/tribes collectively described as “dasyu-s”.
 
 
-> māndhātovāca||
-> yavanāḥ kirātā gāndhārāścīnāḥ śabarabarbarāḥ | śakāstuṣārāḥ kaṅkāśca pahlavāścāndhramadrakāḥ ||13|| oḍrāḥ pulindā ramaṭhāḥ kācā mlecchāśca sarvaśaḥ | brahmakṣatraprasūtāśca vaiśyāḥ śūdrāśca mānavāḥ ||14||
-> kathaṃ dharmaṃ careyuste sarve viṣayavāsinaḥ | madvidhaiśca kathaṃ sthāpyāḥ sarve te dasyujīvinaḥ ||15|| etadicchāmyahaṃ śrotuṃ bhagavaṃstadbravīhi me |
-> tvaṃ bandhubhūto hyasmākaṃ kṣatriyāṇāṃ sureśvara ||16||
+> māndhātovāca||  
+> yavanāḥ kirātā gāndhārāścīnāḥ śabarabarbarāḥ |  
+> śakāstuṣārāḥ kaṅkāśca pahlavāścāndhramadrakāḥ ||13||  
+> oḍrāḥ pulindā ramaṭhāḥ kācā mlecchāśca sarvaśaḥ |  
+> brahmakṣatraprasūtāśca vaiśyāḥ śūdrāśca mānavāḥ ||14||  
+> kathaṃ dharmaṃ careyuste sarve viṣayavāsinaḥ |  
+> madvidhaiśca kathaṃ sthāpyāḥ sarve te dasyujīvinaḥ ||15||  
+> etadicchāmyahaṃ śrotuṃ bhagavaṃstadbravīhi me |  
+> tvaṃ bandhubhūto hyasmākaṃ kṣatriyāṇāṃ sureśvara ||16||  
 
 > “Māndhātṛ said: Yavana-s, Kirāta-s, Gāndhāra-s, Cīna-s, Śabara-s, Barbara-s, Śaka-s, Tuṣāra-s, Kaṅka-s, Pahlava-s, Āndhra-s, Madraka-s, Oḍra-s, Pulinda-s, Ramaṭha-s, Kāca-s, Mleccha-s and all, those born from the Brahma (i.e. brāhmaṇa-s) and the Kṣatra (i.e. kṣatriya-s) as well as the vaiśya-s and śūdra-s.
 
@@ -127,16 +133,21 @@ A non-exhaustive commentary on the identity of some of these tribes follow: The 
 
 I have amended “Kahva” to “Kaṅka”, following Ganguli as I have not been able to identify “Kahva” as an ethnonym anywhere. Finally, “mleccha” could refer to groups far west of Iran or we could maximally interpret it as a “catch-all” reference to any non-Indian ethnic group not expressly included in the other ethnic groups named in the list. Now, we shall see Indra’s reply.
 
-> indra uvāca||
-> mātāpitrorhi kartavyā śuśrūṣā sarvadasyubhiḥ | ācāryaguruśuśrūṣā tathaivāśramavāsinām ||17||
-> bhūmipālānāṃ ca śuśrūṣā kartavyā sarvadasyubhiḥ | vedadharmakriyāścaiva teṣāṃ dharmo vidhīyate ||18|| pitṛyajñāstathā kūpāḥ prapāśca śayanāni ca |
-> dānāni ca yathākālaṃ dvijeṣu dadyureva te ||19||
-> ahiṃsā satyamakrodho vṛttidāyānupālanam | bharaṇaṃ putradārāṇāṃ śaucamadroha eva ca ||20||
-> dakṣiṇā sarvayajñānāṃ dātavyā bhūtimicchatā | pākayajñā mahārhāśca kartavyāḥ sarvadasyubhiḥ ||21||
-> etānyevamprakārāṇi vihitāni purānagha |
+> indra uvāca||  
+> mātāpitrorhi kartavyā śuśrūṣā sarvadasyubhiḥ |  
+> ācāryaguruśuśrūṣā tathaivāśramavāsinām ||17||  
+> bhūmipālānāṃ ca śuśrūṣā kartavyā sarvadasyubhiḥ |  
+> vedadharmakriyāścaiva teṣāṃ dharmo vidhīyate ||18||  
+> pitṛyajñāstathā kūpāḥ prapāśca śayanāni ca |  
+> dānāni ca yathākālaṃ dvijeṣu dadyureva te ||19||  
+> ahiṃsā satyamakrodho vṛttidāyānupālanam |  
+> bharaṇaṃ putradārāṇāṃ śaucamadroha eva ca ||20||  
+> dakṣiṇā sarvayajñānāṃ dātavyā bhūtimicchatā |  
+> pākayajñā mahārhāśca kartavyāḥ sarvadasyubhiḥ ||21||  
+> etānyevamprakārāṇi vihitāni purānagha |  
 > sarvalokasya karmāṇi kartavyānīha pārthiva ||22||
 
-> “Indra said: To their mothers and fathers, service should be rendered by all the dasyu-s; as well as service to their ācārya-s and guru-s and residents of hermitages.
+> Indra said: To their mothers and fathers, service should be rendered by all the dasyu-s; as well as service to their ācārya-s and guru-s and residents of hermitages.
 
 > To the protector of the land (i.e. King), services should be rendered by all the dasyu-s. The dharma (in the sense of duties) and rituals (ordained) in the Veda are provided for as their (the dasyu-s’) dharma.
 
@@ -156,10 +167,10 @@ This seems to be a fairly comprehensive prescription that at once imposes a wide
 
 In particular, we find that one of the components of the prescribed praxis for the seventeen “foreigner groups” above i.e. ancestor-worship is also referred to in the Vāyu-purāṇa in the context of “mlecchas”. The text, after enumerating seven different categories of pitṛ-s (ancestral deities) (the seven consist of the: 1. yogin-s, 2. devas (Gods) themselves, 3. The enemies of the devas i.e. the asuras and 4 to 7: the 4 varṇa-s), goes on to state that the ancestral deities are worshipped even by the devas and even by the mlecchas.
 
-> devāstvetānyajante vai sarveṣveteṣvavasthitāḥ |
-> āśramāstu yajantyetāṃścatvārastu yathākramam ||82||
-> varṇāścāpi yajantyetāṃścatvārastu yathāvidhi |
-> tathā saṃkarajātāśca mlecchāścaiva yajanti vai ||83||
+> devāstvetānyajante vai sarveṣveteṣvavasthitāḥ |  
+> āśramāstu yajantyetāṃścatvārastu yathākramam ||82||  
+> varṇāścāpi yajantyetāṃścatvārastu yathāvidhi |  
+> tathā saṃkarajātāśca mlecchāścaiva yajanti vai ||83||  
 
 > “The deva-s worship these (pitṛ-s); they (the devas/gods) are situated in these pitṛ-s/ancestors. The four āśrama-s (the celibate, the householder, the forest-recluse and the renunciant) worship them in due order. The four varṇa-s worship them as per the appropriate injunctions. Likewise, those of mixed heritage and the mlecchas too worship (the pitṛ-s).
 

@@ -11,7 +11,7 @@ image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwe
 excerpt: "A personal reflection of the writer's experience studying at the Arsha Vidya Gurukulam, and the transformative impact it had on her understanding of the self and her relationship with the world and God. Part 4 of 4."
 ---
 
-### śrī gurubhyo namaha!
+##### śrī gurubhyo namaha!
 
 #### What I Learnt in Time
 
@@ -25,7 +25,7 @@ I started chanting ślokās before each activity of the day - be it at getting u
 
 Before going to the gurukulam I was not clear about the concept of mokṣa; dharma artha kāma made a lot of sense but mokṣa, it was a word which did not give away much, there was a sense of mystery surrounding it. A desire to be free from insecurities and fears forever, that never crossed my mind, nor did I know this was possible. That it was possible to make this puruṣārtha niścaya, that all I want is mokṣa come what may, and allow the universe to work its way into helping me ‘attain’ it (‘as though attain’ because mokṣa is available in the here and now for our asking but since we identify with the body mind sense complex so much, we are forced to use words such as ‘attain’). The four basic goals of humans, and how the vaidika system offers a way out of this saṃsāra even while living in it is something we must expose our youngsters to. Our concept of freedom, our concept of God, of devatās, these are essentials. How have we been so selfish and kept them in the dark regarding such profound truths that can be so life changing? 
 
-I had heard of nirvāṇā too of course but used the word without fully  comprehending the meaning of what it alluded to nor knew how it differed from mokṣa, if it did (it does). But one thing was clear to me within a week of coming to Anaikatti, that the whole idea that mokṣa  or nirvāṇa is some special time in one’s life, a special event to wait for - a huge ball of light descending from the heavens into me and such - that went puff! **mokṣa is an ever growing clarity of one’s true nature, **yes a dry definition and** **not a patch on our imagination which wants thunder and lightning and acceptance from ‘God’.** There is no God which does not include me!! I am God! **Yes, that is what I learnt at the gurukulam. An important learning that is life transforming. 
+I had heard of nirvāṇā too of course but used the word without fully  comprehending the meaning of what it alluded to nor knew how it differed from mokṣa, if it did (it does). But one thing was clear to me within a week of coming to Anaikatti, that the whole idea that mokṣa  or nirvāṇa is some special time in one’s life, a special event to wait for - a huge ball of light descending from the heavens into me and such - that went puff! **mokṣa is an ever growing clarity of one’s true nature,** yes a dry definition and **not a patch on our imagination which wants thunder and lightning and acceptance from ‘God’.** There is no God which does not include me!! I am God! Yes, that is what I learnt at the gurukulam. An important learning that is life transforming. 
 
 Another transformative ‘aha point’ was not to be too taken in by ‘science and rationality’ too much - even while using science and logic extensively in all my scriptural study and argument making. Trying to justify every traditional practice as scientific is foolish, as many practices are ‘beyond science’. The Vedas talk of subject matter that cannot be proven or negated by science. How does one establish puṇyā or pāpa scientifically? Or explain adṛṣṭā phala? Or even punarjanma and karma. Proof is for people who lack śraddhā , and such people have no adhikāritvam to śāstra anyway. One comes to śāstra when all other avenues have been exhausted. When one is despairing at the foolishness of the world - of looking for the infinite in the finite, that is when one approaches śāstra looking for answers. 
 
@@ -37,7 +37,7 @@ This is something ammā had always shown by example, by being the first to volun
 
 It is not just the Vedāntabhāga but Vedapūrvabhāga also which is important to study. It talks of values - honesty, simplicity, transparency - so that we are in **harmony with the totality**. It also talks of having a **reverential attitude towards everything in the world** - towards our parents, our teachers, our relatives, guests etc., we must learn to respect everyone. It shows us how **this world is not to be exploited but to be respected**. So Vedapūrvabhāga makes an animal-man into man-man i.e. a human. It provides means to fulfill one’s desires, one’s kāmya karmas, it makes a person a contributor, it draws attention to values and attitudes to be imbibed while talking of harmful activities to be avoided, all these are very important for leading a  religious life. In short it focuses on **duties, attitudes, and values. **
 
-Karmakāṇḍa, which I would scoff at before without knowing anything about it, is also the subject matter of the Vedas and is extremely important for humanity as it makes the animal-man into a man-man,** from doing everything by instinct to being bound by rules and norms i.e. conscious deliberation and intent, which is refinement. **From prakṛta vyavahāra to saṃskṛta vyavahāra. If not it is all kāmabhakśaṇam, kāmavāda, kāmācaraṇa** **i.e.,** **eating, speaking, and doing as one wishes not as per one’s duties or dharma, animal life and human life are not that different if this is so. Until we start following a regulated dinacaryā and performing our nitya karmas and pañca mahā yajñas we will remain instinctual and immature.
+Karmakāṇḍa, which I would scoff at before without knowing anything about it, is also the subject matter of the Vedas and is extremely important for humanity as it makes the animal-man into a man-man,** from doing everything by instinct to being bound by rules and norms i.e. conscious deliberation and intent, which is refinement. **From prakṛta vyavahāra to saṃskṛta vyavahāra. If not it is all kāmabhakśaṇam, kāmavāda, kāmācaraṇa i.e., **eating, speaking, and doing as one wishes not as per one’s duties or dharma, animal life and human life are not that different if this is so.** Until we start following a regulated dinacaryā and performing our nitya karmas and pañca mahā yajñas we will remain instinctual and immature.
 
 I also learnt the essential aspect of how to seek help via prayer and how to express my innermost emotions via rituals during my stint at the gurukulam. When we are helpless **it is intelligent to ask for help, **says Pūjya Svāmījī. We all know how most of us are loathe to ask for directions or advice especially these days when we are supposed to know it all or ask Google or Siri for assistance. But when there are devatās ready to offer their hand, why not take it? To start with we must not decry rituals as a waste, the beauty of rituals is for us to savour and revel in, there is a meaning to seasonal festivities where we get a break from a routinized life. We get divine sanction to express joy and indulge in revelry. Take saṃkrānti for instance - from gau worship to sūrya ārādhanā, from the the glowing lamps to the the rangolī, the flower garlands, the naivedya, the dāna dakṣiṇa that follows, all this celebrates a certain aspect of life in a given moment in time periodically. **Rituals externalise and give vent to the unconscious and subconscious emotions within us**, they give shape to our innermost feelings.
 
@@ -56,13 +56,10 @@ Why are we not training our young adults to be like this? **We have a history of
 
 A dinacaryā handholds us psychologically speaking, it enables us to have a wholesome permanent relationship with the infinite, as whatever we do, we do with an attitude of gratitude and offer it to īśvara. This practice gives a certain space, a certain surety to life, there is a lack of dependency emotionally or psychologically, aloneness becomes enjoyable and we are never lonely. Of course the physical and material benefits of learning Saṃskṛtam, of Pāṇinī, of chanting daily, of eating moderately, of eating sātvika āhāra, all this need not be reiterated as it is well known. Eating, sleeping, moving about, doing everything in moderation helps a student to meditate better and thus getting rid of sorrow caused by worldly issues. 
 
-<div class="hindi h3"> 
-युक्ताहारविहारस्य युक्तचेष्टस्य कर्मसु<br>
-युक्तस्वप्नावबोधस्य योगो भवति दु:खहा<br>
-<p class="insidehindi">
-	yuktāhāra-vihārasya yukta-ceṣṭasya karmasu yukta-svapnāvabodhasya yogo bhavati duḥkha-hā
-</p>
-</div>
+> युक्ताहारविहारस्य युक्तचेष्टस्य कर्मसु  
+> युक्तस्वप्नावबोधस्य योगो भवति दु:खहा
+>    
+>  yuktāhāra-vihārasya yukta-ceṣṭasya karmasu yukta-svapnāvabodhasya yogo bhavati duḥkha-hā
 
 When people talk of dietary restrictions in vaidika dharma and take strong positions for or against say vegetarianism, this posturing comes from a place of ignorance. We are a community which has given birth to interlocking interdisciplinary systems of knowledge which when studied organically assist us to actualize our total potential. A sātvika diet for example is recommended for a sādhaka, a brāhmaṇa who is following a certain ācāra and is in pursuit of the Truth. So the confusion and the question, ‘why is onion or garlic proscribed when they are so good for health’ is moot. A sādhaka would know that garlic is probably good for certain bodily constitutions, that it is good for the sthūla śarīra only, the gross body, which falls under annamaya koṣa, but is not advisable for intake if one proposes to rise above this koṣa to subtle energy fields, which belong to the ‘higher’ bodies. It is thus not recommended for someone who is following a certain vrata etc. We tend to conflate WhatsApp acquired information which is mostly a western gaze superimposed on what we were taught as children; which is the essential bhāratīya jñāna paramparā coming to us from our land, rooted in our understanding of our ‘bodies’; which says there are five bodies not one (Another matter that we Vedāntins say there is no body, **where is the body, show me the body!!**)
 
@@ -74,32 +71,24 @@ I realized also that I need to be cautious and that I should tread carefully, an
 
 [@aurvabhrg makes a case for ](https://twitter.com/aurvabhrg)diverse practices and why we ought to let them be,
 
-<div class="block">
-The Protestant thought process that each and everyone must have the right to read, and interpret the "Holy Text" would have made sense in a religion where there was only one way to approach the divine and every alternate route labelled blasphemous. Applying this reasoning to Hindu dhārma is not only stupid, but is ungrateful. For this is one religion which has made available countless ways to approach the divine …. to suit the requirements of people under the constraints of deśakāla varṇa and āśrama. It acknowledges those constraints, but also empowers people to engage with the divine. This is why you see mind boggling diversity coexisting in India. What is amṛtā for one may be halāhala for another and vice-versa. The constraints ensure that no one is forced to consume what may be halāhala for them. At the same time, Hindu dhārma empowers everyone to seek and maintain what is amṛtā to them. **Those who understand this won't yearn for some mythical unity and equal rights to a particular religious ritual practice. **In the pursuit of satisfying their ego, they belittle the Vaidika paramparā, to preserve which the practising Vaidikas have invested their entire lives and the lives of their children. These Vaidikas have soldiered on despite a hostile society and a hostile state.
-</div>
+> The Protestant thought process that each and everyone must have the right to read, and interpret the "Holy Text" would have made sense in a religion where there was only one way to approach the divine and every alternate route labelled blasphemous. Applying this reasoning to Hindu dhārma is not only stupid, but is ungrateful. For this is one religion which has made available countless ways to approach the divine …. to suit the requirements of people under the constraints of deśakāla varṇa and āśrama. It acknowledges those constraints, but also empowers people to engage with the divine. This is why you see mind boggling diversity coexisting in India. What is amṛtā for one may be halāhala for another and vice-versa. The constraints ensure that no one is forced to consume what may be halāhala for them. At the same time, Hindu dhārma empowers everyone to seek and maintain what is amṛtā to them. **Those who understand this won't yearn for some mythical unity and equal rights to a particular religious ritual practice. **In the pursuit of satisfying their ego, they belittle the Vaidika paramparā, to preserve which the practising Vaidikas have invested their entire lives and the lives of their children. These Vaidikas have soldiered on despite a hostile society and a hostile state.
 
 So the good news for many more people who are busy in their daily lives and doing their duties diligently is:
 
-<div class="hindi h3">
-स्वे स्वे कर्मण्यभिरत: संसिद्धिं लभते नर:<br>
- स्वकर्मनिरत: सिद्धिं यथा विन्दति तच्छृणु<br>
-<p>
-sve sve karmaṇy abhirataḥ sansiddhiṁ labhate naraḥ<br>
-sva-karma-nirataḥ siddhiṁ yathā vindati tach chhṛiṇu
-</p>
-</div>
+> स्वे स्वे कर्मण्यभिरत: संसिद्धिं लभते नर:  
+> स्वकर्मनिरत: सिद्धिं यथा विन्दति तच्छृणु  
+>     
+> sve sve karmaṇy abhirataḥ sansiddhiṁ labhate naraḥ   
+> sva-karma-nirataḥ siddhiṁ yathā vindati tach chhṛiṇu
 
 Do your duty, you get fulfilment, you get the fruits of your karma, there is no compulsion to chant Vedās. Take a carpenter for example, his is hard work, doing physical labour on a daily basis, where is the mental space and time for performing sandhyā, where is the inner leisure for bhāṣya, for scriptural study or commentary? Is it not enough that he slogs day in and out to create something exquisite and functional, and is proud of what he does? It is enough. He has his own norms and his own practices and are they enough, they are more than enough. They will take him to the next level as and when he is ready to go there. Meanwhile many weavers and other jātis also wear their janeu with honour, they have bhakti and take pride in their vṛtti. A stint at the gurukulam will disabuse us of the need for everyone to perform the same functions and duties. There is no pyramid or an apex to strive towards, making us unhappy in our own lives and professions. Instead there arises a healthy acceptance and appreciation of the diverse practices that tie together as Hindu culture. 
 
 Another debate that goes on and on especially when initiates first come to the gurukulam is that of **free will versus fate**. If our fate is already decided what is the point of doing anything, and if it is not decided then where does karma fit in? As always Hindu vision is not a simplistic black and white story. It is nuanced, and hence has many detractors too, because who wants to think so much nowadays! Is it not easier to do what I please, to assume that I live only once and that this body is for enjoyment? We have not mainstreamed what our śāstras say - from our social media to our entertainment, we have let the western modern ideologies creep in and settle down. Generations have been lost to such propaganda wherein Hindu ideas are seen as regressive or superstitious, whereas what they offer for a healthy wholesome living and the hereafter too is nothing short of a treasure chest, long forgotten in deep seas. We accept free will as much as appreciating that any action WILL have a result both visible and invisible. And results accrue as per the intention of our actions done in the past many janmas, not just from this birth. Yet when faced with such a fatalistic idea we are told in the Brahma Sutra bhāṣya that we have a choice in the way we respond and react - we may do something, not do something, and / or do it another way, so there is no blind acceptance of our fate and no we are not puppets in the hands of god, we have a free will which we can and should utilize especially for knowing our true selves:
 
-<div class="hindi h3">
-कर्तुमकर्तुमन्यथा वा कर्तुं शक्यं लौकिकं वैदिकं च कर्म<br>
-<p>
-kartum akartum anyathā vā kartum śakyam<br>
-laukikam vaidikam ca karma
-</p>
-</div>
+> कर्तुमकर्तुमन्यथा वा कर्तुं शक्यं लौकिकं वैदिकं च कर्म   
+>  
+> kartum akartum anyathā vā kartum śakyam  
+> laukikam vaidikam ca karma
 
 This freedom of choice to respond in a myriad ways is something that must be clarified to youngsters who sometimes commit suicide out of lack of clear understanding of what their options are and assume that they have no choice at all regarding the matter at hand. **If we adopt a sincere Hindu vaidika lifestyle we can easily say goodbye to unnecessary medications, psychiatrists, unhealthy drug dependencies and addictions**. So anyway what is the deal with free will and fate? Is karma not fate? NO. karma means an action. Your intention makes what you do i.e. karma; good or bad, and each action i.e. karma has good or bad results depending on one’s intentions. These results are pratyakṣa. You can see them right up but there is also an unseen aspect of the results called adṛṣṭa; results which we cannot see - these are good or bad results of our past actions. So not only do we have direct results of what we do, we also create a sort of a fixed deposit bank balance of what we do - good or bad. These fructify at unknown times or eras and we have no clue what will fructify when! Even Kṛṣṇa says, gahanā karmaṇo gatiḥ, the way of karma is too complex. 
 
@@ -123,18 +112,15 @@ It is the gurukulam that I learnt the importance of family as a unit, the stabil
 
 Another area where the schools fall short in India is in lack of imaginative and out of the box thinking. In films and serials sannyāsīs are made fun of, they are caricatured and shown as deceitful and cunning and worse, this dehumanizes them, desacralizes them and we lose all our common goodness in keeping this beautiful āśrama alive. Whether it is done by design or by naivete, much harm has been done to make the ochre robes seem dangerous to the Hindu person. What benefits they bring to our society with their vairāgya and their presence is not factored in at all. Hence none of the schools will invite a saṃnyāsī to grace their functions, or speak at their podiums, although a saṃnyāsī has much to offer to the students and even the teachers in terms of how to lead a stress free life and more. 
 
-We are very diligent of course to keep our schools secular and not let religion creep in but then we use the English language without realizing how much of Christinanity and its theology is embedded in it. As such it is of no consequence, but language carries a culture, its thoughts and ideologies, language holds the philosophical ideas and ideals. For us to evoke a vaidikā vision via English we might need to rearrange the structure a bit. For a Vedantin,** **the **ātmā has a body, it leaves a body and takes on another**. Not that the body houses an ātmā inside as we are normally made to think, this is a total switch, a 108 degree flip of normal parlance. Hence we say ‘sadgati prāpta ho’ or om śānti when someone ‘leaves the body’ and carries forth on their journey. Another example; ‘a golden chain’ is a wrong sentence vedāntically speaking. As the substantive, i.e. the essence of a chain is of gold and not the chain, the weight and form of chain is all gold. While the adjective, the form, is of a chain’s, we should actually be saying **chainy gold!** Thus we at the gurukulam recognized the value of saṃskṛtam, how efficient it is in conveying our vaidika vision and how essential it is to know it for us to be able to delight in its vast literature both secular and religious. Most of our education encourages reading in English, whereby we lose our poets, our writers, our thinkers, and finally our indigenous ways of thinking and living, ending up as wannabe gorās in brown skin. 
+We are very diligent of course to keep our schools secular and not let religion creep in but then we use the English language without realizing how much of Christinanity and its theology is embedded in it. As such it is of no consequence, but language carries a culture, its thoughts and ideologies, language holds the philosophical ideas and ideals. For us to evoke a vaidikā vision via English we might need to rearrange the structure a bit. For a Vedantin, the **ātmā has a body, it leaves a body and takes on another**. Not that the body houses an ātmā inside as we are normally made to think, this is a total switch, a 108 degree flip of normal parlance. Hence we say ‘sadgati prāpta ho’ or om śānti when someone ‘leaves the body’ and carries forth on their journey. Another example; ‘a golden chain’ is a wrong sentence vedāntically speaking. As the substantive, i.e. the essence of a chain is of gold and not the chain, the weight and form of chain is all gold. While the adjective, the form, is of a chain’s, we should actually be saying **chainy gold!** Thus we at the gurukulam recognized the value of saṃskṛtam, how efficient it is in conveying our vaidika vision and how essential it is to know it for us to be able to delight in its vast literature both secular and religious. Most of our education encourages reading in English, whereby we lose our poets, our writers, our thinkers, and finally our indigenous ways of thinking and living, ending up as wannabe gorās in brown skin. 
 
 Many a time when Svāmījī would explain adhyāropa apavāda and how the visible universe is nāmā rūpā mātram superimposing on the vastu:
 
-<div class="hindi h3">
-रूपं रूपं प्रतिरूपो बभूव<br>
-तदस्य रूपं प्रतिचक्षणाय<br>
-<p>
-rūpam rūpam pratirūpo babhūva<br>
-tadasya rūpam praticakśaṇāya
-</p>
-</div>
+> रूपं रूपं प्रतिरूपो बभूव  
+> तदस्य रूपं प्रतिचक्षणाय  
+>  
+> rūpam rūpam pratirūpo babhūva   
+> tadasya rūpam praticakśaṇāya
 
 ##### brahman in the process of manifesting name and form transformed Itself in accordance with name and form
 

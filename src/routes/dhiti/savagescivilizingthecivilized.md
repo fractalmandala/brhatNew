@@ -41,7 +41,7 @@ Colonization should be understood as both a process and an event, as SN Balagang
 3. Douglas, M. (2003). Purity and danger: An analysis of concepts of pollution and taboo. Routledge.
 4. Youé, C. P. (1988). Dane Kennedy. Islands of White: Settler Society and Culture in Kenya and Southern Rhodesia, 1890–1939. Durham, NC: Duke University Press. 1987. Pp. 271. Albion, 20(1), 151-152.
 5. Sudan, R. (2016). The Alchemy of Empire: Abject materials and the technologies of colonialism. Fordham Univ Press.
-6. How Does the Coronavirus Behave Inside a Patient? https://www.newyorker.com/magazine/2020/04/06/how-does-the-coronavirus-behave-inside-a-patient
+6. [How Does the Coronavirus Behave Inside a Patient?](https://www.newyorker.com/magazine/2020/04/06/how-does-the-coronavirus-behave-inside-a-patient)
 7. Rostow, W. W., & Rostow, W. W. (1990). The stages of economic growth: A non-communist manifesto. Cambridge university press.
 8. Wallerstein, I. (2004). World systems theory. End of Capitalism Garner & Hancock, 611-616.
 9. Balagangadhara, B. (2012). Reconceptualizing India Studies.

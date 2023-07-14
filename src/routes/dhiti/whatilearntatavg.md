@@ -12,12 +12,11 @@ excerpt: "A personal reflection of the writer's experience studying at the Arsha
 ---
 
 ##### Sri gurubhyo namaha!
-<h5 class="hindi">न हि ज्ञानेन सदृशं पवित्रमिह विद्यते</h5>
 
-##### na hi jñānena sadṛiśaṁ pavitramiha vidyate
-##### there is nothing as purifying as knowledge in this world
-
-(Link to previous article. This is part 1 of 4, of the new series).
+> न हि ज्ञानेन सदृशं पवित्रमिह विद्यते  
+>    
+> na hi jñānena sadṛiśaṁ pavitramiha vidyate  
+> there is nothing as purifying as knowledge in this world
 
 The Tamil Nadu State Transport Corporation (TNSTC) bus pulls itself up the winding roads of the verdant Western ghats, at the foothills of Nilgiris, and comes to a sudden halt after the Salim Ali Center for Ornithology, in the midst of a lush jungle teeming with wildlife and birds. There before me is a simple space which matches my own ideal of how a gurukulam ought to be. **Basic, rustic, functional, and carefree.** I am here to learn about myself. Who am I? What is my connection to the world around me? And what is God? What is my relationship with that ‘entity’? Nature in all its bounty; elephants, peacocks, boars, snakes, migratory and local birds included, promise to assist me in my daily sādhanā here. I am elated, I have found a parallel universe!
 
@@ -39,16 +38,15 @@ I remember how grumpy we got after a few weeks since we were all dealing with ou
 
 As for the adults, once we are undertake such a rigorous training, we will not allow our instinctual personality with uncontrollable urges to govern our life (causing so much crime and strife in society), instead a discerning viveki, a personality who can distinguish between what is ethical and not, what is valuable and not, what is infinite and not, will emerge, resulting in universal benefits says Svāmī Sadatmananda ji. We will lift ourselves from the jīvātmā status to the paramātmā level, and we will keep appreciating this fact, I am not a jīvā, whether completely internalized or not, this thought process will provide a safe space within, to keep that distance from whatever is happening in my life that is unbearable, that I am unable to face, and also from the highs of life which I wish to encounter all the time.
 
-<h5 class="hindi">तुल्यनिन्दास्तुतिर्मौनी सन्तुष्टो येन केनचित्<br>
-अनिकेत: स्थिरमतिर्भक्तिमान्मे प्रियो नर:
-</h5>
-
-##### tulya-nindā-stutir maunī santuṣṭo yena kenacit
-##### aniketaḥ sthira-matir bhaktimān me priyo naraḥ
+> तुल्यनिन्दास्तुतिर्मौनी सन्तुष्टो येन केनचित्   
+> अनिकेत: स्थिरमतिर्भक्तिमान्मे प्रियो नर:   
+>    
+> tulya-nindā-stutir maunī santuṣṭo yena kenacit   
+> aniketaḥ sthira-matir bhaktimān me priyo naraḥ
 
 Esmé Partridge says here that;
 
->“One of the reasons young people struggle so much with mental health nowadays is because there is a crisis of authority in society ….they have nothing to guide them except deceptive inner monologues … telling them “you do you”, “it’s okay to be lazy”, “it’s okay to be selfish” on their instagram feeds ..so people end up making mistakes and suffering consequence that could have been prevented had they been given actual advice acquired over centuries of culture and tradition (Scruton’s “answers that have been discovered to enduring questions”) But tradition alone is not enough – it needs to be embodied. We need teachers, counsellors, priests, and parents, who are personally invested in our self-betterment and can tell us when we are doing things wrong from a place of love”.
+> One of the reasons young people struggle so much with mental health nowadays is because there is a crisis of authority in society ….they have nothing to guide them except deceptive inner monologues … telling them “you do you”, “it’s okay to be lazy”, “it’s okay to be selfish” on their instagram feeds ..so people end up making mistakes and suffering consequence that could have been prevented had they been given actual advice acquired over centuries of culture and tradition (Scruton’s “answers that have been discovered to enduring questions”) But tradition alone is not enough – it needs to be embodied. We need teachers, counsellors, priests, and parents, who are personally invested in our self-betterment and can tell us when we are doing things wrong from a place of love.
 
 Our vaidika tradition assures us that we humans learn equally from our sacred texts, from our gurus, from our peers, and finally from time, which is our own learning; how we internalize it through our personal sādhanā. Here let me categorize what I learnt at the Arsha Vidya Gurukulam from these four sources in a four part series:
 
@@ -59,25 +57,23 @@ Here, in this study, there is no separate theory and practical – this is it, I
 
 Our śāstra tells us that there is no separate philosophy or path to know oneself, advaita vedānta is a complete vision, everything else is its subset, it includes everything that we know and do not know. But for all this to be clear, we must first lead a life of dharma, a life full of fulfilling our duties and responsibilities like Rāma, we must develop love for him who is vigrahavān dharmah, he who embodies dharma. The famous mantra from the Kali Santaraṇa Upaniṣad, which can be chanted anywhere and does not need strict adherence to stipulations otherwise associated with other mantras, tells us how leading a life of dharma (embodied by Rāma) leads us to joy and fulfilment, ānanda (embodied by Kṛṣṇa) :
 
-<h5 class="hindi">हरे राम हरे राम , राम राम हरे हरे<br>
-हरे कृष्ण हरे कृष्ण , कृष्ण कृष्ण हरे हरे
-</h5>
-
-##### hare Rāma, hare Rāma, Rāma Rāma, hare hare
-##### hare Kṛṣṇa, hare Kṛṣṇa, Kṛṣṇa Kṛṣṇa, hare hare
+> हरे राम हरे राम , राम राम हरे हरे  
+> हरे कृष्ण हरे कृष्ण , कृष्ण कृष्ण हरे हरे  
+>   
+> hare Rāma, hare Rāma, Rāma Rāma, hare hare  
+> hare Kṛṣṇa, hare Kṛṣṇa, Kṛṣṇa Kṛṣṇa, hare hare
 
 This is easier said than done, to emulate Rāma is well nigh impossible but we can try. We can reach him through bhakti. In our relationships, in our dealings and transactions we can incorporate his righteousness. Only then will we find Kṛṣṇa who is all joy forever, one leads to another, how can there be ānanda without dharma? Any life devoid of dharma is sure to lead to disenchantment and misery. This was taught to us very clearly by our gurus. My clarity on this issue and my love for Rāma grew in the gurukulam. Previously given the education I received and the milieu I was in, I was not too fond of Rāma, assuming the worst of him without actually understanding what he stood for and how he lived his life, but after appreciating the role of dharma in my journey, I realized that I could not get through life without Rāma. This here is a wonderful bhajan by Maharajapuram Santhanam composed by my guru Pūjya Svāmīji Dayananda Saraswati (founder Arsha Vidya Gurukulam, AVG) which helped elevate my love for Rāma.
 
 Once we know that we must live our lives in accordance with dharma and we do, the next step is to know ourselves, as we are now ready for the great reveal! Vedas themselves say that they are pramāṇa i.e. means of knowing oneself, we might think this is fanaticism, but who else says I will tell you about yourself! There is no talk of ātmā in any other extant body of literature or religion with a pedagogy to match.
 
-<h5 class="hindi">परीक्ष्य लोकान्कर्मचितान्ब्राह्मणो निर्वेदमायान्नास्त्यकृतः कृतेन<br>
-तद्विज्ञानार्थं स गुरुमेवाभिगच्छेत्समित्पाणिः श्रोत्रियं ब्रह्मनिष्ठम्
-</h5>
-
-##### parīkṣya lokānkarmacitānbrāhmaṇo
-##### nirvedamāyānnāstyakṛtaḥ kṛtena
-##### tadvijñānārthaṃ sa gurumevābhigacchet
-##### samitpāṇiḥ śrotriyaṃ brahmaniṣṭham
+> परीक्ष्य लोकान्कर्मचितान्ब्राह्मणो निर्वेदमायान्नास्त्यकृतः कृतेन   
+> तद्विज्ञानार्थं स गुरुमेवाभिगच्छेत्समित्पाणिः श्रोत्रियं ब्रह्मनिष्ठम्  
+>     
+> parīkṣya lokānkarmacitānbrāhmaṇo  
+> nirvedamāyānnāstyakṛtaḥ kṛtena  
+> tadvijñānārthaṃ sa gurumevābhigacchet  
+> samitpāṇiḥ śrotriyaṃ brahmaniṣṭham
 
 Now the Vedas (Munḍaka Upaniṣad 1.2.12) tell us that one must study what the śāstras say via a qualified Guru – and ‘qualified’ is described as ‘śrotriyam brahmaniṣṭham’ – one who is trained in śāstra and who is involved only in teaching about śāstra vākya while revelling in the Self. Who is a guru, how to select a guru, who to learn from, all this is described in great detail, so we do not have to worry about how to look for an appropriate guru. What they convey is that it is the teaching that is important, not so much the personality of the teacher. Most of the time we are taken in by a teacher’s accent, knowledge in secular or current affairs, impressed by the teacher’s vocabulary or the attention they shower on us, there is a danger of being attached to the teacher or of transference of our issues onto the guru. I learnt that none of this counts when it comes to knowing oneself. In fact I was told off many a time when my curiosity got the better of me; one does not ask personal questions of the teacher. This is considered taboo so as to avoid unhealthy dependencies and transferences onto one’s guru which happens a lot in a gurukulam setting.
 
@@ -111,12 +107,12 @@ How does such a transformation happen; from being self centered to knowing that 
 
 To do all this my body-mind complex needs to be well oiled and functioning at best capacity and efficiency. Even in an instrument, say a Veena etc., if the strings are not tuned properly soulful music does not emanate, when wound too loose there is no sound at all, or when wound too tight the strings may break. So also, a well disciplined instrument that is our body is like a friend, if let loose it can easily turn into an enemy. Our body mind sense complex is a prime example of a tool that can be used for our benefit by disciplining it, else it can be detrimental in the long run.
 
-<h5 class="hindi">उद्धरेदात्मनात्मानं नात्मानमवसादयेत्<br>
-आत्मैव ह्यात्मनो बन्धुरात्मैव रिपुरात्मन:
-</h5>
+> उद्धरेदात्मनात्मानं नात्मानमवसादयेत्  
+> आत्मैव ह्यात्मनो बन्धुरात्मैव रिपुरात्मन:  
 
-##### uddhared ātmanātmānaṁ nātmānam avasādayet
-##### ātmaiva hyātmano bandhur ātmaiva ripur ātmanaḥ
+> uddhared ātmanātmānaṁ nātmānam avasādayet   
+> ātmaiva hyātmano bandhur ātmaiva ripur ātmanaḥ
+
 **We are our own friend and our own enemy,** it is all about how we train our minds to think. When our guru puts us in a higher orbit our job is to remain there and not to come crashing down! Spirituality is not blaming the world for my problems but instead seeing that my problems are due to my own attitude, my outlook and my lack of understanding of who I am. Spirituality i.e. adhyātma aka **adhi kṛt ātma** aka the Self put forward or in the lead, is starting to own up to the problem, by owning up to myself. We give permission to the world to disturb us. I, who am nitya śuddha buddha mukta svarūpa, can never be troubled by anyone, so if someone ends up troubling me then *I am missing the fact that I am brahman.* What can be done to sat cit ānanda? Nothing!
 
 Physically there may be pain, there may be a problem such as a headache (which is usually temporary and most of the times can be cured), but the sorrow that it generates is psychological, stemming from ‘why me, why always me’, this feeling can be put to rest in peace when we understand who we are. Pūjya Svāmīji would exhort: **Do Not Judge Yourself Based On The Feelings You Have.** We are not our feelings. Feelings are fleeting, what is permanent is our svarūpa. Not remembering this is the root cause of all our troubles.

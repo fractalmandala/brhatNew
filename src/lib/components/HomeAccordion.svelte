@@ -1,11 +1,9 @@
 <script lang="ts">
-	let sy: number;
 	import CompButton1 from '$lib/ridunits/CompButton.svelte';
 	import CompButton2 from '$lib/ridunits/CompButton.svelte';
 	import CompButton3 from '$lib/ridunits/CompButton.svelte';
 </script>
 
-<svelte:window bind:scrollY={sy} />
 <div class="accordion">
 	<div class="panel back" id="panel1">
 		<img
