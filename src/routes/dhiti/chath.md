@@ -34,52 +34,51 @@ Devotees have thus taken Chaṭh around the world. Every family has created a ho
 
 Many of us who have been working in different cities away from our family miss Chaṭh celebrations and carry that heaviness in our hearts. It is also a reminder to self that we must visit our home again, at least for Chaṭh. And Sharda Sinha’s voice just adds to that yearning. Below are a few lines from one of her famous songs, ‘Ho Deenanath’, which is a conversation between a devotee and Sūrya Deva.
 
-<blockquote class="hindi">सोना सट कुनिया हो दीनानाथ<br>
-हे घूमइछा सनसार<br>
-हे घूमइछा सनसार<br>
-सोना सट कुनिया हो दीनानाथ<br>
-हे घूमइछा सनसार<br>
-हे घूमइछा सनसार<br>
-आन दिन उगइ छा हो दीनानाथ<br>
-आहे भोर भिनसार<br>
-आहे भोर भिनसार<br>
-आजू के दिनवा हो दीनानाथ<br>
-हे लागल एती बेर<br>
-हे लागल एती बेर<br><br>
 
-बाट में भेटिए गेल गे अबला<br>
-एकटा अन्हरा पुरुख<br>
-एकटा अन्हरा पुरुख<br>
-अंखिया दिएइते गे अबला<br>
-हे लागल एती बेर<br>
-हे लागल एती बेर
-</blockquote>
+> हे घूमइछा सनसार  
+> हे घूमइछा सनसार  
+> सोना सट कुनिया हो दीनानाथ  
+> हे घूमइछा सनसार  
+> हे घूमइछा सनसार  
+> आन दिन उगइ छा हो दीनानाथ  
+> आहे भोर भिनसार  
+> आहे भोर भिनसार  
+> आजू के दिनवा हो दीनानाथ  
+> हे लागल एती बेर  
+> हे लागल एती बेर  
 
-> Sonā saṭa kuniyā ho Dīnānāth
-> He ghūmaicha sanasāra
-> He ghūmaicha sanasāra
-> Sonā saṭa kuniyā ho Dīnānāth
-> He ghūmaicha sanasāra
-> He ghūmaicha sanasāra
-> Āna dina ugai chā ho Dīnānāth
-> Āhe bhora bhinasāra
-> Āhe bhora bhinasāra
-> Ājū ke dinavā ho Dīnānātha
-> He lāgala etī bera
-> He lāgala etī bera
-> 
-> Bāṭa meṃ bheṭie gela ge abalā
-> Ekaṭā anharā purukh
-> Ekaṭā anharā purukh
-> Aṃkhiyā dieite ge abalā
-> He lāgala etī bera
-> He lāgala etī bera
+> बाट में भेटिए गेल गे अबला  
+> एकटा अन्हरा पुरुख  
+> एकटा अन्हरा पुरुख  
+> अंखिया दिएइते गे अबला  
+> हे लागल एती बेर  
+> हे लागल एती बेर  
 
-> Riding on the golden chariot , O Sūrya Deva, you move around the world
-> Riding on the golden chariot , O Sūrya Deva, you move around the world
-> You rise early on other days, O Sūrya Deva, why are you late today
-> 
-> I stumbled upon a blind person on my way, O Helpless, I blessed him with eyes that is why I am late
+> Sonā saṭa kuniyā ho Dīnānāth  
+> He ghūmaicha sanasāra  
+> He ghūmaicha sanasāra  
+> Sonā saṭa kuniyā ho Dīnānāth  
+> He ghūmaicha sanasāra  
+> He ghūmaicha sanasāra  
+> Āna dina ugai chā ho Dīnānāth  
+> Āhe bhora bhinasāra  
+> Āhe bhora bhinasāra  
+> Ājū ke dinavā ho Dīnānātha  
+> He lāgala etī bera  
+> He lāgala etī bera  
+
+> Bāṭa meṃ bheṭie gela ge abalā  
+> Ekaṭā anharā purukh  
+> Ekaṭā anharā purukh  
+> Aṃkhiyā dieite ge abalā  
+> He lāgala etī bera  
+> He lāgala etī bera  
+
+> Riding on the golden chariot , O Sūrya Deva, you move around the world  
+> Riding on the golden chariot , O Sūrya Deva, you move around the world  
+> You rise early on other days, O Sūrya Deva, why are you late today  
+
+> I stumbled upon a blind person on my way, O Helpless, I blessed him with eyes that is why I am late  
 
 Our communities continue to carry on all the age-old traditions, rituals and festivals against all odds, but now they face a growing challenge.The challenge of transferring this beautiful culture to the next generation. The new generation does not have the necessary rootedness and many youngsters do not even know how to introduce themselves when asked where they are originally from. They are outsiders to the places where they have migrated to, and act like guests in their own native places. One of the most visible proof is the loss of traditional accent in the second generation of the migrated community.
 

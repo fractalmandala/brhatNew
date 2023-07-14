@@ -11,22 +11,21 @@ date: "2023-05-27"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/shyamsingharoy.webp
 ---
 
-<div align="center"> ॐ श्री अनिरुद्ध सरस्वती </div>
+<div align="center"><h5>ॐ श्री अनिरुद्ध सरस्वती</h5></div>
 
-
->*Today we are not drinking pure water, not breathing pure air, but we can hear pure bliss of you Panditji.*
+> Today we are not drinking pure water, not breathing pure air, but we can hear pure bliss of you Panditji.
 
 This is a comment under a [song](https://www.youtube.com/watch?v=Si-6xyMYvhE) by Pandit Bhimsen Gururaj Joshi (1922-2011), one of the greatest Indian vocalists from the Hindustāni classical tradition. The comment was by no means solitary, nearly every commenter expressed their awe.
 
 Evoking such bhāva is no mean feat, it takes an unreal level of dedication to raise art to that pedestal like Pandit Joshi did, and it is possible only with a reverence for the craft. The whole Bhāratīya pantheon of the 64 kalās, from iconography on temples to puppetry on stage to the various nṛtyas scattered throughout the land, all aim at generating this anubhava in the experiencer. 
 
-**“In the Hindu worldview, art is something which is beautiful, meaningful and which elevates the soul**.**”**
+> In the Hindu worldview, art is something which is beautiful, meaningful and which elevates the soul.
 
 Hence, when art is laced with propaganda it not only becomes a tool to mislead, it does a disservice towards its higher purpose of unlocking beauty and thenceforth spiritual truths. It, therefore, becomes necessary for us to identify and check propaganda, not just to separate truth from untruths, but in the wider interest of preserving a gateway to divinity in human life.
 
 Examples are not wanting to demonstrate the deluge of propaganda that Hindus are subjected to through their own country’s cinemas: we have the desert robber edifying, brāhmaṇa vilifying [Shamshera](https://en.wikipedia.org/wiki/Shamshera), the Indian army denigrating, Forrest Gump ruining [Lal Singh Chadda](https://en.wikipedia.org/wiki/Laal_Singh_Chaddha) and the caste consciousness engendering [Jai Bhim](https://en.wikipedia.org/wiki/Jai_Bhim_(film)), among others. However, for the present examination, the 2021 Telugu movie [Shyam Singha Roy](https://en.wikipedia.org/wiki/Shyam_Singha_Roy) presents a suitable candidate.
 
-**Plot**
+#### Plot
 
 The movie follows the story of Vasu (played by Nani), an aspiring 21st-century director who is toiling hard to make his mark in the cinema industry. Post the success of his first film however, it is discovered that his story is an indistinguishable copy of an earlier work produced by a popular Bengali communist writer of the 1970s, Shyam Singha Roy. Following the evidence of this mysterious coincidence, it is discovered that Vasu was Shyam Singha Roy in his past life. 
 
@@ -70,7 +69,7 @@ Being a recipient and generator of propaganda, Adolf Hitler had explained the pu
 
 The actual significance of the “few points” mentioned above can be understood by these dārśanika words of modern day seer Ram Swarup:
 
->"The alien rulers decided that the leading ideas of Hinduism were idolatry, polytheism, Brahmanism and other "superstitions''. The fact that these categories belong to Semitic thought and history and have never been used by the Hindus in discussing their fundamental ideas was completely disregarded. Similarly, the fact that the basic ideas that have occupied Hindu sages are Rita, Dharma, interchange between gods and men (parasparam bhavayantah). Brahmavada, Atma-vada, Advaita, Purusha-prakriti-jiva, Yoga, Mukti, the four purusharthas, Karma and Rebirth, the four stages, the four debts, the divine qualities (daivi sampada) like non-violence, truthfulness, friendliness and compassion for all (jiva daya), welfare of the world (loka samgrah), microcosm-macrocosm (pinda-brahamanda), multiple modes and planes of existence psychic and spiritual (lokas), cycles of creations and dissolutions set in a time-scale which should be the envy of modern astronomers and space geographers-all these did not count. The rulers arbitrarily decided that Hinduism was a miscellany of gods and creeds and castes and was idolatrous." <sup>4</sup>
+> The alien rulers decided that the leading ideas of Hinduism were idolatry, polytheism, Brahmanism and other "superstitions''. The fact that these categories belong to Semitic thought and history and have never been used by the Hindus in discussing their fundamental ideas was completely disregarded. Similarly, the fact that the basic ideas that have occupied Hindu sages are Rita, Dharma, interchange between gods and men (parasparam bhavayantah). Brahmavada, Atma-vada, Advaita, Purusha-prakriti-jiva, Yoga, Mukti, the four purusharthas, Karma and Rebirth, the four stages, the four debts, the divine qualities (daivi sampada) like non-violence, truthfulness, friendliness and compassion for all (jiva daya), welfare of the world (loka samgrah), microcosm-macrocosm (pinda-brahamanda), multiple modes and planes of existence psychic and spiritual (lokas), cycles of creations and dissolutions set in a time-scale which should be the envy of modern astronomers and space geographers-all these did not count. The rulers arbitrarily decided that Hinduism was a miscellany of gods and creeds and castes and was idolatrous.<sup>4</sup>
 
 There has been plenty of attempted subconscious tuning in the movie. Apart from the overt vilification as mentioned above, the covert attempts such as attaching a catchy tune with the entry of the reformer, as well as communist ideology of the reformer are also inserted. However, there was one particular piece which was most heartbreaking to this author, something which might not have been imagined as propaganda by the creators perhaps. It was the renaming of the female protagonist from Maitrī to Rosie.
 
@@ -78,18 +77,12 @@ Maitrī implies compassion, benevolence, and loving kindness, but its meaning go
 
 Replacing Maitrī with Rosie is not only intended at erasing a culture, it signifies the foreclosure of a door which is the endowment of the entire humanity. It is what is happening in the world around us today, with the avenues of going within shrinking by the day, coupled with the rise of despair. Therefore, it becomes the responsibility of every dhārmika to buck the trend and keep the torch of dharma alive, through both knowledge and action.
 
-References & Glossary:
+#### References and Glossary
 
-[1] **Jaati:** Jati is a Sanskrit word meaning "birth." The term is used for the thousands of clans, communities, tribes and religious groups in India, and may also refer to a caste within Hindu society. An Indian person’s surname will often denote their jati association. Typically, each individual jati is associated with a traditional tribe, religious belief or job function. However, a jati within Indian and yogic philosophy can denote any group that is united by a set of generic characteristics.
+1. Jaati: Jati is a Sanskrit word meaning "birth." The term is used for the thousands of clans, communities, tribes and religious groups in India, and may also refer to a caste within Hindu society. An Indian person’s surname will often denote their jati association. Typically, each individual jati is associated with a traditional tribe, religious belief or job function. However, a jati within Indian and yogic philosophy can denote any group that is united by a set of generic characteristics. What is Jati? - Definition from Yogapedia. (2016). [Yogapedia.com](https://www.yogapedia.com/definition/5571/jati)
 
-What is Jati? - Definition from Yogapedia. (2016). Yogapedia.com. https://www.yogapedia.com/definition/5571/jati
+2. Varnashrama Dharma: Varna, according to Hindu scriptures, refers to the classification of people based on their qualities. The term is derived from the Sanskrit word, vr, which means "to describe," "to classify" or "to cover." Varna is classified into four types: brahman, kshatriya, vaishya and shudra. What is Varna? - Definition from Yogapedia. (2016). [Yogapedia.com](https://www.yogapedia.com/definition/5510/varna)
 
-[2] **Varnashrama Dharma:** Varna, according to Hindu scriptures, refers to the classification of people based on their qualities. The term is derived from the Sanskrit word, vr, which means "to describe," "to classify" or "to cover."
+3. Adolf Hitler, Mein Kampf, trans. Ralph Mannheim (Boston: Houghton-Mifflin, 1943), 42, 179-185.
 
-Varna is classified into four types: brahman, kshatriya, vaishya and shudra.
-
-What is Varna? - Definition from Yogapedia. (2016). Yogapedia.com. https://www.yogapedia.com/definition/5510/varna
-
-[3] Adolf Hitler, Mein Kampf, trans. Ralph Mannheim (Boston: Houghton-Mifflin, 1943), 42, 179-185.
-
-[4] Ram Swarup, Hinduism and Monotheistic Religions (New Delhi: Voice of India, 2015), Pg 283.
+4. Ram Swarup, Hinduism and Monotheistic Religions (New Delhi: Voice of India, 2015), Pg 283.

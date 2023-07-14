@@ -124,15 +124,11 @@ In conclusion, the artistry of hairdressing stood as a treasured tradition in an
 
 (For Tamiḻ words, ISO15919 standard has been used to add diacritics in English transliteration, as opposed to IAST standard which is used elsewhere in the paper for English transliteration of Sanskrit words.)
 
-(i) Hairstyles in Ancient Indian Art by K. Krishna Murthy
-
-(ii) Hair and Its Styling in Ancient India by J.P. Mittal
-
-(iii) The Indus Civilization: A Contemporary Perspective by Gregory L. Possehl
-
-(iv) Indian Costume: From 500 B.C. to the Present" by Kamaladevi Chattopadhyay
-
-(v) Ancient Hair Styles of India by Ila Palchoudhuri
+1. Hairstyles in Ancient Indian Art by K. Krishna Murthy
+2. Hair and Its Styling in Ancient India by J.P. Mittal
+3. The Indus Civilization: A Contemporary Perspective by Gregory L. Possehl
+4. Indian Costume: From 500 B.C. to the Present" by Kamaladevi Chattopadhyay
+5. Ancient Hair Styles of India by Ila Palchoudhuri
 
 <style lang="sass">
 

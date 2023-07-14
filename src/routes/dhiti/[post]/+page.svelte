@@ -168,7 +168,7 @@
 				{data.category}
 			</h5>
 		</div>
-		<h1 class="tt-c" style="serif; font-weight: bold;">{data.title}</h1>
+		<h1 class="tt-c">{data.title}</h1>
 		<div class="rta-row colgap200 ycenter bord-bot p-bot-64">
 			{#each data.tags as item}
 				<cite class="citeone">{item}</cite><br />
@@ -474,28 +474,6 @@ h1
 			.citetwo
 				color: #b7b7b7
 				text-transform: lowercase
-
-.maincol
-	>.rta-column
-		padding-top: 64px
-
-
-.maincol
-	@media screen and (min-width: 1024px)
-		padding-bottom: 80px
-		padding-top: 64px
-		.rta-row
-			margin-bottom: 24px
-			.rta-image
-				height: 96px
-				img
-					object-fit: cover
-
-.rta-row
-	h6
-		transition: var(--snap)
-		&:hover
-			color: #fe4a49
 
 .citeone
 	background: #fe4a49
