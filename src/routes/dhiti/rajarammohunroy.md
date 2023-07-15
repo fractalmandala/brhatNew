@@ -1,5 +1,5 @@
 ---
-title: The Real Legacy of Raja Rammohun Roy
+title: Point of view - Legacy of Raja Rammohun Roy
 author: Savitri Mumukshu
 category: Dharma Today
 excerpt: "Raja Rammohun Roy's final legacy and vision for India to transform it into an English-speaking, Christian British nation."
