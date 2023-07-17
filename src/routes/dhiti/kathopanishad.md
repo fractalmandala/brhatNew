@@ -3,8 +3,8 @@ title: "Studying the Kaṭha Upaniṣad: A Psycho-Spiritual Lens: Part 1"
 author: Abhisek Kumar Panda
 category: Svayambodha
 tags: 
--culture 
--tradition
+- culture 
+- tradition
 date: "2023-07-17"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/kathopanishad
 excerpt: "Psycho-Spiritual Demystification of Katha Upanisad"
