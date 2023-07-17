@@ -110,7 +110,7 @@ His questioning of this act shows a rejection of the impurities, inherent or acq
 
 #### The Sun as Symbol
 
-_Sūryadeva_, also known as _Vivasvān_, is the _devatā_ of _satyam_ or _vijñānamaya kośa_, the ideal mind, which is the fourth sheath of the manifestation of being (10). Similarly _Viṣṇu_ is the _devatā_ of the _ānandamaya koṣa_, which is the purely blissful fifth sheath of the manifestation of being. But both _Sūrya _and _Viṣṇu_ can only manifest through _Agni_. Or in other words for the development of intelligent mind (_manomaya kośa_- which is the domain of _Agni_) to its highest purity, the _Sūrya_(_prakāśa_) and the _Viṣṇu_ (_vaidyutam_) must descend from their corresponding higher planes of _vijñāna_ and _ānanda_, respectively.
+_Sūryadeva_, also known as _Vivasvān_, is the _devatā_ of _satyam_ or _vijñānamaya kośa_, the ideal mind, which is the fourth sheath of the manifestation of being (10). Similarly _Viṣṇu_ is the _devatā_ of the _ānandamaya koṣa_, which is the purely blissful fifth sheath of the manifestation of being. But both _Sūrya_ and _Viṣṇu_ can only manifest through _Agni_. Or in other words for the development of intelligent mind (_manomaya kośa_- which is the domain of _Agni_) to its highest purity, the _Sūrya_(_prakāśa_) and the _Viṣṇu_ (_vaidyutam_) must descend from their corresponding higher planes of _vijñāna_ and _ānanda_, respectively.
 
 This is a fractal design in operation - where _Agni_ as the presiding deity attains primacy before _Sūrya_ and _Viṣṇu_. To better understand the fractal design - the worship of one deity or development of one faculty doesn’t negate the others. In fact reinforcement occurs from other deities for integral manifestation. The principle is same for all faculties of being.
 
