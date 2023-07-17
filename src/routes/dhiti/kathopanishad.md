@@ -2,7 +2,9 @@
 title: "Studying the Kaṭha Upaniṣad: A Psycho-Spiritual Lens: Part 1"
 author: Abhisek Kumar Panda
 category: Svayambodha
-tags: culture, tradition
+tags: 
+-culture 
+-tradition
 date: "2023-07-17"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/kathopanishad
 excerpt: "Psycho-Spiritual Demystification of Katha Upanisad"
@@ -141,11 +143,11 @@ This act of evolution or raising to divinity results in union with the three sta
 
 The Cosmic Mind, macrocosm, is known as _Hiraṇyagarbha prajāpati_ while the individual mind, microcosm, is _taijasa_. Taijasa translates to ‘light of self’ and self here is the _antaḥkaraṇa_- namely the _manaḥ_(mind), _buddhi_(discretionary intellect), _ahaṃkāra_(the I-sense) and _citta_(reflections of sub and unconscious). The light here refers to the self-reflective actions of the _saṃskāras_ or impressions. For example, the inner consciousness creates subtle internal images by reflecting on the impressions stored in _citta_(sub and unconscious). It is just like a mirror image. Just like a dream! The goal for evolution here can be understood as an identification with the Cosmic Mind - _Hiraṇyagarbha prajāpati_.
 
-**“The third quarter is Prajñā whose sphere is deep sleep”**(21). **This is represented by the sound M.** Here there is no enjoyment of external or internal objects. There are no impressions or reflections. This is the _kāraṇa śarīra_ or the causal body. Consciousness is undifferentiated here. The duality of object and subject vanishes. The object, subject and the relationship between them becomes one. In the world of _padarthas_, the _pada_(term), the _artha_ (the meaning embedded) and the referent relationship also become one.
+**“The third quarter is Prājña whose sphere is deep sleep”**(21). **This is represented by the sound M.** Here there is no enjoyment of external or internal objects. There are no impressions or reflections. This is the _kāraṇa śarīra_ or the causal body. Consciousness is undifferentiated here. The duality of object and subject vanishes. The object, subject and the relationship between them becomes one. In the world of _padarthas_, the _pada_(term), the _artha_ (the meaning embedded) and the referent relationship also become one.
 
-There is no multiplicity. There is no ‘I’ here. So how could there be external objects or internal impressions! Because there is no manifestation or creation in this state. This is a state of unmanifest (_avyakta_). The Cosmic Causal Body, macrocosm, is known as _prāṇa_, the first descendant of the Absolute, while the individual causal body is _prajñā_. The evolution here is to identify with or attain union with undifferentiated Consciousness, i.e. Cosmic _Prāṇa._
+There is no multiplicity. There is no ‘I’ here. So how could there be external objects or internal impressions! Because there is no manifestation or creation in this state. This is a state of unmanifest (_avyakta_). The Cosmic Causal Body, macrocosm, is known as _prāṇa_, the first descendant of the Absolute, while the individual causal body is _prājña_. The evolution here is to identify with or attain union with undifferentiated Consciousness, i.e. Cosmic _Prāṇa._
 
-This entire play seems to be embedded within a fractal design. "The entire play is embedded within a fractal design. One can enter a dream-like state while in the waking state. Don't we reflect on our thoughts in the waking state? One can also enter the deep sleep state from the waking state. This, however, is difficult for most to relate."
+The entire play is embedded within a fractal design. One can enter a dream-like state while in the waking state. Don't we reflect on our thoughts in the waking state? One can also enter the deep sleep state from the waking state. This, however, is difficult for most to relate.
 
 A person in deep meditation or a dancer completely engrossed in the art may momentarily relate to this. Imagine you are concentrating on a light source from a lamp. There are three things - you, the light and the relationship between both, i.e. your vision. This is the waking state. In the deep sleep state, the three become one. You, the light source and the vision are one - undifferentiated.
 
