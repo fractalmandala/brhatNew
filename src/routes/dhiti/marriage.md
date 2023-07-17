@@ -1,6 +1,6 @@
 ---
 title: "Marriage: The Institution of Sacrifice"
-author: Abhishek Kumar Panda
+author: Abhisek Kumar Panda
 category: Culture and Policy
 tags:
 - culture
