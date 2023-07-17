@@ -34,7 +34,7 @@ There is a bigger psychological dimension to this as well. The nature of social 
 
 Culture today makes an incessant push to have an opinion on an incredibly large range of topics through infinitesimal reflections. 
 
-In this backdrop, we need a set of 1<sup>st</sup> principles to think through our public debates especially within the Hindu RW discourse landscape. As our survey of the past becomes urgent, our attitudes cannot become indolent. 
+In this backdrop, we need a set of 1<sup class="nonce">st</sup> principles to think through our public debates especially within the Hindu RW discourse landscape. As our survey of the past becomes urgent, our attitudes cannot become indolent. 
 
 **_At Bṛhat, our goal is to contribute to the evolution of an intelligent, courageous and strategic civilizational discourse._** So, here is the way we think about it. Each of these words contains a whole world of philosophy but we use them as sort of sūtras to guide our own writing and editorial decision making.
 
