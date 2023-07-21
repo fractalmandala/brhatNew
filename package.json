@@ -63,6 +63,7 @@
     "prismjs": "^1.29.0",
     "rehype-slug": "^5.1.0",
     "see": "^0.0.0",
+    "seedrandom": "^3.0.5",
     "sse": "^0.0.8",
     "sse.js": "^0.6.1",
     "svelte-inview": "^4.0.0",

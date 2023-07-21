@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { themeMode, breakZero, breakOne, breakTwo } from '$lib/stores/globalstores';
+	import Shell from '$lib/components/PageShell.svelte';
 	import {
 		metaTitle,
 		metaDescription,
@@ -75,94 +76,85 @@
 	});
 </script>
 
-<Head
-	title={$metaTitle}
-	metaDescription={$metaDescription}
-	metaUrl={$metaUrl}
-	metaImage={$metaImage}
-/>
-
-<div
-	class="mainletter"
-	class:light={$themeMode}
-	class:dark={!$themeMode}
-	class:levelzero={$breakZero}
-	class:levelone={$breakOne}
-	class:leveltwo={$breakTwo}
->
-	<div class="letterstrip ta-c bord-bot p-bot-16">
-		<h4>Bṛhatadya {data.issueData.header}</h4>
-		<small>{data.issueData.datefrom} | {data.issueData.dateto}</small>
-	</div>
-	<div class="filterstrip colgap100">
-		{#if !$breakTwo || expandedMenu}
-			<div class="stripinsidestrip" on:click={toggleExpanded} on:keydown={fauxfake}>
-				<button
-					class="blank-button"
-					class:activated={$newsFilter === 'Featured'}
-					on:click={() => setFilter('Featured')}
-				>
-					<p>Featured</p>
-				</button>
-				<button
-					class="blank-button"
-					class:activated={$newsFilter === 'Bṛhat Draṣṭā'}
-					on:click={() => setFilter('Bṛhat Draṣṭā')}
-				>
-					<p>Draṣṭā</p>
-				</button>
-				<button
-					class="blank-button"
-					class:activated={$newsFilter === 'Bṛhat Anveṣī'}
-					on:click={() => setFilter('Bṛhat Anveṣī')}
-				>
-					<p>Anveṣī</p>
-				</button>
-				<button
-					class="blank-button"
-					class:activated={$newsFilter === 'Dhīti'}
-					on:click={() => setFilter('Dhīti')}
-				>
-					<p>Dhīti</p>
-				</button>
-				<button
-					class="blank-button"
-					class:activated={$newsFilter === 'Events and Actions'}
-					on:click={() => setFilter('Events and Actions')}
-				>
-					<p>Events</p>
-				</button>
-				<button
-					class="blank-button"
-					class:activated={$newsFilter === 'New Launch'}
-					on:click={() => setFilter('New Launch')}
-				>
-					<p>New</p>
-				</button>
-				<button
-					class="blank-button"
-					class:activated={$newsFilter === 'IKS'}
-					on:click={() => setFilter('IKS')}
-				>
-					<p>IKS</p>
-				</button>
-				<button
-					class="blank-button"
-					class:activated={$newsFilter === 'Video'}
-					on:click={() => setFilter('Video')}
-				>
-					<p>Video</p>
-				</button>
-			</div>
-		{/if}
-		{#if $breakTwo}
-			<button class="blank-button onbreak m-bot-8" on:click={toggleExpanded}>
-				<p>{$newsFilter}</p>
+<div class="letterstrip ta-c bord-bot p-bot-16 p-top-128">
+	<h4>Bṛhatadya {data.issueData.header}</h4>
+	<small>{data.issueData.datefrom} | {data.issueData.dateto}</small>
+</div>
+<div class="filterstrip colgap100">
+	{#if !$breakTwo || expandedMenu}
+		<div class="stripinsidestrip" on:click={toggleExpanded} on:keydown={fauxfake}>
+			<button
+				class="blank-button"
+				class:activated={$newsFilter === 'Featured'}
+				on:click={() => setFilter('Featured')}
+			>
+				<p>Featured</p>
 			</button>
-			<small class="ta-c">Click to Filter Updates</small>
-		{/if}
-	</div>
-	<div class="main colgap500 rowgap600" class:outer={$newsFilter === 'Featured'}>
+			<button
+				class="blank-button"
+				class:activated={$newsFilter === 'Bṛhat Draṣṭā'}
+				on:click={() => setFilter('Bṛhat Draṣṭā')}
+			>
+				<p>Draṣṭā</p>
+			</button>
+			<button
+				class="blank-button"
+				class:activated={$newsFilter === 'Bṛhat Anveṣī'}
+				on:click={() => setFilter('Bṛhat Anveṣī')}
+			>
+				<p>Anveṣī</p>
+			</button>
+			<button
+				class="blank-button"
+				class:activated={$newsFilter === 'Dhīti'}
+				on:click={() => setFilter('Dhīti')}
+			>
+				<p>Dhīti</p>
+			</button>
+			<button
+				class="blank-button"
+				class:activated={$newsFilter === 'Events and Actions'}
+				on:click={() => setFilter('Events and Actions')}
+			>
+				<p>Events</p>
+			</button>
+			<button
+				class="blank-button"
+				class:activated={$newsFilter === 'New Launch'}
+				on:click={() => setFilter('New Launch')}
+			>
+				<p>New</p>
+			</button>
+			<button
+				class="blank-button"
+				class:activated={$newsFilter === 'IKS'}
+				on:click={() => setFilter('IKS')}
+			>
+				<p>IKS</p>
+			</button>
+			<button
+				class="blank-button"
+				class:activated={$newsFilter === 'Video'}
+				on:click={() => setFilter('Video')}
+			>
+				<p>Video</p>
+			</button>
+		</div>
+	{/if}
+	{#if $breakTwo}
+		<button class="blank-button onbreak m-bot-8" on:click={toggleExpanded}>
+			<p>{$newsFilter}</p>
+		</button>
+		<small class="ta-c">Click to Filter Updates</small>
+	{/if}
+</div>
+<Shell
+	metaTitle={$metaTitle}
+	metaDescription={$metaDescription}
+	metaImage={$metaImage}
+	metaUrl={$metaUrl}
+>
+	<section class="rta-column rowgap400 min100" id="intro" class:outer={$newsFilter === 'Featured'}>
 		{#if data.user !== 'none'}
 			{#if $newsFilter === 'Dhīti'}
 				{#if recentDhiti && recentDhiti.length > 0}
@@ -263,14 +255,14 @@
 				{/each}
 			{/if}
 		{/if}
-	</div>
-	<div class="rta-column glass-top p-top-32 ta-c rowgap200 outer-box">
-		<p style="font-size: 14px">
+	</section>
+	<section class="rta-column rowgap400 min100" id="meaning">
+		<p class="small">
 			"Adya," meaning 'today, this day, now, at present', combines with Bṛhat to denote 'Bṛhat
 			Today,' or 'Bṛhat Now'- a fair name for a periodic newsletter that updates recent events and
 			activities at Bṛhat.
 		</p>
-		<p style="font-size: 14px">
+		<p class="small">
 			A second meaning lends deeper significance. With 'bṛhat' meaning 'great, formidable, large,
 			growing,' 'Bṛhat-Adya' means the "Great Now," or the "Great Moment," ie- the civilizational
 			moment we are currently in. Read more about this moment, and what it means for all of us,
@@ -281,26 +273,26 @@
 				rel="noreferrer">here.</a
 			>
 		</p>
-	</div>
-</div>
+	</section>
+</Shell>
 
 <style lang="sass">
 
-.levelzero
+@media screen and (min-width: 1024px)
 	.stripinsidestrip
 		display: flex
 		flex-direction: row
 		align-items: center
 		column-gap: 24px
 
-.levelone
+@media screen and (min-width: 769px) and (max-width: 1023px)
 	.stripinsidestrip
 		display: flex
 		flex-direction: row
 		align-items: center
 		column-gap: 16px
 
-.leveltwo
+@media screen and (max-width: 768px)
 	.stripinsidestrip
 		display: flex
 		flex-direction: column
@@ -321,11 +313,10 @@
 		margin: 0
 	margin-bottom: 16px
 
-.leveltwo
+@media screen and (max-width: 768px)
 	.dhitistuff
 		row-gap: 0
 		justify-content: flex-start
-
 
 .author
 	padding-top: 16px
@@ -337,7 +328,7 @@ pre.excerpt
 .newbutton
 	font-weight: 600
 
-.levelone, .levelzero
+@media screen and (min-width: 769px)
 	.filterstrip
 		display: flex
 		flex-direction: row
@@ -359,7 +350,7 @@ pre.excerpt
 				font-weight: bold
 				color: var(--opposite)
 
-.leveltwo
+@media screen and (max-width: 768px)
 	.filterstrip
 		display: flex
 		flex-direction: column
@@ -386,145 +377,5 @@ pre.excerpt
 			.blank-button
 				p
 					font-size: 24px
-
-
-.dark
-	.stripinsidestrip
-		background: #171717
-
-
-.light
-	.stripinsidestrip
-		background: #FFFFFF
-
-.mainletter
-	min-height: 100vh
-	display: flex
-	flex-direction: column
-
-.levelzero.mainletter, .levelone.mainletter
-	padding-left: 32px
-	padding-right: 32px
-	padding-top: 120px
-	padding-bottom: 96px
-	.letterstrip
-		width: 100%
-	.main
-		padding-top: 64px
-		padding-left: 280px
-		padding-right: 280px
-	.main.outer
-		padding-left: 128px
-		padding-right: 128px
-	.body
-		h3
-			font-size: 48px
-		h6
-			&:hover
-				a
-					text-decoration: underline
-
-
-.leveltwo.mainletter
-	padding-top: 80px
-	.letterstrip
-		h4
-			font-size: 20px
-		small
-			font-size: 10px
-	pre
-		font-size: 14px
-
-.levelzero, .levelone
-	.singleitem
-		display: flex
-		flex-direction: row
-		width: 100%
-		margin-bottom: 64px
-		.rta-image
-			width: 32%
-			height: 280px
-			img
-				object-fit: cover
-				width: 100%
-		.body
-			width: 64%
-			padding-left: 32px
-	.singleitem.typevideo
-		.rta-image
-			width: 64%
-		.body
-			width: 32%
-			padding-left: 24px
-
-.leveltwo.mainletter
-	grid-template-columns: 1fr
-	grid-template-areas: "main"
-	.main
-		min-height: 100vh
-		padding-top: 0
-		padding-left: 24px
-		padding-right: 24px
-	
-	
-.mainletter
-	h3
-		color: var(--opposite)
-
-.dark
-	.singleitem
-		background: #171717
-
-.light
-	.singleitem
-		background: white
-	
-.leveltwo
-	.singleitem
-		display: flex
-		flex-direction: column
-		border-bottom: 1px solid var(--forline)
-		padding-bottom: 24px
-		.rta-image
-			margin-bottom: 16px
-		.rta-row
-			padding-top: 16px
-			pre
-				margin-top: 0
-				padding-top: 0
-		img
-			object-fit: cover
-			height: 100%
-			height: 160px
-		h3
-			font-size: 32px
-		h6
-			font-size: 24px
-		.dhitistuff
-			small
-				background: #fe4a49
-				color: white
-				font-size: 12px
-				font-weight: bold
-				padding: 2px 4px
-				width: max-content
-
-.singleitem
-	pre
-		line-height: 1.4
-
-.levelzero
-	.singleitem.typesecond
-		display: flex
-		flex-direction: row
-		width: 100%
-		.rta-image
-			width: 40%
-			img
-				object-fit: cover
-				width: 100%
-		.body
-			width: 56%
-			padding-left: 48px
 
 </style>

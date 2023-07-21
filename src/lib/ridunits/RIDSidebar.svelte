@@ -46,16 +46,6 @@
 		isFocused = false;
 	}
 
-	function toggleVisibility() {
-		if (browser) {
-			themeMode.update((mode) => {
-				const newMode = !mode;
-				localStorage.setItem('themeMode', JSON.stringify(newMode));
-				return newMode;
-			});
-		}
-	}
-
 	function toggleSideBar() {
 		if (browser) {
 			sideMode.update((mode) => {
@@ -182,7 +172,7 @@
 
 #searcharea
 	input
-		border: none
+		border: 1px solid var(--contraster2)
 
 .right
 	display: flex
@@ -218,23 +208,24 @@
 	display: flex
 	flex-direction: column
 	height: 100vh
-	width: 40vw
 	overflow-x: hidden
 	z-index: 1000
 	position: fixed
 	overflow-y: scroll
+	backdrop-filter: blur(8px)
 	@media screen and (min-width: 1024px)
-		padding-top: 96px
+		width: 480px
+		padding-top: 64px
 	@media screen and (max-width: 1023px)
 		width: 100vw
 		z-index: 899
 		padding-top: 88px
 
 .appsidebar.dark
-	background: #171717
+	background: #111111
 
 .appsidebar.light
-	background: #171717
+	background: #fafafa
 
 .appsidebar::-webkit-scrollbar
 	width: 2px
@@ -245,43 +236,29 @@
 .linksbox
 	display: flex
 	flex-direction: column
-	padding: 16px 32px
+	padding: 12px 32px
 	position: relative
-	border-bottom: 1px solid #272727
+	border-bottom: 1px solid var(--contraster2)
 	h5, h5 a
 		margin: 0
 		text-align: right
 		text-transform: uppercase
 		padding-bottom: 8px
 		cursor: pointer
-		color: white
-	&:hover
-		h5, h5 a
+		color: var(--opposite)
+		letter-spacing: -1px
+		&:hover
 			color: #fe4a49
-		&::after
-			animation: lineforward 0.32s var(--cubeb) forwards
-	&::after
-		position: absolute
-		bottom: 0
-		right: 0
-		content: ''
-		height: 1px
-		background: #474747
-		width: 0
 	@media screen and (min-width: 1024px)
+		row-gap: 8px
+		h5
+			font-size: 30px
+			font-weight: 500
+	@media screen and (max-width: 1023px)
+		padding: 12px 24px
+		row-gap: 4px
 		h5
 			font-size: 32px
-			font-weight: 700
-	@media screen and (max-width: 1023px)
-		h5
-			font-size: 24px
-			font-weight: 700
-
-@keyframes lineforward
-	0%
-		width: 0
-	100%
-		width: 100%
-
+			font-weight: 500
 
 </style>

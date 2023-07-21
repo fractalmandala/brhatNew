@@ -9,8 +9,8 @@
 	h5.title
 		text-transform: capitalize
 		font-size: 28px
-		font-weight: 600
-		letter-spacing: -0.25px
+		font-weight: 500
+		letter-spacing: -0.5px
 		line-height: 1.1
 		color: var(--opposite)
 		a
@@ -19,36 +19,53 @@
 		&:hover
 			text-decoration: underline
 	h6.title
+		text-transform: capitalize
 		a
 			color: inherit
 			transition: 0.08s ease-in
 		&:hover
-			text-decoration: underline
+			a
+				text-decoration: underline
 	h5.bold
 		color: var(--opposite)
 		font-weight: bold
 		line-height: 1.1
 	h4
-		font-weight: bold
+		font-weight: 500
+		line-height: 1.2
+		letter-spacing: -1px
 	p
 		line-height: 1.5
 		font-size: 18px
 		color: var(--texttwo)
+		font-weight: 300
 	p.mid
 		font-size: 16px
 		line-height: 1.28
-		font-weight: 300
+		font-weight: 400
+		color: var(--textone)
+	p.title
+		font-size: 18px
+		line-height: 1.1
+		font-weight: 500
+		color: var(--opposite)
+		&:hover
+			a
+				text-decoration: underline
 	p.writer
-		font-size: 14px
-		font-weight: bold
-		letter-spacing: 0.5px
-		color: var(--themer)
+		font-size: 16px
+		color: var(--grade3)
 	pre
 		color: var(--grade3)
 	p.soft
 		color: var(--onlyblack)
+	p.mid.soft
+		font-weight: 300
 	p.small, pre.small
 		font-size: 14px
+		font-weight: 300
+		color: var(--grade3)
+		line-height: 1.28
 	.pagilavideo
 		small
 			color: var(--texttwo)
@@ -60,23 +77,41 @@
 		font-weight: bold
 	h6
 		line-height: 1.6
+		font-weight: 500
+		font-size: 20px
 	h6.title
 		line-height: 1.1
 		font-size: 20px
-		font-weight: 600
+		font-weight: 500
+		letter-spacing: -0.5px
 	h3
 		color: var(--opposite)
+		font-weight: 500
+		letter-spacing: -1px
 	h2
 		font-size: 56px
 		color: var(--opposite)
-		font-weight: 600
-		letter-spacing: -1px
+		font-weight: 500
+		letter-spacing: -2px
+		position: relative
+		line-height: 1.2
+		transition: padding 0.5s ease-out
+		&::after
+			position: absolute
+			left: 0
+			top: 0
+			height: 0
+			width: 4px
+			content: ''
+			background: #fe4a49
+			transition: height 0.1s ease-out
 		&:hover
-			a
-				color: #fe4a49
+			padding-left: 16px
+			&::after
+				height: 100%
 	h1
 		font-size: 80px
-		font-weight: 600
+		font-weight: 500
 		letter-spacing: -2px
 	.status-sticker
 		background: #fe4a49
@@ -86,25 +121,73 @@
 		text-transform: uppercase
 	.status-sticker.open
 		background: var(--hilite)
+	em
+		color: inherit
+		font-style: italic
+	li
+		font-size: 18px	
+		color: var(--texttwo)
+		font-weight: 300
+		line-height: 1.5
+	ul, ol
+		padding-left: 16px
+		margin-top: 0
+		margin-bottom: 0
+	.textpad
+		p
+			a
+				color: #fe4a49
+		h3
+			margin-top: 64px
+			text-transform: capitalize
+		cite
+			font-style: normal
+			color: var(--grade3)
+		blockquote
+			text-align: center
+			margin-left: 0
+			padding-left: 0
+			padding-right: 0
+			margin-right: 0
+			padding-bottom: 32px
+			position: relative
+			p
+				color: var(--grade2)
+				font-size: 20px
+			&::after
+				position: absolute
+				bottom: 0
+				left: 25%
+				width: 50%
+				height: 1px
+				content: ''
+				background: var(--contraster2)
 	@media screen and (max-width: 768px)
 		h4
 			font-size: 27px
+			letter-spacing: 0px
 		h5
-			font-size: 21px
+			font-size: 20px
 			line-height: 1.32
 		h5.title
 			font-size: 25px
 		h6.title
 			font-size: 20px
 		h6
-			font-size: 18px
+			font-size: 20px
 		h2
 			font-size: 36px
+			letter-spacing: -1px
 		h3
 			font-size: 27px
+			font-weight: 500
+			letter-spacing: -0.5px
 		h1
 			font-size: 45px
 			letter-spacing: -1px
+		.textpad
+			h6
+				line-height: 1.28
 
 .pagila2
 	p
@@ -176,6 +259,8 @@
 	@media screen and (max-width: 768px)
 		justify-content: space-between
 		font-size: 14px
+		width: max-content
+		max-width: 100%
 		
 .drawer-select.isactive
 	background: none
@@ -214,6 +299,7 @@
 		color: var(--opposite)
 	@media screen and (max-width: 768px)
 		font-size: 18px
+		font-weight: 400
 
 .side-item.drawerselection
 	background: #fe4a49
@@ -244,3 +330,85 @@
 		text-transform: capitalize
 		font-size: 12px
 		padding: 2px 4px
+
+.linksbox
+	.insidelink
+		color: var(--grade3)
+		text-transform: capitalize
+		&:hover
+			color: var(--opposite)
+		@media screen and (min-width: 1024px)
+			font-size: 18px
+			font-weight: 300
+		@media screen and (max-width: 1023px)
+			font-size: 20px
+			font-weight: 300
+			padding: 4px 0
+
+.spacer
+	.insidelink
+		color: var(--grade3)
+		font-weight: 300
+		&:hover
+			color: var(--opposite)
+
+.onpagelinks
+	h3
+		border-bottom: 1px solid var(--borderline)
+		padding-bottom: 16px
+		color: var(--opposite)
+		font-weight: 500
+	@media screen and (max-width: 768px)
+		h3
+			font-size: 24px
+			padding-bottom: 12px
+
+
+.holds-link
+	&:hover
+		p
+			color: #fe4a49
+
+.midrow
+	position: relative
+	.pagedropdown
+		position: absolute
+		border-radius: 4px
+		top: 56px
+		right: -48px
+		z-index: 1000
+		min-width: 320px
+		text-align: right
+		background: var(--background)
+		border: 1px solid var(--contraster)
+		padding: 20px 24px
+		color: var(--opposite)
+		a
+			font-size: 18px
+			transition: 0.07s ease-out
+			padding: 4px 6px
+			&:hover
+				background: #fe4a49
+				color: white
+		@media screen and (max-width: 768px)
+			position: fixed
+			top: 56px
+			right: 0
+			width: calc(100vw - 32px)
+			padding: 24px
+
+.light
+	.pagedropdown
+		box-shadow: 4px 5px 12px #d7d7d7
+
+.dark
+	.pagedropdown
+		box-shadow: 4px 5px 12px #111111
+
+.yellowsticker
+	background: var(--hilite)
+	color: white
+	padding: 2px 6px
+	font-size: 10px
+	width: max-content
+	max-width: 100%

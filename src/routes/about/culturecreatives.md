@@ -2,6 +2,8 @@
 title: Culture Creatives
 image: "/images/areas-cc.webp"
 about: About Culture Creatives, the first pillar at Bṛhat
+next: '/about/policyresearch'
+prev: '/about/leadershipdevelopment'
 ---
 
 <div class="rta-row xcenter">
@@ -12,7 +14,7 @@ Culture, as Loren Eiseley said, is stand-in Nature; a human substitute to the la
 
 Here, this Nature-conducive culture takes the form of Dharma. Dharma becomes manifest to us in the form of tradition which takes tangible forms as customs and rituals. The culture which arises out of this practice of tradition talks in the language of symbols. And these symbols are conveyed through art and literature. While art encodes this wisdom, the act of decoding its meaning leads the aesthete, the onlooker, onto a cultural journey.
 
-##### Going on this journey he comes across various stories; epic and short, religious and folk. It is a meaning making process designed to make the most abstract of ideas and rhythms become tangible.
+###### Going on this journey he comes across various stories; epic and short, religious and folk. It is a meaning making process designed to make the most abstract of ideas and rhythms become tangible.
 
 These stories pack great cultural wisdom in small capsules of tales, anecdotes, idioms, phrases and aphorisms. This is how Indian Knowledge Systems filter down to every nook and corner of the society through the agency of cultural storytelling. It is the most powerful way of spreading cultural wisdom and making everyone fall in harmonious rhythm with Nature and with our own selves.
 
@@ -24,7 +26,7 @@ Through the agency of great kathā vācakas, roaming bards and mendicants the st
 
 It is this process of cultural continuity which has broken down. Modern civilization is not conducive to an oral culture and often ignores it completely and in the process denies its very existence. Modern education, state and market all favor written knowledge over oral culture. Modern living and housing make it impossible for the old story-tellers to reach everyone.
 
-##### The atomization of society and family means that the story-tellers at home, the grandfathers and grandmothers, are no longer there to pass on cultural wisdom to the coming generations, to their grandchildren.
+###### The atomization of society and family means that the story-tellers at home, the grandfathers and grandmothers, are no longer there to pass on cultural wisdom to the coming generations, to their grandchildren.
 
 This is how a beautiful tradition withers. The link with the past disappears, the communication of cultural wisdom through story-telling breaks down and we arrive upon a society of atomized individuals at the mercy of global institutions and universalizing theologies.
 

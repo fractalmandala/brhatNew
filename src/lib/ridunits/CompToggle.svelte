@@ -45,7 +45,7 @@
 <svelte:window bind:innerWidth={iW} />
 
 <div
-	class="rta-row ycenter mainner"
+	class="mainner"
 	class:light={$themeMode}
 	class:dark={!$themeMode}
 	on:mouseenter={toggleEnter}
@@ -81,9 +81,6 @@
 
 .mainner
 	position: relative
-	width: 24px
-	justify-content: flex-end
-	margin-bottom: 2px
 
 .tooltip
 	position: absolute
@@ -92,19 +89,21 @@
 	font-size: 12px
 	min-width: 120px
 	text-align: center
-	padding: 2px
+	padding: 3px 3px 3px 3px
 	border-radius: 2px
 	font-family: 'Rota'
 	text-transform: uppercase
-	letter-spacing: 1px
 	font-weight: bold
+	line-height: 1.05
 
 .light
 	.tooltip
-		color: #a7a7a7
+		color: #FFFFFF
+		background: #272727
 
 .dark
 	.tooltip
 		color: #575757
+		background: #FFFFFF
 
 </style>

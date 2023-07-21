@@ -21,3 +21,11 @@
 		y2="18"
 	/></svg
 >
+
+<style lang="sass">
+
+svg
+	&:hover
+		stroke: #fe4a49
+
+</style>

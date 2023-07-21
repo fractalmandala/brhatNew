@@ -1,37 +1,19 @@
 <script lang="ts">
-	import { onMount, onDestroy } from 'svelte';
+	import { onMount } from 'svelte';
 	import { themeMode } from '$lib/stores/globalstores';
-	import { isModal } from '$lib/stores/modal';
-	import Contact from '$lib/ridunits/RIDContact.svelte';
 	import AboutLinks from '$lib/links/AboutLinks.svelte';
 	import AnveshiLinks from '$lib/links/AnveshiLinks.svelte';
-	import AryavartaLinks from '$lib/links/AryavartaLinks.svelte';
 	import DrashtaLinks from '$lib/links/DrashtaLinks.svelte';
-	import MandalaLinks from '$lib/links/MandalaLinks.svelte';
-	import RtaLinks from '$lib/links/RtaLinks.svelte';
 	import IconTop from '$lib/icons/IconTop.svelte';
-
-	let fake: boolean = false;
+	let fake = false;
 	let active: boolean = true;
-	let modalStatus: any;
-
-	const unsubscribe = isModal.subscribe((value) => {
-		modalStatus = value;
-	});
-
-	function toggleModal() {
-		isModal.update((value) => !value);
-	}
 
 	function fauxfake() {
 		fake = !fake;
 	}
-
 	onMount(() => {
 		active = true;
 	});
-
-	onDestroy(unsubscribe);
 </script>
 
 <footer class="footer back" class:light={$themeMode} class:dark={!$themeMode}>
@@ -49,10 +31,11 @@
 	<div class="footermain">
 		<div class="footerlogo">
 			<a class="logoimage" href="/">
-				<img
-					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/02brhatlogos/horizontal%20white-%20600.png"
-					alt="logo of brhat"
-				/>
+				{#if $themeMode}
+					<img src="/images/logos/logo-brhat-black.png" alt="Brhat logo black" />
+				{:else if !$themeMode}
+					<img src="/images/logos/logo-brhat-white.png" alt="Brhat logo white" />
+				{/if}
 			</a>
 			<div class="rta-row icons">
 				<a href="https://twitter.com/brhat_in" target="_blank" rel="noreferrer">
@@ -87,7 +70,7 @@
 		</div>
 		<div>
 			<div class="spacer">
-				<p class="mainlinks" on:click={toggleModal} on:keydown={fauxfake}>Contact Us</p>
+				<a class="mainlinks" href="/members">Contact Us</a>
 				<a class="mainlinks" href="/dhiti">Dhīti</a>
 				<a class="mainlinks" href="/openlibrary">Bṛhat Open Library</a>
 			</div>
@@ -113,27 +96,30 @@
 		</div>
 	</div>
 	<div class="footerbot">
-		<small>2023 Bṛhat | All Rights Reserved.</small>
-		<small
-			>Also visit <a
+		<small class="tt-c"
+			>2023 Bṛhat | All Rights Reserved | <a
 				href="https://www.brhateducation.in"
 				target="_blank"
-				rel="noreferrer"
-				style="color: #fe4a49">Bṛhat Education.</a
+				rel="noreferrer">Bṛhat Education.</a
 			></small
 		>
-		<small
-			><a href="/about/privacy" style="color: white">Privacy</a> |
-			<a href="/about/termsandconditions" style="color: white">T & C</a> |
-			<a href="/about/refunds" style="color: white">Refunds Policy</a> | contact@brhat.in</small
+		<small class="tt-c"
+			><a href="/about/privacy">Privacy</a> |
+			<a href="/about/termsandconditions">T & C</a> |
+			<a href="/about/refunds">Refunds Policy</a> |
+			<span class="tt-l">contact@brhat.in</span></small
 		>
 	</div>
 </footer>
-{#if modalStatus}
-	<Contact />
-{/if}
 
 <style lang="sass">
+
+small
+	color: var(--grade3)
+	a
+		color: var(--textone)
+		&:hover
+			color: #fe4a49
 
 .topbutton
 	height: 24px
@@ -142,36 +128,44 @@
 	cursor: pointer
 
 .footer
-	display: grid
-	grid-auto-flow: row
-	grid-template-columns: 1fr
+	display: flex
+	flex-direction: column
+	align-items: center
 	width: 100vw
 	position: sticky
 	top: 0
 	z-index: 999
-	grid-template-rows: auto 1fr auto
-	grid-template-areas: "footertop" "footermain" "footerbot"
-	background: url('/images/glassdark.webp')
-	background-size: cover
 	.footertop
-		grid-area: footertop
 		height: 64px
 	.footerbot
-		grid-area: footerbot
-		height: 128px
+		height: 64px
 	.footermain
-		grid-area: footermain
-		border: 1px solid #373737
-		background: rgba(17,17,17,0.90)
-		backdrop-filter: blur(5px)
-		border-radius: 12px
-	@media screen and (min-width: 1024px)
-		min-height: 100vh
-		padding-left: 6vw
-		padding-right: 6vw
-	@media screen and (max-width: 1023px)
-		padding-left: 4vw
-		padding-right: 4vw
+		border-top: 1px solid var(--contraster2)
+		border-bottom: 1px solid var(--contraster2)
+	@media screen and (min-width: 1200px)
+		.footertop, .footerbot, .footermain
+			width: 1072px
+	@media screen and (max-width: 1199px) and (min-width: 1024px)
+		.footertop, .footerbot, .footermain
+			width: 896px
+	@media screen and (max-width: 1023px) and (min-width: 769px)
+		.footertop, .footerbot, .footermain
+			width: 640px
+	@media screen and (max-width: 768px) and (min-width: 576px)
+		.footertop, .footerbot, .footermain
+			width: 512px			
+	@media screen and (max-width: 575px)
+		padding-left: 16px
+		padding-right: 16px
+		.footertop, .footerbot, .footermain
+			width: 100%
+	@media screen and (min-width: 769px)
+		height: 100vh
+		padding-top: 64px
+		.footertop
+			border-top: 1px solid var(--contraster2)
+		.footermain
+			height: calc(100vh - 192px)
 
 .footermain
 	display: grid
@@ -214,8 +208,8 @@
 
 .icons img
 	object-fit: contain
-	width: 24px
-	height: 24px
+	width: 20px
+	height: 20px
 	opacity: 0.4
 	filter: saturate(0.01)
 	transition: var(--snap)
@@ -231,6 +225,8 @@
 	flex-direction: column
 	@media screen and (min-width: 1024px)
 		padding-bottom: 16px
+	@media screen and (min-width: 769px)
+		row-gap: 2px
 
 .creategap
 	height: 32px
@@ -245,14 +241,14 @@
 	display: flex
 	flex-direction: column
 	justify-content: center
+	row-gap: 4px
 	small
 		margin: 0 0 4px 0
 		line-height: 1
-		color: #474747
 
 .mainlinks
-	color: white
-	font-weight: 700
+	color: var(--grade2)
+	font-weight: 500
 	margin-bottom: 8px
 	&:hover
 		color: #fe4a49

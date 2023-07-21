@@ -10,45 +10,30 @@
 			src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/creative-culture-1024-1.webp"
 			alt="cc"
 		/>
-		<button class="blank-button">
-			<CompButton1><a href="/about/culturecreatives">Culture Creatives</a></CompButton1>
-		</button>
+
+		<a href="/about/culturecreatives"><button class="newbutton big">Culture Creatives</button></a>
 	</div>
 	<div class="panel back" id="panel2">
 		<img
 			src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/research-policy-1024-1.webp"
 			alt="pr"
 		/>
-		<button class="blank-button">
-			<CompButton2><a href="/about/policyresearch">Policy Research</a></CompButton2>
-		</button>
+
+		<a href="/about/policyresearch"><button class="newbutton big">Policy Research</button></a>
 	</div>
 	<div class="panel back" id="panel3">
 		<img
 			src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/develop-leader-1024-1.webp"
 			alt="ld"
 		/>
-		<button class="blank-button">
-			<CompButton3><a href="/about/leadershipdevelopment">Leadership Development</a></CompButton3>
-		</button>
+
+		<a href="/about/leadershipdevelopment"
+			><button class="newbutton big">Leadership Development</button></a
+		>
 	</div>
 </div>
 
 <style lang="sass">
-
-.blank-button
-	position: absolute
-	bottom: 128px
-	left: 32px
-	transition: 0.08s
-
-.accordion .panel
-	&:hover
-		.blank-button
-			background: #fe4a49
-			transform: scale(1.2) translateY(-32px)
-			&:hover
-				background: var(--strong)
 
 .accordion
 	display: flex
@@ -59,22 +44,22 @@
 	overflow: hidden
 	@media screen and (max-width: 1023px)
 		flex-wrap: wrap
-		margin-top: 64px
-		height: calc(100vh - 64px)
+		height: 100vh
 
 .panel
 	display: flex
 	flex-direction: column
 	transition: all 1.5s ease
-	position: relative
 	@media screen and (min-width: 1024px)
 		height: 100%
 		width: 33.33%
 		border: 2px solid white
+		align-items: center
 	@media screen and (max-width: 1023px)
 		height: 33.33%
 		width: 100%
 		border: 2px solid white
+		align-items: center
 
 .accordion
 	@media screen and (min-width: 1024px)
@@ -95,6 +80,10 @@
 	transition: all 0.72s ease
 	&:hover
 		filter: saturate(1)
+	@media screen and (min-width: 769px)
+		margin-bottom: -128px
+	@media screen and (max-width: 768px)
+		margin-bottom: -64px
 
 .back
 	background-blend-mode: luminosity

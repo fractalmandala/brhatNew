@@ -1,17 +1,41 @@
 <script lang="ts">
-	import Header from '$lib/components/SubHeader.svelte';
-	import { themeMode } from '$lib/stores/globalstores';
+	import Header from '$lib/components/NewHeader.svelte';
+	import { clickOutsideAction } from '$lib/utils/clickoutside';
+	import { slide } from 'svelte/transition';
+	import { quintOut, quintIn } from 'svelte/easing';
+	import { themeMode, menuMode } from '$lib/stores/globalstores';
 	import AnveshiLinks from '$lib/links/AnveshiLinks.svelte';
 	let onHead = true;
 	let sidebar = false;
+	let dropdown = false;
+	let fake = false;
+
+	function fauxfake() {
+		fake = !fake;
+	}
+
+	function offDropdown() {
+		if ($menuMode === true) {
+			$menuMode = false;
+		}
+	}
 </script>
 
-<Header>
-	<div slot="local" class="boxmidrow">
-		<AnveshiLinks flytime={onHead} />
+<Header hasMenu={true} isSwitch={false}>
+	<div
+		slot="local"
+		class="rta-column rowgap100 pagedropdown"
+		in:slide={{ axis: 'y', easing: quintOut, duration: 128 }}
+		out:slide={{ axis: 'y', easing: quintIn, duration: 80 }}
+		use:clickOutsideAction
+		on:clickOutside={offDropdown}
+		on:click={offDropdown}
+		on:keydown={fauxfake}
+	>
+		<AnveshiLinks />
 	</div>
 </Header>
-<div class="type" class:light={$themeMode} class:dark={!$themeMode}>
+<div class:light={$themeMode} class:dark={!$themeMode}>
 	<slot />
 </div>
 

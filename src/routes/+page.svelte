@@ -1,56 +1,68 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import Head from '$lib/components/HeadComponent.svelte';
-	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
-	import autoAnimate from '@formkit/auto-animate';
-	import Chevron from '$lib/icons/chevrond.svelte';
-	import Chevron2 from '$lib/icons/chevrond.svelte';
-	import { themeMode, breakZero } from '$lib/stores/globalstores';
-	import Header from '$lib/components/SubHeader.svelte';
-	import ButtonEmerge from '$lib/anims/ButtonEmerge.svelte';
-	import ButtonEmerge2 from '$lib/anims/ButtonEmerge.svelte';
-	import ButtonEmerge3 from '$lib/anims/ButtonEmerge.svelte';
-	import ButtonEmerge4 from '$lib/anims/ButtonEmerge.svelte';
-	import ButtonEmerge5 from '$lib/anims/ButtonEmerge.svelte';
-	import ButtonEmerge6 from '$lib/anims/ButtonEmerge.svelte';
-	import SVCar from '$lib/components/SVCar.svelte';
-	import { reveal } from 'svelte-reveal';
-	import HomeAccordion from '$lib/components/HomeAccordion.svelte';
-	import CompButton from '$lib/ridunits/CompButton.svelte';
-	import CompButton2 from '$lib/ridunits/CompButton.svelte';
+	import Header from '$lib/components/NewHeader.svelte';
+	import Acco from '$lib/components/HomeAccordion.svelte';
+	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
+	import '@splidejs/splide/css/core';
+	import { slide } from 'svelte/transition';
+	import { quintOut, quintIn } from 'svelte/easing';
+	import Shell from '$lib/components/PageShell.svelte';
 	import Youtuber from '$lib/components/Youtuber.svelte';
+	import Youtuber2 from '$lib/components/Youtuber.svelte';
+	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/stores/metastores';
+	import { breakZero, breakTwo } from '$lib/stores/globalstores';
 	import {
-		createCurateConsult,
-		brhatUpdates,
-		latestVidsVar,
-		BOLLatest,
+		svEpisodes,
 		allChapters,
-		allCourses
+		allCourses,
+		latestMrdanga,
+		createCurateConsult,
+		BOLLatest
 	} from '$lib/utils/supapulls';
 	import { latestDhitiSix } from '$lib/utils/localpulls';
-	import '@splidejs/splide/css/core';
-	import 'tippy.js/dist/tippy.css';
-	import 'tippy.js/animations/shift-away.css';
+	import Chevron from '$lib/icons/chevrond.svelte';
+	import Chevron2 from '$lib/icons/chevrond.svelte';
+	import { reveal, defaultFullBox } from '$lib/reveal/exportReveal';
 
+	$metaTitle = 'Bṛhat';
+	$metaDescription = 'the Culture Engine';
+	$metaUrl = 'https://www.brhat.in';
+	$metaImage = '/images/cover-brhat.webp';
+
+	let title1 = 'Svarṇāñjali';
+	let title2 = 'Bṛhat Anveṣī';
+	let title3 = 'Bṛhat Draṣṭā';
+	let title4 = 'Bṛhadmṛdaṅga';
+	let title5 = 'Dhīti';
+	let title6 = 'Bṛhat Open Library';
+	let title7 = 'Also Explore';
+
+	let episodes: any;
 	let threeactions: string | any[];
-	let expandMenu = false;
-	let expandMenu2 = false;
-	let updates: string | any[];
-	let count: number = 3;
-	let videos: string | any[];
-	let posts: string | any[];
-	let bollimit: number = 12;
-	let books: string | any[];
 	let chapters: any;
 	let courses: any;
-	let sY: number;
-	let oH: number;
-	let breakPoint: boolean;
+	let mrdanga: any;
+	let posts: any;
+	let books: any;
+	let bollimit = 12;
 	let fake = false;
 	let anveshiFull = Array(10).fill(false);
 	anveshiFull[0] = true;
 	let drashtaFull = Array(10).fill(false);
 	drashtaFull[0] = true;
+	let expandMenu = false;
+	let expandMenu2 = false;
+
+	defaultFullBox({
+		transition: 'fly',
+		y: 120,
+		opacity: 0,
+		duration: 300
+	});
+
+	function fauxfake() {
+		fake = !fake;
+	}
 
 	function toggleMenu() {
 		expandMenu = !expandMenu;
@@ -78,780 +90,639 @@
 		}
 	}
 
-	function fauxfake() {
-		fake = !fake;
-	}
-
-	$metaTitle = 'Bṛhat';
-	$metaDescription = 'the Culture Engine';
-	$metaUrl = 'https://www.brhat.in';
-	$metaImage =
-		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/brhatheadcard.webp';
-	$metaType = 'webpage';
-
 	onMount(() => {
 		(async () => {
 			threeactions = await createCurateConsult();
-			updates = await brhatUpdates();
-			videos = await latestVidsVar(count);
-			posts = await latestDhitiSix();
-			books = await BOLLatest(bollimit);
+			episodes = await svEpisodes();
 			chapters = await allChapters();
 			courses = await allCourses();
+			mrdanga = await latestMrdanga();
+			posts = await latestDhitiSix();
+			books = await BOLLatest(bollimit);
 		})();
 	});
 </script>
 
-<svelte:window bind:scrollY={sY} bind:outerHeight={oH} />
-
-<Head
-	title={$metaTitle}
-	metaDescription={$metaDescription}
-	metaUrl={$metaUrl}
-	metaImage={$metaImage}
-/>
+<svelte:head>
+	<script src="https://apis.google.com/js/platform.js"></script>
+</svelte:head>
 
 <Header />
-
-<div
-	class="pageglobals"
-	class:light={$themeMode}
-	class:dark={!$themeMode}
-	class:breaker={$breakZero}
+<Acco />
+<Shell
+	metaTitle={$metaTitle}
+	metaDescription={$metaDescription}
+	metaImage={$metaImage}
+	metaUrl={$metaUrl}
 >
-	<!--top accordion of 3 sections-->
-	<HomeAccordion />
-	<!--end-->
-
-	<!--introduction about section-->
-	<div class="rta-column ycenter outer-box minH" id="section1" data-lenis-scroll-snap-align="start">
-		<div class="rta-column rowgap600">
-			<div class="rta-grid grid2 colgap400 rowgap300">
-				<div class="rta-column">
-					<h2>
-						Bṛhat is a<br />
-						<span class="spesh"> culture engine</span>
-					</h2>
-				</div>
-				<div class="rta-column rowgap300">
-					<h5 class="typett">
-						To power creatives, research and design rooted in the Indian civilizational
-						consciousness. We convert individual, institutional and collective intent into action,
-						across 3 dimensions.
-					</h5>
-					<ButtonEmerge>
-						<a href="/about"> Know More </a>
-					</ButtonEmerge>
-				</div>
-			</div>
-
-			<div class="rta-grid grid4 colgap400">
-				{#if threeactions && threeactions.length > 0}
-					{#each threeactions as item, i}
-						<div
-							class="rta-column glass-top p-top-16"
-							use:reveal={{
-								transition: 'fly',
-								y: 200,
-								easing: 'easeOutCirc',
-								delay: i * 50
-							}}
-						>
-							<h6 class="typett ta-l">{item.name}</h6>
-							<pre class="ta-l">{item.content}</pre>
-						</div>
-					{/each}
-				{/if}
-			</div>
-		</div>
-	</div>
-	<!--end-->
-
-	<SVCar />
-
-	<!--latest anveshi chapters-->
-	<div class="rta-column ycenter rowgap600 outer-box minH" data-lenis-scroll-snap-align="start">
-		<!---name and description-->
-		<div
-			class="rta-row row-col ycenter between rowgap100 colgap400 glass-top p-top-32 bord-bot p-bot-32"
-		>
-			<div class="rta-row row-col ycenter colgap300">
-				<h3 class="typett">BṚHAT ANVEṢĪ</h3>
-				<div class="holds-button-emerge" use:reveal>
-					<ButtonEmerge2><a href="/anveshi">Learn More</a></ButtonEmerge2>
-				</div>
-			</div>
-			<div class="colgap100 rta-row selfend xend-d ycenter" id="thissmall">
-				<div class="arrowsanimation">
-					<svg
-						width="94"
-						height="24"
-						viewBox="0 0 94 32"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
+	<section class="rta-column rowgap400 min100" id="intro">
+		<h1 use:reveal>Bṛhat is a <span style="color: #fe4a49">Culture Engine</span></h1>
+		<h5 use:reveal={{ delay: 100, duration: 300, transition: 'fade' }}>
+			To power creatives, research and design rooted in the Indian civilizational consciousness. We
+			convert individual, institutional and collective intent into action.
+		</h5>
+		<div class="rta-grid grid3 colgap300 rowgap300">
+			{#if threeactions && threeactions.length > 0}
+				{#each threeactions as item, i}
+					<div
+						class="rta-column null rowgap100"
+						use:reveal={{ transition: 'scale', duration: 400, delay: i + 40, opacity: 0, scale: 0 }}
 					>
-						<g clip-path="url(#clip0_15_2638)">
-							<path
-								id="arrowl"
-								d="M94.0712 4.6096L90.4616 1L75.1016 16.36L90.4616 31.72L94.0712 28.1104L82.3464 16.36L94.0712 4.6096Z"
-								fill="#FE4A49"
-							/>
-							<path
-								id="arrowc"
-								d="M64.2839 5.29L61.1606 2L47.8701 16L61.1606 30L64.2839 26.71L54.1388 16L64.2839 5.29Z"
-								fill="#FE4A49"
-							/>
-							<path
-								id="arrowr"
-								d="M35.9675 8.4675L33.5 6L23 16.5L33.5 27L35.9675 24.5325L27.9525 16.5L35.9675 8.4675Z"
-								fill="#FE4A49"
-							/>
-						</g>
-						<defs>
-							<clipPath id="clip0_15_2638">
-								<rect width="94" height="32" fill="white" />
-							</clipPath>
-						</defs>
-					</svg>
-				</div>
-				<small class="typett2" id="thissmall">Culture Travel and Experience</small>
-			</div>
+						<h6 class="ta-l title">{item.name}</h6>
+						<pre class="ta-l small">{item.content}</pre>
+					</div>
+				{/each}
+			{/if}
 		</div>
-		<!--end-->
+		<a href="/about" use:reveal={{ transition: 'fade', delay: 200, duration: 600 }}>
+			<button class="newbutton big">Know More</button>
+		</a>
+	</section>
+	<section class="rta-column rowgap400 min100" id="svarnanjali">
+		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
+			<h2>
+				<a href="/svarnanjali">
+					{#each title1.split('') as char, i}
+						<span class="text-animation" style="animation-delay: {i * 0.04}s">{char}</span>
+					{/each}
+				</a>
+			</h2>
+			<small>Hindu Culture Rennaissance</small>
+		</div>
+		<div
+			class="rta-column rowgap200"
+			use:reveal={{ delay: 100, duration: 300, transition: 'fade' }}
+		>
+			<h5>
+				A weekly video series to discuss literature, arts, drama, architecture, sculpture, cinema
+				and other fine arts from the point of view of rasikā, in Sanskṛta Niṣṭha Hindī. View at <a
+					href="https://youtu.be/OeCFCHwSpd0"
+					target="_blank"
+					rel="noreferrer">Youtube,</a
+				> and remember to subscribe-
+			</h5>
+			<div
+				class="g-ytsubscribe"
+				data-channelid="UCpmTZwM36xdAuHbBaaE2asg"
+				data-layout="default"
+				data-count="hidden"
+			/>
+		</div>
+		{#if episodes && episodes.length > 0}
+			<div use:reveal={{ transition: 'fade', delay: 200, duration: 600 }}>
+				<Splide
+					hasTrack={false}
+					options={{
+						drag: true,
+						keyboard: 'global',
+						waitForTransition: true,
+						type: 'loop',
+						gap: '20px',
+						width: '100%',
+						wheelMinThreshold: 1.1,
+						speed: 900,
+						direction: 'ltr',
+						perPage: 3,
+						pagination: false,
+						breakpoints: {
+							1023: {
+								perPage: 2
+							},
+							768: {
+								perPage: 1
+							}
+						}
+					}}
+				>
+					<SplideTrack>
+						{#each episodes as item}
+							<SplideSlide>
+								<Youtuber youTubeId={item.videoid} />
+								<p class="ta-c-d small p-top-16">
+									<strong>
+										<a href={item.link} target="_blank" rel="noreferrer">
+											{item.name}
+										</a></strong
+									>
+								</p>
+							</SplideSlide>
+						{/each}
+					</SplideTrack>
+					<div
+						class="splide__arrows splide__arrows--ltr rta-row xcenter-d colgap200 p-top-16 m-top-16 bord-top"
+					>
+						<button
+							class="splide__arrow splide__arrow--prev newbutton"
+							type="button"
+							aria-label="Previous slide"
+							aria-controls="splide01-track"
+						>
+							PREV
+						</button>
+						<button
+							class="splide__arrow splide__arrow--next newbutton"
+							type="button"
+							aria-label="Next slide"
+							aria-controls="splide01-track"
+						>
+							NEXT
+						</button>
+					</div>
+				</Splide>
+			</div>
+		{/if}
+	</section>
+	<section class="rta-column rowgap400 min100" id="anveshi">
+		<div class="rta-column rowgap300">
+			<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
+				<a href="/anveshi"
+					><h2>
+						{#each title2.split('') as char, i}
+							<span class="text-animation" style="animation-delay: {i * 0.04}s">{char}</span>
+						{/each}
+					</h2></a
+				>
 
-		<div class="rta-column rowgap300" use:autoAnimate>
+				<small
+					>Culture Travel and Discovery. Register Now for <span
+						style="color: var(--hilite); font-weight: bold">OPEN CHAPTERS.</span
+					></small
+				>
+			</div>
+			<h5 use:reveal={{ delay: 100, duration: 300, transition: 'fade' }}>
+				A travel program to contemporize ancient Indian tradition by guiding travel groups through
+				hitherto rarely explored sacred kṣetras of India.
+			</h5>
 			{#if chapters && chapters.length > 0}
 				{#if !$breakZero}
 					<div
-						class="rta-row colgap400 ycenter drawer-select"
+						class="rta-row colgap200 ycenter drawer-select"
+						class:isactive={expandMenu}
 						on:click={toggleMenu}
 						on:keydown={fauxfake}
+						use:reveal={{ transition: 'fade', delay: 100, duration: 100 }}
 					>
-						Expand Tours
+						{#if expandMenu}
+							Close Tours
+						{:else}
+							Expand Tours
+						{/if}
 						<div class="rta-row ycenter" class:rotated={expandMenu}>
-							<Chevron2 />
+							{#if expandMenu}
+								<Chevron2 dimension={24} onToggle={true} />
+							{:else}
+								<Chevron2 dimension={24} />
+							{/if}
 						</div>
 					</div>
 				{/if}
 				{#if expandMenu || $breakZero}
 					<div
-						class="rta-row row-col ycenter rta-drawer-items colgap400 rowgap100 p-bot-16"
-						use:autoAnimate
+						class="rta-row row-col ycenter xleft rta-drawer-items colgap400 rowgap100"
+						in:slide={{ axis: 'y', easing: quintOut }}
+						out:slide={{ axis: 'y', easing: quintIn }}
 						on:click={toggleMenu}
 						on:keydown={fauxfake}
+						use:reveal={{ transition: 'fade', delay: 200, duration: 600 }}
 					>
 						{#each chapters as item, i}
 							<button
-								class="drawer-item"
+								class="drawer-item {item.status}"
 								on:click={() => toggleAnveshi(i)}
 								on:keydown={fauxfake}
-								class:drawerselection={anveshiFull[i]}>{item.name}</button
+								class:drawerselection={anveshiFull[i]}
+								>{item.name.substring(0, item.name.length - 8)}</button
 							>
 						{/each}
 					</div>
 				{/if}
-				<div class="rta-column" use:autoAnimate>
-					{#each chapters as item, i}
-						{#if anveshiFull[i]}
-							<div class="rta-row row-col colgap400 rowgap200">
-								<div class="rta-image w32 height-40-30">
-									<img src={item.image} alt={item.name} />
-								</div>
-								<div class="rta-column w64 rowgap200">
-									<div class="rta-row ycenter colgap100">
-										<div class="status-sticker">
-											<small class="tt-u">{item.status}</small>
-										</div>
-										<cite>{item.dates}</cite>
-									</div>
-									{#if breakPoint}
-										<h4>{item.name}</h4>
-									{/if}
-									{#if item.content && item.content.length > 0}
-										<pre class="h6">{item.content}</pre>
-									{/if}
-									<CompButton><a href="/anveshi/{item.chapter}">Read More</a></CompButton>
-								</div>
-							</div>
-						{/if}
-					{/each}
-				</div>
 			{/if}
 		</div>
-	</div>
-	<!--end-->
-
-	<!--latest drashta courses-->
-	<div class="rta-column rowgap600 ycenter outer-box minH" data-lenis-scroll-snap-align="start">
-		<!--name and description-->
-		<div class="rta-row row-col ycenter between rowgap100 glass-top p-top-32 bord-bot p-bot-32">
-			<div class="rta-row row-col ycenter colgap300" use:autoAnimate>
-				<h3 class="typett">BṚHAT DRAṢṬĀ</h3>
-				<div class="holds-button-emerge" use:reveal>
-					<ButtonEmerge3><a href="/drashta">Visit</a></ButtonEmerge3>
-				</div>
-			</div>
-			<div class="colgap100 rta-row ycenter">
-				<div class="arrowsanimation">
-					<svg
-						width="94"
-						height="24"
-						viewBox="0 0 94 32"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<g clip-path="url(#clip0_15_2638)">
-							<path
-								id="arrowl"
-								d="M94.0712 4.6096L90.4616 1L75.1016 16.36L90.4616 31.72L94.0712 28.1104L82.3464 16.36L94.0712 4.6096Z"
-								fill="#FE4A49"
-							/>
-							<path
-								id="arrowc"
-								d="M64.2839 5.29L61.1606 2L47.8701 16L61.1606 30L64.2839 26.71L54.1388 16L64.2839 5.29Z"
-								fill="#FE4A49"
-							/>
-							<path
-								id="arrowr"
-								d="M35.9675 8.4675L33.5 6L23 16.5L33.5 27L35.9675 24.5325L27.9525 16.5L35.9675 8.4675Z"
-								fill="#FE4A49"
-							/>
-						</g>
-						<defs>
-							<clipPath id="clip0_15_2638">
-								<rect width="94" height="32" fill="white" />
-							</clipPath>
-						</defs>
-					</svg>
-				</div>
-				<small class="typett2">Online Courses and Shared Learning</small>
-			</div>
-		</div>
-		<!--end-->
-
-		<div class="rta-grid left grid2 rowgap400 colgap500" use:autoAnimate>
-			{#if courses && courses.length > 0}
-				{#if !$breakZero}
-					<div
-						class="rta-row colgap400 ycenter drawer-select"
-						on:click={toggleMenu2}
-						on:keydown={fauxfake}
-					>
-						Expand Courses
-						<div class="rta-row ycenter" class:rotated={expandMenu2}>
-							<Chevron />
+		<div
+			class="rta-column p-top-8 rowgap200"
+			use:reveal={{ transition: 'fade', delay: 200, duration: 600 }}
+		>
+			{#if chapters && chapters.length > 0}
+				{#each chapters as item, i}
+					{#if anveshiFull[i]}
+						<div class="rta-column rowgap300">
+							<h3>{item.name}</h3>
+							<div class="rta-row row-col colgap400 rowgap200">
+								<div class="rta-image w32 image-20-20 br6">
+									<img class="br6" src={item.image} alt={item.name} />
+								</div>
+								<div class="rta-column w64 rowgap100">
+									<div class="rta-row ycenter between colgap100">
+										<div class="status-sticker {item.status}">
+											{item.status}
+										</div>
+										{#if item.status !== 'complete'}
+											<cite class="str8">Next - {item.dates}</cite>
+										{/if}
+									</div>
+									{#if item.content && item.content.length > 0}
+										<pre class="h6 ta-l">{item.content.slice(0, 360)}...</pre>
+									{/if}
+									<a class="rta-column xleft" href="/anveshi/{item.chapter}"
+										><button class="newbutton big {item.status}">Read More</button></a
+									>
+								</div>
+							</div>
 						</div>
-					</div>
-				{/if}
-				{#if expandMenu2 || $breakZero}
-					<div
-						class="rta-column rta-drawer-items rowgap200 bord-right-d"
-						id="drashta-drawer"
-						on:click={toggleMenu2}
-						on:keydown={fauxfake}
-						use:autoAnimate
-					>
-						{#each courses as item, i}
-							<button
-								class="drawer-item2"
-								on:click={() => toggleDrashta(i)}
-								on:keydown={fauxfake}
-								class:drawerselection={drashtaFull[i]}>{item.coursename}</button
-							>
-						{/each}
-					</div>
-				{/if}
-				{#each courses as item, i}
-					{#if drashtaFull[i]}
-						{#if item.status === 'upcoming' || item.status === 'Upcoming'}
-							<div
-								id="drashtascreen"
-								class="rta-column height-40 p-all-32 back"
-								style="background-image: url('{item.image}')"
-								use:autoAnimate
-							>
-								<div class="rta-column rowgap100 w32">
-									<div class="status-sticker">
-										<small class="tt-u">{item.status}</small>
-									</div>
-									<cite class="sticker-black"
-										>{item.datefrom} | with <span id="instructor">{item.ins}</span></cite
-									>
-								</div>
-							</div>
-						{:else}
-							<div class="rta-column rowgap200">
-								<div class="rta-image height-40-30">
-									<img src={item.image} alt={item.name} style="object-fit: contain" />
-								</div>
-								<div class="rta-column rowgap200">
-									<div class="status-sticker">
-										<small class="tt-u">{item.status}</small>
-									</div>
-									<cite>{item.datefrom} | with <span id="instructor">{item.ins}</span></cite>
-									<pre class="h6">{item.content.slice(0, 200)}</pre>
-									<CompButton2
-										><a href="/drashta/course/{item.course}">Course Details</a></CompButton2
-									>
-								</div>
-							</div>
-						{/if}
 					{/if}
 				{/each}
 			{/if}
 		</div>
-	</div>
-	<!--end-->
+	</section>
+	<section class="rta-column rowgap50 min100" id="drashta">
+		<div class="rta-column rowgap300">
+			<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
+				<a href="/drashta"
+					><h2>
+						{#each title3.split('') as char, i}
+							<span class="text-animation" style="animation-delay: {i * 0.04}s">{char}</span>
+						{/each}
+					</h2></a
+				>
 
-	<!--explore visual content section-->
-	<div
-		class="minH outer-box ycenter rowgap600 rta-column"
-		id="brhad-mrdanga"
-		data-lenis-scroll-snap-align="start"
-	>
-		<div class="rta-row row-col ycenter between glass-top p-top-32 bord-bot p-bot-32">
-			<div class="rta-row row-col ycenter colgap200" use:autoAnimate>
-				<h3 class="typett">BṚHAD MṚDAṄGA</h3>
-				<div class="holds-button-emerge" use:reveal>
-					<ButtonEmerge4><a href="/mrdanga">More Videos</a></ButtonEmerge4>
-				</div>
+				<small>Online Courses on Itihāsa, Bhārata and Dharma.</small>
 			</div>
-			<div class="colgap100 rta-row ycenter">
-				<div class="arrowsanimation">
-					<svg
-						width="94"
-						height="24"
-						viewBox="0 0 94 32"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<g clip-path="url(#clip0_15_2638)">
-							<path
-								id="arrowl"
-								d="M94.0712 4.6096L90.4616 1L75.1016 16.36L90.4616 31.72L94.0712 28.1104L82.3464 16.36L94.0712 4.6096Z"
-								fill="#FE4A49"
-							/>
-							<path
-								id="arrowc"
-								d="M64.2839 5.29L61.1606 2L47.8701 16L61.1606 30L64.2839 26.71L54.1388 16L64.2839 5.29Z"
-								fill="#FE4A49"
-							/>
-							<path
-								id="arrowr"
-								d="M35.9675 8.4675L33.5 6L23 16.5L33.5 27L35.9675 24.5325L27.9525 16.5L35.9675 8.4675Z"
-								fill="#FE4A49"
-							/>
-						</g>
-						<defs>
-							<clipPath id="clip0_15_2638">
-								<rect width="94" height="32" fill="white" />
-							</clipPath>
-						</defs>
-					</svg>
-				</div>
-				<small class="typett2">Visual and Creative Cultural Content</small>
+			<h5 use:reveal={{ delay: 100, duration: 300, transition: 'fade' }}>
+				An offering in deep learning that extends courses on some of the greatest ancient and
+				contemporary philosophers (draṣṭās) and schools of thoughts (darśanas).
+			</h5>
+		</div>
+		<div class="side-l" use:reveal={{ transition: 'fade', delay: 200, duration: 600 }}>
+			<div class="left-side">
+				{#if courses && courses.length > 0}
+					{#if $breakTwo}
+						<div
+							class="rta-row colgap400 ycenter between m-top-16 drawer-select"
+							class:isactive={expandMenu2}
+							on:click={toggleMenu2}
+							on:keydown={fauxfake}
+						>
+							{#if expandMenu2}
+								Close Courses
+							{:else}
+								Expand Courses
+							{/if}
+							<div class="rta-row ycenter" class:rotated={expandMenu2}>
+								{#if expandMenu2}
+									<Chevron dimension={24} onToggle={true} />
+								{:else}
+									<Chevron dimension={24} />
+								{/if}
+							</div>
+						</div>
+					{/if}
+					{#if expandMenu2 || !$breakTwo}
+						<div
+							class="rta-column xleft rta-drawer-items colgap400 rowgap100"
+							in:slide={{ axis: 'y', easing: quintOut }}
+							out:slide={{ axis: 'y', easing: quintIn }}
+							on:click={toggleMenu2}
+							on:keydown={fauxfake}
+						>
+							{#each courses as item, i}
+								<button
+									class="side-item {item.status}"
+									on:click={() => toggleDrashta(i)}
+									on:keydown={fauxfake}
+									class:drawerselection={drashtaFull[i]}>{item.coursename}</button
+								>
+							{/each}
+						</div>
+					{/if}
+				{/if}
+			</div>
+			<div class="left-main">
+				{#if courses && courses.length > 0}
+					{#each courses as item, i}
+						{#if drashtaFull[i]}
+							<div class="rta-column rowgap300">
+								<h3 style="text-transform: capitalize">{item.coursename}</h3>
+								<div class="rta-row row-col colgap300 rowgap200">
+									<div class="rta-image w32 image-20-20 br6">
+										<img
+											class="br6"
+											style="object-fit: contain;"
+											src={item.image}
+											alt={item.name}
+										/>
+									</div>
+									<div class="rta-column w64 rowgap100">
+										<div class="rta-row ycenter between colgap100">
+											<div class="status-sticker {item.status}">{item.status}</div>
+											<cite class="str8"
+												>{item.datefrom} | with <span id="instructor">{item.ins}</span></cite
+											>
+										</div>
+										{#if item.excerpt && item.excerpt.length > 0}
+											<pre class="h6 ta-l">{item.excerpt}</pre>
+										{/if}
+										<a class="rta-column xleft" href="/drashta/course/{item.course}"
+											><button class="newbutton big {item.status}">Read More</button></a
+										>
+									</div>
+								</div>
+							</div>
+						{/if}
+					{/each}
+				{/if}
 			</div>
 		</div>
-		<h5 class="typett2">
-			Our visual content ranges from explorations of rasa and bhāva, to articulations of an
-			IKS-implementation strategy for modern India. View the latest videos below, or visit our <a
-				href="https://youtube.com/@brhat"
-				target="_blank"
-				style="color: #fe4a49"
-				rel="noreferrer">YouTube channel</a
+	</section>
+	<section class="rta-column rowgap400 min100" id="mrdanga">
+		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
+			<a href="/mrdanga">
+				<h2>
+					{#each title4.split('') as char, i}
+						<span class="text-animation" style="animation-delay: {i * 0.04}s">{char}</span>
+					{/each}
+				</h2></a
 			>
+			<small>Visual and Creative Cultural Content</small>
+		</div>
+		<h5 use:reveal={{ delay: 100, duration: 300, transition: 'fade' }}>
+			Video content that taps into the eternal streams of beauty and reality in our culture and
+			voices them in contemporary idiom.
 		</h5>
-
-		<div class="rta-grid grid3 rowgap600 colgap400">
-			{#if videos && videos.length > 0}
-				{#each videos as item, i}
+		{#if mrdanga && mrdanga.length > 0}
+			<div use:reveal={{ transition: 'fade', delay: 200, duration: 600 }}>
+				<Splide
+					hasTrack={false}
+					options={{
+						drag: true,
+						keyboard: 'global',
+						waitForTransition: true,
+						type: 'loop',
+						gap: '20px',
+						width: '100%',
+						wheelMinThreshold: 1.1,
+						speed: 900,
+						direction: 'ltr',
+						perPage: 3,
+						pagination: false,
+						breakpoints: {
+							1023: {
+								perPage: 2
+							},
+							768: {
+								perPage: 1
+							}
+						}
+					}}
+				>
+					<SplideTrack>
+						{#each mrdanga as item}
+							<SplideSlide>
+								<Youtuber2 youTubeId={item.videoid} />
+								<p class="ta-c-d small p-top-16">
+									<strong>
+										<a href={item.link} target="_blank" rel="noreferrer">
+											{item.name}
+										</a></strong
+									>
+								</p>
+							</SplideSlide>
+						{/each}
+					</SplideTrack>
 					<div
-						class="rta-column rowgap100"
+						class="splide__arrows splide__arrows--ltr rta-row xcenter-d colgap200 p-top-16 m-top-16 bord-top"
+					>
+						<button
+							class="splide__arrow splide__arrow--prev newbutton"
+							type="button"
+							aria-label="Previous slide"
+							aria-controls="splide01-track"
+						>
+							PREV
+						</button>
+						<button
+							class="splide__arrow splide__arrow--next newbutton"
+							type="button"
+							aria-label="Next slide"
+							aria-controls="splide01-track"
+						>
+							NEXT
+						</button>
+					</div>
+				</Splide>
+			</div>
+		{/if}
+	</section>
+	<section class="rta-column rowgap400 min100" id="dhiti">
+		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
+			<a href="/dhiti"
+				><h2>
+					{#each title5.split('') as char, i}
+						<span class="text-animation" style="animation-delay: {i * 0.04}s">{char}</span>
+					{/each}
+				</h2></a
+			>
+
+			<small>Essays on Culture, Policy and Education</small>
+		</div>
+		<div
+			class="rowgap200 rta-column"
+			use:reveal={{ delay: 100, duration: 300, transition: 'fade' }}
+		>
+			<h5>
+				Dhī - thought, intent, reflection<br />
+				Iti - verily, this.<br />
+				Dhīti - conception, perception, understanding.
+			</h5>
+			<h5>
+				A blog for our written voice on Culture and Policy, Dharma Today, Śatrubodha and
+				Svayaṃbodha, and the Indian Knowledge Systems.
+			</h5>
+		</div>
+		<div class="rta-column rowgap600 p-top-16">
+			{#if posts && posts.length > 0}
+				{#each posts as item, i}
+					<div
+						class="rta-row row-col colgap300 rowgap200"
 						use:reveal={{
-							transition: 'fly',
-							y: 200,
-							easing: 'easeOutCirc',
-							delay: i * 50
+							transition: 'slide',
+							duration: 200,
+							delay: i + 20,
+							opacity: 0
 						}}
 					>
-						<Youtuber youTubeId={item.videoid} />
-						<small>{item.name}</small>
-					</div>
-				{/each}
-			{/if}
-		</div>
-	</div>
-	<!--end-->
-
-	<!--latest at brhat section
-	<div class="rta-column rowgap-32 alt-pads minH">
-		<h3 class="typett bord-top top-p-16">LATEST AT BṚHAT</h3>
-		<h5 class="typett2">Events, Conferences, Releases</h5>
-		<div class="rta-column rowgap-32">
-				{#if updates && updates.length > 0}
-					{#each updates as item, i}
-						<div class="rta-row colgap-24 bord-bot bot-p-32"
-							use:reveal={{
-								transition: "fly",
-								y: 200,
-								easing: "easeOutCirc",
-								delay: i*50
-							}}
-							>
-							<div class="rta-image height-20 w32">
-								<img src={item.image} alt={item.id}/>
-							</div>
-							<div class="rta-column rowgap-16 w64">
-								<h6>{item.heading}</h6>
-								<p>{item.text.slice(0,200)}...
-									<span style="color: #fe4a49; font-weight: bold"><a href={item.link} target="_blank">READ MORE</a></span>
+						<div class="rta-image image-20-20 w32 br6">
+							<img class="br6" src={item.meta.image} alt={item.meta.title} />
+						</div>
+						<div class="rta-column rowgap200 w64">
+							<small class="label">{item.meta.category}</small>
+							<h5 class="title"><a href={item.path}>{item.meta.title}</a></h5>
+							<p class="mid soft">{item.meta.excerpt}</p>
+							<div class="rta-column rowgap100 bord-top p-top-16">
+								<div class="rta-row stay colgap200 tags">
+									{#each item.meta.tags as tag}
+										<cite>{tag}</cite>
+									{/each}
+								</div>
+								<p class="writer">
+									{item.meta.author}
+									{#if item.meta.authortwo && item.meta.authortwo.length > 0}
+										| {item.meta.authortwo}
+									{/if}
 								</p>
 							</div>
 						</div>
-					{/each}
-				{/if}
-		</div>
-	</div>
-	end-->
-
-	<!--dhiti blog latest posts section-->
-	<div class="rta-column rowgap600 outer-box" data-lenis-scroll-snap-align="start">
-		<div class="rta-row row-col between ycenter glass-top p-top-32 bord-bot p-bot-32">
-			<div class="rta-row row-col ycenter colgap200">
-				<h3 class="typett">RECENT AT DHĪTI</h3>
-				<div class="holds-button-emerge" use:reveal>
-					<ButtonEmerge6><a href="/dhiti">All Posts</a></ButtonEmerge6>
-				</div>
-			</div>
-			<div class="colgap100 rta-row ycenter ta-c-m">
-				<div class="arrowsanimation">
-					<svg
-						width="94"
-						height="24"
-						viewBox="0 0 94 32"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<g clip-path="url(#clip0_15_2638)">
-							<path
-								id="arrowl"
-								d="M94.0712 4.6096L90.4616 1L75.1016 16.36L90.4616 31.72L94.0712 28.1104L82.3464 16.36L94.0712 4.6096Z"
-								fill="#FE4A49"
-							/>
-							<path
-								id="arrowc"
-								d="M64.2839 5.29L61.1606 2L47.8701 16L61.1606 30L64.2839 26.71L54.1388 16L64.2839 5.29Z"
-								fill="#FE4A49"
-							/>
-							<path
-								id="arrowr"
-								d="M35.9675 8.4675L33.5 6L23 16.5L33.5 27L35.9675 24.5325L27.9525 16.5L35.9675 8.4675Z"
-								fill="#FE4A49"
-							/>
-						</g>
-						<defs>
-							<clipPath id="clip0_15_2638">
-								<rect width="94" height="32" fill="white" />
-							</clipPath>
-						</defs>
-					</svg>
-				</div>
-				<small class="typett2">our Blog on Culture, Policy and Education</small>
-			</div>
-		</div>
-
-		<div class="rta-column rowgap400">
-			{#if posts && posts.length > 0}
-				{#each posts as item, i}
-					<div class="rta-card">
-						<div class="rta-card-image">
-							<img src={item.meta.image} alt={item.meta.title} />
-						</div>
-						<div class="rta-card-body">
-							<div class="category">
-								<small>{item.meta.category}</small>
-							</div>
-							<h4 class="tt-c">
-								<strong>
-									<a href={item.path}>
-										{item.meta.title}
-									</a></strong
-								>
-							</h4>
-							<p class="exc">{item.meta.excerpt}</p>
-							<p class="writer">
-								<strong>
-									{item.meta.author}<span />
-									{#if item.meta.authortwo && item.meta.authortwo.length > 0}
-										and {item.meta.authortwo}
-									{/if}</strong
-								>
-							</p>
-							<div class="rta-row ycenter tags colgap200">
-								{#each item.meta.tags as taggie}
-									<cite>{taggie}</cite>
-								{/each}
-							</div>
-						</div>
 					</div>
 				{/each}
 			{/if}
 		</div>
-	</div>
-	<!--end-->
+	</section>
+	<section class="rta-column rowgap400 min100" id="bol">
+		<div class="rta-column rowgap300">
+			<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
+				<a href="/openlibrary">
+					<h2>
+						{#each title6.split('') as char, i}
+							<span class="text-animation" style="animation-delay: {i * 0.04}s">{char}</span>
+						{/each}
+					</h2>
+				</a>
 
-	<!--open library latest posts section-->
-	<div class="rta-column rowgap600 ycenter outer-box minH" data-lenis-scroll-snap-align="start">
-		<div class="rta-row row-col glass-top p-top-32 bord-bot p-bot-32">
-			<div class="rta-row row-col ycenter colgap200" use:autoAnimate>
-				<h3 class="typett">BṚHAT OPEN LIBRARY</h3>
-				<div class="holds-button-emerge" use:reveal>
-					<ButtonEmerge5><a href="/openlibrary">Enter Library</a></ButtonEmerge5>
-				</div>
+				<small>Online library for all things Dharma and Indian Knowledge Systems.</small>
 			</div>
-			<div class="colgap100 rta-row ycenter">
-				<div class="arrowsanimation">
-					<svg
-						width="94"
-						height="24"
-						viewBox="0 0 94 32"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<g clip-path="url(#clip0_15_2638)">
-							<path
-								id="arrowl"
-								d="M94.0712 4.6096L90.4616 1L75.1016 16.36L90.4616 31.72L94.0712 28.1104L82.3464 16.36L94.0712 4.6096Z"
-								fill="#FE4A49"
-							/>
-							<path
-								id="arrowc"
-								d="M64.2839 5.29L61.1606 2L47.8701 16L61.1606 30L64.2839 26.71L54.1388 16L64.2839 5.29Z"
-								fill="#FE4A49"
-							/>
-							<path
-								id="arrowr"
-								d="M35.9675 8.4675L33.5 6L23 16.5L33.5 27L35.9675 24.5325L27.9525 16.5L35.9675 8.4675Z"
-								fill="#FE4A49"
-							/>
-						</g>
-						<defs>
-							<clipPath id="clip0_15_2638">
-								<rect width="94" height="32" fill="white" />
-							</clipPath>
-						</defs>
-					</svg>
-				</div>
-				<small class="typett2">A repository of reading and research material.</small>
-			</div>
+			<h5>
+				Find books, digitized searchable texts, works on history and language, and more. Explore our
+				dedicated section - The Āryan Issue and curated readings - Bṛhat's Essentials.
+			</h5>
 		</div>
-
-		<div class="rta-grid grid4 colgap400 rowgap400">
-			{#if books && books.length > 0}
+		{#if books && books.length > 0}
+			<div class="rta-grid grid3 rowgap400">
 				{#each books as item, i}
 					<div
-						class="rta-column rowgap100"
+						class="rta-column rowgap50"
 						use:reveal={{
-							transition: 'fly',
-							y: 100,
-							easing: 'easeOutCirc',
-							delay: i * 5
+							transition: 'slide',
+							duration: 200,
+							delay: i + 20,
+							opacity: 0
 						}}
 					>
-						<h6><a href="/openlibrary/books/{item.slug}" class="typett">{item.Text}</a></h6>
+						<h6 class="title"><a href="/openlibrary/books/{item.slug}">{item.Text}</a></h6>
 						<small style="text-transform: none">{item.author}</small>
 					</div>
 				{/each}
-			{/if}
+			</div>
+		{/if}
+	</section>
+	<section class="rta-column rowgap400 min100" id="others">
+		<div class="rta-column rowgap300">
+			<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
+				<h2>Also Explore</h2>
+				<small>Design, Civilization, Imagination</small>
+			</div>
+			<h5>
+				With a continuity of untold millennia, the passage of time visible to us in itihāsa,
+				information was processed in increasingly complex ways within the physical environment best
+				described as Bhārata, emerged a civilizational consciousness, with multi-level coherence. It
+				is known to us as Dharma. Creative new avenues in art, design and narratives of this story:
+			</h5>
 		</div>
-	</div>
-	<!--end-->
-</div>
+		<div class="rta-grid grid3 colgap400 p-top-8 rowgap400">
+			<div
+				class="rta-column rowgap200"
+				use:reveal={{ transition: 'scale', duration: 400, delay: 30, opacity: 0, scale: 0 }}
+			>
+				<h5 class="title"><a href="/rta">Ṛta in Design</a></h5>
+				<div class="rta-row stay colgap300">
+					<div class="rta-image w32">
+						<img
+							src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/ridhero1.webp"
+							alt="hero-rta"
+							style="height: 120px"
+						/>
+					</div>
+					<div class="rta-column w64">
+						<p class="small">
+							A new framework for design thinking, centred on the mind of the designer. Inspired by
+							universal principles of Dharma.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div
+				class="rta-column rowgap200"
+				use:reveal={{ transition: 'scale', duration: 400, delay: 60, opacity: 0, scale: 0 }}
+			>
+				<h5 class="title"><a href="/mandala">Fractal Maṇḍala</a></h5>
+				<div class="rta-row stay colgap300">
+					<div class="rta-image w32">
+						<img
+							src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/fmhomehero.webp"
+							alt="hero-mandala"
+							style="height: 120px"
+						/>
+					</div>
+					<div class="rta-column w64">
+						<p class="small">
+							Research, exploration, and furtherance of Indian civilizational consciousness through
+							long-form essays and development of core ontology.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div
+				class="rta-column rowgap200"
+				use:reveal={{ transition: 'scale', duration: 400, delay: 90, opacity: 0, scale: 0 }}
+			>
+				<h5 class="title"><a href="/aryavarta">Scrolls of Āryavarta</a></h5>
+				<div class="rta-row stay colgap300">
+					<div class="rta-image w32">
+						<img
+							src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/scrollshero.webp"
+							alt="hero-mandala"
+							style="height: 120px"
+						/>
+					</div>
+					<div class="rta-column w64">
+						<p class="small">
+							Cultural narratives of the Bhārata that once was, and some of the Bhārata that could
+							have been. At the edge of AI and art.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</Shell>
 
 <style lang="sass">
 
-#thissmall
-	@media screen and (max-width: 1023px)
-		text-align: right !important
-
-.rta-card
-	display: flex
-	border-radius: 0
-	p.writer
-		color: var(--onlyblack)
-	padding: 0
-	@media screen and (min-width: 769px)
-		flex-direction: row
-		column-gap: 32px
-		border-bottom: 1px solid var(--contraster2)
-		padding-bottom: 32px
-		.rta-card-image
-			width: 36%
-		.rta-card-body
-			width: 60%
-			display: flex
-			flex-direction: column
-			row-gap: 16px
-			.tags
-				cite
-					background: #fe4a49
-					color: white
-					text-transform: uppercase
-					font-size: 10px
-					font-style: normal
-					padding: 2px 4px
-	@media screen and (max-width: 768px)
-		flex-direction: row
-		column-gap: 24px
-		border-bottom: 1px solid var(--contraster2)
-		padding-bottom: 32px
-		.rta-card-image
-			width: 30%
-			height: 200px
-		.rta-card-body
-			width: calc(70% - 24px)
-			display: flex
-			flex-direction: column
-			row-gap: 16px
-			.tags
-				cite
-					background: #fe4a49
-					color: white
-					text-transform: uppercase
-					font-size: 10px
-					font-style: normal
-					padding: 2px 4px
-			h4
-				font-size: 21px
-			p.exc
-				font-size: 12px
-			p.writer
-				font-size: 14px
-		
-
-#drashtascreen
-	@media screen and (max-width: 1023px)
-		justify-content: flex-end
-
-#drashta-drawer
-	@media screen and (min-width: 1024px)
-		padding-right: 24px
-
-.holds-button-emerge, .arrowsanimation
-	@media screen and (max-width: 1023px)
-		display: none
-
-.status-sticker
-	background: #FE4A49
-	padding: 2px 8px
-	width: max-content
-	border-radius: 14px
-	small
-		color: white
-
-.rta-card
-	transition: all 0.18s cubic-bezier(0.795, 1.270, 0.590, 0.945)
-
-#arrowl
-	animation: arrow1 16s ease infinite forwards
-#arrowc
-	animation: arrow2 16s ease infinite forwards
-#arrowr
-	animation: arrow3 16s ease infinite forwards
-
-@keyframes arrow1
-	0%
-		opacity: 0
-	50%
-		opacity: 1
-	99.5%
-		opacity: 1
-	100%
-		opacity: 0
-
-@keyframes arrow2
-	0%
-		opacity: 0
-	60%
-		opacity: 1
-	99%
-		opacity: 1
-	100%
-		opacity: 0
-
-@keyframes arrow3
-	0%
-		opacity: 0
-	70%
-		opacity: 1
-	99%
-		opacity: 1
-	100%
-		opacity: 0
-
-
-.drawer-item
-	text-decoration: none
-	font-size: 16px
-	text-transform: uppercase
-	border: none
-	background: none
-	padding: 4px 12px
-	border-radius: 16px
-	&::before
-		margin-left: auto
-	&::before, &::after
-		content: ''
-		display: block
-		width: 0%
-		height: 2px
-		background: #FE4A49
-		transition: 0.5s
-		border-radius: 2px
-	&:hover
-		&::after, &::before
-			width: 100%
-	@media screen and (max-width: 1023px)
-		width: 100%
-
-.light
-	.drawer-item
-		color: #474747
-	.drawer-item.drawerselection
-		background: #fe4a49
-		color: white
-
-.dark
-	.drawer-item
-		color: #878787
-	.drawer-item.drawerselection
-		background: #fe4a49
-		color: white	
-
-.drawer-select
-	display: flex
-	text-decoration: none
-	font-size: 18px
-	text-transform: uppercase
-	justify-content: space-between
-	background: none
-	border: 1px solid var(--contraster)
+.drawer-item.open
+	background: var(--hilite)
 	color: white
-	align-items: center
-	padding: 4px 12px
-	border-radius: 20px
-	height: 36px
-	.rta-row
-		transition: 0.1s
-		transform-origin: center center
-	.rotated
-		transform: rotate(180deg)
-		transform-origin: center center
-		transition: 0.1s
 
-.drawer-item2
-	&::after
-		background: #FE4A49
+.drawer-item.open.drawerselection
+	color: var(--hilite)
+	background: none
 
+.drawer-item, .drawer-item.open
+	&:hover
+		border: 1px solid var(--hilite)
+
+.side-l
+	@media screen and (min-width: 769px)
+		padding-top: 24px
+
+a
+	&:hover
+		.text-animation
+			animation: colorchange 0.2s forwards
+
+@keyframes colorchange
+	0%
+		color: var(--opposite)
+	50%
+		color: #fe4a49
+	100%
+		color: var(--opposite)
 
 </style>

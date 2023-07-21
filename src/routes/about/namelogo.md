@@ -1,6 +1,8 @@
 ---
 title: Nāmarūpa
 about: About our Name and Logo
+next: '/about/values'
+prev: '/about/whatkrishnameanstous'
 ---
 
 ##### What does a word’s root represent beyond mere sound?
@@ -11,7 +13,7 @@ From the root √bṛh, meaning increment, growth, or prosperity- vṛddhi- whic
 
 Another dhātu, √man (√मन्), denotes considering, knowing and thinking. Now a simple addition. √bṛh+√man=brahman- growth, shining and outpouring of Mind, ie √bṛh+√man, is called ब्रह्मन् / brahman. Literally the growth, expansion, development, swelling of the mind – of Intent. This association opens a realm of meaning that gives direct shape to us at Bṛhat.
 
-##### Bṛhat Rāṣṭṛ, Bṛhat Saṃskṛti. Bṛhat Cetanā.
+###### Bṛhat Rāṣṭṛ, Bṛhat Saṃskṛti. Bṛhat Cetanā.
 
 How will we design the self-perpetuating civilizational moment? By being accelerators, manifestors, enablers- grist to the yearning and intent of a civilization. For storytellers, policy formulators, educators, heritage and ecology preservationists, artists, and more. Let us come together, grow, shine and pour forth. To swell the civilizational mind. A bṛhat mānasa, of people, nation, species and planet.
 
@@ -19,7 +21,7 @@ How will we design the self-perpetuating civilizational moment? By being acceler
 
 Modelled upon a fractal, rounded as a maṇḍala – our logo represents a bṛhat cetanā of people nation, species and planet. Bṛhat brims, it is full of expansive charge.
 
-##### Packed Within: Elements for our Functional Areas
+###### Packed Within: Elements for our Functional Areas
 
 At the core, with one half of it capable of representing a lotus, is Culture– the pool that we draw from and the consciousness we aim to manifest. But to manifest, to bring into being, needs application. In the here and present we must create a culture-compatible Policy, one that accounts for ecology, education and more. It is how we bring civilizational intent to form. The cultural core needs a hard outer shell.
 

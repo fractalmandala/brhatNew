@@ -2,6 +2,8 @@
 title: Policy Research
 image: "/images/areas-pr.webp"
 about: About Policy Research, the second pillar at Bṛhat
+next: '/about/leadershipdevelopment'
+prev: '/about/culturecreatives'
 ---
 
 The growing consensus in public policy rejects the assumption that its formulation and analysis can be entirely uncommitted to, and removed from the interests, values, and cultures of the place.
@@ -10,7 +12,7 @@ Instead, it places culture at the core of public policy and its making. Culture 
 
 Such social and cultural information, expressed through behaviours and attitude, may augment or hinder policy implementation, depending on how compatible it is to the culture of the place. Institutions such as birth, marriage, family, rituals, child-rearing, education, and various legal and political organizations cannot be understood fully if our understanding of them is not rooted in the culture, from which all these emerge.
 
-##### Prof. Balagandhara calls these cultural resources as ‘resources of socialization’, but we at Bṛhat, take these resources as instruments for our existence and survival.
+###### Prof. Balagandhara calls these cultural resources as ‘resources of socialization’, but we at Bṛhat, take these resources as instruments for our existence and survival.
 
 Any public policy exercise must understand culture, and how it has been imprinted upon and expressed through stories, songs, rituals, poems, theories, hypotheses, and even daily seemingly useless talks.
 
