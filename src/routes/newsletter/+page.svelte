@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { slide } from 'svelte/transition';
 	import type { ActionData } from './$types';
-	import { goto } from '$app/navigation';
+	import Shell from '$lib/components/PageShell.svelte';
 	import {
 		themeMode,
 		breakZero,
@@ -12,7 +12,7 @@
 		showAuth
 	} from '$lib/stores/globalstores';
 	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/stores/metastores';
-	import Head from '$lib/components/HeadComponent.svelte';
+	import { reveal, defaultFullBox } from '$lib/reveal/exportReveal';
 	import Close from '$lib/icons/close.svelte';
 	import { newsletterIssues } from '$lib/utils/supapulls';
 	import supabase from '$lib/utils/db';
@@ -96,44 +96,25 @@
 	});
 </script>
 
-<Head
-	title={$metaTitle}
+<Shell
+	metaTitle={$metaTitle}
 	metaDescription={$metaDescription}
-	metaUrl={$metaUrl}
 	metaImage={$metaImage}
-/>
-
-<div
-	class="rta-column rowgap300"
-	class:light={$themeMode}
-	class:dark={!$themeMode}
-	class:levelzero={$breakZero}
-	class:levelone={$breakOne}
-	class:leveltwo={$breakTwo}
+	metaUrl={$metaUrl}
 >
-	<h3 class="h3-big bord-bot p-bot-16">Bṛhatadya</h3>
-	<div class="rta-column rowgap200">
-		<p>
-			Bṛhatadya is your fortnightly update on the latest actions, events, launches, program
-			registrations, essays at Bṛhat. Use this as your reference point for course registrations,
-			calendar of upcoming tours, the latest content at Svarñānjali and more. To access it, or to
-			receive it fortnightly in your inbox, please sign up or sign in.
+	<section class="rta-column rowgap400 min100" id="intro">
+		<h2 use:reveal class="bord-top bord-bot p-top-16 p-bot-24">Bṛhatadya</h2>
+		<p class="mid soft">
+			Bṛhatadya is your monthly update on the latest actions, events, launches, program
+			registrations, essays at Bṛhat. Use this as your reference point for Draṣṭā course
+			registrations, calendar of upcoming Anveṣī tours, the latest content at Svarñānjali and more.
+			To access it, please sign up or sign in.
 		</p>
 		{#if !$authState}
 			<button class="newbutton red" on:click={toggleSubscribe}>Sign Up</button>
 		{/if}
-		{#if $authState}
-			<h6 class="bord-top p-top-16 bord-bot p-bot-16">
-				<a href="/newsletter/1">Read the </a>Current Issue: Issue 1.1 - July
-			</h6>
-		{:else}
-			<h6 class="bord-top p-top-16 bord-bot p-bot-16">Current Issue: Issue 1.1 - July</h6>
-		{/if}
-	</div>
-	<div class="rta-grid grid2 left rowgap300 colgap400" class:flatt={$authState}>
 		{#if !$authState}
 			<div class="rta-column rowgap200 first">
-				<small class="oppositer tt-c">Already signed up? Sign in below:</small>
 				<form class="thisforms" method="post" action="?/login">
 					<div class="rta-column rowgap100 null">
 						<input
@@ -158,35 +139,22 @@
 						<button disabled={loading} class="newbutton red">Sign in</button>
 					</div>
 				</form>
-				<!--
-		<div class="rta-row ycenter colgap100">
-			<p>Or,</p>
-			<button
-				class="blank-button rta-row ycenter colgap100"
-				on:click={() => {
-					supabase.auth.signInWithOAuth({
-						provider: 'google',
-						options: {
-							scopes: 'https://www.googleapis.com/auth/userinfo.email',
-							redirectTo: window.location.href
-						}
-					});
-				}}
-			>
-				<p>Sign In with Google</p>
-				<img class="iconimage" src="/images/icongoogle.png" alt="google" />
-			</button>
-		</div>
-		-->
 			</div>
 		{/if}
-		<div class="rta-column rowgap200 second">
-			<p>
+		{#if $authState}
+			<h6 class="title">
+				<a href="/newsletter/1" style="color: #fe4a49">Read</a> Current Issue: Issue 1.1 - July
+			</h6>
+		{:else}
+			<h6 class="title">Current Issue: Issue 1.1 - July</h6>
+		{/if}
+		<div class="rta-column rowgap200">
+			<p class="small">
 				"Adya," meaning 'today, this day, now, at present', combines with Bṛhat to denote 'Bṛhat
 				Today,' or 'Bṛhat Now'- a fair name for a periodic newsletter that updates recent events and
 				activities at Bṛhat.
 			</p>
-			<p>
+			<p class="small">
 				A second meaning lends deeper significance. With 'bṛhat' meaning 'great, formidable, large,
 				growing,' 'Bṛhat-Adya' means the "Great Now," or the "Great Moment," ie- the civilizational
 				moment we are currently in. Read more about this moment, and what it means for all of us,
@@ -198,11 +166,9 @@
 				>
 			</p>
 		</div>
-		{#if $authState}
-			<button class="newbutton red" on:click={toggleLogout}>Log Out</button>
-		{/if}
-	</div>
-</div>
+	</section>
+</Shell>
+
 {#if submodal}
 	<div
 		class="subscribemodal"
@@ -243,34 +209,6 @@
 
 <style lang="sass">
 
-.rta-grid.grid2.left.flatt
-	display: flex
-	flex-direction: column
-	.second
-		width: 100%
-	.first
-		display: none
-
-// .iconimage
-//	object-fit: contain
-//	width: 24px
-//	height: 24px
-
-h3
-	color: var(--opposite)
-	letter-spacing: 0
-
-h6
-	a
-		color: #fe4a49
-
-p
-	line-height: 1.8
-
-.second
-	p
-		font-size: 14px
-
 .subscribemodal
 	display: flex
 	align-items: center
@@ -290,7 +228,7 @@ p
 			color: var(--background)
 			padding-bottom: 0
 		h5
-			font-weight: bold
+			font-weight: 500
 			font-size: 20px
 		small
 			text-transform: none
@@ -320,31 +258,8 @@ form.thisforms
 		outline: none
 		border: none
 		@media screen and (min-width: 1024px)
-			width: 80%
+			width: 16%
 
-.levelzero, .levelone
-	padding-bottom: 96px
-	align-items: stretch
-
-.levelzero
-	min-height: calc(100vh - 320px)
-	padding-top: 112px
-	padding-left: 360px
-	padding-right: 360px
-	padding-bottom: 64px
-
-.levelone
-	padding-top: 240px
-	padding-left: 32px
-	padding-right: 32px
-	padding-bottom: 64px
-
-.leveltwo
-	margin-top: 160px
-	padding-left: 32px
-	padding-right: 32px
-	padding-bottom: 64px
-	
 .dark
 	.insubmodal
 		input

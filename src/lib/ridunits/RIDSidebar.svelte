@@ -125,6 +125,9 @@
 			</div>
 		{/if}
 		<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
+			<h5><a href="/newsletter">Bṛhat Adya</a></h5>
+		</div>
+		<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
 			<h5><a href="/drashta">Bṛhat Draṣṭā</a></h5>
 			<DrashtaLinks flytime={$sideMode} />
 		</div>

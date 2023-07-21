@@ -45,13 +45,13 @@ export const actions: Actions = {
 			const { error } = await supabase.auth.signUp({
 				email: email,
 				password: password,
-				options: { emailRedirectTo: '/' }
+				options: { emailRedirectTo: '/newsletter' }
 			});
 		if (error) {
 			showChip('Error! Please check submitted details again.', '#fe4a49');
 		} 
 
-		throw redirect(303, '/');
+		throw redirect(303, '/newsletter');
 		},
 
 	signout: async ({ 

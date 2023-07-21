@@ -77,7 +77,7 @@
 </script>
 
 <div class="letterstrip ta-c bord-bot p-bot-16 p-top-128">
-	<h4>Bṛhatadya {data.issueData.header}</h4>
+	<h4 style="font-weight: 500">Bṛhatadya {data.issueData.header}</h4>
 	<small>{data.issueData.datefrom} | {data.issueData.dateto}</small>
 </div>
 <div class="filterstrip colgap100">
@@ -154,7 +154,11 @@
 	metaImage={$metaImage}
 	metaUrl={$metaUrl}
 >
-	<section class="rta-column rowgap400 min100" id="intro" class:outer={$newsFilter === 'Featured'}>
+	<section
+		class="rta-column rowgap400 min100 ytop p-top-64"
+		id="intro"
+		class:outer={$newsFilter === 'Featured'}
+	>
 		{#if data.user !== 'none'}
 			{#if $newsFilter === 'Dhīti'}
 				{#if recentDhiti && recentDhiti.length > 0}
@@ -174,7 +178,7 @@
 										{/each}
 									</div>
 								</div>
-								<h6>
+								<h6 class="title">
 									<a href={item.linkpath} target="_blank" rel="noreferrer">{item.meta.title}</a>
 								</h6>
 								<p class="author">
@@ -183,7 +187,7 @@
 										<span> and {item.meta.authortwo}</span>
 									{/if}
 								</p>
-								<pre class="excerpt">{item.meta.excerpt}</pre>
+								<pre class="small">{item.meta.excerpt}</pre>
 							</div>
 						</div>
 					{/each}
@@ -256,7 +260,7 @@
 			{/if}
 		{/if}
 	</section>
-	<section class="rta-column rowgap400 min100" id="meaning">
+	<section class="rta-column rowgap200 min100" id="meaning">
 		<p class="small">
 			"Adya," meaning 'today, this day, now, at present', combines with Bṛhat to denote 'Bṛhat
 			Today,' or 'Bṛhat Now'- a fair name for a periodic newsletter that updates recent events and
@@ -306,7 +310,7 @@
 	.rta-row
 		column-gap: 12px
 	small
-		color: var(--opposite)
+		color: white
 	cite
 		color: var(--onlyblack)
 		padding: 0
@@ -341,7 +345,7 @@ pre.excerpt
 		justify-content: center
 		.blank-button
 			p
-				font-weight: bold
+				font-weight: 500
 				color: var(--onlyblack)
 				&:hover
 					color: #fe4a49

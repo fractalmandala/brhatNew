@@ -2,7 +2,7 @@
 	import Header from '$lib/components/NewHeader.svelte';
 	import { slide } from 'svelte/transition';
 	import { quintOut, quintIn } from 'svelte/easing';
-	import { themeMode } from '$lib/stores/globalstores';
+	import { themeMode, menuMode } from '$lib/stores/globalstores';
 	import { clickOutsideAction } from '$lib/utils/clickoutside';
 	import { fly } from 'svelte/transition';
 	import MenuIcon from '$lib/icons/menu.svelte';
@@ -22,8 +22,8 @@
 	}
 
 	function offDropdown() {
-		if (dropdown === true) {
-			dropdown = false;
+		if ($menuMode === true) {
+			$menuMode = false;
 		}
 	}
 
@@ -34,9 +34,9 @@
 	}
 </script>
 
-<Header {isSwitch}>
+<Header {isSwitch} hasMenu={true}>
 	<div slot="local" class="boxmidrow">
-		{#if dropdown}
+		{#if $menuMode}
 			<div
 				class="rta-column rowgap100 pagedropdown"
 				in:slide={{ axis: 'y', easing: quintOut, duration: 128 }}
