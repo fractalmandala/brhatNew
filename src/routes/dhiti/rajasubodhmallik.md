@@ -6,7 +6,7 @@ tags:
 - legacy
 - culture
 date: "2023-07-19"
-image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/rajasubodhmallik/rajasubodhmallikcover.webp
+image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/subodh.webp
 excerpt: "A heartfull piece to learn about Subodh Mallik, a close partner & confidante of Śrī Aurobindo Ghosh and how his house became the center point of Swadeshi Movement."
 ---
 
