@@ -129,8 +129,8 @@
 			<DrashtaLinks flytime={$sideMode} />
 		</div>
 		<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
-			<h5><a href="/anveshi">Bṛhat Anveṡī</a></h5>
-			<AnveshiLinks flytime={$sideMode} />
+			<h5><a href="/anveshi">Bṛhat Anveṣī</a></h5>
+			<AnveshiLinks />
 		</div>
 		<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
 			<h5><a href="/svarnanjali">Svarṇāñjali</a></h5>
