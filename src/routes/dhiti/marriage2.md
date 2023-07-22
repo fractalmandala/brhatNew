@@ -2,7 +2,9 @@
 title: "Gṛhastha Āśrama - Marriage Part II"
 author: Brhat
 category: Culture and Policy
-tags: culture, marriage
+tags: 
+- culture
+- marriage
 excerpt: "Marriage is known in Vaidika Saṃskṛti as vivāha: a key stage in life, and a crucial pillar of society in the dhārmika civilizational worldview. "
 date: "2023-07-22"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/marriage2/marriage2cover.webp
@@ -42,6 +44,7 @@ Let us delve into these three entities a bit more. At the ultimate level, what a
 
 ###### _Jīva, the individual Consciousness, is none other than the Supreme Self waiting to recognize His/Her own true nature. That which brings us to the Vision of Oneness, taking us (away) from Divisions and (which) establishes us in nothing less than “One Undivided Supreme Reality”. We are not different individuals searching for Truth - but we are essentially the TRUTH lost in divisions<sup>2</sup>._
 
+
 Each jīvātma is born into the world according to _karma_ - a much larger, vaster, encoded system. The exact latitude and longitude coordinates of birth; the exact moment in microseconds within our relative record of time; the family of parents, siblings, grandparents, aunts and uncles (or lack thereof) which this jīva now identifies with - all these are according to that airtight coding of sañcita, prārabdha, and āgāmi karma which that specific jīvātma shall journey through. 
 
 Of course, not every single thing is preordained. Each jīvātma has the choice of pursuing their own puruśārtha. The choice to pursue or not to pursue, what to pursue, how to pursue, when to pursue, and so on and so forth. This puruśārtha, however, does function within the given cards dealt by the hand known as prārabdha karma. Choices are made, each with their own consequences that play out, determining the next set of options which the jīvātma will have to choose from.
@@ -50,11 +53,13 @@ All this happens within the environment, the spatio-temporal setting, known as j
 
 ###### _The Jagat is verily the expression and expansion of that “One Undivided Supreme Reality”. We respect this as Mother Nature. What we reap from Nature is the blessings of this Divine Mother - who essentially is (the) inseparable aspect of Īśvara, Bhagvān (the Supreme with attributes). So there is no aggrandizing, snatching or hoarding this nature. We respect Nature and she nurtures us<sup>2</sup>._
 
+
 Jagat is an objective, external, material real world that each of us jīvas experiences subjectively. The same jagat experienced by a child in Bhārat may be much more rich, colorful, and diverse than that jagat experienced by a 45-year-old in France. Indeed, jagat experienced today by a given jīva may even be very different from that same jagat experienced by the same jīva tomorrow.
 
 Aside from these two, and in fact correlating to both of them - is Īśvara. A macrocosmic, collective reflection of the same individual Consciousness, no different from jagat itself as well.
 
 ###### _Īśvara is the Supreme Self with all the attributes (saguṇa) and is the embodiment of the collective Consciousness. It is this Īśvara who decides the Karma-Phala. He is therefore also called Karma-Phala-Dātā. As the initial Sādhakas (Spiritual Seekers), we invoke his presence and blessings, in and through every aspect of life<sup>2</sup>._
+
 
 > **To find balance, integration, and harmony amongst these three dimensions is our civilizational heritage.**
 >
@@ -99,9 +104,7 @@ Going back to jīva, jagat, Īśvara - the purpose of this guided journey throug
 >
 > ##### ātmano mokṣāya jagat hitāya ca
 >
-> ##### The jīvātma is freed from the limitations of individual-ness
->
-> ##### AND benefits the world around them, in the process.
+> ##### The jīvātma is freed from the limitations of individual-ness AND benefits the world around them, in the process.
 
 An initial step to overcoming the boundary of the individual, the first step to expanding one’s identity past the physical and emotional barriers of the self - presents itself in this guided journey with the physical, emotional, and more subtle bond of marriage - vivāha yagña.
 
@@ -140,7 +143,7 @@ The need for a sense of śatrubodh and svayambodh is clear in light of these arg
 
 #### Endnotes :
 
-1. The abrahamic concept of “soul” is distinct from the concept of _jīva _or _jīvātma_. Using “soul” as a translation, oversimplifies the concept of _jīva_ and therefore propagates misconceptions and wrong understanding of Vaidika Saṃskṛti. A soul, in the Abrahamic sense, has one life on Earth, after which it is either condemned to Hell or promoted to Heaven. Only human beings have souls, and in many Abrahamic contexts - only white, human males. There is no scope for punarjanma, the cycle of birth and death through a variety of _yonis_, or sañcita/prārabdha/āgāmi karma, to name a few basics which frame the concept of jīva in Vaidika Samṣkrti.
+1. The abrahamic concept of “soul” is distinct from the concept of _jīva_ or _jīvātma_. Using “soul” as a translation, oversimplifies the concept of _jīva_ and therefore propagates misconceptions and wrong understanding of Vaidika Saṃskṛti. A soul, in the Abrahamic sense, has one life on Earth, after which it is either condemned to Hell or promoted to Heaven. Only human beings have souls, and in many Abrahamic contexts - only white, human males. There is no scope for punarjanma, the cycle of birth and death through a variety of _yonis_, or sañcita/prārabdha/āgāmi karma, to name a few basics which frame the concept of jīva in Vaidika Samṣkrti.
 
 2. Quotations from Swami Sarveshānanda Sarasvati.
 
