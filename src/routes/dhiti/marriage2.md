@@ -73,7 +73,7 @@ Here we understand the four stages, the four āśramas of Vaidika Saṃskṛti, 
 
 **Stage One: Brahmacarya Āśrama**. 
 
-From conception, gestation, and birth to about age twenty five, the jīva goes through the rigorous, foundationally crucial process of knowledge-absorption. He or she is nurtures with the physical (biological) and subtle (mental, emotional, intellectual) saṃskāras that will help them navigate through the remaining three stages.
+From conception, gestation, and birth to about age twenty five, the jīva goes through the rigorous, foundationally crucial process of knowledge-absorption. He or she is nurtured with the physical (biological) and subtle (mental, emotional, intellectual) saṃskāras that will help them navigate through the remaining three stages.
 
 **Stage Two: Gṛhastha Āśrama.**
 
@@ -133,7 +133,7 @@ Whereas, what we see today is a disintegration of all of these values, due to an
 
 Such destruction of Hindu civilizational tradition, heritage, and thought-systems is not only stifling of the Hindu identity - but also will eventually contribute to an implosion of the society itself. A complete blackhole of chaos, which no longer has its own rhymes and rhythms of order. 
 
-With the annihilation of _ātmano mokṣāya jagat hitāya ca, _obviously comes the dismantling of social harmony and ecological integration, leading to an ultimately inevitable self-sabotage of the human race.
+With the annihilation of _ātmano mokṣāya jagat hitāya ca,_ obviously comes the dismantling of social harmony and ecological integration, leading to an ultimately inevitable self-sabotage of the human race.
 
 The need for a sense of śatrubodh and svayambodh is clear in light of these arguments. The pressing urgency for a clear sense of identity, and that clarity leading to confidence as an individual and finally that confident individual then undertaking courageous actions to impact the collective. This is what we must all engage with.
 
