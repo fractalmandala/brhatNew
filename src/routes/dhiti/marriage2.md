@@ -1,6 +1,6 @@
 ---
 title: "Gṛhastha Āśrama - Marriage Part II"
-author: Padmavathy Manavazhahan
+author: Brhat
 category: Culture and Policy
 tags: 
 - culture
