@@ -45,8 +45,8 @@ We understand linkages between things and how they group up. bṛhat will grow b
 
 To deliberate upon and cultivate excellence actively is a given at bṛhat, but what informs our discernment? How and when do we say yes or no to a project, a person, a plan? When and where do we say this? An ability to emphasise on discernment is the key to our fourth cornerstone. A differentiated, contextual and sustainable framework based on dharma will be our solution.
 
-> आमां मेधा सु॒रभि-र्विश्वरूपा हिरण्यवर्णा जगती जगम्या ।  
-> ऊर्जस्वती पयसा पिन्वमाना सा मां मेधा सु॒प्रतीका जुषन्ताम् ॥
+> आमां मेधा सुरभि-र्विश्वरूपा हिरण्यवर्णा जगती जगम्या ।  
+> ऊर्जस्वती पयसा पिन्वमाना सा मां मेधा सु॒परतीका जुषन्ताम् ॥
 
 > May that Sarasvati, who is intelligence personified, who is fragrant, who is all pervading, who has a golden complexion, who is the earth, who is accessible to all; who is full of vigor, who is overflowing with the nectar of knowledge, and who is beautiful; come to me and bless me with intelligence.
 
