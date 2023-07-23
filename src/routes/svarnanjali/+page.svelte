@@ -91,7 +91,7 @@
 			{#if $userLang === 'English'}
 				<h5 class="ta-c">
 					A weekly video series to discuss literature, arts, drama, architecture, sculpture, cinema
-					and other fine arts from the point of view of rasikā, in Sanskṛta Niṣṭha Hindī.
+					and other fine arts from the point of view of rasikā, in Saṃskṛta Niṣṭha Hindī.
 				</h5>
 			{:else if $userLang === 'Hindi'}
 				<h5 class="ta-c">

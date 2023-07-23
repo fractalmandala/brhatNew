@@ -59,11 +59,13 @@ Aside from these two, and in fact correlating to both of them - is Īśvara. A m
 > Īśvara is the Supreme Self with all the attributes (saguṇa) and is the embodiment of the collective Consciousness. It is this Īśvara who decides the Karma-Phala. He is therefore also called Karma-Phala-Dātā. As the initial Sādhakas (Spiritual Seekers), we invoke his presence and blessings, in and through every aspect of life<sup>2</sup>.
 
 
+<div class="ta-c">
+
 **To find balance, integration, and harmony amongst these three dimensions is our civilizational heritage.**
-
 **It is our dharma, our responsibility.**
-
 **That which we carry and bear.**
+
+</div>
 
 <img class="imageclass2" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/marriage2/srichakra.webp" alt="three"/>
 
