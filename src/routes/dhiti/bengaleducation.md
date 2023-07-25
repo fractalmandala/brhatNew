@@ -43,9 +43,7 @@ As Andrew Porter in his book, Religion, Missionary Enthusiasm and Empire (p. 238
 
 > “It is often argued that the missionary movement and expansion of Britain's Christian denominations represented distinct forms of cultural and institutional ‘imperialism’. In reality, despite their small numbers, their presence and teaching [it is contended] undermined local customs and self-confidence, eroded respect for traditional authorities, and created social and political conflict. Thus weakened, non-Western societies succumbed to the broader pressures of Western expansion; internal collapse and significant cultural changes [then] opened the way to direct colonial rule”. 
 
-Similarly, Gauri Vishwanathan, in her book, Masks of Conquest: Literary Study and British Rule in India, eloquently reveals how the Charter Act thrust colonial authorities into the
-
-role of fostering "religious and moral improvement.” In essence, civilizing tendencies were entwined with official policy pronouncements, further shaping the narrative of colonial education.
+Similarly, Gauri Vishwanathan, in her book, Masks of Conquest: Literary Study and British Rule in India, eloquently reveals how the Charter Act thrust colonial authorities into the role of fostering "religious and moral improvement.” In essence, civilizing tendencies were entwined with official policy pronouncements, further shaping the narrative of colonial education.
 
 Macaulay through his minutes further intensified the disrooting of indigenous education, and instead, he implemented a Western-style education system that prioritized English language and literature, sciences, and practical skills relevant to administrative and clerical roles. This shift further marginalized traditional knowledge systems, including Saṃskṛta - based learning, which were considered inferior or irrelevant, as the English-educated youths became preferred for the colonial bureaucracy.
 
