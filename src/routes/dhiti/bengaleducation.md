@@ -39,7 +39,7 @@ These learning centers in pre-colonial Bengal played a pivotal role in the educa
 
 However, the arrival of colonial powers in Bengal, mainly the British, had a profound impact on the pre-colonial learning centers and education system in the region. The policies and practices introduced by the colonial administration gradually led to the decline and eventual demise of these traditional learning centers.**Additionally, after the passing of the East India Company Act 1813, also known as the Charter Act 1813, the traditional learning centers in pre-colonial Bengal saw a gradual decline: by ending East India Company’s commercial monopoly in India, it permitted Christian missionaries to propagate English and preach their religion in the Company's territories.**
 
-As Andrew Porter in his book, Religion, Missionary Enthusiasm and Empire (p. 238-9) explains,** **
+As Andrew Porter in his book, Religion, Missionary Enthusiasm and Empire (p. 238-9) explains,
 
 > “It is often argued that the missionary movement and expansion of Britain's Christian denominations represented distinct forms of cultural and institutional ‘imperialism’. In reality, despite their small numbers, their presence and teaching [it is contended] undermined local customs and self-confidence, eroded respect for traditional authorities, and created social and political conflict. Thus weakened, non-Western societies succumbed to the broader pressures of Western expansion; internal collapse and significant cultural changes [then] opened the way to direct colonial rule”. 
 
