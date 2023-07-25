@@ -1,5 +1,5 @@
 ---
-title: "Unveiling Colonial Education in pre-colonial Bengal: The Conquest of Minds and the Demise of Traditional Learning Centers"
+title: "Unveiling Education in Pre-colonial Bengal: The Conquest of Minds and the Demise of Traditional Learning Centers"
 author: Anurag Shukla
 category: Indian Knowledge Systems
 tags: 
