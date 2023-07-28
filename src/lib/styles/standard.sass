@@ -411,3 +411,15 @@
 	font-size: 10px
 	width: max-content
 	max-width: 100%
+
+.drawer-item.open
+	background: var(--hilite)
+	color: white
+
+.drawer-item.open.drawerselection
+	color: var(--hilite)
+	background: none
+
+.drawer-item, .drawer-item.open
+	&:hover
+		border: 1px solid var(--hilite)

@@ -1,27 +1,15 @@
 <script lang="ts">
-	import Header from '$lib/components/SubHeader.svelte';
+	import Header from '$lib/components/NewHeader.svelte';
 	import { themeMode, breakZero, breakOne, breakTwo } from '$lib/stores/globalstores';
 </script>
 
 <Header />
 
-<div
-	class="cont"
-	class:light={$themeMode}
-	class:dark={!$themeMode}
-	class:levelzero={$breakZero}
-	class:levelone={$breakOne}
-	class:leveltwo={$breakTwo}
->
+<div class:light={$themeMode} class:dark={!$themeMode}>
 	<slot />
 </div>
 
 <style lang="sass">
-
-.cont
-	width: 100vw
-	display: flex
-	flex-direction: column
 
 .light
 	background: #FFFFFF

@@ -1,10 +1,13 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { themeMode, breakZero, breakOne, breakTwo } from '$lib/stores/globalstores';
+	import { breakZero } from '$lib/stores/globalstores';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
-	import { ChevronDown } from 'lucide-svelte';
-	import autoAnimate from '@formkit/auto-animate';
-	import Head from '$lib/components/HeadComponent.svelte';
+	import { slide } from 'svelte/transition';
+	import { quintOut, quintIn } from 'svelte/easing';
+	import Shell from '$lib/components/PageShell.svelte';
+	import { reveal } from '$lib/reveal/exportReveal';
+	import Chevron2 from '$lib/icons/chevrond.svelte';
+	import Chevron from '$lib/icons/chevrond.svelte';
 	import {
 		BOLEssentials,
 		BOLBodhas,
@@ -13,9 +16,6 @@
 		BOLOthers,
 		AryanTag
 	} from '$lib/utils/supapulls';
-	import Sidebar from '$lib/reader/BOLSidebar.svelte';
-	import { fly, scale } from 'svelte/transition';
-	import { circIn } from 'svelte/easing';
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte';
 	let dropdownOne = true;
 	let dropdownTwo = true;
@@ -51,12 +51,6 @@
 
 	function toggleMenu() {
 		expandMenu = !expandMenu;
-	}
-
-	function toggleSecondMenu() {
-		if (iw <= 1023) {
-			dropdownTwo = !dropdownTwo;
-		}
 	}
 
 	$: if (!bolInputValue) {
@@ -149,132 +143,125 @@
 </script>
 
 <svelte:window bind:innerWidth={iw} on:keydown={navigateList} />
+<div class="x0" data-lenis-scroll-snap-align="start">
+	<ParallaxImage
+		--parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/bolherobrhat.webp')"
+		--parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/mobile-bol.webp')"
+	/>
+</div>
 
-<Head
-	title={$metaTitle}
+<Shell
+	metaTitle={$metaTitle}
 	metaDescription={$metaDescription}
-	metaUrl={$metaUrl}
 	metaImage={$metaImage}
-/>
-
-<div
-	class:light={$themeMode}
-	class:dark={!$themeMode}
-	class:levelzero={$breakZero}
-	class:levelone={$breakOne}
-	class:leveltwo={$breakTwo}
+	metaUrl={$metaUrl}
 >
-	<div class="x0" data-lenis-scroll-snap-align="start">
-		<ParallaxImage
-			--parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/bolherobrhat.webp')"
-			--parallaxresp="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/mobile-bol.webp')"
-		/>
-	</div>
-
-	<!--initial section with bol description-->
-	<div
-		class="rta-column minH outer-box ycenter p-top-64 limit2"
-		data-lenis-scroll-snap-align="start"
-	>
-		<div class="rta-column rowgap600 wide-60-100">
-			<h4 class="typett">
-				Bṛhat Open Library is an Online Repository for Texts, Papers, Learning Material and More. It
-				is a tribute to the hard labor of people known and unknown that have created for us an
-				unbelievable repository of Indian knowledge.
-			</h4>
-			<p class="typett">
-				All material here is sourced from public domains, permitted for resharing, and uploaded
-				under the CC0 1.0 Open License. If you find any material that violates this, please write to
-				us at contact@brhat.in and we will remove it from the collection.
-			</p>
+	<section class="rta-column rowgap400 min100" id="intro">
+		<h4 use:reveal>
+			Bṛhat Open Library is an Online Repository for Texts, Papers, Learning Material and More. It
+			is a tribute to the hard labor of people known and unknown that have created for us an
+			unbelievable repository of Indian knowledge.
+		</h4>
+		<h5>
+			All material here is sourced from public domains, permitted for resharing, and uploaded under
+			the CC0 1.0 Open License. If you find any material that violates this, please write to us at
+			contact@brhat.in and we will remove it from the collection.
+		</h5>
+	</section>
+	<section class="rta-column rowgap400 min100 ytop p-bot-64" id="main">
+		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
+			<h2>Explore</h2>
 		</div>
-	</div>
-	<!--end-->
-
-	<!--
-	<div class="page3grid minH">
-		<div class="sideleft">
-			<Sidebar />
-		</div>
-		<div class="centerpage"><p>Center</p></div>
-		<div class="sideright"><p>Right</p></div>
-	</div>
--->
-
-	<!--primary section featuring books-->
-	<div class="rta-column rowgap600 outer-box" data-lenis-scroll-snap-align="start">
-		<h3 class="typett ta-c-d glass-y p-top-32 p-bot-32">EXPLORE</h3>
-		{#if breakPoint}
-			<div class="rta-row colgap400 drawer-select" on:click={toggleMenu} on:keydown={fauxfake}>
-				Expand Groups
-				<div class="button-box" class:rotated={expandMenu}>
-					<ChevronDown size="27" />
+		{#if !$breakZero}
+			<div
+				class="rta-row colgap200 ycenter drawer-select"
+				class:isactive={expandMenu}
+				on:click={toggleMenu}
+				on:keydown={fauxfake}
+				use:reveal={{ transition: 'fade', delay: 100, duration: 100 }}
+			>
+				{#if expandMenu}
+					Close
+				{:else}
+					Expand Genres
+				{/if}
+				<div class="rta-row ycenter" class:rotated={expandMenu}>
+					{#if expandMenu}
+						<Chevron2 dimension={24} onToggle={true} />
+					{:else}
+						<Chevron2 dimension={24} />
+					{/if}
 				</div>
 			</div>
 		{/if}
-		{#if expandMenu || !breakPoint}
+		{#if expandMenu || $breakZero}
 			<div
-				class="rta-row xcenter-d row-col ycenter rta-drawer-items colgap400 rowgap100"
-				use:autoAnimate
+				class="rta-row row-col ycenter xleft rta-drawer-items colgap400 rowgap100"
+				in:slide={{ axis: 'y', easing: quintOut }}
+				out:slide={{ axis: 'y', easing: quintIn }}
 				on:click={toggleMenu}
 				on:keydown={fauxfake}
+				use:reveal={{ transition: 'fade', delay: 200, duration: 600 }}
 			>
 				<button
 					class="drawer-item"
 					on:click={() => toggleCategory(1)}
 					on:keydown={fauxfake}
-					class:selected={selectedCategory[1]}>Essentials</button
+					class:drawerselection={selectedCategory[1]}>Essentials</button
 				>
 				<button
 					class="drawer-item"
 					on:click={() => toggleCategory(2)}
 					on:keydown={fauxfake}
-					class:selected={selectedCategory[2]}>Bodhas</button
+					class:drawerselection={selectedCategory[2]}>Bodhas</button
 				>
 				<button
 					class="drawer-item"
 					on:click={() => toggleCategory(3)}
 					on:keydown={fauxfake}
-					class:selected={selectedCategory[3]}>IKS</button
+					class:drawerselection={selectedCategory[3]}>IKS</button
 				>
 				<button
 					class="drawer-item"
 					on:click={() => toggleCategory(4)}
 					on:keydown={fauxfake}
-					class:selected={selectedCategory[4]}>Scriptural</button
+					class:drawerselection={selectedCategory[4]}>Scriptural</button
 				>
 				<button
 					class="drawer-item"
 					on:click={() => toggleCategory(6)}
 					on:keydown={fauxfake}
-					class:selected={selectedCategory[6]}>Āryan Issue</button
+					class:drawerselection={selectedCategory[6]}>Āryan Issue</button
 				>
 				<button
 					class="drawer-item"
 					on:click={() => toggleCategory(5)}
 					on:keydown={fauxfake}
-					class:selected={selectedCategory[5]}>Specials</button
+					class:drawerselection={selectedCategory[5]}>Specials</button
 				>
 			</div>
 		{/if}
 		<div
 			class="rta-grid grid3 rowgap400 colgap400"
 			class:fullgrid={selectedCategory[5] || selectedCategory[6]}
-			use:autoAnimate
 		>
 			{#if selectedCategory[1]}
 				{#if essentials && essentials.length > 0}
 					{#each essentials as item, i}
 						<div
-							class="rta-column rowgap100"
-							in:scale={{ duration: 150, delay: i * 25 }}
-							out:scale={{ duration: 25, delay: 0 }}
+							class="rta-column rowgap50"
+							use:reveal={{
+								transition: 'slide',
+								duration: 200,
+								delay: i + 20,
+								opacity: 0
+							}}
 						>
-							<h6 class="heading"><a href="/openlibrary/books/{item.slug}">{item.Text}</a></h6>
+							<h6 class="title"><a href="/openlibrary/books/{item.slug}">{item.Text}</a></h6>
 							{#if item.Description && item.Description.length > 0}
-								<p>{item.Description}</p>
+								<p class="small">{item.Description}</p>
 							{/if}
-							<small class="is-green">{item.author}</small>
+							<small>{item.author}</small>
 						</div>
 					{/each}
 				{/if}
@@ -283,15 +270,19 @@
 				{#if bodhas && bodhas.length > 0}
 					{#each bodhas as item, i}
 						<div
-							class="rta-column rowgap100"
-							in:scale={{ duration: 150, delay: i * 25 }}
-							out:scale={{ duration: 25, delay: 0 }}
+							class="rta-column rowgap50"
+							use:reveal={{
+								transition: 'slide',
+								duration: 200,
+								delay: i + 20,
+								opacity: 0
+							}}
 						>
-							<h6 class="heading"><a href="/openlibrary/books/{item.slug}">{item.Text}</a></h6>
+							<h6 class="title"><a href="/openlibrary/books/{item.slug}">{item.Text}</a></h6>
 							{#if item.Description && item.Description.length > 0}
-								<p>{item.Description}</p>
+								<p class="small">{item.Description}</p>
 							{/if}
-							<small class="is-green">{item.author}</small>
+							<small>{item.author}</small>
 						</div>
 					{/each}
 				{/if}
@@ -300,15 +291,19 @@
 				{#if ikss && ikss.length > 0}
 					{#each ikss as item, i}
 						<div
-							class="rta-column rowgap100"
-							in:scale={{ duration: 150, delay: i * 25 }}
-							out:scale={{ duration: 25, delay: 0 }}
+							class="rta-column rowgap50"
+							use:reveal={{
+								transition: 'slide',
+								duration: 200,
+								delay: i + 20,
+								opacity: 0
+							}}
 						>
-							<h6 class="heading"><a href="/openlibrary/books/{item.slug}">{item.Text}</a></h6>
+							<h6 class="title"><a href="/openlibrary/books/{item.slug}">{item.Text}</a></h6>
 							{#if item.Description && item.Description.length > 0}
-								<p>{item.Description}</p>
+								<p class="small">{item.Description}</p>
 							{/if}
-							<small class="is-green">{item.author}</small>
+							<small>{item.author}</small>
 						</div>
 					{/each}
 				{/if}
@@ -317,22 +312,26 @@
 				{#if ross && ross.length > 0}
 					{#each ross as item, i}
 						<div
-							class="rta-column rowgap100"
-							in:scale={{ duration: 150, delay: i * 25 }}
-							out:scale={{ duration: 25, delay: 0 }}
+							class="rta-column rowgap50"
+							use:reveal={{
+								transition: 'slide',
+								duration: 200,
+								delay: i + 20,
+								opacity: 0
+							}}
 						>
-							<h6 class="heading"><a href="/openlibrary/books/{item.slug}">{item.Text}</a></h6>
+							<h6 class="title"><a href="/openlibrary/books/{item.slug}">{item.Text}</a></h6>
 							{#if item.Description && item.Description.length > 0}
-								<p>{item.Description}</p>
+								<p class="small">{item.Description}</p>
 							{/if}
-							<small class="is-green">{item.author}</small>
+							<small>{item.author}</small>
 						</div>
 					{/each}
 				{/if}
 			{/if}
 			{#if selectedCategory[5]}
-				<div class="rta-column limit2 rowgap300">
-					<h5 class="heading" style="font-weight: bold">We have a dream.</h5>
+				<div class="rta-column rowgap300">
+					<h6>We have a dream.</h6>
 					<p>
 						The entire available corpus of dhārmika literature, interconnected from root to shoot,
 						branches myriad, that one could swim through. We spot a dravya of Vaiṣeśika, and
@@ -345,7 +344,7 @@
 						Bhartṛhari's writings? Another detour shows us the dravya's occurences in the Ṛgveda and
 						Bṛhadāraṇyaka Upaniṣad.
 					</p>
-					<h5 class="heading" style="font-weight: bold">Do you see what we see?</h5>
+					<h6>Do you see what we see?</h6>
 					<p>
 						This vast, digital pool of "data" is in fact an ocean of dhārmika ontology, or meaning
 						and being. On a different day, a similar swim educates us on the notions of anumāna and
@@ -357,7 +356,7 @@
 						Purāṇas. In reading of him and those around him, we inherit wisdom on what exactly is
 						the point of it all, bringing us closer yet to dharma's pauruṣārthika teleology.
 					</p>
-					<h5 class="heading" style="font-weight: bold">Now do you see it?</h5>
+					<h6>Now do you see it?</h6>
 					<p>
 						Bubbling mushroom clouds of native comprehension, one word leading to countless more,
 						what's bīja at one end in entirety instead a stambha. Nested levels of comprehension,
@@ -365,9 +364,7 @@
 						after click, read after read, we plunge deeper into this ocean. And yet we only move
 						further and further away from darkness.
 					</p>
-					<h5 class="heading" style="font-weight: bold">
-						Asato mā sadgamaya. Tamaso mā jyotirgamaya.
-					</h5>
+					<h6>Asato mā sadgamaya. Tamaso mā jyotirgamaya.</h6>
 					<p>
 						With each new journey, each fresh plunge, each discovery, the grand learnings of a
 						sanātana pravāha dawn upon us. Swim after swim a recalibration is seeded. We think less
@@ -377,9 +374,7 @@
 						digital and instantly accessible. Bīja to stambha as the dhātus and dravyas and darśanas
 						take us we see it clear.
 					</p>
-					<h5 class="heading" style="font-weight: bold">
-						Yathā piṇḍe tathā brahmāṇḍe. Yathā brahmāṇḍe tathā piṇḍe.
-					</h5>
+					<h6>Yathā piṇḍe tathā brahmāṇḍe. Yathā brahmāṇḍe tathā piṇḍe.</h6>
 					<p>
 						Our predecessors of yore, in the beginning, raised grand maṇḍalas from earth to sky- the
 						plasma-wisps of yājñika agni from their havanas. Those recursive wisps were receated in
@@ -388,7 +383,7 @@
 						below. As is ṛta so is dharma. A quest for harmony this was, a culture that in its long
 						stand-in for nature developed coherence at multiple levels.
 					</p>
-					<h5 class="heading" style="font-weight: bold">A maṇḍala that was fractal.</h5>
+					<h6>A maṇḍala that was fractal.</h6>
 					<p>
 						That is what we dream of. Digital plasma-wisps of agni, nested architecture of
 						scriptures, raising our consciousness towards comprehension - towards the light. And as
@@ -396,19 +391,19 @@
 						maṇḍala is created amid the new cosmos that cocoons us - the technological. A different
 						fire we raise to the ancestors, but a fire all the same.
 					</p>
-					<h5 class="heading" style="font-weight: bold">
+					<h6>
 						Here, at the Bṛhat Open Library, we build this dhārmika pool of our dreams. You are
 						welcome to jump in.
-					</h5>
-					<h4 class="heading is-green">Coming Soon</h4>
+					</h6>
+					<h5 class="title">Coming Soon</h5>
 				</div>
 			{/if}
 			{#if selectedCategory[6]}
-				<div class="rta-column rowgap300 limit2">
-					<h5 class="heading" style="font-weight: bold">
+				<div class="rta-column rowgap300">
+					<h6>
 						At Bṛhat, we see history as being salient to civilization, just as memory is salient to
 						consciousness.
-					</h5>
+					</h6>
 					<p>
 						And by history we mean not just the trivia of events and sequences, but the very
 						processes of history making and civilizational emergence. It is core to a sense of self
@@ -435,12 +430,12 @@
 						/><br />– The current consensus is based on a rigorous, well-proven theory which we
 						dismiss out of misplaced national sentiment at best.
 					</p>
-					<h5 class="heading" style="font-weight: bold">
+					<h6>
 						Partly to refute these false allegations, but largely to continue our intent to
 						construct and maintain a repository for all texts relevant to the Indian civilization
 						and its knowledge systems, we have dedicated here a special section in our Bṛhat Library
 						to the Aryan issue.
-					</h5>
+					</h6>
 					<p>
 						This will be a dynamic, continuously growing collection of articles, essays, papers and
 						findings relevant to the AI/M/T issue from all discipline, with a focus on giving due
@@ -481,111 +476,122 @@
 				</div>
 			{/if}
 		</div>
-	</div>
-	<!--end-->
-
-	<!--aryan issue section-->
-	<div class="rta-column minH rowgap600 outer-box p-top-64" data-lenis-scroll-snap-align="start">
-		<h3 class="typett p-top-32 p-bot-32 glass-y ta-c-d">THE ĀRYAN ISSUE</h3>
-		{#if breakPoint}
+	</section>
+	<section class="rta-column rowgap400 min100 ytop" id="aryan">
+		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
+			<h2>The Aryan Issue</h2>
+		</div>
+		{#if !$breakZero}
 			<div
-				class="rta-row colgap400 drawer-select"
-				on:click={toggleSecondMenu}
+				class="rta-row colgap200 ycenter drawer-select"
+				class:isactive={expandMenu}
+				on:click={toggleMenu}
 				on:keydown={fauxfake}
+				use:reveal={{ transition: 'fade', delay: 100, duration: 100 }}
 			>
-				Expand Genres
-				<div class="button-box" class:rotated={dropdownTwo}>
-					<ChevronDown size="27" />
+				{#if expandMenu}
+					Close
+				{:else}
+					Expand Genres
+				{/if}
+				<div class="rta-row ycenter" class:rotated={expandMenu}>
+					{#if expandMenu}
+						<Chevron dimension={24} onToggle={true} />
+					{:else}
+						<Chevron dimension={24} />
+					{/if}
 				</div>
 			</div>
 		{/if}
-		{#if !breakPoint || dropdownTwo}
+		{#if expandMenu || $breakZero}
 			<div
-				class="rta-row row-col colgap200 xcenter-d"
-				on:click={toggleSecondMenu}
+				class="rta-row row-col ycenter xleft rta-drawer-items colgap400 rowgap100"
+				in:slide={{ axis: 'y', easing: quintOut }}
+				out:slide={{ axis: 'y', easing: quintIn }}
+				on:click={toggleMenu}
 				on:keydown={fauxfake}
+				use:reveal={{ transition: 'fade', delay: 200, duration: 600 }}
 			>
 				<button
 					on:click={() => setTag('Core Material')}
 					on:keydown={fauxfake}
-					class="drawer-item {tag === 'Core Material' ? 'filtered' : ''}">Core</button
+					class="drawer-item {tag === 'Core Material' ? 'filtered' : ''}"
+					class:drawerselection={tag === 'Core Material'}>Core</button
 				>
 				<button
 					on:click={() => setTag('Indology')}
 					on:keydown={fauxfake}
-					class="drawer-item {tag === 'Indology' ? 'filtered' : ''}">Indology</button
+					class="drawer-item {tag === 'Indology' ? 'filtered' : ''}"
+					class:drawerselection={tag === 'Indology'}>Indology</button
 				>
 				<button
 					on:click={() => setTag('Linguistics')}
 					on:keydown={fauxfake}
-					class="drawer-item {tag === 'Linguistics' ? 'filtered' : ''}">Linguistics</button
+					class="drawer-item {tag === 'Linguistics' ? 'filtered' : ''}"
+					class:drawerselection={tag === 'Linguistics'}>Linguistics</button
 				>
 				<button
 					on:click={() => setTag('History')}
 					on:keydown={fauxfake}
-					class="drawer-item {tag === 'History' ? 'filtered' : ''}">History</button
+					class="drawer-item {tag === 'History' ? 'filtered' : ''}"
+					class:drawerselection={tag === 'History'}>History</button
 				>
 				<button
 					on:click={() => setTag('Genetics')}
 					on:keydown={fauxfake}
-					class="drawer-item {tag === 'Genetics' ? 'filtered' : ''}">Genetics</button
+					class="drawer-item {tag === 'Genetics' ? 'filtered' : ''}"
+					class:drawerselection={tag === 'Genetics'}>Genetics</button
 				>
 				<button
 					on:click={() => setTag('Archaeology')}
 					on:keydown={fauxfake}
-					class="drawer-item {tag === 'Archaeology' ? 'filtered' : ''}">Archaeology</button
+					class="drawer-item {tag === 'Archaeology' ? 'filtered' : ''}"
+					class:drawerselection={tag === 'Archaeology'}>Archaeology</button
 				>
 				<button
 					on:click={() => setTag('Chronology')}
 					on:keydown={fauxfake}
-					class="drawer-item {tag === 'Chronology' ? 'filtered' : ''}">Chronology</button
+					class="drawer-item {tag === 'Chronology' ? 'filtered' : ''}"
+					class:drawerselection={tag === 'Chronology'}>Chronology</button
 				>
 				<button
 					on:click={() => setTag('Philology')}
 					on:keydown={fauxfake}
-					class="drawer-item {tag === 'Philology' ? 'filtered' : ''}">Philology</button
+					class="drawer-item {tag === 'Philology' ? 'filtered' : ''}"
+					class:drawerselection={tag === 'Philology'}>Philology</button
 				>
 				<button
 					on:click={() => setTag('Geology')}
 					on:keydown={fauxfake}
-					class="drawer-item {tag === 'Geology' ? 'filtered' : ''}">Geology</button
+					class="drawer-item {tag === 'Geology' ? 'filtered' : ''}"
+					class:drawerselection={tag === 'Geology'}>Geology</button
 				>
 			</div>
 		{/if}
-		<div class="rta-grid grid4 rowgap400 colgap400">
+		<div class="rta-grid grid3 rowgap400 colgap400">
 			{#if aryans && aryans.length > 0}
 				{#each aryans as item, i}
 					<div
-						class="rta-column rowgap100"
-						in:scale={{ duration: 200, delay: i * 50, easing: circIn }}
-						out:fly={{ duration: 150, easing: circIn }}
+						class="rta-column rowgap50"
+						use:reveal={{
+							transition: 'slide',
+							duration: 200,
+							delay: i + 20,
+							opacity: 0
+						}}
 					>
-						<h6 class="heading">
+						<h6 class="title">
 							<a href={item.sourcelink} target="_blank" rel="noreferrer">{item.paper}</a>
 						</h6>
-						<small class="is-green">{item.author}</small>
+						<small>{item.author}</small>
 					</div>
 				{/each}
 			{/if}
 		</div>
-	</div>
-	<!--end-->
-</div>
+	</section>
+</Shell>
 
 <style lang="sass">
-
-.light, .dark
-	.drawer-item
-		font-weight: bold
-		font-size: 21px
-
-.is-green
-	color: #538733
-
-.wide-60-100
-	@media screen and (min-width: 1024px)
-		text-align: center
-		align-items: center
 
 .x0
 	overflow: hidden
@@ -597,69 +603,6 @@
 .rta-grid.grid3.fullgrid
 	grid-template-columns: 1fr
 	grid-template-areas: "."
-
-.drawer-item
-	text-decoration: none
-	font-size: 16px
-	text-transform: uppercase
-	border: none
-	background: none
-	padding: 4px 12px
-	border-radius: 16px
-	&::before
-		margin-left: auto
-	&::before, &::after
-		content: ''
-		display: block
-		width: 0%
-		height: 2px
-		background: #538733
-		transition: 0.5s
-		border-radius: 2px
-	&:hover
-		&::after, &::before
-			width: 100%
-	@media screen and (max-width: 1023px)
-		width: 100%
-
-.light
-	.drawer-item
-		color: #474747
-	.drawer-item.selected, .drawer-item.filtered
-		background: #538733
-		color: white
-
-.dark
-	.drawer-item
-		color: #878787
-	.drawer-item.selected, .drawer-item.filtered
-		background: #538733
-		color: white	
-
-.drawer-select
-	display: flex
-	text-decoration: none
-	font-size: 20px
-	text-transform: uppercase
-	justify-content: space-between
-	background: #538733
-	color: white
-	align-items: center
-	padding: 6px 12px 0px 12px
-	border-radius: 20px
-	.rotated
-		transform: rotate(180deg)
-		transform-origin: center center
-		.button-box
-			padding-bottom: 4px
-
-.button-box
-	height: 30px
-	display: flex
-	justify-content: center
-	align-items: center
-	padding: 0
-	transition: 0.08s
 
 
 </style>
