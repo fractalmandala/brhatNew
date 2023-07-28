@@ -19,7 +19,7 @@ Vivāha, from √vaḥ dhātu in Saṃskṛt, for “to bear”, “to carry”.
 In our previous discussion, the following was highlighted:
 
 
-##### _The family unit creates guided journeys for self-evolution while making space for fulfillment of our desires. It creates order in chaos. Thus, marriage is the bedrock of civilization, which is a much grander yajña - a much grander order in much grander chaos._
+##### The family unit creates guided journeys for self-evolution while making space for fulfillment of our desires. It creates order in chaos. Thus, marriage is the bedrock of civilization, which is a much grander yajña - a much grander order in much grander chaos.
 
 
 #### What is this guided journey all about? 

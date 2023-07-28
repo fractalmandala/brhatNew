@@ -36,6 +36,7 @@
 	let title5 = 'Dhīti';
 	let title6 = 'Bṛhat Open Library';
 	let title7 = 'Also Explore';
+	let title8 = 'Upcoming';
 
 	let episodes: any;
 	let threeactions: string | any[];
@@ -137,6 +138,43 @@
 		<a href="/about" use:reveal={{ transition: 'fade', delay: 200, duration: 600 }}>
 			<button class="newbutton big">Know More</button>
 		</a>
+	</section>
+	<section class="rta-column rowgap400 min100" id="upcoming">
+		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
+			<h2>
+				{#each title8.split('') as char, i}
+					<span class="text-animation" style="animation-delay: {i * 0.04}s">{char}</span>
+				{/each}
+			</h2>
+			<small>Events, Conferences, Programs</small>
+		</div>
+		<div
+			class="rta-grid grid2 rowgap200 colgap500"
+			use:reveal={{ delay: 100, duration: 300, transition: 'fade' }}
+		>
+			<div class="rta-image">
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/15updates/bharatauvacha.webp"
+					alt="bharatauvacha"
+				/>
+			</div>
+			<div class="rta-column rowgap200">
+				<h5 class="title">Bhārata Uvāca' - A Civilization Speaks</h5>
+				<h5>
+					A one day festival of short talks and performances bringing together the voices of
+					Bhārata, celebrating India's rich heritage and knowledge from literature to arts, science,
+					and more.
+				</h5>
+				<h5>
+					Brought to you by Shankarananda Kalakshetra, Nātyārambha, in collaboration with Bṛhat and
+					SAHE under the aegis of Amrit Mahotsav & Ministry Of Culture, GoI.
+				</h5>
+				<h6>5 Aug 2023 - Shilpakala Vedika, Bhagyanagar.</h6>
+				<a href="http://www.bharatauvaca.com/" target="_blank" rel="noreferrer">
+					<button class="newbutton big red">Visit Website</button>
+				</a>
+			</div>
+		</div>
 	</section>
 	<section class="rta-column rowgap400 min100" id="svarnanjali">
 		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
