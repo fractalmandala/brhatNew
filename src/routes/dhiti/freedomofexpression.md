@@ -10,14 +10,14 @@ image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwe
 excerpt: "Need for clarity in understanding opposing forces to dhārmika thought and the importance of thinkers like Śrī Sita Ram Goel in the context of freedom of expression."
 ---
 
-##### यया विना जगत्सर्वं मूकमुन्मत्तवत्सदा ।
-##### या देवी वागधिष्ठात्री तस्यै वाण्यै नमो नमः ॥
-
-##### yayā vinā jagatsarvaṃ mūkamunmattavatsadā |
-##### yā devī vāgadhiṣṭhātrī tasyai vāṇyai namo namaḥ ||
-
-##### Salutations to goddess Vāṇī, who presides over the act of speaking,
-##### Without whom this world would always be dumb, confused and mad-like.
+> यया विना जगत्सर्वं मूकमुन्मत्तवत्सदा ।
+> या देवी वागधिष्ठात्री तस्यै वाण्यै नमो नमः ॥
+>
+> yayā vinā jagatsarvaṃ mūkamunmattavatsadā |
+> yā devī vāgadhiṣṭhātrī tasyai vāṇyai namo namaḥ ||
+>
+> Salutations to goddess Vāṇī, who presides over the act of speaking,
+> Without whom this world would always be dumb, confused and mad-like.
 
 Hebrew was a dead language until the early 20th century. The Jewish community which wanted to regroup into one homeland was already a diaspora living in multiple countries across Africa, Europe, and the Middle East. At that time, their question was: what should the common language be for such a diverse group of people? There was one mad man called Elizir who said Hebrew should be the common language. **People branded him a crackpot during his life and time.** But by the time these same people set up their education system, they decided Hebrew shall not only be revived, but should be mainstreamed through the education policy. 
 
