@@ -5,10 +5,9 @@
 	import { quintOut, quintIn } from 'svelte/easing';
 	import { themeMode, menuMode } from '$lib/stores/globalstores';
 	import AnveshiLinks from '$lib/links/AnveshiLinks.svelte';
-	let onHead = true;
-	let sidebar = false;
-	let dropdown = false;
+
 	let fake = false;
+	let isSwitch = false;
 
 	function fauxfake() {
 		fake = !fake;
@@ -21,18 +20,21 @@
 	}
 </script>
 
-<Header hasMenu={true} isSwitch={false}>
-	<div
-		slot="local"
-		class="rta-column rowgap100 pagedropdown"
-		in:slide={{ axis: 'y', easing: quintOut, duration: 128 }}
-		out:slide={{ axis: 'y', easing: quintIn, duration: 80 }}
-		use:clickOutsideAction
-		on:clickOutside={offDropdown}
-		on:click={offDropdown}
-		on:keydown={fauxfake}
-	>
-		<AnveshiLinks />
+<Header {isSwitch} hasMenu={true}>
+	<div slot="local" class="boxmidrow">
+		{#if $menuMode}
+			<div
+				class="rta-column rowgap100 pagedropdown"
+				in:slide={{ axis: 'y', easing: quintOut, duration: 128 }}
+				out:slide={{ axis: 'y', easing: quintIn, duration: 80 }}
+				use:clickOutsideAction
+				on:clickOutside={offDropdown}
+				on:click={offDropdown}
+				on:keydown={fauxfake}
+			>
+				<AnveshiLinks />
+			</div>
+		{/if}
 	</div>
 </Header>
 <div class:light={$themeMode} class:dark={!$themeMode}>

@@ -5,8 +5,6 @@
 	import { slide } from 'svelte/transition';
 	import { quintIn, quintOut } from 'svelte/easing';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
-	import { themeMode } from '$lib/stores/globalstores';
-	import { scale } from 'svelte/transition';
 	import {
 		createCurateConsult,
 		threeConvictions,
@@ -15,17 +13,6 @@
 		brhatPartners
 	} from '$lib/utils/supapulls';
 	import { authorfiltered } from '$lib/utils/localpulls';
-	import PankajSaxena from '$lib/authors/PankajSaxena.svelte';
-	import Head from '$lib/components/HeadComponent.svelte';
-	import RaghavaKrishna from '$lib/authors/RaghavaKrishna.svelte';
-	import AkshayJha from '$lib/authors/AkshayJha.svelte';
-	import AmritPandey from '$lib/authors/AmritPandey.svelte';
-	import AnshumanPanda from '$lib/authors/AnshumanPanda.svelte';
-	import AnuragShukla from '$lib/authors/AnuragShukla.svelte';
-	import KavitaKrishna from '$lib/authors/KavitaKrishna.svelte';
-	import NiveditaTiwari from '$lib/authors/NiveditaTiwari.svelte';
-	import SaiPriya from '$lib/authors/SaiPriya.svelte';
-	import SushantGangoli from '$lib/authors/SushantGangoli.svelte';
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte';
 
 	let threeactions: string | any[];
@@ -68,13 +55,6 @@
 
 	function fauxfake() {
 		fake = !fake;
-	}
-
-	function scrollToTeam() {
-		const teamElement = document.getElementById('team');
-		if (teamElement) {
-			teamElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-		}
 	}
 
 	async function selectedWriter(name: string) {
@@ -249,7 +229,7 @@
 			</div>
 		{/if}
 	</section>
-	<section class="rta-column rowgap400 min100 p-top-64" id="team">
+	<section class="rta-column rowgap400 min100 p-top-64">
 		<h2 class="bord-top bord-bot p-top-16 p-bot-24" use:reveal>Team</h2>
 		{#if team && team.length > 0}
 			<div class="rta-grid grid2 colgap600 rowgap600" id="team">
@@ -317,12 +297,14 @@
 #team
 	.rta-image
 		img
-		@media screen and (min-width: 1024px)
-			width: 160px
-			height: 160px
-		@media screen and (max-width: 1023px)
-			width: 120px
-			height: 120px
+			@media screen and (min-width: 1024px)
+				width: 160px
+				height: 160px
+				border-radius: 80px
+			@media screen and (max-width: 1023px)
+				width: 120px
+				height: 120px
+				border-radius: 60px
 	
 
 .x0

@@ -20,6 +20,7 @@
 			text-decoration: underline
 	h6.title
 		text-transform: capitalize
+		line-height: 1.2
 		a
 			color: inherit
 			transition: 0.08s ease-in
@@ -56,6 +57,9 @@
 		color: var(--grade3)
 	pre
 		color: var(--grade3)
+		font-weight: 300
+		font-size: 18px
+		line-height: 1.5
 	p.soft
 		color: var(--onlyblack)
 	p.mid.soft
@@ -386,6 +390,7 @@
 			font-size: 18px
 			transition: 0.07s ease-out
 			padding: 4px 6px
+			border-radius: 5px
 			&:hover
 				background: #fe4a49
 				color: white
@@ -423,3 +428,11 @@
 .drawer-item, .drawer-item.open
 	&:hover
 		border: 1px solid var(--hilite)
+
+.contains-text
+	@media screen and (min-width: 769px)
+		width: 640px
+	@media screen and (max-width: 768px) and (min-width: 576px)
+		width: 512px
+	@media screen and (max-width: 575px)
+		width: 100%

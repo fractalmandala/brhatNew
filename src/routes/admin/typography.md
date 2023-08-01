@@ -30,7 +30,6 @@ Contents:
 
 <div id="one"></div>
 
-
 This document is a living reference sheet for all rules, guidelines, open points and ongoing issues for the typography on Bṛhat website in general, and on Dhīti in detail. The content here documents material for **Writers**, **Editors** and **Posters** of our articles. Any text in this document contained within boxed areas like so:
 
 ```markdown

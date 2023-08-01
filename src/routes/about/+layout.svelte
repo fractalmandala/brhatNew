@@ -4,11 +4,7 @@
 	import { quintOut, quintIn } from 'svelte/easing';
 	import { themeMode, menuMode } from '$lib/stores/globalstores';
 	import { clickOutsideAction } from '$lib/utils/clickoutside';
-	import { fly } from 'svelte/transition';
-	import MenuIcon from '$lib/icons/menu.svelte';
 
-	let sidebar = false;
-	let flytime = true;
 	let dropdown = false;
 	let fake = false;
 	let isSwitch = false;
@@ -17,19 +13,9 @@
 		fake = !fake;
 	}
 
-	function toggleDropdown() {
-		dropdown = !dropdown;
-	}
-
 	function offDropdown() {
 		if ($menuMode === true) {
 			$menuMode = false;
-		}
-	}
-
-	function onDropdown() {
-		if (dropdown === false) {
-			dropdown = true;
 		}
 	}
 </script>

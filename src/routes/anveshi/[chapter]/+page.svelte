@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { onMount, afterUpdate } from 'svelte';
-	import Head from '$lib/components/HeadComponent.svelte';
+	import { reveal, defaultFullBox } from '$lib/reveal/exportReveal';
+	import ParallaxImage from '$lib/components/ParallaxImage.svelte';
+	import Shell from '$lib/components/PageShell.svelte';
 	import {
 		metaTitle,
 		metaDescription,
@@ -87,50 +89,6 @@
 		}
 	}
 
-	export function MyTransition(Splide: any, Components: any) {
-		const { bind } = EventInterface(Splide);
-		const { Move } = Components;
-		const { list } = Components.Elements;
-
-		let endCallback: any;
-
-		function mount() {
-			bind(list, 'transitionend', (e) => {
-				if (e.target === list && endCallback) {
-					// Removes the transition property
-					cancel();
-
-					// Calls the `done` callback
-					endCallback();
-				}
-			});
-		}
-
-		function start(index: any, done: any) {
-			// Converts the index to the position
-			const destination = Move.toPosition(index, true);
-
-			// Applies the CSS transition
-			list.style.transition = 'transform 800ms cubic-bezier(.44,.65,.07,1.01)';
-
-			// Moves the carousel to the destination.
-			Move.translate(destination);
-
-			// Keeps the callback to invoke later.
-			endCallback = done;
-		}
-
-		function cancel() {
-			list.style.transition = '';
-		}
-
-		return {
-			mount,
-			start,
-			cancel
-		};
-	}
-
 	$: anyFaqOpen = isFaqOpen.some((item) => item);
 	$: anyTemp = visibleTemple.some((item: any) => item);
 
@@ -170,244 +128,225 @@
 
 <svelte:window bind:scrollY={p} />
 
-<Head
-	title={$metaTitle}
-	metaDescription={$metaDescription}
-	metaUrl={$metaUrl}
-	metaImage={$metaImage}
-/>
-
-<!--heading image-->
-<div class="rta-column x0 top-p-64" id="heading-image">
-	<img src={data.image} alt={data.name} />
+<!--hero image-->
+<div class="x0" data-lenis-scroll-snap-align="start">
+	<img src={data.image} alt="herophoto" />
 </div>
 <!--end-->
 
-<!--header and metadetails-->
-<div class="rta-column outer-box limit rowgap100 serif" id="section1">
-	<div class="rta-column bord-bot p-bot-64 ta-c rowgap200">
-		<h3 class="hindiadobe tt-u ta-c-d p-bot-16">{data.name}</h3>
-		<em class="tt-u ta-c rta-column" id="section1line2" style="background: {$anveshiColor}"
-			>{data.status}</em
-		>
+<Shell
+	metaTitle={$metaTitle}
+	metaDescription={$metaDescription}
+	metaImage={$metaImage}
+	metaUrl={$metaUrl}
+>
+	<section class="rta-column rowgap400 min100 xcenter p-bot-64" id="intro">
+		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
+			<h1>{data.name}</h1>
+			<p class="tt-u">{data.status}</p>
+		</div>
+		<div class="rta-row colgap300">
+			<div class="rta-column rta-icon">
+				<img src="/images/anveshi-dates.png" alt="datesicon" />
+				<small>{data.dates}</small>
+			</div>
+			<div class="rta-column rta-icon">
+				<img src="/images/anveshi-duration.png" alt="durationicon" />
+				<small>{data.duration}</small>
+			</div>
+			<div class="rta-column rta-icon">
+				<img src="/images/icon-rupee.png" alt="priceicon" />
+				{#if data.price}
+					<small>{data.price}</small>
+				{:else}
+					<small>TBD</small>
+				{/if}
+			</div>
+		</div>
 		{#if data.status === 'open now'}
 			<a
 				href={data.kyc}
 				target="_blank"
 				rel="noreferrer"
-				class="rta-column"
-				style="align-self: center"><button class="genbutton-l">Register Here</button></a
+				class="rta-column p-top-16"
+				style="align-self: center"><button class="newbutton big red">Register Here</button></a
 			>
 		{/if}
-		<div class="rta-row iconsrow">
-			<div class="rta-column rta-icon">
-				<img src="/images/anveshi-dates.png" alt="datesicon" />
-				<p>{data.dates}</p>
-			</div>
-			<div class="rta-column rta-icon">
-				<img src="/images/anveshi-duration.png" alt="durationicon" />
-				<p>{data.duration}</p>
-			</div>
-			<div class="rta-column rta-icon">
-				<img src="/images/icon-rupee.png" alt="priceicon" />
-				{#if data.price}
-					<p>{data.price}</p>
-				{:else}
-					<p>Price TBD</p>
-				{/if}
-			</div>
-		</div>
 		{#if highlights && highlights.length > 0}
-			<div class="rta-column highlightscolumn p-top-64">
+			<div class="rta-grid grid2 colgap300 rowgap200 bord-top bord-bot p-top-32 p-bot-32">
 				{#each highlights as item}
 					{#if item.name === 'temple'}
-						<div class="rta-row highlightsrow">
+						<div class="rta-column highlightsrow rowgap200">
 							<div class="rta-icons">
 								<img src={item.image} alt="icons" />
 							</div>
-							<h6 class="hindiadobe">{item.content}</h6>
+							<p class="mid">{item.content}</p>
 						</div>
 					{/if}
 					{#if item.name === 'activity'}
-						<div class="rta-row highlightsrow">
+						<div class="rta-column highlightsrow rowgap200">
 							<div class="rta-icons">
 								<img src={item.image} alt="icons" />
 							</div>
-							<h6 class="hindiadobe">{item.content}</h6>
+							<p class="mid">{item.content}</p>
 						</div>
 					{/if}
 					{#if item.name === 'person'}
-						<div class="rta-row highlightsrow">
+						<div class="rta-column highlightsrow rowgap200">
 							<div class="rta-icons">
 								<img src={item.image} alt="icons" />
 							</div>
-							<h6 class="hindiadobe">{item.content}</h6>
+							<p class="mid">{item.content}</p>
 						</div>
 					{/if}
 				{/each}
 			</div>
 		{/if}
-	</div>
-</div>
-<!--end-->
-
-<!--detailed content and itinerary-->
-<div class="rta-column outer-box limit rowgap600">
-	<pre class="h5 hindiadobe">
-			{data.content}
-		</pre>
-
-	<div class="rta-column top-p-32 rowgap300 bot-p-64">
-		<h4 class="tt-u ta-c-d p-bot-16 hindiadobe">Itinerary</h4>
-		{#if itins && itins.length > 0}
-			{#each itins as item, i}
-				<div
-					class="rta-column rowgap200 accordion-item"
-					class:accordionOpen={openedDay[i]}
-					on:click={() => toggleDay(i)}
-					on:keydown={fauxfake}
-					use:autoAnimate
-				>
-					<div class="rta-row colgap100 xcenter-d" class:opened={openedDay[i]}>
-						<div class="rta-column" class:rotated={openedDay[i]}>
-							<ChevronDown color="#878787" />
+		<div class="rta-column rowgap300 contains-text">
+			<pre>{data.content}</pre>
+		</div>
+	</section>
+	<section class="rta-column rowgap400 ytop p-bot-64 m-bot-32" id="second">
+		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
+			<h2>Itinerary</h2>
+		</div>
+		<div class="rta-grid grid2 colgap400 rowgap300">
+			{#if itins && itins.length > 0}
+				{#each itins as item, i}
+					<div
+						class="rta-column rowgap200 accordion-item"
+						class:accordionOpen={openedDay[i]}
+						on:click={() => toggleDay(i)}
+						on:keydown={fauxfake}
+						use:autoAnimate
+					>
+						<div class="rta-row stay colgap100" class:opened={openedDay[i]}>
+							<div class="rta-column" class:rotated={openedDay[i]}>
+								<ChevronDown color="#878787" />
+							</div>
+							<h6>{item.name}</h6>
 						</div>
-						<h6 class="hindiadobe">{item.name}</h6>
-					</div>
-					{#if openedDay[i]}
-						<pre class="h5 ta-c-d hindiadobe">
+						{#if openedDay[i]}
+							<pre>
 						{item.content}
-					</pre>
-					{/if}
-				</div>
-			{/each}
-		{/if}
-	</div>
-</div>
-<!--end-->
-
-<!--lead-->
-<div class="rta-column outer-box limit rowgap100 serif">
+						</pre>
+						{/if}
+					</div>
+				{/each}
+			{/if}
+		</div>
+	</section>
 	{#if lead && lead.length > 0}
 		{#each lead as item}
-			<div class="rta-column rowgap400">
-				<h4 class="bord-top ta-c-d p-top-32 hindiadobe">{item.name}</h4>
-				<div class="rta-row colgap200 rowgap300 schedule1">
+			<section class="rta-column rowgap400 ytop p-bot-64 m-bot-32" id="third">
+				<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
+					<h2>{item.name}</h2>
+				</div>
+				<div class="rta-row colgap400 rowgap300 schedule1">
 					<div class="rta-image w32">
 						<img src={item.image} alt="pankaj saxena" />
 					</div>
 					<div class="rta-column w64">
-						<pre class="serif">{item.content}</pre>
+						<pre>{item.content}</pre>
 					</div>
 				</div>
-			</div>
+			</section>
 		{/each}
 	{/if}
-</div>
-
-<!--end-->
-
-<!--profiles-->
-<div class="rta-column outer-box limit colgap100 serif">
 	{#if profiles && profiles.length > 0}
 		{#each profiles as item}
-			<div class="rta-column rowgap400 p-bot-32">
-				<h4 class="bord-top ta-c-d p-top-32 hindiadobe">{item.name}</h4>
-				<div class="rta-row colgap200 rowgap300 schedule1">
+			<section class="rta-column rowgap400 ytop p-bot-64 m-bot-32" id="fourth">
+				<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
+					<h2>{item.name}</h2>
+				</div>
+				<div class="rta-row colgap400 rowgap300 schedule1">
 					<div class="rta-image w32">
-						<img src={item.image} alt="item.name" />
+						<img src={item.image} alt="pankaj saxena" />
 					</div>
 					<div class="rta-column w64">
-						<pre class="serif">{item.content}</pre>
+						<pre>{item.content}</pre>
 					</div>
 				</div>
-			</div>
+			</section>
 		{/each}
 	{/if}
-</div>
-<!--end-->
-
-<!--temples-->
-<div class="rta-column outer-box rowgap100 p-top-64 p-bot-64">
-	<div class="rta-column bord-top p-top-32 p-bot-32">
-		<h4 class="bot-p-16 tt-u ta-c-d hindiadobe">
-			Temples of {data.chapter}
-		</h4>
-		<small class="ta-c-d" style="color: var(--opposite)"
-			>Use arrow keys/buttons to navigate, or drag/swipe</small
-		>
-	</div>
-	{#if temp && temp.length > 0}
-		<div class="rta-grid grid3 rowgap300 colgap300 templesgrid" class:calibgrid={anyTemp}>
-			{#each temp as item, i}
-				<div class="rta-row rowgap200" class:calibitem={visibleTemple[i]}>
-					<div class="rta-image" on:click={() => toggleImage(i)} on:keydown={fauxfake}>
-						<img src={item.image} alt={item.name} />
-					</div>
-					{#if visibleTemple[i]}
-						<div class="rta-column">
-							<h6 class="serif">{item.name}</h6>
-							<pre class="serif">{item.content}</pre>
-						</div>
-					{/if}
-				</div>
-			{/each}
+	<section class="rta-column rowgap400 min100 p-bot-64" id="temples">
+		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
+			<h2 class="tt-c">Temples of {data.chapter}</h2>
 		</div>
-	{/if}
-</div>
-<!--end-->
-
-<!--faq-->
-<div class="rta-column outer-box limit rowgap100 serif">
-	<h4 class="bord-top p-bot-32 ta-c-d p-top-32 hindiadobe">FAQs</h4>
-	<div class="rta-grid rowgap400 colgap600" id="faqgrid" class:calibrated={anyFaqOpen}>
-		{#if faqs && faqs.length > 0}
-			{#each faqs as item, i}
-				{#if item.chapter === null || item.chapter === $anveshiChapter}
-					<div
-						class="rta-column rowgap100"
-						class:opentab={isFaqOpen[i]}
-						on:click={() => toggleFaq(i)}
-						on:keydown={() => toggleFaq(i)}
-						use:autoAnimate
-					>
-						<div class="rta-row fixed ytop colgap100 rowgap400">
-							<div class="button-box" class:rotated={isFaqOpen[i]}>
-								<ChevronDown size="27" color="#878787" />
-							</div>
-							<h6 class="hindiadobe faqs">{item.name}</h6>
+		{#if temp && temp.length > 0}
+			<div class="rta-grid grid3 rowgap300 colgap300 templesgrid" class:calibgrid={anyTemp}>
+				{#each temp as item, i}
+					<div class="rta-row rowgap200" class:calibitem={visibleTemple[i]}>
+						<div class="rta-image" on:click={() => toggleImage(i)} on:keydown={fauxfake}>
+							<img src={item.image} alt={item.name} />
 						</div>
-						{#if isFaqOpen[i]}
-							<p class="hindiadobe faqs">{item.content}</p>
+						{#if visibleTemple[i]}
+							<div class="rta-column">
+								<h6 class="title">{item.name}</h6>
+								<pre>{item.content}</pre>
+							</div>
 						{/if}
 					</div>
-				{/if}
-			{/each}
+				{/each}
+			</div>
 		{/if}
-	</div>
-</div>
-
-<!--general-->
-<div class="rta-column outer-box limit rowgap100 serif generales">
-	{#if gens && gens.length > 0}
-		{#each gens as item}
-			<h4 class="bord-top ta-c-d p-top-32 hindiadobe">{item.name}</h4>
-			<pre class="serif">{item.content}</pre>
-		{/each}
-	{/if}
-</div>
-
-<!--end-->
+	</section>
+	<section class="rta-column rowgap400 min100 p-bot-64" id="faq">
+		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
+			<h2>FAQs</h2>
+		</div>
+		<div class="rta-grid rowgap400 colgap600" id="faqgrid" class:calibrated={anyFaqOpen}>
+			{#if faqs && faqs.length > 0}
+				{#each faqs as item, i}
+					{#if item.chapter === null || item.chapter === $anveshiChapter}
+						<div
+							class="rta-column rowgap100"
+							class:opentab={isFaqOpen[i]}
+							on:click={() => toggleFaq(i)}
+							on:keydown={() => toggleFaq(i)}
+							use:autoAnimate
+						>
+							<div class="rta-row fixed ytop colgap100 rowgap400">
+								<div class="button-box" class:rotated={isFaqOpen[i]}>
+									<ChevronDown size="27" color="#878787" />
+								</div>
+								<h6 class="faqs">{item.name}</h6>
+							</div>
+							{#if isFaqOpen[i]}
+								<pre class="faqs">{item.content}</pre>
+							{/if}
+						</div>
+					{/if}
+				{/each}
+			{/if}
+		</div>
+	</section>
+</Shell>
 
 <style lang="sass">
 
-.generales
-	pre
-		font-size: 20px
+#intro
+	@media screen and (min-width: 1024px)
+		p
+			text-align: center
+
+.x0
+	overflow: hidden
+	height: 100vh
+	img
+		height: 96%
+	@media screen and (max-width: 768px)
+		height: 40vh
 
 .templesgrid
 	.rta-image
 		width: 100%
+		transform-origin: center center
+		transition: 0.1s
+		cursor: pointer
+		&:hover
+			transform: scale(0.9)
 
 .templesgrid.calibgrid
 	@media screen and (min-width: 1024px)
@@ -423,30 +362,24 @@ h6.faqs
 	cursor: pointer
 	margin: 0
 
-p.hindiadobe.faqs
-	font-size: 16px
-
 .highlightsrow
-	background: var(--contraster)
 	padding: 8px
 	border-radius: 8px
 	align-items: center
+	justify-content: center
 	column-gap: 24px
+	text-align: center
 	.rta-icons
 		display: flex
 		align-items: center
-		width: 27px
-		height: 27px
+		width: 48px
+		height: 48px
 		img
 			object-fit: contain
-	h6
-		margin: 0
-		width: calc(100% - 56px)
-		font-weight: 400
-		line-height: 1.12
-
-.highlightscolumn
-	row-gap: 16px
+	@media screen and (min-width: 1024px)
+		.rta-icons
+			width: 48px
+			height: 48px
 
 pre
 	box-sizing: border-box
@@ -458,55 +391,13 @@ pre
 	word-break: break-word
 	overflow: hidden
 
-
-.iconsrow
-	justify-content: center
-	margin-top: 16px
-	.rta-icon
-		width: 104px
-
 .rta-icon
 	text-align: center
 	row-gap: 8px
 	img
-		width: 40px
-		height: 40px
+		width: 48px
+		height: 48px
 		margin: auto
-	p
-		color: var(--opposite)
-		font-size: 12px
-
-#heading-image
-	@media screen and (min-width: 1024px)
-		img
-			border-radius: 16px
-
-#section1line2
-	color: white
-	padding: 2px 0
-	max-width: 100%
-	font-size: 14px
-	width: max-content
-	padding: 4px 8px
-	align-self: center
-	@media screen and (max-width: 1023px)
-		padding: 4px 8px
-
-.x0
-	img
-		object-fit: cover
-	@media screen and (min-width: 1024px)
-		height: 100vh
-		justify-content: center
-		align-items: center
-		img
-			width: 80%
-			height: 80%
-			margin-top: 64px
-	@media screen and (max-width: 1023px)
-		height: 40vh
-		img
-			height: 100%
 
 .accordion-item
 	border-bottom: 1px solid var(--borderline)

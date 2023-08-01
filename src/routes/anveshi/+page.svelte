@@ -152,13 +152,6 @@
 
 <svelte:window bind:innerWidth={iW} />
 
-<Head
-	title={$metaTitle}
-	metaDescription={$metaDescription}
-	metaUrl={$metaUrl}
-	metaImage={$metaImage}
-/>
-
 <!--hero image-->
 <div class="x0" data-lenis-scroll-snap-align="start">
 	<ParallaxImage
@@ -424,7 +417,7 @@
 	</section>
 	<section class="rta-column rowgap400 min100 p-top-64" id="faqs">
 		<h2 use:reveal class="bord-top bord-bot p-top-16 p-bot-24">FAQs</h2>
-		<div class="rta-column rowgap200" id="faqgrid" class:calibrated={anyFaqOpen}>
+		<div class="rta-column rowgap200 contains-text" id="faqgrid" class:calibrated={anyFaqOpen}>
 			{#if faqs && faqs.length > 0}
 				{#each faqs as item, i}
 					<div
@@ -440,7 +433,7 @@
 							<h6 class="title">{item.name}</h6>
 						</div>
 						{#if isFaqOpen[i]}
-							<p transition:slide={{ axis: 'y' }}>{item.content}</p>
+							<pre class="small" transition:slide={{ axis: 'y' }}>{item.content}</pre>
 						{/if}
 					</div>
 				{/each}
