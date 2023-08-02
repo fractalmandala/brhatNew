@@ -51,7 +51,4 @@ Today, undoubtedly there are a larger number of individuals and organizations wo
 There is a stronger need for śatrubodh and svayambodh, a sense of what defines the forces opposed to dhārmika thought, and what defines the forces of dhārmika thought itself. It is only with this clarity, and the analyses and framework given to us by brilliant thinkers like Śrī Sita Ram Goel - the ‘madmen’ of our the past - that freedom of speech can be aptly understood and applied today.
 
 
-##### Friction is needed for creativity, for innovation. 
-
-
-##### However, too much friction leads to demise.
+##### Friction is needed for creativity, for innovation. However, too much friction leads to demise.

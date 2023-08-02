@@ -244,8 +244,8 @@
 										{/each}
 									</div>
 								</div>
-								<h5 style="line-height: 1.2; color: var(--opposite)" class="haslink">
-									<strong> <a href={item.path}>{item.meta.title}</a></strong>
+								<h5 class="title">
+									<a href={item.path}>{item.meta.title}</a>
 								</h5>
 								<pre class="excerpt">{item.meta.excerpt}</pre>
 							</div>
@@ -265,10 +265,8 @@
 									{/each}
 								</div>
 							</div>
-							<h5 style="line-height: 1.2; color: var(--opposite)" class="haslink">
-								<strong>
-									<a href={item.path} target="_blank" rel="noreferrer">{item.meta.title}</a>
-								</strong>
+							<h5 class="title">
+								<a href={item.path} target="_blank" rel="noreferrer">{item.meta.title}</a>
 							</h5>
 							<pre class="excerpt">{item.meta.excerpt}</pre>
 							<p class="author p-top-8">
