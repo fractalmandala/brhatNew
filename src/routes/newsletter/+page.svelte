@@ -35,10 +35,10 @@
 
 	$metaTitle = 'Bṛhatadya';
 	$metaDescription =
-		'A fortnightly dispatch updating you on latest actions, events, launches and more at the Culture Engine.';
+		'A monthly dispatch updating you on latest actions, events, launches and more at the Culture Engine.';
 	$metaUrl = 'https://www.brhat.in/newsletter';
 	$metaImage =
-		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/brhatheadcard.webp';
+		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/17newsletter/brhatadyawall.png';
 
 	function toggleSubscribe() {
 		submodal = !submodal;
