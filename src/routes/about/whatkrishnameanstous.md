@@ -1,7 +1,7 @@
 ---
 title: What Śrī Kṛṣṇa Means to Us
 about: A deeply personal retrospect on our genesis.
-next: '/about/namelogo'
+next: '/about/whatthismomentmeanstous'
 prev: '/about/anatomy'
 ---
 
