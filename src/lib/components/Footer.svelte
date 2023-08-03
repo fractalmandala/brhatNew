@@ -81,7 +81,7 @@
 		</div>
 		<div class="spacer">
 			<a class="mainlinks" href="/anveshi">Bṛhat Anveṣī</a>
-			<AnveshiLinks flytime={active} />
+			<AnveshiLinks />
 			<div class="creategap" />
 			<a class="mainlinks" href="/drashta">Bṛhat Draṣṭā</a>
 			<DrashtaLinks flytime={active} />
