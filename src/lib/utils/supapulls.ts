@@ -865,3 +865,12 @@ const { data: { users }, error } = await supabase.auth.admin.listUsers()
 	if (error ) throw new Error(error.message)
 	return users
 }
+
+export async function soaJanapadas(){
+	const { data, error } = await supabase
+	.from('soa-janapadas')
+	.select()
+	.order('id')
+	if ( error ) throw new Error(error.message)
+	return data	
+}
