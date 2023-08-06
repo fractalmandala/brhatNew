@@ -11,7 +11,7 @@ excerpt: "Exploring the deep-rooted connection between agriculture, food, and we
 ---
 >The strength, complexion, immunity etc. of a living system is under the control of diet which in turn is under the control of six rasas
 >
->- Susruta Samhita, Sutra Sthana, Chapter 1, verse 28.
+>Susruta Samhita, Sutra Sthana, Chapter 1, verse 28.
 
 #### Concept and Classification of Āhāra
 
