@@ -9,7 +9,9 @@ date: "2023-08-06"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/soulagriculture.webp
 excerpt: "Exploring the deep-rooted connection between agriculture, food, and well-being through the lens of Ayurveda, emphasizing sustainable practices and traditional wisdom."
 ---
->The strength, complexion, immunity etc. of a living system is under the control of diet which in turn is under the control of six rasas” – Susruta Samhita, Sutra Sthana, Chapter 1, verse 28.
+>The strength, complexion, immunity etc. of a living system is under the control of diet which in turn is under the control of six rasas
+>
+>- Susruta Samhita, Sutra Sthana, Chapter 1, verse 28.
 
 #### Concept and Classification of Āhāra
 
