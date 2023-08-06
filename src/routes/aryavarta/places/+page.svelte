@@ -33,3 +33,16 @@
 		{/each}
 	{/if}
 </div>
+<div class="rta-column rowgap400 p-top-32 bord-top" id="nexter">
+	<h4 class="ta-c"><a href="/aryavarta/kashyapaslament">Next - Kaśyapa's Lament</a></h4>
+</div>
+
+<style lang="sass">
+
+#nexter
+	h4
+		&:hover
+			a
+				color: #fe4a49
+
+</style>

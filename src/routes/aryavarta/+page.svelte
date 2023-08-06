@@ -1,109 +1,63 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { register } from 'swiper/element/bundle';
-	import Head from '$lib/components/HeadComponent.svelte';
-	import { page } from '$app/stores';
+	import Parallax from '$lib/components/ParallaxImage.svelte';
+	import Shell from '$lib/components/PageShell.svelte';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
-	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
-	import '@splidejs/svelte-splide/css';
-	import { soaChapter1 } from '$lib/utils/supapulls';
-	import { fly } from 'svelte/transition';
-	import { quadIn, quadOut } from 'svelte/easing';
-	import 'swiper/css';
-	import 'swiper/css/navigation';
-	import 'swiper/css/pagination';
-
-	let panels: any;
-	let faux: boolean = false;
-	let y: number;
-	let link: any;
-	let movement: number;
-	let iW: number;
-
-	let isP = Array(50).fill(false);
-	let i = 0;
-	isP[i] = true;
-
-	function toggleP(index: number) {
-		isP[index] = !isP[index];
-	}
-
-	function nextP() {
-		i += 1;
-	}
-
-	function prevP() {
-		i -= 1;
-	}
-
-	$: if (i) {
-		isP[i] = true;
-	}
+	import { reveal, defaultFullBox } from '$lib/reveal/exportReveal';
 
 	$metaUrl = 'https://www.brhat.in/aryavarta';
-	$metaTitle = `Chapter 1 - Kaśyapa's Lament`;
-	$metaDescription = 'A visual tale through the premonitions of an ancient ṛṣī.';
+	$metaTitle = 'Scrolls of Āryavarta';
+	$metaDescription =
+		'An exploration of the Bhārata that once was and could have been, via AI art and historical fiction.';
 	$metaImage =
-		'https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/chapter1/4.webp';
+		'https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/website/soakey.webp';
 	$metaType = 'webpage';
-
-	$: if (iW <= 1023) {
-		movement = 5;
-	} else {
-		movement = y;
-	}
-
-	function fakefaux() {
-		faux = !faux;
-	}
-
-	onMount(async () => {
-		panels = await soaChapter1();
-		link = $page.url.pathname;
-	});
 </script>
 
-<svelte:window bind:scrollY={y} bind:innerWidth={iW} />
-
-<Head
-	title={$metaTitle}
-	metaDescription={$metaDescription}
-	metaUrl={$metaUrl}
-	metaImage={$metaImage}
-/>
-
-<div class="rta-column outer-box minH ycenter x1">
-	<p style="color: #ff3d00">Chapter 1</p>
-	<h2 style="transform: translateY({y}px);">Kaśyapa's Lament</h2>
-	<p>
-		Our first release in the Scrolls of Āryavarta project. A collaboration with<a
-			style="color: #ff3d00;"
-			href="https://twitter.com/TheEmissaryCo"
-			target="_blank"
-			rel="noreferrer">The Emissary</a
-		>, who rendered the images in this story and triggered it all to begin with.
-	</p>
-	<a href="/aryavarta/1" class="genbutton">Start</a>
+<div class="x000">
+	<Parallax
+		--parallax="url(https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/website/soakey.webp)"
+		--parallaxresp="url(https://wganhlzrylmkvvaoalco.supabase.co/storage/v1/object/public/images/website/soakey.webp)"
+	/>
 </div>
+
+<Shell
+	metaTitle={$metaTitle}
+	metaDescription={$metaDescription}
+	metaImage={$metaImage}
+	metaUrl={$metaUrl}
+>
+	<section class="rta-column rowgap400 min100" id="intro">
+		<h2 use:reveal>Scrolls of Āryavarta</h2>
+		<h5 use:reveal={{ delay: 100, duration: 300, transition: 'fade' }}>
+			is an exploration of the Bhārata that once was, or could have been, using the media of AI art
+			and historical fiction. Each chapter is an imagination into Paurāṇika lore and shared
+			civilizational memories. <b
+				>The depictions, timelines, and descriptions are all fictionalized.</b
+			>
+		</h5>
+		<div class="onpagelinks rta-column rowgap200 p-top-16">
+			<h3 use:reveal={{ transition: 'scale', duration: 400, delay: 0, opacity: 0, scale: 0 }}>
+				<a href="/aryavarta/kashyapaslament">1 - KAŚYAPA'S LAMENT</a>
+			</h3>
+			<h3 use:reveal={{ transition: 'scale', duration: 400, delay: 50, opacity: 0, scale: 0 }}>
+				<a href="/aryavarta/sutaandsuda">2 - SŪTA AND SUDĀ</a>
+			</h3>
+			<h3 use:reveal={{ transition: 'scale', duration: 400, delay: 100, opacity: 0, scale: 0 }}>
+				<a href="/aryavarta/places">3 - NAGARA, NADĪ, JANAPADA</a>
+			</h3>
+		</div>
+	</section>
+</Shell>
 
 <style lang="sass">
 
-
-
-
-.x1
+.x000
+	height: 100vh
 	overflow: hidden
-	padding-top: 80px
-	@media screen and (min-width: 1024px)
-		gap: 16px
-		h2
-			padding: 16px 0
-	@media screen and (max-width: 1023px)
-		padding-top: 128px
-		padding-bottom: 64px
-		gap: 0
-		h2
-			padding: 16px 0
 
+.onpagelinks h3
+	transition: 0.15s
+	&:hover
+		color: #fe4a49
 
 </style>
