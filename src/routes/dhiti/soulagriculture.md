@@ -9,7 +9,6 @@ date: "2023-08-06"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/soulagriculture.webp
 excerpt: "Exploring the deep-rooted connection between agriculture, food, and well-being through the lens of Ayurveda, emphasizing sustainable practices and traditional wisdom."
 ---
-
 >The strength, complexion, immunity etc. of a living system is under the control of diet which in turn is under the control of six rasas” – Susruta Samhita, Sutra Sthana, Chapter 1, verse 28.
 
 #### Concept and Classification of Āhāra
@@ -47,3 +46,5 @@ Traditional knowledge is severely threatened by the State’s agricultural polic
 * Davis, D. R. (2009). Declining Fruit and Vegetable Nutrient Composition: What Is the Evidence?. _HortScience horts_, _44_(1), 15-19. Retrieved Aug 2, 2023, from [https://doi.org/10.21273/HORTSCI.44.1.15](https://doi.org/10.21273/HORTSCI.44.1.15)
 
 * Payyappallimana U, Venkatasubramanian P. Exploring Ayurvedic Knowledge on Food and Health for Providing Innovative Solutions to Contemporary Healthcare. Front Public Health. 2016 Mar 31;4:57. doi: 10.3389/fpubh.2016.00057. PMID: 27066472; PMCID: PMC4815005.
+
+* Cover Image : Galeri ega (https://commons.wikimedia.org/wiki/File:Bumbu_dan_Rempah_-_rempah.jpg), https://creativecommons.org/licenses/by-sa/4.0/legalcode
