@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { onMount, afterUpdate } from 'svelte';
-	import Head from '$lib/components/HeadComponent.svelte';
 	import { slide } from 'svelte/transition';
 	import {
 		metaTitle,
@@ -12,7 +11,6 @@
 	} from '$lib/stores/metastores';
 	import { fly } from 'svelte/transition';
 	import { backOut, backIn } from 'svelte/easing';
-	import { reveal, defaultFullBox } from '$lib/reveal/exportReveal';
 	import Shell from '$lib/components/PageShell.svelte';
 	import {
 		courseContents,

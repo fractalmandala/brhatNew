@@ -1,11 +1,13 @@
 <script lang="ts">
 	import { themeMode, breakOne, breakZero, breakTwo } from '$lib/stores/globalstores';
 	import Head from '$lib/components/HeadComponent.svelte';
+	import { slide } from 'svelte/transition';
+	import { quintOut, quintIn } from 'svelte/easing';
+	import Shell from '$lib/components/PageShell.svelte';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import { showModal } from '$lib/stores/globalstores';
 	import type { DragOptions } from '@neodrag/svelte';
 	import Parallax from '$lib/components/ParallaxImage.svelte';
-	import { slide } from 'svelte/transition';
 	import Modal from '$lib/components/Modal.svelte';
 
 	let isPart = Array(3).fill(false);
@@ -42,13 +44,6 @@
 	};
 </script>
 
-<Head
-	title={$metaTitle}
-	metaDescription={$metaDescription}
-	metaUrl={$metaUrl}
-	metaImage={$metaImage}
-/>
-
 <div
 	class="x0"
 	data-lenis-scroll-snap-align="start"
@@ -61,8 +56,13 @@
 	/>
 </div>
 
-<div class="rta-column stout minH p-top-128">
-	<div class="instout rta-column rowgap200 newrta">
+<Shell
+	metaTitle={$metaTitle}
+	metaDescription={$metaDescription}
+	metaImage={$metaImage}
+	metaUrl={$metaUrl}
+>
+	<section class="rta-column rowgap400 min100 xcenter p-top-128" id="intro">
 		<div class="rta-column">
 			{#if $themeMode}
 				<img
@@ -80,7 +80,7 @@
 			{/if}
 			<p class="p-bot-16 ta-c-d ta-c-m">A model for approaching design, rooted to Dharma</p>
 		</div>
-		<div class="rta-column rowgap400 one-section glass-top p-top-64">
+		<div class="rta-column rowgap400 contains-text p-top-64">
 			<blockquote class="ta-c-d">
 				“We are approaching the power of gods, without the wisdom of gods.”
 				<br /><cite>Daniel Schmachtenberger</cite>
@@ -90,8 +90,8 @@
 				<br /><cite>Daniel Christian Wahl</cite>
 			</blockquote>
 		</div>
-		<div class="rta-column one-section p-top-32">
-			<em>
+		<div class="rta-column contains-text p-top-32">
+			<p>
 				Never before in the history of humanity has there been such an urgent need of 'awareness of
 				intent.’ No longer can we let our world be created by what The Conscilience Project calls
 				values-agnostic nihilistic design. This is made urgent by the fact that we now exist, near
@@ -99,8 +99,8 @@
 				gather with friends, the black mirrors of silicon and lithium on our person at all times, to
 				the policies, laws and mandates that determine not only our present but our futures as well-
 				everything is the design, or intent, of another affecting salience upon us.
-			</em>
-			<em> The problem statement we thus face is two-fold. </em>
+			</p>
+			<p>The problem statement we thus face is two-fold.</p>
 			<li class="em">
 				1. How do we collectively create a world that each of us wants, individually? That is, how
 				do we design ṛta - our shared and manifest reality.
@@ -114,7 +114,7 @@
 				believe the case to reorient design by Dharma is strong.
 			</h6>
 		</div>
-		<div class="onpagelinks rta-column rowgap100">
+		<div class="onpagelinks rta-column contains-text rowgap100">
 			<button class="blank-button" on:click={() => togglePart(1)}>
 				<h3>1 - Prologue</h3>
 			</button>
@@ -222,19 +222,19 @@
 							dynamic cultural process of bearing and supporting a tradition of deliberate and
 							planned consonance with the harmonics of reality.
 						</p>
-						<em class="bord-top p-top-32">
+						<p class="bord-top p-top-32">
 							“Science converts information into knowledge. Engineering converts knowledge into
 							utility. Design converts utility into cultural behavior in context. Art takes that
 							cultural behavior and questions our perception of the world.”
 							<cite> - Neri Oxman, MIT Media Lab</cite>
-						</em>
-						<em>and in the distant past...</em>
-						<em>
+						</p>
+						<p>and in the distant past...</p>
+						<p>
 							The sound instruments of mental scientists converted information to knowledge,<br />
 							And engineers of praxis and ritual converted knowledge to utility.<br />
 							Dharma is the conversion and manifestation of utility in the cultural context, ie.
-						</em>
-						<h4>Dharma <span class="is-green">is Design</span></h4>
+						</p>
+						<h5 class="title">Dharma <span class="is-green">is Design</span></h5>
 						<p>
 							For what is dharma, if not the endeavor to conduct life and society in consonance with
 							ṛta, the natural order? To bring dharma in design is to bring a ṛta-consciousness to
@@ -254,9 +254,9 @@
 				<h3>3 - Introduction to Ṛta in Design</h3>
 			</button>
 		</div>
-	</div>
+	</section>
 	<Modal />
-</div>
+</Shell>
 
 <style lang="sass">
 
@@ -284,12 +284,6 @@
 
 .is-green
 	color: #10D56c
-
-
-.one-section
-	blockquote
-		margin-left: 0
-		margin-right: 0
 
 .thistheimage
 	width: 240px
