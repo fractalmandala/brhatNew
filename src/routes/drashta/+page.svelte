@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
-	import Head from '$lib/components/HeadComponent.svelte';
 	import { reveal, defaultFullBox } from '$lib/reveal/exportReveal';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import { allCourses, drashtaTestis } from '$lib/utils/supapulls';
