@@ -701,8 +701,8 @@ p.hideonmobile
 	cursor: pointer
 	border-radius: 16px
 	p
-		font-weight: 400
-		font-size: 16px
+		font-weight: 600
+		font-size: 14px
 		margin-bottom: 2px
 	@media screen and (max-width: 768px)
 		height: 56px

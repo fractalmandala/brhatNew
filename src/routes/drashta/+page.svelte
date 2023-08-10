@@ -237,7 +237,7 @@
 										</a>
 									</h6>
 								{/if}
-								<p class="mid soft">
+								<p class="small soft">
 									{item.content.slice(0, 250)}...<a
 										style="color: var(--betblue)"
 										href="/drashta/course/{item.course}">READ MORE</a
@@ -251,7 +251,7 @@
 							<div class="rta-image w32 height-40-20">
 								<img src={item.image} alt={item.name} />
 							</div>
-							<div class="rta-column w64 rowgap300">
+							<div class="rta-column w64 rowgap100">
 								<small class="label labelelse">
 									{item.status}
 								</small>
@@ -268,7 +268,7 @@
 										</a>
 									</h6>
 								{/if}
-								<p class="mid soft">
+								<p class="small soft">
 									{item.content.slice(0, 250)}...<a
 										style="color: var(--betblue)"
 										href="/drashta/course/{item.course}">READ MORE</a
