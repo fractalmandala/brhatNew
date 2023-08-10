@@ -158,7 +158,9 @@
 										<pre class="mid">
 										{item.content}
 									</pre>
+
 										<small class="tt-c">- {item.byperson}</small>
+										<p class="small">{item.source}</p>
 									</div>
 								</SplideSlide>
 							{/each}
