@@ -1,12 +1,13 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import autoAnimate from '@formkit/auto-animate';
+	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
 	import Head from '$lib/components/HeadComponent.svelte';
+	import { reveal, defaultFullBox } from '$lib/reveal/exportReveal';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
-	import { allCourses } from '$lib/utils/supapulls';
+	import { allCourses, drashtaTestis } from '$lib/utils/supapulls';
+	import Shell from '$lib/components/PageShell.svelte';
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte';
-	import CompButton from '$lib/ridunits/RIDButton.svelte';
-	import CompButton2 from '$lib/ridunits/RIDButton.svelte';
+	import '@splidejs/splide/css/core';
 	let fullText = false;
 	let iW: number;
 	let breakPoint: boolean;
@@ -14,6 +15,7 @@
 	let sY: number;
 	let iH: number;
 	let diff: number;
+	let tests: any;
 
 	$metaTitle = 'Bṛhat Draṣṭā';
 	$metaDescription =
@@ -43,6 +45,7 @@
 
 	onMount(async () => {
 		courses = await allCourses();
+		tests = await drashtaTestis();
 		if (iW <= 1023) {
 			breakPoint = true;
 		}
@@ -50,13 +53,6 @@
 </script>
 
 <svelte:window bind:scrollY={sY} bind:innerHeight={iH} bind:innerWidth={iW} />
-
-<Head
-	title={$metaTitle}
-	metaDescription={$metaDescription}
-	metaUrl={$metaUrl}
-	metaImage={$metaImage}
-/>
 
 <!--parallax section on top-->
 <div class="x0" data-lenis-scroll-snap-align="start">
@@ -67,187 +63,228 @@
 </div>
 <!--end-->
 
-<!--single section contains all text, all course cards scroll within it-->
-<div
-	id="introtext"
-	class="rta-grid grid2 outer-box rowgap600 colgap600 p-top-64"
-	class:left2={!fullText}
-	class:right={fullText}
-	data-lenis-scroll-snap-align="start"
+<Shell
+	metaTitle={$metaTitle}
+	metaDescription={$metaDescription}
+	metaImage={$metaImage}
+	metaUrl={$metaUrl}
 >
-	<div class="rta-column rowgap300" class:thin={!fullText} class:thick={fullText} use:autoAnimate>
-		<p class="serif">
-			An offering in deep learning that extends courses on some of the greatest ancient and
-			contemporary philosophers (draṣṭās) and schools of thoughts (darśanas).
-		</p>
-		<p class="serif">
-			What ultimately differentiates a culture are its ways of looking and seeing. How we see
-			ourselves and the world is extremely important to our identity and to the way the world
-			perceives us. But to Hindu civilization seeing was not merely a physical act of looking at
-			saṃsāra using our external eyes. The focus of our civilization was as much on our internal
-			journey.
-		</p>
-		<p class="serif">
-			This anchor was sādhanā, done under the guidance and grace of a guru. A purely intellectual
-			civilization is anchorless. In order to have an opinion on saṃsāra one needs a world to look
-			at and a worldview to look from – <span style="color: var(--blue)">dṛśya</span> and
-			<span style="color: var(--blue)">darśana.</span>
-		</p>
-		{#if !fullText}
-			<div on:click={toggleFullText} on:keydown={fauxfake}>
-				<CompButton --thisbuttoncolor="#0170B9">Read More</CompButton>
-			</div>
-		{/if}
-		{#if fullText}
-			<div class="rta-column rowgap300">
-				<p class="serif">
-					The Rṣīs of Bhāratavarṣa never neglected saṃsāra and developed objective sciences and
-					disciplines to their heights, but at the same time they were always careful to peg that
-					intellectual activity to a deep inner anchor.
-				</p>
-				<h5 class="serif" style="font-weight: 600">
-					The word darśana is more than the act of seeing. It has a universal significance in Hindu
-					cosmology. Hindu philosophy is also called darśana; because Hindu philosophy is not ‘what
-					you think’; it is ‘what you see’ – darśana.
-				</h5>
-				<p class="serif">
-					It is the witness of the truth that is the objective of all Hindu philosophy. Similarly,
-					the act of going to a temple is also called darśana, the act of witnessing truth in the
-					form of the divine. In Hindu civilization its worldview was guided by the inner compass of
-					sādhanā. It is only when the act of looking and seeing is elevated and sanctified by deep
-					sādhanā, does it become darśana. For understanding this deep darśana and to witness
-					saṃsāra in truthful light, an able draṣṭā – the one who is capable of looking deeply – is
-					needed.
-				</p>
-				<p class="serif">
-					The sādhanā of the rṣīs made them capable of witnessing the ultimate truth and in that
-					light every other discipline in saṃsāra too. That is how Sanātana dharma elevated every
-					human discipline as well as every human act, such as the act of looking and seeing to a
-					divine plane of consciousness. And that is how draṣṭās were created.
-				</p>
-				<h5 class="serif" style="font-weight: 600">
-					One who is on this inner path of sādhanā (darśana) is a draṣṭā. That is how our rṣīs
-					became draṣṭās. They were not called ‘inventors of knowledge’, but the draṣṭā of truth.
-				</h5>
-				<div class="rta-row colgap200">
-					<div on:click={toggleFullText} on:keydown={fauxfake}>
-						<CompButton2 --thisbuttoncolor="#0170B9">Close</CompButton2>
+	<section class="rta-grid grid2 colgap600 rowgap400 min100" id="intro">
+		<div class="rta-column rowgap200 p-top-64">
+			<h2 use:reveal>Bṛhat Draṣṭā</h2>
+			<h5 use:reveal={{ delay: 100, duration: 300, transition: 'fade' }}>
+				An offering in deep learning that extends courses on some of the greatest ancient and
+				contemporary philosophers (draṣṭās) and schools of thoughts (darśanas).
+			</h5>
+			<p use:reveal={{ delay: 150, duration: 300, transition: 'fade' }}>
+				What ultimately differentiates a culture are its ways of looking and seeing. How we see
+				ourselves and the world is extremely important to our identity and to the way the world
+				perceives us. But to Hindu civilization seeing was not merely a physical act of looking at
+				saṃsāra using our external eyes. The focus of our civilization was as much on our internal
+				journey.
+			</p>
+			<p use:reveal={{ delay: 200, duration: 300, transition: 'fade' }}>
+				This anchor was sādhanā, done under the guidance and grace of a guru. A purely intellectual
+				civilization is anchorless. In order to have an opinion on saṃsāra one needs a world to look
+				at and a worldview to look from – <span style="color: var(--blue)">dṛśya</span> and
+				<span style="color: var(--blue)">darśana.</span>
+			</p>
+			{#if !fullText}
+				<button class="newbutton blue" on:click={toggleFullText}>Read More</button>
+			{/if}
+			{#if fullText}
+				<div class="rta-column rowgap200 p-bot-64">
+					<p>
+						The Rṣīs of Bhāratavarṣa never neglected saṃsāra and developed objective sciences and
+						disciplines to their heights, but at the same time they were always careful to peg that
+						intellectual activity to a deep inner anchor.
+					</p>
+					<p>
+						The word darśana is more than the act of seeing. It has a universal significance in
+						Hindu cosmology. Hindu philosophy is also called darśana; because Hindu philosophy is
+						not ‘what you think’; it is ‘what you see’ – darśana.
+					</p>
+					<p>
+						It is the witness of the truth that is the objective of all Hindu philosophy. Similarly,
+						the act of going to a temple is also called darśana, the act of witnessing truth in the
+						form of the divine. In Hindu civilization its worldview was guided by the inner compass
+						of sādhanā. It is only when the act of looking and seeing is elevated and sanctified by
+						deep sādhanā, does it become darśana. For understanding this deep darśana and to witness
+						saṃsāra in truthful light, an able draṣṭā – the one who is capable of looking deeply –
+						is needed.
+					</p>
+					<h5>
+						One who is on this inner path of sādhanā (darśana) is a draṣṭā. That is how our rṣīs
+						became draṣṭās. They were not called ‘inventors of knowledge’, but the draṣṭā of truth.
+					</h5>
+					<div class="rta-row colgap200">
+						<button class="newbutton blue" on:click={toggleFullText}>Close</button>
+						<a href="/drashta/schools">
+							<button class="newbutton blue">Explore More</button>
+						</a>
 					</div>
-					<a href="/drashta/schools">
-						<CompButton --thisbuttoncolor="#0170B9">Explore More</CompButton>
-					</a>
 				</div>
+			{/if}
+		</div>
+		<div class="rta-column p-top-128">
+			<h5 class="title p-top-32 bord-top m-top-16">Testimonials</h5>
+			<div class="rta-column">
+				{#if tests && tests.length > 0}
+					<Splide
+						hasTrack={false}
+						options={{
+							drag: true,
+							keyboard: 'global',
+							waitForTransition: true,
+							type: 'loop',
+							gap: '20px',
+							wheelMinThreshold: 1.1,
+							speed: 900,
+							direction: 'ltr',
+							perPage: 1,
+							pagination: false,
+							breakpoints: {
+								1023: {
+									width: '80vw'
+								}
+							}
+						}}
+					>
+						<SplideTrack>
+							{#each tests as item}
+								<SplideSlide>
+									<pre class="mid">
+										{item.content}
+									</pre>
+								</SplideSlide>
+							{/each}
+						</SplideTrack>
+						<div
+							class="splide__arrows splide__arrows--ltr rta-row xcenter-d xcenter-m colgap200 p-top-16 m-top-16 bord-top"
+						>
+							<button
+								class="splide__arrow splide__arrow--prev newbutton blue"
+								type="button"
+								aria-label="Previous slide"
+								aria-controls="splide01-track"
+							>
+								PREV
+							</button>
+							<button
+								class="splide__arrow splide__arrow--next newbutton blue"
+								type="button"
+								aria-label="Next slide"
+								aria-controls="splide01-track"
+							>
+								NEXT
+							</button>
+						</div>
+					</Splide>
+				{/if}
+			</div>
+		</div>
+	</section>
+	<section class="rta-column rowgap400 min100" id="courses">
+		<h2 class="bord-top bord-bot p-top-16 p-bot-24" use:reveal>All Courses</h2>
+		{#if courses && courses.length > 0}
+			<div class="rta-grid grid2 colgap400 rowgap400">
+				{#each courses as item}
+					{#if item.status === 'upcoming' || item.status === 'Upcoming'}
+						<div class="rta-row stay rowgap300 colgap300 p-bot-32">
+							<div class="rta-image w32 height-40-20">
+								<img src={item.image} alt={item.name} />
+							</div>
+							<div class="rta-column w64 rowgap100">
+								<small class="label upcoming">
+									{item.status}
+								</small>
+								{#if fullText}
+									<h6 class="tt-c title">{item.name}</h6>
+								{:else}
+									<h6 class="tt-c title">{item.name}</h6>
+								{/if}
+								<cite class="sticker-blue"
+									><span>{item.datefrom} | with</span>
+									<span style="color: var(--gren)"> {item.ins}</span></cite
+								>
+							</div>
+						</div>
+					{:else if item.status === 'open now'}
+						<div class="rta-row stay rowgap300 colgap300 p-bot-32">
+							<div class="rta-image w32 height-40-20">
+								<img src={item.image} alt={item.name} />
+							</div>
+							<div class="rta-column w64 rowgap100">
+								<small class="label opennow">
+									{item.status}!
+								</small>
+								{#if fullText}
+									<h6 class="tt-c hover-blue title">
+										<a href="/drashta/course/{item.course}">
+											{item.name}
+										</a>
+									</h6>
+								{:else}
+									<h6 class="tt-c hover-blue title">
+										<a href="/drashta/course/{item.course}">
+											{item.name}
+										</a>
+									</h6>
+								{/if}
+								<p class="mid soft">
+									{item.content.slice(0, 250)}...<a
+										style="color: var(--betblue)"
+										href="/drashta/course/{item.course}">READ MORE</a
+									>
+								</p>
+								<cite class="sticker-blue">with {item.ins}</cite>
+							</div>
+						</div>
+					{:else}
+						<div class="rta-row stay rowgap300 colgap300 p-bot-32">
+							<div class="rta-image w32 height-40-20">
+								<img src={item.image} alt={item.name} />
+							</div>
+							<div class="rta-column w64 rowgap300">
+								<small class="label labelelse">
+									{item.status}
+								</small>
+								{#if fullText}
+									<h6 class="tt-c hover-blue title">
+										<a href="/drashta/course/{item.course}">
+											{item.name}
+										</a>
+									</h6>
+								{:else}
+									<h6 class="tt-c hover-blue title">
+										<a href="/drashta/course/{item.course}">
+											{item.name}
+										</a>
+									</h6>
+								{/if}
+								<p class="mid soft">
+									{item.content.slice(0, 250)}...<a
+										style="color: var(--betblue)"
+										href="/drashta/course/{item.course}">READ MORE</a
+									>
+								</p>
+								<cite class="sticker-blue">with {item.ins}</cite>
+							</div>
+						</div>
+					{/if}
+				{/each}
 			</div>
 		{/if}
-	</div>
-	<div
-		id="coursescolumn"
-		class="rta-column rowgap400 p-top-32-m"
-		class:thick={!fullText}
-		class:thin={fullText}
-		style="transform: translateY({diff + 300}px); margin-bottom: {diff + 364}px"
-	>
-		<h3>All Courses:</h3>
-		{#if courses && courses.length > 0}
-			{#each courses as item}
-				{#if item.status === 'upcoming' || item.status === 'Upcoming'}
-					<div class="course-card rta-row stay rowgap300 colgap300 p-bot-32">
-						<div class="rta-image w32 height-40-20">
-							<img src={item.image} alt={item.name} />
-						</div>
-						<div class="rta-column w64 rowgap100">
-							<small class="label upcoming">
-								{item.status}
-							</small>
-							{#if fullText}
-								<h6 class="serif tt-c">{item.name}</h6>
-							{:else}
-								<h5 class="serif tt-c">{item.name}</h5>
-							{/if}
-							<cite class="sticker-blue"
-								><span>{item.datefrom} | with</span>
-								<span style="color: var(--gren)"> {item.ins}</span></cite
-							>
-						</div>
-					</div>
-				{:else if item.status === 'open now'}
-					<div class="course-card rta-row stay rowgap300 colgap300 p-bot-32">
-						<div class="rta-image w32 height-40-20">
-							<img src={item.image} alt={item.name} />
-						</div>
-						<div class="rta-column w64 rowgap100">
-							<small class="label opennow">
-								{item.status}!
-							</small>
-							{#if fullText}
-								<h6 class="serif tt-c hover-blue">
-									<a href="/drashta/course/{item.course}">
-										{item.name}
-									</a>
-								</h6>
-							{:else}
-								<h5 class="serif tt-c hover-blue">
-									<a href="/drashta/course/{item.course}">
-										{item.name}
-									</a>
-								</h5>
-							{/if}
-							<p>
-								{item.content.slice(0, 250)}...<a
-									style="color: var(--betblue)"
-									href="/drashta/course/{item.course}">READ MORE</a
-								>
-							</p>
-							<cite class="sticker-blue">with {item.ins}</cite>
-						</div>
-					</div>
-				{:else}
-					<div class="course-card rta-row stay rowgap300 colgap300 p-bot-32">
-						<div class="rta-image w32 height-40-20">
-							<img src={item.image} alt={item.name} />
-						</div>
-						<div class="rta-column w64 rowgap100">
-							<small class="label labelelse">
-								{item.status}
-							</small>
-							{#if fullText}
-								<h6 class="serif tt-c hover-blue">
-									<a href="/drashta/course/{item.course}">
-										{item.name}
-									</a>
-								</h6>
-							{:else}
-								<h5 class="serif tt-c hover-blue">
-									<a href="/drashta/course/{item.course}">
-										{item.name}
-									</a>
-								</h5>
-							{/if}
-							<p>
-								{item.content.slice(0, 250)}...<a
-									style="color: var(--betblue)"
-									href="/drashta/course/{item.course}">READ MORE</a
-								>
-							</p>
-							<cite class="sticker-blue">with {item.ins}</cite>
-						</div>
-					</div>
-				{/if}
-			{/each}
-		{/if}
-	</div>
-</div>
-
-<!--end-->
+	</section>
+</Shell>
 
 <style lang="sass">
 
 small.label
-	font-weight: bold
 	width: max-content
 	max-width: 80%
 	padding: 2px 6px
-	border-radius: 6px
+	border-radius: 2px
 	color: white
 	
 .upcoming
@@ -258,7 +295,7 @@ small.label
 	font-size: 14px
 
 .labelelse
-	background: var(--themer)
+	background: #373737
 	
 
 .hover-blue
@@ -270,31 +307,18 @@ small.label
 	background: var(--themer)
 	color: white
 	padding: 2px 8px
-	border-radius: 6px
+	border-radius: 2px
 	max-width: 70%
 	width: max-content
 
-.serif
-	font-family: 'Adobe Devanagari', serif
-
-.course-card
-	h5.serif
-		color: var(--opposite)
-		line-height: 1.12
-
-h5.serif
-	font-weight: bold
-
-p.serif
-	font-size: 20px
+cite
+	font-style: normal
 
 .x0
 	overflow: hidden
 	@media screen and (min-width: 1024px)
-		height: calc(100vh - 72px)
-		margin-top: 72px
+		height: 100vh
 	@media screen and (max-width: 1023px)
 		height: 50vh
-		margin-top: 64px
 
 </style>

@@ -883,3 +883,13 @@ export async function soaJanapadas(){
 	if ( error ) throw new Error(error.message)
 	return data	
 }
+
+export async function drashtaTestis(){
+	const { data, error } = await supabase
+	.from('brhat-testimonials')
+	.select()
+	.eq('type','drashta')
+	.order('id')
+	if ( error ) throw new Error(error.message)
+	return data	
+}

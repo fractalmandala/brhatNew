@@ -5,7 +5,6 @@
 	import { themeMode, menuMode } from '$lib/stores/globalstores';
 	import { clickOutsideAction } from '$lib/utils/clickoutside';
 
-	let dropdown = false;
 	let fake = false;
 	let isSwitch = false;
 
