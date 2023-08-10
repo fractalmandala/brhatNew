@@ -2,7 +2,9 @@
 title: Artificial Intelligence is Here- Part 2, from Now to Henceforth
 author: Amritanshu Pandey
 category: Dharma Today
-tags: consciousness, technology
+tags: 
+- consciousness 
+- technology
 excerpt: "From AI's precision to cultural implications, this article proposes a proactive approach to navigate the era of 'Big Reality' with cultural wisdom."
 date: "2023-08-11"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/aiarticle.webp
