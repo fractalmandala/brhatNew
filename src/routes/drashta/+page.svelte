@@ -143,6 +143,7 @@
 							direction: 'ltr',
 							perPage: 1,
 							pagination: false,
+							width: '36vw',
 							breakpoints: {
 								1023: {
 									width: '80vw'
@@ -153,9 +154,12 @@
 						<SplideTrack>
 							{#each tests as item}
 								<SplideSlide>
-									<pre class="mid">
+									<div class="rta-column">
+										<pre class="mid">
 										{item.content}
 									</pre>
+										<small class="tt-c">- {item.byperson}</small>
+									</div>
 								</SplideSlide>
 							{/each}
 						</SplideTrack>
