@@ -139,6 +139,7 @@
 			<button class="newbutton big">Know More</button>
 		</a>
 	</section>
+	<!--
 	<section class="rta-column rowgap400 min100" id="upcoming">
 		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
 			<h2>
@@ -176,6 +177,7 @@
 			</div>
 		</div>
 	</section>
+	-->
 	<section class="rta-column rowgap400 min100" id="svarnanjali">
 		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
 			<h2>
