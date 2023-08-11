@@ -100,7 +100,7 @@ Then, the institution. Educational institutions should be awakened to a realm of
 
 ##### We are aware that the institutions of cultural transfer are no longer in our control, and we surrender the battle in new streams of learning at our own risk. 
 
-At Bṛhat, whether as developers ourselves or as enablers to the requisite team of driven talent, developing a “dharma-compatible” large-learning-model (LLM) is a roadmap objective. What would that even mean? What data would go into training such a model? How would we teach to it “correct” answers from “incorrect” ones, and what would be the scalability and reach of such an ambition? Not all these answers are available to us now, but that we must ask the questions is a strong conviction. 
+At Bṛhat, whether as developers ourselves or as enablers to the requisite team of driven talent, developing a “dharma-compatible” large-language-model (LLM) is a roadmap objective. What would that even mean? What data would go into training such a model? How would we teach to it “correct” answers from “incorrect” ones, and what would be the scalability and reach of such an ambition? Not all these answers are available to us now, but that we must ask the questions is a strong conviction. 
 
 For the community- us as a culture, as a religion, as a nation and as a civilization- let us be awake to the latent biases, misrepresentations and caricatures of us permeating cyberspace, AI only making their evidence stark and acerbic. The plausible solution to this is a counter-effort, no amount of denialism, skepticism, cynicism and inaction will be of any help. It will at worst be setting us back. 
 
