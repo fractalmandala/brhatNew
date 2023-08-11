@@ -14,9 +14,9 @@ Or when, in the thick of ancient India’s most terrible war, both sides put wea
 Each of these cases evidences what we parse as the anatomy of a civilizational moment.
 
 ### 1- The Convergence of Attention, or Yearning, or Both
-That is, the crest of desire to manifest. The descent of Viṣṇu as Narasiṃha emerged through the crest of Prahlāda’s devotion, as did the Samudra Manthana at the crest of war-weariness and the yearning of resolution among Daityas and Ādityas. Closer in time to us- at the stroke of a midnight hour- the culmination of a yearning for agency. And representative of such in the modern era- when the Prime Minister of a civilization-state submerged himself in the Ganga at the Eternal City, Kāśi.
+That is, the crest of desire to manifest. The descent of Viṣṇu as Narasiṃha emerged through the crest of Prahlāda’s devotion, as did the Samudra Manthana at the crest of war-weariness and the yearning of resolution among Daityas and Ādityas. Closer in time to us- at the stroke of a midnight hour- the culmination of a yearning for agency. And representative of such in the modern era- when the Prime Minister of a civilization-state submerged himself in the Gaṅgā at the Eternal City, Kāśī.
 
-A civilizational moment is one where all eyes are turned to one thing, one pivot, one definitive convergence that carries within it a long-running yearning. At bṛhat there is no doubt about this- we are in the midst of such a moment, and a civilization-state’s yearning is rearing to manifest.
+A civilizational moment is one where all eyes are turned to one thing, one pivot, one definitive convergence that carries within it a long-running yearning. At Bṛhat there is no doubt about this- we are in the midst of such a moment, and a civilization-state’s yearning is rearing to manifest.
 
 ### 2 - The Emergence of Hero, or Pivot, or Both
 Avataraṇa of Narasiṃha, churning of amṛta, birth of Pṛthu, death of Bhīṣma, return of Ram Lalla to the place of his birth; or even the lowering of India’s flag at the Red Fort on Republic Day- these represent hero or pivot moments. They are the events which freeze time in collective memory, transcending its arrow and becoming a felt-experience the mind carries with it.
