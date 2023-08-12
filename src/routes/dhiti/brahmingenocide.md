@@ -7,7 +7,7 @@ tags:
 - genocide
 date: "2023-08-12"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/brahmingenocide.webp
-excerpt: "The book "Brahmin Genocide - The Precursor to Hindu Extinction" delves into the Brahmin identity's historical significance, exposes targeted hate against them, and proposes solutions to safeguard Hindu culture from impending extinction."
+excerpt: "The book Brahmin Genocide - The Precursor to Hindu Extinction delves into the Brahmin identity's historical significance, exposes targeted hate against them, and proposes solutions to safeguard Hindu culture from impending extinction."
 ---
 
 Since time immemorial the ideal of a ‘Brahmin’ was something to aim towards as this would lead to mokṣa. It was not artha or kāma that was of concern. As people moved towards the end of their lives, liberation and freedom from fear and insecurity was what they sought. If one wanted to become a ‘Brahmin’, one could; as sage Viśwāmitra did or Vālmīki did. It was a matter of raising oneself by raising one’s sattva guṇa. This involves certain practices and anyone who has taken up yoga in a serious way will vouch for the raised awareness and energy levels that come with doing sādhanā and adhering to a recommended daily diet or routine. Such people are peaceful, contemplative, wish for the well-being of the whole world, and pose no threat to anyone. It is not for nothing that most vaidika prayers end with a call to protect the cow and the (devout practicing) Brahmin. Being ‘Brahmin’ continues to be a role model open to all and therefore aspirational. 
