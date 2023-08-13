@@ -86,7 +86,7 @@ Jai Hind!
 >She speaks - the wisdom of an Ancient Civilisation!
 >
 >[Bhārata Uvāca](https://www.youtube.com/watch?v=7edK5Z7WCJI&list=PLgxQpzdlXcYI-u3QZvtIUaKB2cJwqfCRS)!
-<cite>by **Prof. Gauri Mahulikar**</cite>
+<cite>by Prof. Gauri Mahulikar</cite>
 
 Vande Mātaram!
 
