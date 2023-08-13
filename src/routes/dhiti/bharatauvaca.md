@@ -1,5 +1,5 @@
 ---
-title: The What and Why of Bharata Uvaca
+title: The What and Why of Bhārata Uvāca
 author: Kavita Krishna Meegama
 category: Culture and Policy
 tags: 
