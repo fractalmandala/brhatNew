@@ -86,7 +86,7 @@ From saṃskṛta _tat_ - essence and _puruṣa_ - the cosmic being: Tatpuruṣa
 >
 >brahmā’dhipatirbrahmaṇo’dhipatirbrahmā
 >
->śivo me astu sa eva sadāśiva om ||
+>śivo me astu sadāśiva om ||
 
 Related to saṃskṛta Īśvara and Aiśvaryam, the rich, regal and prosperous One: Īśāna is the Ruler, Sadāśiva, representing anugraha, or blessing. Īśāna faces upward and is associated with the mahābhūta space or ether, ākāśa maṇḍala. His color is that of the sphaṭika, or crystal. Īśāna rūpa is with three eyes, known as trinetra Śiva. His rūpa is with four arms, holding triśūla, rudrākṣa mālā, abhaya mudra and dhyāna mudra, overcoming fear and symbolizing meditation respectively. He is charged with benevolence and also bears a crescent moon. 
 
