@@ -40,6 +40,7 @@
 				<a href="/drashta/course/yogasutra">Patañjali's Yoga Sūtras</a>
 				<a href="/drashta/course/comparativecivilisations">Comparative Civilizations</a>
 				<a href="/drashta/course/mahabharataparayana">Mahābhārata Pārāyaṇa</a>
+				<a href="/drashta/course/ancientindianhistory">Ancient Indian History</a>
 			</div>
 		{/if}
 	</div>

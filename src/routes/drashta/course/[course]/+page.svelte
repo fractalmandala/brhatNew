@@ -151,38 +151,38 @@
 							<small class="tt-u ta-c-d ta-c-m"><b>{item.content}</b></small>
 						</div>
 					{/each}
-					{#if data.status === 'open now'}
-						{#if pays && pays.length > 0}
-							{#each pays as item}
-								<div class="widening">
-									<div class="rta-column rowgap100">
-										<small>Indian Registrants:</small>
-										<form>
-											<script
-												src="https://checkout.razorpay.com/v1/payment-button.js"
-												data-payment_button_id={item.paymentindia}
-												async
-											>
-											</script>
-										</form>
-									</div>
-									<div class="rta-column rowgap100">
-										<small>International Registrants:</small>
-										<form>
-											<script
-												src="https://checkout.razorpay.com/v1/payment-button.js"
-												data-payment_button_id={item.paymentintl}
-												async
-											>
-											</script>
-										</form>
-									</div>
-								</div>
-							{/each}
-						{/if}
-					{/if}
 				{/if}
 			</div>
+			{#if data.status === 'open now'}
+				{#if pays && pays.length > 0}
+					<div class="rta-grid grid2 stay2 colgap300">
+						{#each pays as item}
+							<div class="rta-column rowgap100">
+								<small>Indian Registrants:</small>
+								<form>
+									<script
+										src="https://checkout.razorpay.com/v1/payment-button.js"
+										data-payment_button_id={item.paymentindia}
+										async
+									>
+									</script>
+								</form>
+							</div>
+							<div class="rta-column rowgap100">
+								<small>International Registrants:</small>
+								<form>
+									<script
+										src="https://checkout.razorpay.com/v1/payment-button.js"
+										data-payment_button_id={item.paymentintl}
+										async
+									>
+									</script>
+								</form>
+							</div>
+						{/each}
+					</div>
+				{/if}
+			{/if}
 		</div>
 		<div class="rta-column rta-image" id="heroimage">
 			<img src={data.image} alt={data.name} />
@@ -375,9 +375,9 @@
 .statuslabel
 	background: #fe4a49
 	padding: 2px 8px
-	width: 120px
+	width: 160px
 	color: white
-	font-size: 20px
+	font-size: 16px
 	text-transform: uppercase
 
 .date-box
