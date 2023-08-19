@@ -9,14 +9,16 @@
 		metaUrl,
 		metaImage,
 		metaType,
-		fontSize
+		fontSize,
+		authorName,
+		authortwoName
 	} from '$lib/stores/metastores';
 	import { themeMode } from '$lib/stores/globalstores';
 	import { breakZero, breakOne, breakTwo } from '$lib/stores/globalstores';
 	import PageProgress from '$lib/components/PageProgress.svelte';
 	import { latestDhitiTen } from '$lib/utils/localpulls';
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte';
-	import { brhatTeamMember } from '$lib/utils/supapulls';
+	import { brhatTeamMember, connectauth } from '$lib/utils/supapulls';
 	import { authorfiltered } from '$lib/utils/localpulls';
 
 	export let data;
@@ -26,11 +28,14 @@
 	$metaDescription = data.excerpt;
 	$metaImage = data.image;
 	$metaType = 'article';
+	$authorName = data.author;
+	$authortwoName = data.authortwo;
 
 	let posts: any;
 	let thisAuthorPosts: any;
 	let secondAuthorPosts: any;
-	let fake: boolean = false;
+	let author1Link: any;
+	let author2Link: any;
 	let member: any;
 	let member2: any;
 	let ref: HTMLElement | null = null;
@@ -87,6 +92,8 @@
 			if (data.authortwo !== '') {
 				auth2check = true;
 			}
+			author1Link = await connectauth($authorName);
+			author2Link = await connectauth($authortwoName);
 
 			document.querySelectorAll('a').forEach((a) => {
 				a.setAttribute('target', '_blank');
@@ -185,35 +192,44 @@
 			{/each}
 		</div>
 		<div class="authorbox">
-			<div class="rta-row ycenter colgap100">
-				{data.author}<br />
-				{#if member && member.length > 0}
-					{#each member as item}
-						<a href={item.twitter} target="_blank" rel="noreferrer">
-							<img
-								class="authortwitter"
-								src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/122-twitter.png"
-								alt={data.author}
-							/>
+			{#if author1Link && author1Link.length > 0}
+				{#each author1Link as authitem}
+					<a href="/dhiti/authors/{authitem.name}" class="rta-row ycenter colgap100">
+						{data.author}<br />
+						{#if member && member.length > 0}
+							{#each member as item}
+								<a href={item.twitter} target="_blank" rel="noreferrer">
+									<img
+										class="authortwitter"
+										src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/122-twitter.png"
+										alt={data.author}
+									/>
+								</a>
+							{/each}
+						{/if}
+					</a>
+				{/each}
+			{/if}
+
+			{#if data.authortwo && data.authortwo.length > 0}
+				{#if author2Link && author2Link.length > 0}
+					{#each author2Link as authitem2}
+						<a href="/dhiti/authors/{authitem2.name}" class="rta-row ycenter colgap100">
+							{data.authortwo}
+							{#if member2 && member2.length > 0}
+								{#each member2 as item}
+									<a href={item.twitter} target="_blank" rel="noreferrer">
+										<img
+											class="authortwitter"
+											src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/122-twitter.png"
+											alt={data.authortwo}
+										/>
+									</a>
+								{/each}
+							{/if}
 						</a>
 					{/each}
 				{/if}
-			</div>
-			{#if data.authortwo && data.authortwo.length > 0}
-				<div class="rta-row ycenter colgap100">
-					{data.authortwo}
-					{#if member2 && member2.length > 0}
-						{#each member2 as item}
-							<a href={item.twitter} target="_blank" rel="noreferrer">
-								<img
-									class="authortwitter"
-									src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/122-twitter.png"
-									alt={data.authortwo}
-								/>
-							</a>
-						{/each}
-					{/if}
-				</div>
 			{/if}
 		</div>
 	</div>
@@ -417,6 +433,11 @@ h1
 	padding-top: 16px
 	font-size: 18px
 	font-weight: 300
+	display: flex
+	flex-direction: column
+	a.rta-row
+		&:hover
+			text-decoration: underline
 	@media screen and (max-width: 1023px)
 		font-size: 16px
 

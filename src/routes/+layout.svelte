@@ -42,9 +42,9 @@
 	class:levelone={$breakOne}
 	class:leveltwo={$breakTwo}
 >
-	<PageTransition {keyTrigger}>
+	<section class="rta-column">
 		<slot />
-	</PageTransition>
+	</section>
 	<RIDSidebar />
 	<Chip />
 	<UserConfig {form} />

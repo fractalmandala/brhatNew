@@ -155,9 +155,9 @@
 			</div>
 			{#if data.status === 'open now'}
 				{#if pays && pays.length > 0}
-					<div class="rta-grid grid2 stay2 colgap300">
+					<div class="rta-grid grid2 xcenter-m rowgap200 colgap300">
 						{#each pays as item}
-							<div class="rta-column rowgap100">
+							<div class="rta-column rowgap100 xcenter-m tocenter">
 								<small>Indian Registrants:</small>
 								<form>
 									<script
@@ -168,7 +168,7 @@
 									</script>
 								</form>
 							</div>
-							<div class="rta-column rowgap100">
+							<div class="rta-column rowgap100 tocenter">
 								<small>International Registrants:</small>
 								<form>
 									<script
@@ -246,13 +246,13 @@
 									<pre>{item.content}</pre>
 								{/if}
 								{#if item.books && item.books.length > 0}
-									<div class="rta-row stay colgap100">
+									<div class="rta-row stay colgap100 m-top-16">
 										<div class="rta-image w32">
 											<img src="/images/iconbooks.png" alt="books" />
 										</div>
 										<div class="rta-column w64">
-											<small>Books Consulted:</small>
-											<small style="color: #878787">{item.books}</small>
+											<small><strong>Books Consulted:</strong></small>
+											<small style="color: #878787" class="tt-c">{item.books}</small>
 										</div>
 									</div>
 								{/if}
@@ -371,6 +371,10 @@
 </Shell>
 
 <style lang="sass">
+
+.tocenter
+	@media screen and (max-width: 768px)
+		align-items: center
 
 .statuslabel
 	background: #fe4a49
@@ -505,7 +509,7 @@
 
 .drawer-item2
 	font-weight: bold
-	font-size: 16px
+	font-size: 14px
 	padding: 2px 6px
 	&::after
 		background: #0170B9

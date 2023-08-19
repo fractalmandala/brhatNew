@@ -893,3 +893,12 @@ export async function drashtaTestis(){
 	if ( error ) throw new Error(error.message)
 	return data	
 }
+
+export async function connectauth(author:string){
+	const { data, error } = await supabase
+	.from('brhat-authors')
+	.select()
+	.eq('author', author)
+	if ( error ) throw new Error(error.message)
+	return data		
+}
