@@ -49,13 +49,3 @@
 <div class="type" class:light={$themeMode} class:dark={!$themeMode}>
 	<slot />
 </div>
-
-<style lang="sass">
-
-.light
-	background: white
-
-.dark
-	background: #171717
-
-</style>

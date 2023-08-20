@@ -10,11 +10,9 @@
 	import '$lib/styles/tokens.sass';
 	import '$lib/styles/standard.sass';
 	import Footer from '$lib/components/Footer.svelte';
-	import PageTransition from '$lib/components/PageTransition.svelte';
 	import UserConfig from '$lib/components/UserConfig.svelte';
 
 	let breakPointOn: boolean;
-	let fake = false;
 	let keyTrigger: any;
 
 	inject({ mode: dev ? 'development' : 'production' });

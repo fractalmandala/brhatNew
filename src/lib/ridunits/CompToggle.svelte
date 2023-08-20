@@ -91,7 +91,6 @@
 	text-align: center
 	padding: 3px 3px 3px 3px
 	border-radius: 2px
-	font-family: 'Rota'
 	text-transform: uppercase
 	font-weight: bold
 	line-height: 1.05
