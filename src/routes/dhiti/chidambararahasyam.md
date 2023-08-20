@@ -9,7 +9,6 @@ date: "2023-08-20"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/chidambararahasyam.webp
 excerpt: "This article delves into the historical and religious significance of the Naṭarāja temple in Chidambaram. It also examines its legal status in the context of political vendettas against the shrine."
 ---
-
 >If there are men who want to see anything in the world
 >
 >other than the dance of Aran, whose feet we serve,
@@ -20,7 +19,7 @@ excerpt: "This article delves into the historical and religious significance of 
 >
 >the streets are lined with great mansions,
 >
->and all the fields are watered >
+>and all the fields are watered 
 >
 >by streams full of valai fish— 
 >
@@ -65,7 +64,7 @@ As a denomination, the Dikṣitārs have special religious rights, and have foug
 
 To many, Chidambaram is truly a safe haven for a community untouched by the madness of the modern world and a repository of unchanged brahmin traditions. Given such a crucial significance to the Śaiva tradition, it is no wonder that the temple is the target of repeated attempts at a takeover. The shrine has been in the headlines lately, for all the wrong reasons<sup>9</sup>. Over the years, there have been frequent run-ins on a number of issues between the Hindu Religious and Charitable Endowments (HR & CE) Department officials and the District administration of the Tamil Nadu government on the one hand and the Dīkṣitars on the other. The Tamil Nadu Government clearly has a long-standing vendetta against one of the only shrines in the state that operates outside of government control. **The intention is to take over the temple by any means necessary — not only to commercialize the shrine, break the overtly religious, traditional brahmin stronghold over it, but also to assert the dominance of the political sphere over the religious. **The DMK Government in Tamil Nadu has expressed its desire to take over the administration of the temple and dismantle age-old Brahmin traditions that are kept alive there by making frequent statements to the public, in an attempt to galvanize public opinion and justify their aggressions. The DMK as a party evolved out of the anti-Brahmin movement in 20<sup>th</sup> century Tamil Nadu, and makes no secret of its anti-brahmin sentiment, framing almost every issue, religious or not, in this light. The HR&CE Minister Sekar Babu declared that the Government was examining how it could take over the administration of the temple. This is in spite of the Supreme Court order to the contrary. The fear is that the state government appears undeterred, yet has unlimited resources on its side. The smear campaign of the Dīkṣitars could eventually be weaponized for the fraudulent creation of a law and order situation that could potentially be used to justify the takeover of the shrine. It is crucial that Hindus recognise and oppose these overtly political yet maliciously defamatory narratives that seek to destroy institutions that form the very core of Hinduism.
 
-#### Footnotes & References:
+#### Footnotes:
 
 1. Peterson, Indira Viswanathan. Poems to Śiva: The Hymns of the Tamil Saints. India: Motilal Banarsidass, 1991.
 
@@ -83,9 +82,9 @@ To many, Chidambaram is truly a safe haven for a community untouched by the madn
 
 8. Subramanian Swamy v. State of T.N., (2014) 5 SCC 75 
 
-9. The latest fiasco began when the Dīkṣitars put up a notice barring worship from the _kanakasabha_ for the duration of the Aani Thirumanjanam festival citing security concerns and difficulties in managing the crowds. The District administration and the HRCE Dept objected and forcibly removed the Notice board. Thereafter Police and officials marched into the _kanakasabha_, shoving the objecting Dīkṣitars aside. Some of the priests claimed that they were pushed and one said that his sacred thread was cut. The Government also issued a GO giving devotees permission to worship from the _kanakasaba_. This order has been challenged in the Madras High Court. ([https://www.indiatoday.in/india/story/tamil-nadu-temple-priests-booked-for-restricting-endowment-department-officials-in-temple-2398977-2023-06-28](https://www.indiatoday.in/india/story/tamil-nadu-temple-priests-booked-for-restricting-endowment-department-officials-in-temple-2398977-2023-06-28))
+9. The latest fiasco began when the Dīkṣitars put up a notice barring worship from the _kanakasabha_ for the duration of the Aani Thirumanjanam festival citing security concerns and difficulties in managing the crowds. The District administration and the HRCE Dept objected and forcibly removed the Notice board. Thereafter Police and officials marched into the _kanakasabha_, shoving the objecting Dīkṣitars aside. Some of the priests claimed that they were pushed and one said that his sacred thread was cut. The Government also issued a GO giving devotees permission to worship from the _kanakasaba_. This order has been challenged in the Madras High Court. ([https://www.indiatoday.in/india/story/tamil-nadu-temple-priests-booked-for-restricting-endowment-department-officials-in-temple-2398977-2023-06-28](https://www.indiatoday.in/india/story/tamil-nadu-temple-priests-booked-for-restricting-endowment-department-officials-in-temple-2398977-2023-06-28)). Other issues include: allegations of authorities violating the dignity of young girls by subjecting them to a gynaecological examination (a few months ago, videos surfaced on social media that appeared to show child marriages in the Dikshitar community and an FIR was registered by the local Police and some of the Dikshitars were taken into custody. It was then alleged that deeply insulting and invasive vaginal examinations were conducted on some of the girls, leading to another controversy. ([https://timesofindia.indiatimes.com/city/chennai/two-finger-test-team-begins-probe-with-podhu-dikshithars/articleshow/100116788.cms?from=mdr](https://timesofindia.indiatimes.com/city/chennai/two-finger-test-team-begins-probe-with-podhu-dikshithars/articleshow/100116788.cms?from=mdr))
 
-Other issues include: allegations of authorities violating the dignity of young girls by subjecting them to a gynaecological examination (a few months ago, videos surfaced on social media that appeared to show child marriages in the Dikshitar community and an FIR was registered by the local Police and some of the Dikshitars were taken into custody. It was then alleged that deeply insulting and invasive vaginal examinations were conducted on some of the girls, leading to another controversy. ([https://timesofindia.indiatimes.com/city/chennai/two-finger-test-team-begins-probe-with-podhu-dikshithars/articleshow/100116788.cms?from=mdr](https://timesofindia.indiatimes.com/city/chennai/two-finger-test-team-begins-probe-with-podhu-dikshithars/articleshow/100116788.cms?from=mdr))
+#### Bibliography:
 
 * Swamy, B. G. L.. Chidambaram and Naṭarāja: Problems and Rationalization. India: Geetha Book House, 1979.
 
