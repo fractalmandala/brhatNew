@@ -32,12 +32,12 @@
 	h4
 		font-weight: bold
 		line-height: 1.2
-	p
+	p, li, ul
 		line-height: 1.5
 		font-size: 18px
 		color: var(--texttwo)
 		font-weight: 400	
-	p.mid
+	p.mid, li.mid
 		font-size: 16px
 		line-height: 1.28
 		font-weight: 400
@@ -58,7 +58,11 @@
 		font-weight: 400
 		font-size: 18px
 		line-height: 1.5
-	p.soft
+	pre.mid
+		font-size: 16px
+		line-height: 1.28
+		font-weight: 400
+	p.soft, li.soft
 		color: var(--onlyblack)
 	p.mid.soft
 		font-weight: 400
@@ -424,3 +428,22 @@
 		width: 512px
 	@media screen and (max-width: 575px)
 		width: 100%
+
+.tostretch
+	transform-origin: center center
+	@media screen and (min-width: 1024px)
+		transform: scale(0.9)
+	@media screen and (max-width: 1023px)
+		transform: scale(0.9)
+
+.bannerstrip
+	p
+		text-transform: uppercase
+	border-bottom: 1px solid var(--texttwo)
+	@media screen and (min-width: 1024px)
+		justify-content: center
+		align-items: center
+		height: 60px
+		column-gap: 24px
+		position: sticky
+		top: 80px

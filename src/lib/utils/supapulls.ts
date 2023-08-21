@@ -902,3 +902,12 @@ export async function connectauth(author:string){
 	if ( error ) throw new Error(error.message)
 	return data		
 }
+
+export async function samThemes(){
+	const { data, error } = await supabase
+	.from('bet-samikshanathemes')
+	.select()
+	.order('id')
+	if (error) throw new Error(error.message)
+	return data	
+}

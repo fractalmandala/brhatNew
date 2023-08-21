@@ -17,8 +17,6 @@
 	} from '$lib/utils/localpulls';
 	import { themeMode } from '$lib/stores/globalstores';
 	import { clickOutsideAction } from '$lib/utils/clickoutside';
-	import CompDrawer from '$lib/ridunits/CompDrawer.svelte';
-	import Button from '$lib/ridunits/CompButton.svelte';
 	import RIDDropdown from '$lib/ridunits/RIDDropdown.svelte';
 	import SocialShare from '$lib/ridunits/RIDSocialShare.svelte';
 	import autoAnimate from '@formkit/auto-animate';
@@ -30,14 +28,12 @@
 	let writer: string = '';
 	let authorposts: string | any[];
 	let showWriters = false;
-	let searchFocus = false;
 	let showDefault = true;
 	let categoryItems = Array(4).fill(false);
 	let bodhas: any;
 	let caps: any;
 	let knows: any;
 	let dharmas: any;
-	let openDrawer = false;
 	let limit = 12;
 	let openCat = false;
 
@@ -903,7 +899,7 @@ small.citeone
 
 #top-panel
 	@media screen and (min-width: 1024px)
-		padding-top: 128px
+		padding-top: 144px
 	@media screen and (max-width: 1023px)
 		padding-top: 96px
 

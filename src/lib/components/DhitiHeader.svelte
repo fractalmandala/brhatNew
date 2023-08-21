@@ -4,16 +4,13 @@
 	import { quintOut } from 'svelte/easing';
 	import { themeMode, sideMode, breakTwo } from '$lib/stores/globalstores';
 	import { browser } from '$app/environment';
-	import tippy, { animateFill } from 'tippy.js';
 	import LogDhiti from '$lib/logos/LogDhiti.svelte';
 	import LogDhitiD from '$lib/logos/LogDhiDark.svelte';
 	import 'tippy.js/dist/tippy.css';
 	import 'tippy.js/animations/shift-away.css';
 	import Sun from '$lib/icons/sun.svelte';
 	import Moon from '$lib/icons/moon.svelte';
-	import autoAnimate from '@formkit/auto-animate';
 
-	let showHome: boolean = false;
 	let y: number;
 	let circleIt: boolean = false;
 	let height: number;
@@ -71,7 +68,7 @@
 	}
 
 	$: {
-		if (y > 100 && y > latestScrollY) {
+		if (y > 60) {
 			isInvisible = true;
 		} else {
 			isInvisible = false;
@@ -84,28 +81,6 @@
 	} else {
 		breakPoint = false;
 	}
-
-	onMount(() => {
-		tippy('#single', {
-			content: 'Toggle Dark/Light Mode.',
-			duration: 300,
-			arrow: true,
-			animateFill: true,
-			plugins: [animateFill],
-			placement: 'top',
-			theme: 'light'
-		});
-		const handleMouse = (event: { clientY: number }) => {
-			mouseY = event.clientY;
-			if (mouseY <= 128) {
-				isInvisible = false;
-			}
-		};
-		window.addEventListener('mousemove', handleMouse);
-		return () => {
-			window.removeEventListener('mousemove', handleMouse);
-		};
-	});
 </script>
 
 <svelte:window bind:scrollY={y} bind:innerHeight={height} bind:innerWidth={iW} />
@@ -123,22 +98,19 @@
 		{:else}
 			<LogDhitiD />
 		{/if}
-		{#if !breakPoint}
-			<p><a href="/">Bṛhat Home</a></p>
-		{/if}
 	</a>
-	<button
-		class="blank-button toggling"
-		id="single"
-		on:click={toggleVisibility}
-		on:keydown={fauxfake}
-	>
-		{#if $themeMode}
-			<Moon />
-		{:else}
-			<Sun />
+	<div class="rta-row toggling ycenter colgap200">
+		<button class="blank-button" id="single" on:click={toggleVisibility} on:keydown={fauxfake}>
+			{#if $themeMode}
+				<Moon />
+			{:else}
+				<Sun />
+			{/if}
+		</button>
+		{#if !breakPoint}
+			<p style="margin: 0 0 4px 0; font-weight: 500"><a href="/">Home</a></p>
 		{/if}
-	</button>
+	</div>
 	<div
 		class="menuicon"
 		on:click={toggleSideBar}
@@ -174,6 +146,12 @@
 
 <style lang="sass">
 
+.toggling
+	p
+		&:hover
+			a
+				text-decoration: underline
+				color: #fe4a49
 
 .appheader
 	display: grid
@@ -189,34 +167,34 @@
 		grid-template-columns: 180px 1fr 180px
 		grid-template-rows: 1fr
 		grid-template-areas: "toggling applogo menuicon"
-		height: 128px
+		height: 144px
 		align-content: center
 		align-items: center
 		gap: 0
-		border-bottom: 1px solid var(--borderline)
+		border-bottom: 1px solid var(--texttwo)
 		.menuicon
 			width: 180px
 		.toggling
 			display: flex
 			justify-content: flex-start
 	@media screen and (max-width: 1023px)
-		grid-template-columns: 1fr 200px
+		grid-template-columns: 48px 1fr 48px
 		grid-template-rows: 1fr
-		grid-template-areas: "applogo menuicon"
-		height: 72px
+		grid-template-areas: "toggling applogo menuicon"
+		height: 120px
 		align-content: center
 		align-items: center
 		padding: 0 16px
 		background: #FFFFFF
 		gap: 0
 		.toggling
-			display: none
+			grid-area: toggling
 		.applogo
 			grid-area: applogo
 		.menuicon
 			grid-area: menuicon
-			width: 200px
-			height: 72px
+			p
+				display: none
 
 .appheader.light
 	background: #FFFFFF
@@ -225,7 +203,11 @@
 	background: #171717
 
 .appheader.hiddenHeader
-	transform: translateY(-128px)
+	@media screen and (min-width: 1024px)
+		transform: translateY(0px)
+		height: 80px
+	@media screen and (max-width: 1023px)
+		transform: translateY(-120px)
 
 #menumainx
 	height: 32px
@@ -257,32 +239,14 @@
 	gap: 12px
 	align-items: center
 	height: 128px
-	p
-		text-transform: uppercase
-		font-weight: 800
-		font-size: 14px
 	@media screen and (min-width: 1024px)
 		row-gap: 0
 		justify-content: center
-		p
-			padding-top: 6px
 	@media screen and (max-width: 1023px)
-		width: 104px
+		justify-content: center
 
 .applogo.fullcol
 	flex-direction: row
-
-.light
-	.applogo p
-		color: #676767
-		&:hover
-			color: #fe4a49
-
-.dark
-	.applogo p
-		color: white
-		&:hover
-			color: #fe4a49
 
 .menuicon
 	grid-area: menuicon
@@ -291,19 +255,17 @@
 	align-items: center
 	justify-content: flex-end
 	color: #474747
-	text-transform: uppercase
 	cursor: pointer
 	@media screen and (min-width: 1024px)
 		p
-			font-size: 18px
-			font-weight: bold
-			padding-top: 4px
+			font-size: 16px
+			font-weight: 500
 
 .appheader.light
 	.menuicon p
-		color: #272727
+		color: #777777
 
 .appheader.dark
 	.menuicon p
-		color: #878787
+		color: #777777
 </style>
