@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import Shell from '$lib/components/PageShell.svelte';
 	import Header from '$lib/components/NewHeader.svelte';
-	import { samThemes } from '$lib/utils/supapulls';
+	import { samThemes, samDates } from '$lib/utils/supapulls';
 	import { slide } from 'svelte/transition';
 	import { breakZero, breakOne, breakTwo } from '$lib/stores/globalstores';
 	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/stores/metastores';
@@ -12,6 +12,7 @@
 	let menuOpen: boolean;
 	let fake = false;
 	let thems: any;
+	let dates: any;
 
 	$metaTitle = 'Samikṣaṇā';
 	$metaDescription =
@@ -39,6 +40,7 @@
 
 	onMount(async () => {
 		thems = await samThemes();
+		dates = await samDates();
 	});
 </script>
 
@@ -57,15 +59,17 @@
 		<h5>
 			The study of human evolution and counseling is a fascinating and ever-evolving field that
 			seeks to understand the complex forces that shape our lives. Each individual life is a unique
-			and intricate tapestry, woven from the threads of biology, culture, and experience. In recent
-			years, there has been a growing movement to move beyond Euro-American theories and explore
-			culturally rooted Eastern perspectives on human development and well-being. Samīkṣaṇā opens a
-			window into the collective journey of the human species – a distinctive invitation and rare
-			opportunity to explore your own path and the journeys of fellow beings under the guidance of
-			pioneering scholars in the field.
+			and intricate tapestry, woven from the threads of biology, culture, and experience.
 		</h5>
-		<h6>2 December 2023 - 21 April 2024 | Saturdays and Sundays</h6>
-		<div class="rta-grid grid4 stay2">
+		<h5>
+			In recent years, there has been a growing movement to move beyond Euro-American theories and
+			explore culturally rooted Eastern perspectives on human development and well-being. Samīkṣaṇā
+			opens a window into the collective journey of the human species – a distinctive invitation and
+			rare opportunity to explore your own path and the journeys of fellow beings under the guidance
+			of pioneering scholars in the field.
+		</h5>
+		<h6 class="ta-c" id="bannerdate">2 December 2023 - 21 April 2024 | Saturdays and Sundays</h6>
+		<div class="rta-grid grid4 stay2 rowgap300 ta-c">
 			<div class="rta-column xcenter rowgap100">
 				<img src="/images/icon-timing.png" alt="timings" />
 				<p class="small">4 PM to 9 PM IST</p>
@@ -94,40 +98,46 @@
 		<div class="rta-column rowgap200">
 			<p>
 				Samīkṣaṇā literally means an incisive, in-depth examination. Of what? The depths of human
-				existence, consciousness, and evolution. Dive into the heart of comprehending human
-				evolution, not just as a passive observer, but as an engaged participant.
+				existence, consciousness, and evolution.
+			</p>
+			<ol style="margin-left: 8px">
+				<li>What is the role of samskaras in an individual's evolution?</li>
+				<li>How do we factor in multiple facets of human evolution?</li>
+				<li>Is development a co-construction of biology, cultural and individual factors?</li>
+				<li>How does our relationship with family/friends impact our thoughts and emotions?</li>
+				<li>Do we have a holistic understanding of human nature?</li>
+			</ol>
+
+			<p>
+				While Western perspectives to human development and psychology abound, a structured study of
+				the Indian episteme is rare. With frameworks from Vedanta, Yoga, Jyotisa, Nrtya and more -
+				understand the interplay of karma-dharma-samskaras in the micro and macro cosmos in our
+				lives.
 			</p>
 			<p>
-				Embark on this remarkable exploration of self-discovery as we intertwine the wisdom of
-				modern and traditional epistemes, seamlessly blending the insights of different eras with
-				clarity and connection.
+				Have you wondered how understanding of Indian musicology can enhance how we practise
+				psychotherapy? Or how theories from Yoga and Ayurveda can add to our practise in the domains
+				of psychiatry and embryology? Immerse yourself in this interdisciplinary study and discover
+				dimensions anew.
 			</p>
 			<p>
-				Samīkṣaṇā draws from both the Orient and the Occident, forging an interdisciplinary approach
-				that casts a brilliant light on the 'HUMAN' in its entirety. Central to our odyssey lies a
-				profound curiosity about the rhythm and essence of people's lives. How do we decipher the
-				enigma of our existence? This ground-breaking multidisciplinary study transcends
-				conventional boundaries, weaving together threads from 20 trans-disciplines such as
-				psychology, philosophy, embryology, political science, musicology, economics, naturopathy,
-				Vedanta and beyond.
+				The program is designed to give you a holistic overview of the bio-psycho-social theories of
+				understanding yourself and the world around with the essential component of Eastern
+				spiritual frameworks. Rest assured, this is a carefully curated rare package you will never
+				find anywhere!
 			</p>
 			<p>
-				Traditionally, the study of any practitioner within this field has equipped us with
-				perspectives rooted in the Western worldview. Samīkṣaṇā offers an integrated and comparative
-				study of the Indic and Western perspectives.
+				As you move deeper into the program, you will introspect and gain the skills to deal with
+				diverse individuals and groups in order to accomplish mental health, wellness, education,
+				relationships, etc.
 			</p>
 			<p>
-				The practitioner or the seeker is always encouraged to keep biases at bay in the process of
-				learning. Then how does a singular, dominating worldview suffice to inform the way we
-				understand human nature? The Indian episteme and theory of mind is therefore culturally
-				critical and universally applicable in its offering of layered and contextually-rich
-				perspectives on the human mind and spirit.
-			</p>
-			<p>
-				We believe that through this in-depth study, the pattern-seeking and pattern-finding Indian
-				mind will be enriched and strengthened in its capacity to hold two distinct views at their
-				merit and be able to contemplate upon and apply the principles coherently for the benefit of
-				the self and the world.
+				Perhaps the greatest takeaway is the opportunity to learn about human evolution from
+				scholarly legends in this domain, be it child psychiatry, astrology, clinical psychology or
+				the performing arts. We believe that through this in-depth study, the pattern-seeking and
+				pattern-finding Indian mind will be enriched and strengthened in its capacity to hold two
+				distinct views at their merit and be able to contemplate upon and apply the principles
+				coherently for the benefit of the self and the world.
 			</p>
 		</div>
 	</section>
@@ -156,13 +166,6 @@
 					class:selectedbutton={isOpen[2]}
 				>
 					<p class="mid">Course Eligibility</p>
-				</button>
-				<button
-					class="blank-button"
-					on:click={() => toggleOpen(3)}
-					class:selectedbutton={isOpen[3]}
-				>
-					<p class="mid">Selection Criteria</p>
 				</button>
 				<button
 					class="blank-button"
@@ -197,54 +200,56 @@
 	</section>
 	<section class="rta-column rowgap400 min100 ytop p-top-64" id="fourth">
 		{#if isOpen[1]}
-			<div class="rta-grid grid2 colgap600 rowgap600">
-				<div class="rta-column rowgap200">
-					<h6 class="title">1. What is the role of samskaras in an individual's evolution?</h6>
-					<p class="mid soft">
-						While Western perspectives to human development and psychology abound, a structured
-						study of the Indian episteme is rare. With frameworks from Vedanta, Yoga, Jyotisa, Nrtya
-						and more - understand the interplay of karma-dharma-samskaras in the micro and macro
-						cosmos in our lives.
-					</p>
+			<div class="rta-grid grid2 colgap600 rowgap600 take">
+				<div class="rta-column rowgap100 bord-bot p-bot-16">
+					<img
+						src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/18samikshana/connectingdots.png"
+						alt="one"
+					/>
+					<h6>Connecting dots: body, mind, spirit and beyond.</h6>
 				</div>
-				<div class="rta-column rowgap200">
-					<h6 class="title">2. How do we factor in multiple facets of human evolution?</h6>
-					<p class="mid soft">
-						Have you wondered how understanding of Indian musicology can enhance how we practise
-						psychotherapy? Or how theories from Yoga and Ayurveda can add to our practise in the
-						domains of psychiatry and embryology? Immerse yourself in this interdisciplinary study
-						and discover dimensions anew.
-					</p>
+				<div class="rta-column rowgap100 bord-bot p-bot-16">
+					<img
+						src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/18samikshana/understandingelements.png"
+						alt="two"
+					/>
+					<h6>Understanding the elements that constitute the mental makeup of an individual.</h6>
 				</div>
-				<div class="rta-column rowgap200">
-					<h6 class="title">
-						3. Is development a co-construction of biology, cultural and individual factors?
+				<div class="rta-column rowgap100 bord-bot p-bot-16">
+					<img
+						src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/18samikshana/professionalinsights.png"
+						alt="three"
+					/>
+					<h6>Deepening professional insights on living life effectively.</h6>
+				</div>
+				<div class="rta-column rowgap100 bord-bot p-bot-16">
+					<img
+						src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/18samikshana/culturing.png"
+						alt="four"
+					/>
+					<h6>
+						Culturing and enhancing soft skills including intra and inter-personal relationships.
 					</h6>
-					<p class="mid soft">
-						The program is designed to give you a holistic overview of the bio-psycho-social
-						theories of understanding yourself and the world around with the essential component of
-						Eastern spiritual frameworks. Rest assured, this is a carefully curated rare package you
-						will never find anywhere.
-					</p>
 				</div>
-				<div class="rta-column rowgap200">
-					<h6 class="title">
-						4. How does our relationship with family/friends impact our thoughts and emotions?
+				<div class="rta-column rowgap100 bord-bot p-bot-16">
+					<img
+						src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/18samikshana/diverseindividuals.png"
+						alt="five"
+					/>
+					<h6>
+						Dealing with diverse individuals, families, and groups in order to accomplish mental
+						health, wellness, education, career goals, etc.
 					</h6>
-					<p class="mid soft">
-						As you move deeper into the program, you will introspect and gain the skills to deal
-						with diverse individuals and groups in order to accomplish mental health, wellness,
-						education, relationships, etc.
-					</p>
 				</div>
-				<div class="rta-column rowgap200">
-					<h6 class="title">5. Do we have a holistic understanding of human nature?</h6>
-					<p class="mid soft">
-						Perhaps the greatest takeaway is the opportunity to learn about human evolution from
-						scholarly legends in this domain, be it child psychiatry, astrology, clinical psychology
-						or the performing arts. Each mentor is here to give you their best and shape your vision
-						of yourself and the world.
-					</p>
+				<div class="rta-column rowgap100 bord-bot p-bot-16">
+					<img
+						src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/18samikshana/selfempowerment.png"
+						alt="six"
+					/>
+					<h6>
+						Self-empowerment insights across multiple dimensions of human existence and a range of
+						interdisciplinary perspectives.
+					</h6>
 				</div>
 			</div>
 		{:else if isOpen[2]}
@@ -261,11 +266,13 @@
 				<li>Eastern and Western perspectives on the human mind</li>
 				<li>The intersection of science and spirituality</li>
 			</ul>
-		{:else if isOpen[3]}
-			<p>
-				Online Entrance Exam (25 November 2023) followed by a round of Interview (26 November 2023)
-				for shortlisted candidates
-			</p>
+			<div class="rta-column rowgap200">
+				<h6 class="title">Selection Criteria:</h6>
+				<p>
+					Online Entrance Exam (25 November 2023) followed by a round of Interview (26 November
+					2023) for shortlisted candidates
+				</p>
+			</div>
 		{:else if isOpen[4]}
 			<p>
 				Applications Close: 23 November, 2023 (Thursday)<br />
@@ -293,59 +300,15 @@
 				</ul>
 			</div>
 		{:else if isOpen[5]}
-			<div class="rta-grid grid2 colgap600 rowgap600">
-				<div class="rta-column rowgap200">
-					<h6 class="title">December 2023</h6>
-					<pre class="mid">
-• Dr. Aarti Chitkara;“Embryology, Paediatric Growth and Evolution”: 2 (Saturday) and 3 (Sunday)
-• Pravrajika Divyanandaprana; “A Mind Management Manual -Philosophy from Patañjali’s Yogasūtras” : 9 (Saturday) and 10 (Sunday)
-• Prof. Priyadarshi Patnaik; “Fundamentals of Psychology”: 16 (Saturday) and 17 (Sunday)
-• Smt. Sarbani Rath and Sh.Sanjay Rath; “Jyotiṣa - The Kārmik Connect to Human Existence”: 23 (Saturday) and 24 (Sunday)
-					</pre>
-				</div>
-				<div class="rta-column rowgap200">
-					<h6 class="title">January 2023</h6>
-					<pre class="mid">
-• Dr. Shekhar P Seshadri; “Children - Perspectives in Evolution”: 6 (Saturday) and 7 (Sunday)
-• Dr. P Ram Manohar; “Āyurveda - Perspectives to Human Evolution”: 13 (Saturday) and 14 (Sunday)
-• Dr. P.N. Ravindra; “Human Excellence - Neuroscience Perspectives”: 20 (Saturday) and 21 (Sunday)
-• Prof. Jagjivan Kaur; “Life-span Development and Counselling - Occident Perspectives”: 27 (Saturday) and 28 (Sunday)
-					</pre>
-				</div>
-				<div class="rta-column rowgap200">
-					<h6 class="title">February 2023</h6>
-					<pre class="mid">
-• Prof. Ganesh Rao; “Holistic Human Evolution through Yoga”: 3 (Saturday) and 4 (Sunday)
-• Dr. Anuradha Choudry and Prof. Shrinivasa Varakhedi; “Saṃskṛta - A Key to Life Beautiful”: 10 (Saturday) and 11 (Sunday)
-• Dr. Neena Bansal and Sh. Raghava Krishna; “The Politics of Human Development - Foundations of Indian Thought”: 17 (Saturday) and 18 (Sunday)
-• “Existential Inquiry through Vedānta ”: 24 (Saturday) and 25 (Sunday)
-					</pre>
-				</div>
-				<div class="rta-column rowgap200">
-					<h6 class="title">March 2023</h6>
-					<pre class="mid">
-• Mid-course Exam: 3 (Sunday) : 09:00 -11:00 hrs
-• “Preventing Addictions through Counselling”: 9 (Saturday) and 10 (Sunday)
-• Prof. Rasananda Panda; “Economics and Human Development”: 16 (Saturday)
-• Prachee Shah Paandya and Sunil Sunkara; “Nṛtya-bhāva”:17 (Sunday)
-• Dr. Shekhar P Seshadri; “Psychiatric Disorders and Counselling in Children”: 23 (Saturday) and 24 (Sunday)
-• Dr. Richa Chopra; “Vyakti Vikāsa”: 30 (Saturday) and 31 (Sunday) 
-					</pre>
-				</div>
-				<div class="rta-column rowgap200">
-					<h6 class="title">April 2023</h6>
-					<pre class="mid">
-• Dr. Tapaswini Pradhan; “Disease and Wellbeing”: 6 (Saturday)
-• Dr. Surya Ramesh; “Food and Lifestyle - The Nature’s Way”: 7 (Sunday)
-• Gautam Dabir and Malvica Chopra; "Rāga & Manas": 13 (Saturday) and 14 (Sunday)
-					</pre>
-				</div>
-				<div class="rta-column rowgap200">
-					<h6 class="title">Final Certification Exam</h6>
-					<pre class="mid">
-21 April (Sunday); 0900 - 11.30 hrs (IST)
-					</pre>
-				</div>
+			<div class="rta-grid grid2 colgap600 rowgap300">
+				{#if dates && dates.length > 0}
+					{#each dates as item}
+						<div class="rta-column colgap300 rowgap100 bord-bot p-bot-32">
+							<h6>{item.date}</h6>
+							<p class="mid soft">{item.course}</p>
+						</div>
+					{/each}
+				{/if}
 			</div>
 		{:else if isOpen[6]}
 			{#if thems && thems.length > 0}
@@ -543,10 +506,11 @@
 		.rta-column
 			width: calc(100% - 112px)
 
+#bannerdate
+	background: #6c1039
+	color: white
+
 #intro
-	h6
-		border-top: 1px solid #6C1039
-		border-bottom: 1px solid #6C1039
 	img
 		object-fit: contain
 		height: 40px
@@ -573,12 +537,34 @@
 		.rta-row
 			flex-direction: column
 
+#fourth
+	@media screen and (min-width: 1024px)
+		.take
+			img
+				object-fit: contain
+				height: 96px
+				border-radius: 48px
+		.take
+			h6
+				text-align: center
+	@media screen and (max-width: 1023px)
+		.take
+			img
+				object-fit: contain
+				height: 80px
+				border-radius: 40px
+		.take
+			h6
+				text-align: center
+
 .headimage
 	width: 100vw
 	height: 100vh
 	background-size: cover
 	background-repeat: no-repeat
 	background-position: center center
+	@media screen and (max-width: 768px)
+		height: 50vh
 
 
 </style>

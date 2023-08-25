@@ -911,3 +911,12 @@ export async function samThemes(){
 	if (error) throw new Error(error.message)
 	return data	
 }
+
+export async function samDates(){
+	const { data, error } = await supabase
+	.from('bet-samikshananew')
+	.select()
+	.order('id')
+	if (error) throw new Error(error.message)
+	return data		
+}
