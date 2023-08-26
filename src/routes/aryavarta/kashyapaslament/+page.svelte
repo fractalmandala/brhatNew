@@ -44,8 +44,8 @@
 	</div>
 	{#if panels && panels.length > 0}
 		{#each panels as item}
-			<div class="rta-grid grid2 right colgap400 min100">
-				<div class="rta-image p-top-32 p-bot-32">
+			<div class="rta-grid grid2 right colgap400 min100 radii">
+				<div class="rta-image">
 					<img src={item.image} alt={item.newid} />
 				</div>
 				<div class="rta-column rowgap200">
@@ -55,14 +55,20 @@
 		{/each}
 	{/if}
 	<div class="rta-column rowgap400 p-top-32 bord-top" id="nexter">
-		<h4 class="ta-c"><a href="/aryavarta/sutaandsuda">Next - Sūta and Sudā</a></h4>
+		<h5 class="ta-c title"><a href="/aryavarta/sutaandsuda">Next - Sūta and Sudā</a></h5>
 	</div>
 </Shell>
 
 <style lang="sass">
 
+.radii
+	@media screen and (min-width: 769px)
+		padding-top: 128px
+		.rta-image
+			height: calc(100vh - 128px)
+
 #nexter
-	h4
+	h5
 		&:hover
 			a
 				color: #fe4a49

@@ -32,6 +32,7 @@
 				<a href="/aryavarta/kashyapaslament">1 - Kaśyapa's Lament</a>
 				<a href="/aryavarta/sutaandsuda">2 - Sūta and Sudā</a>
 				<a href="/aryavarta/places">3 - Nagara, Nadī, Janapada</a>
+				<a href="/aryavarta/itihasabharatadharma">4 - Itihāsa, Bhārata, Dharma</a>
 				<a href="/aryavarta">Scrolls of Āryavarta Home</a>
 			</div>
 		{/if}

@@ -11,12 +11,14 @@
 		font-size: 28px
 		font-weight: 700
 		line-height: 1.1
+		letter-spacing: 0
 		color: var(--opposite)
 		a
 			color: inherit
 			transition: 0.08s ease-in
 		&:hover
-			text-decoration: underline
+			a
+				text-decoration: underline
 	h6.title
 		text-transform: capitalize
 		line-height: 1.2
@@ -71,6 +73,9 @@
 		font-weight: 400
 		color: var(--grade3)
 		line-height: 1.28
+	small.small
+		font-size: 10px
+		font-weight: bold
 	.pagilavideo
 		small
 			color: var(--texttwo)
@@ -180,7 +185,6 @@
 			font-size: 36px
 		h3
 			font-size: 27px
-			font-weight: 500
 		h1
 			font-size: 45px
 		.textpad
@@ -437,13 +441,18 @@
 		transform: scale(0.9)
 
 .bannerstrip
+	background: var(--background)
+	z-index: 100
 	p
 		text-transform: uppercase
-	border-bottom: 1px solid var(--texttwo)
+		font-size: 12px
+		font-weight: bold
+		color: var(--texttwo)
+	border-bottom: 1px solid var(--contraster)
 	@media screen and (min-width: 1024px)
 		justify-content: center
 		align-items: center
-		height: 60px
+		height: 48px
 		column-gap: 24px
 		position: sticky
 		top: 80px

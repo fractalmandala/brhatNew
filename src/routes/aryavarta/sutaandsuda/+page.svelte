@@ -21,28 +21,40 @@
 	});
 </script>
 
-<Head
-	title={$metaTitle}
+<Shell
+	metaTitle={$metaTitle}
 	metaDescription={$metaDescription}
 	metaImage={$metaImage}
 	metaUrl={$metaUrl}
-/>
-
-{#if panels && panels.length > 0}
-	{#each panels as item}
-		<div class="rta-column min100">
-			<img src={item.image} alt={item.newid} />
-		</div>
-	{/each}
-{/if}
-<div class="rta-column rowgap400 p-top-32 bord-top" id="nexter">
-	<h4 class="ta-c"><a href="/aryavarta/places">Next - Nagara, Nadī, Janapada</a></h4>
-</div>
+>
+	<section class="rta-column">
+		{#if panels && panels.length > 0}
+			{#each panels as item}
+				<div class="fullscreenimage min100 rta-column">
+					<img src={item.image} alt={item.newid} />
+				</div>
+			{/each}
+		{/if}
+	</section>
+	<div class="rta-column rowgap400 p-top-32 bord-top" id="nexter">
+		<h5 class="ta-c title"><a href="/aryavarta/places">Next - Nagara, Nadī, Janapada</a></h5>
+	</div>
+</Shell>
 
 <style lang="sass">
 
+
+.fullscreenimage
+	justify-content: center
+	border-bottom: 1px solid var(--contraster)
+	img
+		border-radius: 8px
+	@media screen and (min-width: 769px)
+		img
+			border-radius: 16px
+
 #nexter
-	h4
+	h5
 		&:hover
 			a
 				color: #fe4a49

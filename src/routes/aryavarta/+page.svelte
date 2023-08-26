@@ -45,6 +45,9 @@
 			<h3 use:reveal={{ transition: 'scale', duration: 400, delay: 100, opacity: 0, scale: 0 }}>
 				<a href="/aryavarta/places">3 - NAGARA, NADĪ, JANAPADA</a>
 			</h3>
+			<h3 use:reveal={{ transition: 'scale', duration: 400, delay: 150, opacity: 0, scale: 0 }}>
+				<a href="/aryavarta/itihasabharatadharma">4 - ITIHĀSA, BHĀRATA, DHARMA</a>
+			</h3>
 		</div>
 	</section>
 </Shell>

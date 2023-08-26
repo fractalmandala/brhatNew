@@ -167,11 +167,11 @@
 		grid-template-columns: 180px 1fr 180px
 		grid-template-rows: 1fr
 		grid-template-areas: "toggling applogo menuicon"
-		height: 144px
+		height: 128px
 		align-content: center
 		align-items: center
 		gap: 0
-		border-bottom: 1px solid var(--texttwo)
+		border-bottom: 1px solid var(--contraster)
 		.menuicon
 			width: 180px
 		.toggling
