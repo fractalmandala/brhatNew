@@ -16,6 +16,8 @@
 	let bio1 = Array(40).fill(false);
 	let bio2 = Array(40).fill(false);
 	let bio3 = Array(40).fill(false);
+	let bio4 = Array(40).fill(false);
+	let bio5 = Array(40).fill(false);
 
 	$metaTitle = 'Samikṣaṇā';
 	$metaDescription =
@@ -56,6 +58,24 @@
 		for (let i = 0; i < bio3.length; i++) {
 			if (i !== index && bio3[i] === true) {
 				bio3[i] = false;
+			}
+		}
+	}
+
+	function toggleBio4(index: number) {
+		bio4[index] = !bio4[index];
+		for (let i = 0; i < bio4.length; i++) {
+			if (i !== index && bio4[i] === true) {
+				bio4[i] = false;
+			}
+		}
+	}
+
+	function toggleBio5(index: number) {
+		bio5[index] = !bio5[index];
+		for (let i = 0; i < bio5.length; i++) {
+			if (i !== index && bio5[i] === true) {
+				bio5[i] = false;
 			}
 		}
 	}
@@ -392,6 +412,36 @@
 									</div>
 								</div>
 							{/if}
+							{#if item.inst4 && item.inst4.length > 0}
+								<div
+									class="rta-row stay colgap300"
+									id="photos4"
+									on:click={() => toggleBio4(i)}
+									on:keydown={fauxfake}
+								>
+									<div class="rta-image">
+										<img src={item.photo4} alt={item.inst4} />
+									</div>
+									<div class="rta-column">
+										<pre class="small">{item.inst4}</pre>
+									</div>
+								</div>
+							{/if}
+							{#if item.inst5 && item.inst5.length > 0}
+								<div
+									class="rta-row stay colgap300"
+									id="photos5"
+									on:click={() => toggleBio5(i)}
+									on:keydown={fauxfake}
+								>
+									<div class="rta-image">
+										<img src={item.photo5} alt={item.inst5} />
+									</div>
+									<div class="rta-column">
+										<pre class="small">{item.inst5}</pre>
+									</div>
+								</div>
+							{/if}
 						</div>
 						{#if bio1[i]}
 							<div
@@ -418,6 +468,24 @@
 								on:keydown={fauxfake}
 							>
 								<p>{item.bio3}</p>
+							</div>
+						{/if}
+						{#if bio4[i]}
+							<div
+								class="bio-overlay rta-column"
+								on:click={() => toggleBio4(i)}
+								on:keydown={fauxfake}
+							>
+								<p>{item.bio4}</p>
+							</div>
+						{/if}
+						{#if bio5[i]}
+							<div
+								class="bio-overlay rta-column"
+								on:click={() => toggleBio5(i)}
+								on:keydown={fauxfake}
+							>
+								<p>{item.bio5}</p>
 							</div>
 						{/if}
 					{/each}
@@ -594,7 +662,7 @@
 			width: 88%
 			padding: 16px
 
-#photos, #photos2, #photos3
+#photos, #photos2, #photos3, #photos4, #photos5
 	img
 		object-fit: cover
 		height: 104px
