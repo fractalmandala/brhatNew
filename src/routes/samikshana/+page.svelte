@@ -13,6 +13,9 @@
 	let fake = false;
 	let thems: any;
 	let dates: any;
+	let bio1 = Array(40).fill(false);
+	let bio2 = Array(40).fill(false);
+	let bio3 = Array(40).fill(false);
 
 	$metaTitle = 'Samikṣaṇā';
 	$metaDescription =
@@ -26,6 +29,33 @@
 		for (let i = 0; i < isOpen.length; i++) {
 			if (i !== index && isOpen[i] === true) {
 				isOpen[i] = false;
+			}
+		}
+	}
+
+	function toggleBio1(index: number) {
+		bio1[index] = !bio1[index];
+		for (let i = 0; i < bio1.length; i++) {
+			if (i !== index && bio1[i] === true) {
+				bio1[i] = false;
+			}
+		}
+	}
+
+	function toggleBio2(index: number) {
+		bio2[index] = !bio2[index];
+		for (let i = 0; i < bio2.length; i++) {
+			if (i !== index && bio2[i] === true) {
+				bio2[i] = false;
+			}
+		}
+	}
+
+	function toggleBio3(index: number) {
+		bio3[index] = !bio3[index];
+		for (let i = 0; i < bio3.length; i++) {
+			if (i !== index && bio3[i] === true) {
+				bio3[i] = false;
 			}
 		}
 	}
@@ -313,24 +343,83 @@
 		{:else if isOpen[6]}
 			{#if thems && thems.length > 0}
 				<div class="rta-grid grid2 colgap600 rowgap600">
-					{#each thems as item}
-						<div class="rta-column rowgap200 bord-bot p-bot-32">
+					{#each thems as item, i}
+						<div class="rta-column rowgap200 bord-bot p-bot-32" style="cursor: pointer">
 							<h6 class="title">{item.theme}</h6>
 							<pre class="mid" style="margin-top: 0">{item.description}</pre>
-							<div class="rta-row stay colgap300" id="photos">
+							<div
+								class="rta-row stay colgap300"
+								id="photos"
+								on:click={() => toggleBio1(i)}
+								on:keydown={fauxfake}
+							>
 								{#if item.photo1 && item.photo1.length > 0}
 									<div class="rta-image">
 										<img src={item.photo1} alt={item.instructor} />
-										{#if item.photo2 && item.photo2.length > 0}
-											<img src={item.photo2} alt={item.instructor} />
-										{/if}
 									</div>
 								{/if}
 								<div class="rta-column">
 									<pre class="small">{item.instructor}</pre>
 								</div>
 							</div>
+							{#if item.photo2 && item.photo2.length > 0}
+								<div
+									class="rta-row stay colgap300"
+									id="photos2"
+									on:click={() => toggleBio2(i)}
+									on:keydown={fauxfake}
+								>
+									<div class="rta-image">
+										<img src={item.photo2} alt={item.inst2} />
+									</div>
+									<div class="rta-column">
+										<pre class="small">{item.inst2}</pre>
+									</div>
+								</div>
+							{/if}
+							{#if item.inst3 && item.inst3.length > 0}
+								<div
+									class="rta-row stay colgap300"
+									id="photos3"
+									on:click={() => toggleBio3(i)}
+									on:keydown={fauxfake}
+								>
+									<div class="rta-image">
+										<img src={item.photo3} alt={item.inst3} />
+									</div>
+									<div class="rta-column">
+										<pre class="small">{item.inst3}</pre>
+									</div>
+								</div>
+							{/if}
 						</div>
+						{#if bio1[i]}
+							<div
+								class="bio-overlay rta-column"
+								on:click={() => toggleBio1(i)}
+								on:keydown={fauxfake}
+							>
+								<p>{item.bio1}</p>
+							</div>
+						{/if}
+						{#if bio2[i]}
+							<div
+								class="bio-overlay rta-column"
+								on:click={() => toggleBio2(i)}
+								on:keydown={fauxfake}
+							>
+								<p>{item.bio2}</p>
+							</div>
+						{/if}
+						{#if bio3[i]}
+							<div
+								class="bio-overlay rta-column"
+								on:click={() => toggleBio3(i)}
+								on:keydown={fauxfake}
+							>
+								<p>{item.bio3}</p>
+							</div>
+						{/if}
 					{/each}
 				</div>
 			{/if}
@@ -485,7 +574,27 @@
 
 <style lang="sass">
 
-#photos
+.bio-overlay
+	position: fixed
+	top: 0
+	left: 0
+	width: 100vw
+	min-height: 100vh
+	backdrop-filter: blur(2px)
+	align-items: center
+	justify-content: center
+	p
+		background: white
+	@media screen and (min-width: 769px)
+		p
+			width: 50%
+			padding: 32px
+	@media screen and (max-width: 768px)
+		p
+			width: 88%
+			padding: 16px
+
+#photos, #photos2, #photos3
 	img
 		object-fit: cover
 		height: 104px
