@@ -83,8 +83,6 @@
 				<p class="mid">Dharma Today</p>
 			</div>
 		{/if}
-		<p>Writers</p>
-		<p>Search</p>
 	</section>
 	<section class="rta-grid grid3 tricol pagila">
 		<section class="rta-column sideleft rowgap400">
