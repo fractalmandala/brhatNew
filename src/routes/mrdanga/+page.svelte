@@ -4,15 +4,11 @@
 	import Head from '$lib/components/HeadComponent.svelte';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import Youtuber from '$lib/components/Youtuber.svelte';
-	import Youtuber2 from '$lib/components/Youtuber.svelte';
-	import Youtuber3 from '$lib/components/Youtuber.svelte';
-	import { ChevronDown } from 'lucide-svelte';
 	import autoAnimate from '@formkit/auto-animate';
-	import Header from '$lib/components/SubHeader.svelte';
+	import Header from '$lib/components/NewHeader.svelte';
 	import { scale } from 'svelte/transition';
 	import { allmrdVids, Shabdavali, mrdangaVids, kavitaVids } from '$lib/utils/supapulls';
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte';
-	import RIDButton from '$lib/ridunits/RIDButton.svelte';
 	let vids: string | any[];
 	let limiter: number = 8;
 	let kalas: string | any[];
@@ -24,8 +20,8 @@
 	selectedCategory[1] = true;
 	let breakPoint: boolean;
 	let fake = false;
-	let iW: number;
 	let expandMenu = false;
+	let isSwitch = false;
 
 	$metaUrl = 'https://www.brhat.in/mrdanga';
 	$metaTitle = 'Bṛhad Mṛdaṅga';
@@ -94,7 +90,7 @@
 	metaImage={$metaImage}
 />
 
-<Header />
+<Header {isSwitch} hasMenu={false} />
 
 <div class="type" class:light={$themeMode} class:dark={!$themeMode}>
 	<div class="x0" data-lenis-scroll-snap-align="start">

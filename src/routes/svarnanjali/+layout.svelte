@@ -1,9 +1,22 @@
 <script lang="ts">
-	import Header from '$lib/components/SubHeader.svelte';
-	import { themeMode } from '$lib/stores/globalstores';
-	import SvarLinks from '$lib/links/SvarnanjaliLinks.svelte';
+	import Header from '$lib/components/NewHeader.svelte';
+	import { themeMode, menuMode } from '$lib/stores/globalstores';
+	import { clickOutsideAction } from '$lib/utils/clickoutside';
+	import { slide } from 'svelte/transition';
+	import { quintOut, quintIn } from 'svelte/easing';
 	import { userLang } from '$lib/stores/metastores';
-	let onHead = true;
+	let isSwitch = false;
+	let fake = false;
+
+	function fauxfake() {
+		fake = !fake;
+	}
+
+	function offDropdown() {
+		if ($menuMode === true) {
+			$menuMode = false;
+		}
+	}
 
 	function setHindi() {
 		$userLang = 'Hindi';
@@ -23,14 +36,26 @@
 	/>
 </svelte:head>
 
-<Header>
+<Header {isSwitch} hasMenu={true}>
 	<div slot="local" class="boxmidrow">
-		<button class="blank-button" class:activated={$userLang === 'Hindi'} on:click={setHindi}
-			>Hindi</button
-		>
-		<button class="blank-button" class:activated={$userLang === 'English'} on:click={setEnglish}
-			>English</button
-		>
+		{#if $menuMode}
+			<div
+				class="rta-column rowgap100 pagedropdown"
+				in:slide={{ axis: 'y', easing: quintOut, duration: 128 }}
+				out:slide={{ axis: 'y', easing: quintIn, duration: 80 }}
+				use:clickOutsideAction
+				on:clickOutside={offDropdown}
+				on:click={offDropdown}
+				on:keydown={fauxfake}
+			>
+				<button class="blank-button" class:activated={$userLang === 'Hindi'} on:click={setHindi}
+					>Hindi</button
+				>
+				<button class="blank-button" class:activated={$userLang === 'English'} on:click={setEnglish}
+					>English</button
+				>
+			</div>
+		{/if}
 	</div>
 </Header>
 <div class="type" class:light={$themeMode} class:dark={!$themeMode}>
@@ -47,11 +72,5 @@
 
 .dark
 	background: #171717
-
-.boxmidrow
-	.blank-button
-		color: #575757
-	.blank-button.activated
-		color: white
 
 </style>
