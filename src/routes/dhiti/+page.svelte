@@ -221,7 +221,7 @@
 			{/if}
 		</div>
 		<div class="rta-row colgap300 xcenter-d">
-			<button class="newbutton big">See All</button>
+			<a href="/dhiti/category/bodhas"> <button class="newbutton big">See All</button></a>
 		</div>
 	</section>
 	<section class="rta-column rowgap400 pagila categorybox">
@@ -265,7 +265,7 @@
 			{/if}
 		</div>
 		<div class="rta-row colgap300 xcenter-d">
-			<button class="newbutton big">See All</button>
+			<a href="/dhiti/category/iks"> <button class="newbutton big">See All</button></a>
 		</div>
 	</section>
 	<section class="rta-column rowgap400 pagila categorybox">
@@ -309,7 +309,7 @@
 			{/if}
 		</div>
 		<div class="rta-row colgap300 xcenter-d">
-			<button class="newbutton big">See All</button>
+			<a href="/dhiti/category/cultureandpolicy"> <button class="newbutton big">See All</button></a>
 		</div>
 	</section>
 	<section class="rta-column rowgap400 pagila categorybox">
@@ -353,7 +353,7 @@
 			{/if}
 		</div>
 		<div class="rta-row colgap300 xcenter-d">
-			<button class="newbutton big">See All</button>
+			<a href="/dhiti/category/dharmatoday"> <button class="newbutton big">See All</button></a>
 		</div>
 	</section>
 </section>

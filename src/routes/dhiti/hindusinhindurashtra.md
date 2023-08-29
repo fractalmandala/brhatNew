@@ -2,7 +2,7 @@
 title: A Review of the Book Hindus in Hindu Rashtra
 author: Anshuman Panda
 authortwo:
-category: Culture and Policy
+category: Dharma Today
 tags:
 - hindu
 - policy
