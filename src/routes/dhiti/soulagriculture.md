@@ -1,7 +1,7 @@
 ---
 title: "SOUL: Introduction to the Series on Agriculture"
 author: Sai Priya Chodavarapu
-category: IKS
+category: Indian Knowledge Systems
 tags: 
 - agriculture
 - ayurveda
