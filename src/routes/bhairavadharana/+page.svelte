@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount, afterUpdate } from 'svelte';
 	import Head from '$lib/components/HeadComponent.svelte';
-	import Header from '$lib/components/SubHeader.svelte';
+	import Header from '$lib/components/NewHeader.svelte';
 	import {
 		metaTitle,
 		metaDescription,
@@ -133,19 +133,19 @@
 	metaImage={$metaImage}
 />
 
-<Header />
+<Header isSwitch={false} hasMenu={false} />
 
 <div class="x0" data-lenis-scroll-snap-align="start">
 	<img src={data.image} alt="hero" />
 </div>
 
 <!--header and metadetails-->
-<div class="rta-column outer-box limit rowgap100 serif p-top-64" id="section1">
+<div class="rta-column outer-box limit rowgap100 p-top-64 pagila" id="section1">
 	<div class="rta-column rowgap600">
 		<em class="tt-u ta-c rta-column" id="section1line2" style="background: #FE4A49"
 			>{data.status}</em
 		>
-		<div class="rta-row iconsrow">
+		<div class="rta-row iconsrow rowgap200">
 			<div class="rta-column rta-icon">
 				<img src="/images/anveshi-dates.png" alt="datesicon" />
 				<p>{data.dates}</p>
@@ -180,27 +180,18 @@
 			<div class="rta-column highlightscolumn">
 				{#each highlights as item}
 					{#if item.name === 'temple'}
-						<div class="rta-row highlightsrow">
-							<div class="rta-icons">
-								<img src={item.image} alt="icons" />
-							</div>
-							<h5 class="hindiadobe">{item.content}</h5>
+						<div class="rta-row stay highlightsrow">
+							<h6>{item.content}</h6>
 						</div>
 					{/if}
 					{#if item.name === 'activity'}
-						<div class="rta-row highlightsrow">
-							<div class="rta-icons">
-								<img src={item.image} alt="icons" />
-							</div>
-							<h5 class="hindiadobe">{item.content}</h5>
+						<div class="rta-row stay highlightsrow">
+							<h6>{item.content}</h6>
 						</div>
 					{/if}
 					{#if item.name === 'person'}
-						<div class="rta-row highlightsrow">
-							<div class="rta-icons">
-								<img src={item.image} alt="icons" />
-							</div>
-							<h5 class="hindiadobe">{item.content}</h5>
+						<div class="rta-row stay highlightsrow">
+							<h6>{item.content}</h6>
 						</div>
 					{/if}
 				{/each}
@@ -210,7 +201,7 @@
 </div>
 <!--end-->
 
-<div class="rta-grid grid2 colgap400 rowgap400 outer-box limit">
+<div class="rta-grid grid2 colgap400 rowgap400 outer-box limit pagila">
 	<div class="rta-column rowgap200">
 		<div class="rta-image">
 			<img
@@ -218,14 +209,14 @@
 				alt="rajarshinandy"
 			/>
 		</div>
-		<h4 class="hindiadobe">Rajarshi Nandy</h4>
-		<p class="hindiadobe">
+		<h5 class="title ta-c-d">Rajarshi Nandy</h5>
+		<p class="mid soft">
 			Sh. Rajarshi Nandy is a sādhakā whose path is associated with tāntrika upāsanā of the 'Divine
 			Mother'. He is also an author and columnist on several topics related to Indian religious and
 			spiritual thought. He has recently re-published his insightful book 'Adhyatmikta' and manages
 			a popular Facebook page by the same name.
 		</p>
-		<p class="hindiadobe">
+		<p class="mid soft">
 			He has also helped co-author a paper exploring the links between Tantra and Modern
 			Neuroscience which was published in Neurology India.
 		</p>
@@ -237,13 +228,13 @@
 				alt="ramachandraroddam"
 			/>
 		</div>
-		<h4 class="hindiadobe">Ramachandra Roddam</h4>
-		<p class="hindiadobe">
+		<h5 class="title ta-c-d">Ramachandra Roddam</h5>
+		<p class="mid soft">
 			Sh. Ramachandra Roddam is a sādhakā of the 'Divine Mother'. He is an invited faculty who
 			teaches on Indian Spirituality, Yoga and Sādhanā. He is the author of the book 'Devi Bhakti
 			Tarangini', which is a devotional offering of English poems to the Supreme Goddess.
 		</p>
-		<p class="hindiadobe">
+		<p class="mid soft">
 			Currently he is rendering sevā at Sanatan Siddhashram, a traditional gurukula for the ancient
 			Baul tradition located in Birbhum district, West Bengal.
 		</p>
@@ -252,21 +243,21 @@
 
 <!--detailed content and itinerary-->
 <div class="rta-column outer-box limit rowgap200">
-	<pre class="h5 hindiadobe glass-top p-top-32">
+	<pre class="h5 glass-top p-top-32">
 			{data.content}
 		</pre>
 </div>
 
 <div class="rta-column outer-box rowgap200 limit">
 	<div class="rta-column p-top-32 glass-top rowgap300">
-		<h2 class="tt-u ta-c-d hindiadobe glass-bottom p-bot-32">Schedule</h2>
+		<h4 class="tt-u glass-bottom p-bot-32">Schedule</h4>
 	</div>
 	<div class="rta-grid grid4 colgap300 p-top-16">
 		{#if itins && itins.length > 0}
 			{#each itins as item, i}
 				<div class="rta-column itin">
-					<h6 class="hindiadobe">{item.name}</h6>
-					<pre class="hindiadobe adobes">
+					<h6 class="title">{item.name}</h6>
+					<pre class="small soft">
 						{item.content}
 					</pre>
 				</div>
@@ -277,7 +268,7 @@
 
 <div class="rta-column outer-box limit rowgap100 serif">
 	<div class="rta-column p-top-32 glass-top rowgap300">
-		<h2 class="tt-u ta-c-d hindiadobe glass-bottom p-bot-32">FAQs</h2>
+		<h4 class="tt-u glass-bottom p-bot-32">FAQs</h4>
 	</div>
 	<div
 		class="rta-grid grid3 rowgap400 colgap600 p-top-32 p-bot-64"
@@ -293,14 +284,14 @@
 						on:click={() => toggleFaq(i)}
 						on:keydown={() => toggleFaq(i)}
 					>
-						<div class="rta-row fixed ytop colgap100">
+						<div class="rta-row fixed ytop colgap100 p-bot-16">
 							<div class="button-box" class:rotated={isFaqOpen[i]}>
 								<ChevronDown size="20" color="#878787" />
 							</div>
-							<h6 class="hindiadobe faqs">{item.name}</h6>
+							<h6 class="title faqs" style="cursor: pointer">{item.name}</h6>
 						</div>
 						{#if isFaqOpen[i]}
-							<pre class="hindiadobe adobes faqs">{item.content}</pre>
+							<pre class="mid soft">{item.content}</pre>
 						{/if}
 					</div>
 				{/if}
@@ -312,10 +303,6 @@
 <!--end-->
 
 <style lang="sass">
-
-h2.hindiadobe
-	@media screen and (max-width: 1023px)
-		font-size: 48px
 
 .itin
 	@media screen and (max-width: 1023px)
@@ -330,10 +317,6 @@ h6.faqs
 	@media screen and (max-width: 1023px)
 		font-size: 20px
 		padding-bottom: 8px
-
-pre.faqs
-	padding-top: 0
-	margin-top: 0
 
 .rta-grid.grid2
 	@media screen and (min-width: 1024px)
@@ -380,30 +363,12 @@ pre.faqs
 		height: 40vh
 		padding-top: 64px
 
-
-pre.hindiadobe.adobes
-	display: flex
-	flex-direction: column
-	row-gap: 12px
-	font-size: 18px
-
 .highlightsrow
 	background: var(--contraster)
 	padding: 8px
 	border-radius: 8px
 	align-items: center
 	column-gap: 24px
-	.rta-icons
-		display: flex
-		align-items: center
-		width: 27px
-		height: 27px
-		img
-			object-fit: contain
-	h5
-		color: var(--opposite)
-		margin: 0
-		width: calc(100% - 56px)
 
 .highlightscolumn
 	row-gap: 16px

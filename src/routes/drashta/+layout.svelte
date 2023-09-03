@@ -41,6 +41,7 @@
 				<a href="/drashta/course/comparativecivilisations">Comparative Civilizations</a>
 				<a href="/drashta/course/mahabharataparayana">Mahābhārata Pārāyaṇa</a>
 				<a href="/drashta/course/ancientindianhistory">Ancient Indian History</a>
+				<a href="/bhairavadharana">Bhairava Dhāraṇā</a>
 			</div>
 		{/if}
 	</div>
