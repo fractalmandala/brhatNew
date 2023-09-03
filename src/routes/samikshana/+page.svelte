@@ -127,7 +127,7 @@
 			culturally rooted perspectives.
 		</h5>
 		<h6 class="ta-c" id="bannerdate">2 December 2023 - 21 April 2024 | Saturdays and Sundays</h6>
-		<div class="rta-grid grid4 stay2 rowgap300 ta-c" id="ico">
+		<div class="rta-grid grid4 stay2 rowgap300 ta-c bord-bot p-bot-32" id="ico">
 			<div class="rta-column xcenter rowgap100">
 				<img src="/images/icon-timing.png" alt="timings" />
 				<p class="small">4 PM to 9 PM IST</p>
@@ -147,6 +147,15 @@
 					<small class="ta-c">Including 18% GST</small>
 				</div>
 			</div>
+		</div>
+
+		<div class="rta-column" style="align-items: center">
+			<a
+				href="https://docs.google.com/forms/d/e/1FAIpQLScWmM5Wa2sP3Ayrxg1FeAX1wuPs4XxzSzN9Ukbd7cNKbwTKyA/viewform"
+				target="_blank"
+				rel="noreferrer"
+				><button class="newbutton big red">APPLY NOW</button>
+			</a>
 		</div>
 	</section>
 	<section class="rta-column rowgap400 p-top-64 min100" id="newsecond">
@@ -685,6 +694,16 @@
 			</p>
 		{/if}
 	</section>
+	<section class="rta-column p-top-64">
+		<div class="rta-column" style="align-items: center">
+			<a
+				href="https://docs.google.com/forms/d/e/1FAIpQLScWmM5Wa2sP3Ayrxg1FeAX1wuPs4XxzSzN9Ukbd7cNKbwTKyA/viewform"
+				target="_blank"
+				rel="noreferrer"
+				><button class="newbutton big red">APPLY NOW</button>
+			</a>
+		</div>
+	</section>
 </Shell>
 
 <style lang="sass">
@@ -693,7 +712,7 @@
 	@media screen and (min-width: 769px)
 		align-items: center
 		text-align: center
-		padding-top: 32px
+		padding-top: 64px
 		padding-bottom: 32px
 		img
 			object-fit: contain
