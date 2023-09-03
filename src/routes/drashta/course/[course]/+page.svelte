@@ -457,29 +457,8 @@
 .grid4.stay3
 	@media screen and (min-width: 1024px)
 		grid-template-areas: ". . ." "button button button"
-		.widening
-			grid-area: button
-			display: flex
-			column-gap: 16px
-			justify-content: center
-			padding: 8px
-			text-align: center
-			font-weight: bold
-			row-gap: 8px	
-			form
-				border-radius: 32px
 	@media screen and (max-width: 1023px)
 		grid-template-areas: ". . ." "button button button"
-		.widening
-			display: flex
-			column-gap: 32px
-			grid-area: button
-			align-self: center
-			justify-self: center
-			text-align: center
-			font-weight: bold
-			form
-				border-radius: 16px
 
 .datebox
 	@media screen and (min-width: 1024px)

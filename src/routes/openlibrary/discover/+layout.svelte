@@ -46,8 +46,8 @@
 	class:lzero={$breakZero}
 	class:lone={$breakOne}
 	class:ltwo={$breakTwo}
-	class:light={$themeMode}
-	class:dark={!$themeMode}
+	class:light={!$themeMode}
+	class:dark={$themeMode}
 >
 	<div class="row-side" class:hiddenHeader={isInvisible}>
 		{#if $breakTwo}

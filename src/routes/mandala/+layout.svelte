@@ -4,9 +4,6 @@
 	import { clickOutsideAction } from '$lib/utils/clickoutside';
 	import { slide } from 'svelte/transition';
 	import { quintOut, quintIn } from 'svelte/easing';
-	import autoAnimate from '@formkit/auto-animate';
-	import { fly } from 'svelte/transition';
-	let dropdown = false;
 	let isSwitch = false;
 	let fake = false;
 
@@ -17,16 +14,6 @@
 	function offDropdown() {
 		if ($menuMode === true) {
 			$menuMode = false;
-		}
-	}
-
-	function toggleDropdown() {
-		dropdown = !dropdown;
-	}
-
-	function onDropdown() {
-		if (dropdown === false) {
-			dropdown = true;
 		}
 	}
 </script>
@@ -56,7 +43,7 @@
 	</div>
 </Header>
 
-<div class="type p-bot-64" class:light={$themeMode} class:dark={!$themeMode}>
+<div class="type p-bot-64" class:light={!$themeMode} class:dark={$themeMode}>
 	<slot />
 </div>
 

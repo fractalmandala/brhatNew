@@ -23,7 +23,7 @@
 <svelte:window bind:innerWidth={iW} />
 
 <Header {isSwitch} hasMenu={false} />
-<div class:light={$themeMode} class:dark={!$themeMode}>
+<div class:light={!$themeMode} class:dark={$themeMode}>
 	<slot />
 </div>
 

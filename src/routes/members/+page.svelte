@@ -1,13 +1,12 @@
 <!-- src/routes/account/+page.svelte -->
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
-	import Header from '$lib/components/SubHeader.svelte';
+	import Header from '$lib/components/NewHeader.svelte';
 	import Head from '$lib/components/HeadComponent.svelte';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import { userLang, fontSize } from '$lib/stores/metastores';
 	import { enhance, type SubmitFunction } from '$app/forms';
-	import { themeMode, authStore, authState, configMode } from '$lib/stores/globalstores';
+	import { themeMode, configMode } from '$lib/stores/globalstores';
 	import IconSun from '$lib/icons/sun.svelte';
 	import IconMoon from '$lib/icons/moon.svelte';
 	import IconEng from '$lib/icons/english.svelte';
@@ -17,6 +16,7 @@
 
 	export let data;
 	export let form: any;
+	let isSwitch = false;
 	let fsize = Array(3).fill(false);
 	fsize[1] = true;
 	let signUpIs = false;
@@ -52,6 +52,7 @@
 			update();
 		};
 	};
+
 	function toggleConfig() {
 		if (browser) {
 			configMode.update((mode) => {
@@ -105,7 +106,7 @@
 	metaImage={$metaImage}
 />
 
-<Header />
+<Header {isSwitch} hasMenu={false} />
 
 <div class="rta-column stout p-top-128">
 	{#if inner}
@@ -158,6 +159,7 @@
 					</button>
 				</form>
 			</div>
+			<!--
 			<div class="rta-column rowgap100 p-top-32 bord-top">
 				<h6>
 					Use This section to configure global site settings for theme, font size, language etc.
@@ -215,6 +217,7 @@
 					</div>
 				</div>
 			</div>
+			-->
 		</div>
 	{:else}
 		<div class="rta-column instout rowgap400 pagila">
@@ -282,6 +285,7 @@
 					</button>
 				{/if}
 			</div>
+			<!--
 			<div class="rta-column rowgap100 p-top-32 bord-top">
 				<h6 class="ta-c">
 					Use This section to configure global site settings for theme, font size, language etc.
@@ -336,6 +340,7 @@
 					</div>
 				</div>
 			</div>
+		-->
 		</div>
 	{/if}
 </div>
@@ -349,9 +354,6 @@ form
 			border: 1px solid var(--contraster2)
 			font-size: 12px
 			padding: 4px 8px
-
-.firstrow
-	border-bottom: 1px solid var(--contraster2)
 
 .form-widget
 	label

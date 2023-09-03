@@ -92,7 +92,7 @@
 
 <Header {isSwitch} hasMenu={false} />
 
-<div class="type" class:light={$themeMode} class:dark={!$themeMode}>
+<div class="type" class:light={!$themeMode} class:dark={$themeMode}>
 	<div class="x0" data-lenis-scroll-snap-align="start">
 		<ParallaxImage
 			--parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/mrdanga-hero.webp')"

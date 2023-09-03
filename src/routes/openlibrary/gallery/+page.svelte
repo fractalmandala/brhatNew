@@ -116,8 +116,8 @@
 
 <div
 	class="outer-box limit"
-	class:light={$themeMode}
-	class:dark={!$themeMode}
+	class:light={!$themeMode}
+	class:dark={$themeMode}
 	class:levelzero={$breakZero}
 	class:levelone={$breakOne}
 	class:leveltwo={$breakTwo}

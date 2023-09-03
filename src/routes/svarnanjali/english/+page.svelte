@@ -21,8 +21,8 @@
 	class:levelzero={$breakZero}
 	class:levelone={$breakOne}
 	class:leveltwo={$breakTwo}
-	class:lightmode={$themeMode}
-	class:darkmode={!$themeMode}
+	class:lightmode={!$themeMode}
+	class:darkmode={$themeMode}
 >
 	<P01 />
 	<P02 />

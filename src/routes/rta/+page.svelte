@@ -47,8 +47,8 @@
 <div
 	class="x0"
 	data-lenis-scroll-snap-align="start"
-	class:light={$themeMode}
-	class:dark={!$themeMode}
+	class:light={!$themeMode}
+	class:dark={$themeMode}
 >
 	<Parallax
 		--parallax="url('https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/12rid/infinitywall.webp')"
@@ -64,14 +64,14 @@
 >
 	<section class="rta-column rowgap400 min100 xcenter p-top-128" id="intro">
 		<div class="rta-column">
-			{#if $themeMode}
+			{#if !$themeMode}
 				<img
 					class="thistheimage"
 					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/02brhatlogos/transparent/rid%20black.png"
 					alt="onwhite"
 				/>
 			{/if}
-			{#if !$themeMode}
+			{#if $themeMode}
 				<img
 					class="thistheimage"
 					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/02brhatlogos/transparent/rid%20white.png"
