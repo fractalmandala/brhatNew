@@ -85,8 +85,8 @@
 <section class="headingbox">
 	<div
 		class="appheader"
-		class:light={$themeMode}
-		class:dark={!$themeMode}
+		class:light={!$themeMode}
+		class:dark={$themeMode}
 		class:opened={$sideMode}
 		class:switch={isSwitch}
 		class:backSwitch={switchTime}

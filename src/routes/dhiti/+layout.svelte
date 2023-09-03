@@ -2,7 +2,7 @@
 	import { themeMode } from '$lib/stores/globalstores';
 </script>
 
-<div class="type" class:light={$themeMode} class:dark={!$themeMode}>
+<div class="type" class:light={!$themeMode} class:dark={$themeMode}>
 	<slot />
 </div>
 

@@ -48,7 +48,7 @@
 	</div>
 </Header>
 
-<div class="themer" class:light={$themeMode} class:dark={!$themeMode}>
+<div class="themer" class:light={!$themeMode} class:dark={$themeMode}>
 	<slot />
 </div>
 

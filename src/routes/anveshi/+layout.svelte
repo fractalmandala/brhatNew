@@ -37,7 +37,7 @@
 		{/if}
 	</div>
 </Header>
-<div class:light={$themeMode} class:dark={!$themeMode}>
+<div class:light={!$themeMode} class:dark={$themeMode}>
 	<slot />
 </div>
 
