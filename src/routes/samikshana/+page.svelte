@@ -105,21 +105,29 @@
 	metaImage={$metaImage}
 	metaUrl={$metaUrl}
 >
-	<section class="rta-column rowgap400 min100" id="intro">
+	<section class="rta-column rowgap400" id="topguy">
+		<img src="/images/samlogo.png" alt="samikshana" />
+		<h6>
+			Exploring Why Are We, The Way We Are!<br />
+			Orient and Occident Perspectives to Human Evolution and Counselling
+		</h6>
+	</section>
+	<section class="rta-column rowgap400 p-top-64 min100" id="newintro">
+		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
+			<h2>Course in Brief</h2>
+		</div>
 		<h5>
-			The study of human evolution and counseling is a fascinating and ever-evolving field that
-			seeks to understand the complex forces that shape our lives. Each individual life is a unique
-			and intricate tapestry, woven from the threads of biology, culture, and experience.
+			“What is the purpose in knowing everything without knowing your own Self?” - Pravrājika
+			Divyanandaprāṇa
 		</h5>
 		<h5>
-			In recent years, there has been a growing movement to move beyond Euro-American theories and
-			explore culturally rooted Eastern perspectives on human development and well-being. Samīkṣaṇā
-			opens a window into the collective journey of the human species – a distinctive invitation and
-			rare opportunity to explore your own path and the journeys of fellow beings under the guidance
-			of pioneering scholars in the field.
+			Time and again, scientists from the Orient as well as the Occident have believed that human
+			nature is kaleidoscopic. The study of Human Evolution and Counselling is witnessing an
+			exciting phase of growth; moving beyond the Euro-American theories and thus further exploring
+			culturally rooted perspectives.
 		</h5>
 		<h6 class="ta-c" id="bannerdate">2 December 2023 - 21 April 2024 | Saturdays and Sundays</h6>
-		<div class="rta-grid grid4 stay2 rowgap300 ta-c">
+		<div class="rta-grid grid4 stay2 rowgap300 ta-c" id="ico">
 			<div class="rta-column xcenter rowgap100">
 				<img src="/images/icon-timing.png" alt="timings" />
 				<p class="small">4 PM to 9 PM IST</p>
@@ -130,66 +138,89 @@
 			</div>
 			<div class="rta-column xcenter rowgap100">
 				<img src="/images/icon-number.png" alt="number" />
-				<p class="small">4 Sessions Every Weekend</p>
+				<p class="small">3 Sessions Every Weekend</p>
 			</div>
 			<div class="rta-column xcenter rowgap100">
 				<img src="/images/icon-rupee.png" alt="fees" />
 				<div class="rta-column xcenter">
-					<p class="small ta-c">₹62500 | $1100</p>
-					<small class="ta-c">Excluding 18% GST</small>
+					<p class="small ta-c">₹73,750 | $1100</p>
+					<small class="ta-c">Including 18% GST</small>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section class="rta-column rowgap400 min100 ytop p-bot-64" id="second">
+	<section class="rta-column rowgap400 p-top-64 min100" id="newsecond">
+		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
+			<h2>The Principles</h2>
+		</div>
+		<div class="rta-grid grid2 colgap300 rowgap300">
+			<div class="rta-column rowgap300">
+				<h6 class="title">Orient (Vedic Perspectives)</h6>
+				<p class="mid soft">
+					The Indian conceptualization of human nature reveals, interesting observations about the
+					doctrines of mind, personality and Self. The analysis of various sources like the Atharva
+					veda, the upaniṣads, the yogasūtras, the Mahābhārata and others reveal the finer aspects
+					of human nature. Indian tradition has much to offer by way of theoretical models and
+					practical techniques in enhancing human potential and optimal well-being.
+				</p>
+			</div>
+			<div class="rta-column rowgap300">
+				<h6 class="title">Occident (Modern Perspectives)</h6>
+				<p class="mid soft">
+					The centrality of the Western paradigm is the creation of an environment where people can
+					‘live lives they value’, with the freedom of choice and opportunities. Countries achieve
+					great progress in economic development as conventionally measured; yet along the way
+					succumb to new crises of obesity, smoking, diabetes and other ills of modern life.
+					However, amidst these paradoxes, the western cosmology has a lot to offer in the
+					understanding of human evolution.
+				</p>
+			</div>
+		</div>
+	</section>
+	<section class="rta-column rowgap400 min100" id="intro">
 		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
 			<h2>Why Samīkṣaṇā</h2>
 		</div>
-		<div class="rta-column rowgap200">
-			<p>
-				Samīkṣaṇā literally means an incisive, in-depth examination. Of what? The depths of human
-				existence, consciousness, and evolution.
-			</p>
-			<ol style="margin-left: 8px">
-				<li>What is the role of samskaras in an individual's evolution?</li>
-				<li>How do we factor in multiple facets of human evolution?</li>
-				<li>Is development a co-construction of biology, cultural and individual factors?</li>
-				<li>How does our relationship with family/friends impact our thoughts and emotions?</li>
-				<li>Do we have a holistic understanding of human nature?</li>
-			</ol>
-
-			<p>
-				While Western perspectives to human development and psychology abound, a structured study of
-				the Indian episteme is rare. With frameworks from Vedanta, Yoga, Jyotisa, Nrtya and more -
-				understand the interplay of karma-dharma-samskaras in the micro and macro cosmos in our
-				lives.
-			</p>
-			<p>
-				Have you wondered how understanding of Indian musicology can enhance how we practise
-				psychotherapy? Or how theories from Yoga and Ayurveda can add to our practise in the domains
-				of psychiatry and embryology? Immerse yourself in this interdisciplinary study and discover
-				dimensions anew.
-			</p>
-			<p>
-				The program is designed to give you a holistic overview of the bio-psycho-social theories of
-				understanding yourself and the world around with the essential component of Eastern
-				spiritual frameworks. Rest assured, this is a carefully curated rare package you will never
-				find anywhere!
-			</p>
-			<p>
-				As you move deeper into the program, you will introspect and gain the skills to deal with
-				diverse individuals and groups in order to accomplish mental health, wellness, education,
-				relationships, etc.
-			</p>
-			<p>
-				Perhaps the greatest takeaway is the opportunity to learn about human evolution from
-				scholarly legends in this domain, be it child psychiatry, astrology, clinical psychology or
-				the performing arts. We believe that through this in-depth study, the pattern-seeking and
-				pattern-finding Indian mind will be enriched and strengthened in its capacity to hold two
-				distinct views at their merit and be able to contemplate upon and apply the principles
-				coherently for the benefit of the self and the world.
-			</p>
+		<p>
+			Each individual life is a distinct biography. With the same circumstances, opportunities, and
+			resources, we see different people making different choices, which leads to the infinite
+			stories of every human life.<br />
+			<br />
+			1. What is the role of samskāras in an individual's evolution?<br />
+			2. How do we factor in multiple facets of human evolution?<br />
+			3. Is development a co-construction of biology, cultural and individual factors?<br />
+			4. How does our relationship with family/friends impact our thoughts and emotions?<br />
+			5. Do we have a holistic understanding of human nature?
+		</p>
+	</section>
+	<section class="rta-column rowgap400 min100" id="intro">
+		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
+			<h2>Adhyayana (the Study)</h2>
 		</div>
+		<p>
+			This ground-breaking, multidisciplinary, and innovative study integrates the perspectives of
+			the Orient (vedic) and the Occident (Modern) to examine the ‘HUMAN’ in its entirety. It
+			combines fundamental principles from the fields of Psychology, Philosophy, Embryology,
+			vedānta, yoga, āyurveda, Political Science, Musicology, Economics, Neuroscience, Naturopathy,
+			and other related disciplines. The study will also introduce various facets of Counselling,
+			which encompass a broad range of culturally-sensitive practices. These practices aim to enable
+			individuals to enhance their well-being, alleviate distress and maladjustments, resolve crises
+			and improve their overall functioning in life.
+		</p>
+	</section>
+	<section class="rta-column rowgap400 min100" id="intro">
+		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
+			<h2>Darśana (Study Philosophy)</h2>
+		</div>
+		<p>
+			In today’s fast-paced life, stress and emotional issues are on the rise. Addressing ‘Mental
+			Health’ perhaps ranks the least on one’s priority list. Therefore, Samīkṣaṇā - Why Are We The
+			Way We Are! - with twenty trans-disciplinary perspectives from the Orient and the Occident is
+			the need of the hour. This study is aligned with the vision of Bṛhat, anchored on Indian
+			Knowledge Systems (IKS). IKS is considered a universal episteme, rooted in and derived from
+			our millennia-long civilizational knowledge and values. Bṛhat believes that a deep dive into
+			Human Consciousness has to be culturally sensitive, inter-disciplinary and multi-faceted.
+		</p>
 	</section>
 	<section class="rta-column rowgap400 ytop bord-top p-top-32" id="third">
 		{#if $breakTwo}
@@ -208,21 +239,28 @@
 					on:click={() => toggleOpen(1)}
 					class:selectedbutton={isOpen[1]}
 				>
-					<p class="mid">Learner Takeaways</p>
+					<p class="mid">Course Themes</p>
 				</button>
 				<button
 					class="blank-button"
 					on:click={() => toggleOpen(2)}
 					class:selectedbutton={isOpen[2]}
 				>
-					<p class="mid">Course Eligibility</p>
+					<p class="mid">Learner Takeaways</p>
+				</button>
+				<button
+					class="blank-button"
+					on:click={() => toggleOpen(3)}
+					class:selectedbutton={isOpen[3]}
+				>
+					<p class="mid">Key Details</p>
 				</button>
 				<button
 					class="blank-button"
 					on:click={() => toggleOpen(4)}
 					class:selectedbutton={isOpen[4]}
 				>
-					<p class="mid">Important Dates</p>
+					<p class="mid">Course Eligibility</p>
 				</button>
 				<button
 					class="blank-button"
@@ -230,13 +268,6 @@
 					class:selectedbutton={isOpen[5]}
 				>
 					<p class="mid">Course Schedule</p>
-				</button>
-				<button
-					class="blank-button"
-					on:click={() => toggleOpen(6)}
-					class:selectedbutton={isOpen[6]}
-				>
-					<p class="mid">Course Themes</p>
 				</button>
 				<button
 					class="blank-button"
@@ -249,7 +280,7 @@
 		{/if}
 	</section>
 	<section class="rta-column rowgap400 min100 ytop p-top-64" id="fourth">
-		{#if isOpen[1]}
+		{#if isOpen[2]}
 			<div class="rta-grid grid2 colgap600 rowgap600 take">
 				<div class="rta-column rowgap100 bord-bot p-bot-16">
 					<img
@@ -302,7 +333,7 @@
 					</h6>
 				</div>
 			</div>
-		{:else if isOpen[2]}
+		{:else if isOpen[4]}
 			<p>
 				Anyone between 18-70 years with a 10+2 or equivalent in any stream from a recognized
 				university (min of 50%), interested in exploring diverse perspectives on human nature, and
@@ -323,33 +354,10 @@
 					2023) for shortlisted candidates
 				</p>
 			</div>
-		{:else if isOpen[4]}
-			<p>
-				Applications Close: 23 November, 2023 (Thursday)<br />
-				Online Exam: 25 November, 2023 (Saturday)<br />
-				Interview: 26 November, Sunday 2023
-			</p>
-			<div class="rta-column rowgap200 bord-top p-top-32">
-				<h6>First Cut off List for Shortlisted Students:</h6>
-				<ul>
-					<li>28 November, 2023 (Tuesday)</li>
-					<li>
-						Full fee payment between 12:00 noon on 28 November (Tuesday) till 16:00 hrs on 29
-						November, 2023 (Wednesday)
-					</li>
-				</ul>
-			</div>
-			<div class="rta-column rowgap200 bord-top p-top-32">
-				<h6>Second Cut off List for Shortlisted Students:</h6>
-				<ul>
-					<li>30 November, 2023 (Thursday)</li>
-					<li>
-						Full fee payment between 12:00 noon on 30 November, 2023 (Thursday) till 16:00 hrs on 1
-						December, 2023 (Friday)
-					</li>
-				</ul>
-			</div>
 		{:else if isOpen[5]}
+			<p class="mid">
+				<b>Disclaimer: </b><span class="soft">Contents subject to last minute changes</span>
+			</p>
 			<div class="rta-grid grid2 colgap600 rowgap300">
 				{#if dates && dates.length > 0}
 					{#each dates as item}
@@ -360,8 +368,11 @@
 					{/each}
 				{/if}
 			</div>
-		{:else if isOpen[6]}
+		{:else if isOpen[1]}
 			{#if thems && thems.length > 0}
+				<p class="mid">
+					<b>Disclaimer: </b><span class="soft">Contents subject to last minute changes</span>
+				</p>
 				<div class="rta-grid grid2 colgap600 rowgap600">
 					{#each thems as item, i}
 						<div class="rta-column rowgap200 bord-bot p-bot-32" style="cursor: pointer">
@@ -636,11 +647,69 @@
 					</p>
 				</div>
 			</div>
+		{:else if isOpen[3]}
+			<p>
+				Applications Close: 23 November, 2023 (Thursday)<br />
+				Online Exam: 25 November, 2023 (Saturday) <br />
+				Interview: 26 November, Sunday 2023
+			</p>
+			<p>
+				<b>Lecture Days: Saturdays and Sundays</b><br />
+				• 16:00 hrs to 21:00 hrs [IST]<br />
+				• Total Lectures [L] : 03 [Saturdays; 1L = 1.5 hrs each]; <br />
+				• 03 [Sundays; 1L = 1.5 hrs each]<br />
+				• 15 minutes break between L1 & L2, L2 & L3 [on Saturdays & Sundays]
+			</p>
+			<p>
+				<b>First Cut off List for Shortlisted Students:</b><br />
+				• 28 November, 2023 (Tuesday) <br />
+				• Full fee payment between 12:00 noon on 28 November (Tuesday) till 16:00 hrs on 29 November,
+				2023 (Wednesday)
+			</p>
+			<p>
+				<b>Second Cut off List for Shortlisted Students:</b><br />
+				• 30 November, 2023 (Thursday) <br />
+				• Full fee payment between 12:00 noon on 30 November, 2023 (Thursday) till 16:00 hrs on 1 December,
+				2023 (Friday)
+			</p>
+			<p>
+				• Total Seats - 60 (subject to change)<br />
+				<br />
+				• Certificate Awarded By - Bṛhat Culture Creatives LLP<br />
+				<br />
+				<b>Study Methodology</b><br />
+				A. Online lectures<br />
+				B. Case studies<br />
+				C. Study tour - Central Institute of Psychiatry, Ranchi / NIMHANS, āśramas, etc. Bengaluru /
+				NDDTC, AIIMS Delhi, āṣrama etc.
+			</p>
 		{/if}
 	</section>
 </Shell>
 
 <style lang="sass">
+
+#topguy
+	@media screen and (min-width: 769px)
+		align-items: center
+		text-align: center
+		padding-top: 32px
+		padding-bottom: 32px
+		img
+			object-fit: contain
+			width: 48%
+			margin-bottom: -24px
+	@media screen and (max-width: 768px)
+		align-items: center
+		text-align: center
+		padding-top: 32px
+		padding-bottom: 32px
+		img
+			object-fit: contain
+			width: 64%
+			margin-bottom: -24px
+		h6
+			font-size: 16px
 
 .bio-overlay
 	position: fixed
@@ -687,7 +756,7 @@
 	background: #6c1039
 	color: white
 
-#intro
+#ico
 	img
 		object-fit: contain
 		height: 40px
