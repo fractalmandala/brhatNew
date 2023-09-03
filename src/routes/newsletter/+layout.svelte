@@ -2,25 +2,16 @@
 	import type { LayoutData } from './$types';
 	import type { ActionData } from './$types';
 	import Header from '$lib/components/NewHeader.svelte';
-	import Logout from '$lib/icons/logout.svelte';
-	import Login from '$lib/icons/login.svelte';
 	import AuthModal from '$lib/components/AuthModal.svelte';
 	import { showAuth, authState, menuMode } from '$lib/stores/globalstores';
 	import { slide } from 'svelte/transition';
 	import { quintOut, quintIn } from 'svelte/easing';
-	import { themeMode } from '$lib/stores/globalstores';
 	import { clickOutsideAction } from '$lib/utils/clickoutside';
 
 	export let data: LayoutData;
 	export let form: ActionData;
 	let checker: boolean;
-	let dropdown = false;
 	let fake = false;
-	let logoutModal = false;
-	let closeDimension = 24;
-	let closeColor = '#272727';
-	let loading = false;
-	let logColor = '#a7a7a7';
 
 	function fauxfake() {
 		fake = !fake;
@@ -30,14 +21,6 @@
 		if ($menuMode === true) {
 			$menuMode = false;
 		}
-	}
-
-	function toggleLogout() {
-		showAuth(true);
-	}
-
-	function toggleLogin() {
-		showAuth(false);
 	}
 
 	$: ({ supabase, session } = data);

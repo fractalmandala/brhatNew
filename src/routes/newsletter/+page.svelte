@@ -3,14 +3,7 @@
 	import { slide } from 'svelte/transition';
 	import type { ActionData } from './$types';
 	import Shell from '$lib/components/PageShell.svelte';
-	import {
-		themeMode,
-		breakZero,
-		breakOne,
-		breakTwo,
-		authState,
-		showAuth
-	} from '$lib/stores/globalstores';
+	import { authState } from '$lib/stores/globalstores';
 	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/stores/metastores';
 	import { reveal, defaultFullBox } from '$lib/reveal/exportReveal';
 	import Close from '$lib/icons/close.svelte';
@@ -42,10 +35,6 @@
 
 	function toggleSubscribe() {
 		submodal = !submodal;
-	}
-
-	function toggleLogout() {
-		showAuth(true);
 	}
 
 	function focusName() {
@@ -143,7 +132,8 @@
 		{/if}
 		{#if $authState}
 			<h6 class="title">
-				<a href="/newsletter/1" style="color: #fe4a49">Read</a> Current Issue: Issue 1.1 - July
+				<a href="/newsletter/1" style="color: #fe4a49">Read {$authState}</a> Current Issue: Issue 1.1
+				- July
 			</h6>
 		{:else}
 			<h6 class="title">Current Issue: Issue 1.1 - July</h6>

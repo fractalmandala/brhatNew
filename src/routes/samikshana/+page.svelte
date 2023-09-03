@@ -4,9 +4,12 @@
 	import Header from '$lib/components/NewHeader.svelte';
 	import { samThemes, samDates } from '$lib/utils/supapulls';
 	import { slide } from 'svelte/transition';
-	import { breakZero, breakOne, breakTwo } from '$lib/stores/globalstores';
+	import { breakTwo, authState, showChip } from '$lib/stores/globalstores';
 	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/stores/metastores';
 	import { reveal, defaultFullBox } from '$lib/reveal/exportReveal';
+	import supabase from '$lib/utils/db';
+	import Close from '$lib/icons/close.svelte';
+
 	let isOpen = Array(7).fill(false);
 	isOpen[1] = true;
 	let menuOpen: boolean;
@@ -18,6 +21,12 @@
 	let bio3 = Array(40).fill(false);
 	let bio4 = Array(40).fill(false);
 	let bio5 = Array(40).fill(false);
+	let submodal = false;
+	let showBro = false;
+
+	let signupName: string = 'Full Name';
+	let signupEmail: string = 'Email ID';
+	let phone: string = 'Phone';
 
 	$metaTitle = 'Samikṣaṇā';
 	$metaDescription =
@@ -88,6 +97,35 @@
 		fake = !fake;
 	}
 
+	function toggleSubscribe() {
+		submodal = !submodal;
+	}
+
+	function focusName() {
+		signupName = '';
+	}
+
+	function focusEmail() {
+		signupEmail = '';
+	}
+
+	function focusPass1() {
+		phone = '';
+	}
+
+	async function submitDetails() {
+		const { error } = await supabase
+			.from('form-samikshana')
+			.insert([{ name: signupName, email: signupEmail, phone: phone }])
+			.select();
+		if (error) {
+			showChip('Error! Please sumit again.', '#FE4a49');
+		} else {
+			showChip('Thank you, please access brochure.', '#10D56C');
+			showBro = true;
+		}
+	}
+
 	onMount(async () => {
 		thems = await samThemes();
 		dates = await samDates();
@@ -156,13 +194,8 @@
 				rel="noreferrer"
 				><button class="newbutton big red">APPLY NOW</button>
 			</a>
-			<a
-				href="https://drive.google.com/file/d/1GIKIlKLER2HpCzzf6NQXO_kaa7lZcQnp/view?usp=sharing"
-				target="_blank"
-				rel="noreferrer"
-			>
-				<button class="newbutton big red">VIEW BROCHURE</button>
-			</a>
+
+			<button class="newbutton big red" on:click={toggleSubscribe}>VIEW BROCHURE</button>
 		</div>
 	</section>
 	<section class="rta-column rowgap400 p-top-64" id="newsecond">
@@ -727,16 +760,46 @@
 				rel="noreferrer"
 				><button class="newbutton big red">APPLY NOW</button>
 			</a>
-			<a
-				href="https://drive.google.com/file/d/1GIKIlKLER2HpCzzf6NQXO_kaa7lZcQnp/view?usp=sharing"
-				target="_blank"
-				rel="noreferrer"
-			>
-				<button class="newbutton big red">VIEW BROCHURE</button>
-			</a>
+
+			<button class="newbutton big red" on:click={toggleSubscribe}>VIEW BROCHURE</button>
 		</div>
 	</section>
 </Shell>
+
+{#if submodal}
+	<div class="subscribemodal" transition:slide>
+		<div class="insubmodal">
+			<div class="rta-row">
+				<button class="blank-button" on:click={toggleSubscribe}>
+					<Close />
+				</button>
+			</div>
+			<div class="rta-column null p-bot-16">
+				<h5>Please Enter Details to Access Brochure</h5>
+			</div>
+			<form class="rta-column rowgap100 bord-bot p-bot-16">
+				<input type="text" placeholder={signupName} bind:value={signupName} on:focus={focusName} />
+				<input
+					type="text"
+					placeholder={signupEmail}
+					bind:value={signupEmail}
+					on:focus={focusEmail}
+				/>
+				<input type="text" placeholder={phone} bind:value={phone} on:focus={focusPass1} />
+				<button class="newbutton red" on:click={submitDetails}>Submit</button>
+				{#if showBro}
+					<a
+						href="https://drive.google.com/file/d/1GIKIlKLER2HpCzzf6NQXO_kaa7lZcQnp/view?usp=sharing"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<div class="newbutton big red">VIEW BROCHURE</div>
+					</a>
+				{/if}
+			</form>
+		</div>
+	</div>
+{/if}
 
 <style lang="sass">
 
@@ -865,6 +928,54 @@
 	@media screen and (max-width: 768px)
 		height: 50vh
 		margin-top: 16px
+
+
+.subscribemodal
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 100vw
+	height: 100vh
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 2000
+	background: transparent
+	backdrop-filter: blur(5px)
+	.insubmodal
+		border: 1px solid var(--forline)
+		background: var(--opposite)
+		h5
+			color: var(--background)
+			padding-bottom: 0
+		h5
+			font-weight: 500
+			font-size: 20px
+		form
+			input
+				font-size: 12px
+				padding: 4px 8px
+				outline: none
+		@media screen and (min-width: 1024px)
+			width: 400px
+			min-height: 200px
+			padding: 16px
+			.rta-row
+				justify-content: flex-end
+		@media screen and (max-width: 1023px)
+			width: calc(100vw - 32px)
+			min-height: 200px
+			padding: 16px
+
+.dark
+	.insubmodal
+		input
+			border: 1px solid #e7e7e7
+
+.light
+	.insubmodal
+		input
+			border: 1px solid #272727
 
 
 </style>
