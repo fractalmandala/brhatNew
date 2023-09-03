@@ -108,7 +108,7 @@
 	<script src="https://apis.google.com/js/platform.js"></script>
 </svelte:head>
 
-<Header />
+<Header isSwitch={false} />
 <Acco />
 <Shell
 	metaTitle={$metaTitle}
