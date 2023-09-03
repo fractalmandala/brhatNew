@@ -112,7 +112,7 @@
 			Orient and Occident Perspectives to Human Evolution and Counselling
 		</h6>
 	</section>
-	<section class="rta-column rowgap400 p-top-64 min100" id="newintro">
+	<section class="rta-column rowgap400 p-top-64" id="newintro">
 		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
 			<h2>Course in Brief</h2>
 		</div>
@@ -165,7 +165,7 @@
 			</a>
 		</div>
 	</section>
-	<section class="rta-column rowgap400 p-top-64 min100" id="newsecond">
+	<section class="rta-column rowgap400 p-top-64" id="newsecond">
 		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
 			<h2>The Principles</h2>
 		</div>
@@ -193,7 +193,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="rta-column rowgap400 min100" id="intro">
+	<section class="rta-column rowgap400 p-top-64" id="intro">
 		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
 			<h2>Why Samīkṣaṇā</h2>
 		</div>
@@ -209,7 +209,7 @@
 			5. Do we have a holistic understanding of human nature?
 		</p>
 	</section>
-	<section class="rta-column rowgap400 min100" id="intro">
+	<section class="rta-column rowgap400 p-top-64" id="intro">
 		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
 			<h2>Adhyayana (the Study)</h2>
 		</div>
@@ -224,7 +224,7 @@
 			and improve their overall functioning in life.
 		</p>
 	</section>
-	<section class="rta-column rowgap400 min100" id="intro">
+	<section class="rta-column rowgap400 p-top-64 p-bot-64" id="intro">
 		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
 			<h2>Darśana (Study Philosophy)</h2>
 		</div>
@@ -295,7 +295,7 @@
 			</div>
 		{/if}
 	</section>
-	<section class="rta-column rowgap400 min100 ytop p-top-64" id="fourth">
+	<section class="rta-column rowgap400 min100 p-top-64" id="fourth">
 		{#if isOpen[2]}
 			<div class="rta-grid grid2 colgap600 rowgap600 take">
 				<div class="rta-column rowgap100 bord-bot p-bot-16">
@@ -806,6 +806,8 @@
 #bannerdate
 	background: #6c1039
 	color: white
+	@media screen and (max-width: 768px)
+		font-size: 16px
 
 #ico
 	img
