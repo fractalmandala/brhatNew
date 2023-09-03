@@ -787,17 +787,20 @@ export async function newsletterItems(issueno:number){
 	.eq('type','item')
 	.eq('issueno',issueno)
 	.eq('live', true)
+	.neq('tag', 'video')
 	.order('seq')
   if (error) throw new Error(error.message)
   return data	
 }
 
-export async function filteredNews(tag:string){
+export async function filteredNews(tag:string, issueNo: number){
 	const { data, error } = await supabase
 	.from('brhat-newsletter')
 	.select()
 	.eq('tag',tag)
+	.eq('issueno', issueNo)
 	.eq('live', true)
+	.neq('tag', 'video')
 	.order('seq')
   if (error) throw new Error(error.message)
   return data	

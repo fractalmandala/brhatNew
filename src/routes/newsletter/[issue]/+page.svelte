@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { themeMode, breakZero, breakOne, breakTwo } from '$lib/stores/globalstores';
+	import { breakZero, breakOne, breakTwo } from '$lib/stores/globalstores';
 	import Shell from '$lib/components/PageShell.svelte';
 	import {
 		metaTitle,
@@ -9,21 +9,13 @@
 		metaImage,
 		newsFilter
 	} from '$lib/stores/metastores';
-	import Head from '$lib/components/HeadComponent.svelte';
-	import {
-		newsletterItems,
-		newsletterIssues,
-		newsletterVideos,
-		filteredNews
-	} from '$lib/utils/supapulls';
+	import { newsletterItems, newsletterIssues, filteredNews } from '$lib/utils/supapulls';
 	import { periodicDhiti } from '$lib/utils/localpulls';
 	import { slide } from 'svelte/transition';
 	import '@splidejs/splide/css/core';
 	import Youtuber from '$lib/components/Youtuber.svelte';
-	import supabase from '$lib/utils/db';
 	export let data;
 
-	let issueselector = data.issueData.issueno;
 	let newsitems: any;
 	let newsissues: any;
 	let allitems: any;
@@ -31,11 +23,8 @@
 	let passCheck = true;
 	let fake = false;
 
-	let signupName: string = 'Full Name';
-	let signupEmail: string = 'Email ID';
 	let password: string = 'Password';
 	let repeatPass: string = 'Confirm Password';
-	let themessage = '';
 	let recentDhiti: any;
 	let recentDhiti2: any;
 	let expandedMenu = false;
@@ -64,7 +53,7 @@
 
 	$: if ($newsFilter) {
 		(async () => {
-			newsitems = await filteredNews($newsFilter);
+			newsitems = await filteredNews($newsFilter, data.issueData.issueno);
 		})();
 	}
 
@@ -80,11 +69,11 @@
 		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/17newsletter/brhatadyawall.png';
 
 	onMount(async () => {
-		allitems = await newsletterItems(1);
+		allitems = await newsletterItems(data.issueData.issueno);
 		newsissues = await newsletterIssues();
-		newsitems = await filteredNews($newsFilter);
-		recentDhiti = await periodicDhiti('July, 2023');
-		recentDhiti2 = await periodicDhiti('June, 2023');
+		newsitems = await filteredNews($newsFilter, data.issueData.issueno);
+		recentDhiti = await periodicDhiti('August, 2023');
+		recentDhiti2 = await periodicDhiti('July, 2023');
 	});
 </script>
 
@@ -448,5 +437,11 @@ pre.excerpt
 			.blank-button
 				p
 					font-size: 24px
+
+.singleitem
+	.rta-image
+		img
+			object-fit: contain
+			width: 100%
 
 </style>

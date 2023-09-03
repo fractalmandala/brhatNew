@@ -48,6 +48,7 @@
 			>
 				<a href="/newsletter">Adya</a>
 				<a href="/newsletter/1">Issue 1</a>
+				<a href="/newsletter/2">Issue 2</a>
 			</div>
 		{/if}
 	</div>
