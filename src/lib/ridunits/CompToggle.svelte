@@ -30,7 +30,7 @@
 <svelte:window bind:innerWidth={iW} />
 
 <div class="mainner" class:light={!$themeMode} class:dark={$themeMode}>
-	{#if $themeMode}
+	{#if !$themeMode}
 		<Moon dimension={dim} {color} />
 	{:else}
 		<Sun dimension={dim} {color} />
