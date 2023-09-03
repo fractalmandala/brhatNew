@@ -88,8 +88,8 @@
 	});
 </script>
 
-<div class="letterstrip ta-c bord-bot p-bot-16 p-top-128">
-	<h4 style="font-weight: 500">Bṛhatadya {data.issueData.header}</h4>
+<div class="letterstrip ta-c bord-bot p-bot-16 p-top-128 rowgap200">
+	<h4>Bṛhatadya {data.issueData.header}</h4>
 	<small>{data.issueData.datefrom} | {data.issueData.dateto}</small>
 </div>
 <div class="filterstrip colgap100">

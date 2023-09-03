@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Header from '$lib/components/SubHeader.svelte';
+	import Header from '$lib/components/NewHeader.svelte';
 	import { themeMode } from '$lib/stores/globalstores';
 	import Search from '$lib/ridunits/CompSearch.svelte';
 	import type { SearchItem } from '$lib/types/SearchItem';
@@ -32,10 +32,10 @@
 	let sidebar = false;
 </script>
 
-<Header />
+<Header isSwitch={false} hasMenu={false} />
 
-<div class="pageglobals" class:light={$themeMode} class:dark={!$themeMode}>
-	<h6 class="thin p-bot-32">
+<div class="pageglobals rta-column" class:light={!$themeMode} class:dark={$themeMode}>
+	<h6 class="thin p-bot-32 contains-text">
 		Sorry, this page does not exist. Please use the search below to find what you are looking for.
 	</h6>
 	<form class="rta-row colgap200 xstart">
@@ -81,6 +81,7 @@
 	padding-top: 128px
 	padding-left: 32px
 	padding-right: 32px
+	align-items: center
 
 .pageglobals.dark
 	background: #171717
@@ -91,7 +92,7 @@
 form
 	input
 		padding: 2px 8px
-		border-radius: 10px
+		border-radius: 4px
 		font-size: 14px
 		border: 1px solid var(--borderline)
 

@@ -132,11 +132,13 @@
 		{/if}
 		{#if $authState}
 			<h6 class="title">
-				<a href="/newsletter/1" style="color: #fe4a49">Read {$authState}</a> Current Issue: Issue 1.1
-				- July
+				<a href="/newsletter/2" style="color: #fe4a49">Read </a> Issue 2.1 - August '23
+			</h6>
+			<h6 class="title">
+				<a href="/newsletter/1" style="color: #fe4a49">Read </a> Issue 1.1 - July '23
 			</h6>
 		{:else}
-			<h6 class="title">Current Issue: Issue 1.1 - July</h6>
+			<h6 class="title">Current Issue: Issue 2.1 - August 2023</h6>
 		{/if}
 		<div class="rta-column rowgap200">
 			<p class="small">
