@@ -426,7 +426,7 @@
 		align-content: center
 		min-height: 100vh
 		border-bottom: 1px solid var(--contraster)
-		padding-top: 0px
+		padding-top: 32px
 		img
 			height: 16vh
 			width: 64%

@@ -406,8 +406,6 @@
 	@media screen and (max-width: 1023px)
 		p
 			font-size: 12px
-		small
-			display: none
 
 .widening
 	small
