@@ -149,12 +149,19 @@
 			</div>
 		</div>
 
-		<div class="rta-column" style="align-items: center">
+		<div class="rta-row colgap200 rowgap200 xcenter-d xcenter-m" style="align-items: center">
 			<a
 				href="https://docs.google.com/forms/d/e/1FAIpQLScWmM5Wa2sP3Ayrxg1FeAX1wuPs4XxzSzN9Ukbd7cNKbwTKyA/viewform"
 				target="_blank"
 				rel="noreferrer"
 				><button class="newbutton big red">APPLY NOW</button>
+			</a>
+			<a
+				href="https://drive.google.com/file/d/1GIKIlKLER2HpCzzf6NQXO_kaa7lZcQnp/view?usp=sharing"
+				target="_blank"
+				rel="noreferrer"
+			>
+				<button class="newbutton big red">VIEW BROCHURE</button>
 			</a>
 		</div>
 	</section>
@@ -357,10 +364,28 @@
 				<li>The intersection of science and spirituality</li>
 			</ul>
 			<div class="rta-column rowgap200">
-				<h6 class="title">Selection Criteria:</h6>
+				<h5 class="title bord-bot p-bot-16 bord-top p-top-16">Selection Criteria:</h5>
 				<p>
-					Online Entrance Exam (25 November 2023) followed by a round of Interview (26 November
-					2023) for shortlisted candidates
+					<b>A. Online Entrance Exam:</b><br />
+					• 25 November, 2023 (Saturday); 09:30 hrs - 11:00 hrs<br />
+					• Multiple Choice Questions (MCQ format) with <br />
+					- 50% weightage on areas related to English Comprehension, Aptitude, Logical Reasoning & General
+					Knowledge <br />
+					- 50 % weightage on Basic Knowledge wrt to the core perspectives to be dealt in this certificate
+					course
+				</p>
+				<p>
+					<b>B. Online Interview:</b><br />
+					• 26 November, 2023 (Sunday); 08:00 hrs to 15:00 hrs (only for candidates shortlisted in the
+					online entrance examination)
+				</p>
+				<p>
+					<b>How to prepare? What to expect?</b><br />
+					Basic concepts pertaining to yoga, āyurveda, Counselling, Astrology, Psychology, Political
+					Science, vedānta, Embryology etc. (refer to the preceding sections of the brochure on the core
+					perspectives of the course). In addition, practice attempting a few sample MCQs based on Logical
+					Reasoning, Aptitude, English Comprehension, General Knowledge - available online/offline (e.g.
+					you may refer to model MCQs based on Bank PO/UPSC/CAT/MAT examinations).
 				</p>
 			</div>
 		{:else if isOpen[5]}
@@ -695,12 +720,19 @@
 		{/if}
 	</section>
 	<section class="rta-column p-top-64">
-		<div class="rta-column" style="align-items: center">
+		<div class="rta-row colgap200 rowgap200 xcenter-d xcenter-m" style="align-items: center">
 			<a
 				href="https://docs.google.com/forms/d/e/1FAIpQLScWmM5Wa2sP3Ayrxg1FeAX1wuPs4XxzSzN9Ukbd7cNKbwTKyA/viewform"
 				target="_blank"
 				rel="noreferrer"
 				><button class="newbutton big red">APPLY NOW</button>
+			</a>
+			<a
+				href="https://drive.google.com/file/d/1GIKIlKLER2HpCzzf6NQXO_kaa7lZcQnp/view?usp=sharing"
+				target="_blank"
+				rel="noreferrer"
+			>
+				<button class="newbutton big red">VIEW BROCHURE</button>
 			</a>
 		</div>
 	</section>
