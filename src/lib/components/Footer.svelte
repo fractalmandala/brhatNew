@@ -31,9 +31,9 @@
 	<div class="footermain">
 		<div class="footerlogo">
 			<a class="logoimage" href="/">
-				{#if $themeMode}
+				{#if !$themeMode}
 					<img src="/images/logos/logo-brhat-black.png" alt="Brhat logo black" />
-				{:else if !$themeMode}
+				{:else if $themeMode}
 					<img src="/images/logos/logo-brhat-white.png" alt="Brhat logo white" />
 				{/if}
 			</a>
