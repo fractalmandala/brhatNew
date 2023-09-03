@@ -16,7 +16,7 @@
 	});
 </script>
 
-<footer class="footer back" class:light={$themeMode} class:dark={!$themeMode}>
+<footer class="footer back" class:light={!$themeMode} class:dark={$themeMode}>
 	<div class="footertop">
 		<div
 			class="topbutton"
