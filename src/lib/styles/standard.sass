@@ -76,6 +76,14 @@
 	small.small
 		font-size: 10px
 		font-weight: bold
+	small.cat
+		font-size: 9px
+		background: #fe4a49
+		color: white
+		padding: 2px
+		font-weight: bold
+		width: max-content
+		max-width: 100%
 	.pagilavideo
 		small
 			color: var(--texttwo)
@@ -88,10 +96,10 @@
 	h6
 		line-height: 1.6
 		font-weight: 700
-		font-size: 20px
+		font-size: 18px
 	h6.title
 		line-height: 1.1
-		font-size: 20px
+		font-size: 18px
 		font-weight: 700
 	h3
 		color: var(--opposite)
@@ -178,9 +186,9 @@
 		h5.title
 			font-size: 25px
 		h6.title
-			font-size: 20px
+			font-size: 18px
 		h6
-			font-size: 20px
+			font-size: 18px
 		h2
 			font-size: 36px
 		h3
@@ -456,3 +464,146 @@
 		column-gap: 24px
 		position: sticky
 		top: 80px
+
+.grid-sidebar
+	display: grid
+	grid-template-rows: auto
+	grid-auto-flow: row
+	.grid-sidebar-side
+		grid-area: side
+		display: flex
+		flex-direction: column
+	.grid-sidebar-main
+		grid-area: main
+		display: flex
+		flex-direction: column
+	@media screen and (min-width: 1024px)
+		grid-template-columns: 280px 1fr
+		grid-template-areas: "side main"
+		min-height: 100vh
+		.grid-sidebar-side
+			width: 280px
+			height: 100vh
+			border-right: 1px solid var(--contraster)
+			padding-top: 96px
+			padding-left: 64px
+			padding-right: 32px
+			position: sticky
+			top: 0
+		.grid-sidebar-main
+			grid-area: main
+			padding-top: 80px
+			padding-right: 64px
+			padding-left: 64px
+
+.expander
+	text-transform: uppercase
+	font-weight: 500
+	margin-top: 80px
+	text-align: center
+	@media screen and (min-width: 1024px)
+		outline: 1px solid var(--contraster2)
+		padding: 4px 12px
+		border-radius: 2px
+		color: var(--themer)
+		transition: 0.05s ease-in
+		font-size: 12px
+		&:hover
+			outline: 1px solid #fe4a49
+			color: #fe4a49
+		&.selected
+			background: #fe4a49
+			color: white
+			&:hover
+				background: white
+				color: #fe4a49
+	@media screen and (max-width: 1023px)
+		font-size: 18px
+		border-radius: 4px
+		padding: 4px
+		&:hover
+			background: #fe4a49
+			color: white
+		&.selected
+			background: white
+			color: #fe4a49
+			outline: 1px solid #fe4a49
+			&:hover
+				background: #fe4a49
+				color: white
+
+.sections
+	display: flex
+	.blank-button
+		text-transform: uppercase
+		font-weight: 500
+	@media screen and (min-width: 1024px)
+		flex-direction: row
+		align-items: center
+		justify-content: space-between
+		column-gap: 32px
+		padding-top: 16px
+		margin-top: 80px
+		padding-left: 4px
+		padding-right: 4px
+		.blank-button
+			outline: 1px solid var(--themer)
+			padding: 4px 12px
+			border-radius: 2px
+			color: var(--themer)
+			transition: 0.05s ease-in
+			font-size: 12px
+			font-weight: 600
+			&:hover
+				outline: 1px solid #fe4a49
+				color: #fe4a49
+		.blank-button.selected
+			background: #fe4a49
+			outline: 1px solid #fe4a49
+			color: white
+			&:hover
+				background: #fe4a49
+				color: white
+	@media screen and (max-width: 1023px)
+		flex-direction: column
+		row-gap: 12px
+		padding-left: 4px
+		padding-right: 4px
+		padding-top: 32px
+		.blank-button
+			font-size: 18px
+			border-radius: 4px
+			padding: 4px
+			font-weight: 600
+			&:hover
+				background: #fe4a49
+				color: white
+		.blank-button.selected
+			background: white
+			color: #fe4a49
+			outline: 1px solid #fe4a49
+			&:hover
+				background: #fe4a49
+				color: white
+
+.book
+	@media screen and (max-width: 768px)
+		border-bottom: 1px solid var(--contraster)
+		padding-bottom: 16px
+
+.bookgrid
+	@media screen and (min-width: 769px)
+		row-gap: 48px
+	@media screen and (max-width: 768px)
+		row-gap: 16px
+
+
+.searchform
+	input
+		font-size: 14px
+		outline: none
+		border: 1px solid var(--contraster2)
+	@media screen and (min-width: 769px)
+		input
+			padding: 2px 8px 4px 8px
+			border-radius: 2px

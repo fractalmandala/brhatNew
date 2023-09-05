@@ -62,9 +62,11 @@ $unit128: 128px
 	--svara: #D47915
 	--darkseven: #575757
 	--hilite: #FF9F1C
+	--book: #fafafa
 
 .dark
 	--dhiticolor: #0B6E4F
+	--book: #212121
 	--opposite: #FFFFFF
 	--grade0: #a7a7a7
 	--grade1: #474747
@@ -654,6 +656,11 @@ body, html
 			grid-area: up
 		.down
 			grid-area: down
+
+@media screen and (max-width: 768px)
+	.grid3.stay2
+		grid-template-columns: 1fr
+		grid-template-areas: "."
 	
 
 .outer-box

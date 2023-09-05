@@ -237,8 +237,8 @@
 	<div class="rta-column x22">
 		<div
 			class="maincol dhitiblogbox p-top-32 {$fontSize}"
-			class:light={$themeMode}
-			class:dark={!$themeMode}
+			class:light={!$themeMode}
+			class:dark={$themeMode}
 			bind:this={ref}
 		>
 			<svelte:component this={data.content} class="dhitiblog" />

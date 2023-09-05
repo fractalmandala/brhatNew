@@ -127,7 +127,7 @@ export async function AryanIssue(){
 	const { data, error } = await supabase
 	.from('brhat-aryanissue')
 	.select()
-	.order('sequence',{ascending: false})
+	.order('id',{ascending: false})
 	if (error) throw new Error(error.message)
 	return data
 }
