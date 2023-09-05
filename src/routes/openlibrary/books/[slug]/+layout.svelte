@@ -28,17 +28,15 @@
 	let showResults = false;
 	let loadingStore = false;
 	let width: number;
-	let sidebar = false
+	let sidebar = false;
 
-	function toggleSidebar(){
-		sidebar = !sidebar
+	function toggleSidebar() {
+		sidebar = !sidebar;
 	}
 
 	function toggleMenu() {
 		expandmenu = !expandmenu;
 	}
-
-	
 
 	function newcategory(newCategory: any) {
 		category = newCategory;
@@ -142,7 +140,9 @@
 		justify-content: flex-start
 	@media screen and (min-width: 1024px)
 		padding-bottom: 128px
+		padding-top: 80px
 	@media screen and (max-width: 1023px)
+		padding-top: 80px
 		.documain
 			padding-bottom: 64px
 
