@@ -14,7 +14,7 @@ I am reminded of my teacher, who repeatedly tells us as we keep learning texts: 
 
 ##### One day when we come across a certain context it will dawn upon us as to how that context is connected with the learning that we have done in the text. 
 
-One such thing that happened to me: Over the past 20 years, I have been chanting Camaka Praśna (Yajur Veda). This week, when I was teaching a student this very Camaka Praśna, it just dawned on me to check the meaning. As I was reading the 1<sup>st class="nonce"</sup> anuvāka, I came across 
+One such thing that happened to me: Over the past 20 years, I have been chanting Camaka Praśna (Yajur Veda). This week, when I was teaching a student this very Camaka Praśna, it just dawned on me to check the meaning. As I was reading the 1<sup class="nonce">st</sup> anuvāka, I came across 
 
 >Dakṣa̍śca me̱ 
 
