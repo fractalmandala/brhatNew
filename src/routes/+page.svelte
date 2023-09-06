@@ -36,7 +36,7 @@
 	let title5 = 'Dhīti';
 	let title6 = 'Bṛhat Open Library';
 	let title7 = 'Also Explore';
-	let title8 = 'Upcoming';
+	let title8 = 'Samīkṣaṇā';
 
 	let episodes: any;
 	let threeactions: string | any[];
@@ -178,6 +178,40 @@
 		</div>
 	</section>
 	-->
+	<section class="rta-column rowgap400 min100" id="samikshana">
+		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
+			<h2>
+				<a href="/svarnanjali">
+					{#each title8.split('') as char, i}
+						<span class="text-animation" style="animation-delay: {i * 0.04}s">{char}</span>
+					{/each}
+				</a>
+			</h2>
+			<small>Exploring Why We Are, The Way We Are</small>
+		</div>
+		<div
+			class="rta-column rowgap200"
+			use:reveal={{ delay: 100, duration: 300, transition: 'fade' }}
+		>
+			<h5>
+				“What is the purpose in knowing everything without knowing your own Self?” - Pravrājika
+				Divyanandaprāṇa
+			</h5>
+			<h5>
+				Time and again, scientists from the Orient as well as the Occident have believed that human
+				nature is kaleidoscopic. The study of Human Evolution and Counselling is witnessing an
+				exciting phase of growth; moving beyond the Euro-American theories and thus further
+				exploring culturally rooted perspectives.
+			</h5>
+			<h6>
+				A ground-breaking, multidisciplinary, and innovative study integrating the perspectives of
+				the Orient (vedic) and the Occident (Modern) to examine the ‘HUMAN’ in its entirety.
+			</h6>
+			<a href="/samikshana">
+				<button class="newbutton red big">Visit Page</button>
+			</a>
+		</div>
+	</section>
 	<section class="rta-column rowgap400 min100" id="svarnanjali">
 		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
 			<h2>

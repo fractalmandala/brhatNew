@@ -16,19 +16,19 @@
 	let isBrands = true;
 
 	function linkMrdanga() {
-		window.location.href = 'https://brhat.in/brhat/culture-creatives/brhadmrdanga/';
+		window.location.href = '/mrdanga';
 	}
 
 	function linkMandala() {
-		window.location.href = 'https://brhat.in/brhat/culture-creatives/fractal-mandala-home/';
+		window.location.href = '/mandala';
 	}
 
 	function linkBol() {
-		window.location.href = 'https://brhat.in/brhat/openlibrary/';
+		window.location.href = '/openlibrary';
 	}
 
 	function linkSoa() {
-		window.location.href = 'https://brhat.in/scrollsofaryavarta/';
+		window.location.href = '/aryavarta';
 	}
 
 	function linkAnveshi() {
@@ -36,11 +36,11 @@
 	}
 
 	function linkDrashta() {
-		window.location.href = 'https://brhat.in/brhat/leadership-development/brhat-drasta/';
+		window.location.href = '/drashta';
 	}
 
 	function linkRid() {
-		window.location.href = 'https://brhat.in/rta-in-design/';
+		window.location.href = '/rta';
 	}
 
 	function toggleBrands() {
@@ -132,14 +132,10 @@
 	};
 </script>
 
-<div class="biggie rta-row">
-	<div class="close">
-		<slot />
-	</div>
-	<div class="rta-column col1">
+<div class="biggie rta-grid">
+	<div class="rta-column col1 sincol">
 		<div
-			class="boxer box-of-mrd"
-			id="logo"
+			class="boxer"
 			on:mouseenter={hover}
 			on:mouseleave={unhover}
 			on:click={linkMrdanga}
@@ -149,10 +145,9 @@
 			<span class="typ2" />
 			<span class="typ3" />
 			<span class="typ4" />
-			<LogMrd />
 		</div>
 		<div
-			class="boxer box-of-fm"
+			class="boxer"
 			on:mouseenter={hover7}
 			on:mouseleave={unhover7}
 			on:click={linkMandala}
@@ -162,10 +157,9 @@
 			<span class="typ2" />
 			<span class="typ3" />
 			<span class="typ4" />
-			<LogFm />
 		</div>
 		<div
-			class="boxer box-of-bol"
+			class="boxer"
 			on:mouseenter={hover6}
 			on:mouseleave={unhover6}
 			on:click={linkBol}
@@ -175,15 +169,32 @@
 			<span class="typ2" />
 			<span class="typ3" />
 			<span class="typ4" />
-			<LogBol />
+		</div>
+		<div
+			class="boxer"
+			on:mouseenter={hover6}
+			on:mouseleave={unhover6}
+			on:click={linkBol}
+			on:keydown={linkBol}
+		>
+			<span class="typ1" />
+			<span class="typ2" />
+			<span class="typ3" />
+			<span class="typ4" />
 		</div>
 	</div>
-	<div class="rta-column col2">
-		<div class="message type rta-in-col rowgap-8">
-			<p>Namaste, please use this interactive area to explore our projects and brands.</p>
-			<p>
-				Hover over any name to view a short description. Click on any to open more elaborate detail.
-			</p>
+	<div class="rta-column col2 sincol ycenter">
+		<div
+			class="boxer"
+			on:mouseenter={hover6}
+			on:mouseleave={unhover6}
+			on:click={linkBol}
+			on:keydown={linkBol}
+		>
+			<span class="typ1" />
+			<span class="typ2" />
+			<span class="typ3" />
+			<span class="typ4" />
 		</div>
 		<div class="bigbox">
 			<div class="logo-svg-box box-of-motif">
@@ -863,22 +874,21 @@
 			</div>
 		</div>
 		<div
-			class="boxer box-of-soa"
-			on:mouseenter={hover2}
-			on:mouseleave={unhover2}
-			on:click={linkSoa}
-			on:keydown={linkSoa}
+			class="boxer"
+			on:mouseenter={hover6}
+			on:mouseleave={unhover6}
+			on:click={linkBol}
+			on:keydown={linkBol}
 		>
 			<span class="typ1" />
 			<span class="typ2" />
 			<span class="typ3" />
 			<span class="typ4" />
-			<LogMan />
 		</div>
 	</div>
-	<div class="rta-column col3">
+	<div class="rta-column col3 sincol">
 		<div
-			class="boxer box-of-dra"
+			class="boxer"
 			on:mouseenter={hover5}
 			on:mouseleave={unhover5}
 			on:click={linkDrashta}
@@ -888,10 +898,9 @@
 			<span class="typ2" />
 			<span class="typ3" />
 			<span class="typ4" />
-			<LogDr />
 		</div>
 		<div
-			class="boxer box-of-anv"
+			class="boxer"
 			on:mouseenter={hover4}
 			on:mouseleave={unhover4}
 			on:click={linkAnveshi}
@@ -901,10 +910,9 @@
 			<span class="typ2" />
 			<span class="typ3" />
 			<span class="typ4" />
-			<LogAnv />
 		</div>
 		<div
-			class="boxer box-of-rid"
+			class="boxer"
 			on:mouseenter={hover3}
 			on:mouseleave={unhover3}
 			on:click={linkRid}
@@ -914,438 +922,237 @@
 			<span class="typ2" />
 			<span class="typ3" />
 			<span class="typ4" />
-			<LogRid />
+		</div>
+		<div
+			class="boxer"
+			on:mouseenter={hover6}
+			on:mouseleave={unhover6}
+			on:click={linkBol}
+			on:keydown={linkBol}
+		>
+			<span class="typ1" />
+			<span class="typ2" />
+			<span class="typ3" />
+			<span class="typ4" />
 		</div>
 	</div>
 </div>
 
-<style>
-	.biggie {
-		position: relative;
-	}
+<style lang="sass">
 
-	.close {
-		position: absolute;
-		top: 16px;
-		right: 16px;
-	}
+.biggie
+	background: #121212
+	.col1
+		grid-area: left
+	.col2
+		grid-area: mid
+	.col3
+		grid-area: right
+	&:hover
+		#dottedcircles
+			animation: isrotating 8s ease-in infinite
+		#inn path
+			animation: recolor 0.46s ease-in forwards
+		#mid path
+			animation: recolor 0.7s ease-in 0.46s forwards
+		#outermost path
+			animation: recolor 0.6s ease-in 1.2s forwards
+	@media screen and (min-width: 1024px)
+		grid-template-columns: 240px 1fr 240px
+		grid-template-areas: "left mid right"
+		width: 100vw
+		height: 100vh
+		overflow: hidden
+		justify-content: center
+		justify-items: center
+		padding: 80px
+		.sincol
+			height: calc(100vh - 160px)
+		.col2
+			align-items: center
+			justify-content: space-between
+		.col1, .col3
+			justify-content: space-between
+	@media screen and (min-width: 769px) and (max-width: 1023px)
+		width: 100vw
+		height: calc(100vh - 96px)
+		justify-content: space-between
+	@media screen and (max-width: 768px)
+		width: 100vw
+		height: 100%
+		justify-content: space-between
+		overflow-y: scroll
 
-	.message {
-		text-align: center;
-	}
+.boxer
+	position: relative
+	overflow: hidden
+	transition: all 0.8s ease-in 0.2s
+	box-shadow: 4px 6px 6px #111111, -2px -4px 6px #171717
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	cursor: pointer
+	span
+		position: absolute
+		top: 0
+		left: 0
+	.typ1
+		border-top: 1px solid #fe4a49
+	.typ2
+		border-right: 1px solid #fe4a49
+		width: 100%
+	.typ3
+		border-bottom: 1px solid #fe4a49
+		height: 100%
+	.typ4
+		border-left: 1px solid #fe4a49
+	&:hover
+		box-shadow: 7px 10px 15px #171717, -8px -8px 16px #212121
+		animation: redlines 1.5s ease-in 0.5s forwards
+		.typ1
+			animation: typ1 0.4s ease-in forwards
+		.typ2
+			animation: typ2 0.54s ease-in forwards
+		.typ3
+			animation: typ3 0.7s ease-in forwards
+		.typ4
+			animation: typ4 0.5s ease-in forwards
+	@media screen and (min-width: 1024px)
+		border-radius: 4px
+		width: 280px
+		height: 120px
+		padding: 0 10%
+		justify-content: center
+		align-items: center
+		span
+			border-radius: 4px
+	@media screen and (max-width: 1023px) and (min-width: 769px)
+		border-radius: 4px
+		height: 16vh
+		padding: 0 10%
+		justify-content: center
+		align-items: center
+		span
+			border-radius: 4px
+	@media screen and (max-width: 768px)
+		border-radius: 4px
+		height: 16vh
+		padding: 0 10%
+		justify-content: center
+		align-items: center
+		span
+			border-radius: 4px
 
-	.message p {
-		color: white;
-	}
+.bigbox, .col2
+	overflow: visible
 
-	.biggie {
-		background: linear-gradient(132.9deg, rgba(23, 23, 23, 1) 10.69%, rgba(24, 28, 30, 1) 84.91%);
-	}
-	.boxer {
-		position: relative;
-		overflow: hidden;
-		transition: all 0.8s ease-in 0.2s;
-		box-shadow: 4px 6px 6px #111111, -2px -4px 6px #171717;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		cursor: pointer;
-	}
-	.boxer span {
-		position: absolute;
-		top: 0;
-		left: 0;
-	}
-	.typ1 {
-		border-top: 1px solid #fe4a49;
-	}
-	.typ2 {
-		border-right: 1px solid #fe4a49;
-		width: 100%;
-	}
-	.typ3 {
-		border-bottom: 1px solid #fe4a49;
-		height: 100%;
-	}
-	.typ4 {
-		border-left: 1px solid #fe4a49;
-	}
-	.biggie .col1,
-	.biggie .col2,
-	.biggie .col3 {
-		display: flex;
-		flex-direction: column;
-	}
-	.boxer:hover .typ1 {
-		animation: typ1 0.4s ease-in forwards;
-	}
-	.boxer:hover .typ2 {
-		animation: typ2 0.54s ease-in forwards;
-	}
-	.boxer:hover .typ3 {
-		animation: typ3 0.7s ease-in forwards;
-	}
-	.boxer:hover .typ4 {
-		animation: typ4 0.5s ease-in forwards;
-	}
+@keyframes typ1
+	0%
+		width: 0%
+		margin-left: 0
+	50%
+		width: 100%
+		margin-left: 0
+	100%
+		width: 100%
+		margin-left: 100%
 
-	.boxer:hover {
-		box-shadow: 7px 10px 15px #171717, -8px -8px 16px #212121;
-		animation: redlines 1.5s ease-in 0.5s forwards;
-	}
+@keyframes typ2
+	0%
+		height: 0
+		margin-top: 0
+	50%
+		height: 100%
+		margin-top: 0
+	100%
+		height: 100%
+		margin-top: 100%
 
-	.col1 .boxer,
-	.col3 .boxer {
-		width: 88%;
-	}
-	.bigbox,
-	.col2 {
-		overflow: visible;
-	}
+@keyframes typ3
+	0%
+		width: 100%
+		margin-left: 100%
+	50%
+		width: 100%
+		margin-left: 0
+	100%
+		width: 0
+		margin-left: 0
 
-	@keyframes typ1 {
-		0% {
-			width: 0%;
-			margin-left: 0;
-		}
-		50% {
-			width: 100%;
-			margin-left: 0;
-		}
-		100% {
-			width: 100%;
-			margin-left: 100%;
-		}
-	}
+@keyframes typ4
+	0%
+		height: 100%
+		margin-top: 100%
+	50%
+		height: 100%
+		margin-top: 0
+	100%
+		height: 0
+		margin-top: 0
+	
+@keyframes redlines
+	0%
+		border: 1px solid #373737
+	100%
+		border: 1px solid #fe4a49
 
-	@keyframes typ2 {
-		0% {
-			height: 0;
-			margin-top: 0;
-		}
-		50% {
-			height: 100%;
-			margin-top: 0;
-		}
-		100% {
-			height: 100%;
-			margin-top: 100%;
-		}
-	}
+#edge8,
+#edge7,
+#edge6,
+#edge4,
+#edge3,
+#edge2,
+#edge1,
+#edge5
+	transition: all 1.2s ease-in
+	transform-origin: center center
 
-	@keyframes typ3 {
-		0% {
-			width: 100%;
-			margin-left: 100%;
-		}
-		50% {
-			width: 100%;
-			margin-left: 0;
-		}
-		100% {
-			width: 0;
-			margin-left: 0;
-		}
-	}
+#dottedcircles
+	transform-origin: center center
 
-	@keyframes typ4 {
-		0% {
-			height: 100%;
-			margin-top: 100%;
-		}
-		50% {
-			height: 100%;
-			margin-top: 0;
-		}
-		100% {
-			height: 0;
-			margin-top: 0;
-		}
-	}
+@keyframes isrotating
+	0%
+		transform: rotate(0deg)
+	50%
+		transform: rotate(360deg)
+	100%
+		transform: rotate(0deg)
 
-	@keyframes redlines {
-		0% {
-			border: 1px solid #373737;
-		}
-		100% {
-			border: 1px solid #fe4a49;
-		}
-	}
+.logo-svg-box
+	text-align: center
+	overflow: visible
+	display: flex
+	align-items: center
+	justify-content: center
+	height: 360px
+	svg
+		object-fit: contain
+		height: 80%
+		transform-origin: center center
+		text-align: center
+		overflow: visible
 
-	#edge8,
-	#edge7,
-	#edge6,
-	#edge4,
-	#edge3,
-	#edge2,
-	#edge1,
-	#edge5 {
-		transition: all 1.2s ease-in;
-		transform-origin: center center;
-	}
+#edges
+	transform-origin: center center
+	overflow: visible
+	transition: all 1.7s ease-in
+	z-index: 20
 
-	#dottedcircles {
-		transform-origin: center center;
-	}
+@keyframes recolor
+	0%
+		fill: transparent
+	100%
+		fill: #fe4a49
 
-	.biggie:hover #dottedcircles {
-		animation: isrotating 4s ease-in infinite;
-	}
+#inn path,
+#mid path,
+#outermost path,
+#core path
+	fill: transparent
 
-	@keyframes isrotating {
-		0% {
-			transform: rotate(0deg);
-		}
-		50% {
-			transform: rotate(360deg);
-		}
-		100% {
-			transform: rotate(0deg);
-		}
-	}
+#lines path,
+#edges path
+	filter: drop-shadow(4px 4px 8px #070707)	
 
-	.logo-svg-box {
-		text-align: center;
-		overflow: visible;
-	}
-	.logo-svg-box svg {
-		object-fit: contain;
-		transform-origin: center center;
-		margin-left: auto;
-		margin-right: auto;
-		text-align: center;
-		overflow: visible;
-	}
-
-	#edges {
-		transform-origin: center center;
-		overflow: visible;
-		transition: all 1.7s ease-in;
-		z-index: 20;
-	}
-
-	.biggie:hover #inn path {
-		animation: recolor 0.46s ease-in forwards;
-	}
-
-	.biggie:hover #mid path {
-		animation: recolor 0.7s ease-in 0.46s forwards;
-	}
-
-	.biggie:hover #outermost path {
-		animation: recolor 0.6s ease-in 1.2s forwards;
-	}
-
-	@keyframes recolor {
-		0% {
-			fill: transparent;
-		}
-		100% {
-			fill: #fe4a49;
-		}
-	}
-
-	#inn path,
-	#mid path,
-	#outermost path,
-	#core path {
-		fill: transparent;
-	}
-	#lines path,
-	#edges path {
-		filter: drop-shadow(4px 4px 8px #070707);
-	}
-
-	@media screen and (min-width: 900px) {
-		.biggie {
-			width: 100vw;
-			height: 100vh;
-			justify-content: space-between;
-			padding-left: 80px;
-			padding-right: 80px;
-		}
-		.col1 {
-			width: 24vw;
-			padding: 0 0 96px 0;
-			justify-content: center;
-			align-items: center;
-			gap: 3em;
-		}
-		.col2 {
-			width: 28vw;
-			padding: 0;
-			justify-content: center;
-			align-items: center;
-			padding-top: 2.4em;
-			gap: 0;
-		}
-		.col3 {
-			width: 24vw;
-			padding: 0 0 96px 0;
-			justify-content: center;
-			align-items: center;
-			gap: 3em;
-		}
-		.boxer {
-			border-radius: 4px;
-			height: 16vh;
-			padding: 0 10%;
-			justify-content: center;
-			align-items: center;
-		}
-		.boxer span {
-			border-radius: 4px;
-		}
-		.box-of-soa {
-			width: 20vw;
-		}
-		.box-of-motif svg {
-			width: 85%;
-		}
-	}
-
-	@media screen and (max-width: 899px) and (min-width: 768px) {
-		.biggie {
-			width: 100vw;
-			height: calc(100vh - 96px);
-			justify-content: space-between;
-		}
-		.col1 {
-			width: 28vw;
-			padding: 0;
-			justify-content: center;
-			align-items: center;
-			gap: 3em;
-			padding-bottom: 4em;
-		}
-		.col2 {
-			width: 28vw;
-			padding: 0;
-			justify-content: center;
-			align-items: center;
-			padding-top: 2.4em;
-			gap: 0;
-		}
-		.col3 {
-			width: 28vw;
-			padding: 0;
-			justify-content: center;
-			align-items: center;
-			gap: 3em;
-			padding-bottom: 4em;
-		}
-		.boxer {
-			border-radius: 4px;
-			height: 16vh;
-			padding: 0 10%;
-			justify-content: center;
-			align-items: center;
-		}
-		.boxer span {
-			border-radius: 4px;
-		}
-		.box-of-soa {
-			width: 26vw;
-		}
-		.box-of-motif svg {
-			width: 85%;
-		}
-	}
-
-	@media screen and (max-width: 767px) and (min-width: 576px) {
-		.biggie {
-			width: 100vw;
-			height: calc(100vh - 96px);
-			justify-content: space-between;
-		}
-		.col1 {
-			width: 28vw;
-			padding: 0;
-			justify-content: center;
-			align-items: center;
-			gap: 3em;
-			padding-bottom: 4em;
-		}
-		.col2 {
-			width: 28vw;
-			padding: 0;
-			justify-content: center;
-			align-items: center;
-			padding-top: 2.4em;
-			gap: 0;
-		}
-		.col3 {
-			width: 28vw;
-			padding: 0;
-			justify-content: center;
-			align-items: center;
-			gap: 3em;
-			padding-bottom: 4em;
-		}
-		.boxer {
-			border-radius: 4px;
-			height: 16vh;
-			padding: 0 10%;
-			justify-content: center;
-			align-items: center;
-		}
-		.boxer span {
-			border-radius: 4px;
-		}
-		.box-of-soa {
-			width: 26vw;
-		}
-		.box-of-motif svg {
-			width: 85%;
-		}
-	}
-
-	@media screen and (max-width: 575px) {
-		.biggie {
-			width: 100vw;
-			height: 100%;
-			justify-content: space-between;
-			overflow-y: scroll;
-		}
-		.col1 {
-			width: 100%;
-			padding: 0;
-			justify-content: center;
-			align-items: center;
-			order: 1;
-			gap: 16px;
-		}
-		.col2 {
-			width: 100%;
-			padding: 0;
-			justify-content: center;
-			align-items: center;
-			order: 2;
-		}
-		.col3 {
-			width: 100%;
-			padding: 0;
-			justify-content: center;
-			align-items: center;
-			order: 3;
-			gap: 16px;
-		}
-		.boxer {
-			border-radius: 4px;
-			height: 16vh;
-			padding: 0 10%;
-			justify-content: center;
-			align-items: center;
-		}
-		.boxer span {
-			border-radius: 4px;
-		}
-		.box-of-soa {
-			width: 88%;
-		}
-		.box-of-motif svg {
-			width: 75%;
-		}
-	}
 </style>

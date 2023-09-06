@@ -114,18 +114,27 @@
 
 <style lang="sass">
 
+.footer.light
+	background-color: hsla(0,0%,100%,1)
+	background-image: radial-gradient(at 17% 96%, hsla(0,76%,48%,1) 0px, transparent 50%), radial-gradient(at 0% 0%, hsla(341,0%,100%,1) 0px, transparent 50%)
+
+.footer.dark
+	background-color: hsla(0,0%,7%,1)
+	background-image: radial-gradient(at 17% 96%, hsla(0,76%,42%,0.38) 0px, transparent 50%), radial-gradient(at 0% 0%, hsla(341,0%,7%,1) 0px, transparent 50%)
+
 small
-	color: var(--grade3)
+	color: var(--grade2)
 	a
 		color: var(--textone)
 		&:hover
-			color: #fe4a49
+			color: white
 
 .topbutton
 	height: 24px
 
 .mainlinks
 	cursor: pointer
+	font-weight: 600
 
 .footer
 	display: flex
@@ -140,8 +149,8 @@ small
 	.footerbot
 		height: 64px
 	.footermain
-		border-top: 1px solid var(--contraster2)
-		border-bottom: 1px solid var(--contraster2)
+		border-top: 1px solid var(--contraster)
+		border-bottom: 1px solid var(--contraster)
 	@media screen and (min-width: 1200px)
 		.footertop, .footerbot, .footermain
 			width: 1072px
@@ -246,9 +255,13 @@ small
 		margin: 0 0 4px 0
 		line-height: 1
 
+.light
+	.footerbot
+		small
+			color: white
+
 .mainlinks
 	color: var(--grade2)
-	font-weight: 500
 	margin-bottom: 8px
 	&:hover
 		color: #fe4a49

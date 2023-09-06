@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import { breakZero, breakOne, breakTwo } from '$lib/stores/globalstores';
-	import Head from '$lib/components/HeadComponent.svelte';
+	import Library from '$lib/components/Library.svelte';
+	import Shell from '$lib/components/PageShell.svelte';
 	let height: number;
 
 	$: if ($breakZero || $breakOne) {
@@ -21,75 +22,37 @@
 	$metaType = 'webpage';
 </script>
 
-<Head
-	title={$metaTitle}
+<Shell
+	metaTitle={$metaTitle}
 	metaDescription={$metaDescription}
 	metaUrl={$metaUrl}
 	metaImage={$metaImage}
-/>
-
-<div
-	class="bookpage rta-column"
-	class:levelzero={$breakZero}
-	class:levelone={$breakOne}
-	class:leveltwo={$breakTwo}
 >
-	<div class="rta-row colgap100 glass-bottom p-bot-16 outer-box limit">
-		<div class="rta-column lib">
-			<small><a href="/openlibrary">Return</a></small>
-		</div>
-		<div class="rta-column genre">
-			<small>{data.Type}</small>
-		</div>
-	</div>
-	<h2 class="p-top-16 outer-box limit ta-c">
-		{data.Text}
-	</h2>
-	<div class="rta-column p-bot-32 rowgap200 outer-box limit">
-		<h5 style="color: var(--mand)" class="glass-bottom p-bot-16">{data.author}</h5>
+	<section class="rta-column rowgap200 p-bot-16 bord-bot xcenter m-bot-32">
+		<h4 class="p-top-16 ta-c bord-top">
+			{data.Text}
+		</h4>
+		<p class="ta-c soft">{data.author}</p>
 		{#if data.Description && data.Description.length > 0}
-			<p>{data.Description}</p>
+			<p class="small soft">
+				{data.Description}
+			</p>
 		{/if}
-	</div>
-	<div class="rta-column carrier">
-		<iframe title={data.Text} src={data.Extract} width="100%" {height} allow="autoplay" />
-	</div>
-</div>
+		<a href="/openlibrary">
+			<button class="newbutton tt-u">Return</button>
+		</a>
+	</section>
+	<section class="rta-column xcenter">
+		<div class="carrier">
+			<iframe title={data.Text} src={data.Extract} width="100%" {height} allow="autoplay" />
+		</div>
+	</section>
+	<section class="rta-column">
+		<Library />
+	</section>
+</Shell>
 
 <style lang="sass">
-
-.genre
-	background: var(--mand)
-	width: max-content
-	max-width: 80%
-	padding: 4px 12px
-	border-radius: 4px
-	small
-		color: white
-
-.lib
-	background: var(--themer)
-	width: max-content
-	max-width: 80%
-	padding: 4px 12px
-	border-radius: 4px
-	small
-		color: white
-	&:hover
-		background: #fe4a49
-
-.bookpage.levelzero
-	padding-top: 0
-	align-items: center
-	h2
-		text-align: center
-		line-height: 1.2
-	h5, p
-		text-align: center
-
-.bookpage.leveltwo
-	padding: 0
-	align-items: stretch
 
 .carrier
 	border-radius: 8px
@@ -98,6 +61,9 @@
 	iframe
 		border-radius: 8px
 		border: none
+	@media screen and (max-width: 768px)
+		padding: 0
+		width: 88%
 	
 
 

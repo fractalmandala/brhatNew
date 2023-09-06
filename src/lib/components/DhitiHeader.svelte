@@ -88,12 +88,12 @@
 <div
 	class="appheader"
 	class:hiddenHeader={isInvisible}
-	class:light={$themeMode}
-	class:dark={!$themeMode}
+	class:light={!$themeMode}
+	class:dark={$themeMode}
 	style="opacity: {opa}"
 >
 	<a class="applogo" href="/dhiti" class:fullcol={breakPoint}>
-		{#if $themeMode}
+		{#if !$themeMode}
 			<LogDhiti />
 		{:else}
 			<LogDhitiD />
@@ -101,7 +101,7 @@
 	</a>
 	<div class="rta-row toggling ycenter colgap200">
 		<button class="blank-button" id="single" on:click={toggleVisibility} on:keydown={fauxfake}>
-			{#if $themeMode}
+			{#if !$themeMode}
 				<Moon />
 			{:else}
 				<Sun />
