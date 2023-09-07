@@ -1,5 +1,5 @@
 ---
-title: The Timeless Healer - Guruvayurappan
+title: The Timeless Healer - Guruvāyūrappan
 author: Bṛhat
 category: Svayambodha
 tags: 
