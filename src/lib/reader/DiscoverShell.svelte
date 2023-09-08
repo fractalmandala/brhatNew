@@ -90,7 +90,12 @@
 	});
 </script>
 
-<div class="official" class:lzero={$breakZero} class:lone={$breakOne} class:ltwo={$breakTwo}>
+<div
+	class="official p-top-128"
+	class:lzero={$breakZero}
+	class:lone={$breakOne}
+	class:ltwo={$breakTwo}
+>
 	<div class="p-bot-32 rta-column rowgap300">
 		<div class="rta-row ycenter between bord-bot p-bot-16">
 			<slot name="sectiontitle" />
@@ -130,3 +135,11 @@
 		</SecondSide>
 	</div>
 </div>
+
+<style lang="sass">
+
+.official
+	@media screen and (min-width: 1024px)
+		padding-left: 176px
+
+</style>

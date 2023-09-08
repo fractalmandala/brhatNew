@@ -1,135 +1,74 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import {
-		breakZero,
-		breakOne,
-		breakTwo,
-		langMode,
-		changeLanguage,
-		secondSide
-	} from '$lib/stores/globalstores';
-	import { dbRigveda } from '$lib/utils/synaptic';
-	import supabase from '$lib/utils/db';
-	import SecondSide from '$lib/reader/SecondSide.svelte';
-	import Menu from '$lib/icons/menu.svelte';
-	import Close from '$lib/icons/close.svelte';
-	import Discover from '$lib/reader/DiscoverShell.svelte';
-
-	let purs: any;
-	let limit = 99;
-	let isSearch = false;
-	let input = '';
-	let searchResults: any;
-	let searching = false;
-	let fake = false;
-
-	async function searchPuranas() {
-		searching = true;
-		const { data, error } = await supabase
-			.from('db-rigveda')
-			.select()
-			.textSearch('iast', input)
-			.order('primvalue');
-		if (error) throw new Error(error.message);
-		searching = false;
-		input = '';
-		return data;
-	}
-
-	function handleSearch() {
-		(async () => {
-			searchResults = await searchPuranas();
-		})();
-	}
-
-	function toggleSearch() {
-		isSearch = !isSearch;
-	}
-
-	function setEnglish() {
-		changeLanguage();
-	}
-
-	function toggleSecond() {
-		$secondSide = !$secondSide;
-	}
-
-	function closeSecond() {
-		$secondSide = false;
-	}
-
-	function fauxfake() {
-		fake = !fake;
-	}
-
-	function loadMore() {
-		limit += 100;
-	}
-
-	function loadLess() {
-		limit -= 100;
-	}
-
-	$: if (limit) {
-		(async () => {
-			purs = await dbRigveda(limit);
-		})();
-	}
-
-	onMount(async () => {
-		purs = await dbRigveda(limit);
-	});
+	import Shell from '$lib/components/PageShell.svelte';
+	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/stores/metastores';
+	$metaTitle = 'Ṛgveda Saṃhitā at Bṛhat Open Library';
+	$metaDescription =
+		'Explore Ṛgveda Saṃhitā at the open source library for Indic Knowledge Systems';
+	$metaImage =
+		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/bolherobrhat.webp';
+	$metaUrl = 'https://www.brhat.in/openlibrary/discover/rigveda';
 </script>
 
-<Discover>
-	<h3 slot="sectiontitle">Ṛgveda Saṃhitā</h3>
-	<slot />
-	<div slot="listhindi" class="list">
-		<p><a href="/openlibrary/discover/rigveda/1">मंडल १</a></p>
-		<p><a href="/openlibrary/discover/rigveda/2">मंडल २</a></p>
-		<p><a href="/openlibrary/discover/rigveda/3">मंडल ३</a></p>
-		<p><a href="/openlibrary/discover/rigveda/4">मंडल ४</a></p>
-		<p><a href="/openlibrary/discover/rigveda/5">मंडल ५</a></p>
-		<p><a href="/openlibrary/discover/rigveda/6">मंडल ६</a></p>
-		<p><a href="/openlibrary/discover/rigveda/7">मंडल ७</a></p>
-		<p><a href="/openlibrary/discover/rigveda/8">मंडल ८</a></p>
-		<p><a href="/openlibrary/discover/rigveda/9">मंडल ९</a></p>
-		<p><a href="/openlibrary/discover/rigveda/10">मंडल १०</a></p>
-	</div>
-	<div slot="listenglish" class="list">
-		<p><a href="/openlibrary/discover/rigveda/1">Maṇḍala 1</a></p>
-		<p><a href="/openlibrary/discover/rigveda/2">Maṇḍala 2</a></p>
-		<p><a href="/openlibrary/discover/rigveda/3">Maṇḍala 3</a></p>
-		<p><a href="/openlibrary/discover/rigveda/4">Maṇḍala 4</a></p>
-		<p><a href="/openlibrary/discover/rigveda/5">Maṇḍala 5</a></p>
-		<p><a href="/openlibrary/discover/rigveda/6">Maṇḍala 6</a></p>
-		<p><a href="/openlibrary/discover/rigveda/7">Maṇḍala 7</a></p>
-		<p><a href="/openlibrary/discover/rigveda/8">Maṇḍala 8</a></p>
-		<p><a href="/openlibrary/discover/rigveda/9">Maṇḍala 9</a></p>
-		<p><a href="/openlibrary/discover/rigveda/10">Maṇḍala 10</a></p>
-	</div>
-
-	<div class="rta-column rowgap50" slot="searchform">
-		<form
-			class="searcher rta-row ycenter colgap100 p-bot-32"
-			on:submit|preventDefault={handleSearch}
-		>
-			<input type="text" bind:value={input} />
-			<button class="blank-button" type="submit">Go</button>
-		</form>
-		{#if searching}
-			<p>Searching...</p>
-		{/if}
-		{#if searchResults && searchResults.length > 0}
-			<div class="results">
-				{#each searchResults as item}
-					<p>
-						<a href="/openlibrary/discover/rigveda/{item.mandala}/{item.suktacorrected}/{item.rca}"
-							>{item.index}</a
-						>
-					</p>
-				{/each}
+<Shell
+	metaTitle={$metaTitle}
+	metaDescription={$metaDescription}
+	metaUrl={$metaUrl}
+	metaImage={$metaImage}
+>
+	<section class="rta-grid grid2 left0 rowgap200 p-top-64">
+		<div class="rta-column sidebar p-top-32">
+			<div class="insection rta-column p-bot-16">
+				<small class="bord-bot p-bot-8 m-bot-8"><b>Quick Navigate:</b></small>
+				<div class="rta-row stay colgap100">
+					<div class="rta-column rowgap50" style="width: 30%">
+						<cite>Maṇḍala</cite>
+						<select>Mandala</select>
+					</div>
+					<div class="rta-column rowgap50" style="width: 30%">
+						<cite>Sūkta</cite>
+						<select>sukta</select>
+					</div>
+					<div class="rta-column rowgap50" style="width: 30%">
+						<cite>Ṛca</cite>
+						<select>rca</select>
+					</div>
+				</div>
 			</div>
-		{/if}
-	</div>
-</Discover>
+			<div class="insection rta-column p-bot-16 p-top-8">
+				<small class="bord-top p-top-16 p-bot-8"><b>Select Ṛṣi:</b></small>
+				<select>rishi</select>
+			</div>
+			<div class="insection rta-column p-bot-16 p-top-8">
+				<small class="bord-top p-top-16 p-bot-8"><b>Select Devatā:</b></small>
+				<select>dev</select>
+			</div>
+		</div>
+		<div class="rta-column rowgap200 main p-top-32">
+			<slot />
+		</div>
+	</section>
+</Shell>
+
+<style lang="sass">
+
+.rta-grid
+	min-height: 100vh
+
+select
+	border: 1px solid var(--forline)
+	border-radius: 3px
+	padding: 4px
+	background: var(--forline)
+
+.sidebar
+	@media screen and (min-width: 1024px)
+		border-right: 1px solid var(--contraster2)
+		padding-right: 32px
+		position: sticky
+		top: 0
+
+.main
+	@media screen and (min-width: 1024px)
+		padding-left: 64px
+
+</style>

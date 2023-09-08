@@ -152,6 +152,7 @@ small
 		border-top: 1px solid var(--contraster)
 		border-bottom: 1px solid var(--contraster)
 	@media screen and (min-width: 1200px)
+		min-height: 100vh
 		.footertop, .footerbot, .footermain
 			width: 1072px
 	@media screen and (max-width: 1199px) and (min-width: 1024px)
@@ -183,7 +184,7 @@ small
 		grid-template-columns: 1fr 1fr 1fr 1fr
 		grid-template-rows: auto auto
 		grid-template-areas: "footerlogo . . ."
-		padding: 64px 32px
+		padding: 32px
 		gap: 0 40px
 		align-items: start
 		.footerlogo
