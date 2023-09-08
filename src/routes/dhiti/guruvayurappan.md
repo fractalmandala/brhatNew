@@ -8,7 +8,7 @@ tags:
 - reflections
 excerpt: "Exploring the essence of a divine form that represents healing, purification, and the journey from darkness to light"
 date: "2023-09-07"
-image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/guruvayurappan.webp
+image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/guru.webp
 ---
 
 >सान्द्रानन्दावबोधात्मकमनुपमितं कालदेशावधिभ्यां
