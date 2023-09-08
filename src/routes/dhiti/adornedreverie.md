@@ -10,13 +10,11 @@ date: "2023-08-29"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/adornedreverie/adornedreverie.webp
 ---
 
->The beauty of the necklace exceeds that of nectar and pearls,
->
+>The beauty of the necklace exceeds that of nectar and pearls,  
 >So says Avvaiyār, skilled in speech.
 <cite>Avvaiyār (Tamil: ஔவையார்), from Avvai Kuṟaḷ</cite>
 
->Adorning the large bosom with radiant necklaces,
->
+>Adorning the large bosom with radiant necklaces,  
 >I praise you, Tāḷḷapāka Timmakka, the embodiment of devotion.
 <cite>Verse from Tāḷḷapāka Tirumalammā (తాళ్ళపాక తిరుమలమ్మ)'s Composition</cite>
 
@@ -44,20 +42,15 @@ In the classical Saṃskṛta literature of the post-Vaidika and Paurāṇika pe
 
 In their enchanting verses, the necklace, or "hārikaṇṭha," sparkles as a symbol of unity between beauty and emotion. It mirrors the interconnectedness of life's moments, much like the glistening gems strung together, creating a tapestry of sentiments. The celebrated poet Kālidāsa, in his magnum opus "Meghadūtam," invokes the necklace as a messenger of love across distant realms. 
 
->To the north, where distance blends with infinity,
->
->Where your knowledge falters, my teary eyes shall guide.
->
->One pearl, adorned with a drop of my white tears,
->
+>To the north, where distance blends with infinity,  
+>Where your knowledge falters, my teary eyes shall guide.  
+>One pearl, adorned with a drop of my white tears,  
 >Shall tell the tale of my woe.
 
 In another verse from "Raghuvaṃśam," Kālidāsa masterfully compares the radiant pearls on a necklace to the cool, moon-like faces of women loved by the lord of gods, Śiva. However, he suggests that the swaying Mādhavī creeper, representing a woman's beauty, possesses a charm even more enchanting than the pearls.
 
->Even though a multitude of pearls, strung together,
->
->Adorn the necklace of the cool full-moon faces of women dear to the lord of gods,
->
+>Even though a multitude of pearls, strung together,  
+>Adorn the necklace of the cool full-moon faces of women dear to the lord of gods,  
 >Yet the Mādhavī creeper, swaying in the wind, bestows a sweeter allure.
 <cite>Kālidāsa, in “Raghuvaṃśam," Canto 10, Verse 45</cite>
 
@@ -69,22 +62,17 @@ Throughout these literary works, a garland or necklace often becomes a metaphor 
 
 In the verses of Tamil literature, the "mālai" or necklace signifies the delicate balance between earthly desires and spiritual aspirations. Much like the pearls on the necklace, which are individually exquisite yet together form a harmonious whole, these verses celebrate the harmony between human longings and the quest for higher truths.
 
->Marriage adorns the necklace,
->
->And fame encompasses the world.
->
->Through the union, it is stated,
->
+>Marriage adorns the necklace,  
+>And fame encompasses the world.  
+>Through the union, it is stated,  
 >The Vedas gain a verse of illumination.
 <cite>Adapted from "Puṛanānūṟu" (Poem 33)</cite>
 
->With splendor that rivals the rainbow's hue, a necklace from a nobleman,
->
+>With splendor that rivals the rainbow's hue, a necklace from a nobleman,  
 >Like honey that drips from flowers, it entices my yearning heart and eyes.
 <cite>Verse from Kapilar's "Kaliththogai"</cite>
 
->If a necklace adorns the neck of her who adorns her home,
->
+>If a necklace adorns the neck of her who adorns her home,  
 >It is as though the necklace itself lives a life. 
 <cite>Tirukkuṟaḷ, Couplets 95-96</cite>
 
@@ -92,23 +80,17 @@ In this verse from the Tirukkuṟaḷ, the necklace is not just an adornment, bu
 
 In the poetic tapestry of Telugu literature, the necklace, or "haritalu," weaves stories of elegance and emotional resonance. Each bead on the necklace becomes a metaphor for the moments that string together the experiences of life. In the verses of Telugu literature, the necklace is a motif of grace, akin to the melodic notes of a song. Just as each bead contributes to the beauty of a necklace, each word in these verses is a gem adding to the allure of the composition. The necklace becomes a symbol of eloquence and aesthetics. 
 
->In the necklace of gems that captivates love's desire,
->
->In the restlessness of longing, it draws us near.
->
->Stringing the beads of affection's threads,
->
+>In the necklace of gems that captivates love's desire,  
+>In the restlessness of longing, it draws us near.  
+>Stringing the beads of affection's threads,  
 >It forms the bonds of connection in our hearts.
 <cite>Verse from Annamācāryā's Composition</cite>
 
 In yet another verse, necklaces, made of the radiant pearls and gems illuminate the poetry, reflecting the multifaceted nature of human experience.
 
->Laziness is the nectar-filled ocean, the heart's abode is like gold,
->
->The beloved of Manmadha (Cupid) resides in my heart's depth,
->
->The mind's desire is a fragrant vine, and intoxication is its flower,
->
+>Laziness is the nectar-filled ocean, the heart's abode is like gold,  
+>The beloved of Manmadha (Cupid) resides in my heart's depth,  
+>The mind's desire is a fragrant vine, and intoxication is its flower,  
 >The roots of this ornate necklace are the precious gems of desire.
 <cite>Verse from Annamācāryā's Composition</cite>
 

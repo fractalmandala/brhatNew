@@ -15,7 +15,7 @@ excerpt: "A personal reflection of the writer's experience studying at the Arsha
 
 > न हि ज्ञानेन सदृशं पवित्रमिह विद्यते  
 >    
-> na hi jñānena sadṛiśaṁ pavitramiha vidyate  
+> na hi jñānena sadṛiśaṁ pavitramiha vidyate    
 > there is nothing as purifying as knowledge in this world
 
 The Tamil Nadu State Transport Corporation (TNSTC) bus pulls itself up the winding roads of the verdant Western ghats, at the foothills of Nilgiris, and comes to a sudden halt after the Salim Ali Center for Ornithology, in the midst of a lush jungle teeming with wildlife and birds. There before me is a simple space which matches my own ideal of how a gurukulam ought to be. **Basic, rustic, functional, and carefree.** I am here to learn about myself. Who am I? What is my connection to the world around me? And what is God? What is my relationship with that ‘entity’? Nature in all its bounty; elephants, peacocks, boars, snakes, migratory and local birds included, promise to assist me in my daily sādhanā here. I am elated, I have found a parallel universe!
@@ -38,7 +38,7 @@ I remember how grumpy we got after a few weeks since we were all dealing with ou
 
 As for the adults, once we are undertake such a rigorous training, we will not allow our instinctual personality with uncontrollable urges to govern our life (causing so much crime and strife in society), instead a discerning viveki, a personality who can distinguish between what is ethical and not, what is valuable and not, what is infinite and not, will emerge, resulting in universal benefits says Svāmī Sadatmananda ji. We will lift ourselves from the jīvātmā status to the paramātmā level, and we will keep appreciating this fact, I am not a jīvā, whether completely internalized or not, this thought process will provide a safe space within, to keep that distance from whatever is happening in my life that is unbearable, that I am unable to face, and also from the highs of life which I wish to encounter all the time.
 
-> तुल्यनिन्दास्तुतिर्मौनी सन्तुष्टो येन केनचित्   
+> तुल्यनिन्दास्तुतिर्मौनी सन्तुष्टो येन केनचित्    
 > अनिकेत: स्थिरमतिर्भक्तिमान्मे प्रियो नर:   
 >    
 > tulya-nindā-stutir maunī santuṣṭo yena kenacit   
@@ -57,7 +57,7 @@ Here, in this study, there is no separate theory and practical – this is it, I
 
 Our śāstra tells us that there is no separate philosophy or path to know oneself, advaita vedānta is a complete vision, everything else is its subset, it includes everything that we know and do not know. But for all this to be clear, we must first lead a life of dharma, a life full of fulfilling our duties and responsibilities like Rāma, we must develop love for him who is vigrahavān dharmah, he who embodies dharma. The famous mantra from the Kali Santaraṇa Upaniṣad, which can be chanted anywhere and does not need strict adherence to stipulations otherwise associated with other mantras, tells us how leading a life of dharma (embodied by Rāma) leads us to joy and fulfilment, ānanda (embodied by Kṛṣṇa) :
 
-> हरे राम हरे राम , राम राम हरे हरे  
+> हरे राम हरे राम , राम राम हरे हरे   
 > हरे कृष्ण हरे कृष्ण , कृष्ण कृष्ण हरे हरे  
 >   
 > hare Rāma, hare Rāma, Rāma Rāma, hare hare  

@@ -14,10 +14,10 @@ excerpt: "Dr. Richa Chopra continues her series on Patañjali’s Yoga Sūtras a
 This mini feature in two connected segments, is in continuation to the earlier republished article, ‘Universal Ideas from Patañjali’s Yoga Sūtras on Mind & Mental Health: Philosophy and Practice’. Presenting the first segment which builds on **‘Mind’ as an instrument of ‘Human Perception and Experience’,** in the ultimate pursuit of ‘Glossing Mind through Yoga5 towards Happiness & Quality-of-Life Enhancement’. In the second segment of this mini feature, we will present the philosophy and the techniques of Yoga that can help us to redirect the outward nature of our mind, turning it inward by channelizing the myriad of the vāsanas, kleśas and vṛttis – bringing us closer to our true nature – ānanda (ultimate happiness).
 
 > “Mind has to cease to be mind and become brilliant with something beyond it. Life has to change into a thing vast and calm and intense and powerful that can no longer recognize its old blind eager narrow self of petty impulse and desire. Even the body has to submit to a mutation and be no longer the clamorous animal or the impeding clod it now is, but become instead a conscious servant and radiant instrument and living form of spirit.”
-> <cite>SRI AUROBINDO (1948), THE SYNTHESIS OF YOGA</cite>
+<cite>SRI AUROBINDO (1948), THE SYNTHESIS OF YOGA</cite>
 
 > “..out of bewildering Yogism must come the most scientific practical psychology – and all this must be put in a form so that a child may grasp it.”
-> <cite>SWAMI VIVEKANANDA IN A LETTER TO HIS DISCIPLE, DATED FEBRUARY 17, 1896</cite>
+<cite>SWAMI VIVEKANANDA IN A LETTER TO HIS DISCIPLE, DATED FEBRUARY 17, 1896</cite>
 
 Each one of us aspires to live a wholesome life in its entirety; that by and large encompasses being in good physical health, having positive inter and intrapersonal relationships, a secure financial-social state, a sense of overall achievement and well-being etc. Yet, despite all these ‘markers’ that naturally point to endorsing ‘life as picture perfect’ or ‘near picture perfect’, it is an individual’s ‘perception’ that eventually determines how one feels within and thus, sees the same all around.
 
@@ -38,18 +38,6 @@ Each one of us understands the world differently according to the quality of our
 
 
 **Nature of the Mind**
-According to the Haṭha Yoga Pradīpikā:
-
-
-
-The Bhagavadgītā says
-
-
-
-According to the Haṭha Yoga Pradīpikā,
-
-
-
 The very nature of the mind is extroverted. It yields to the sense objects through the sense organs thereby creating saṃskāras. These saṃskāras give rise to the episodic experiences of pain and pleasure.
 
 According to Patañjali’s Yoga Sūtras, any perception alters the mind. The alteration is called vṛtti. That due to which the modification takes place is pratyaya6, based on external stimulus from the senses. When a stimulus from the outer world impinges on the senses, a vṛtti or a thought is created in the mind. The ego, through its identification with pleasant thoughts experiences happiness and experiences sadness when it identifies with unpleasant thoughts.
@@ -92,19 +80,19 @@ And the mental distractions can manifest in the following ways
 
 Maharṣi Caraka9 says-
 
-> “prajñāparādha (intelligence) prajñāparādho hi mūlaṃ rogāṇām”।
-> Mistakes due to the carelessness of human intelligence are the root cause of diseases, the cause of mental diseases is definitely prajñāparādha.
-> “īrṣyāśokabhayakrodhamānadveṣādaśca ye |
-> manovikārāste’pyuktāḥ sarve prajñāparādhajāḥ” ||
+> “prajñāparādha (intelligence) prajñāparādho hi mūlaṃ rogāṇām”।  
+> Mistakes due to the carelessness of human intelligence are the root cause of diseases, the cause of mental diseases is definitely prajñāparādha.  
+> “īrṣyāśokabhayakrodhamānadveṣādaśca ye |  
+> manovikārāste’pyuktāḥ sarve prajñāparādhajāḥ” ||  
 > Jealousy, grief, fear, anger, hatred – All these disorders of the mind arise out of prajñāparādha.
 
 The Nirvāna Prakaraṇa of the Laghu Yōga Vasiṣṭha, describes in detail the origin and destruction of both mental and bodily diseases.
 
-> śrīvasiṣṭha uvāca |
-> “ādhayo vyādhayaścaiva dvayaṃ duḥkhasya kāraṇam |
-> tannivṛttiḥ sukhaṃ vidyāttatkṣayo mokṣa ucyate || 12 ||
-> dehaduḥkhaṃ vidurvyādhimādhyākhyaṃ vāsanāmayam |
-> maurkhyamūle hi te vidyāttattvajñāne parikṣayaḥ” || 14 ||
+> śrīvasiṣṭha uvāca |  
+> “ādhayo vyādhayaścaiva dvayaṃ duḥkhasya kāraṇam |  
+> tannivṛttiḥ sukhaṃ vidyāttatkṣayo mokṣa ucyate || 12 ||  
+> dehaduḥkhaṃ vidurvyādhimādhyākhyaṃ vāsanāmayam |  
+> maurkhyamūle hi te vidyāttattvajñāne parikṣayaḥ” || 14 ||  
 
 Sage Vasiṣṭha tells Lord Rāma that there are two major classifications of disease. Those that are caused by the mind are primary (adhija vyādhi, the psychosomatic, stress disorders) while those that afflict the body directly are secondary (anadhija vyādhi, infectious disease, accidents etc). Both of them take their rise from our inordinate desires, and it is our ignorance only of the nature of things, that is the source of both.
 

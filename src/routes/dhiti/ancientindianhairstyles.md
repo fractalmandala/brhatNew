@@ -10,26 +10,26 @@ date: "2023-06-30"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/ancientindianhairstyles/ancientindianhairstyles.webp
 ---
 
-> “O your hair, he said,
-> It is like rain clouds
-> moving between branches of lightning.
-> It parts five ways
-> between gold ornaments
-> braided with a length of flowers
-> and the fragrant screwpine.”
+> “O your hair, he said,  
+> It is like rain clouds  
+> moving between branches of lightning.  
+> It parts five ways  
+> between gold ornaments  
+> braided with a length of flowers  
+> and the fragrant screwpine.”  
 > <cite>From the Kalittokai, translation by AK Ramanujan</cite>
 
-> "The sight of me combing my long hair
-> brings you back to your country
-> where you tell me
-> girls sit in the open air
-> combing each other’s hair."
+> "The sight of me combing my long hair  
+> brings you back to your country  
+> where you tell me  
+> girls sit in the open air  
+> combing each other’s hair."  
 > <cite>Poem for an Indian Scholar, from The Poems of Frances Chung</cite>
 
-> “Adorned with golden koṉṟai<sup>1</sup> flowers and garland<br>
-> The new moon glittering on the long hair<br>
-> Accompanied by radiant Mother Mēkalāmbikā<sup>2</sup><br>
-> My Lord will not leave Mēyaccūr<sup>3</sup> temple.”<br>
+> “Adorned with golden koṉṟai<sup>1</sup> flowers and garland  
+> The new moon glittering on the long hair  
+> Accompanied by radiant Mother Mēkalāmbikā<sup>2</sup>  
+> My Lord will not leave Mēyaccūr<sup>3</sup> temple.”  
 > <cite>~ Saint Tirunāvukkaracar<sup><em>4</em></sup></cite>
 
 The vast treasure trove of scriptures and mural representations, spanning from the Vedic period to Vardhana dynasty, provide us with an invaluable window into the everyday lives of the people of ancient India. These captivating works of art and literature are not mere relics of the past; they are portals that unlock the secrets of a bygone era, revealing the intricate tapestry of cultural practices, beliefs, and even the art of hairstyling. 
@@ -104,19 +104,19 @@ Within the ancient scrolls of Viṣnudharmottara Purāṇa's Citrasūtra, a divi
 
 In conclusion, the artistry of hairdressing stood as a treasured tradition in ancient India, where the mastery of intricate braiding and knotting techniques reigned supreme. While the accounts of men's hairstyles were less lavishly detailed, occasional glimpses of matted locks hinted at their distinctive allure. These diverse hairstyles acted as mirrors, reflecting the cultural and aesthetic sensibilities that flourished during that era, while simultaneously serving as potent tools to enhance the beauty and enchantment of individuals. Such has been the captivating power of lustrous, dark tresses, that even the eminent poet Rabindranath Tagore couldn't resist their allure, immortalizing their charm within the verses of his poetic praise.
 
-> Ma tomai dekhey dekhey<br>
-> Ankhi na firey<br>
-> Tomar duar aji khuley gachchay<br>
-> Sonar Mandirey<br>
-> Tomar mukta kesher punja meghey<br>
-> Lukai ashani,<br>
-> Tomar anchal jholey akash taley<br>
+> Ma tomai dekhey dekhey  
+> Ankhi na firey  
+> Tomar duar aji khuley gachchay  
+> Sonar Mandirey  
+> Tomar mukta kesher punja meghey  
+> Lukai ashani,  
+> Tomar anchal jholey akash taley  
 > Roudra-basani
 
-> “Mother we cannot take our eyes off your beautiful face<br>
-> You have opened your door to all that is beautiful<br>
-> In the dark clouds of your hair are hidden the weapons of destruction<br>
-> Your ‘sāṛī is of the colour of golden sunlight<br>
+> “Mother we cannot take our eyes off your beautiful face  
+> You have opened your door to all that is beautiful  
+> In the dark clouds of your hair are hidden the weapons of destruction  
+> Your ‘sāṛī is of the colour of golden sunlight  
 > Mother, we cannot take our eyes off your beautiful face!”
 > <cite>Tagore, translated by Ila Palchoudhuri</cite>
 

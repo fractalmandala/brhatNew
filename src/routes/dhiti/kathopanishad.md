@@ -28,21 +28,15 @@ My aim here is not to do a comparative study or a synthesis, but to showcase the
 Well, what do you do if the world is a theatre? You use the props - the symbols, the allegories herein, for the actor and audience to make sense of their world. Just like the wooden horse. Whether it’s a wooden horse or a chariot in our world, it’s all symbols. Let us look at a symbolism used in _Kaṭhopaniṣad_ from _Kṛṣṇa Yajurveda_ (2).
 
 
-> ###### आत्मानँ रथितं विद्धि शरीरँ रथमेव तु ।
+> आत्मानँ रथितं विद्धि शरीरँ रथमेव तु ।  
+> बुद्धिं तु सारथिं विद्धि मनः प्रग्रहमेव च ॥ 1:3:3  
+> इन्द्रियाणि हयानाहुर्विषयाँ स्तेषु गोचरान् ।  
+> आत्मेन्द्रियमनोयुक्तं भोक्तेत्याहुर्मनीषिणः ॥ 1:3:4
 >
-> ###### बुद्धिं तु सारथिं विद्धि मनः प्रग्रहमेव च ॥ 1:3:3
->
-> ###### इन्द्रियाणि हयानाहुर्विषयाँ स्तेषु गोचरान् ।
->
-> ###### आत्मेन्द्रियमनोयुक्तं भोक्तेत्याहुर्मनीषिणः ॥ 1:3:4
->
-> ###### ātmānaɱ rathitaṁ viddhi śarīraɱ rathameva tu |
->
-> ###### buddhiṁ tu sārathiṁ viddhi manaḥ pragrahameva ca || 1:3:3
->
-> ###### indriyāṇi hayānāhurviṣayāɱ steṣu gocarān |
->
-> ###### ātmendriyamanoyuktaṁ bhoktetyāhurmanīṣiṇaḥ || 1:3:4
+> ātmānaɱ rathitaṁ viddhi śarīraɱ rathameva tu |  
+> buddhiṁ tu sārathiṁ viddhi manaḥ pragrahameva ca || 1:3:3  
+> indriyāṇi hayānāhurviṣayāɱ steṣu gocarān |  
+> ātmendriyamanoyuktaṁ bhoktetyāhurmanīṣiṇaḥ || 1:3:4
 
 The _ātman_ or the Self is the master or rider of a chariot- _ratha_, while the body is the chariot.  The discriminating intellect or _viveka buddhi_ is the charioteer, while the mind is the reins. The senses or _indriyas_ are the horses. The objects of this world that the senses comprehend are the roads on which the chariot treads. The intelligent say that the _ātman_ attached to the body, mind and senses is a _bhoktā_ or enjoyer of things and other beings. We may understand that it runs after the pleasurable.
 

@@ -12,19 +12,19 @@ image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwe
 excerpt: "Eco Feminism, stemming from the Upanishads is the natural consequence of looking at the world as the Divine Mother."
 ---
 
-> मायां तु प्रकृतिं विद्यान्मायिनं च महेश्वरम् ।
+> मायां तु प्रकृतिं विद्यान्मायिनं च महेश्वरम् ।  
 > तस्यावयवभूतैस्तु व्याप्तं सर्वमिदं जगत् ॥
 
-> māyāṃ tu prakṛtiṃ vidyānmāyinaṃ ca maheśvaram
+> māyāṃ tu prakṛtiṃ vidyānmāyinaṃ ca maheśvaram  
 > tasyāvayavabhūtaistu vyāptaṃ sarvamidaṃ jagat
 
 > Know, then, that prakṛti is māyā and that Great God is the Lord of māyā. The whole universe is filled with objects which are parts of its being. (māyā is the Energy (prakṛti), while God is the Energetic)
-> ŚVETĀŚVATARA UPANIṢAD 4.10
+<cite>ŚVETĀŚVATARA UPANIṢAD 4.10</cite>
 
-> दैवी ह्येषा गुणमयी मम माया दुरत्यया ।
+> दैवी ह्येषा गुणमयी मम माया दुरत्यया ।  
 > मामेव ये प्रपद्यन्ते मायामेतां तरन्ति ते ॥
 
-> daivī hyeṣhā guṇa-mayī mama māyā duratyayā
+> daivī hyeṣhā guṇa-mayī mama māyā duratyayā  
 > mām eva ye prapadyante māyām etāṃ taranti te
 
 > My divine energy māyā, consisting of the three modes of nature, is very difficult to overcome. But those who surrender unto Me/brahman/Self cross over it easily.

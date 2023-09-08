@@ -45,7 +45,7 @@ Another mathematician G.B. Halsted, who explored foundations of geometry and int
 #### Agriculture, Industry, and Trade in Ṛgvedic Period
 Considerable progress was made in every aspect of life in Ṛgvedic period, whether it be in the economic, political, or religious spheres. This development was dependent on both religious and non-religious education. Individuals relied on their family and community networks for occupational education, and advancement in these areas of life rested upon a suitable technical, industrial, and commercial education system, which found its outlet in a commensurate diversity of jobs. While there is no direct evidence in Ṛgveda for such an educa­tion, a hint of it can be found in the following verse (RV 9.112.1):
 
-> ना॒ना॒नं वा उ॑ नो॒ धियो॒ वि व्र॒तानि॒ जना॑नाम् ।
+> ना॒ना॒नं वा उ॑ नो॒ धियो॒ वि व्र॒तानि॒ जना॑नाम् ।  
 > तक्षा॑ रि॒ष्टं रु॒तं भि॒षग्ब्र॒ह्मा सु॒न्वन्त॑मिच्छ॒तीन्द्रा॑येन्दो॒ ।।
 
 > Various are our acts, (various) are the occupations of men; the carpenter desires timber, the physician disease, the brāhmaṇa a worshipper who effuses Soma; flow, Indu for Indra.

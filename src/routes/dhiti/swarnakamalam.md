@@ -20,25 +20,25 @@ One of the most alluring aspects of the film is a song that stands out for its l
 
 One of the stanzas offers words of advice to the heroine, disguised as poetry:
 
-> O evening beauty! For the sake of stars shining on the hood of the West, don’t embrace the darkness (night)
-> By becoming a dance of the dawn on the stage of the East, delight the earth by spreading light;
-> Let your movement be an awakening of consciousness;
+> O evening beauty! For the sake of stars shining on the hood of the West, don’t embrace the darkness (night)  
+> By becoming a dance of the dawn on the stage of the East, delight the earth by spreading light;  
+> Let your movement be an awakening of consciousness;  
 > Let the dormant sound of your heartbeat embody the ōmkāra
 
 ##### The retort from the leading lady is entirely relatable with our own struggle to justify our careers, our ambitions, and the search for greener pastures in the midst of grappling with our immense heritage and the immense weight of the responsibility to preserve it.
 
-> A plant whose own roots are akin to binding chains never ceases to await the spring..
-> There is boundless beauty on this earth in every direction —
-> Let the breeze of happiness take you there.
-> May a new song welcome you each day
-> and the moonlight symphony become your companion.
+> A plant whose own roots are akin to binding chains never ceases to await the spring..  
+> There is boundless beauty on this earth in every direction —  
+> Let the breeze of happiness take you there.  
+> May a new song welcome you each day  
+> and the moonlight symphony become your companion.  
 
 Chandrashekhar, addressing her enchantment with the unexplored, the search for new experiences and lands, praises the beauty and dance that she is gifted with, and quotes a śloka from the Bhagavadgītā to bring her attention back to what is, in his opinion, the path she is destined for — that she is blessed to have the beauty and talent to pursue.
 
-> The natural movement of your feet is in itself dance,
-> Your beauty is like a blossoming bud touched by the sun’s rays
-> The eye of sūrya witnessed your dance which is like the dawn*;
-> And caused a hundred-petalled golden lotus to blossom in the midst of a lake in the sky.
+> The natural movement of your feet is in itself dance,  
+> Your beauty is like a blossoming bud touched by the sun’s rays  
+> The eye of sūrya witnessed your dance which is like the dawn;  
+> And caused a hundred-petalled golden lotus to blossom in the midst of a lake in the sky.  
 
 An interjection with the following half a śloka from the Bhagavadgīta is then heard in the background: **“sva-dharme nidhanaṁ śhreyaḥ para-dharmo bhayāvahaḥ”** — which translates to: ‘it is better to die in the discharge of one’s own dharma, than to follow the path of another, which is fraught with danger’.
 

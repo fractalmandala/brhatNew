@@ -18,7 +18,6 @@ Vivāha, from √vaḥ dhātu in Saṃskṛt, for “to bear”, “to carry”.
 
 In our previous discussion, the following was highlighted:
 
-
 ##### The family unit creates guided journeys for self-evolution while making space for fulfillment of our desires. It creates order in chaos. Thus, marriage is the bedrock of civilization, which is a much grander yajña - a much grander order in much grander chaos.
 
 
@@ -57,7 +56,6 @@ Jagat is an objective, external, material real world that each of us jīvas expe
 Aside from these two, and in fact correlating to both of them - is Īśvara. A macrocosmic, collective reflection of the same individual Consciousness, no different from jagat itself as well.
 
 > Īśvara is the Supreme Self with all the attributes (saguṇa) and is the embodiment of the collective Consciousness. It is this Īśvara who decides the Karma-Phala. He is therefore also called Karma-Phala-Dātā. As the initial Sādhakas (Spiritual Seekers), we invoke his presence and blessings, in and through every aspect of life<sup>2</sup>.
-
 
 <div class="ta-c">
 

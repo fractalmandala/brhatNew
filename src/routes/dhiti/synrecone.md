@@ -11,7 +11,7 @@ image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwe
 excerpt: "A preliminary schema to reconnect with civilizational consciousness. Developing a complete Ontology, Epistemology and Teleology for Bhārata."
 ---
 
-Like atheism, decolonization is a rejection, a creation of empty space. But unlike atheism, decolonization carries a forward implication. The empty space created must be filled with a native lens. In the Indian context we speak of a Dhārmika OET- ontology, epistemology, teleology<sup>1</sup>. These technical terms make for a psychological and cultural paradigm, connecting things that are core to existential human queries. Simply put, ontology describes what we know- things that make up reality, epistemology studies how we come to know- the methods of acquiring knowledge, and teleology points us to purpose or value- what do we do with this knowledge, or what is it for?
+Like atheism, decolonization is a rejection, a creation of empty space. But unlike atheism, decolonization carries a forward implication. The empty space created must be filled with a native lens. In the Indian context we speak of a Dhārmika OET- ontology, epistemology, teleology. These technical terms make for a psychological and cultural paradigm, connecting things that are core to existential human queries. Simply put, ontology describes what we know- things that make up reality, epistemology studies how we come to know- the methods of acquiring knowledge, and teleology points us to purpose or value- what do we do with this knowledge, or what is it for?
 
 Decolonization is the installation of an alternative psychological and cultural operating system, in our case one encoded with Dhārmika OET. And Dhārmika code is written in the language of Sanskrit. This is not a claim of superiority to inflame Sanskrit vs. Tamil debates, it is a simple statement of fact. The Indian civilizational consciousness has emerged with Sanskrit as its root, even as it has naturally found expression and aesthetic in a wide variety of languages.
 
@@ -24,7 +24,7 @@ Graham Hancock is right- we are a species with amnesia. And among our species, I
 
 To whatever extent it is true that language shapes reality, Sanskrit’s profound rooting and etymological web gives more insight into reality (cognitive reality, even if not the manifest) than does any other language. And by synaptic reconnection we mean the re-establishment of civilizational cognition, as it might have existed among our ancestors. What did the ṛgvedic ṛṣi hold in his mind’s eye when he chanted on Indra or Agni? What did the upaniṣadic guru mean by the advaita brahman and ātman? When our ancestors turned to īśvara and when they thought of bhagavān, what were the differences internalized in their minds, the ones all diluted to us in the modern world by speaking only of “god?” Not that ready answers are forthcoming in this piece. These questions reflect a larger intent that requires a personal learning curve and much project work, only a preliminary schema for which is being proposed here.
 
-In doing so we follow ancient footsteps, such as those of Amarasiṃha who wrote the Amarakoṣaḥ Nāmaliṅgānuśāsanam- a Sanskrit thesaurus with words classified into ontological categories. Even prior, systems such as Nyāya and Vaiśeṣika bequeathed well defined ontologies. And of course, we always live under the high shadow of Pāṇini, Yāska, Bhartṛhari and more- the earliest known linguist ṛṣis of India. As far as generalizations go, it is safe to say that Indian ontology is a flat one, relatively non hierarchical. It distinguishes only between that which is real – सत्, and that which is not – असत्<sup>2</sup>. Even when it argues for the existence of more than one ontological, as Sāṅkhya does with puruṣa and prakṛti, the real is still the unchanging, the underived. Dualism/ non-dualism, monism, substance essentialism- all these and more have been considered by Indian thought over its long existence, and even if there are disagreements here and there, a coherence does emerge. Let us see how.
+In doing so we follow ancient footsteps, such as those of Amarasiṃha who wrote the Amarakoṣaḥ Nāmaliṅgānuśāsanam- a Sanskrit thesaurus with words classified into ontological categories. Even prior, systems such as Nyāya and Vaiśeṣika bequeathed well defined ontologies. And of course, we always live under the high shadow of Pāṇini, Yāska, Bhartṛhari and more- the earliest known linguist ṛṣis of India. As far as generalizations go, it is safe to say that Indian ontology is a flat one, relatively non hierarchical. It distinguishes only between that which is real – सत्, and that which is not – असत्. Even when it argues for the existence of more than one ontological, as Sāṅkhya does with puruṣa and prakṛti, the real is still the unchanging, the underived. Dualism/ non-dualism, monism, substance essentialism- all these and more have been considered by Indian thought over its long existence, and even if there are disagreements here and there, a coherence does emerge. Let us see how.
 
 #### Preliminary Schema: Objective and Overview
 In its preliminary form, the schema is envisaged as a combination of classifying/qualifying layers and the design principles embedded in them. The first two layers are ontological classifications of reality. Doing this over two instead of one layer allows us to bring in the dimension of ontical vs. ontological- a distinction cardinal to the field ever since Martin Heidegger. In reductive terms, ontical describes objective, clinical categorisations- stuff that makes up existence; while ontological describes existing- Being- what a thing/entity is to itself, its innate nature or properties.
@@ -45,7 +45,7 @@ For native notions, such as deva or ṛta, the schema should show us their true 
 At all levels, the key thing to do is examine core Sanskritic etymologies- for the Pāṇinian dhātu’s potency in re-establishing synaptic connections is, as yet, unrealised. We will do this through processes of ontical bloom/ ucchvas- a term used here to mean the generation of hitherto dormant cognitive pathways, which in turn bring new realizations on matters of being, reality, and existence. In this essay, we will detail layers 1 and 2- the ontical and the ontological.
 
 #### Sūtras, or Design Principles
-As Shri Shivakumar expertly details in (this article)[https://www.indictoday.com/research/sutra-system-realizing-ruta/], sūtras represent an essential unit of Bhāratīya cognition. They are aspects of ṛta encoded in aphorisms or principles in concise, computational forms. Using sūtras we can generate objects- or ontical forms- representing the same truth a given sūtra contains. To quote from the article:
+As Shri Shivakumar expertly details in [this article](https://www.indictoday.com/research/sutra-system-realizing-ruta/), sūtras represent an essential unit of Bhāratīya cognition. They are aspects of ṛta encoded in aphorisms or principles in concise, computational forms. Using sūtras we can generate objects- or ontical forms- representing the same truth a given sūtra contains. To quote from the article:
 
 > At times, these Sūtras are too specific and limited in scope. At times, they expand themselves into containing very large parts of the universe and hence they assume the form of a Fundamental Principle/Mūla Tattva.
 
@@ -118,7 +118,7 @@ Notice a cognitive elegance to these derivations:
 
 No matter which angle we approach from, the Indian civilization makes it abundantly clear that at its center lies Mind, or Consciousness, or Intent– √man (considering, knowing, thinking).
 
-This is not a solipsistic paradigm, but one of extreme responsibility, engagement and empowerment<sup>3</sup>. It also affirms that, as much as dharma is predicated upon community and tradition, it has exalted space for the individual. We give accord to this in L2 by affixing subjective meaning to the natural and lived orders, ie, mapping meaning along subjective aspects that differ person to person. Indeed, what is considered a technological ghṛta of humanity often leads to severe anṛta conditions for the individual. Our matrix must be able to capture these kinds of dissonances, because dissonance is antithetical to the civilizational imperative of being in consonance with ṛta- it is anṛta by definition.
+This is not a solipsistic paradigm, but one of extreme responsibility, engagement and empowerment. It also affirms that, as much as dharma is predicated upon community and tradition, it has exalted space for the individual. We give accord to this in L2 by affixing subjective meaning to the natural and lived orders, ie, mapping meaning along subjective aspects that differ person to person. Indeed, what is considered a technological ghṛta of humanity often leads to severe anṛta conditions for the individual. Our matrix must be able to capture these kinds of dissonances, because dissonance is antithetical to the civilizational imperative of being in consonance with ṛta- it is anṛta by definition.
 
 We design this layer along the pattern set in the previous one. Every category in reality- the ontical- has a certain form in the experience of being- the ontological. Ever since Martin Heidegger used these notions, the Western mind has been trying to come to terms with them. But the Indian mind has grappled with the fact of consciousness long ago and to profound detail. The anecdote abounds that late in his life, when Heidegger encountered Zen Buddhism, he remarked- “this is what I’ve been trying to say all my life.”
 
@@ -187,14 +187,15 @@ If consciousness is what emerges when information inside an individual is proces
 
 ##### Among known life forms, the emergent phenomenon finds maximum expression in homo sapiens. Among known collective groups, it finds maximum expression in civilizational super-aggregates.
 
-This is how over a long course of time (itihāsa) a civilization (Bhārata) has come into consciousness (dharma). And this emergence is along four principles, or sūtras.<sup>4</sup>
+This is how over a long course of time (itihāsa) a civilization (Bhārata) has come into consciousness (dharma). And this emergence is along four principles, or sūtras.
 
-यथा स्मृति: चैतन्यं चैतन्य: जीवं च। तथा इतिहास: संस्कृतिं संस्कृति: समूहं च।।
-yathā smṛtiḥ caitanyaṃ caitanyaḥ jīvaṃ ca tathā itihāsaḥ saṃskṛtiṃ saṃskṛtiḥ samūhaṃ ca
+#### Sūtra 1
+
+##### यथा स्मृति: चैतन्यं चैतन्य: जीवं च। तथा इतिहास: संस्कृतिं संस्कृति: समूहं च।।
+##### yathā smṛtiḥ caitanyaṃ caitanyaḥ jīvaṃ ca tathā itihāsaḥ saṃskṛtiṃ saṃskṛtiḥ samūhaṃ ca
 
 Or, as memory is to consciousness and consciousness to the individual, so history is to civilization and civilization to the group.
 
-#### Sūtra 1
 Memory is core to the conscious experience. You feel you because of an unbroken memory chain that goes deep into your childhood. You identify as that same person, through the years, because it is your mind where the chain of imprints resides. This memory underpins your consciousness, which in turn makes you you.
 
 In similar form, history- or more accurately itihāsa- is core to the civilizational experience. A civilization, or a samṣkṛti, emerges because of an unbroken aitihāsika chain that goes indeterminably far back in time- such that it can only be conceptualized as sanātana. We call the samūha’s trajectory over thousands of years an unbroken civilizational chain, because it is in the civilizational psyche where the chain resides. The itihāsa underpins the civilization, which emerges in form of saṃskṛti.
@@ -203,15 +204,14 @@ Profound realizations dawn with even this single principle internalized. Broken 
 
 We use the word samūha for collective/group to evoke phonetic kinship with saṃskṛti- it is our collective kṛti. And just like consciousness, though phenomenological, it is a unique felt-experience. Decolonisation is shedding the acquired syntactic-semiotic-semantic memeplex of teṣāṃkṛti – their kṛti- or a foreign civilization.
 
-2
-यथा चैतन्य: उभावस्ति कर्ता कृत्यं स्मृते:। तथा संस्कृति: उभावस्ति कर्ता कृत्यं इतिहासस्य।।
-yathā caitanyaḥ ubhāvasti kartā kṛtyaṃ smṛteḥ tathā saṃskṛtiḥ ubhāvasti kartā kṛtyaṃ itihāsasya
+#### Sūtra 2
+
+##### यथा चैतन्य: उभावस्ति कर्ता कृत्यं स्मृते:। तथा संस्कृति: उभावस्ति कर्ता कृत्यं इतिहासस्य।।
+##### yathā caitanyaḥ ubhāvasti kartā kṛtyaṃ smṛteḥ tathā saṃskṛtiḥ ubhāvasti kartā kṛtyaṃ itihāsasya
 
 Or, as consciousness is both the observer and the subject of memory, so civilization is both the observer and the subject of history.
 
-#### Sūtra 2
 We form within our mind’s eye a vision of ourselves- the brain looking at a self-model, the homunculus inside the gray matter. And we are in conversation with it, such that memory and consciousness are in constant interplay. We recollect images and impressions from our memory bank as conscious reflection in the present, and the memory bank is where all conscious experience is stored to create who we are. There is conscious experience even if memory is broken, but it contributes nothing to the sense of self, dissipating ephemerally if not stored in the bank. Similar is itihāsa to the civilisational consciousness, as Prof. Vishwa Adluri writes-
-
 
 > Itihāsa represents the empirical world aesthetically to problematize both being-in-the-world and the relationship of ontology, text, and the world. In other words, itihāsa is history that has overcome historicism: history that has become critical and self-conscious.
 
@@ -219,24 +219,24 @@ Itihāsa is the “mempool” that Indian civilization is in constant conversati
 
 Now, when our access to and traditional engagements with the mempool are broken, our civilization moves forward aimlessly, pulled in the sway of “development, progress and technology” that may land a future Bezos or Musk a lordship over Asteroid X1A21, but we have no vision of where it may land us. What Adluri writes above is in fact the very process these principles highlight- the emergence of self-consciousness through information being processed in complex ways, over a long period of time. When a civilization is in conversation with its past, it generates learnings and ethicality. When a civilization approaches it only as an academic discipline, it may remember the exact date when Columbus landed on a new world, but is bound to repeat the same evils again.
 
-3
-यथा जीव: युक्त:भवति स्वधर्म: ऋतं सचेतं स्मृत्या। तथा संस्कृति: युक्त:भवति सामान्यधर्म: ऋतं सचेतं इतिहासेन।।
-yathā jīvaḥ yuktaḥbhavati svadharmaṛtaṃ sacetaṃ smṛtyā tathā saṃskṛtiḥ yuktaḥbhavati sāmānyadharmaṛtam sacetaṃ itihāsena
+#### Sūtra 3
+
+##### यथा जीव: युक्त:भवति स्वधर्म: ऋतं सचेतं स्मृत्या। तथा संस्कृति: युक्त:भवति सामान्यधर्म: ऋतं सचेतं इतिहासेन।।
+##### yathā jīvaḥ yuktaḥbhavati svadharmaṛtaṃ sacetaṃ smṛtyā tathā saṃskṛtiḥ yuktaḥbhavati sāmānyadharmaṛtam sacetaṃ itihāsena
 
 Or, as an individual yokes self-conduct to the natural order through conscious memory, so too a civilization yokes self-conduct to the natural order through conscious history.
 
-#### Sūtra 3
 This sūtra highlights the parallelism between individual and collective- vyaṣṭi and the samaṣṭi, or the jīva and the samūha. It brings into focus the emergence of dharma- the imperative to be in consonance with ṛta, and points to the true purpose and benefit of historical memory. Individuals can use memory as a process of conscious reflection and self-correction, ultimately to yoke themselves, via yoga, to the natural order. Such is the purpose of itihāsa as well- to inform the samūha in yoking itself to the natural order. This is why the Indian literature of itihāsa-purāṇa cares less for historia than it does for ethics; less for dates and chronologies than it does for deeds and consequences.
 
 If our date of birth wasn’t recorded by our parents, would we even know it? And if we didn’t know it, would it negate our felt experience and mean that we were never born? If these questions point to the absurd, we must relate the same for civilization as well. Thus is dharma called sanātana, thus are our earliest ṛṣis called mānasaputras, and thus is Brahmā himself known as the svayambhu. We care more for the lessons our ancestors embedded into lore, for the things our history can teach us, than we do for the intricacies of historia. For both individual and collective, the purpose of itihāsa is a rooting to dharma, it is the very means to self-conscious reflection.
 
-4
-यथा चैतन्य: युक्ते ऋतं स्वपूर्णमण्डलयति कश्चितवस्थायाम्। तथा संस्कृति: युक्ते ऋतं संपूर्णमण्डलयति कश्चित्वस्थायाम्।।
-yathā caityanyaḥ yukte ṛtaṃ svapūrṇamaṇḍalayati kaścitavasthāyām tathā saṃskṛtiḥ yukte ṛtam sampūrṇamaṇḍalayati kaścitavasthāyām
+#### Sūtra 4
+
+##### यथा चैतन्य: युक्ते ऋतं स्वपूर्णमण्डलयति कश्चितवस्थायाम्। तथा संस्कृति: युक्ते ऋतं संपूर्णमण्डलयति कश्चित्वस्थायाम्।।
+##### yathā caityanyaḥ yukte ṛtaṃ svapūrṇamaṇḍalayati kaścitavasthāyām tathā saṃskṛtiḥ yukte ṛtam sampūrṇamaṇḍalayati kaścitavasthāyām
 
 Or, as a consciousness in yoke to natural rhythm is wholly coherent in any state, so too a civilization in yoke to natural rhythm is wholly coherent in any state.
 
-#### Sūtra 4
 The final principle represents the end-state, the ideal that is aspired to even in the pauruṣārthika frame of mokṣa. It highlights what Hinduism maintains- a human birth is special, since it provides opportunity for ultimate union. But humans are a social species, there is a samūha beyond the jīva, and we desire for both to be in consonance with ṛta.
 
 Such consonance, this principle asserts, puts individual consciousness in a state of coherence, or what could be called sambodhya. The being is complete in itself, or thus svapūrṇa. Similarly, it puts collective consciousness, one operant on sāmānyadharma, in a state of coherence- yoked to ṛta, as-above-so-below realized at the level of civilization. Thence does the samūha become sampūrṇa, a samaṣṭi of vyaṣṭis, a fractal maṇḍala.
@@ -249,14 +249,4 @@ And thus must the jīva and samūha follow their dharma, or the path of consonan
 
 Having begun with a grand ambition of outlining the schema for synaptic reconnection to civilizational consciousness, we have arrived at describing the principles that generate such consciousness to begin with. But we haven’t lost sight of the original aim- the parser and compiler we seek to build.
 
-...continued in Part 2.
-
-<section class="dhitifootnotes">
-<h4>Endnotes/References</h4>
-<ol>
-<li>The more common third is theology, but for reasons we explain in due time, our preference is for teleology.</li>
-<li>There is also a third, māyā, but we take reductive liberty here.</li>
-<li>We sidestep a number of technical and grammatical considerations here and articulate in reductive generalization. The “man/manin” referred to is an affix, or pratyaya, and Mind- √man- is a dhātu. Our generalization leans on the contentious nature of the Uṇādi Sūtras (where derivations of these words are given) to highlight a larger, glaring symmetry.</li>
-</ol>
-</section>
-
+...continued in [Part 2](https://brhat.in/dhiti/synrectwo).

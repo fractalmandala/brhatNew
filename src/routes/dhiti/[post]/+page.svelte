@@ -276,7 +276,7 @@
 				<h3 class="p-top-64 bord-top">Latest Posts:</h3>
 				{#if posts && posts.length > 0}
 					{#each posts as item}
-						<div class="rta-column body p-bot-32">
+						<div class="rta-column body p-bot-32 pagila">
 							<div class="rta-row between dhitistuff">
 								<small>{item.meta.category}</small>
 								<div class="rta-row ycenter">
@@ -288,8 +288,8 @@
 							<h5 class="title">
 								<a href={item.path} target="_blank" rel="noreferrer">{item.meta.title}</a>
 							</h5>
-							<pre class="excerpt">{item.meta.excerpt}</pre>
-							<p class="author p-top-8">
+							<pre class="small">{item.meta.excerpt}</pre>
+							<p class="mid">
 								{item.meta.author}
 								{#if item.meta.authortwo && item.meta.authortwo.length > 0}
 									<span> and {item.meta.authortwo}</span>

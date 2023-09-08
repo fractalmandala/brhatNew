@@ -9,12 +9,11 @@ date: "2023-07-14"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/kuttykahani/1
 ---
 
->###### It is said that the shortest distance between two people is a story. And India is a treasure
->###### house of such stories. Alas, our children know more about Harry Potter than the
->###### Pañcatantra; more about Superman than Hanumān. **Kutty Kahani** is a valiant effort to plug
->###### this gap by bringing our ancient wisdom to children through children.”
+> It is said that the shortest distance between two people is a story. And India is a treasure  
+> house of such stories. Alas, our children know more about Harry Potter than the  
+> Pañcatantra; more about Superman than Hanumān. **Kutty Kahani** is a valiant effort to plug  
+> this gap by bringing our ancient wisdom to children through children.”
 <cite>Ashwin Sanghi, Author</cite>
-
 
 Kutty Kahani was inspired by Hon. Prime Minister’s Mann ki Baat on 27th September, 2020 and his vision of the **importance of storytelling, to build values**. 
 
@@ -22,8 +21,7 @@ The CoViD-19 pandemic saw a resurgence of novel teaching methods, as teachers an
 
 Enter “[Kutty Kahani](https://www.youtube.com/watch?v=FfVa5_MgGiM)”, one such gem.
 
-
->###### A first-of-its kind, this video-embedded ebook has been lauded by no less than the Prime Minister himself, as well as by Śrī. Bibek Debroy, Śrī. Anand Ranganathan, Śrī. Amish, Śrī. Ashwin Sanghi and Śrīm. Sai Swaroopa Iyer.
+###### A first-of-its kind, this video-embedded ebook has been lauded by no less than the Prime Minister himself, as well as by Śrī. Bibek Debroy, Śrī. Anand Ranganathan, Śrī. Amish, Śrī. Ashwin Sanghi and Śrīm. Sai Swaroopa Iyer.
 
 Kutty Kahani is produced by one of India’s most eminent and renowned classical dancers and dance scholars, Dr. Ananda Shankar Jayant, who was conferred with the Padma Śrī in 2007. She is the founder of Nāṭyārambha, a first of its kind Bharatanāṭyam practice app, launched in January 2017, and now followed across the globe. Padma Śrī Dr. Jayant also served the Ministry of Railways as a senior officer.
 

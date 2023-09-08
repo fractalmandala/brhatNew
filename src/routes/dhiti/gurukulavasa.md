@@ -11,7 +11,7 @@ image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwe
 excerpt: "The thrust of all gurukula education of yore was towards self knowledge. Only by knowing our true selves can we claim to be wholesome."
 ---
 
-> मायां तु प्रकृतिं विद्यान्मायिनं च महेश्वरम् ।  
+> मायां तु प्रकृतिं विद्यान्मायिनं च महेश्वरम् ।   
 > तस्यावयवभूतैस्तु व्याप्तं सर्वमिदं जगत् ॥   
 >    
 > māyāṃ tu prakṛtiṃ vidyānmāyinaṃ ca maheśvaram   

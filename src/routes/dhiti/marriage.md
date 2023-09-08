@@ -13,7 +13,7 @@ image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwe
 
 The recent hearings in the Supreme Court of India by a five-judge constitutional bench on same-sex marriage for LGBTQIA+ community have captured the attention of the nation. There are opinions, counter-opinions, and memes in social media and WhatsApp groups, op-eds in print media, debates and discussions in visual media and podcast channels, and casual chitchats and fierce disagreements at office spaces, hang-out joints and even tea stalls. This concerns scientists, activists, lawyers, students, religious figures, teachers, policymakers, philosophers, theists, atheists, parents, partners, and virtually everyone under the sun. 
 
-### Why?
+##### Why?
 
 It is because the fundamental institution of society, marriage, has been put on the altar.
 
@@ -21,7 +21,7 @@ If a parochial view is taken and implemented, it might cause severe damage; hist
 
 Before diving into the topic of same-sex marriage, let us take a step back and analyse the institution of marriage itself.
 
-**Theories of Marriage: Western Sociology**
+#### Theories of Marriage: Western Sociology
 
 Western sociology has adequate literature on the institution of marriage and family. The functionalists understand family as a building block of society with multiple utilities:
 
@@ -54,7 +54,7 @@ Nor does any Western understanding of marriage fit into a consolidated metaphysi
 
 Let us examine what the institution of marriage is, thoroughly - with a holistic, comprehensive, and integral view.
 
-**Marriage is a Yajña**
+#### Marriage is a Yajña
 
 Marriage is an institution of sacrifice. This sacrifice is not in terms of a narrow, altruistic sense, but in terms of the original Vedic Sacrificial Fire, as described in the first hymn of the Rig Veda, the extant work from human antiquity. Marriage is yajña. 
 
@@ -88,7 +88,7 @@ Then, these two individuals evolve by bringing into the world their offspring. T
 
 A two way process occurs where biological, emotional, psychological and social desires are fulfilled alongside a pertinent sacrifice of narrowness of identities and one's lower nature or animal instincts. This is a transaction, an evolution, in accordance with nature's rule and rhythm - A yajña.
 
-**Marriage as enabler of Yoga of Action**
+#### Marriage as enabler of Yoga of Action
 
 This is only a limited and single illustration of the institution of marriage for easy comprehension. The ways of nature are myriad, so as that of the culture built upon it. **The institution of marriage is the first unit where the baton of evolution passes from biological nature to culture.** The evolution which was from physical to chemical matter, from unicellular biological organisms and then leading to multicellular, has now entered the realms of culture. 
 
@@ -108,7 +108,7 @@ Symbolically each member of the family is a purohita - the priest who performs y
 
 This, in a nutshell, is karma yoga, the yoga of action. Marriage and the family unit enable this as well.
 
-**The universal principle of Marriage**
+#### The universal principle of Marriage
 
 Family brings order to chaos. With the amount of information that our fragmented physical, emotional, and intellectual selves encounter, it is difficult to make sense of reality, leave alone long-term evolutionary goals. **The family unit creates guided journeys for self-evolution while making space for fulfilment of our desires. It creates order in chaos.** Thus, marriage is the bedrock of civilization, which is a much grander yajña - a much grander order in much grander chaos. Yet the operating principles are the same. The civilisation is built on the nature of being - involution and evolution. The fulfilment of desires is aligned to the nature of being. 
 
@@ -120,7 +120,7 @@ Religious codes or secular laws that enable this evolutionary character and expa
 
 Nevertheless, we must keep in mind that it is only natural for the universal principle of marriage as an institution to manifest in diverse ways across distinct societies. To fixate on and demand uniformity across the vast manifestations of creation is also to fall into the trap of forcing one parochial worldview onto the varying cosmic diversity.
 
-**Contrast with rights-based order**
+#### Contrast with rights-based order
 
 **This idea of marriage as a union, as yoga, or as a yajña is incompatible with a perpetual rights-based fundamentalist approach**. It is necessary to understand the general prevailing conditions for the genesis of a rights-based system. 
 
@@ -142,7 +142,7 @@ It is rather a true fulfilment and satisfaction of the individual, and the widen
 
 The principle of sacrifice is the primary notion -** where the widening of the individual consciousness through the medium of a cultural institution upholds and sustains the cosmic rhythm**. This foundational understanding shapes and defines the character of this institution of marriage, where rights and duties are then aligned accordingly.
 
-**Conclusion**
+#### Conclusion
 
 The creation of the institution of marriage is not a product of ordinary human consciousness, namely shrunken minds and emotions. **The purpose of this institution is lokasaṃgraha or holding together of the inner and outer worlds, which helps manifest the cosmic order - yajña, the process of involution and evolution.** 
 
@@ -154,7 +154,7 @@ Anything non-integral and non-transformative - like a rights-based view or limit
 
 _Please Note: Further articles in this series by the author will explore different aspects of marriage and also delve into perspectives on same-sex marriages._
 
-**References**:
+#### References:
 
 1. Hymns to the Mystic Fire by Sri Aurobindo [Hymns to the Mystic Fire - The Incarnate Word](https://incarnateword.in/cwsa/16)
 2. Essays on the Gita by Sri Aurobindo [Essays on the Gita - The Incarnate Word](https://incarnateword.in/cwsa/19)

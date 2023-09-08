@@ -35,14 +35,14 @@ In particular, the last two issues are quite complex and we do not take it upon 
 #### Conversion into a Particular Sampradāya
 The Purāṇas began to recognize the possibility of foreigners entering into a particular sampradāya that revolves around a specific deity. The Śivamahāpurāṇa (10th Chapter of the Uttarabhāga of the Vāyavīyasaṃhitā) has Śiva describe the characteristics of his devotees as follows (filler words to be implied into the translation for easier comprehension are given in square brackets while additional explanations are given in parentheses):
 
-> mahātmanāmananyānāṃ mayi saṃnyastacetasām |
-> aṣṭadhā lakṣaṇaṃ prāhurmama dharmādhikāriṇām ||66||
-> madbhaktajanavātsalyaṃ pūjāyāṃś cānumodanam |
-> svayamabhyarcanaṃ caiva madarthe cāṃgaceṣṭitam ||67||
-> matkathāśravaṇe bhaktiḥ svaranetrāṃgavikriyāḥ |
-> mamānusmaraṇaṃ nityaṃ yaśca māmupajīvati ||68||
-> evamaṣṭavidhaṃ cihnaṃ yasminmlecche ‘pi vartate |
-> sa viprendro muniḥ śrīmānsa yatissa ca paṃḍitaḥ ||69||
+> mahātmanāmananyānāṃ mayi saṃnyastacetasām |  
+> aṣṭadhā lakṣaṇaṃ prāhurmama dharmādhikāriṇām ||66||  
+> madbhaktajanavātsalyaṃ pūjāyāṃś cānumodanam |  
+> svayamabhyarcanaṃ caiva madarthe cāṃgaceṣṭitam ||67||  
+> matkathāśravaṇe bhaktiḥ svaranetrāṃgavikriyāḥ |  
+> mamānusmaraṇaṃ nityaṃ yaśca māmupajīvati ||68||  
+> evamaṣṭavidhaṃ cihnaṃ yasminmlecche ‘pi vartate |  
+> sa viprendro muniḥ śrīmānsa yatissa ca paṃḍitaḥ ||69||  
 
 > Of the great souls, of those without [resort to] another [than Myself], of those with (their) minds given up to me, eight-fold qualifications are stated – of those with eligibility in my dharma (Śivadharma – The religion of Śiva) //66
 
@@ -50,32 +50,32 @@ The Purāṇas began to recognize the possibility of foreigners entering into a 
 
 The Gāruḍa-purāṇa has a remarkably similar passage about the characteristics of the ideal Vaiṣṇava.
 
-> iha nityakriyāḥ kuryuḥ snigdhā ye vaiṣṇavāstu te /
-> brahmākṣaraṃ na śṛṇvanvai tathā bhagavateritam // 219.5 //
-> praṇāmapūrvakaṃ bhaktyā yo vadedvaiṣṇavo hi saḥ /
-> tadbhaktajanavātsalyaṃ pūjayaṃś cānumodanam // 219.6 //
-> tatkathāśravaṇe prītir aśrunetrāṅgavikriyāḥ //
-> yena sarvātmanā viṣṇau bhaktyā bhāvo niveśitaḥ // 219.7 //
-> viprebhyaśca kṛtātmatvān mahābhāgavato hi saḥ /
-> viśvopakaraṇaṃ nityaṃ tadarthaṃ saṅgavarjanam /
-> svayamabhyarcanañcaiva yo viṣṇuñcopajīvati // 219.8 //
-> bhaktiraṣṭavidhā hyeṣā yasminmleccho ‘pi vartate /
-> sa viprendro muniḥ śrīmānsa yāti paramāṃ gatim // 219.9 //
+> iha nityakriyāḥ kuryuḥ snigdhā ye vaiṣṇavāstu te /   
+> brahmākṣaraṃ na śṛṇvanvai tathā bhagavateritam // 219.5 //  
+> praṇāmapūrvakaṃ bhaktyā yo vadedvaiṣṇavo hi saḥ /  
+> tadbhaktajanavātsalyaṃ pūjayaṃś cānumodanam // 219.6 //  
+> tatkathāśravaṇe prītir aśrunetrāṅgavikriyāḥ //  
+> yena sarvātmanā viṣṇau bhaktyā bhāvo niveśitaḥ // 219.7 //  
+> viprebhyaśca kṛtātmatvān mahābhāgavato hi saḥ /  
+> viśvopakaraṇaṃ nityaṃ tadarthaṃ saṅgavarjanam /  
+> svayamabhyarcanañcaiva yo viṣṇuñcopajīvati // 219.8 //  
+> bhaktiraṣṭavidhā hyeṣā yasminmleccho ‘pi vartate /  
+> sa viprendro muniḥ śrīmānsa yāti paramāṃ gatim // 219.9 //  
 
 > “They who shall carry out the daily rites (or services), the loving (devotees of Viṣṇu) are the (true) Vaiṣṇava-s. He does not hear the Veda (or the praṇava) or Bhagavān’s utterances. Bowing down first, he who speaks with devotion is a vaiṣṇava. Affection for the devotees, rejoicing in the pūjā (worship) [done by others], happiness in listening to the stories (of Viṣṇu), tearful eyes (due to devotion), agitation in the limbs, by whom his entire self is, with devotion, placed in Viṣṇu through a vipra (could be reference to an initiating ācāryā), he is a great Bhāgavata. Renouncing worldly connections for the sake of serving always, doing arcana (ritual worship) himself is one who depends on Viṣṇu completely. There are eight types of devotion indeed; in whoever, in a mleccha even, these (eight) are, he (the devotee), he is [equal to] a lord of vipras (learned brāhmaṇas), a muni, a venerable one who attains the highest end.”
 
 That this Paurāṇika testimony was not just hyperbole or lip service is clear from the example of the Heliodorus’ inscription at Besnagar, Madhya Pradesh, India. Heliodorus was an ambassador of the Indo-Greek King, Antialkidas Nikephoros who ruled from Takṣaśilā (Taxila). He became a Bhāgavata and, as a sign of his devotion, dedicated a pillar to Vāsudeva at Vidiśā (modern-day Besnagar). The original and translation of the Prākrit-language inscription on this pillar are reproduced from Indian Epigraphy (1998) by Richard Salomon. The letters in square brackets are readings for missing characters as suggested by Salomon.
-
-> (de)vadevasa v(ā)(*sude)vasa garuḍadhvaje ayaṃ  
-> This Garuda-pillar of Vāsudeva, the god of gods,  
+ 
+> (de)vadevasa v(ā)(*sude)vasa garuḍadhvaje ayaṃ   
+> This Garuda-pillar of Vāsudeva, the god of gods,   
 > kārit(e) i(a?) heliodoreṇa bhāgavatena diyasa putrena ta(khkha)silākena was constructed here by Heliodora (Heliodoros), the Bhāgavata, son of Diya (Dion), of Takshasila (Taxila), yonadūtena āgatena mahārājasa the Greek ambassador who came from the Great King amtalikitasa upa(ṃ)ta sakāsaṃ raño Amtalikita (Antialkidas) to King Kāsīput(r)asa bhāgabhadrasa trātārasa Kāsīputra (Kāśīputra) Bhagabhadra, the Saviour, vasena ca(tu)dasena rājena vadhamānasa prospering in (his) fourteenth regnal year.
 
 Here, a person of Greek ethnic origin converted into the Bhāgavata system with a genuine theological conviction as can be seen from the epithet “Devadeva” applied to Vāsudeva (Kṛṣṇa).
 
 In the mūlasūtra of the Niḥśvāsatattvasaṃhitā, which is one of the oldest Śaivatantra (and possibly oldest Siddhānta-Śaiva text), we have the following:
 
-> brāhmaṇo māyavāṃ yastu mlecchaścaiva tvamāyavān /
-> mlecchasyaiva tu dātavyaṃ na tu viprāya dāpayet //
+> brāhmaṇo māyavāṃ yastu mlecchaścaiva tvamāyavān /  
+> mlecchasyaiva tu dātavyaṃ na tu viprāya dāpayet //  
 
 > (Between) a Brāhmaṇa who is deceitful and a mleccha who is indeed without deceit, it is (befitting) of the mleccha for (the Śaiva initiation) to be given [to him] and to the vipra (i.e. the brāhmaṇa), it shall not be given.
 
@@ -83,10 +83,10 @@ In the mūlasūtra of the Niḥśvāsatattvasaṃhitā, which is one of the olde
 
 For instance, we have a verse from the Kiraṇa-Āgama, which was commented upon in tenth-century Kashmir which emphasizes that the mantras employed during an initiation effect their grace on even those living at the margins or peripheries of the social order:
 
-> yathāsthitena bhāvena mantrāḥ kurvanty anugraham /
+> yathāsthitena bhāvena mantrāḥ kurvanty anugraham /  
 > yatas tato ‘ntyajasyāpi dīkṣā kiṃ tv atra mānasī //
 
-> As per the emotional state (or mental disposition), the mantras (employed during initiation) do [the act of granting their] grace /  
+> As per the emotional state (or mental disposition), the mantras (employed during initiation) do [the act of granting their] grace /   
 > Since [that is the case], therefore even to an antyaja (one existing at the margins of the social order), there is initiation but through the mind//
 
 Although this verse does not expressly mention foreigners, the term, *“antyaja”* can be read broadly to refer to not just those who live at the margins within Bhārata but also foreigners who were similarly born far removed from any traditional social order such as the varṇāśrama-dharma.

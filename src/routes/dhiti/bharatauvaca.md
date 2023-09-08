@@ -50,38 +50,23 @@ Our idea behind it is that it ought to be a transformative experience, guiding e
 
 Jai Hind! 
 
->या सर्वासु दिशासु कीर्तितगुणा
->
->श्रेष्ठा च या भूमिषु
->
->विद्यासंस्कृतिरक्षणे च गुरवः 
->
->शिष्या रता सर्वदा।
->
->यत्रत्याश्च जनाः सतां पथि
->
->गता धर्मार्थकामप्रदे
->
->एवं च रक्षणरतो हि परम्परायाः
->
+>या सर्वासु दिशासु कीर्तितगुणा  
+>श्रेष्ठा च या भूमिषु  
+>विद्यासंस्कृतिरक्षणे च गुरवः   
+>शिष्या रता सर्वदा।  
+>यत्रत्याश्च जनाः सतां पथि  
+>गता धर्मार्थकामप्रदे  
+>एवं च रक्षणरतो हि परम्परायाः  
 >सर्वं हि भारत उवाच जगद्धिताय॥
 
->Her fame spread across all lands and universes
->
->foremost among all - extolled for virtue and glory
->
->where - devoted to preserving culture and knowledge - 
->
->the guru and śiṣya carry forth the flag of dharma
->
->where people stick to the path of good shown by the noble 
->
->which leads to dharma artha and kāma
->
->protecting the unbroken paths of traditions
->
->She speaks - the wisdom of an Ancient Civilisation!
->
+>Her fame spread across all lands and universes  
+>foremost among all - extolled for virtue and glory  
+>where - devoted to preserving culture and knowledge -   
+>the guru and śiṣya carry forth the flag of dharma  
+>where people stick to the path of good shown by the noble   
+>which leads to dharma artha and kāma  
+>protecting the unbroken paths of traditions  
+>She speaks - the wisdom of an Ancient Civilisation!  
 >[Bhārata Uvāca](https://www.youtube.com/watch?v=7edK5Z7WCJI&list=PLgxQpzdlXcYI-u3QZvtIUaKB2cJwqfCRS)!
 <cite>by Prof. Gauri Mahulikar</cite>
 

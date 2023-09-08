@@ -10,15 +10,15 @@ image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwe
 excerpt: "Ancient Indian storytelling disseminated functional genres (religious and scientific) and fictional genres: poetry, drama, and stories."
 ---
 
-> As on the mighty ocean’s waves
-Two floating logs together come.
-And, having met, forever part:
-So briefly joined are living things.
-As streams of rivers onward flow,
-And never more return again:
-So day and night still bear away
-The life of every mortal man.
-> — Hitopadeśa
+> As on the mighty ocean’s waves  
+> Two floating logs together come.  
+> And, having met, forever part:  
+> So briefly joined are living things.  
+> As streams of rivers onward flow,  
+> And never more return again:  
+> So day and night still bear away  
+> The life of every mortal man.  
+<cite>Hitopadeśa</cite>
 
 Hugh Blair in his *Lectures on Rhetoric and Belles Lettres* wrote that *“The genius of the eastern nations, in particular, was from the earliest times much turned towards invention, and the love of fiction. Their divinity, their philosophy, and their politics, were clothed in fables and parables.”* The antiquity and pervasiveness of the Indian art of storytelling does not escape notice when contending with the origins and inspiration for some of the world’s most popular literature.
 
@@ -36,11 +36,11 @@ The Kathāsaritsāgara, the “Sea of the Rivers of Story” is probably the gre
 The Facetious Nights of Straparola (1550-1555), also known as The Nights of Straparola, is a collection of 75 stories by Italian fairy-tale collector Giovanni Francesco Straparola. Modeled after Boccaccio’s Decameron which was directly inspired by stories from the Vetālapañcaviṃśati; it is significant as often being called the first European storybook to contain fairytales, and would later influence fairy tale authors like Charles Perrault and Jacob and Wilhelm Grimm.
 
 #### The Pañcatantra
-> Who is not made a better man
-> By contact with a noble friend?
-> A water-drop on lotus-leaves
-> Assumes the splendor of a pearl
-> — Pañcatantra iii. 61
+> Who is not made a better man  
+> By contact with a noble friend?  
+> A water-drop on lotus-leaves  
+> Assumes the splendor of a pearl  
+<cite>Pañcatantra iii. 61</cite>
 
 Franklin Edgerton, in his *Panchatantra Reconstructed* wrote:
 

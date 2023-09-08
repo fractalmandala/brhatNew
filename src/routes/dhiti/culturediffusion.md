@@ -86,9 +86,9 @@ Eg. It is known that local Javanese folklore and mythology engaged with plots of
 
 Here we observe diffusion of not only broader items like stories of Arjuna Wiwāha, but also minor detailed aspects like metrical schemes. Not a crude exchange of goods, but a much deeper seeping of ācāra and vyavahāra, a thorough diffusion of complexity. 
 
-> yad yad ācarati śreṣṭhaḥ
-> tat tad evetaro janaḥ |
-> sa yat pramāṇaṁ kurute
+> yad yad ācarati śreṣṭhaḥ  
+> tat tad evetaro janaḥ |  
+> sa yat pramāṇaṁ kurute  
 > lokas tad anuvartate ||
 
 > yat yat — whatever; ācarati — he does; śreṣṭhaḥ — a respectable leader; tat — that; tat — and that alone; eva — certainly; itaraḥ — common; janaḥ — person; saḥ — he; yat — whichever; pramāṇam — example; kurute — does perform; lokaḥ — all the world; tat — that; anuvartate — follows in the footsteps.

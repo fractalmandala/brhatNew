@@ -30,7 +30,7 @@ Caraka is said to have written a description of the code of ethics to be followe
 
 #### The Religious Element
 > I swear by Apollo the physician, and Asclepius, and Hygieia and Panacea and all the gods and goddesses as my witnesses, that, according to my ability and judgment, I will keep this Oath and this contract.
-> (TRANSLATION BY MICHAEL NORTH)
+<cite>(TRANSLATION BY MICHAEL NORTH)</cite>
 
 An oath, even considering the Oxford definition, is inherently and inescapably religious – it involves the appeal to either God or a sacred or revered object that a statement is true or that a promise shall be kept. While the original oath written by Hippocrates begins by invoking “Apollo, Asclepius, and by Health and Panacea”, along with all the Gods and Goddesses; Caraka prescribes a hōma to be conducted at the time of initiation, with the student required to offer libations to and utter mantras evoking Brahman, the God Agni, the celestial physician Dhanvantari, the Lord of creation Dakṣa, the celestial physician-twin Aśvins, the God of Gods Indra, and Ṛṣis who were authors of texts related to the life-sciences. The student, supervised by his guru, was also required to worship a number of physicians by making respectful salutations to them, and in the presence of these physicians, brāhmaṇas, and Agni as witness, take upon himself the instructions of his teacher and the contents of the oath.
 

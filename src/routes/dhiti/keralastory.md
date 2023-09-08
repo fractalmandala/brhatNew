@@ -21,14 +21,11 @@ image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwe
 <a href="https://www.anandranganathan.com/2017/04/14/ambedkar-on-islam-the-story-that-must-not-be-told/" class="cite">Dr B. R. Ambedkar</a>
 
 >“Everything beyond that (in Islam) not only is bad, but must be destroyed forthwith; at a moment’s notice, every man or woman who does not exactly believe in that must be killed; everything that does not belong to this worship must be immediately broken; every book that teaches anything else must be burnt. From the Pacific to the Atlantic, for five hundred years blood ran all over the world. That is Mohammedanism!
-
->[Swami Vivekananda](https://www.opindia.com/2020/09/scathing-remarks-of-saint-swami-vivekanada-on-mohammedans-muslims/)
+<a href="https://www.opindia.com/2020/09/scathing-remarks-of-saint-swami-vivekanada-on-mohammedans-muslims/" class="cite">Swami Vivekananda</a>
 
 
 >He (Gandhi) lamented that the sword is too much in evidence among the Muslims despite the message of the Prophet. He advised that it must be sheathed if Islam is to be what it means - peace. (Gandhi, 1949, 131) He clarified that however good Islam may be in abstract the only way it can be judged is by the effect produced by each of its votaries considered as a whole. (Gandhi, 1949, 63) He told the Muslims that they cannot protect Islam with the lathi (stick) or sword. The age of lathi (stick) is gone. A religion will be tested by the purity of its adherents. He argued that if a religion is left to the goondas (criminals) to defend it, it will do serious harm to that religion including Islam. Islam will in that case no longer remain the faith of fakirs (mendicant monks) and worshippers of Allah. (Gandhi, 1949, 78) 
-
->[Gandhi](https://www.mkgandhi.org/articles/gandhi-on-theory-and-practice-of-islam.html)
-
+<a href="https://www.mkgandhi.org/articles/gandhi-on-theory-and-practice-of-islam.html" class="cite">Gandhi</a>
 
 We have forgotten what Dr. B.R. Ambedkar and Gandhi have said about Islam (and Christianity). We have forgotten what Svāmī Vivekananda has said about both these religions. We have all but forgotten the [Ajmer Scandal](https://theprint.in/features/gangraped-in-teens-visiting-courts-as-grandmothers-1992-ajmer-horror-is-an-open-wound/814073/). We have blinded ourselves to the terrible plight of [ Nadia Murad ](https://twitter.com/SortedEagle/status/1659217778111389696)and the Yezidis. All this would have continued to be blindsided but for this one film. It has indeed woken us up from our deep slumber, now it remains to be seen what we do with what we know. 
 
@@ -36,7 +33,7 @@ As such Hindus mentally and psychologically enjoy high levels of freedom that ar
 
 This gives Hindus unprecedented levels of emotional and psychological independence bordering on self centred individuality, which can prove detrimental in the long run. On the other hand, Hindus are simply unable to grasp how close-minded even Westerners are in their outlook, despite the tag of being ‘developed’ or ‘modern’. Thus this dichotomy causes problems only for the Hindus; we are unable to forge communities and networks solely on the basis of being Hindus (as do others) and we assume ‘others’ think, feel, and interact in a similar fashion as we do, which is far from true. We cannot conceive of the hatred for the ‘other’ that is in-built in Abrahamic theologies, especially in Islam, which sanctions even murder and rape of kafirs/ non-believers. 
 
-A simple but stark difference lies in the ultimate destination and goal of various panthas and matas, think for a moment what the final destination is for a Buddhist, Christian, Hindu, Jew, and a Muslim. This exercise in itself will answer a lot of unspoken questions. Suffice to say that sex and sexual perversions are a great temptation for people of baser instincts for whom spirituality and elevated levels of consciousness are anathema. While a Hindu has theology, epistemology, and ontology to work with, towards liberation, Abrahamic Religions are all about theology and servitude to a male god in heaven. Dr. Aravinda Rao’s write up [here ](https://myind.net/Home/viewArticle/the-quintessential-lesson-from-the-kerala-story-cultivate-a-discreet-understanding-of-indic-religions/)is a good primer on essential differences, a starting point for all discussions.
+A simple but stark difference lies in the ultimate destination and goal of various panthas and matas, think for a moment what the final destination is for a Buddhist, Christian, Hindu, Jew, and a Muslim. This exercise in itself will answer a lot of unspoken questions. Suffice to say that sex and sexual perversions are a great temptation for people of baser instincts for whom spirituality and elevated levels of consciousness are anathema. While a Hindu has theology, epistemology, and ontology to work with, towards liberation, Abrahamic Religions are all about theology and servitude to a male god in heaven. Dr. Aravinda Rao’s write up [here](https://myind.net/Home/viewArticle/the-quintessential-lesson-from-the-kerala-story-cultivate-a-discreet-understanding-of-indic-religions/)is a good primer on essential differences, a starting point for all discussions.
 
 We would not have been able to watch the Kerala Story but for this man [Ameet Naik](https://www.youtube.com/watch?v=-A0yjDFK-Cg), who battled hard in the courts to make sure it got a release in the theatres. While the Supreme Court has stayed a [ban](https://swarajyamag.com/politics/why-scs-order-revoking-bengals-ban-on-the-kerala-story-was-an-exercise-in-futility) on the film's screening in West Bengal, there continues to be shadow banning of it both in Tamil Nadu and in Mamata Banerjee’s domain. And this film which was finally released in the U.K. had to face violent disruptions of its screening by [Islamists](https://twitter.com/salonivxrse/status/1659861508246106113) who were also involved in the recent Leicester riots and mob violence against Hindus there. 
 
@@ -48,7 +45,7 @@ One cannot hold a grudge if the victims want to speak out aloud, at what they ha
 
 Kerala Story is a well made film exploring the above issues cinematically and not in an amateur manner. Visually it depicts bhībhatsa and bhayānaka rasās, yet appeals to us with its drone shots of mesmerising lush green Kerala and foreboding arid brown Afghanistan. The film’s lead actors essay important roles with conviction, and its high production values are a sure shot draw. Which could explain the pull. Despite its success many have agitated against it for various reasons. 
 
-**The Kerala Story: Is this art or fact?**
+#### The Kerala Story: Is this art or fact?
 
 If this is simply art, if a film is an expression of artistic tendencies, then just as Hindus were told to be tolerant and be accepting of M. F. Hussain’s nudes of revered goddesses for the sake of art, so too must others accept this film as art, and let it be. Watch it if you are keen, if not ignore. If it is about facts, there really should be no reason to object, unless one is afraid that heretofore unknown facts will be revealed in public. That the agenda of making India, especially Kerala, an Islamic state will now wake up the- forever-in-slumber Hindus. 
 
@@ -68,17 +65,17 @@ There is no place to hide anymore, no more fences to sit upon. Meanwhile Hindus 
 
 <img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/keralastory/keralastory2.webp" alt="two"/>
 
-**What is the Kerala Story:**
+#### What is the Kerala Story:
 
 The state of Kerala (along with Tamil Nadu, West Bengal) has the dubious distinction of hosting [Shari’a ](https://indusscrolls.com/state-within-state-massive-sharia-compliant-township-exclusively-for-muslims-coming-up-in-kerala)compliant villages. In the northern districts of Malappuram, Kozhikode, Kannur, Kasargoḍ and Wayanad; the Malabar lands which were once forcibly converted by the infamous plunderer and rapacious zealot Tipu, radicalization has caused many areas to conform to a strict Islamic code. Here democracy and its directions hold no water. Of course the benefits that a democracy provides to ‘minorities’ is delightfully consumed, without contributing to the idea of democracy either in trust or in act. One such village is [Attikad](https://www.news18.com/news/india/kerala-missing-youths-finding-real-islam-at-attikkad-village-1269241.html). 
 
 Such villages and townships are an attempt to create Dar-ul-Islam, the house of Islam within Dar-ul-Harb, the house of War i.e., the land which is not yet conquered by Islam nor lives per its tenets. It is therefore incumbent on every Muslim to either convert others into their fold for the D-day of Qayamat, or kill them if they refuse to see reason. Or force them to flee. This is what was announced from the mosques - [raliv galiv ya chaliv](https://tfipost.com/2022/04/raliv-galiv-ya-chaliv-is-still-a-reality-in-kashmiri-masjids/) - in Kashmir in the 90s, forcing the Kashmiri Pandits to flee their ancestral land. Convert, Die, or Leave. 
 
-**That was the Kashmir Story. **
+**That was the Kashmir Story.**
 
 We being Hindus and idolaters, we will always be kafirs, people whose women are religiously sanctioned for rape (Quran 4:24) being ‘maal e ghanimat' and the men for slaughter, ‘wajib-ul-qatl’, per Shari’a. One has to only read up the horror stories of what ISIS did to the Yezidi women (and men) to comprehend the perversions that are allowed in the name of an ideology. This status of being dhimmis/ zimmis is what is permitted at the most under such laws wherein Hindus pay jizya for the right to exist. Of course all this is mediaeval ideology, but unfortunately there are many strict adherents of this ideology and yes, most are very well educated and come from the most literate state of the country; Kerala. 
 
-**This is the Kerala Story. **
+**This is the Kerala Story.**
 
 Globally, neither France or the U.S., often touted as examples of functioning democracies, have any notion of special minority rights. The Kerala Story in reality not the film is made possible by the Constitution of India which enables the two most powerful, global, and predatory ideologies to rule the roost in a land which has for aeons followed an inclusive and accepting philosophy.
 
@@ -117,35 +114,21 @@ We can deny it all we want, bury our heads in sand, or shout ‘fascist’ or �
 
 [@total_woke_](https://twitter.com/total_woke_)
 
-> _Muslim denial of [ #LoveJihad](https://twitter.com/hashtag/LoveJihad?src=hashtag_click) is 100% consistent with their tactics. Same applies to ISIS too. Before ISIS was defeated under Trump, they did absolutely [horrible](https://twitter.com/GemsOfKCR/status/1661640513798410241) things in the name of Islam. These include:_
->    
-> _1 Slaughter of POWs & civilians_
->  
->_2 Burning people alive_
->   
->_3 [ Sex slavery](https://twitter.com/DireARTOfGod/status/1660007503827017729) & slave markets_
->   
->_4 Beheadings_
->   
->_5 Genocide of [Yezidis](https://twitter.com/AzzatAlsaalem/status/1654913082903212034) & Shia_
->   
->_6 Terrorist attacks globally_
->   
->_7 Murder of children & babies_
->   
->_8 Burying people alive_
->   
->_9 Destruction of pre-Islam buildings_
->   
->_10 Chopping off hands_
->   
-> 11 Throwing gay men from rooftops 
->   
-> (This stuff is so horrific, Twitter won't let me post pictures of it, despite Twitter being the most permissive platform of all SM.)
->    
->_This did not happen 300 years ago, did not happen for gold from temples, this happened less than a decade ago, in almost 100% Muslim areas. It happened for Islam. Every single ISIS member fought for Islam. _
->   
->_Lakhs of people joined ISIS or tried to join. The Muslim response to ISIS was muted at best. More people protested against Nupur Sharma for her 20 second speech than for murder of lakhs by ISIS in the name of Islam. **A Kafir woman speaking the truth of Islam defamed Islam more than unthinkable atrocities in the name of Islam.** Think._
+> Muslim denial of [ #LoveJihad](https://twitter.com/hashtag/LoveJihad?src=hashtag_click) is 100% consistent with their tactics. Same applies to ISIS too. Before ISIS was defeated under Trump, they did absolutely [horrible](https://twitter.com/GemsOfKCR/status/1661640513798410241) things in the name of Islam. These include:  
+> _1 Slaughter of POWs & civilians_  
+>_2 Burning people alive_  
+>_3 [ Sex slavery](https://twitter.com/DireARTOfGod/status/1660007503827017729) & slave markets_  
+>_4 Beheadings_  
+>_5 Genocide of [Yezidis](https://twitter.com/AzzatAlsaalem/status/1654913082903212034) & Shia_  
+>_6 Terrorist attacks globally_  
+>_7 Murder of children & babies_  
+>_8 Burying people alive_  
+>_9 Destruction of pre-Islam buildings_   
+>_10 Chopping off hands_  
+> 11 Throwing gay men from rooftops    
+> (This stuff is so horrific, Twitter won't let me post pictures of it, despite Twitter being the most permissive platform of all SM.)    
+> This did not happen 300 years ago, did not happen for gold from temples, this happened less than a decade ago, in almost 100% Muslim areas. It happened for Islam. Every single ISIS member fought for Islam.   
+> Lakhs of people joined ISIS or tried to join. The Muslim response to ISIS was muted at best. More people protested against Nupur Sharma for her 20 second speech than for murder of lakhs by ISIS in the name of Islam. **A Kafir woman speaking the truth of Islam defamed Islam more than unthinkable atrocities in the name of Islam.** Think.
 
 What we see now as the response to [ #TheKeralaStory](https://twitter.com/hashtag/TheKeralaStory?src=hashtag_click) is in fact an extension of the response to ISIS type behaviour. **Converting Hindus using any means is fully encouraged in Muslim society**. And a movie which exposes these unholy tactics used will be panned under Islamophobia. This simply shows us how much tacit support there is for ISIS and Love Jihad within Muslim society. 
 
@@ -156,7 +139,6 @@ What we see now as the response to [ #TheKeralaStory](https://twitter.com/hashta
 <div class="imagecaption">
 	<a href="https://twitter.com/taslimanasreen/status/1658841516247326727" target="_blank" rel="noreferrer">@taslimanasreen</a>, Dhaka University Students. 1967 and 2022. 
 </div>
-
 
 Converting others to increase one’s flock is not a recent practice. It enjoys theological sanction both in Christianity and Islam, whose adherents have waged wars for it. As Prof. Vamsee Juluri [states ](https://americankahani.com/perspectives/when-do-you-remember-your-mother-should-the-question-be-when-do-you-ever-forget/) _I read Susan Jacoby’s epic history of religious conversion (“Strange Gods: A Secular History of Conversion,” Pantheon Books, 2016), Jacoby writes about the Inquisition, and one of its less-known later manifestations, the clandestine conversions and kidnappings of Jewish children in Italy till as late as the 1850s. A Christian nanny could “convert” a Jewish baby secretly, and the State could now claim that child as property of the dominant religion. One parent might convert to the dominant religion, and the children would now go with them to the new faith unilaterally; a situation that seems to have arisen in the case of a family in [Malaysia](https://www.ucanews.com/news/abuse-survivor-exposes-unilateral-conversions-in-malaysia/98165) even as I write. _ This explains why the support from the global community which otherwise cried buckets over human rights is a whimper at best. 
 

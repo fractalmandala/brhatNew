@@ -46,7 +46,7 @@ Students are then introduced to the basic Upaniṣads, with most batches getting
 
 >ईशकेनकठप्रश्न  
 >मुण्डमाण्डूक्यतित्तरी ।  
->ऐतरेयं च छान्दोग्यं 
+>ऐतरेयं च छान्दोग्यं   
 >बृहदारण्यकं दशाः ॥  
 >
 >Īśakenakaṭhapraśna  

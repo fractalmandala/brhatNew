@@ -32,17 +32,13 @@ Aghora is a **form of Śiva,** the Supreme God of Yoga, the destroyer. The Aghor
 
 As per ‘The Practical English Sanskrit Dictionary’ by Vaman Shivaram Apte (Pg No.34):
 
-> Aghora (अघोर).—a. Not terrific [terrifying] or fearful. -raḥ [nāsti ghoro yasmāt]
-> 
+> Aghora (अघोर).—a. Not terrific [terrifying] or fearful. -raḥ [nāsti ghoro yasmāt]  
 > 1) Name of Śiva or of one of his forms, (īśānāghoranā- mānau vāmadevastataḥ param |  
-> sadyojāta iti proktaḥ kramaśo’rcanakarmaṇi ||)
-> 
+> sadyojāta iti proktaḥ kramaśo’rcanakarmaṇi ||)  
 > 2) A worshipper of Śiva and Durgā.
-> -rā [aghoraḥ śivaḥ upāsyatvena asyāṃ sā, aghora-ac]
-> 
+> -rā [aghoraḥ śivaḥ upāsyatvena asyāṃ sā, aghora-ac]  
 > The fourteenth day of the dark half of Bhādra sacred to Śiva (bhādramāsyasite pakṣe hyaghorākhyā caturdaśī |  
-> tasyāmārādhitaḥ sthāṇurnayocchivapuraṃ dhruvam ||).
-> 
+> tasyāmārādhitaḥ sthāṇurnayocchivapuraṃ dhruvam ||).  
 > iha no likhitaṃ vyāsabhayāccānupayogataḥ /  
 > tā eva nirmalāḥ śuddhā aghorāḥ parikīrtitāḥ // 257  
 > ghoraghoratarāṇāṃ tu sotṛtvācca tadātmikāḥ /  

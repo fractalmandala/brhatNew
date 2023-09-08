@@ -68,10 +68,10 @@ But the pūrṇa Aghorīs themselves, although they definitely participate in ś
 
 Always remember:
 
-> ulṭi khopḍi cchat masān,
-> mā bhūtni bāp se tān,
-> āti poti sabhī beimān,
-> yahī asli Aghorī ki pehcān!
+> ulṭi khopḍi cchat masān,  
+> mā bhūtni bāp se tān,  
+> āti poti sabhī beimān,  
+> yahī asli Aghorī ki pehcān!  
 
 These cryptic Hindi lines of poetry loosely translate to:
 

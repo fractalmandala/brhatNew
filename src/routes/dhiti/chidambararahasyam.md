@@ -9,22 +9,14 @@ date: "2023-08-20"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/chidambararahasyam.webp
 excerpt: "This article delves into the historical and religious significance of the Naṭarāja temple in Chidambaram. It also examines its legal status in the context of political vendettas against the shrine."
 ---
->If there are men who want to see anything in the world
->
->other than the dance of Aran, whose feet we serve,
->
->in Cirrampalam shrine in Tillai,
->
->where the areca tree with broad fronds grows tall,
->
->the streets are lined with great mansions,
->
->and all the fields are watered 
->
->by streams full of valai fish— 
->
->then they are but devil-devotees,
->
+>If there are men who want to see anything in the world  
+>other than the dance of Aran, whose feet we serve,  
+>in Cirrampalam shrine in Tillai,  
+>where the areca tree with broad fronds grows tall,  
+>the streets are lined with great mansions,  
+>and all the fields are watered   
+>by streams full of valai fish—   
+>then they are but devil-devotees,  
 >seeing worthless things with rheumy eyes.”
 <cite>APPAR, TRANSLATED BY INDIRA VISWANATHAN PETERSON<sup>1</sup></cite>
 

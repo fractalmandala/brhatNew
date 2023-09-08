@@ -39,7 +39,7 @@ Swaminiji recently conducted a ten-day retreat in Eugene. Disciples came from al
 
 Swaminiji delivered her regular weekly classes during the retreat, but also introduced and unfolded a text selected specially for the retreat, called Vākyavṛtti. It is a dialogue between a Guru and a disciple (as so many Advaita Vedānta texts are), where the disciple asks the Guru to explain the nature of the Self, “as clearly as a fruit in hand.” The Guru then discusses tvam-pada-vicāra, or an inquiry into the meaning of “thou,” as in the mahāvākya “tat tvam asi” or, “that thou art.” Tat tvam asi is a mahāvākya because it sums up the central Advaita Vedānta concept, “You are nothing but Īśvara.” One of the verses we studied to elaborate on this was:
 
-> yaḥ sākṣilakṣano bodhastvaṁpadārthaḥ sa ucyate
+> yaḥ sākṣilakṣano bodhastvaṁpadārthaḥ sa ucyate  
 > sākṣitvamapi boddhṛtvamavikāritayātmanaḥ
 
 which was translated into English as:

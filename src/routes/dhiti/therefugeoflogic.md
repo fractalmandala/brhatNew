@@ -56,8 +56,7 @@ To understand the word _pramāṇa,_ we have to look at its etymology.
 
 Something which brings true knowledge is called _pramāṇa_. Naturally, there are multiple ways to obtain proper knowledge and so the following verse is appropriate:
 
->स्मृति प्रत्यक्षमैतिह्यम् अनुमानस्चतुष्टयम् ।
->
+>स्मृति प्रत्यक्षमैतिह्यम् अनुमानस्चतुष्टयम् ।  
 >smṛti pratyakṣamaitihyam anumānascatuṣṭayam
 <cite>Taittirīya Āraṇyaka 4</cite>
 
@@ -73,8 +72,7 @@ The entire corpus of the Vedas are records of honest experiences of several peop
 But can one come to experience reality purely based on logical dialectics? Is śabda pramāṇa even necessary to arrive at the right understanding of reality?
 
 
->नैषा तर्केण मतिरापनेया प्रोक्तान्येनैव सुज्ञानाय प्रेष्ठ ।
->
+>नैषा तर्केण मतिरापनेया प्रोक्तान्येनैव सुज्ञानाय प्रेष्ठ ।  
 >naiṣā tarkeṇa matirāpaneyā proktānyenaiva sujñānāya preṣṭha |
 <cite>Kathopanishad, 1.2.9</cite>
 
@@ -92,7 +90,7 @@ If we now revisit the scientific process, śabda pramāṇa can very well be a f
 
 So, on the thesis regarding the existence of a cause for existence, Īśvara, the most honest thing to do is to reserve judgement until there has been an experience which can support it or its anti-thesis. Belief in either the thesis or its anti-thesis is foolhardy in the absence of evidence. However, the pursuit of evidence should never stop.
 
- ॐ तत् सत्
+ॐ तत् सत्
 
 #### References
 

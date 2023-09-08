@@ -10,16 +10,13 @@ image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwe
 excerpt: "Need for clarity in understanding opposing forces to dhārmika thought and the importance of thinkers like Śrī Sita Ram Goel in the context of freedom of expression."
 ---
 
-> यया विना जगत्सर्वं मूकमुन्मत्तवत्सदा ।
-> 
+> यया विना जगत्सर्वं मूकमुन्मत्तवत्सदा ।  
 > या देवी वागधिष्ठात्री तस्यै वाण्यै नमो नमः ॥
 
-> yayā vinā jagatsarvaṃ mūkamunmattavatsadā |
-> 
+> yayā vinā jagatsarvaṃ mūkamunmattavatsadā |  
 > yā devī vāgadhiṣṭhātrī tasyai vāṇyai namo namaḥ ||
 
-> Salutations to goddess Vāṇī, who presides over the act of speaking,
-> 
+> Salutations to goddess Vāṇī, who presides over the act of speaking,  
 > Without whom this world would always be dumb, confused and mad-like.
 
 Hebrew was a dead language until the early 20th century. The Jewish community which wanted to regroup into one homeland was already a diaspora living in multiple countries across Africa, Europe, and the Middle East. At that time, their question was: what should the common language be for such a diverse group of people? There was one mad man called Elizir who said Hebrew should be the common language. **People branded him a crackpot during his life and time.** But by the time these same people set up their education system, they decided Hebrew shall not only be revived, but should be mainstreamed through the education policy. 
@@ -42,7 +39,6 @@ Goel ji himself mentions in the Preface of the work:
 >Section Two of the book reproduces twelve reviews of the book <span style="text-decoration:underline;">_Why I am Not A Muslim_</span> by Ibn Warraq, published in the USA in 1995, and an article by Shabir Akhtar spelling out what Islam means vis-a-vis freedom of expression. Eleven of them have been sent to us by Hindu residents in the U.S.A. and England. They show how the press functions freely in Western democracies which practice Secularism in its original sense. **There is only one review from India which appeared in a Telugu monthly.** That is why I have named this section as Liberal Democracy.
 
 A passage from this section of the text sheds light on the double standards that exist when it comes to the concept of freedom of expression:
-
 
 >I have put it to them that it is ironic that they should be using such a platform to complain about the denial of “freedom of speech” for themselves inside the building  (this, after the college authorities had banned a debate they planned to hold, on the execution of heretics and blasphemers) while admitting that they do not believe in freedom of speech for others.
 

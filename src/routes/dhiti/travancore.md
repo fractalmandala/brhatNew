@@ -21,25 +21,24 @@ Just as Perumchoṭṭu Udayan, the great king from this land during Mahābhāra
 
 Even as the world is witness to the coronation of Prince Charles as King, and many probably are taken in by the [glamour of it all](https://twitter.com/MumukshuSavitri/status/1654891305850540033), history does not excuse the British Royalty of the crimes committed against humanity. Seeing their sad example, one might assume that monarchy and royalty all over the world suffers from such delusions of grandeur, and that power and wealth make most kings and queens victims of their own might. Such was the fall of the Mughals, undoubtedly either due to fanaticism or to narcissism. But there are many examples in India, of those who were just and able rulers; who were cultivated and cultured; who developed their kingdoms not only economically, but also artistically and aesthetically; and who ruled with dharma as their ideal. Brhat has singled out one such, the Travancore Royals, in [Part 1](https://www.brhat.in/dhiti/sagaofthepadmanabhadasas) and [Part 2](https://www.brhat.in/dhiti/sagaofthepadmanabhadasas2) for a detailed look. Here in Part 3 we take you through a personal journey, of a first-hand lived experience, of learning dance from one among them. 
 
->“Even in the mid-1970s, we had a sizeable number of people who earned their livelihood as poets or singers or bards, performing Bhāgavata Melās, Rām Kathā, Purāṇās, Harikathās, etc. These artists were largely illiterate but they had an unmatched power to swoon thousands of people with their renditions and storytelling prowess. The entire society respected them solely for that reason, because they had that education. They carried copious amounts of our cultural treasure in their head and heart — the Rāmāyaṇa, Mahābhārata, stories from our Purāṇās, Kritis, Devāranāmas, folklore, etc. Sadly, their “educated” children and grandchildren became poorly-paid labourers in mills and factories or worked as waiters in bars and restaurants. But on the larger canvas of our cultural landscape, the loss was primarily twofold. These descendants not only lost the **sublime and ennobling education** that their forefathers had but their lives were not economically better either. This is how the destruction of cultural education and memory translates into, in real life.
-> 
+>“Even in the mid-1970s, we had a sizeable number of people who earned their livelihood as poets or singers or bards, performing Bhāgavata Melās, Rām Kathā, Purāṇās, Harikathās, etc. These artists were largely illiterate but they had an unmatched power to swoon thousands of people with their renditions and storytelling prowess. The entire society respected them solely for that reason, because they had that education. They carried copious amounts of our cultural treasure in their head and heart — the Rāmāyaṇa, Mahābhārata, stories from our Purāṇās, Kritis, Devāranāmas, folklore, etc. Sadly, their “educated” children and grandchildren became poorly-paid labourers in mills and factories or worked as waiters in bars and restaurants. But on the larger canvas of our cultural landscape, the loss was primarily twofold. These descendants not only lost the **sublime and ennobling education** that their forefathers had but their lives were not economically better either. This is how the destruction of cultural education and memory translates into, in real life.  
 >This is savagery, not education.” 
 <a class="cite" href="https://www.dharmadispatch.in/commentary/dharmic-education-in-an-era-of-planned-de-hinduisation-of-india">Dharmic Education in the Era of Planned De-Hinduisation of India by Sandeep Balakrishna</a>
 
-> यतो हस्तः ततो दृष्टिः
-> यतो दृष्टिः ततो मनः
-> यतो मनः ततो भावः
+> यतो हस्तः ततो दृष्टिः  
+> यतो दृष्टिः ततो मनः  
+> यतो मनः ततो भावः  
 > यतो भावः ततो रसः॥
 <cite>नाट्य शास्त्र</cite> 
 
-> yato hastaḥ tato dṛṣṭiḥ
-> yato dṛṣṭiḥ tato manaḥ
-> yato manaḥ tato bhāvaḥ
-> yato bhāvaḥ tato rasaḥ  
+> yato hastaḥ tato dṛṣṭiḥ  
+> yato dṛṣṭiḥ tato manaḥ  
+> yato manaḥ tato bhāvaḥ  
+> yato bhāvaḥ tato rasaḥ    
 >
-> Where your hands go, your eyes follow
-> Where your eyes go, your mind follows 
-> Where your mind goes, it gives rise to feelings 
+> Where your hands go, your eyes follow  
+> Where your eyes go, your mind follows   
+> Where your mind goes, it gives rise to feelings   
 > Wherever there is a feeling, there is a particular mood
 <cite>Nāṭyaśāstra</cite>
 
@@ -59,8 +58,7 @@ It was very refreshing to see that there was no cut-throat competition amongst t
 
 The three-day workshop began on April 21st 2023 and was [inaugurated](https://www.youtube.com/watch?v=DkObrAgsC30) by [H.H. Princess Pooyam Thirunāḻ Gowri Parvathy Bayi](https://youtu.be/hPh1IuW8X9I) in the presence of [Śrī Soorya Krishnamoorthy](https://youtu.be/MCn075ZYYWg) (founder of the Soorya Dance Festival). There were lectures by [Dr. Kannan Parameswaran ](https://youtu.be/DbxnbkvOWNw)(Kathakaḻi exponent) on ‘mukhaja abhinaya’ and by Prof. Achuthsankar S. Nair (academician) about Swathi Thirunāḻ. Present also were honourable observers [Śrī. Venugopal S K,](https://narthaki.com/info/rev23/rev2881.html) Śrī. Vinod Mankara (film maker) and Śrī. Dinesh Koduvayur (founder of Gowri Creations). The [valedictory function](https://youtu.be/bTesxyE0UY4) was presided over by [H.H. Princess Aswathy Thirunāḻ Lakshmi Bayi](https://youtu.be/QJN81pqLYkY) in the presence of Pūjya Svāmī Śrī Hariprasād jī. Along with their blessings all the participants also received a certificate of participation. 
 
-> बलं बलवतां चाहं कामरागविवर्जितम् || 7.11 B.G ||
->  
+> बलं बलवतां चाहं कामरागविवर्जितम् || 7.11 B.G ||  
 > balaṁ balavatāṁ cāhaṁ kāma-rāga-vivarjitam  
 >    
 > Any balam (power, strength) which is free from kāma (desire) and rāga (attachment) is the manifestation of īśvara. It is bestowed onto me and I am the trustee of this power, I may be the user but am not the owner. Ownership is only my notion. Nothing belongs to me, If I assume so I will suffer….everything belongs to HIM alone…

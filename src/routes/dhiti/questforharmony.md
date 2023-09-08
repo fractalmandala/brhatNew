@@ -32,12 +32,12 @@ This other graph charting happiness based on use-values and experiential quotien
 According to Ivan Illich, modern civilization overwhelmingly stresses the production of commodities as the sole means of finding happiness. Commodities are of course necessary but so are use-values which are defined by Illich as duties and chores that humans do on their own, in their homes and communities with no involvement of the commodity market. The kind of ‘free’ services that the family, community and such natural institutions provide can be defined as use-values. Only a balance of commodities on one hand and the use-values on the other can create a harmonious and satisfied life. But we find that the modern civilization has gone into an overdrive of creating and consuming commodities. And after a limit, this has become counter-productive.
 
 >We must come to admit that only within limits can machines take the place of slaves; beyond these limits they lead to a new kind of serfdom.
-> TOOLS OF CONVIVIALITY 12
+<cite>TOOLS OF CONVIVIALITY 12</cite>
 
 According to Illich this overwhelming stress on consumption of commodities has resulted in an oxymoronic civilization with disabling professions, impoverishing wealth, time-consuming acceleration, sick-making healthcare, stupefying education and disabling enrichment. All modern institutions suffer from deep iatrogenesis which means their net contribution to society is now negative. Illich says:
 
 > Cultures are programmes for activities, not for firms. Industrial society destroys this centre by polluting it with the measured output of corporations, public or private, degrading what people do or make on their own. As a consequence, societies have been transformed into huge zero-sum games, monolithic delivery systems in which every gain for one turns into a loss or burden for another, while true satisfaction is denied to both.
-> THE RIGHT TO USEFUL UNEMPLOYMENT 27
+<cite>THE RIGHT TO USEFUL UNEMPLOYMENT 27</cite>
 
 This imbalanced tradeoff of use-values for commodities is ubiquitous. What is the most curious aspect of this dichotomy is that it is not necessary to chart two different countries, societies or economies to see this faultline. It runs right through the modern individual. You will find that often it is the same individual who is doing quite well on the metrical chart and very bad on the experiential one. Metrically he is doing very well and emotionally very bad.
 
@@ -45,7 +45,7 @@ This imbalanced tradeoff of use-values for commodities is ubiquitous. What is th
 Bearing all these dichotomies inside him, the modern man leads a Kafkaesque existence, unable to make sense of the world around him. The story of unlimited progress and development is sold to him and he is told that it can be verified by anyone. The methods of verification, however, metric in nature, are created by the same institutions which sold him the story in the first place. While technology becomes a handmaiden of politics, science too does not offer much respite for in absence of Nature-conducive culture, all it offers is objective knowledge of the world around man, but nothing about the workings of the internal cosmos, the cidākāśa. As Loren Eiseley, one of the greatest thinkers of our times says:
 
 > The western scientific achievement, great though it is, has not concerned itself enough with the creation of better human beings, nor with self-discipline. It has concentrated instead upon things, and assumed that the good life would follow. Therefore it hungers for infinity. Outward in that infinity lies the Garden the sixteenth-century voyagers did not find. We no longer call it the Garden. We are sophisticated men. We call it, vaguely, “progress”, because that word in itself implies the endless movement of pursuit. We have abandoned the past without realizing that without the past the pursued future has no meaning, that it leads, as Morris has anticipated, to the world of artless, dehumanized man.
-> EISELEY 130
+<cite>EISELEY 130</cite>
 
 This faultline, though most striking when it runs through the individual, is quite evident in various other spheres. The binary of Culture and Nature is also where this faultline is seen manifesting most tragically. While human culture as defined by the modern globalized world is making great progress in science, technology, and ‘standards of living’, Nature in total is suffering immensely.
 
@@ -54,7 +54,7 @@ As studies after studies proclaim great victory of prosperity over poverty; heal
 This is not where the faultline stops manifesting. While most of the modern products and services are sold in the name of empowering individuals, we find that the individual is more and more at the mercy of monstrously huge institutions which are in charge of imputing and then fulfilling needs to individuals who are increasingly powerless to change the situation. At the same time these supra-national institutions and organizations run campaigns arguing for the dismantling of all traditional small-scale institutions like dharmic sects, family, local community etc. The argument is that these institutions prevent individuals from attaining freedom, while the truth is that with the disappearance of all the traditional intermediary institutions, the individual is more and more helpless and powerless against the supra-national and global institutions which make individual action against them almost meaningless.
 
 > For advanced industrial society, the modernization of poverty means that people are helpless to recognize evidence unless it has been certified by a professional – be he a television weather commentator or an educator; organic discomfort becomes intolerably threatening unless it has been medicalized into dependence on a therapist; neighbours and friends are lost unless vehicles bridge the separating distance (created by the vehicles in the first place). In short, most of the time we find ourselves out of touch with our world, out of sight of those for whom we work, out of tune with what we feel.
-> THE RIGHT TO USEFUL UNEMPLOYMENT 11
+<cite>THE RIGHT TO USEFUL UNEMPLOYMENT 11</cite>
 
 A huge battle of sorts is going on between material prosperity and emotional/ spiritual happiness; between institutions and individuals; and between culture and Nature.
 
@@ -96,7 +96,7 @@ Initially there was much destruction of Nature, eco-systems and habitats. But gr
 The tragedy of the contemporary world is that in the global society created after the post-industrial world man has broken both the orders of Nature and Culture. As Loren Eiseley says:
 
 > Man’s second rock of certitude, his cultural world, that had gotten him out of bed in the morning for many thousand years, that had taught him manners, how to love, and to see beauty, and how, when the time came, to die – this cultural world was now dissolving even as it grew. The roar of jet aircraft, the ugly ostentations of badly designed automobiles, the clatter of the supermarkets could not lend stability nor reality to the world we face.
-> EISELEY 129
+<cite>EISELEY 129</cite>
 
 This destructive paradigm is the Conflict Paradigm and under the garb of globalization it comes in conflict with all traditional orders and systems. Working through the institutions implanted on native cultures during colonial times, policy in most of the world today furthers the Conflict Paradigm, destroys Nature, dehumanizes man and destroys avenues of artistic redemption.
 
@@ -118,14 +118,14 @@ Coomaraswamy said that the fundamental quest of an Indian artist is not to just 
 Art in India is used to elevate the consciousness of the individual to a higher plane so he cultivates higher pleasures. By doing this, he makes his path towards self-realization easier and also makes his life in this samsāra more pleasant and full of aesthetic experience. In fact, the theory of aesthetics of Indian art was developed by keeping this goal in mind. As Harsha Dehejia says:
 
 > While the artist occupies an exalted position in the Indian tradition, the aesthete is charged with an equally heavy responsibility. Art in the Indian tradition is not merely ornamental or decorative, not just an idle pastime or sport, not as outpouring of a superficial state of mind; and the aesthete in turn was not a mere spectator or voyeur but one who was expected to apply himself seriously and deliberately in the enjoyment and understanding of art.
-> DEHEJIA 2
+<cite>DEHEJIA 2</cite>
 
 The aesthete is as important as the artist. Bhartṛharī maintains that meaning and beauty reside not in the text itself but in the act of reading. Applied on art, visual and otherwise, it means that it is the act of darṣana by the aesthete when the creation of beauty takes place. All pieces of art need an aesthete to appreciate them and that is why the moment in which meaning and beauty arises, the phenomenon which takes place inside the mind and heart of the aesthete is very important.
 
 The job of the artist is to bind the formless into the form. The job of the aesthete is to decode the form and reach the formless. The whole circle is a meaning-making process. The goal of such an artistic exercise is nothing short of mokṣa or at least proceed on that pathway, as Shri Aurobindo said:
 
 > The whole basis of Indian artistic creation perfectly conscious and recognised in the canons, is directly spiritual and intuitive.
-> SHRI AUROBINDO 198
+<cite>SHRI AUROBINDO 198</cite>
 
 ##### In this way, by making the aesthete as important as the artist, the Hindu tradition provided art as a means to transcend the limitations of daily life. Art not just provided a happy respite from the drudgery of daily life, but also elevated the aesthete or the enjoyer of art to a higher plane of consciousness, thereby enriching his life in more than one way.
 

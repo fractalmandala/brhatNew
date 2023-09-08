@@ -9,9 +9,9 @@ date: "2023-08-06"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/soulagriculture.webp
 excerpt: "Exploring the deep-rooted connection between agriculture, food, and well-being through the lens of Ayurveda, emphasizing sustainable practices and traditional wisdom."
 ---
->The strength, complexion, immunity etc. of a living system is under the control of diet which in turn is under the control of six rasas
->
->Suśruta Saṃhitā, Sūtra Sthāna, Chapter 1, verse 28.
+
+>The strength, complexion, immunity etc. of a living system is under the control of diet which in turn is under the control of six rasas  
+<cite>Suśruta Saṃhitā, Sūtra Sthāna, Chapter 1, verse 28.</cite>
 
 #### Concept and Classification of Āhāra
 
@@ -39,14 +39,14 @@ Traditional knowledge is severely threatened by the State’s agricultural polic
 
 #### Endnotes:
 
-1. The average mineral content of calcium, magnesium, and iron in cabbage,lettuce, tomatoes, and spinach has dropped 80-90% between 1914 and 2018 according to various studies: [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6163803/figure/nutrients-10-01202-f002/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6163803/figure/nutrients-10-01202-f002/)
+1. The average mineral content of calcium, magnesium, and iron in cabbage,lettuce, tomatoes, and spinach has dropped 80-90% between 1914 and 2018 according to [various studies](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6163803/figure/nutrients-10-01202-f002/)
 
-* Beeson K.C.  _The Mineral Composition of Crops with Particular Reference to the Soils in Which They Were Grown: A Review and Compilation._ U.S. Department of Agriculture; Washington, DC, USA: 1941.
+* Beeson K.C. _The Mineral Composition of Crops with Particular Reference to the Soils in Which They Were Grown: A Review and Compilation._ U.S. Department of Agriculture; Washington, DC, USA: 1941.
 
-* USDA, Agricultural Research Service USDA National Nutrient Database for Standard Reference, Release 28. Available online:  [https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/nutrient-data-laboratory/docs/usda-national-nutrient-database-for-standard-reference/](https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/nutrient-data-laboratory/docs/usda-national-nutrient-database-for-standard-reference/)
+* USDA, Agricultural Research Service USDA National Nutrient Database for Standard Reference, Release 28. [Available online](https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/nutrient-data-laboratory/docs/usda-national-nutrient-database-for-standard-reference/)
 
-* Davis, D. R. (2009). Declining Fruit and Vegetable Nutrient Composition: What Is the Evidence?. _HortScience horts_, _44_(1), 15-19. Retrieved Aug 2, 2023, from [https://doi.org/10.21273/HORTSCI.44.1.15](https://doi.org/10.21273/HORTSCI.44.1.15)
+* Davis, D. R. (2009). Declining Fruit and Vegetable Nutrient Composition: What Is the Evidence?. _HortScience horts_, _44_(1), 15-19. Retrieved Aug 2, 2023, from [here](https://doi.org/10.21273/HORTSCI.44.1.15)
 
 * Payyappallimana U, Venkatasubramanian P. Exploring Ayurvedic Knowledge on Food and Health for Providing Innovative Solutions to Contemporary Healthcare. Front Public Health. 2016 Mar 31;4:57. doi: 10.3389/fpubh.2016.00057. PMID: 27066472; PMCID: PMC4815005.
 
-* Cover Image : Galeri ega (https://commons.wikimedia.org/wiki/File:Bumbu_dan_Rempah_-_rempah.jpg), https://creativecommons.org/licenses/by-sa/4.0/legalcode
+* Cover Image : [Galeri ega](https://commons.wikimedia.org/wiki/File:Bumbu_dan_Rempah_-_rempah.jpg)

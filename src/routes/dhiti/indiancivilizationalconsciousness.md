@@ -10,7 +10,7 @@ image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwe
 excerpt: "A short essay on this Independence Day, that re-examines the meaning of 'Indian civilizational consciousness' from the dhātus."
 ---
 
-> “We are in the midst of a civilizational moment.”
+> “We are in the midst of a civilizational moment.”  
 > “We design the self-perpetuating civilizational moment.”
 
 These are two statements we at Bṛhat frequently employ to articulate how we see the world. Contained in them are axiomatic notions on civilizational moment, civilizational consciousness, culture, tradition and associated terms. In this piece here, we detailed the anatomy of a civilizational moment, as we see it. And in creating a series of essays such as this one, we cover the ways in which our civilization has perpetuated itself in the past. Today, on the 75th year since Bhārata gained independence as India, we dive deeper with an exposition on an axiom fundamental to it all — the **“Indian Civilizational Consciousness.”**

@@ -24,7 +24,7 @@ He also defeated the Dutch forces in the battle of Colachel which made Travancor
  
 British historian Robert Orme who lived in Travancore describes the army of Marthanda Varma as follows<sup>2</sup>:
  
-> “The king (of Travancore) had disciplined, in the method of European infantry, a body > of 10000 Nairs. The people of this denomination are by birth the military tribe of
+> “The king (of Travancore) had disciplined, in the method of European infantry, a body > of 10000 Nairs. The people of this denomination are by birth the military tribe of   
 > the Malabar coast, and assert in their own country even prouder pre-eminences than the > Rajputs, who in other parts of India are likewise born with the same distinction.”
  
 This Nair brigade remained as the personal troops of Travancore Maharajas even under the British. After the abolishment of monarchy, this brigade was joined with the Indian army as 9th battalion of Madras regiment, the oldest one in the Indian army,
@@ -100,7 +100,7 @@ In conclusion, Travancore kingdom was Hindu state where Dharma flourished from t
 
 Thus, the 19th century  the English missionary Robert Caldwell who is credited as the father of Dravidian theories, described Travancore under the Diwanship of Madhava Rao in one of his satirical poems (mocks as Coconutcore) as a prosperous 'model state', where 'Brahminical superiority' prevailed and as heaven on earth<sup>16</sup>:
 
-> This State, if judged from " Reports" you read,  
+> This State, if judged from " Reports" you read,    
 > Is a very wonderful State indeed ;—  
 > A "Model State," in which you may see  
 > Everything is just as it should be.  

@@ -18,9 +18,7 @@ We are standing in front of what's left of [Raja Subodh Chandra Mallik's](https:
 
 If you were in Kolkata and walked past this dilapidated structure, surrounded by the ramshackle dwellings that are quite common around Kolkata today, you would be forgiven for not even batting an eyelid. And would it really be your fault?
 
-
 <img class="imageclass2" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/rajasubodhmallik/rajasubodhmallik1.webp" alt="one"/>
-
 
 This is a question that the reader of this article has the right to ask themselves. There's no shortage of old buildings in Kolkata that are falling apart at the seams. Why should this building matter more than the others? Why should someone care about Kolkata's heritage, especially when the city itself has developed a strange (but fascinating) relationship with its past?
 
@@ -95,13 +93,11 @@ Jadavpur's [own website](http://www.jaduniv.edu.in/about_us.php) details its (ba
 
 The website adds:
 
-
 > Sri Aurobindo was the first Principal of the Bengal National College and among the teachers was luminaries like Rabindranath Tagore, [Sir Gurudas Banerjee](https://en.wikipedia.org/wiki/Gooroodas_Banerjee), [Ananda Coomaraswamy](https://en.wikipedia.org/wiki/Ananda_Coomaraswamy), Surendra Nath Banerjee, [Ramendra Sundar Trivedi](https://en.wikipedia.org/wiki/Ramendra_Sundar_Tribedi), Radha Kumud Mukherjee, [Benoy Kumar Sarkar](https://en.wikipedia.org/wiki/Benoy_Kumar_Sarkar), [Sakharam Ganesh Deoskar](https://amritmahotsav.nic.in/unsung-heroes-detail.htm?528) and others.
 
 Talk about an all-star faculty!
 
 **In the period between 1905-08, the atmosphere in the Swadeshi Movement was electric**. As the famous historian [Radha Kumud Mookerji](https://en.wikipedia.org/wiki/Radha_Kumud_Mukherjee), himself a teacher at the National College, recalls:
-
 
 > "..in those stirring times when the country, especially Bengal, was thrown into a whirlwind agitation over the partition of Bengal by Lord Curzon..."
 >

@@ -77,7 +77,7 @@ In other words, it is the Supreme Consciousness itself which is the source of al
 It is this particular tradition that Swami Vivekananda stumbled into when he was initiated into sādhanā by his guru Ramakrishna Paramahamsa. He was one of the most influential sages to be born in this sacred land and the source of his vitality was his sādhanā under a traditional guru. He never shied away from stressing its importance in his life and in the life of anyone who sought to follow his path. His stress on yoga was for the same reason. He stressed on Hindu renaissance without any doubt. In his own words:
 
 > It is not only that we must revive our own country – that is a small matter; I am an imaginative man – and my idea is the conquest of the whole world by the Hindu race.
-> COMPLETE WORKS III 291
+<cite>COMPLETE WORKS III 291</cite>
 
 But that renaissance was far from just political. It was also not limited to the socio-cultural aspects. His Renaissance was spiritual; it was Sanātana in character. It is true that he stressed serving the poor and the needy but that was far from the gist of his message to us. The renaissance that he spoke about was the renaissance of the dhyāna-sādhanā tradition of Bhāratavarṣa; the renaissance of Swami Vivekananda was the renaissance of the soul of Hindu dharma or Sanātana dharma.
 

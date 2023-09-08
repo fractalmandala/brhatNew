@@ -17,12 +17,9 @@ Svāmī Vivekānanda's educational ideas cannot be analyzed without stressing th
 
 Śrī Rāmakṛṣṇa, being an enlightened person, understood the greatness hidden in his favourite disciple Naren. Even their first meeting had Śrī Rāmakṛṣṇa crying in joy, and saying to Svāmījī, *“You made me wait for long, Naren. Finally, you are here.”* The following two conversations between this guru-śiṣyā duo are illustrative of how Svāmī Vivekānanda’s life was transformed forever after being introduced to śrī Rāmakṛṣṇa Paramahaṃsa; 
 
-> Svāmī Vivekānanda– Because of so many problems, we don’t know where we are heading?
-
-> Śrī Rāmakṛṣṇa– If you look outside you will not know where you are heading. Look inside. Eyes provide sight. The heart provides the way.
-
-> Svāmī Vivekānanda  – One last question. Sometimes I feel my prayers are not answered?
-
+> Svāmī Vivekānanda– Because of so many problems, we don’t know where we are heading?  
+> Śrī Rāmakṛṣṇa– If you look outside you will not know where you are heading. Look inside. Eyes provide sight. The heart provides the way.  
+> Svāmī Vivekānanda  – One last question. Sometimes I feel my prayers are not answered?  
 > Śrī Rāmakṛṣṇa – There are no unanswered prayers. Keep the faith and drop the fear. Life is a mystery to solve, not a problem to resolve. Trust me. Life is wonderful if you know how to live.
 
 Despite his emphasis on “self-discovery”, śrī Rāmakṛṣṇa Paramahaṃsa did not want Svāmījī to be selfish and focus only on his enlightenment. He instructed him to travel the world to spread the message behind the real purpose of life. Svāmījī was supposed to do what śrī Rāmakṛṣṇa Paramahaṃsa had done for him; making every human being realize the infinite power which resided within them, and attain saccidānanda (existence, consciousness and bliss). 
