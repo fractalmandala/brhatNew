@@ -209,6 +209,8 @@
 						{/if}
 					</a>
 				{/each}
+			{:else}
+				<p>{data.author}</p>
 			{/if}
 
 			{#if data.authortwo && data.authortwo.length > 0}
@@ -229,6 +231,8 @@
 							{/if}
 						</a>
 					{/each}
+				{:else}
+					<p>{data.authortwo}</p>
 				{/if}
 			{/if}
 		</div>

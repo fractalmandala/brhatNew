@@ -16,7 +16,7 @@ I am reminded of my teacher, who repeatedly tells us as we keep learning texts: 
 
 One such thing that happened to me: Over the past 20 years, I have been chanting Camaka Praśna (Yajur Veda). This week, when I was teaching a student this very Camaka Praśna, it just dawned on me to check the meaning. As I was reading the 1<sup class="nonce">st</sup> anuvāka, I came across 
 
->Dakṣa̍śca me̱ 
+>Dakṣāśca me̱ 
 
 When I check the meaning of the word “Dakṣa”, I see:
 
