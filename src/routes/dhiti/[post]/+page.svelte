@@ -487,7 +487,7 @@ h1
 .x1
 	@media screen and (min-width: 1024px)
 		padding-top: 64px
-		height: 100vh
+		min-height: 70vh
 		justify-content: center
 		padding-left: 8.6vw
 		padding-right: 12vw

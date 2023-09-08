@@ -11,21 +11,15 @@ date: "2023-09-07"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/guru.webp
 ---
 
->सान्द्रानन्दावबोधात्मकमनुपमितं कालदेशावधिभ्यां
->
->निर्मुक्तं नित्यमुक्तं निगमशतसहस्रेण निर्भास्यमानम् ।
->
->अस्पष्टं दृष्टमात्रे पुनरुरुपुरुषार्थात्मकं ब्रह्म तत्वं
->
+>सान्द्रानन्दावबोधात्मकमनुपमितं कालदेशावधिभ्यां  
+>निर्मुक्तं नित्यमुक्तं निगमशतसहस्रेण निर्भास्यमानम् ।  
+>अस्पष्टं दृष्टमात्रे पुनरुरुपुरुषार्थात्मकं ब्रह्म तत्वं  
 >तत्तावद्भाति साक्षाद् गुरुपवनपुरे हन्त भाग्यं जनानाम् ॥ 
 <cite>नारायणीयम् १.१ ॥</cite>
 
->sāndrānandāvabodhātmakamanupamitaṃ kāladeśāvadhibhyāṃ
->
->nirmuktaṃ nityamuktaṃ nigamaśatasahasreṇa nirbhāsyamānam
->
->aspaṣṭaṃ dṛṣṭamātre punarurupuruṣārthātmakaṃ brahma tatvaṃ
->
+>sāndrānandāvabodhātmakamanupamitaṃ kāladeśāvadhibhyāṃ  
+>nirmuktaṃ nityamuktaṃ nigamaśatasahasreṇa nirbhāsyamānam  
+>aspaṣṭaṃ dṛṣṭamātre punarurupuruṣārthātmakaṃ brahma tatvaṃ  
 >tattāvadbhāti sākṣād gurupavanapure hanta bhāgyaṃ janānām ||
 <cite>Nārāyaṇīyam 1.1 ||</cite>
 
@@ -105,8 +99,7 @@ Healing therefore needs some form of relief or resilience from the aforementione
 
 The Yoga sūtra emphatically states:
 
->ईश्वरप्रणिधानाद्वा ॥ 
->
+>ईश्वरप्रणिधानाद्वा ॥   
 >īśvarapraṇidhānādvā
 
 While Yoga directs us towards **_abhyāsa_** (a reverential pursuit of truth done for a long period of time and undertaken without breaks) and **_vairāgya_**(falling away of direct experiences or things that have been heard of), **unless there is a quality of offering oneself, one’s frailties and circumstances to something larger than one can comprehend - Yoga cannot be achieved**. Therefore, while the word _īśvarapraṇidhānādvā comes together from īśvarapraṇidhānā + vā,‘vā’ (meaning an alternative) is interpreted as ‘eva’ (meaning mandatory).Thus, practicing **_ī_śvarapraṇidhānā is mandatory on the path of healing and not an alternative to abhyāsa and vairāgya as per Yogācārya Krishnamacharya.** 
@@ -117,12 +110,10 @@ While Yoga directs us towards **_abhyāsa_** (a reverential pursuit of truth don
 
 Yet again, the Yoga Sūtra states - 
 
->स एष पूर्वेषामपि गुरुः कालेनानवच्छेदात् ॥
->
+>स एष पूर्वेषामपि गुरुः कालेनानवच्छेदात् ॥  
 >sa eṣa pūrveṣām-api guruḥ kālena-anavacchedāt 
 >
->तस्य वाचकः प्रणवः ॥
->
+>तस्य वाचकः प्रणवः ॥  
 >tasya vācakaḥ praṇavaḥ 
 
 Īśvara is the oldest guru, beyond the effect of time and blemishless from the effect of actions, afflictions and other frailties. Īśvara, the guru, the remover of darkness and obstacles, is described thus. 
@@ -144,8 +135,7 @@ This is the healing property of the praṇava mantra, which is achieved through 
 
 **What is the result of this process?**
 
->ततः प्रत्यक्त्चेतनाधिगमोऽप्यन्तरायाभावश्च ॥ 
->
+>ततः प्रत्यक्त्चेतनाधिगमोऽप्यन्तरायाभावश्च ॥   
 >tatah pratyakcetanādhigamaya api antarāyābhāvaśca
 
 Through this practice, the mind begins to have an inward gaze (towards the larger Consciousness) and the antarāyas begin to fall away. 

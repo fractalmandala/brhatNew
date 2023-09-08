@@ -44,20 +44,14 @@ Students actually begin their textual study with preparative texts known as prak
 
 Students are then introduced to the basic Upaniṣads, with most batches getting exposure to the 10 major ones known as _daśa-upaniṣad_:
 
->ईशकेनकठप्रश्न
->
->मुण्डमाण्डूक्यतित्तरी ।
->
+>ईशकेनकठप्रश्न  
+>मुण्डमाण्डूक्यतित्तरी ।  
 >ऐतरेयं च छान्दोग्यं 
+>बृहदारण्यकं दशाः ॥  
 >
->बृहदारण्यकं दशाः ॥
->
->Īśakenakaṭhapraśna
->
->muṇḍamāṇḍūkyatittarī |
->
->aitareyaṃ ca chāndogyaṃ 
->
+>Īśakenakaṭhapraśna  
+>muṇḍamāṇḍūkyatittarī |  
+>aitareyaṃ ca chāndogyaṃ   
 >bṛhadāraṇyakaṃ daśāḥ ||
 
 These ten include Īśāvāsyopaniṣad, Kenopaniṣad, Kaṭḥopaniṣad, Praśnopaniṣad, Munḍakopaniṣad, Māṇdūkyopaniṣad, Taittirīyopaniṣad, Aittareyopaniṣad, as well as select chapters and portions from Chāndogyopaniṣad and Bṛhadāraṇyakopaniṣad. **Here also, Śaṅkara-Bhāṣyam is key along with a few English commentaries by standard 19th and 20th century stalwarts.**
