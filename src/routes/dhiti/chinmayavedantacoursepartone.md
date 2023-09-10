@@ -84,6 +84,8 @@ To apply for the Vedanta Course, it is mandatory that candidates meet the follow
 
 Gender, caste, creed, religion and nationality are no bar for applying for the Vedanta Course.
 
+The Vedanta Course is conducted free of charge and all selected students will be provided with boarding, lodging and study materials for the entire duration of the course.
+
 **To apply for the 19th Residential Vedanta Course at Sandeepany Sadhanalaya, Mumbai,** one may proceed with either of the two options:
 
 1. Fill the [Online Form](https://cvforms.chinmayamission.com/ChinmayaMission/form/ApplicationFormForVedantaCourse/formperma/5HU6c_AJhEyYkejxtsYQCx-K6VZLprLtkClx-mTzhLg). On submitting the form, a copy of the completed form will be sent to the applicant’s email. Then, the applicant is requested to keep the following documents/images handy to upload with the application: Passport size photograph of applicant (jpeg/jpg format), Graduation Certificate and other supporting documents to be submitted in PDF or Zip format, Medical certificate and supporting documents in PDF or Zip format.
