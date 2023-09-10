@@ -18,7 +18,7 @@ While told from her own experiential perspective, the book provides a great fram
 
 **Is Oxford Ready for a Hindu President?** The opening chapter of the book paints extremely bleak imagery through memories of Rashmi’s initial days at Oxford, as well as her unbelievable experience running for Student Union President. She powered through fourteen days of quarantine upon arriving at the campus, not seeing a single person and essentially being locked into a room for the first two weeks. She went on to figure out how to successfully navigate through virtual classwork, student activities, and general student life, eventually getting more involved in the student leadership body as well. Rashmi won the Student Union Presidential elections with a whopping fifty-four percent margin. However, within a few hours of the announcement - the dam broke as the hate-mail, slurs, bullying, and social media attacks began. All because of her religious identity and family background.
 
->“Even my parents were not spared. I was baselessly touted as being transphobic, racist, anti-Semitic, Islamophobic, and a bigoted supremacist who believed in the tenets of patriarchy. **The irony of accusing the first Indian female President of the Oxford University Student Union of patriarchy, was lost on me at that point.**”
+>Even my parents were not spared. I was baselessly touted as being transphobic, racist, anti-Semitic, Islamophobic, and a bigoted supremacist who believed in the tenets of patriarchy. **The irony of accusing the first Indian female President of the Oxford University Student Union of patriarchy, was lost on me at that point.**
 
 Cut to **Hello World,** chapter two of the book - where Rashmi chronicles her bright, rich and anchored childhood as a single daughter in a huge extended family, growing up in the beautiful Udupi, Karnataka. This chapter is a stark contrast from the previous one, slating a distinct difference between life in India, growing up in the late 90s and 2000s, in a rural and natural setting - and life at Oxford, purportedly one of the best universities in the world. In this section, Rashmi beautifully connects how different aspects of life - including cuisine, values, the presence of elder relatives, age-old temples, celebration of festivals and traditions, and even śāstra that one is exposed to - these all contribute to cultural upbringing. 
 
@@ -32,7 +32,7 @@ She goes on to narrate details regarding the history of colonial mentality and l
 
 Her presidential manifesto was based on four concrete, major changes that she wanted to bring about in the university. This decisive choice was the trigger that opened her up to the nepotism that existed within the institution. Instead of dealing with students fairly, and based on merit, Rashmi began facing initial opposition. She was quickly called out for negative campaigning, for saying things as simple (and true!) as -
 
->“As the only graduate student, woman and person of color running for the position, I would be beyond honoured to have your vote.”
+>As the only graduate student, woman and person of color running for the position, I would be beyond honoured to have your vote.
 
 This simple statement was considered crossing the line between personal qualifications and negative campaigning! She was excluded and censored from participating fairly in the election, and it became a deep mental agony to actually go through with the election.
 
