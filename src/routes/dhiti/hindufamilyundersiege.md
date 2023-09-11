@@ -61,7 +61,7 @@ Hindu law is now caught in a cobweb of rights-based framework and bureaucratic r
 
 But a Hindu mind sees something else here. It observes all these as power struggles. The more institutions of the people, like family, are weakened the greater control the state has over you. The ideology of individualism is not liberating but rather a dependency on the deep state. The current hierarchies of rights and the surrounding bureaucratic legal frameworks are subject to change, fluid. They can interchange and be mobile tomorrow with freshly minted ideas of progressiveness.
 
-For example, adultery was decriminalized by the SC of India<sup>2</sup> citing a man_ is not the owner of his wife_. This draws from the feminist ideology that the sexual freedom of women is a measure of women's emancipation and society’s progressive status. Now what stops from granting coparcenary rights to an invalid wife from void marriage? What prevents the incorporation of bigamy, including polyandry and polygamy, into Hindu law? Or a stop-gap measure of having a single valid spouse and multiple invalid spouses with cris-cross of rights? In fact, if progressiveness is the yardstick then these are definitely future realities.
+For example, adultery was decriminalized by the SC of India<sup>2</sup> citing a man _is not the owner of his wife_. This draws from the feminist ideology that the sexual freedom of women is a measure of women's emancipation and society’s progressive status. Now what stops from granting coparcenary rights to an invalid wife from void marriage? What prevents the incorporation of bigamy, including polyandry and polygamy, into Hindu law? Or a stop-gap measure of having a single valid spouse and multiple invalid spouses with cris-cross of rights? In fact, if progressiveness is the yardstick then these are definitely future realities.
 
 As stated, all these are power struggles to destroy the evolution of humans through institutions of family. You can read the previous two articles to understand the idea and institution of Hindu marriage.<sup>3</sup> This is not a conspiracy of a single man or institution. When power doesn't serve its true masters- knowledge in its pure and highest form, this is inevitable. It veers off course, leading to the breakdown of societal institutions and eventually humans as well.
 
@@ -88,5 +88,5 @@ In conclusion, today's Hindu law is in disarray, and its intellectuals seem lost
 1. [Child of void/voidable marriage has right to parents' ancestral property in Hindu joint family: Supreme Court (barandbench.com)](https://www.barandbench.com/news/child-void-marriage-parents-ancestral-property-hindu-joint-family-supreme-court)
 2. [Adultery law in India - Wikipedia](https://en.wikipedia.org/wiki/Adultery_law_in_India#cite_note-3)
 3. [Marriage: The Institution of Sacrifice (brhat.in)](https://www.brhat.in/dhiti/marriage)
-   [Gṛhastha Āśrama - Marriage Part II (brhat.in)](https://www.brhat.in/dhiti/marriage2)
-4. [Swabhava and Swadharma - CWSA - Essays on the Gita - The Incarnate Word](https://incarnateword.in/cwsa/19/swabhava-and-swadharma)
+4. [Gṛhastha Āśrama - Marriage Part II (brhat.in)](https://www.brhat.in/dhiti/marriage2)
+5. [Swabhava and Swadharma - CWSA - Essays on the Gita - The Incarnate Word](https://incarnateword.in/cwsa/19/swabhava-and-swadharma)
