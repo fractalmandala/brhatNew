@@ -88,5 +88,5 @@ In conclusion, today's Hindu law is in disarray, and its intellectuals seem lost
 1. [Child of void/voidable marriage has right to parents' ancestral property in Hindu joint family: Supreme Court (barandbench.com)](https://www.barandbench.com/news/child-void-marriage-parents-ancestral-property-hindu-joint-family-supreme-court)
 2. [Adultery law in India - Wikipedia](https://en.wikipedia.org/wiki/Adultery_law_in_India#cite_note-3)
 3. [Marriage: The Institution of Sacrifice (brhat.in)](https://www.brhat.in/dhiti/marriage)
-4. [Gṛhastha Āśrama - Marriage Part II (brhat.in)](https://www.brhat.in/dhiti/marriage2)
-5. [Swabhava and Swadharma - CWSA - Essays on the Gita - The Incarnate Word](https://incarnateword.in/cwsa/19/swabhava-and-swadharma)
+   [Gṛhastha Āśrama - Marriage Part II (brhat.in)](https://www.brhat.in/dhiti/marriage2)
+4. [Swabhava and Swadharma - CWSA - Essays on the Gita - The Incarnate Word](https://incarnateword.in/cwsa/19/swabhava-and-swadharma)
