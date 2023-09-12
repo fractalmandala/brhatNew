@@ -1,0 +1,35 @@
+---
+title: "Book Review | Sāmānya Dharma: Ethical Duties Common to All"
+author: Ganesh
+category: Svayambodha
+tags: 
+- bookreview 
+- dharma
+excerpt: "The book 'Sāmānya Dharma' explores Dharma's foundational and universal principles and its relevance in contemporary society"
+date: "2023-09-12"
+image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/samanyadharma.webp
+---
+
+Since time immemorial, one word captures the imagination of almost all the children born in the blessed land of Bhārata: Dharma. What is dharma? What are the implications of dharma in one’s personal sphere, extended society and general civilization? Questions like these have intrigued the minds of intellectuals over centuries. In the increasingly polarized world we live in, it becomes imperative that one understands the basic tenets of dharma and tries to imbibe a minimal common denominator of this eternal value system. In this context, a book aptly named Sāmānya Dharma (roughly translated as common dharma) by Śrī Nithin Sridhar is a great reference material to draw from.
+
+The preface of the book written by Swami Svatmavidyananda is a short but succinctly written one, which emphasizes the need and sets the tone by elucidating the relevance of this book. The preface captures the core essence of dharma in the form of the **Dharma Bull** with references across various texts. The author sets the context by highlighting the fact that dharma is not just about oneself, but is essential for the general improvement of the larger societal fabric of which we are all part.
+
+In the first chapter, the author establishes the **interplay of the four puruṣārthas**. The one singularly significant statement is cited from Srinivasa Rao’s paper: 
+
+>Mokṣa can be attained only when kāma and artha are pursued within the framework of dharma. 
+
+Profound. The section on the **definition of dharma** is one of the finest amongst the various books I have read. Referring across Mahābhārata, multiple Upaniṣads, Vaiśeṣika sūtras, Manusmṛiti & culminating with the summary from Ādi Śaṅkarācārya, the author provides a holistic, easy-to-comprehend definition of dharma. 
+
+In the section on the **inter-relationship between ṛta, satya and dharma**, the author explains the concepts in a lucid manner, while aptly referring to the seminal work by Śatāvadhāni Dr. R. Ganesh, whose book is a highly recommended read for interested aspirants. In the concluding part of section 2, the author explains the derivation of what constitutes dharma & adharma through multiple references yet again, emphasizing the need to rid oneself from the impact of ṣaḍripus and work in accordance with the truths elucidated in Vedas, distilled through various Dharma śāstras.
+
+In the next section, the author sets the context for the title of the book, by explaining the overall framework of one’s duties i.e. sva-dharma which is a combination of **sāmānya dharma** (common duties) **and viśeṣa dharma** (specific due to time, geography, stage of life etc). In the section on the tenets of what constitutes sāmānya dharma, the author references across the various portions of the Vedas - saṃhitā, brāhmaṇa, āraṇyaka and upaniṣad - thereby establishing that the root of sāmānya dharma is deeply embedded within the vaidika literature and wisdom. A breadth and depth of understanding of vaidika literature is provided, with multiple references being evoked to explain every single aspect of the dharma. The research and reference material are truly exemplary and quite frankly exhaustive.
+
+The aspect of action and intent is brought out effectively while explaining the intricacies of the concept ahiṃsā. In the explanation about satya, the author emphasizes the need for not only speaking the truth, but the importance of considering the overall context, situation and timing of uttering the same, to the extent of not delivering unpleasant truths. Timeless wisdom is explained astutely with references from Manu Smṛti. While asteyam (non-stealing) as a concept is explained in a concise manner, the author brings out the various perspectives about śauca (cleanliness), including both external and internal aspects, restrictions for each one of them & implications of following the ordained path. The section on indriya nigraham (control of senses) is beautiful. Expanding further from Manu Smṛti, the author explains the sāmānya dharma tenets from Yājñavalkya Smṛti, Viṣṇu Smṛti & Vasiṣṭa Dharmasūtra in an integrated manner. Furthermore, the concepts of sāmānya dharma from Arthaśāstra, Mahābhārata, Vāmana Purāṇa & Agni Purāṇa are also highlighted along with the elaborate detailed list from Śrīmad Bhāgavata Purāṇa. With every new reference, it becomes more and more clear that **sāmānya dharma was embedded into the daily lives of our ancestors with the ultimate upliftment of society and attainment of mokṣa, the ultimate bliss, as the final end-goals of such endeavors.**
+
+In sāmānya dharma & societal issues, the author provides an elaborate preamble about the current status of the human society, leading to the classification of human behaviors under the various categories of gunas. Ariṣaḍvarga, or the six vices, are dealt with elaborately to emphasize the impact of them on our lives in general, as well as the wider impact on the society. This section is concluded cogently with the author highlighting the fact that each facet of sāmānya dharma, in daily life is the real path to the upliftment of society. **Real change is effected internally which is the core essence of sāmānya dharma.** 
+
+In the concluding section on **spirituality**, the author explains the various tenets of yoga. He eloquently establishes the interconnect between sāmānya dharma and basic foundational tenets of yoga. Next, the author explains the interconnect of sāmānya dharma and bhakti. Finally, the author provides an overview on the interconnect between the path highlighted by Vedāntic scriptures by various ācāryas and the core principles of sāmānya dharma.
+
+Dharma or sāmānya dharma is quite an exhaustive topic to cover, one which could easily run into multiple treatises or volumes. To make concise the widely available knowledge, distill the broad expanse into an easy-to-comprehend format and perhaps imbibe into daily lives, requires a herculean effort - not to forget the extreme breadth and depth of knowledge required across various scriptures. Śrī Nithin Sridhar’s intellectual prowess is quite apparent in the pages of the book where references across Itihāsas, Purāṇas, Upaniṣaḍs, and Smṛtis are generously quoted with every single concept. One of the stand-out features is the equanimous treatment towards various sampradāyas while explaining the tenets of sāmānya dharma.
+
+Subbu Publications should be commended highly for bringing out this timely and relevant read. The book captures invaluable wisdom in a quick to refer mode. A highly recommended read, the paperback edition can be purchased [here](https://subbupublications.com/product/ns1/) and the Kindle edition [here](https://www.amazon.in/Samanya-Dharma-Ethical-Duties-common-ebook/dp/B08941VKWK).
