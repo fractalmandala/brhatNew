@@ -15,43 +15,42 @@
 	metaUrl={$metaUrl}
 	metaImage={$metaImage}
 >
-	<section class="rta-grid grid2 left0 rowgap200 p-top-64">
-		<div class="rta-column sidebar p-top-32">
+	<section class="rta-column rowgap400 p-top-64 intro">
+		<div class="rta-column rowgap200 main p-top-32">
+			<slot />
+		</div>
+		<div class="rta-row ycenter colgap200 xcenter-d">
 			<div class="insection rta-column p-bot-16">
-				<small class="bord-bot p-bot-8 m-bot-8"><b>Quick Navigate:</b></small>
-				<div class="rta-row stay colgap100">
-					<div class="rta-column rowgap50" style="width: 30%">
+				<div class="rta-row stay colgap200 ycenter">
+					<div class="rta-column rowgap50">
 						<cite>Maṇḍala</cite>
 						<select>Mandala</select>
 					</div>
-					<div class="rta-column rowgap50" style="width: 30%">
+					<div class="rta-column rowgap50">
 						<cite>Sūkta</cite>
 						<select>sukta</select>
 					</div>
-					<div class="rta-column rowgap50" style="width: 30%">
+					<div class="rta-column rowgap50">
 						<cite>Ṛca</cite>
 						<select>rca</select>
 					</div>
 				</div>
 			</div>
-			<div class="insection rta-column p-bot-16 p-top-8">
-				<small class="bord-top p-top-16 p-bot-8"><b>Select Ṛṣi:</b></small>
+			<div class="insection rta-column p-bot-16 rowgap50">
+				<cite>Ṛṣi</cite>
 				<select>rishi</select>
 			</div>
-			<div class="insection rta-column p-bot-16 p-top-8">
-				<small class="bord-top p-top-16 p-bot-8"><b>Select Devatā:</b></small>
+			<div class="insection rta-column p-bot-16 rowgap50">
+				<cite>Devatā</cite>
 				<select>dev</select>
 			</div>
-		</div>
-		<div class="rta-column rowgap200 main p-top-32">
-			<slot />
 		</div>
 	</section>
 </Shell>
 
 <style lang="sass">
 
-.rta-grid
+.intro
 	min-height: 100vh
 
 select
@@ -59,13 +58,6 @@ select
 	border-radius: 3px
 	padding: 4px
 	background: var(--forline)
-
-.sidebar
-	@media screen and (min-width: 1024px)
-		border-right: 1px solid var(--contraster2)
-		padding-right: 32px
-		position: sticky
-		top: 0
 
 .main
 	@media screen and (min-width: 1024px)

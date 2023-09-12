@@ -181,7 +181,7 @@
 	<section class="rta-column rowgap400 min100" id="samikshana">
 		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
 			<h2>
-				<a href="/svarnanjali">
+				<a href="/samikshana">
 					{#each title8.split('') as char, i}
 						<span class="text-animation" style="animation-delay: {i * 0.04}s">{char}</span>
 					{/each}

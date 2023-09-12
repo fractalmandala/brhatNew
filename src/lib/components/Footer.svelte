@@ -156,12 +156,15 @@ small
 		.footertop, .footerbot, .footermain
 			width: 1072px
 	@media screen and (max-width: 1199px) and (min-width: 1024px)
+		min-height: 100vh
 		.footertop, .footerbot, .footermain
 			width: 896px
 	@media screen and (max-width: 1023px) and (min-width: 769px)
+		min-height: 100vh
 		.footertop, .footerbot, .footermain
 			width: 640px
 	@media screen and (max-width: 768px) and (min-width: 576px)
+		min-height: 100vh
 		.footertop, .footerbot, .footermain
 			width: 512px			
 	@media screen and (max-width: 575px)
@@ -170,12 +173,12 @@ small
 		.footertop, .footerbot, .footermain
 			width: 100%
 	@media screen and (min-width: 769px)
-		height: 100vh
+		min-height: 100vh
 		padding-top: 64px
 		.footertop
 			border-top: 1px solid var(--contraster2)
 		.footermain
-			height: calc(100vh - 192px)
+			min-height: calc(100vh - 192px)
 
 .footermain
 	display: grid
