@@ -5,7 +5,7 @@ category: Svayambodha
 tags: 
 - krishna 
 - festivals
-excerpt: "The book 'Sāmānya Dharma' explores Dharma's foundational and universal principles and its relevance in contemporary society"
+excerpt: "A journey to Mathura, the heart of Kṛṣṇa's abode, where every step is a testament to the indomitable Hindu spirit."
 date: "2023-09-16"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gloryofkrishnajanmashtami.webp
 ---
