@@ -137,10 +137,3 @@
 		</div>
 	</section>
 </Shell>
-
-<style lang="sass">
-
-li
-	font-size: inherit
-
-</style>
