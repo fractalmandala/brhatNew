@@ -1,6 +1,7 @@
 ---
 title: "Hyderabad Art Festival 2023" 
-author: Dharma Today
+author: Sneha Subramanian
+category: Dharma Today
 tags: 
 - art 
 - festival
