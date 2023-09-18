@@ -402,7 +402,7 @@
 					{#each allByCat as item}
 						<div class="rta-dhiti rta-row">
 							<div class="rta-column rowgap200">
-								<h5 class="heading" class:light={$themeMode} class:dark={!$themeMode}>
+								<h5 class="heading" class:light={!$themeMode} class:dark={$themeMode}>
 									<a href={item.path}>{item.meta.title}</a>
 								</h5>
 								<p>{item.meta.excerpt}</p>
@@ -431,7 +431,7 @@
 					{#each allByAuth as item}
 						<div class="rta-dhiti rta-row">
 							<div class="rta-column rowgap200">
-								<h5 class="heading" class:light={$themeMode} class:dark={!$themeMode}>
+								<h5 class="heading" class:light={!$themeMode} class:dark={$themeMode}>
 									<a href={item.path}>{item.meta.title}</a>
 								</h5>
 								<p>{item.meta.excerpt}</p>
@@ -457,7 +457,7 @@
 					{#each allByDate as item}
 						<div class="rta-dhiti rta-row">
 							<div class="rta-column rowgap200">
-								<h5 class="heading" class:light={$themeMode} class:dark={!$themeMode}>
+								<h5 class="heading" class:light={!$themeMode} class:dark={$themeMode}>
 									<a href={item.path}>{item.meta.title}</a>
 								</h5>
 								<p>{item.meta.excerpt}</p>
@@ -490,7 +490,7 @@
 					{#each allBySingle as item}
 						<div class="rta-dhiti rta-row">
 							<div class="rta-column rowgap200">
-								<h5 class="heading" class:light={$themeMode} class:dark={!$themeMode}>
+								<h5 class="heading" class:light={!$themeMode} class:dark={$themeMode}>
 									<a href={item.path}>{item.meta.title}</a>
 								</h5>
 								<p>{item.meta.excerpt}</p>

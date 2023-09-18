@@ -44,7 +44,12 @@
 		</h5>
 		<h5 class="title bord-bot p-bot-32" style="color: #fe4a49">
 			Do send in your entries by 27th September 2023 to contact@brhat.in, or tag us on Twitter
-			@brhat_in
+			<a
+				href="https://twitter.com/brhat_in"
+				target="_blank"
+				rel="noreferrer"
+				style="text-decoration: underline">@brhat_in</a
+			>
 		</h5>
 	</section>
 	<section class="rta-column rowgap400 p-top-64">
@@ -113,11 +118,6 @@
 					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/complex/4.jpeg"
 					alt="4"
 				/>
-			</div>
-		</div>
-		<div class="rta-column rowgap300">
-			<h6 class="title">Photos from Balagokulam</h6>
-			<div class="rta-grid grid4 stay2 rowgap300 colgap300 bord-bot p-bot-32">
 				<img
 					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/balagokulam/1.jpeg"
 					alt="1"
@@ -131,8 +131,8 @@
 					alt="3"
 				/>
 				<img
-					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/balagokulam/4.jpeg"
-					alt="4"
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/complex/5.jpeg"
+					alt="55"
 				/>
 			</div>
 		</div>
