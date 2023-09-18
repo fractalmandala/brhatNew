@@ -36,7 +36,7 @@
 	$metaUrl = 'https://www.brhat.in/about';
 	$metaTitle = 'About Bṛhat';
 	$metaDescription =
-		'Bṛhat is a culture engine. To power creatives, research and design rooted in the Indian civilizational consciousness.';
+		'Bṛhat is a culture engine. We power creatives, research and design rooted in the Indian civilizational consciousness.';
 	$metaImage =
 		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/brhatheadcard.webp';
 	$metaType = 'webpage';
