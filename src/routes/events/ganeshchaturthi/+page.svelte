@@ -138,3 +138,10 @@
 		</div>
 	</section>
 </Shell>
+
+<style lang="sass">
+
+h5.title
+	text-transform: normal
+
+</style>
