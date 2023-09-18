@@ -43,7 +43,8 @@
 			minutes, and writeups of 500 words.
 		</h5>
 		<h5 class="title bord-bot p-bot-32" style="color: #fe4a49">
-			Do send in your entries by 27th September 2023!
+			Do send in your entries by 27th September 2023 to contact@brhat.in, or tag us on Twitter
+			@brhat_in
 		</h5>
 	</section>
 	<section class="rta-column rowgap400 p-top-64">
