@@ -142,6 +142,6 @@
 <style lang="sass">
 
 h5.title
-	text-transform: normal
+	text-transform: none
 
 </style>
