@@ -23,9 +23,9 @@
 	metaImage={$metaImage}
 	metaUrl={$metaUrl}
 >
-	<section class="rta-column rowgap400 p-top-128 p-bot-32">
-		<h4>Ekatma Dham</h4>
-		<div class="rta-column rowgap200">
+	<section class="rta-column rowgap400 p-top-128 p-bot-32 xcenter">
+		<h4 class="ta-c">Ekatma Dham</h4>
+		<div class="rta-column rowgap200 contains-text">
 			<p>
 				Omkareshwar is being developed as a global center of Advaita Vedānta by the Madhya Pradesh
 				government, with the aim of propounding the life and philosophy of Śrī Ādi Śaṅkarācāryā: the
