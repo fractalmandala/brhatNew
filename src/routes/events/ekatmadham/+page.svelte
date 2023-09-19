@@ -102,7 +102,7 @@
 	@media screen and (min-width: 1024px)
 		height: 100vh
 	@media screen and (max-width: 1023px)
-		height: 100vh
+		height: 50vh
 
 
 </style>
