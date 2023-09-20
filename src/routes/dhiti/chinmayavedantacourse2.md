@@ -7,20 +7,27 @@ tags:
 - vedanta
 excerpt: "A day in the life at Chinmaya Vedanta Course: A journey of disciplined study, spiritual growth, and service in pursuit of Advaita Vedānta knowledge and personal development, embodying the vision of Pūjya Swami Chinmayananda."
 date: "2023-09-20"
-image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/chinmayavedantacourse2.webpp
+image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/chinmayavedantacourse2.webp
 ---
 
 #### Dawn
 
 I open my eyes to the soft sound of rain falling outside, and the strong smell of the air and earth. It is still dark, though a few rays of white trickle in from the street light on the main āśrama road, just outside the dormitory. I slowly sit up and remember morning prayers.
 
->कराग्रे वसते लक्ष्मिः 
+>कराग्रे वसते लक्ष्मिः
+>
 >करमध्ये सरस्वति ।
->करमूले तु गोविन्दः 
+>
+>करमूले तु गोविन्दः
+>
 >प्रभाते करदर्शनम् ॥
->समुद्रवसने देवि 
+>
+>समुद्रवसने देवि
+>
 >पर्वतस्तनमण्डले ।
->विष्णुपत्नि नमस्तुभ्यं 
+>
+>विष्णुपत्नि नमस्तुभ्यं
+>
 >पादस्पर्शं क्षमस्वमे ॥
 
 Just as I finish, the 4 am bell is rung at the Annakṣetra (canteen). I am not sure at what point I stopped using my alarm clock – but after some months in this routine, my brain and body seem to have synced up to the cycles of the āśrama here. It still surprises me how it’s possible to wake up naturally a minute or two before the bell, every day consistently, just like that. It’s yet another thing I’ve become thankful for.
