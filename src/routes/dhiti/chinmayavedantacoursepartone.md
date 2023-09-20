@@ -1,6 +1,6 @@
 ---
 title: "Chinmaya Mission’s 19th Vedanta Course in English at Sandeepany Sadhanalaya, Mumbai Part One: An Overview"
-author: Bṛhat
+author: Brhat
 category: Indian Knowledge Systems
 tags: 
 - education 
