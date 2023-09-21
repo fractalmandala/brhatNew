@@ -54,7 +54,7 @@ At 6:45 am, I walk to the Sarasvatī Nilayam. We students begin chanting the cla
 
 #### Morning
 
-This morning we are going through Śrī Ādi Śaṅkarācāryā’s Vivekacūdāmaṇi, verse number 208 out of the 400+ ślokas of various chandas (meters) and topics. Many of us record the entire class, knowing that we may not grasp everything the first time. We take notes, and respond to questions from the acāryā as and when he cross-checks our understanding and even memory from previous texts that we have studied.
+This morning we are going through Śrī Ādi Śaṅkarācāryā’s Vivekacūdāmaṇi, verse number 208 out of the 400+ ślokas of various chandas (meters) and topics. Many of us record the entire class, knowing that we may not grasp everything the first time. We take notes, and respond to questions from the ācāryā as and when he cross-checks our understanding and even memory from previous texts that we have studied.
 
 After class, just after 9 am we are liberated to the Annakṣetra for breakfast. There is sābudānā kicadi today, being Somavāra (Monday). There is some simple tiffin breakfast item daily, and I consciously try to eat light so that I don’t feel sleepy afterwards.
 
@@ -64,7 +64,7 @@ In the current sevā assignment cycle, I have to sweep two areas of the āśrama
 
 We were given a book with some tens of stotrams at the beginning of the course, including stotrams on all different devīs, devatās and gurus. By the end of the two years, we will know every single one in the book. We recently finished Annapūrnā Stotram, and just started on Lalitā Sahasranāma Stotram which will take us much longer to learn. Yet, I enjoy the different meters and tunes we learn in this class. I also try to pay attention to the application of Samskṛtam in the stotrams, as well as the constant insight into different specific forms of divinity. Each stotram tells us their favorite things - their preferred colors, foods, places, temples, art forms, and more. 
 
-Lunch follows, and we assemble back into the Annakṣetra, this time unlike breakfast because we must chant the entire 15<sup>th</sup> chapter of the Bhagavad Gītā before the meal starts. We chant this twice a day, once before lunch and once before dinner. 
+Lunch follows, and we assemble back into the Annakṣetra, this time unlike breakfast because we must chant the entire 15<sup class="nonce">th</sup> chapter of the Bhagavad Gītā before the meal starts. We chant this twice a day, once before lunch and once before dinner. 
 
 Lunch and dinner are routine now – predictable and safe. There is always rice, roṭi, dāl, one vegetable subji, and buttermilk. On festival days and special occasions – the menu becomes much more elaborate. However, for our daily lunch and dinner, the food is not at all a distraction from the vidyā for which we are here.
 
@@ -74,7 +74,7 @@ Post-lunch, many students meet in the Sarasvatī Nilayam for group study or disc
 
 Once I’ve gotten through my portions for today, I head back to my room for a short nap. Twenty to thirty minutes, the short power nap does wonders. Once I’m awake again, I take quick shower before packing my bag for the afternoon session of Vedānta class. After hot tea at the Annakṣetra, we are back in the Sarasvatī Nilayam, chanting the text again ten minutes before the ācāryā arrives.
 
-Afternoon Vedānta class is Śrīmad Bhagavad Gītā, where we study a few commentaries along with Śaṅkarabhāśyam. [More details in Part One of this series](https://www.brhat.in/dhiti/chinmayavedantacoursepartone). This week, we are wrapping up the 18th and final chapter of the Gītā. 
+Afternoon Vedānta class is Śrīmad Bhagavad Gītā, where we study a few commentaries along with Śaṅkarabhāśyam. [More details in Part One of this series](https://www.brhat.in/dhiti/chinmayavedantacoursepartone). This week, we are wrapping up the 18<sup class="nonce">th</sup> and final chapter of the Gītā. 
 
 Once this class ends, the day will rush by. I pull out my umbrella as the rain has started again, and walk uphill to the temple where evening ārati will be happening soon. It’s now bustling with localites of Powai, āśrama residents, and even regular devotees and visitors who come from around the country and even world. 
 
@@ -86,7 +86,7 @@ Today is my turn to chant the evening āratī in the temple, on the microphone. 
 
 Now, it’s become a responsibility to look forward to - another chance to practice spaṣṭa Samskṛta pronunciation and Vaidika svaras, another offering to the Higher which we aspire to align ourselves with. 
 
-At 6 pm on the dot, Nagaraj anna (the priest) begins with his chanting of a few portions of Rudram and the Devi Sūktam. Once he finishes, I start. 
+At 6 pm on the dot, Nagaraj anna (the priest) begins with his chanting of a few portions of Rudram and the Devī Sūktam. Once he finishes, I start. 
 
 The Vaidika āratī begins with prayers to the specific devīs and devatās here at this mandir, and the prayer extols their names and virtues. Lokasaṅgraha is also part of this humble request, clothed in the words of the ancients, with mantras from the Vedas which have been chanted for thousands of years. The power of the prayer, as well as the sanctity of the temple itself - all are felt reverberating in these 15 - 20 minutes of āratī.
 
@@ -98,7 +98,7 @@ Post-āratī is the final session of the day. The text for this last class, from
 
 Today, we are enraptured with the episode of Vṛtrāsura vadha. The highlight for me is Vṛtra’s backstory, his pūrva janmas, and the final hymn that Vṛtrāsura sings in complete devotion before his liberation from that form. Several students and local attendees are in tears by the end of the kathā today. We conclude with some bhajans, simple Nārāyaṇa Saṅkīrtana, and head back to the Annakṣetra for dinner.
 
-Again, 15th chapter of the Gīta and the same dāl, rice, roṭi, and variety subji. It’s the healthiest, junk-free food I’ve eaten in my entire life.
+Again, 15<sup class="nonce">th</sup> chapter of the Gīta and the same dāl, rice, roṭi, and variety subji. It’s the healthiest, junk-free food I’ve eaten in my entire life.
 
 After dinner, students disperse for the final time today. Many start their night walk, up and down the main āśrama road, discussing the lessons from today or re-listening to their recordings from class. 
 
