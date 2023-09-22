@@ -13,6 +13,7 @@
 	import { scale } from 'svelte/transition';
 	import {
 		allChapters,
+		allAffiliates,
 		allDiaryCards,
 		allFaq,
 		anveshiGeneral,
@@ -31,6 +32,7 @@
 
 	let fullText = false;
 	let chapters: string | any[];
+	let affiliates: string | any[];
 	let iW: number;
 	let breakPoint: boolean;
 	let expandMenu = false;
@@ -141,6 +143,7 @@
 		}
 		(async () => {
 			chapters = await allChapters();
+			affiliates = await allAffiliates();
 			arts = await anveshiTempleArt();
 			vids = await anveshiVids(videoLimit);
 			cards = await allDiaryCards();
@@ -275,6 +278,94 @@
 			</Splide>
 		{/if}
 	</section>
+
+<section class="rta-column rowgap400 min100" id="chapters">
+		<h2 use:reveal class="bord-top bord-bot p-top-16 p-bot-24">Private Group Tours by Bṛhat Affiliates</h2>
+		<h5 use:reveal class="bord-top bord-bot p-top-16 p-bot-24">Please write to us at anveshi@brhat.in or contact us on +91 7008873551 for group booking.</h5>
+		{#if affiliates && affiliates.length > 0}
+			<Splide
+				hasTrack={false}
+				options={{
+					drag: true,
+					keyboard: 'global',
+					waitForTransition: true,
+					type: 'loop',
+					gap: '32px',
+					width: '100%',
+					wheelMinThreshold: 1.1,
+					speed: 900,
+					direction: 'ltr',
+					perPage: 3,
+					pagination: false,
+					breakpoints: {
+						1023: {
+							perPage: 2,
+							gap: '24px'
+						},
+						768: {
+							perPage: 1
+						}
+					}
+				}}
+			>
+				<SplideTrack>
+					{#each affiliates as item}
+						<SplideSlide>
+							<div class="rta-column fullH rowgap300">
+								<div class="rta-image height-30-stay br6">
+									<img class="br6" src={item.image} alt={item.id} />
+								</div>
+								<div class="rta-column rowgap200">
+									<div class="rta-column rowgap100">
+										<h5 class="title">
+												{item.name}
+										</h5>
+										{#if item.status === 'open now'}
+											<small class="yellowsticker">{item.status}!</small>
+										{/if}
+									</div>
+									{#if item.content && item.content.length > 0}
+										<p class="mid soft">
+											{item.content.slice(0, 300)}...
+										</p>
+									{/if}
+									<div class="rta-row row-col colgap200">
+										<small>
+											{item.duration}
+										</small>
+										<small>
+											{item.dates}
+										</small>
+									</div>
+								</div>
+							</div>
+						</SplideSlide>
+					{/each}
+				</SplideTrack>
+				<div
+					class="splide__arrows splide__arrows--ltr rta-row xcenter-d colgap200 p-top-16 p-bot-16 m-top-16 bord-top"
+				>
+					<button
+						class="splide__arrow splide__arrow--prev"
+						type="button"
+						aria-label="Previous slide"
+						aria-controls="splide01-track"
+					>
+						<PrevIcon />
+					</button>
+					<button
+						class="splide__arrow splide__arrow--next"
+						type="button"
+						aria-label="Next slide"
+						aria-controls="splide01-track"
+					>
+						<NextIcon />
+					</button>
+				</div>
+			</Splide>
+		{/if}
+	</section>
+
 	<section class="rta-column rowgap400 min100 p-bot-64" id="diaries">
 		<h2 use:reveal class="bord-top bord-bot p-top-16 p-bot-24">Travel Diaries</h2>
 		<h5 use:reveal={{ delay: 100, duration: 300, transition: 'fade' }}>
