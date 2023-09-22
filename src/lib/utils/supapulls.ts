@@ -263,6 +263,16 @@ export async function allChapters() {
 	return data
 }
 
+export async function allChapters() {
+	const { data, error } = await supabase
+	.from('brhat-anveshi')
+	.select()
+	.eq('type','affiliates')
+	.order('sequence', {ascending: false})
+	if (error) throw new Error(error.message)
+	return data
+}
+
 export async function allDiaryCards() {
 	const { data, error } = await supabase
 	.from('brhat-anveshi')
