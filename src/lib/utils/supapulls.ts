@@ -263,7 +263,7 @@ export async function allChapters() {
 	return data
 }
 
-export async function allChapters() {
+export async function allAffiliates() {
 	const { data, error } = await supabase
 	.from('brhat-anveshi')
 	.select()
