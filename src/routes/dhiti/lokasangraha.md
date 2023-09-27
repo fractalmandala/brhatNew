@@ -1,5 +1,5 @@
 ---
-title: "Re-Discovering Dhārmika Metaphysics for Lokasaṅgraha : A Comparative Analysis"
+title: "Re-Discovering Dhārmika Metaphysics for Lokasaṅgraha : A Comparative Analysis, Part I"
 author: Lakshmi Sivaraman
 category: Dharma Today
 tags: 
