@@ -65,7 +65,7 @@
 	metaImage={$metaImage}
 	metaUrl={$metaUrl}
 >
-	<section class="rta-column rowgap400 p-top-128">
+	<section class="rta-column rowgap400">
 		{#if details && details.length > 0}
 			{#each details as item}
 				{#if item.type === 'Total Course Duration'}
@@ -264,7 +264,7 @@
 	@media screen and (min-width: 1024px)
 		height: 100vh
 	@media screen and (max-width: 1023px)
-		height: 50vh
+		height: 40vh
 
 
 .boxes
