@@ -8,10 +8,10 @@
 	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/stores/metastores';
 	import { breakZero, breakOne, breakTwo } from '$lib/stores/globalstores';
 
-	$metaTitle = 'Bṛhat';
-	$metaDescription = 'the Culture Engine';
-	$metaUrl = 'https://www.brhat.in';
-	$metaImage = '/images/cover-brhat.webp';
+	$metaTitle = 'Nitividhana';
+	$metaDescription = 'Culture Compatible Public Policy';
+	$metaUrl = 'https://www.brhat.in/nitividhana';
+	$metaImage = '/images/nitividhanahero.png';
 
 	let details: any;
 	let section = Array(4).fill(false);
