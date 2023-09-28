@@ -933,3 +933,12 @@ export async function samDates(){
 	if (error) throw new Error(error.message)
 	return data		
 }
+
+export async function nitividhana(){
+	const { data, error } = await supabase
+	.from('brhat-nitividhanaonline')
+	.select()
+	.order('id')
+	if (error) throw new Error(error.message)
+	return data		
+}
