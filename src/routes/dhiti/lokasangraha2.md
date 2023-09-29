@@ -93,7 +93,7 @@ By now we would have gained an overview of why _Sānatana Dharma_ has solutions 
 
 Perhaps it is time we had a relook at our definitions of happiness, and relationships with nature and fellow beings, from a lens that centers on purpose and harmony.
 
-#### References
+#### References:
 
 * Baron, R. A., & Mishra, G. (2016). _Psychology - Indian Subcontinent Edition_ (5th ed.). Pearson.
 
