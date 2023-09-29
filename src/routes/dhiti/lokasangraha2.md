@@ -24,7 +24,7 @@ This Consciousness is of the nature of _Sat_, meaning it is unchangeable across 
 
 The attainment of this state is not to be considered as philosophy alone but has been the lived reality of many _Ṛṣis_ in deep meditative states. The attainment of Consciousness-as-such is in fact the highest goal (_Mokṣa_) of human life in the Indic worldview. 
 
-This unmanifest principle is represented in the cosmos as _Ṛta_, the cosmic order that governs universal processes. It is the design through which Sat, or the Truth manifests as Being. In the human plane, _Dharma_ is the analogue for _Ṛta_. If _Ṛta_ is the cosmic design, _Dharma _is a societal design cognized through the meditative experiences of the _Ṛṣis_ who were able to access _Ṛta_. 
+This unmanifest principle is represented in the cosmos as _Ṛta_, the cosmic order that governs universal processes. It is the design through which Sat, or the Truth manifests as Being. In the human plane, _Dharma_ is the analogue for _Ṛta_. If _Ṛta_ is the cosmic design, _Dharma_ is a societal design cognized through the meditative experiences of the _Ṛṣis_ who were able to access _Ṛta_. 
 
 While _Dharma_ is a highly nuanced term, it includes all the socio-cultural mechanisms and restraints that serve to refine human subjectivity to allow this species to access Sat and thereby a living that is deeply fulfilling.
 
