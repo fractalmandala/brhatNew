@@ -7,7 +7,7 @@ tags:
 - festival
 excerpt: "Hyderabad Art Festival 2023: An initiative empowering artists across Bhārata, featuring diverse artworks and creative expressions, showcasing the enduring power of art in our cultural fabric."
 date: "2023-09-18"
-image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/hyderabadartfestival/hyderabadartfestivalcover.png
+image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/hyderabadartfestivalcover.webp
 ---
 
 It all began from a random circulation of an invite from a dear friend, calling artists around the country for participation. What appeared as a very simple platform for art and artists turned out to be an initiative that was so humbling and a much needed one for several accomplished and budding artists across Bhārata.
