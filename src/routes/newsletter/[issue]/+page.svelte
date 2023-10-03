@@ -72,8 +72,8 @@
 		allitems = await newsletterItems(data.issueData.issueno);
 		newsissues = await newsletterIssues();
 		newsitems = await filteredNews($newsFilter, data.issueData.issueno);
-		recentDhiti = await periodicDhiti('August, 2023');
-		recentDhiti2 = await periodicDhiti('July, 2023');
+		recentDhiti = await periodicDhiti('September, 2023');
+		recentDhiti2 = await periodicDhiti('August, 2023');
 	});
 </script>
 
