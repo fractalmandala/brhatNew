@@ -1,6 +1,6 @@
 ---
 title: Book Review | Caṇḍikā - The Story of Goddess Durgā & its Vedāntic Import
-author: Bṛhat
+author: Padmavathy Manavazhahan
 category: Dharma Today
 tags:
 - books
