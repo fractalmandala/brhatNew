@@ -85,29 +85,77 @@
 			</div>
 		{/if}
 	</section>
-	<section class="rta-column rowgap400 p-top-64 p-bot-16">
-		{#if details && details.length > 0}
-			<div class="rta-column xcenter">
-				{#each details as item}
-					{#if item.type === 'Why Nītividhāna'}
-						<pre class="contains-text" style="color: var(--opposite); margin-top: 0">
-						{item.content}
-					</pre>
-					{/if}
-				{/each}
-				{#each details as item}
-					{#if item.type === 'Who is the program for?'}
-						<h5 class="title ta-c bord-top p-top-16 p-bot-16">{item.type}</h5>
-						<pre class="contains-text" style="color: var(--opposite)">{item.content}</pre>
-					{/if}
-				{/each}
+	<section class="rta-column rowgap400 p-top-64 p-bot-32">
+		<div class="rta-column xcenter">
+			<div class="rta-column rowgap200 p-bot-32">
+				<h6 class="contains-text">
+					This online policy learning program offered by Chinmaya International Foundation and Brhat
+					is an intensive immersive program in today's burning issues.
+				</h6>
+				<p class="contains-text">
+					It is intended as an introduction to Public Policy, its roots in Political Philosophy
+					(राजनैतिक दर्शन) as seen through an examination of some of the major texts and thinkers of
+					both the Eastern and Western traditions.
+				</p>
+				<p class="contains-text">
+					It attempts to provide a global overview of Political Philosophy and how these
+					philosophical traditions developed and evolved within a context, and how the politics of
+					those times played a role in establishing some traditions as dominant.
+					<b
+						>As public policy texts and practices draw heavily from these intellectual traditions,
+						it is necessary to place them in a context and retool for a fast-evolving world (and its
+						problems).</b
+					>
+				</p>
+				<p class="contains-text">
+					Designed to foster fact-based critical thinking on the most important policy issues,
+					participants will have a <b
+						>unique chance to look at policymaking from a worldview emerging from the Indian
+						Knowledge Systems.</b
+					> The program intends to build understanding among participants that the policy problems are
+					not merely economic problems, but complex socio-cultural problems.
+				</p>
+				<p class="contains-text">
+					The program challenges its participants to take the risk of thinking not just differently,
+					but more holistically. <b
+						>The course covers topics such as ancient Indian sciences, Ayurveda, yoga, ethical
+						frameworks, and indigenous knowledge systems.</b
+					>
+					Participants will engage in interactive online sessions, collaborative discussions, self-paced
+					learning, and practical applications to enhance their understanding and application of Indian
+					knowledge systems in governance.
+				</p>
 			</div>
-		{/if}
+			<div class="rta-column rowgap200 p-bot-32">
+				<h5 class="title ta-c bord-top p-top-32 p-bot-16">Who is the Program For?</h5>
+				<p class="contains-text">
+					<b>1. Students and Policy Enthusiasts -</b> who seek a more coherent worldview, beyond
+					ideological headlines.<br />
+				</p>
+				<p class="contains-text">
+					<b>2. Working Professionals -</b> wishing to acquire a richer lens to locate their work and
+					expand their area of influence.
+				</p>
+				<p class="contains-text">
+					<b>3. Writers and Artists -</b> looking to bring the power of art towards societal outcomes.
+				</p>
+				<p class="contains-text">
+					<b>4. Practicing and Aspiring Political Leaders -</b> who want to distinguish themselves and
+					rise above a purely electoral understanding of politics.
+				</p>
+			</div>
+			<div class="rta-column rowgap200 xcenter bord-top p-top-32">
+				<a href="https://rzp.io/l/nitividhana" target="_blank" rel="noreferrer">
+					<button class="newbutton big red">Apply Now</button>
+				</a>
+				<p class="small">Clicking on this button will open the payment page in a new tab.</p>
+			</div>
+		</div>
 	</section>
 	<section class="rta-column rowgap400 p-top-32 bord-top bord-bot p-bot-32">
 		{#if $breakTwo}
 			<div class="drawer rta-column xcenter">
-				<button on:click={toggleExpansion}>Expand Details</button>
+				<button on:click={toggleExpansion}>Expand Course Details</button>
 			</div>
 		{/if}
 		{#if $breakZero || $breakOne || expansion}
@@ -217,7 +265,10 @@
 		</div>
 	</section>
 	<section class="rta-column rowgap400 p-top-32 bord-bot p-bot-32">
-		<h4 class="ta-c">FAQs</h4>
+		<div class="rta-column rowgap100">
+			<h4 class="ta-c">FAQs</h4>
+			<small class="ta-c">Click on Questions to Expand</small>
+		</div>
 		{#if details && details.length > 0}
 			<div class="rta-column rowgap400 xcenter">
 				{#each details as item, i}
@@ -254,6 +305,12 @@
 				{/each}
 			</div>
 		{/if}
+		<div class="rta-column rowgap200 xcenter">
+			<a href="https://rzp.io/l/nitividhana" target="_blank" rel="noreferrer">
+				<button class="newbutton big red">Apply Now</button>
+			</a>
+			<p class="small">Clicking on this button will open the payment page in a new tab.</p>
+		</div>
 	</section>
 </Shell>
 
