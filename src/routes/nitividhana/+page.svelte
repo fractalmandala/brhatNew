@@ -225,14 +225,9 @@
 					This learning camp requires 100% time commitment for the duration of the 8-week program,
 					including participating in activities, games and collaboration with study groups outside
 					of class.<br /><br />
-					This policy learning camp does not offer participants academic credit or grades.
-					<b
-						>Successful participants receive a certificate of completion endorsed by Chinmaya
-						International Foundation and Brhat.
-					</b><br /><br />
-					<span style="color: #fe4a49"
-						>Please Note - Submit your application, then pay the registration fee.</span
-					>
+					This policy learning camp does not offer participants academic credit or grades.<br /><br
+					/>
+
 					Use the same email for both application and payment. The following is mandatory for course
 					completion and certification:<br /><br />
 					1. Attend all sessions.<br />
@@ -261,6 +256,10 @@
 					Incorporate ecological wisdom from Indian knowledge systems to contribute to sustainable socio-cultural
 					and natural systems in governance and nation-building.
 				</p>
+				<h6 class="contains-text">
+					Successful participants receive a certificate of completion endorsed by Chinmaya
+					International Foundation and Brhat.
+				</h6>
 			{/if}
 		</div>
 	</section>
