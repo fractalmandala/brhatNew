@@ -311,7 +311,7 @@
 			<div class="rta-column rowgap400 xcenter">
 				{#each details as item}
 					{#if item.type === 'speaker'}
-						<div class="rta-row colgap300 rowgap200">
+						<div class="rta-row colgap300 rowgap200 contains-text">
 							<div class="rta-image w32">
 								<img src={item.image} alt={item.content} />
 							</div>
