@@ -304,7 +304,27 @@
 				{/each}
 			</div>
 		{/if}
-		<div class="rta-column rowgap200 xcenter">
+	</section>
+	<section class="rta-column rowgap400 p-top-32">
+		<h4 class="ta-c">Speakers</h4>
+		{#if details && details.length > 0}
+			<div class="rta-column rowgap400 xcenter">
+				{#each details as item}
+					{#if item.type === 'speaker'}
+						<div class="rta-row colgap300 rowgap200">
+							<div class="rta-image w32">
+								<img src={item.image} alt={item.content} />
+							</div>
+							<div class="rta-column rowgap100 w64">
+								<p class="mid"><b>{item.content}</b></p>
+								<p class="small">{item.answer}</p>
+							</div>
+						</div>
+					{/if}
+				{/each}
+			</div>
+		{/if}
+		<div class="rta-column rowgap200 xcenter bord-top p-top-32">
 			<a href="https://rzp.io/l/nitividhana" target="_blank" rel="noreferrer">
 				<button class="newbutton big red">Apply Now</button>
 			</a>
@@ -314,6 +334,17 @@
 </Shell>
 
 <style lang="sass">
+
+.rta-image
+	height: 200px
+	width: 200px
+	display: flex
+	align-items: center
+	justify-content: center
+	img
+		object-fit: cover
+		width: 100%
+		border-radius: 25px
 
 .x0
 	overflow: hidden
