@@ -333,12 +333,13 @@
 	</section>
 	<section class="rta-column rowgap400 p-top-32">
 		<h4 class="ta-c">Schedule</h4>
+
 		{#if details && details.length > 0}
 			<div class="rta-column rowgap400 xcenter">
 				{#each details as item}
 					{#if item.type === 'schedule'}
 						<div class="rta-column contains-text bord-bot p-bot-16">
-							<p><b>{item.content}</b></p>
+							<p class="weeks"><b>{item.content}</b></p>
 							<pre style="color: var(--opposite)">{item.answer}</pre>
 						</div>
 					{/if}
@@ -347,7 +348,10 @@
 		{/if}
 	</section>
 	<section class="rta-column rowgap400 p-top-32">
-		<h4 class="ta-c">Speakers</h4>
+		<div class="rta-column rowgap100">
+			<h4 class="ta-c">Speakers</h4>
+			<small class="ta-c">Tentative List, Liable to Change.</small>
+		</div>
 		{#if details && details.length > 0}
 			<div class="rta-column rowgap400 xcenter">
 				{#each details as item}
@@ -375,6 +379,13 @@
 </Shell>
 
 <style lang="sass">
+
+.weeks
+	background: #fe4a49
+	color: white
+	padding: 2px 8px
+	width: max-content
+	max-width: 100%
 
 .icons
 	display: flex
