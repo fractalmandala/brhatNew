@@ -126,23 +126,64 @@
 					knowledge systems in governance.
 				</p>
 			</div>
-			<div class="rta-column rowgap200 p-bot-32">
+			<div class="rta-column rowgap300 p-bot-32">
 				<h5 class="title ta-c bord-top p-top-32 p-bot-16">Who is the Program For?</h5>
-				<p class="contains-text">
-					<b>1. Students and Policy Enthusiasts -</b> who seek a more coherent worldview, beyond
-					ideological headlines.<br />
-				</p>
-				<p class="contains-text">
-					<b>2. Working Professionals -</b> wishing to acquire a richer lens to locate their work and
-					expand their area of influence.
-				</p>
-				<p class="contains-text">
-					<b>3. Writers and Artists -</b> looking to bring the power of art towards societal outcomes.
-				</p>
-				<p class="contains-text">
-					<b>4. Practicing and Aspiring Political Leaders -</b> who want to distinguish themselves and
-					rise above a purely electoral understanding of politics.
-				</p>
+				<div class="icons contains-text p-bot-24">
+					<img
+						src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/icon-policy.png"
+						alt="students"
+					/>
+					<div>
+						<p>
+							<b>1. Students and Policy Enthusiasts</b>
+						</p>
+						<p class="mid soft">
+							who seek a more coherent worldview, beyond ideological headlines.
+						</p>
+					</div>
+				</div>
+				<div class="icons contains-text p-bot-24">
+					<img
+						src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/icon-professional.png"
+						alt="professionals"
+					/>
+					<div>
+						<p>
+							<b>2. Working Professionals</b>
+						</p>
+						<p class="mid soft">
+							wishing to acquire a richer lens to locate their work and expand their area of
+							influence.
+						</p>
+					</div>
+				</div>
+				<div class="icons contains-text p-bot-24">
+					<img
+						src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/icon-writer.png"
+						alt="writers"
+					/>
+					<div>
+						<p>
+							<b>3. Writers and Artists</b>
+						</p>
+						<p class="mid soft">looking to bring the power of art towards societal outcomes.</p>
+					</div>
+				</div>
+				<div class="icons contains-text p-bot-24">
+					<img
+						src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/icon-politician.png"
+						alt="politician"
+					/>
+					<div>
+						<p>
+							<b>4. Practicing and Aspiring Political Leaders</b>
+						</p>
+						<p class="mid soft">
+							who want to distinguish themselves and rise above a purely electoral understanding of
+							politics.
+						</p>
+					</div>
+				</div>
 			</div>
 			<div class="rta-column rowgap200 xcenter bord-top p-top-32">
 				<a href="https://rzp.io/l/nitividhana" target="_blank" rel="noreferrer">
@@ -334,6 +375,20 @@
 </Shell>
 
 <style lang="sass">
+
+.icons
+	display: flex
+	flex-direction: row
+	@media screen and (min-width: 769px)
+		column-gap: 24px
+		img
+			width: 64px
+			height: 64px
+	@media screen and (max-width: 768px)
+		column-gap: 16px
+		img
+			width: 56px
+			height: 56px
 
 .rta-image
 	height: 200px

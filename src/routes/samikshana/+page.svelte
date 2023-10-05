@@ -789,7 +789,7 @@
 				<button class="newbutton red" on:click={submitDetails}>Submit</button>
 				{#if showBro}
 					<a
-						href="https://drive.google.com/file/d/1GIKIlKLER2HpCzzf6NQXO_kaa7lZcQnp/view?usp=sharing"
+						href="https://drive.google.com/file/d/1ghuCCBa_F4lrHUnmbNBvor2VKu2Fgfwc/view?usp=sharing"
 						target="_blank"
 						rel="noreferrer"
 					>
