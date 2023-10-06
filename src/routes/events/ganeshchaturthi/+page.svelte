@@ -55,8 +55,8 @@
 	<section class="rta-column rowgap400 p-top-64">
 		<h4 class="p-bot-32 bord-bot">Current Entries</h4>
 		<div class="rta-column rowgap300">
-			<h6 class="title">Photos from Bṛhat</h6>
-			<div class="rta-grid grid4 stay2 rowgap300 colgap300 bord-bot p-bot-32">
+			<h5 class="title">Making Gaṇeśa</h5>
+			<div class="rta-grid grid4 stay2 rowgap300 colgap300 bord-bot p-bot-32 resizer">
 				<img
 					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/brhat/1.jpeg"
 					alt="1"
@@ -100,8 +100,110 @@
 			</div>
 		</div>
 		<div class="rta-column rowgap300">
-			<h6 class="title">Photos from a Bhagyanagar Residential Complex</h6>
-			<div class="rta-grid grid4 stay2 rowgap300 colgap300 bord-bot p-bot-32">
+			<h5 class="title">Welcoming Gaṇeśa</h5>
+			<div class="rta-grid grid4 stay2 rowgap300 colgap300 bord-bot p-bot-32 resizer">
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/welcoming/1.jpeg"
+					alt="1"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/welcoming/2.jpeg"
+					alt="2"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/welcoming/3.jpeg"
+					alt="3"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/welcoming/4.jpeg"
+					alt="4"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/welcoming/5.jpeg"
+					alt="5"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/welcoming/6.jpeg"
+					alt="6"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/welcoming/7.jpeg"
+					alt="7"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/welcoming/8.jpeg"
+					alt="8"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/welcoming/9.jpeg"
+					alt="9"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/welcoming/10.jpeg"
+					alt="10"
+				/>
+			</div>
+		</div>
+		<div class="rta-column rowgap300">
+			<h5 class="title">Gaṇeśa Visarjana, AVG Rishikesh</h5>
+			<div class="rta-grid grid4 stay2 rowgap300 colgap300 bord-bot p-bot-32 resizer">
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/visarjan/1.jpeg"
+					alt="1"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/visarjan/2.jpeg"
+					alt="2"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/visarjan/3.jpeg"
+					alt="3"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/visarjan/4.jpeg"
+					alt="4"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/visarjan/5.jpeg"
+					alt="5"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/visarjan/6.jpeg"
+					alt="6"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/visarjan/7.jpeg"
+					alt="7"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/visarjan/8.jpeg"
+					alt="8"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/visarjan/9.jpeg"
+					alt="9"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/visarjan/10.jpeg"
+					alt="10"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/visarjan/11.jpeg"
+					alt="11"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/visarjan/12.jpeg"
+					alt="12"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/visarjan/13.jpeg"
+					alt="13"
+				/>
+			</div>
+		</div>
+		<div class="rta-column rowgap300">
+			<h5 class="title">Photos from a Bhagyanagar Residential Complex</h5>
+			<div class="rta-grid grid4 stay2 rowgap300 colgap300 bord-bot p-bot-32 resizer">
 				<img
 					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/complex/1.jpeg"
 					alt="1"
@@ -143,5 +245,14 @@
 
 h5.title
 	text-transform: none
+
+.resizer
+	img
+		object-fit: cover
+		width: 100%
+		height: 280px
+		object-position: center center
+		@media screen and (max-width: 768px)
+			height: 160px
 
 </style>
