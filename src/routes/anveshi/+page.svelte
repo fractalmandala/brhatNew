@@ -279,9 +279,13 @@
 		{/if}
 	</section>
 
-<section class="rta-column rowgap400 min100" id="chapters">
-		<h2 use:reveal class="bord-top bord-bot p-top-16 p-bot-24">Private Group Tours by Bṛhat Affiliates</h2>
-		<h5 use:reveal class="bord-top bord-bot p-top-16 p-bot-24">Please write to us at anveshi@brhat.in or contact us on +91 7008873551 for group booking.</h5>
+	<section class="rta-column rowgap400 min100" id="chapters">
+		<h2 use:reveal class="bord-top bord-bot p-top-16 p-bot-24">
+			Private Group Tours by Bṛhat Affiliates
+		</h2>
+		<h5 use:reveal class="bord-top bord-bot p-top-16 p-bot-24">
+			Please write to us at anveshi@brhat.in or contact us on +91 7008873551 for group booking.
+		</h5>
 		{#if affiliates && affiliates.length > 0}
 			<Splide
 				hasTrack={false}
@@ -318,7 +322,7 @@
 								<div class="rta-column rowgap200">
 									<div class="rta-column rowgap100">
 										<h5 class="title">
-												{item.name}
+											{item.name}
 										</h5>
 										{#if item.status === 'open now'}
 											<small class="yellowsticker">{item.status}!</small>
@@ -461,7 +465,7 @@
 				</div>
 			{/if}
 			{#if selectedCategory[3]}
-				<div class="rta-grid grid2 left colgap600 rowgap300">
+				<div class="rta-grid grid2 left colgap600 rowgap300 p-bot-32 bord-bot">
 					<h5 class="title">
 						<a href="/anveshi/posts/kriteesh">Travel Diary by Kriteesh Vajrapani - Karnataka</a>
 					</h5>
@@ -474,6 +478,19 @@
 							rewarding than I expected. It got me exclusive time with the Bṛhat Team.
 						</p>
 						<a href="/anveshi/posts/kriteesh">
+							<button class="newbutton big">Read More</button>
+						</a>
+					</div>
+				</div>
+				<div class="rta-grid grid2 left colgap600 rowgap300 p-bot-32 bord-bot">
+					<h5 class="title">
+						<a href="/anveshi/posts/hiddentreasure"
+							>Recreation of Hidden Treasure of Ghazni Ganpati</a
+						>
+					</h5>
+					<div class="rta-column rowgap200">
+						<p class="mid soft">An essay by Anushree Sunil Ghisad Ji from the Goa Chapter</p>
+						<a href="/anveshi/posts/hiddentreasure">
 							<button class="newbutton big">Read More</button>
 						</a>
 					</div>
