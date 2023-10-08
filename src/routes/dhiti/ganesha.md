@@ -25,7 +25,7 @@ Dhārmic literature, our śāstras, have mastered the art of storytelling to con
 
 Here through the contemporary story-telling lens, we attempt to convey some symbolism behind the form and significance of Śrī Gaṇeśa.
 
-> ऊँ गम गणपतये नमः
+##### ऊँ गम गणपतये नमः
 
 Little Devika watched as an enigmatic idol of Śrī Gaṇeśa made its way into her society – accompanied by loud cheers and songs of happiness from all members. An easy smile rested on her face as she looked at His form in adoration
 
@@ -33,7 +33,7 @@ Then a thought struck her, a frown of deep concern coming upon her. She had a pe
 
 ##### She wondered what it was that His form represented?
 
-##### Now her penchant was matched by a special gift. This little girl could converse with the Lord, in her heart, whenever she wanted! He would hear her confused mind, and appear right next to her, answers and clarity beaming back at her through His divine smile.
+> Now her penchant was matched by a special gift. This little girl could converse with the Lord, in her heart, whenever she wanted! He would hear her confused mind, and appear right next to her, answers and clarity beaming back at her through His divine smile.
 
 “Fascinated by my elder brother’s form?” He whispered, as she looked at Him enraptured.
 
@@ -275,13 +275,20 @@ Have some faith in your little girl,” she admonished him.
 
 Bhagavān shook his head at her innocence while she went on: 
 
-> “Bappā tells all of us, 
+> “Bappā tells all of us,
+> 
 > With the axe when you cut off
+> 
 > your attachments and fears,
+> 
 > With the rope when you reign in
+> 
 > Your past regrets,
+> 
 > Your fanciful future imaginations and distress,
-> **Then you serve the world with love and joy,** 
+> 
+> **Then you serve the world with love and joy,**
+> 
 > You receive from me modakas of Peace and Abundance!” 
 
 “Wow. A poetess in the making it seems.” 
