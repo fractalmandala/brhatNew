@@ -902,7 +902,7 @@ export async function drashtaTestis(){
 	.from('brhat-testimonials')
 	.select()
 	.eq('type','drashta')
-	.order('id')
+	.order('id', {ascending: false})
 	if ( error ) throw new Error(error.message)
 	return data	
 }
