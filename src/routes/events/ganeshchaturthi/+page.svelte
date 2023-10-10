@@ -397,6 +397,19 @@
 			</div>
 		</div>
 		<div class="rta-column rowgap300">
+			<h5 class="title">Paintings by Sneha Subramanian</h5>
+			<div class="rta-grid grid4 stay2 rowgap300 colgap300 bord-bot p-bot-32 resizer">
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/painting/1.jpg"
+					alt="1"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/painting/2.jpg"
+					alt="2"
+				/>
+			</div>
+		</div>
+		<div class="rta-column rowgap300">
 			<h5 class="title">All Videos</h5>
 			<div class="rta-grid grid3 rowgap300 colgap300 bord-bot p-bot-32 resizer">
 				<div class="rta-column rowgap100">
