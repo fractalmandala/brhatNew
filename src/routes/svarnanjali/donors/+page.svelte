@@ -7,7 +7,7 @@
 
 	$metaTitle = 'Svarṇāñjali';
 	$metaDescription =
-		'Svarṇāñjali is a weekly video series to discuss literature, arts, drama, architecture, sculpture, cinema and other fine arts from the point of view of rasikā, in Sanskṛta Niṣṭha Hindī.';
+		'Svarṇāñjali is a weekly video series to discuss literature, arts, drama, architecture, sculpture, cinema and other fine arts from the point of view of rasikā, in Sanskṛta Niṣṭha Hindi.';
 	$metaUrl = 'https://www.brhat.in/svarnanjali/donors';
 	$metaImage = 'https://www.brhat.in/images/keys/ki-sv.png';
 </script>
@@ -68,18 +68,18 @@
 				of its culture and its people.
 			</p>
 			<p>
-				However, there is a ray of hope. Hindū consciousness has slowly started resurfacing. The
-				spark of Hindū renaissance is now turning into a burning flame. We are putting the Hindū eye
-				to philosophy, society and politics. Time has come now for this Hindū consciousness to break
+				However, there is a ray of hope. Hindu consciousness has slowly started resurfacing. The
+				spark of Hindu renaissance is now turning into a burning flame. We are putting the Hindu eye
+				to philosophy, society and politics. Time has come now for this Hindu consciousness to break
 				into the realm of arts and literature.
 			</p>
 			<p>
 				It is this belief in the power of language that has led to the genesis of Svarṇāñjali, our
 				flagship fortnightly series, which looks at literature, art and culture through the lens of
-				Hindū Darśana, in Saṃskṛta-niṣṭha Hindī ( and subsequently in other regional languages) by a
+				Hindu Darśana, in Saṃskṛta-niṣṭha Hindi ( and subsequently in other regional languages) by a
 				rasikā or a nāgarika - a cultural connoisseur. The goal is to bring the audience to
 				<b>saundarya bodha</b>, a level of elevated pleasure, while leading them, at the same time,
-				to the core principles of Hindū darśana, through the age-old Hindū tradition of
+				to the core principles of Hindu darśana, through the age-old Hindu tradition of
 				story-telling.
 			</p>
 			<p>Here is what we aim to achieve through:</p>
@@ -100,8 +100,8 @@
 					alt="any"
 				/>
 				<p>
-					<b>Reestablish Saṃskṛta Niṣṭha Hindī –</b> So that the spirit of Saṃskṛta is reinfused into
-					Hindī language and it becomes free of FAT words, in order to bring dhārmika awareness.
+					<b>Reestablish Saṃskṛta Niṣṭha Hindi –</b> So that the spirit of Saṃskṛta is reinfused into
+					Hindi language and it becomes free of FAT words, in order to bring dhārmika awareness.
 				</p>
 			</div>
 			<div class="rta-column rowgap100 bord-bot p-bot-32">
@@ -111,8 +111,8 @@
 					alt="any"
 				/>
 				<p>
-					<b>Look at Hindī literature and Indian arts from a Hindū perspective -</b>So that we
-					revisit literature, arts, drama, architecture, sculpture and cinema from a deep Hindū
+					<b>Look at Hindi literature and Indian arts from a Hindu perspective -</b>So that we
+					revisit literature, arts, drama, architecture, sculpture and cinema from a deep Hindu
 					perspective.
 				</p>
 			</div>
@@ -124,13 +124,13 @@
 				/>
 				<p>
 					<b>Aestheticize life –</b> So that we gain the ability to discuss individual problems and perspectives
-					from the eye of Hindū aesthetics and in the process give them an elevating and uplifting experience
+					from the eye of Hindu aesthetics and in the process give them an elevating and uplifting experience
 					which is cathartic.
 				</p>
 			</div>
 			<p>
 				So far we have produced 10, forty-forty five minute long episodes, on some of the best works
-				in Hindī literature across genres such historical fiction, play, epic poetry, biographical
+				in Hindi literature across genres such historical fiction, play, epic poetry, biographical
 				novel, etc and two works of Hindi cinema. The list includes:
 			</p>
 			<ul>
@@ -178,7 +178,7 @@
 			</p>
 			<p>
 				We are ready with another season of this series which includes some more timeless works from
-				Hindī literature:
+				Hindi literature:
 			</p>
 			<ul>
 				<li>Saket - Maithili Sharan Gupt</li>
