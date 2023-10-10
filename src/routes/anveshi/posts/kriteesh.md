@@ -1,6 +1,7 @@
 ---
 title: Travel Diary by Kriteesh Vajrapani
 about: A travelogue on the very first chapter of Bṛhat Anveṣī
+author: Kriteesh Parashar
 ---
 
 ### Travel Diary by Kriteesh Vajrapani - Karnataka Chapter

@@ -45,7 +45,10 @@
 				in their family/community
 			</p>
 		</div>
-		<h5 class="title">The submitted videos, photos and writeups are featured here.</h5>
+		<div class="rta-column rowgap100">
+			<h5 class="title">The submitted videos, photos and writeups are featured here:</h5>
+			<p class="mid soft">Right click/long press on images to open in new tab</p>
+		</div>
 	</section>
 	<section class="rta-column rowgap400 p-top-64">
 		<div class="rta-column rowgap300">
@@ -99,10 +102,6 @@
 				<img
 					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/welcoming/1.jpeg"
 					alt="1"
-				/>
-				<img
-					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/welcoming/2.jpeg"
-					alt="2"
 				/>
 				<img
 					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/welcoming/3.jpeg"
@@ -254,10 +253,6 @@
 					alt="1"
 				/>
 				<img
-					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/yapral/2.jpeg"
-					alt="2"
-				/>
-				<img
 					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/yapral/3.jpeg"
 					alt="3"
 				/>
@@ -374,10 +369,6 @@
 				<img
 					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/complex/1.jpeg"
 					alt="1"
-				/>
-				<img
-					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/complex/2.jpeg"
-					alt="2"
 				/>
 				<img
 					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/complex/3.jpeg"
@@ -592,6 +583,12 @@
 				<a href="/dhiti/ganesha" target="_blank" rel="noreferrer"
 					><button class="newbutton red">Read</button></a
 				>
+			</div>
+			<div class="rta-column rowgap100 bord-bot p-bot-32">
+				<h6>Recreation of Hidden Treasure of Ghazni Ganpati, Anushree Sunil Ghisad</h6>
+				<a href="/anveshi/posts/hiddentreasure" target="_blank" rel="noreferrer">
+					<button class="newbutton red">Read</button>
+				</a>
 			</div>
 		</div>
 	</section>

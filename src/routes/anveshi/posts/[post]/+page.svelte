@@ -21,6 +21,7 @@
 >
 	<section class="rta-column rowgap200 p-top-128 xcenter">
 		<h4 class="ta-c contains-text p-bot-32 bord-bot">{data.title}</h4>
+		<p class="mid soft">by {data.author}</p>
 		<div class="contains-text p-top-32 rta-column rowgap300 p-bot-32 bord-bot m-bot-16">
 			<svelte:component this={data.content} />
 		</div>

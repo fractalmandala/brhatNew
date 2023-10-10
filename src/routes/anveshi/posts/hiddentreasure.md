@@ -1,6 +1,7 @@
 ---
 title: Recreation of Hidden Treasure of Ghazni Ganpati
 about: An essay by Anushree Sunil Ghisad Ji from the Goa Chapter
+author: Anushree Sunil Ghisad
 ---
 
 <img class="this" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/01anveshi/hiddentreasure/hiddentreasure.webp" alt="1"/>
