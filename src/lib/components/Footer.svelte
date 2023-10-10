@@ -115,15 +115,13 @@
 <style lang="sass">
 
 .footer.light
-	background-color: hsla(0,0%,100%,1)
-	background-image: radial-gradient(at 17% 96%, hsla(0,76%,48%,1) 0px, transparent 50%), radial-gradient(at 0% 0%, hsla(341,0%,100%,1) 0px, transparent 50%)
+	background-color: #FFFFFF
+
 
 .footer.dark
-	background-color: hsla(0,0%,7%,1)
-	background-image: radial-gradient(at 17% 96%, hsla(0,76%,42%,0.38) 0px, transparent 50%), radial-gradient(at 0% 0%, hsla(341,0%,7%,1) 0px, transparent 50%)
+	background-color: #171717
 
 small
-	color: var(--grade2)
 	a
 		color: var(--textone)
 		&:hover
@@ -258,11 +256,9 @@ small
 	small
 		margin: 0 0 4px 0
 		line-height: 1
-
-.light
-	.footerbot
-		small
-			color: white
+	a
+		&:hover
+			color: #fe4a49
 
 .mainlinks
 	color: var(--grade2)
