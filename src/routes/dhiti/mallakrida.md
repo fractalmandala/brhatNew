@@ -8,7 +8,7 @@ tags:
 - akhada
 excerpt: "History of the Malla Krīḍā and the growing threat of its appropriation."
 date: "2023-10-10"
-image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/mallakrida.webps
+image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/mallakrida.webp
 ---
 
 ##### जय बजरंग बली 
