@@ -364,6 +364,81 @@
 			</div>
 		</div>
 		<div class="rta-column rowgap300">
+			<h5 class="title">
+				Mulund, Matunga, Kalyan and Powai from Simran Parmar and Lakshmi Sivaraman
+			</h5>
+			<div class="rta-grid grid4 stay2 rowgap300 colgap300 bord-bot p-bot-32 resizer">
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/mumbai/1.jpeg"
+					alt="1"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/mumbai/2.jpeg"
+					alt="2"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/mumbai/3.jpeg"
+					alt="3"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/mumbai/4.jpeg"
+					alt="4"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/mumbai/5.jpeg"
+					alt="5"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/mumbai/6.jpeg"
+					alt="6"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/mumbai/7.jpeg"
+					alt="7"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/mumbai/8.jpeg"
+					alt="8"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/mumbai/9.jpeg"
+					alt="9"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/mumbai/10.jpeg"
+					alt="10"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/mumbai/11.jpeg"
+					alt="11"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/mumbai/12.jpeg"
+					alt="12"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/mumbai/13.jpeg"
+					alt="13"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/mumbai/14.jpeg"
+					alt="14"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/mumbai/15.jpeg"
+					alt="15"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/mumbai/16.jpeg"
+					alt="16"
+				/>
+				<img
+					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/mumbai/17.jpeg"
+					alt="17"
+				/>
+			</div>
+		</div>
+		<div class="rta-column rowgap300">
 			<h5 class="title">Photos from a Bhagyanagar Residential Complex</h5>
 			<div class="rta-grid grid4 stay2 rowgap300 colgap300 bord-bot p-bot-32 resizer">
 				<img
