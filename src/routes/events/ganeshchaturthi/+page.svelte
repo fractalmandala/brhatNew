@@ -195,7 +195,7 @@
 			</div>
 		</div>
 		<div class="rta-column rowgap300">
-			<h5 class="title">Bhadange Family, USA</h5>
+			<h5 class="title">Bhadange Family - Virginia, USA</h5>
 			<div class="rta-grid grid4 stay2 rowgap300 colgap300 bord-bot p-bot-32 resizer">
 				<img
 					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/bhadangefamily/1.jpeg"
@@ -217,7 +217,7 @@
 		</div>
 		<div class="rta-column rowgap300">
 			<div class="rta-column rowgap100">
-				<h5 class="title">Kate Herse, USA</h5>
+				<h5 class="title">Kate Herse - Oregon, USA</h5>
 				<p class="small">
 					Also read Kate Herse's essay on our blog, Dhīti - <a
 						href="/dhiti/conversiontohindudharma2"
@@ -263,7 +263,7 @@
 			</div>
 		</div>
 		<div class="rta-column rowgap300">
-			<h5 class="title">Ritupriya Chakraborty, Lisbon</h5>
+			<h5 class="title">Ritupriya Chakraborty - Lisbon, Portugal</h5>
 			<div class="rta-grid grid4 stay2 rowgap300 colgap300 bord-bot p-bot-32 resizer">
 				<img
 					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/portugal/1.jpeg"
@@ -309,7 +309,7 @@
 			</div>
 		</div>
 		<div class="rta-column rowgap300">
-			<h5 class="title">Ganeshotsav Celebrations in Accra, Ghana</h5>
+			<h5 class="title">Ganeshotsav Celebrations - Accra, Ghana</h5>
 			<div class="rta-grid grid4 stay2 rowgap300 colgap300 bord-bot p-bot-32 resizer">
 				<img
 					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/accra/1.jpeg"
@@ -338,7 +338,7 @@
 			</div>
 		</div>
 		<div class="rta-column rowgap300">
-			<h5 class="title">Shree Sanatan Dharma Sabha Temple, Dar-es-Salaam</h5>
+			<h5 class="title">Shree Sanatan Dharma Sabha Temple - Dar-es-Salaam, Tanzania</h5>
 			<div class="rta-grid grid4 stay2 rowgap300 colgap300 bord-bot p-bot-32 resizer">
 				<img
 					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/dares/1.jpeg"
@@ -351,7 +351,7 @@
 			</div>
 		</div>
 		<div class="rta-column rowgap300">
-			<h5 class="title">Suma and Pavan, Sydney</h5>
+			<h5 class="title">Suma and Pavan - Sydney, Australia</h5>
 			<div class="rta-grid grid4 stay2 rowgap300 colgap300 bord-bot p-bot-32 resizer">
 				<img
 					src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/sydney/1.jpeg"
