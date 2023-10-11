@@ -8,7 +8,7 @@ tags:
 - tradition
 excerpt: "The rich Gāṇapatya tradition and historical significance of a concealed Gaṇapati murti in the Ghazni mountains, highlighting the cultural richness of Afghanistan and its connection to Bhārata."
 date: "2023-10-11"
-image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/adornedreverie/adornedreverie.webp
+image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/ghazniganapati.webp
 ---
 
 #### Context
