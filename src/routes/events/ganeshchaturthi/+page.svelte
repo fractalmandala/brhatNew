@@ -28,7 +28,7 @@
 			<h5 class="title">
 				This Gaṇeśa Caturthī, we invited participation from all Gaṇeśa bhaktas to send in videos and
 				photos pertaining to the celebration of one of sanātana dharma’s most iconic community based
-				festivals. Participants did any of the following:
+				festivals. Participants were encouraged to submit any of the following:
 			</h5>
 			<p>
 				- Interview the mūrti makers, on their process, how long does it take, what type of sādhanā
