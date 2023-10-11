@@ -577,6 +577,16 @@
 					</video>
 					<p class="mid soft ta-c">Ganeshotsav Celebrations in Accra, Ghana</p>
 				</div>
+			<div class="rta-column rowgap100">
+					<!-- svelte-ignore a11y-media-has-caption -->
+					<video width="100%" height="200" controls>
+						<source
+							src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/19events/ganeshchaturthi/vids/vid10.mp4"
+							type="video/mp4"
+						/>
+					</video>
+					<p class="mid soft ta-c">Dances on Ganesha - Choreography by Harini, Kompally, Secunderabad</p>
+				</div>
 			</div>
 		</div>
 		<div class="rta-column rowgap300">
