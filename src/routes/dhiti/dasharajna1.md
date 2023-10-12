@@ -33,23 +33,19 @@ The study uses 5 translations of the Ṛgveda. The base is the Jamison-Brereton 
 
 The proto-Indo-European (PIE) homeland question is a scholastic field too vast to succinctly discuss here. The overall landscape is well covered by Mallory-Adams, and the Indian view of this is given decent consideration by Bryant. It bears reiteration that dogmatic (or ignorant) dismissals of the PIE question are untenable. Whether one appeals to a wave-theory of language evolution, or to the archaic nature of Saṃskṛtam, the linguistically validated existence of a hypothetical PIE is taken as established in this essay. A few periodizations are important in this context, beginning with Kenoyer’s periods of the Indus-Sarasvatī Civilization (ISC):
 
-<span style="text-decoration:underline;">1. Early Harappan (3300-2600 BC)</span> - this is also considered the last sub-period of an era of ISC regionalization.
+1. <span style="text-decoration:underline;">Early Harappan (3300-2600 BC)</span> - this is also considered the last sub-period of an era of ISC regionalization.
 
+2. <span style="text-decoration:underline;">Mature Harappan (2600-1900 BC)</span> - this is the integration era, when different preceding and regionalized sub-cultures coalesce through a common system of weights and measures, town planning, agricultural kits and other artifacts of cultural unification. 
 
-<span style="text-decoration:underline;">2. Mature Harappan (2600-1900 BC)</span> - this is the integration era, when different preceding and regionalized sub-cultures coalesce through a common system of weights and measures, town planning, agricultural kits and other artifacts of cultural unification. 
-
-
-<span style="text-decoration:underline;">3. Late Harappan (1900-1300 BC)</span> - this is also called the localization era, and it blends at places with Cemetery H and Ochre-Coloured Pottery (OCP) Cultures. But new archaeological finds in Atranjikhera, Lal Qila, Nasirpur and other places compel placement of OCP in the latter half of 3rd millennium BC.
+3. <span style="text-decoration:underline;">Late Harappan (1900-1300 BC)</span> - this is also called the localization era, and it blends at places with Cemetery H and Ochre-Coloured Pottery (OCP) Cultures. But new archaeological finds in Atranjikhera, Lal Qila, Nasirpur and other places compel placement of OCP in the latter half of 3rd millennium BC.
 
 TB maps a chronology of Vedic development to the above periodization. Against this, waves of IE dispersals, OIT, are given in brackets. 
 
-<span style="text-decoration:underline;">1. Early Harappan</span> - the period where only separate Ṛgvedic sūktas or shorter blocks of mantras existed. TB uses the expression ‘_Period of the First Hymns_’ and also sees it as the Varuṇa-Dyaus-Agni period. There was no widespread worship of Indra, and the cult of Soma was still in the process of development (Dispersal of Western IE languages).
+1. <span style="text-decoration:underline;">Early Harappan</span> - the period where only separate Ṛgvedic sūktas or shorter blocks of mantras existed. TB uses the expression ‘_Period of the First Hymns_’ and also sees it as the Varuṇa-Dyaus-Agni period. There was no widespread worship of Indra, and the cult of Soma was still in the process of development (Dispersal of Western IE languages).
 
+2. <span style="text-decoration:underline;">Mature Harappan</span> - the classical Ṛgvedic period which TB also calls the Indra-Agni-Soma period. The Ṛgveda came into being as a collection in this period, and the other three Vedas might have begun to exist regionally (Dispersal of Eastern IE languages).
 
-<span style="text-decoration:underline;">2. Mature Harappan</span> - the classical Ṛgvedic period which TB also calls the Indra-Agni-Soma period. The Ṛgveda came into being as a collection in this period, and the other three Vedas might have begun to exist regionally (Dispersal of Eastern IE languages).
-
-
-<span style="text-decoration:underline;">3. Late Harappan</span> - the Brāhmaṇa or Prajāpati-Viṣṇu-Agni period, also one of various recensions of the Vedas. To TB, this period also saw the core events that constitute the Mahābhārata, which lines up with Pargiter’s genealogy. 
+3. <span style="text-decoration:underline;">Late Harappan</span> - the Brāhmaṇa or Prajāpati-Viṣṇu-Agni period, also one of various recensions of the Vedas. To TB, this period also saw the core events that constitute the Mahābhārata, which lines up with Pargiter’s genealogy. 
 
 The above lists establish a temporal connection between ISC and the Ṛgveda, but there’s the matter of spatial connection. It implies asserting that northern India was the original PIE homeland. We’re told that the primary reasons why India <span style="text-decoration:underline;">cannot</span> be the homeland are: 
 
