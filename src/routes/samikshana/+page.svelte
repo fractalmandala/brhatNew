@@ -194,7 +194,9 @@
 				rel="noreferrer"
 				><button class="newbutton big red">APPLY NOW</button>
 			</a>
-
+			<a href="https://forms.gle/kBZ33M9mUG5HZzyM6" target="_blank" rel="noreferrer"
+				><button class="newbutton big red">REGISTER FOR WEBINAR</button></a
+			>
 			<button class="newbutton big red" on:click={toggleSubscribe}>VIEW BROCHURE</button>
 		</div>
 	</section>
@@ -760,7 +762,9 @@
 				rel="noreferrer"
 				><button class="newbutton big red">APPLY NOW</button>
 			</a>
-
+			<a href="https://forms.gle/kBZ33M9mUG5HZzyM6" target="_blank" rel="noreferrer"
+				><button class="newbutton big red">REGISTER FOR WEBINAR</button></a
+			>
 			<button class="newbutton big red" on:click={toggleSubscribe}>VIEW BROCHURE</button>
 		</div>
 	</section>
