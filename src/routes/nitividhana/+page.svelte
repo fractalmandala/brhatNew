@@ -185,11 +185,17 @@
 					</div>
 				</div>
 			</div>
-			<div class="rta-column rowgap200 xcenter bord-top p-top-32">
+			<div class="rta-column rowgap200 xcenter bord-top p-top-32 p-bot-32">
 				<a href="https://rzp.io/l/nitividhana" target="_blank" rel="noreferrer">
 					<button class="newbutton big red">Apply Now</button>
 				</a>
 				<p class="small">Clicking on this button will open the payment page in a new tab.</p>
+			</div>
+			<div class="rta-column rowgap200 xcenter bord-top p-top-32">
+				<a href="https://forms.gle/SwhnKycRictzP5c8A" target="_blank" rel="noreferrer">
+					<button class="newbutton big red">Submit a Query</button>
+				</a>
+				<p class="small">Ask us anything about the program, details, schedule and more.</p>
 			</div>
 		</div>
 	</section>
@@ -374,6 +380,12 @@
 				<button class="newbutton big red">Apply Now</button>
 			</a>
 			<p class="small">Clicking on this button will open the payment page in a new tab.</p>
+		</div>
+		<div class="rta-column rowgap200 xcenter bord-top p-top-32">
+			<a href="https://forms.gle/SwhnKycRictzP5c8A" target="_blank" rel="noreferrer">
+				<button class="newbutton big red">Submit a Query</button>
+			</a>
+			<p class="small">Ask us anything about the program, details, schedule and more.</p>
 		</div>
 	</section>
 </Shell>
