@@ -19,10 +19,13 @@ image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwe
 >
 >एवं सञ्चिन्तयेत्कालीं शामशानालयवासिनीम्॥२॥
 
->Śavārūḍhām mahābhīmāṃ ghoradaṁṣṭrāṁ hasanmukhīm l
->Caturbhujāṃ khaḍgamuṇḍavarābhayakarāṁ Śivām ll1ll
->Muṇḍamālādharāṃ devīṁ lalajihvāṃ digambarām l
->Evaṁ sañcintayetkālīṁ śmaśānālayavāsinīm ll2ll 
+>Śavārūḍhām mahābhīmāṃ ghoradaṁṣṭrāṁ hasanmukhīm ।
+>
+>Caturbhujāṃ khaḍgamuṇḍavarābhayakarāṁ Śivām ।।1।।
+>
+>Muṇḍamālādharāṃ devīṁ lalajihvāṃ digambarām ।
+>
+>Evaṁ sañcintayetkālīṁ śmaśānālayavāsinīm ।।2।। 
 
 >My heart is absorbed in the thoughts of _Śrī Kālī_. She resorts in _śmaśāna_, _Devī_ is adorned with skull-garland and her tongue constantly flickers ||2||
 >
@@ -152,9 +155,12 @@ Firstly to be analyzed is- what is a corpse? Whose corpse is it? When the first 
 
 Corpse: In general, the corpse is a dead body, that body without any capability or _Śakti_. In _Śrī Saundarya Laharī_ this fact is mentioned in the very first śloka as:
 
->शिवः शक्त्या युक्तो यदि भवति शक्तः प्रभवितुं 
->न चेदेवं देवो न खलु कुशलः स्पंदितुमपि| 
->अतस्त्वाम् आराध्यां हरि-हर-विरिन्चादिभि रपि 
+>शिवः शक्त्या युक्तो यदि भवति शक्तः प्रभवितुं
+>
+>न चेदेवं देवो न खलु कुशलः स्पंदितुमपि|
+>
+>अतस्त्वाम् आराध्यां हरि-हर-विरिन्चादिभि रपि
+>
 >प्रणंतुं स्तोतुं वा कथ-मुक्त पुण्यः प्रभवति ||१||
 
 _Śiva_ without _Śakti_ only is _Śava_. While looking at the thirty-six _tattvas,_ it can be clearly observed that at first (_Śiva_ level), _Śiva_ and _Śakti_ are one; though at the level of _Sadāśiva,_ He appears as separate from _Śakti_. This _Śadāśiva_ form alone is called as _śava_ here. He is also called as _Mahāpreta_ because:
@@ -176,7 +182,6 @@ Moreover, there is significance behind this name _Mahāpreta._ _Preta_ is a tran
 Hence, the _śava_ is _Mahāpreta Sadāśiva_, and when the _Bhagavatī_ puts Her feet on his chest, he reaches to the level of _Śiva_.
 
 In _Śrividyā sādhanā_ the _Bhagavatī_ is contemplated upon as sitting on _Sadāśiva_, while here as Kālī She is seen as standing on _Sadāśiva._ Both are eternally the same. In _Kāśmīrīya Śaivādvaya_ it is said that _Bhagavatī Parābhaṭṭārikā-_ the one who manifests as _Parā_, _Parāparā_ and _Aparā-_ sits on the trident blown out of the naval of _Sadāśiva_:
-
  
 >तस्य नाभ्युत्थितं शक्तिशूलश्रृड़्गत्रयं स्मरेत्।
 >
