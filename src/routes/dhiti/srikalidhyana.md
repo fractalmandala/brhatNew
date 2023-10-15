@@ -68,7 +68,7 @@ In _Śrī Kālī Tantra_ she is called as administrator of _kāla_ and giver of 
 
 #### श्मशान | śmaśāna 
 
-Bhagavatī Kālī is associated with the श्मशान (śmaśāna, charnel ground). In general, this is the place where the dead bodies are brought and then cremated. Here श्म (śma) indicates ‘remains’ and शन means ‘to destroy’. It is the place where the jivātma gets completely free from the carnal body, as well as the associated effects of that body like heat and cold, joy and sorrow. Calling this place as the residence of _Bhagavatī_ is significant: as one gives up all the carnal associations, one would see that Mother waiting. 
+Bhagavatī Kālī is associated with the श्मशान (śmaśāna, charnel ground). In general, this is the place where the dead bodies are brought and then cremated. Here श्म (śma) indicates ‘remains’ and शान means ‘to destroy’. It is the place where the jīvātmā gets completely free from the carnal body, as well as the associated effects of that body like heat and cold, joy and sorrow. Calling this place as the residence of _Bhagavatī_ is significant: as one gives up all the carnal associations, one would see that Mother waiting. 
 
 _Śmaśāna_ is meaning of the _chummakā<sup>1</sup>_ called _ḍāmara_. _Kṣemarāja_ says this śmaśāna is the place of _vīracaryā_ where all the doubts and fear are slayed, and hence being _uḍḍāmara_ this is called as _ḍāmara_:
 
@@ -196,4 +196,4 @@ The above reflections are a small effort to look at the real form of Mother. One
 #### FootNote:
 
 1. _chummakā_ is a type of encoded word usage found in Kāśmīrīya Śaiva Tantra śastra.
-2. The Śrī Śrī Navamuṇḍī Mahāsana article written by M.M. Gopinath Kaviraj provides a better understanding of this aspect.
+2. The _'Śrī Śrī Navamuṇḍī Mahāsana'_ article written by M.M. Gopinath Kaviraj provides a better understanding of this aspect.
