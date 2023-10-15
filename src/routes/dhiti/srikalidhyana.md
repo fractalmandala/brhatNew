@@ -87,7 +87,7 @@ In general, this _shabda_ (word) means Goddess. As per _Abhinavagupta,_ _Devī_ 
 
 >अहम्’ इति चमत्कृतिःअन्तःकृत-अनन्त-विश्व-इदन्ताचमत्कृतिपूर्णवृत्तिः तत् पश्यन्ती-मध्यमात्मिका स्वात्मानम् एव वस्तुतः परसंविदात्मकं विमृशति। परा एव च संवित – ‘देवी’ इति उच्चते।
 
-The word _Devī_ has evolved from root word _div_. This root word has six meanings: _kṛiḍā_ (to sport), _vijīgiṣā_ (desire to win), _vyavahāra_ (business), _dyuti_ (to project or display), _stuti_ (to worship) and _gamana_ (transmigration):
+The word _Devī_ has evolved from root word _div_. This root word has six meanings: _krīḍā_ (to sport), _vijīgiṣā_ (desire to win), _vyavahāra_ (business), _dyuti_ (to project or display), _stuti_ (to worship) and _gamana_ (transmigration):
 
 * _Parā Śakti_ displays the entire world with Herself as a separate entity. This is the **sport** of _Māṁ Bhagavatī_.
 * As the _Parameśvara Bhairava_ is supreme and his _Iccchā Śakti_ also resorts within him to keep him supreme, She is the **desire to win.**
