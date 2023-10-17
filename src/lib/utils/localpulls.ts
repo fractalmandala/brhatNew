@@ -204,7 +204,7 @@ export async function allBodhas(limit:number) {
 	)
 	// @ts-ignore
 	allPosts.sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date))
-	const featuredPosts = allPosts.filter((post) => post.meta.category === "Svayambodha" || post.meta.category === "Śatrubodha")
+	const featuredPosts = allPosts.filter((post) => post.meta.category === "Svayambodha" || post.meta.category === "Śatrubodha" || post.meta.category === "Saundaryabodha")
 	return featuredPosts.slice(0, limit)
 
 } 
