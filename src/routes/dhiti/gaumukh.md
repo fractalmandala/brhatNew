@@ -40,7 +40,7 @@ I was surprised at first but then, it dawned on me, if I look at it as merely a 
 
 This is possible by knowing the spiritual significance of Mā Gaṅgā. 
 
-<img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gaumukh/Image2.webp" alt="two"/>
+<img class="imageclass2" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gaumukh/Image2.webp" alt="two"/>
 <div class="imagecaption">
 Enroute Cīrbāsā towards Bhojbāsā (the closest campsite to Gaumukh)
 </div>
