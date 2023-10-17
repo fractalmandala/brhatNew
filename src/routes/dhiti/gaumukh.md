@@ -121,7 +121,7 @@ Tears flowed from my eyes, while I experienced an endless stream of compassion a
 
 No matter how many words I use to describe that moment it doesn’t do justice. All I can make sense after that moment was, it was Maṅgalam. This gave me a glimpse of what it means to be a seeker, what it means to have been born in the Indic civilization and what beauty really means. 
 
-<img class="imageclass2" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gaumukh/Image6.webp" alt="seven"/>
+<img class="imageclass2" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gaumukh/Image7.webp" alt="seven"/>
 <div class="imagecaption">
 The closest view of Gaumukh - The opening of the glacier resembling the mouth of a cow.
 </div>
