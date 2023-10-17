@@ -275,21 +275,14 @@ Have some faith in your little girl,” she admonished him.
 
 Bhagavān shook his head at her innocence while she went on: 
 
-> “Bappā tells all of us,
-> 
-> With the axe when you cut off
-> 
-> your attachments and fears,
-> 
-> With the rope when you reign in
-> 
-> Your past regrets,
-> 
-> Your fanciful future imaginations and distress,
-> 
-> **Then you serve the world with love and joy,**
-> 
-> You receive from me modakas of Peace and Abundance!” 
+> “Bappā tells all of us,  
+> With the axe when you cut off  
+> your attachments and fears,  
+> With the rope when you reign in  
+> Your past regrets,  
+> Your fanciful future imaginations and distress,  
+> **Then you serve the world with love and joy,**  
+> You receive from me modakas of Peace and Abundance!”   
 
 “Wow. A poetess in the making it seems.” 
 
