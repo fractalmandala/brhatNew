@@ -38,13 +38,10 @@ Ever since, Lalitha was visited by maa during the nights and they would converse
 
 The very same night maa was waiting by her bedside impatiently while Lalitha was washing up her feet in the bathroom. She came out to find Lalita, her maa, shaking her head in disappointment. There was an air of mischief about her though. And then she spoke clearly in English: “I feel you might be more comfortable in Telugu”. Lalitha’s eyebrows shot up involuntarily at the clipped accent. “On the other hand you might consider it too low-brow? Wait…..” And then maa continued in Hindi:
 
->agar talab mein pani hoga
->
->uday poora snan karega
->
->kurma peda bhojan banega
->
->aur uska kalyan hoga
+>agar talab mein pani hoga  
+>uday poora snan karega  
+>kurma peda bhojan banega  
+>aur uska kalyan hoga  
 
 And so it came to pass that by her bedside a small notebook full of strange scribblings could be found at any given time. Lalitha hid it away from the maid and her daughters by slipping it into her pillow cover. As it is Shiva never ventured into her room and if ever he did he would stand at the doorway and make his demands. So she was safe. Lalitha’s worry was that she might be committed to a mental hospital if she told her family about these nightly tête-à-têtes, nowadays in various languages. 
 
