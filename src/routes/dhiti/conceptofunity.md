@@ -1,7 +1,7 @@
 ---
 title: Exploring the Concept of Unity as an Ecological Concern through Upaniṣads
 author: Neha Sharma
-category: Svayaṃbodha
+category: Svayambodha
 tags:
 - ecology
 - upanishads
