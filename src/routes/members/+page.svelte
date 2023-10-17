@@ -1,7 +1,6 @@
 <!-- src/routes/account/+page.svelte -->
 <script lang="ts">
 	import { browser } from '$app/environment';
-	import Header from '$lib/components/NewHeader.svelte';
 	import Head from '$lib/components/HeadComponent.svelte';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import { userLang, fontSize } from '$lib/stores/metastores';
@@ -16,7 +15,6 @@
 
 	export let data;
 	export let form: any;
-	let isSwitch = false;
 	let fsize = Array(3).fill(false);
 	fsize[1] = true;
 	let signUpIs = false;
@@ -105,8 +103,6 @@
 	metaUrl={$metaUrl}
 	metaImage={$metaImage}
 />
-
-<Header {isSwitch} hasMenu={false} />
 
 <div class="rta-column stout p-top-128">
 	{#if inner}

@@ -37,6 +37,7 @@
 	let title6 = 'Bṛhat Open Library';
 	let title7 = 'Also Explore';
 	let title8 = 'Samīkṣaṇā';
+	let title9 = 'Nītividhāna';
 
 	let episodes: any;
 	let threeactions: string | any[];
@@ -178,6 +179,30 @@
 		</div>
 	</section>
 	-->
+	<section class="rta-column rowgap400 min100" id="nitividhana">
+		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
+			<h2>
+				<a href="/nitividhana">
+					{#each title9.split('') as char, i}
+						<span class="text-animation" style="animation-delay: {i * 0.04}s">{char}</span>
+					{/each}
+				</a>
+			</h2>
+			<small>Civilizational Public Policy</small>
+		</div>
+		<div class="rta-grid grid2 colgap300 rowgap200">
+			<div class="rta-column rowgap200">
+				<h5>
+					This online policy learning program offered by Chinmaya International Foundation and Brhat
+					is an intensive immersive program in today's burning issues.
+				</h5>
+				<a href="/nitividhana"><button class="newbutton big red">Visit</button></a>
+			</div>
+			<a href="/nitividhana">
+				<img src="/images/nitividhanahero.webp" alt="nitividhana" style="border-radius: 8px" />
+			</a>
+		</div>
+	</section>
 	<section class="rta-column rowgap400 min100" id="samikshana">
 		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
 			<h2>
