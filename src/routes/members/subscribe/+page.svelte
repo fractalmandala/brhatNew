@@ -27,7 +27,7 @@
 >
 	<section class="rta-column rowgap400 p-top-128">
 		<h3>Subscribe to Bṛhat</h3>
-		<div class="rta-grid grid2 rowgap400 bord-bot p-bot-16 topper">
+		<div class="rta-grid grid2 rowgap400 bord-bot p-bot-16 bord-top p-top-16 topper">
 			<div class="rta-column rowgap200 leftbox">
 				<p class="small soft">Select Membership Period:</p>
 				<div class="rta-row colgap300 rowgap200">
@@ -79,8 +79,36 @@
 			</div>
 		</div>
 		<h5 class="title">Engage Deeper With Us</h5>
+		<p class="mid soft">
+			Subscribe to a lifetime access to all exclusive content we generate across various media.
+			Lifetime subscriptions help us enhance member content, pilot deep research projects, and
+			deliver premium production qualities.
+		</p>
 		<div class="rta-grid grid2 bottom rowgap400">
-			<div class="rta-column projects rowgap200">
+			<form class="rta-column secondform rowgap100 leftbox">
+				<p class="mid small">Select subcription tier:</p>
+				<select>
+					<option value="₹10,000">₹10,000</option>
+					<option value="₹25,000">₹25,000</option>
+					<option value="₹50,000">₹50,000</option>
+				</select>
+				<input type="text" placeholder="Full Name" />
+				<input type="phone" placeholder="Phone Number" />
+				<input type="email" placeholder="Email Address" />
+				<div class="rta-row colgap200 rowgap100">
+					<input type="password" placeholder="Create Password" />
+					<input type="password" placeholder="Confirm Password" />
+				</div>
+				<button class="newbutton red">Submit</button>
+				<p class="small soft">
+					On clicking submit you will be led to a payment link. Please complete payment there, and
+					you will be redirected back here.
+				</p>
+				<p class="small soft">
+					Please check your email for membership and payment confirmation emails.
+				</p>
+			</form>
+			<div class="rta-column projects rowgap200 rightbox">
 				<p>Bṛhat Open Library</p>
 				<p>Bodha Production</p>
 				<p>IKS Content, Research and Training</p>
@@ -105,12 +133,19 @@
 	form
 		input[type=text], input[type=phone], input[type=email]
 			width: 50%
+		input
+			border: 1px solid var(--contraster2)
+			border-radius: 4px
+			font-size: 14px
+			padding: 4px
 	.leftbox
 		h6
 			border-top: 1px solid var(--contraster2)
 			border-bottom: 1px solid var(--contraster2)
 			padding-top: 16px
 			padding-bottom: 16px
+	.rightbox
+		border: 1px solid var(--contraster)
 	.topper
 		grid-template-columns: 60% 40%
 	.leftbox, .rightbox
