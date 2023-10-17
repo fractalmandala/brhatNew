@@ -21,8 +21,8 @@ image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwe
 >  Muṇḍamālādharāṃ devīṁ lalajihvāṃ digambarām ।  
 >  Evaṁ sañcintayetkālīṁ śmaśānālayavāsinīm ।।2।।  
 
->  My heart is absorbed in the thoughts of _Śrī Kālī_. She resorts in _śmaśāna_, _Devī_ is adorned with skull-garland and her tongue constantly flickers ||2||
->  _Śrī Śivā_ holds a sword and head in two hands & blesses and protects with other two. While presiding over a corpse she has a smiling, beautiful face ||1||  
+>  My heart is absorbed in the thoughts of _Śrī Kālī_. She resorts in _śmaśāna_, _Devī_ is adorned with skull-garland and her tongue constantly flickers ||2||  
+>  _Śrī Śivā_ holds a sword and head in two hands & blesses and protects with other two. While presiding over a corpse she has a smiling, beautiful face ||1||    
 
 ##### काली | _Kālī_ 
 
