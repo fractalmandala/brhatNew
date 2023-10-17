@@ -15,7 +15,7 @@ A butterfly with a golden hue enamored me at 14000 feet above sea level. I was o
 
 I’ll reveal the exact incident shortly, but the main quest of this article is to unravel how Gaumukh to me is the source of the Indic Civilization. I was fortunate to hear the experiences of my teacher who has been to Gaumukh several times in the past. Every time he would narrate his experiences, he came alive and his eyes shone. He transported me to the divine environs of Gaumukh. This time he invited me to accompany him and I immediately agreed. Thus began my Gaumukh - Tapovan yātrā.
 
-<img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gaumukh/Image1.webp" alt="one"/>
+<img class="imageclass2" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gaumukh/Image1.webp" alt="one"/>
 <div class="imagecaption">
 View of the grand Mt. Shivling from Tapōvan which is its base camp (With a totally ungrand, tiny human - me)
 </div>
@@ -51,7 +51,7 @@ The river emerging from Gaumukh is called Bhāgīrathī. It is named after the f
 
 If I were to say that I completed this yātrā by my own efforts, without any external assistance, it would be a hyperbole. All the things that kept me going: my shoes, jacket, cap, trekking pole, thermals and many other equipment- facilitated in completing the yātrā. These were all gifts handed down by my ancestors to me to have a more comfortable experience! I couldn’t imagine going all the way to Gaumukh without these gears. 
 
-<img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gaumukh/Image3.webp" alt="three"/>
+<img class="imageclass2" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gaumukh/Image3.webp" alt="three"/>
 <div class="imagecaption">
 Some of my gear at a rest point on the way to Tapōvan. Spot the unique yellow-beak crow in this picture, if you can!
 </div>
@@ -73,7 +73,8 @@ Mā Gaṅgā through her fullness inspires and elevates. She through her eternal
 Mā Gaṅgā has an eternal flow from Gaumukh all the way to the ocean. It was flowing for ages before us, it continues to flow unstoppably now and it will continue to flow in her full might. The wisdom of the great ṛṣis who sat at her feet, applying themselves to reach nobler heights, immersing in divinity are also immortal just like the flow of Mā Gaṅgā. 
 
 One such ṛṣi who is a true son of Mā Gaṅgā is Svāmī Tapovan Mahārāj. He is also famously referred to as Himavat Vibhūti (Glory of Himālayās). True to the title, ever since he left his home for a life of seeking, he stayed at the Himālayās, never once coming down to the plains. His disciple, Svāmī Chinmayananda says, ‘How to explain to you all, that what I saw in Him was what I saw in the Upaniṣads and in the Bhagavad Gītā. The work of spreading the Gītā and the Upaniṣads was to unveil Him and His glory, His Vibhuti - 'Tapōvan Mahima', in the hearts of all.’
-<img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gaumukh/Image4.webp" alt="four"/>
+
+<img class="imageclass2" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gaumukh/Image4.webp" alt="four"/>
 <div class="imagecaption">
 Tapovan Kuti at the banks of Mā Gaṅgā in Uttarkāśī. He spent his time here during winter seasons. He used to deliver talks and lectures at the verandah of this divine 8x8 room.
 </div>
@@ -107,7 +108,7 @@ Sometimes I had to crawl my way through, use all fours, check for strong boulder
 
 It was then when a beautiful golden butterfly fluttered her way towards me at 14000 odd feet. Playfully flew by me and royally sat on my boot. At first I was intrigued to see a butterfly at that height. But it seemed too surreal as I had never seen such a beautiful butterfly ever in my life before. I felt I was hallucinating but also wanted to believe that this was a message. For a moment I was wonderstruck by the lightness of the butterfly. Observing her lightness brought a lot of relief to me. It instantly energized me and gave me a lot of hope. I smiled and thanked her for giving me some respite just as a good friend would do (Sakhī). As I saw her fly away I saw something pristine. It was Gaumukh. 
 
-<img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gaumukh/Image6.webp" alt="six"/>
+<img class="imageclass2" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gaumukh/Image6.webp" alt="six"/>
 <div class="imagecaption">
 This was the sight of Gaumukh from the place I saw the butterfly. This is a side view of Gaumukh from a height.
 </div>
@@ -120,7 +121,7 @@ Tears flowed from my eyes, while I experienced an endless stream of compassion a
 
 No matter how many words I use to describe that moment it doesn’t do justice. All I can make sense after that moment was, it was Maṅgalam. This gave me a glimpse of what it means to be a seeker, what it means to have been born in the Indic civilization and what beauty really means. 
 
-<img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gaumukh/Image6.webp" alt="seven"/>
+<img class="imageclass2" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gaumukh/Image6.webp" alt="seven"/>
 <div class="imagecaption">
 The closest view of Gaumukh - The opening of the glacier resembling the mouth of a cow.
 </div>
