@@ -127,7 +127,7 @@ Through Ālinas, a number of proto-Greek/Albanian/Armenian languages were disper
 
 Sudās’reign thus triggers two spatially exclusive trends. Within India, he’s responsible for the emergence of Mature Harappan, and the integration associated with it. Outside India, he’s to be blamed/credited for the arrival of Eastern IE languages. As traced by Hodiwala, Talageri and Elst, the story isn’t complete with Sudās. It continues with his descendants Sahadeva and Somaka, which evidences that IE dispersals happened not as a singular event, but over a few centuries for each wave. 
 
-Following this data, parsing, and re-contextualization, the Reign of Sudās Paijavana along with Conclusion, Epilogues, and Appendices will be shared in the final installment of this article, Dāṣarājña Recontextualized: Part 3. 
+Following this data, parsing, and re-contextualization, the Reign of Sudās Paijavana along with Conclusion, Epilogues, and Appendices will be shared in the final installment of this article, [Dāṣarājña Recontextualized: Part 3](https://www.brhat.in/dhiti/dasharajna3). 
 
 #### References:
 
