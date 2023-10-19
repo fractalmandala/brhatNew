@@ -115,7 +115,7 @@ The two frameworks detailed above- 1. Mature Harappan and IE Dispersals, and 2. 
 
 ##### Sudās = Eastern IE Dispersal = Mature Harappan = 2500 BC.
 
-With this equation established, the Dāśarājña data can now be examined. This shall be taken up in Part 2.
+With this equation established, the Dāśarājña data can now be examined. This shall be taken up in [Part 2](https://www.brhat.in/dhiti/dasharajna2).
 
 #### References:
 
