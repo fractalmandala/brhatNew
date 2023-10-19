@@ -7,7 +7,7 @@ tags:
 - civilization
 excerpt: "In this part, we examine and parse the data mentioned in the texts where thorough backing is uncovered for the out-of-India Theory, with Bhārata being the proto-Indo-European homeland."
 date: "2023-10-16"
-image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/dasharajna/dasharajna.webp
+image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/dasharajna/dasharajna2.webp
 ---
 
 [Part One](https://www.brhat.in/dhiti/dasharajna1) of this article examined the two frameworks 1) Mature Harappan and IE Dispersals, and 2) Chronology of Indian Lineages, as well as the Ṛgveda and Maṇḍala 7. The following equation was established:
