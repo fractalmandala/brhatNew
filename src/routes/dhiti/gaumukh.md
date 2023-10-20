@@ -11,18 +11,18 @@ date: "2023-10-17"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gaumukh/gaumukh.webp
 ---
 
-A butterfly with a golden hue enamored me at 14000 feet above sea level. I was on my descent from the Tapōvan peak adorning Bharat’s topography at a staggering 14,640 feet above sea level. It was an arduous trek all the way up. There was no clear path to climb the peak, loose boulders constantly fell, oxygen levels dipped, steep portions demanded my legs to work harder than it ever has. All along this journey to Tapōvan, little did I know about the help coming my way the next day during descent - My Sakhi (Friend), the butterfly. This butterfly saved my life! 
+A butterfly with a golden hue enamored me at 14000 feet above sea level. I was on my descent from the Tapovan peak adorning Bharat’s topography at a staggering 14,640 feet above sea level. It was an arduous trek all the way up. There was no clear path to climb the peak, loose boulders constantly fell, oxygen levels dipped, steep portions demanded my legs to work harder than it ever has. All along this journey to Tapovan, little did I know about the help coming my way the next day during descent - My Sakhi (Friend), the butterfly. This butterfly saved my life! 
 
 I’ll reveal the exact incident shortly, but the main quest of this article is to unravel how Gaumukh to me is the source of the Indic Civilization. I was fortunate to hear the experiences of my teacher who has been to Gaumukh several times in the past. Every time he would narrate his experiences, he came alive and his eyes shone. He transported me to the divine environs of Gaumukh. This time he invited me to accompany him and I immediately agreed. Thus began my Gaumukh - Tapovan yātrā.
 
 <img class="imageclass2" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gaumukh/Image1.webp" alt="one"/>
 <div class="imagecaption">
-View of the grand Mt. Shivling from Tapōvan which is its base camp (With a totally ungrand, tiny human - me)
+View of the grand Mt. Shivling from Tapovan which is its base camp (With a totally ungrand, tiny human - me)
 </div>
 
 #### Gaumukh - A Kṣetra and not just a Glacier
 
-This journey was not simply a trek for me, but a yātrā. Usually a tīrtha-yātrā is a pilgrimage to a temple. Sometimes the greatness of the kṣetra (sacred place) transcends that of the temple itself. Gaumukh and Tapōvan are such kṣetras which by itself are considered sacred irrespective of them being devoid of any temple of a particular deity. 
+This journey was not simply a trek for me, but a yātrā. Usually a tīrtha-yātrā is a pilgrimage to a temple. Sometimes the greatness of the kṣetra (sacred place) transcends that of the temple itself. Gaumukh and Tapovan are such kṣetras which by itself are considered sacred irrespective of them being devoid of any temple of a particular deity. 
 
 The purpose of these kṣetras are to transport us to the most sublime state of jñāna (knowledge). Ayodhyā, Mathurā, Kāśi, Kāñchi, Avanti (Ujjain)- are all examples of such kṣetras and are also called mokṣa purīs. Tīrthas are typically places associated with a river and all the examples given above of kṣetras are invariably located near a river. Thus emphasizing the centrality of the river to a civilization. 
 
@@ -53,7 +53,7 @@ If I were to say that I completed this yātrā by my own efforts, without any ex
 
 <img class="imageclass2" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gaumukh/Image3.webp" alt="three"/>
 <div class="imagecaption">
-Some of my gear at a rest point on the way to Tapōvan. Spot the unique yellow-beak crow in this picture, if you can!
+Some of my gear at a rest point on the way to Tapovan. Spot the unique yellow-beak crow in this picture, if you can!
 </div>
 
 The gear and tangible wealth they have left is only a speck compared to the treasure trove of wisdom they have left us with. They tapped into the essence of these places, experienced deeper realms of their own being and out of sheer compassion made it available for ages to come for more people to come, experience and evolve. Most importantly, they changed our vision by associating sacrality to the place. The collective meaning, practices, reverence, faith and surrender as lived experiences today are a gift of all the prayatna my ancestors have undertaken. 
@@ -72,25 +72,25 @@ Mā Gaṅgā through her fullness inspires and elevates. She through her eternal
 
 Mā Gaṅgā has an eternal flow from Gaumukh all the way to the ocean. It was flowing for ages before us, it continues to flow unstoppably now and it will continue to flow in her full might. The wisdom of the great ṛṣis who sat at her feet, applying themselves to reach nobler heights, immersing in divinity are also immortal just like the flow of Mā Gaṅgā. 
 
-One such ṛṣi who is a true son of Mā Gaṅgā is Svāmī Tapovan Mahārāj. He is also famously referred to as Himavat Vibhūti (Glory of Himālayās). True to the title, ever since he left his home for a life of seeking, he stayed at the Himālayās, never once coming down to the plains. His disciple, Svāmī Chinmayananda says, ‘How to explain to you all, that what I saw in Him was what I saw in the Upaniṣads and in the Bhagavad Gītā. The work of spreading the Gītā and the Upaniṣads was to unveil Him and His glory, His Vibhuti - 'Tapōvan Mahima', in the hearts of all.’
+One such ṛṣi who is a true son of Mā Gaṅgā is Svāmī Tapovan Mahārāj. He is also famously referred to as Himavat Vibhūti (Glory of Himālayās). True to the title, ever since he left his home for a life of seeking, he stayed at the Himālayās, never once coming down to the plains. His disciple, Svāmī Chinmayananda says, ‘How to explain to you all, that what I saw in Him was what I saw in the Upaniṣads and in the Bhagavad Gītā. The work of spreading the Gītā and the Upaniṣads was to unveil Him and His glory, His Vibhūti - 'Tapovan Mahimā', in the hearts of all.’
 
 <img class="imageclass2" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gaumukh/Image4.webp" alt="four"/>
 <div class="imagecaption">
 Tapovan Kuti at the banks of Mā Gaṅgā in Uttarkāśī. He spent his time here during winter seasons. He used to deliver talks and lectures at the verandah of this divine 8x8 room.
 </div>
 
-Tapovan Maharāj is considered a saint of the highest order. He truly embodied the dual characteristics of a realized seeker - śrotriya (One having heard & internalized the śāstras) & brahmaniṣṭha (Absorbed in the contemplation of the Self). He considered the Himālayās as his father and Mā Gaṅgā as his mother. 
+Tapovan Mahārāj is considered a saint of the highest order. He truly embodied the dual characteristics of a realized seeker - śrotriya (One having heard & internalized the śāstras) & brahmaniṣṭha (Absorbed in the contemplation of the Self). He considered the Himālayās as his father and Mā Gaṅgā as his mother. 
 
 His discipline, Svāmī Chinmayananda- who learnt at his feet basking in the immortal glory of Mā Gaṅgā-  was inspired by her unstoppable, gushing flow one day. A calmness embraced him and a voice spoke to him. He felt that his calling was to come down to the plains and bring the eternal message of the Upaniṣads to the masses in ways they could relate to. 
 
 <img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gaumukh/Image5.webp" alt="five"/>
 <div class="imagecaption">
-Svāmī Chinmayananda with his Guru Tapōvan Maharāj at Uttarkashi. Picture courtesy: Chinmaya Upahar.
+Svāmī Chinmayananda with his Guru Tapovan Mahārāj at Uttarkashi. Picture courtesy: Chinmaya Upahar.
 </div>
 
 Today, Chinmayā Mission has its centers spanning all across the world, with established educational institutions, healthcare centers, publications, temples, ashrams and many more. The seekers in Chinmaya makeup one of the firekeepers of the Indic civilization in the present context. This inspiration came from Mā Gaṅgā. 
 
-When I learnt about this, it revealed to me that Mā Gaṅgā lives gracefully through her children. This is her quality of Acalatvam. She is an immovable force, immortal ever-inspiring us to strive on as seekers as we should be true to the spirit of the Indic civilization. I met many sadhus along the way to Gaumukh. They had a distinct silence that drew my attention towards them. It seemed they were enthralled by something. I am quite sure it was Mā Gaṅgā. She inspires so many to take to the path of seeking, to follow light and eventually permeate this grand vision and experience to the rest of the world. This is indeed Acalatvam. 
+When I learnt about this, it revealed to me that Mā Gaṅgā lives gracefully through her children. This is her quality of Acalatvam. She is an immovable force, immortal ever-inspiring us to strive on as seekers as we should be true to the spirit of the Indic civilization. I met many sādhus along the way to Gaumukh. They had a distinct silence that drew my attention towards them. It seemed they were enthralled by something. I am quite sure it was Mā Gaṅgā. She inspires so many to take to the path of seeking, to follow light and eventually permeate this grand vision and experience to the rest of the world. This is indeed Acalatvam. 
 
 ##### I wish to seek this quality of Acalatvam in me. That which does not cease to remain, that which keeps me inspired and helps me strive on to reach the other shore of Mā Gaṅgā. 
 
@@ -98,7 +98,7 @@ When I learnt about this, it revealed to me that Mā Gaṅgā lives gracefully t
 
 Maṅgala refers to welfare and happiness. How can Mā Gaṅgā ensure maṅgala for Her people? Apart from the obvious nourishment she offers through the limitless water she blesses us with, she imbues her children with a deep sense of beauty. Flashes of beauty and wonder can shake off despair, hopelessness and grief without a trace. 
 
-Going back to the incident where a butterfly saved me would illustrate what I am saying here profusely. I was on the way down from Tapōvan towards Gaumukh. This was the culmination of the yātrā where we sit at Mā Gaṅgā’s lap at her source. We took a difficult path during our descent to save around an hour of walking around a steep slope to reach Gaumukh. Little did we know it involved walking on glaciers. This meant the path had loose soil and was more likely to face landslides. All of us in the group kept close to each other literally like mountain goats. 
+Going back to the incident where a butterfly saved me would illustrate what I am saying here profusely. I was on the way down from Tapovan towards Gaumukh. This was the culmination of the yātrā where we sit at Mā Gaṅgā’s lap at her source. We took a difficult path during our descent to save around an hour of walking around a steep slope to reach Gaumukh. Little did we know it involved walking on glaciers. This meant the path had loose soil and was more likely to face landslides. All of us in the group kept close to each other literally like mountain goats. 
 
 The first few meters went just right, until the person behind me slipped releasing a downfall of small and medium boulders on all of us ahead. Mind you, the people ahead are at an even more dangerous position due to the steepness of the slope. This happened a few times, everytime the landslide was kicked-off by a different person. 
 
