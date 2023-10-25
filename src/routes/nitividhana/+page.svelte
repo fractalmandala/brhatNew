@@ -192,6 +192,13 @@
 				<p class="small">Clicking on this button will open the payment page in a new tab.</p>
 			</div>
 			<div class="rta-column rowgap200 xcenter bord-top p-top-32">
+			<a href="https://docs.google.com/forms/d/e/1FAIpQLSe-LX_x7L4hVigO_qv9tX_sDOH4vyhVZMAaDMgZI7duFd2Lvg/viewform" 
+				target="_blank" rel="noreferrer">
+				<button class="newbutton big red">Register for Webinar</button>
+			</a>
+			<p class="small">Register for upcoming webinar.</p>
+		        </div>
+			<div class="rta-column rowgap200 xcenter bord-top p-top-32">
 				<a href="https://forms.gle/SwhnKycRictzP5c8A" target="_blank" rel="noreferrer">
 					<button class="newbutton big red">Submit a Query</button>
 				</a>
@@ -384,7 +391,7 @@
 		<div class="rta-column rowgap200 xcenter bord-top p-top-32">
 			<a href="https://docs.google.com/forms/d/e/1FAIpQLSe-LX_x7L4hVigO_qv9tX_sDOH4vyhVZMAaDMgZI7duFd2Lvg/viewform" 
 				target="_blank" rel="noreferrer">
-				<button class="newbutton big red">REGISTER FOR WEBINAR</button>
+				<button class="newbutton big red">Register for Webinar</button>
 			</a>
 			<p class="small">Register for upcoming webinar.</p>
 		</div>
