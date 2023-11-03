@@ -42,6 +42,7 @@
 				<a href="/drashta/course/mahabharataparayana">Mahābhārata Pārāyaṇa</a>
 				<a href="/drashta/course/ancientindianhistory">Ancient Indian History</a>
 				<a href="/drashta/course/kavyashastras">Introduction to Kāvyaśāstras</a>
+				<a href="/drashta/course/ayurveda">Introduction to Āyurveda</a>
 				<a href="/bhairavadharana">Bhairava Dhāraṇā</a>
 			</div>
 		{/if}
