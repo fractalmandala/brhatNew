@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import autoAnimate from '@formkit/auto-animate';
 	import { page } from '$app/stores';
+	import Shell from '$lib/components/PageShell.svelte'
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import { fetchDarshanas, fetchDrashtas } from '$lib/utils/supapulls';
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte';
@@ -44,35 +45,42 @@
 	</ParallaxImage>
 </div>
 
-<div class="rta-column minH outer-box limit ycenter">
-	<div class="rta-column rowgap600">
-		<h5 class="ta-c-d serif">
-			At Bṛhat, we set big goals. And to achieve them we need to build on the foundation built by
-			our great sages and scholars. We draw our vitality from some very important and select
-			‘Schools of Thought’ which define our identity, inform our views, and guide our actions. These
-			schools of thought come together in the ways in which we think and create and in the ways we
-			seek to guide policy to culture. We seek to forge a unique path of culture-conducive policy in
-			Bhāratavarṣa by building on the inspiration from these schools.<br /><br />These schools are:
-		</h5>
-		<div class="rta-grid grid3 colgap400 rowgap400">
-			{#if darshanas && darshanas.length > 0}
-				{#each darshanas as item}
-					<div class="rta-column">
-						<h6 class="ta-c-d">{item.name}</h6>
-					</div>
-				{/each}
-			{/if}
-		</div>
-	</div>
-</div>
 
-<div class="rta-column outer-box rowgap600 limit">
+<Shell
+	metaTitle={$metaTitle}
+	metaDescription={$metaDescription}
+	metaImage={$metaImage}
+	metaUrl={$metaUrl}
+>
+	<div class="rta-column rowgap400 p-top-64 xcenter p-bot-64">
+		<h5 class = "contains-text"> 
+
+				At Bṛhat, we set big goals. And to achieve them we need to build on the foundation built by
+				our great sages and scholars. We draw our vitality from some very important and select
+				‘Schools of Thought’ which define our identity, inform our views, and guide our actions. These
+				schools of thought come together in the ways in which we think and create and in the ways we
+				seek to guide policy to culture. We seek to forge a unique path of culture-conducive policy in
+				Bhāratavarṣa by building on the inspiration from these schools.<br /><br />These schools are:
+	
+
+		</h5>
+
+	</div> 
+	<div class="rta-grid grid3 colgap400 rowgap400 p-bot-64">
+		{#if darshanas && darshanas.length > 0}
+			{#each darshanas as item}
+				<div class="rta-column">
+					<h6 class="ta-c-d">{item.name}</h6>
+				</div>
+			{/each}
+		{/if}
+	</div>
 	<div class="rta-column rowgap100 p-top-32 bord-top p-bot-32 bord-bot">
 		<h3 class="ta-c-d">Draṣṭās</h3>
 		<p class="ta-c-d">Click on Draṣṭā names to expand.</p>
 	</div>
 	<div
-		class="rta-grid grid4 colgap400 rowgap400 p-bot-64"
+		class="rta-grid grid4 colgap400 rowgap400 p-bot-64 p-top-64"
 		class:calibrated={anyDrashtaOpen}
 		use:autoAnimate
 	>
@@ -95,7 +103,8 @@
 			{/each}
 		{/if}
 	</div>
-</div>
+</Shell>
+
 
 <style lang="sass">
 
