@@ -1,13 +1,21 @@
 <script lang="ts">
 	import Shell from '$lib/components/PageShell.svelte';
+	import { enhance, type SubmitFunction } from '$app/forms';
 	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/stores/metastores';
+	import { isAuth } from '$lib/utils/globalstores'
 
 	$metaTitle = 'Subscribe to Brhat';
 	$metaDescription = 'View our subscription plans and become a paid member.';
 	$metaUrl = 'https://www.brhat.in/members/subscribe';
 	$metaImage = '/images/cover-brhat.webp';
-
+	export let form: any;
 	let memType = Array(3).fill(false);
+	let alreadySub = false
+	let loading = false;
+
+	function toggleAlready(){
+		alreadySub = !alreadySub
+	}
 
 	function toggleMemType(index: number) {
 		memType[index] = !memType[index];
@@ -27,28 +35,58 @@
 >
 	<section class="rta-column rowgap400 p-top-128">
 		<h3>Subscribe to Bṛhat</h3>
+		<p>{$isAuth}</p>
+		<div class="rta-column checker xleft rowgap100">
+			<p>Already subscribed?</p>
+			<button class="newbutton" on:click={toggleAlready}>Click Here</button>
+		</div>
 		<div class="rta-grid grid2 rowgap400 bord-bot p-bot-16 bord-top p-top-16 topper">
+			{#if alreadySub}
+			<div class="rta-column rowgap200 leftbox">
+				<h5 class="title">Sign In:</h5>
+				<form method="post" action="?/login">
+					<div class="rta-column xleft rowgap100 null">
+						<div class="rta-row ycenter colgap100">
+							<input
+								id="email"
+								name="email"
+								value={form?.values?.email ?? ''}
+								class="input"
+								type="email"
+								placeholder="Email"
+								required
+							/>
+
+							<input
+								id="password"
+								name="password"
+								class="input"
+								type="password"
+								placeholder="Password"
+								required
+							/>
+						</div>
+						<button disabled={loading} class="newbutton">Sign in</button>
+					</div>
+				</form>
+			</div>
+			{:else}
 			<div class="rta-column rowgap200 leftbox">
 				<p class="small soft">Select Membership Period:</p>
 				<div class="rta-row colgap300 rowgap200">
-					<button class="newbutton" on:click={() => toggleMemType(0)} class:selected={memType[0]}
-						>Monthly</button
+					<button class="newbutton this1" on:click={() => toggleMemType(0)} class:selected={memType[0]}
+						>Monthly<br>₹651</button
 					>
-					<button class="newbutton" on:click={() => toggleMemType(1)} class:selected={memType[1]}
-						>Bi-annual</button
-					>
-					<button class="newbutton" on:click={() => toggleMemType(2)} class:selected={memType[2]}
-						>Annual</button
+					<button class="newbutton this1" on:click={() => toggleMemType(1)} class:selected={memType[1]}
+						>Annual<br>₹6001</button
 					>
 				</div>
 				{#if memType[0]}
-					<h6>Monthly Subscription - ₹500/month</h6>
+					<h6>Monthly Subscription - ₹651/month</h6>
 				{:else if memType[1]}
-					<h6>Bi-annual Subscription - ₹2500 every six months (₹417/month)</h6>
-				{:else if memType[2]}
-					<h6>Annual Subscription - ₹4000 annually (₹334/month)</h6>
+					<h6>Annual Subscription - ₹6001 annually (₹500/month)</h6>
 				{/if}
-				<form class="rta-column rowgap100 colgap200">
+				<form class="rta-column rowgap100 colgap200" method="post" action="?signup">
 					<input type="text" placeholder="Full Name" />
 					<input type="phone" placeholder="Phone Number" />
 					<input type="email" placeholder="Email Address" />
@@ -66,6 +104,7 @@
 					</p>
 				</form>
 			</div>
+			{/if}
 			<div class="rta-column rowgap200 rightbox">
 				<h6>What You Get:</h6>
 				<p class="mid soft">
@@ -119,6 +158,9 @@
 </Shell>
 
 <style lang="sass">
+
+.this1
+	height: max-content	
 
 .projects
 	p

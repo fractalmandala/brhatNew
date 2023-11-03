@@ -1,6 +1,8 @@
 import type { Readable, Writable } from "svelte/store"
+import { writable } from 'svelte/store';
 import { get_current_component, onDestroy } from "svelte/internal";
 
+export const isAuth = writable(false);
 
 export function writableToReadable<T>({ subscribe }: Writable<T>): Readable<T> {
 	return { subscribe: subscribe };
