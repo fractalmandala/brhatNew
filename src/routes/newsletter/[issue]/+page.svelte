@@ -159,7 +159,7 @@
 >
 	{#if allorfilter}
 		<section class="rta-column rowgap400 min100 ytop p-top-64">
-			<div class="rta-column rowgap400">
+			<div class="rta-column rowgap100">
 				{#if allitems && allitems.length > 0}
 					{#each allitems as item}
 						<div
@@ -441,7 +441,8 @@ pre.excerpt
 .singleitem
 	.rta-image
 		img
-			object-fit: contain
+			object-fit: cover
+			height: 100%
 			width: 100%
 
 </style>
