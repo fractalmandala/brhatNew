@@ -9,7 +9,6 @@
 	import Close from '$lib/icons/close.svelte';
 	import { newsletterIssues } from '$lib/utils/supapulls';
 	import supabase from '$lib/utils/db';
-	export let form: ActionData;
 	let loading = false;
 
 	let newsissues: any;
@@ -91,7 +90,7 @@
 	metaImage={$metaImage}
 	metaUrl={$metaUrl}
 >
-	<section class="rta-column rowgap400 min100" id="intro">
+	<section class="rta-column rowgap400 min100 p-top-128" id="intro">
 		<h2 use:reveal class="bord-top bord-bot p-top-16 p-bot-24">Bṛhatadya</h2>
 		<p class="mid soft">
 			Bṛhatadya is your monthly update on the latest actions, events, launches, program
@@ -99,9 +98,7 @@
 			registrations, calendar of upcoming Anveṣī tours, the latest content at Svarñānjali and more.
 			To access it, please sign up or sign in.
 		</p>
-		{#if !$authState}
-			<button class="newbutton red" on:click={toggleSubscribe}>Sign Up</button>
-		{/if}
+		<!--
 		{#if !$authState}
 			<div class="rta-column rowgap200 first">
 				<form class="thisforms" method="post" action="?/login">
@@ -130,7 +127,8 @@
 				</form>
 			</div>
 		{/if}
-		{#if $authState}
+		-->
+
 		<h6 class="title">
 			<a href="/newsletter/4" style="color: #fe4a49">Read </a> Issue 4.1 - October '23
 		</h6>
@@ -143,9 +141,7 @@
 			<h6 class="title">
 				<a href="/newsletter/1" style="color: #fe4a49">Read </a> Issue 1.1 - July '23
 			</h6>
-		{:else}
-			<h6 class="title">Current Issue: Issue 4.1 - October 2023</h6>
-		{/if}
+
 		<div class="rta-column rowgap200">
 			<p class="small">
 				"Adya," meaning 'today, this day, now, at present', combines with Bṛhat to denote 'Bṛhat
@@ -246,17 +242,6 @@
 			width: calc(100vw - 32px)
 			min-height: 200px
 			padding: 16px
-
-form.thisforms
-	input
-		font-size: 12px
-		padding: 4px 8px
-		border-radius: 4px
-		background: none
-		outline: none
-		border: none
-		@media screen and (min-width: 1024px)
-			width: 16%
 
 .dark
 	.insubmodal

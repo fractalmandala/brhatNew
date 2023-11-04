@@ -50,6 +50,7 @@
 				<a href="/newsletter/1">Issue 1</a>
 				<a href="/newsletter/2">Issue 2</a>
 				<a href="/newsletter/3">Issue 3</a>
+				<a href="/newsletter/4">Issue 4</a>
 			</div>
 		{/if}
 	</div>

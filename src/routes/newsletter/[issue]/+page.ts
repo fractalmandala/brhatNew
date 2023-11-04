@@ -8,7 +8,7 @@ export const load: PageLoad = async ({ params, parent }) => {
     // parent-based operation
 	const { session, supabase: parentSupabase } = await parent();
 	if (!session) {
-		throw redirect(303, '/newsletter');
+		user = 'sessionuser';
 	} else {
 		user = session.user;
 	}
