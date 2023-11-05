@@ -11,7 +11,7 @@
 	$metaTitle = 'Nitividhana';
 	$metaDescription = 'Culture Compatible Public Policy';
 	$metaUrl = 'https://www.brhat.in/nitividhana';
-	$metaImage = '/images/nitividhanahero.png';
+	$metaImage = 'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/17newsletter/issue4/nitividhanahero.webp';
 
 	let details: any;
 	let section = Array(4).fill(false);
@@ -102,12 +102,26 @@
 				<h5 class="title ta-c bord-top p-top-32 p-bot-16">Who is the Program For?</h5>
 				<div class="icons contains-text p-bot-24">
 					<img
+						src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/icon-citizen.png"
+						alt="citizens"
+					/>
+					<div>
+						<p>
+							<b>1. Curious and Concerned Citizens</b>
+						</p>
+						<p class="mid soft">
+							to empower their civic and social responsibilities with the timeless wisdom of Indian Knowledge Systems.
+						</p>
+					</div>
+				</div>
+				<div class="icons contains-text p-bot-24">
+					<img
 						src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/icon-policy.png"
 						alt="students"
 					/>
 					<div>
 						<p>
-							<b>1. Students and Policy Enthusiasts</b>
+							<b>2. Students and Policy Enthusiasts</b>
 						</p>
 						<p class="mid soft">
 							who seek a more coherent worldview, beyond ideological headlines.
@@ -121,7 +135,7 @@
 					/>
 					<div>
 						<p>
-							<b>2. Working Professionals</b>
+							<b>3. Managers and Leaders</b>
 						</p>
 						<p class="mid soft">
 							wishing to acquire a richer lens to locate their work and expand their area of
@@ -131,28 +145,27 @@
 				</div>
 				<div class="icons contains-text p-bot-24">
 					<img
-						src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/icon-writer.png"
-						alt="writers"
-					/>
-					<div>
-						<p>
-							<b>3. Writers and Artists</b>
-						</p>
-						<p class="mid soft">looking to bring the power of art towards societal outcomes.</p>
-					</div>
-				</div>
-				<div class="icons contains-text p-bot-24">
-					<img
 						src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/icon-politician.png"
 						alt="politician"
 					/>
 					<div>
 						<p>
-							<b>4. Practicing and Aspiring Political Leaders</b>
+							<b>4. Practising and Aspiring Political Leaders</b>
+						</p>
+						<p class="mid soft">who want to distinguish themselves and rise above a purely electoral understanding of politics.</p>
+					</div>
+				</div>
+				<div class="icons contains-text p-bot-24">
+					<img
+						src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/08icons/icon-writer.png"
+						alt="artists"
+					/>
+					<div>
+						<p>
+							<b>5. Influencers and Content Creators</b>
 						</p>
 						<p class="mid soft">
-							who want to distinguish themselves and rise above a purely electoral understanding of
-							politics.
+							looking to bring the power of their content towards societal outcomes.
 						</p>
 					</div>
 				</div>
@@ -163,7 +176,7 @@
 				</a>
 				<p class="small">Clicking on this button will open the payment page in a new tab.</p>
 			</div>
-			<div class="rta-column rowgap200 xcenter bord-top p-top-32">
+			<div class="rta-column rowgap200 xcenter bord-top p-top-32 p-bot-32">
 			<a href="https://docs.google.com/forms/d/e/1FAIpQLSe-LX_x7L4hVigO_qv9tX_sDOH4vyhVZMAaDMgZI7duFd2Lvg/viewform" 
 				target="_blank" rel="noreferrer">
 				<button class="newbutton big red">Register for Webinar</button>
@@ -262,25 +275,16 @@
 				</p>
 			{:else if section[3]}
 				<p class="contains-text">
-					<b>Personal Growth and Transformation:</b><br />
-					Develop a deeper sense of purpose, aligning your professional roles with the values and principles
-					that resonate with your own identity and aspirations.<br /><br />
-					<b>Critical & Clear Thinking:</b><br />
-					Ability to formulate a critical comparative analysis of Western and Indian perspectives on
-					public policy and analyze gaps in existing policies in different domains to ideate possible
-					solution pathways.<br /><br />
-					<b>Innovative Approaches:</b><br />
-					Indian civilizational values and knowledge systems can provide alternative perspectives and
-					innovative approaches to problem-solving. Leverage these insights to think creatively, challenge
-					conventional practices, and develop innovative solutions to complex governance challenges.<br
-					/><br />
+					<b>Contextualize Learning: 
+					</b><br />
+					Learners will begin to translate the principles and insights of Indian Knowledge Systems to their professional and social spheres, infusing daily life with this profound wisdom. It will sharpen their acuity to identify and address the critical gaps left by the neglect of these traditional epistemes in contemporary paradigms.<br /><br />
+					<b>Discover Civilizational Thought Models:</b><br />
+					Learners will be exposed to timeless thought models emerging from Ancient Indian Sciences, Āyurveda, Yoga, and Itihasa-Purana. Learners integrate ethical frameworks to sharpen their critical comparative analysis between Western and Indian public policy outlooks, skillfully dissecting existing policy gaps to forge innovative solution pathways.<br /><br />
 					<b>Strengthen Policy Thinking:</b><br />
-					Develop a concrete understanding of the roles of the State, bureaucracy, etc in the working
-					of policy. Study successful culture-compatible policy implementations and identify/ideate for
-					more in relevant areas.<br /><br />
-					<b>Sustainable Development:</b><br />
-					Incorporate ecological wisdom from Indian knowledge systems to contribute to sustainable socio-cultural
-					and natural systems in governance and nation-building.
+					Learners develop a concrete understanding of the roles of the State, bureaucracy, etc in the working of policy. They study successful culture-compatible policy implementations and identify/ideate for more in relevant areas.<br
+					/><br />
+					<b>Develop Critical Reasoning:</b><br />
+					Learners refine their critical thinking, drawing on Dhārmic perspectives to address the layered socio-cultural dynamics within public policy. <br /><br />
 				</p>
 				<h6 class="contains-text">
 					Successful participants receive a certificate of completion endorsed by Chinmaya
