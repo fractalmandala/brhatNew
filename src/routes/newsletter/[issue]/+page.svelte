@@ -61,9 +61,9 @@
 		passCheck = true;
 	} else passCheck = false;
 
-	$metaTitle = 'Bṛhat Fortnightly Newsletter Issue No.' + data.issueData.issueno;
+	$metaTitle = 'Bṛhat Monthly Newsletter Issue No.' + data.issueData.issueno;
 	$metaDescription =
-		'A fortnightly dispatch updating you on latest actions, events, launches and more at the Culture Engine.';
+		'A monthly dispatch updating you on latest actions, events, launches and more at the Culture Engine.';
 	$metaUrl = `https://www.brhat.in/newsletter/${data.issueData.issueno}`;
 	$metaImage =
 		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/17newsletter/brhatadyawall.png';

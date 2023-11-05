@@ -89,41 +89,13 @@
 		<div class="rta-column xcenter">
 			<div class="rta-column rowgap200 p-bot-32">
 				<h6 class="contains-text">
-					This online policy learning program offered by Chinmaya International Foundation and Brhat
-					is an intensive immersive program in today's burning issues.
+					Nītividhāna is an intensive online policy learning program offered by Bṛhat and Chinmaya International Foundation.
 				</h6>
 				<p class="contains-text">
-					It is intended as an introduction to Public Policy, its roots in Political Philosophy
-					(राजनैतिक दर्शन) as seen through an examination of some of the major texts and thinkers of
-					both the Eastern and Western traditions.
+					Public Policy is deeply rooted in Political Philosophy (राजनैतिक दर्शन), drawing from key thinkers and texts of Eastern and Western heritages. The program offers a comprehensive global perspective on Political Philosophy, tracing the development and evolution of these traditions in their historical context, and examining their role in contemporary times. It also delves into the suitable Policy-response necessitated by the demands of a swiftly transforming global landscape
 				</p>
 				<p class="contains-text">
-					It attempts to provide a global overview of Political Philosophy and how these
-					philosophical traditions developed and evolved within a context, and how the politics of
-					those times played a role in establishing some traditions as dominant.
-					<b
-						>As public policy texts and practices draw heavily from these intellectual traditions,
-						it is necessary to place them in a context and retool for a fast-evolving world (and its
-						problems).</b
-					>
-				</p>
-				<p class="contains-text">
-					Designed to foster fact-based critical thinking on the most important policy issues,
-					participants will have a <b
-						>unique chance to look at policymaking from a worldview emerging from the Indian
-						Knowledge Systems.</b
-					> The program intends to build understanding among participants that the policy problems are
-					not merely economic problems, but complex socio-cultural problems.
-				</p>
-				<p class="contains-text">
-					The program challenges its participants to take the risk of thinking not just differently,
-					but more holistically. <b
-						>The course covers topics such as ancient Indian sciences, Ayurveda, yoga, ethical
-						frameworks, and indigenous knowledge systems.</b
-					>
-					Participants will engage in interactive online sessions, collaborative discussions, self-paced
-					learning, and practical applications to enhance their understanding and application of Indian
-					knowledge systems in governance.
+					The program challenges its participants to take the risk of thinking not just differently, but more holistically. The course delves into topics like Dharma in Governance, Ancient Indian Sciences, Āyurveda, Yoga, and Ethical Frameworks, supplemented by three focused Field Orientation Modules. It facilitates an immersive learning experience through interactive online sessions, collaborative discourse, self-directed study, and hands-on exercises, all aimed at offering a grounding in Indian Knowledge Systems to address contemporary global challenges.
 				</p>
 			</div>
 			<div class="rta-column rowgap300 p-bot-32">
