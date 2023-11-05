@@ -286,10 +286,6 @@
 					<b>Develop Critical Reasoning:</b><br />
 					Learners refine their critical thinking, drawing on Dhārmic perspectives to address the layered socio-cultural dynamics within public policy. <br /><br />
 				</p>
-				<h6 class="contains-text">
-					Successful participants receive a certificate of completion endorsed by Chinmaya
-					International Foundation and Brhat.
-				</h6>
 			{/if}
 		</div>
 	</section>
