@@ -5,6 +5,7 @@ category: Indian Knowledge Systems
 tags: 
 - agriculture
 - ayurveda
+- soul
 date: "2023-11-07"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/soulagriculture2.webp
 excerpt: "A brief overview of our major agricultural texts and their contents, plus a background to the methods adopted by SOUL in their model of TCBT farming."
@@ -18,7 +19,7 @@ Ayurvedic texts that discuss agricultural practices and their relationship to he
 
 From the early 18th century to the middle of the 20th century, there was a noticeable dearth of literary works centering on traditional plant science. However, a resurgence of interest in traditional agricultural techniques rekindled a proliferation of publications related to Vṛkṣāyurveda, predominantly in the form of English translations.
 
-An overview of some of the most important Vṛkṣāyurvedic texts and related works that discuss agriculture are: \
+An overview of some of the most important Vṛkṣāyurvedic texts and related works that discuss agriculture are: 
 
 **[Kṛṣi-Parāśara](https://www.brhat.in/openlibrary/books/krishiparashara)**: This is a classic Ayurvedic text attributed to the sage Parāśara. It provides comprehensive information on various aspects of agriculture, including crop cultivation, soil management, and natural pest control methods. It is a significant work in the field of agricultural Āyurveda.
 
