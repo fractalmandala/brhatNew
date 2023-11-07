@@ -47,19 +47,19 @@ Vṛkṣāyurveda, is the ancient Bhāratīya knowledge system that centers arou
 
 Vṛkṣāyurveda is a comprehensive system that provides guidelines for the planting, nurturing, and maintaining of trees. It recognizes the vital role trees play in maintaining ecological balance, air quality, and overall well-being. The principles of Vṛkṣāyurveda can be summarized as follows:
 
-**Selection of Tree Species:** The first step in tree care is selecting appropriate species for a given region and purpose. The texts provide information on the characteristics and uses of various trees, helping individuals make informed choices. \
+**Selection of Tree Species:** The first step in tree care is selecting appropriate species for a given region and purpose. The texts provide information on the characteristics and uses of various trees, helping individuals make informed choices. 
 
-**Planting Techniques**: Vṛkṣāyurveda offers detailed instructions on planting trees, considering factors such as [soil quality](https://esoullyf.in/en/collections/soil-nutrients-enrichment-1), season, location, and care. Proper planting techniques ensure the plants’ strong establishment and growth. \
+**Planting Techniques**: Vṛkṣāyurveda offers detailed instructions on planting trees, considering factors such as [soil quality](https://esoullyf.in/en/collections/soil-nutrients-enrichment-1), season, location, and care. Proper planting techniques ensure the plants’ strong establishment and growth. 
 
-**Nutrient Management**: The science of Vṛkṣāyurveda delves into the nutritional needs of trees. It emphasizes the use of organic materials like manure, compost, and other [natural fertilizers](https://esoullyf.in/en/collections/biofertilizers-1) to promote tree health. \
+**Nutrient Management**: The science of Vṛkṣāyurveda delves into the nutritional needs of trees. It emphasizes the use of organic materials like manure, compost, and other [natural fertilizers](https://esoullyf.in/en/collections/biofertilizers-1) to promote tree health. 
 
-**Pruning and Training**: Regular pruning and training of trees are recommended to shape them and encourage healthy growth. This includes removing dead or diseased branches and ensuring proper structural development. \
+**Pruning and Training**: Regular pruning and training of trees are recommended to shape them and encourage healthy growth. This includes removing dead or diseased branches and ensuring proper structural development. 
 
-**Pest and Disease Management**: Vṛkṣāyurveda suggests [natural methods for pest and disease control](https://esoullyf.in/en/collections/bio-control-biological). This involves the use of [plant-based remedies and techniques](https://esoullyf.in/en/collections/bio-control-plant-extracts) to maintain the tree's health without harming the environment. \
+**Pest and Disease Management**: Vṛkṣāyurveda suggests [natural methods for pest and disease control](https://esoullyf.in/en/collections/bio-control-biological). This involves the use of [plant-based remedies and techniques](https://esoullyf.in/en/collections/bio-control-plant-extracts) to maintain the tree's health without harming the environment. 
 
-**Water Management**: Efficient water management is crucial, and Vṛkṣāyurveda provides guidelines for proper watering practices, water requirements for different species, and ensuring trees receive adequate moisture without over-watering, which can lead to root rot. \
+**Water Management**: Efficient water management is crucial, and Vṛkṣāyurveda provides guidelines for proper watering practices, water requirements for different species, and ensuring trees receive adequate moisture without over-watering, which can lead to root rot. 
 
-**Seasonal Care**: The texts discuss seasonal variations in tree care, emphasizing the need for adaptation in different weather conditions. This knowledge aids in maximizing tree growth and overall health. \
+**Seasonal Care**: The texts discuss seasonal variations in tree care, emphasizing the need for adaptation in different weather conditions. This knowledge aids in maximizing tree growth and overall health. 
 
 **Spiritual and Cultural Significance**: Vṛkṣāyurveda goes beyond the practical aspects of tree care. It recognizes the spiritual and cultural significance of trees in Indian tradition and advocates for respect and reverence toward them.
 
