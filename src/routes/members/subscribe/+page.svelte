@@ -45,12 +45,7 @@
 >
 	<section class="rta-column rowgap400 p-top-128">
 		<h3>Subscribe to Bṛhat</h3>
-		<!--
-		<div class="rta-column checker xleft rowgap100">
-			<p>Already subscribed?</p>
-			<button class="newbutton" on:click={toggleAlready}>{#if alreadySub}Sign Up{:else}Click Here{/if}</button>
-		</div>
-		-->
+
 		<div class="rta-grid grid2 rowgap400 bord-bot p-bot-16 bord-top p-top-16 topper">
 			{#if alreadySub}
 			<div class="rta-column rowgap200 leftbox">
@@ -163,6 +158,7 @@
 				<p>Cultural Research</p>
 			</div>
 		</div>
+	
 	</section>
 </Shell>
 
@@ -181,14 +177,6 @@
 	background: #fe4a49
 
 @media screen and (min-width: 1024px)
-	form
-		input[type=text], input[type=phone], input[type=email]
-			width: 50%
-		input
-			border: 1px solid var(--contraster2)
-			border-radius: 4px
-			font-size: 14px
-			padding: 4px
 	.leftbox
 		h6
 			border-top: 1px solid var(--contraster2)
