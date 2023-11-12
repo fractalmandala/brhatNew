@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Shell from '$lib/components/PageShell.svelte';
+  import { page } from '$app/stores';
 	import { enhance, type SubmitFunction } from '$app/forms';
 	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/stores/metastores';
 	import { isAuth } from '$lib/utils/globalstores'
@@ -8,15 +9,20 @@
 	$metaDescription = 'View our subscription plans and become a paid member.';
 	$metaUrl = 'https://www.brhat.in/members/subscribe';
 	$metaImage = '/images/cover-brhat.webp';
+  $: urlToShare = $page.url.href;
 	export let form: any;
 	let memType = Array(3).fill(false);
 	let donType = Array(3).fill(false)
 	let alreadySub = false
 	let loading = false;
+  const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(urlToShare)}`;
+  const twitterShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(urlToShare)}`;
+  const linkedInShareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(urlToShare)}`;
+  const whatsappShareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(urlToShare)}`;
 
-	function toggleAlready(){
-		alreadySub = !alreadySub
-	}
+  function share(url:any) {
+    window.open(url, '_blank', 'height=500,width=600');
+  }
 
 	function toggleMemType(index: number) {
 		memType[index] = !memType[index];
@@ -158,7 +164,15 @@
 				<p>Cultural Research</p>
 			</div>
 		</div>
-	
+    <div class="rta-column rowgap200 xleft">
+      <p>Share this page:</p>
+      <div class="rta-row colgap200">
+        <button on:click={() => share(facebookShareUrl)} class="newbutton">Facebook</button>
+        <button on:click={() => share(twitterShareUrl)} class="newbutton">Twitter</button>
+        <button on:click={() => share(linkedInShareUrl)} class="newbutton">LinkedIn</button>
+        <button on:click={() => share(whatsappShareUrl)} class="newbutton">WhatsApp</button>
+      </div>
+    </div>
 	</section>
 </Shell>
 
