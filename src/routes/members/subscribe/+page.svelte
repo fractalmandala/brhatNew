@@ -10,6 +10,7 @@
 	$metaImage = '/images/cover-brhat.webp';
 	export let form: any;
 	let memType = Array(3).fill(false);
+	let donType = Array(3).fill(false)
 	let alreadySub = false
 	let loading = false;
 
@@ -25,6 +26,15 @@
 			}
 		}
 	}
+
+	function toggleDonType(index: number) {
+		donType[index] = !donType[index];
+		for ( let i = 0; i < donType.length; i++ ) {
+			if ( i !== index && donType[i] === true ) {
+				donType[i] = false
+			}
+		}
+	}
 </script>
 
 <Shell
@@ -35,11 +45,12 @@
 >
 	<section class="rta-column rowgap400 p-top-128">
 		<h3>Subscribe to Bṛhat</h3>
-		<p>{$isAuth}</p>
+		<!--
 		<div class="rta-column checker xleft rowgap100">
 			<p>Already subscribed?</p>
-			<button class="newbutton" on:click={toggleAlready}>Click Here</button>
+			<button class="newbutton" on:click={toggleAlready}>{#if alreadySub}Sign Up{:else}Click Here{/if}</button>
 		</div>
+		-->
 		<div class="rta-grid grid2 rowgap400 bord-bot p-bot-16 bord-top p-top-16 topper">
 			{#if alreadySub}
 			<div class="rta-column rowgap200 leftbox">
@@ -83,9 +94,12 @@
 				</div>
 				{#if memType[0]}
 					<h6>Monthly Subscription - ₹651/month</h6>
+					<form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_MzZ44HqJsYyh1L" async> </script> </form>
 				{:else if memType[1]}
 					<h6>Annual Subscription - ₹6001 annually (₹500/month)</h6>
+					<form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_MzZ8S4OuXprH3P" async> </script> </form>
 				{/if}
+				<!--
 				<form class="rta-column rowgap100 colgap200" method="post" action="?signup">
 					<input type="text" placeholder="Full Name" />
 					<input type="phone" placeholder="Phone Number" />
@@ -103,6 +117,7 @@
 						Please check your email for membership and payment confirmation emails.
 					</p>
 				</form>
+				-->
 			</div>
 			{/if}
 			<div class="rta-column rowgap200 rightbox">
@@ -119,34 +134,28 @@
 		</div>
 		<h5 class="title">Engage Deeper With Us</h5>
 		<p class="mid soft">
-			Subscribe to a lifetime access to all exclusive content we generate across various media.
-			Lifetime subscriptions help us enhance member content, pilot deep research projects, and
+			Contribute for a lifetime access to all exclusive content we generate across various media.
+			This helps us enhance member content, pilot deep research projects, and
 			deliver premium production qualities.
 		</p>
 		<div class="rta-grid grid2 bottom rowgap400">
-			<form class="rta-column secondform rowgap100 leftbox">
-				<p class="mid small">Select subcription tier:</p>
-				<select>
-					<option value="₹10,000">₹10,000</option>
-					<option value="₹25,000">₹25,000</option>
-					<option value="₹50,000">₹50,000</option>
-				</select>
-				<input type="text" placeholder="Full Name" />
-				<input type="phone" placeholder="Phone Number" />
-				<input type="email" placeholder="Email Address" />
-				<div class="rta-row colgap200 rowgap100">
-					<input type="password" placeholder="Create Password" />
-					<input type="password" placeholder="Confirm Password" />
+			<div class="rta-column secondform rowgap100 leftbox">
+				<p class="mid small">Select tier:</p>
+				<div class="rta-row colgap200">
+					<button class="newbutton" on:click={() => toggleDonType(0)} class:red={donType[0]}>₹10,001</button>
+					<button class="newbutton" on:click={() => toggleDonType(1)} class:red={donType[1]}>₹25,001</button>
+					<button class="newbutton" on:click={() => toggleDonType(2)} class:red={donType[2]}>₹50,001</button>
 				</div>
-				<button class="newbutton red">Submit</button>
-				<p class="small soft">
-					On clicking submit you will be led to a payment link. Please complete payment there, and
-					you will be redirected back here.
-				</p>
-				<p class="small soft">
-					Please check your email for membership and payment confirmation emails.
-				</p>
-			</form>
+				<div class="rta-column">
+					{#if donType[0]}
+					<form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_MzZygquZb1iEIq" async> </script> </form>
+					{:else if donType[1]}
+					<form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_MzZzqetNPVhP8J" async> </script> </form>
+					{:else if donType[2]}
+					<form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Mza0u8j18hz0dn" async> </script> </form>
+					{/if}
+				</div>
+			</div>		
 			<div class="rta-column projects rowgap200 rightbox">
 				<p>Bṛhat Open Library</p>
 				<p>Bodha Production</p>
@@ -166,7 +175,7 @@
 	p
 		background: #fe4a49
 		color: white
-		padding: 4px 8px
+		padding: 6px 16px
 
 .newbutton.selected
 	background: #fe4a49
@@ -189,7 +198,7 @@
 	.rightbox
 		border: 1px solid var(--contraster)
 	.topper
-		grid-template-columns: 60% 40%
+		grid-template-columns: 35% 65%
 	.leftbox, .rightbox
 		padding: 24px
 	.bottom
