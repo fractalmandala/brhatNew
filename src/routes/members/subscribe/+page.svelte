@@ -142,7 +142,7 @@
 		<div class="rta-grid grid2 bottom rowgap400">
 			<div class="rta-column secondform rowgap100 leftbox">
 				<p class="mid small">Select tier:</p>
-				<div class="rta-row colgap200">
+				<div class="rta-row colgap200 rowgap100">
 					<button class="newbutton big" on:click={() => toggleDonType(0)} class:red={donType[0]}>₹10,001</button>
 					<button class="newbutton big" on:click={() => toggleDonType(1)} class:red={donType[1]}>₹25,001</button>
 					<button class="newbutton big" on:click={() => toggleDonType(2)} class:red={donType[2]}>₹50,001</button>
@@ -166,7 +166,7 @@
 		</div>
     <div class="rta-column rowgap200 xleft">
       <p>Share this page:</p>
-      <div class="rta-row colgap200">
+      <div class="rta-row colgap200 rowgap200">
         <button on:click={() => share(facebookShareUrl)} class="newbutton">Facebook</button>
         <button on:click={() => share(twitterShareUrl)} class="newbutton">Twitter</button>
         <button on:click={() => share(linkedInShareUrl)} class="newbutton">LinkedIn</button>
