@@ -80,10 +80,10 @@
 			<div class="rta-column rowgap200 leftbox">
 				<p class="small soft">Select Membership Period:</p>
 				<div class="rta-row colgap300 rowgap200">
-					<button class="newbutton this1" on:click={() => toggleMemType(0)} class:selected={memType[0]}
+					<button class="newbutton big this1" on:click={() => toggleMemType(0)} class:selected={memType[0]}
 						>Monthly<br>₹651</button
 					>
-					<button class="newbutton this1" on:click={() => toggleMemType(1)} class:selected={memType[1]}
+					<button class="newbutton big this1" on:click={() => toggleMemType(1)} class:selected={memType[1]}
 						>Annual<br>₹6001</button
 					>
 				</div>
@@ -137,9 +137,9 @@
 			<div class="rta-column secondform rowgap100 leftbox">
 				<p class="mid small">Select tier:</p>
 				<div class="rta-row colgap200">
-					<button class="newbutton" on:click={() => toggleDonType(0)} class:red={donType[0]}>₹10,001</button>
-					<button class="newbutton" on:click={() => toggleDonType(1)} class:red={donType[1]}>₹25,001</button>
-					<button class="newbutton" on:click={() => toggleDonType(2)} class:red={donType[2]}>₹50,001</button>
+					<button class="newbutton big" on:click={() => toggleDonType(0)} class:red={donType[0]}>₹10,001</button>
+					<button class="newbutton big" on:click={() => toggleDonType(1)} class:red={donType[1]}>₹25,001</button>
+					<button class="newbutton big" on:click={() => toggleDonType(2)} class:red={donType[2]}>₹50,001</button>
 				</div>
 				<div class="rta-column">
 					{#if donType[0]}
