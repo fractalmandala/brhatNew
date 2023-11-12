@@ -60,7 +60,7 @@ In 1948, an inspector of Waqf reported that Hindus and Sikhs did not let Muslims
 
 In 1949, Hindus had been stacking bricks near the site, ready for a shock construction of the temple, whenever the opportunity arose. On 23<sup class ="nonce">rd</sup> December 1949, Hindus entered the Masjid and placed the icon of Śrī Rāma inside the Masjid. This was then locked from public use by both Hindus and Muslims alike, except on special occasions. This status quo remained until the demolition of the Babri Masjid on 6<sup class ="nonce">th</sup> December 1992. By this point, the Hindus had no more patience for the administrative procrastination regarding decisions on the site, and they finally took the matter into their own hands.
 
-Today, as the inauguration ceremony of the Śrī Rāma Mandir nears - January 22nd, 2024 - one can literally feel the air stirring with anticipation, the atmosphere vibrating with the arrival of the Puṣpaka Vimāna. One can almost see the waters of the Sarayū stir once again, and our Prabhu Śrī Rāma coming back home, on that same barge.
+Today, as the prāṇa pratiṣṭhā and inauguration ceremony of the Śrī Rāma Mandir nears - January 22nd, 2024 - one can literally feel the air stirring with anticipation, the atmosphere vibrating with the arrival of the Puṣpaka Vimāna. One can almost see the waters of the Sarayū stir once again, and our Prabhu Śrī Rāma coming back home, on that same barge.
 
 But He will not truly be back until we restore every little temple that was ever destroyed by Islamic invaders. 
 
