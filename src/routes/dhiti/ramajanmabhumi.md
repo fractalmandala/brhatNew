@@ -40,7 +40,7 @@ In another example, the Nawab complained that the Bairāgīs (Hindu saints) had 
 
 The Islamic invasion of India destroyed millions upon millions of Hindu temples. No important and ancient Hindu temple survived intact. Most were destroyed completely. Even then, Hindu rulers and sages kept trying to revive Hindu civilization and to save Hindu heritage by rebuilding Hindu temples. 
 
-Padma Śrī winner Dr. Meenakshi Jain tells us that the Amer ruler, Sawai Jai Singh (1700-1743) and the Rāmānandī sādhus were some of them. The Jaipur state considered Rāma as their ancestors and thus had a special relation with the Rāmanandi group of sadhus, who also existed to protect the heritage of Śrī Rāma. 
+Padma Śrī winner Dr. Meenakshi Jain tells us that the Amer ruler, Sawai Jai Singh (1700-1743) and the Rāmānandī sādhus were some of them. The Jaipur state considered Rāma as their ancestors and thus had a special relation with the Rāmānandi group of sadhus, who also existed to protect the heritage of Śrī Rāma. 
 
 In the first quarter of 18<sup class ="nonce">th</sup> century, at Galata near Jaipur, a great conference of the Rāmānandīs was held, under the auspices of Sawai Jai Singh. A decision was taken to organize the military wings of the Vaiṣṇava sādhus, called the Nāga sādhus. Soon after this event, Govindadās of the Nirmohī-akhāḍā established the first akhāḍa of the Rāmānandīs in Ayodhyā. 
 
@@ -52,7 +52,7 @@ Hindus never doubted that the site at which Babri Masjid stood was the site wher
 
 Sawai Jai Singh, the (Hindu) Amer Ruler of the early 18<sup class ="nonce">th</sup> century, founded several fortified townships inside many formerly Hindu cities. These townships were called Jaisinghpuras. He created these townships as an attempt to regain the Hindu soul of these places. 
 
-Records at the City Palace Museum at Jaipur prove that Sawai Jai Singh had created one such Jaisinghpura in Ayodhyā too. These documents show that the Rāma Janmasthāna was situated in Jaisinghpura, the land of which was acquired by Sawai Jai Singh in 1717 CE. The owner was Śrī Rāma himself and the site was owned by the Amer State in perpetuity. This was recognized by the Mughal Empire. Even in modern legal terms, the Ram Janmabhūmi site had belonged to the Hindus and not Muslims. By 1912, the Hindus were in a very strong position. 
+Records at the City Palace Museum at Jaipur prove that Sawai Jai Singh had created one such Jaisinghpura in Ayodhyā too. These documents show that the Rāma Janmasthāna was situated in Jaisinghpura, the land of which was acquired by Sawai Jai Singh in 1717 CE. The owner was Śrī Rāma himself and the site was owned by the Amer State in perpetuity. This was recognized by the Mughal Empire. Even in modern legal terms, the Rāma Janmabhūmi site had belonged to the Hindus and not Muslims. By 1912, the Hindus were in a very strong position. 
 
 In reply to this gain, Muslims slaughtered cows near the temple at Bakr-id. This sparked riots and troops had to be called in. In 1934, riots once again broke out as Muslims tried cow sacrifice in nearby Shahjahanpur. In retaliation, Hindu sādhus entered the Babri Masjid and pulled down the enclosure walls and gateways. The metal pinnacles on the domes were removed and one dome was substantially damaged. 
 
@@ -60,7 +60,7 @@ In 1948, an inspector of Waqf reported that Hindus and Sikhs did not let Muslims
 
 In 1949, Hindus had been stacking bricks near the site, ready for a shock construction of the temple, whenever the opportunity arose. On 23<sup class ="nonce">rd</sup> December 1949, Hindus entered the Masjid and placed the icon of Śrī Rāma inside the Masjid. This was then locked from public use by both Hindus and Muslims alike, except on special occasions. This status quo remained until the demolition of the Babri Masjid on 6<sup class ="nonce">th</sup> December 1992. By this point, the Hindus had no more patience for the administrative procrastination regarding decisions on the site, and they finally took the matter into their own hands.
 
-Today, as the inauguration ceremony of the Śrī Rāma Mandir nears - January 22nd, 2024 - one can literally feel the air stirring with anticipation, the atmosphere vibrating with the arrival of the Pushpak Viman. One can almost see the waters of the Sarayū stir once again, and our Prabhu Śrī Rāma coming back home, on that same barge.
+Today, as the inauguration ceremony of the Śrī Rāma Mandir nears - January 22nd, 2024 - one can literally feel the air stirring with anticipation, the atmosphere vibrating with the arrival of the Puṣpaka Vimāna. One can almost see the waters of the Sarayū stir once again, and our Prabhu Śrī Rāma coming back home, on that same barge.
 
 But He will not truly be back until we restore every little temple that was ever destroyed by Islamic invaders. 
 
