@@ -10,7 +10,7 @@ date: "2023-11-23"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/cultureinpolicy.webp
 ---
 
->“There are these two young fish swimming along, and they happen to meet an older fish swimming the other way, who nods at them and says, "Morning, boys, how's the water?" And the two young fish swim on for a bit, and then eventually one of them looks over at the other and goes, "What the hell is water?”
+>There are these two young fish swimming along, and they happen to meet an older fish swimming the other way, who nods at them and says, "Morning, boys, how's the water?" And the two young fish swim on for a bit, and then eventually one of them looks over at the other and goes, "What the hell is water?”
 <cite>David Foster Wallace‘s 2005 commencement speech to the graduating class at Kenyon College. From Michael Muthukrishna’s book, <span style="text-decoration:underline;">A Theory of Everyone: Who We Are, How We Got Here, and Where We’re Going</span>.</cite>
 
 Culture is analogous to water in its significance and influence on human beings. We are often so deeply entrenched in our own thoughts and immersed in our preconceptions that we fail to see how the culture we live in structures our everyday lives. 
@@ -41,7 +41,7 @@ The distortion and mis-characterization of Indians served the purpose of Indians
 
 ##### Such a distortion has huge consequences for the natives’ own culture, as the long shadow of colonialism puts the colonized into the “zone of non-being”, where they never feel like themselves, and their schemes of self-recognition and valuation have entirely been ruptured. 
 
-Colonies like India turned into social laboratories. In his 1906 paper”‘The Value of the Study of Colonies for Sociology”, Albert Keller argued that “the colonies are ideal sociological laboratories because they provide us with data on what modern societies used to be like. He states, ‘the study of such societies gives us our only starting-points for the scientific demonstration of the evolution of human institutions.” 
+Colonies like India turned into social laboratories. In his 1906 paper ‘The Value of the Study of Colonies for Sociology’, Albert Keller argued that “the colonies are ideal sociological laboratories because they provide us with data on what modern societies used to be like". He states, "the study of such societies gives us our only starting-points for the scientific demonstration of the evolution of human institutions.” 
 
 The colonial countries reaped great benefits from colonialism and empire by treating the colonized countries as pools from which to gather meaningful data. As Connell (2010: 41) aptly puts it: 
 
