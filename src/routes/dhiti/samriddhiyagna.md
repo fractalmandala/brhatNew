@@ -11,7 +11,7 @@ date: "2023-11-14"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/samriddhiyagna/samriddhiyagna.webp
 ---
 
-Bhagyanagar is very fortunate to be hosting a yajna (yagna) of this scale and intention. The **Bharata Bhagya Samriddhi Yagna** is being held at Sitaram Bagh Mandir from Oct 15-Nov 26, 2023,. _“Our country needs our prayers more than ever now - defence, industry, finance, education - our nation needs to grow and prosper, as also the people in it, this was the intention with which we conceived this on such a grand scale_, says Madhavi garu. 
+Bhagyanagar is very fortunate to be hosting a yajna (yagna) of this scale and intention. The **Bharata Bhagya Samriddhi Yagna** is being held at Sitaram Bagh Mandir from Oct 15-Nov 26, 2023. _“Our country needs our prayers more than ever now - defence, industry, finance, education - our nation needs to grow and prosper, as also the people in it, this was the intention with which we conceived this on such a grand scale_, says Madhavi garu. 
 
 **Bharata Bhagya Samriddhi Yagna Video 1**
 
