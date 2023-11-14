@@ -13,7 +13,7 @@ image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwe
 
 Bhagyanagar is very fortunate to be hosting a yajna (yagna) of this scale and intention. The **Bharata Bhagya Samriddhi Yagna** is being held at Sitaram Bagh Mandir from Oct 15-Nov 26, 2023,. _“Our country needs our prayers more than ever now - defence, industry, finance, education - our nation needs to grow and prosper, as also the people in it, this was the intention with which we conceived this on such a grand scale_, says Madhavi garu. 
 
-**Bharata Bhagya Samriddhi Yagna 1**
+**Bharata Bhagya Samriddhi Yagna Video 1**
 
 [![BBSY](https://img.youtube.com/vi/pT3TZMl9pak/0.jpg)](https://www.youtube.com/watch?v=pT3TZMl9pak)
 
@@ -31,7 +31,7 @@ Unfortunately given the nature of our education and our entertainment, we have b
 
 Local artists and traditional practitioners of malla yuddham (combat wrestling), karra & katti sāmu (stick & sword fighting) are also slated to showcase their vidyās here, whilst art forms such as hari kathā, burra kathā, uggu kathā which glorify our heroes and warriors via storytelling will get a chance to perform too. Daily feeding of the devotees continues as **nitya annadānam & mahā prasādam** is also being offered. **Bhajan sessions** every evening at 6.30 pm are another great draw.
 
-**Bharata Bhagya Samriddhi Yagna 2**
+**Bharata Bhagya Samriddhi Yagna Video 2**
 
 [![BBSY](https://img.youtube.com/vi/TLTtAIdrYls/0.jpg)](https://www.youtube.com/watch?v=TLTtAIdrYls)
 
@@ -53,7 +53,7 @@ Keeping the history, geography, and politics of this place in mind, the presence
 
 Thus it becomes all the more imperative that we in Bhagyanagar avail of this great opportunity to participate in such an enterprising endeavour which brings together not just puṇḍits from all over the country, but also encourages people from all walks of life to reconnect to their heritage in such an unlikely consecrated space. Be sure to participate in these age old rituals in large numbers, for the welfare of our country, our society, and our families. 
 
-**Bharata Bhagya Samriddhi Yagna 3**
+**Bharata Bhagya Samriddhi Yagna Video 3**
 
 [![BBSY](https://img.youtube.com/vi/JuelrEkDTHQ/0.jpg)](https://www.youtube.com/watch?v=JuelrEkDTHQ)
 
