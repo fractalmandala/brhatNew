@@ -942,3 +942,13 @@ export async function nitividhana(){
 	if (error) throw new Error(error.message)
 	return data		
 }
+
+export async function bodhaVids() {
+  const { data, error } = await supabase
+  .from('brhat-youtube')
+  .select()
+  .eq('type','bodha')
+  .order('id')
+  if (error) throw new Error(error.message)
+  return data
+}

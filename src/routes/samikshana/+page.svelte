@@ -194,8 +194,10 @@
 				rel="noreferrer"
 				><button class="newbutton big red">APPLY NOW</button>
 			</a>
-			<a href="https://forms.gle/kBZ33M9mUG5HZzyM6" target="_blank" rel="noreferrer"
-				><button class="newbutton big red">REGISTER FOR WEBINAR</button></a
+			<a
+				href="https://docs.google.com/forms/d/e/1FAIpQLSfXooD5I_Xu4V8Q_OK7EiiQICpJedY5LHfyQNx10h_B4q6vFQ/viewform"
+				target="_blank"
+				rel="noreferrer"><button class="newbutton big red">REGISTER FOR WEBINAR</button></a
 			>
 			<button class="newbutton big red" on:click={toggleSubscribe}>VIEW BROCHURE</button>
 		</div>
@@ -762,8 +764,10 @@
 				rel="noreferrer"
 				><button class="newbutton big red">APPLY NOW</button>
 			</a>
-			<a href="https://forms.gle/kBZ33M9mUG5HZzyM6" target="_blank" rel="noreferrer"
-				><button class="newbutton big red">REGISTER FOR WEBINAR</button></a
+			<a
+				href="https://docs.google.com/forms/d/e/1FAIpQLSfXooD5I_Xu4V8Q_OK7EiiQICpJedY5LHfyQNx10h_B4q6vFQ/viewform"
+				target="_blank"
+				rel="noreferrer"><button class="newbutton big red">REGISTER FOR WEBINAR</button></a
 			>
 			<button class="newbutton big red" on:click={toggleSubscribe}>VIEW BROCHURE</button>
 		</div>
