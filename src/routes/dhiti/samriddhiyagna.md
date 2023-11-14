@@ -13,7 +13,7 @@ image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwe
 
 Bhagyanagar is very fortunate to be hosting a yajna (yagna) of this scale and intention. The **Bharata Bhagya Samriddhi Yagna** is being held at Sitaram Bagh Mandir from Oct 15-Nov 26, 2023,. _“Our country needs our prayers more than ever now - defence, industry, finance, education - our nation needs to grow and prosper, as also the people in it, this was the intention with which we conceived this on such a grand scale_, says Madhavi garu. 
 
-[![BBSY](https://img.youtube.com/vi/pT3TZMl9pak.jpg)](https://www.youtube.com/watch?v=pT3TZMl9pak)
+[![BBSY](https://img.youtube.com/vi/pT3TZMl9pak/0.jpg)](https://www.youtube.com/watch?v=pT3TZMl9pak)
 
 Financed for the most part by the Chairperson of Virinchi Hospitals, **Smt. Madhavi Latha Kompella**, this is a very fine effort undertaken by her along with **Lopamudra Charitable Trust and Lathama Foundation**, which have been serving people through Health Clinics, Medicine Distribution, Disaster Relief, Road Safety Campaigns, and Education for Girls. This yajna, after due consultation with traditional sampradāyas, especially under the guidance of **Purohit Sri Aripirala Sarath garu,** is designed as a manḍala of forty days,  to ignite the spirit of service, and to serve as a spark, in unifying people from all walks of life. 
 
@@ -29,7 +29,7 @@ Unfortunately given the nature of our education and our entertainment, we have b
 
 Local artists and traditional practitioners of malla yuddham (combat wrestling), karra & katti sāmu (stick & sword fighting) are also slated to showcase their vidyās here, whilst art forms such as hari kathā, burra kathā, uggu kathā which glorify our heroes and warriors via storytelling will get a chance to perform too. Daily feeding of the devotees continues as **nitya annadānam & mahā prasādam** is also being offered. **Bhajan sessions** every evening at 6.30 pm are another great draw.
 
-[![BBSY](https://img.youtube.com/vi/TLTtAIdrYls.jpg)](https://www.youtube.com/watch?v=TLTtAIdrYls)
+[![BBSY](https://img.youtube.com/vi/TLTtAIdrYls/0.jpg)](https://www.youtube.com/watch?v=TLTtAIdrYls)
 
 This is the first time that **45 priests** who have attained mantra siddhis (those who have completed an appropriate number of chants in a prescribed manner as required by one’s guru or sacred texts) have been brought together from across the country and are performing a variety of yajnas, **38 distinct vaidika rituals** in all, for the benefit of our nation, for Bharat. Individuals may also perform these yajnas by requesting the same for a small fee. The parṇaśālā where the yajna is being performed has been built without using any metal at all, reminding us of bygone times. The purohits stay in the temple premises for the said period, and have devoted their all to making this yajna beneficial and fruitful for all, for loka kalyāṇam.
 
@@ -49,7 +49,7 @@ Keeping the history, geography, and politics of this place in mind, the presence
 
 Thus it becomes all the more imperative that we in Bhagyanagar avail of this great opportunity to participate in such an enterprising endeavour which brings together not just puṇḍits from all over the country, but also encourages people from all walks of life to reconnect to their heritage in such an unlikely consecrated space. Be sure to participate in these age old rituals in large numbers, for the welfare of our country, our society, and our families. 
 
-[![BBSY](https://img.youtube.com/vi/JuelrEkDTHQ.jpg)](https://www.youtube.com/watch?v=JuelrEkDTHQ)
+[![BBSY](https://img.youtube.com/vi/JuelrEkDTHQ/0.jpg)](https://www.youtube.com/watch?v=JuelrEkDTHQ)
 
 Next to the **gośālā** of this temple is the Śiva temple under the same trustee, with a vast open space, it is here that the yajna is being conducted. **Daily Live Stream** may be accessed [here](https://www.youtube.com/live/-Yj5MrNtqXk). Those interested in registering for the pūjās, homams and kalyāṇams, may please contact; bbsyagna23@gmail.com or call **7337323960.** A list of acceptable items for donations is hung at the entrance, this is a people’s yajna, hence our participation is a must! 
 
