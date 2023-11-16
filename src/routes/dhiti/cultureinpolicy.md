@@ -6,7 +6,7 @@ tags:
 - culture 
 - policy
 excerpt: "The article attempts to provide a historical account of how public policy making, which for a long time perpetuated epistemic hierarchies, are now witnessing the emergence of a cultural turn, recognizing culture as a dynamic force."
-date: "2023-11-23"
+date: "2023-11-13"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/cultureinpolicy.webp
 ---
 
