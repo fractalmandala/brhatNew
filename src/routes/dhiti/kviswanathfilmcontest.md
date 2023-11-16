@@ -5,8 +5,8 @@ category: Dharma Today
 tags:
   - cinema
   - culture
-date: '2023-11-16'
 excerpt: "This article introduces the K. Viswanath Memorial Short Film Contest, showcasing films that honor the legendary director's legacy in depicting Indian culture."
+date: '2023-11-16'
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/kviswanathfilmcontest.webp
 ---
 
