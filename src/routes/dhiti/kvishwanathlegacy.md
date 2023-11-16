@@ -6,7 +6,7 @@ tags:
 - cinema
 - arts
 - culture
-date: "2023-11-010"
+date: "2023-11-10"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/kvishwanathlegacy.webp
 excerpt: "K. Vishwanath influenced a whole generation, shaped popular culture, and even public morality. A man of culture, class, and dignity, he embodied our civilizational values. He leaves an unfillable void in cinema."
 ---
