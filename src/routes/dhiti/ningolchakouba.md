@@ -87,7 +87,7 @@ Through this Trust, they showcase the richness of their unique and indigenous cu
 
     If we do not learn about the influences that cultural groups have had on our mainstream history and culture, we are all missing out on an accurate view of our society and our communities. Racial and ethnic divisions result in misunderstandings, loss of opportunities, and sometimes violence. 
 
-This year Ningol Chakouba fell on November 5th 2023, but the United Living Trust did not organize any event, in solidarity with the many Meities, who have been rendered homeless due to the ongoing violence in the state of Manipur 
+This year Ningol Chakouba fell on November 15th 2023, but the United Living Trust did not organize any event, in solidarity with the many Meities, who have been rendered homeless due to the ongoing violence in the state of Manipur 
 
 <img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/ningolchakouba/ningolchakouba6.webp" alt="six"/>
 
