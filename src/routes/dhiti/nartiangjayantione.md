@@ -8,7 +8,7 @@ tags:
 - devi
 excerpt: "In the second installment of the fiction series inspired by the Nartiang Jayanti temple visit near Shillong, Meghalaya, Shodashi and Lalitha navigate the unpredictable weather, cultural clashes, and the essence of tradition"
 date: "2023-11-18"
-image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/ningolchakouba/ningolchakouba.webp
+image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/nartiangjayantione.webp
 ---
 
 _This piece is the second in a fiction series of short stories around Devī, inspired by a recent visit to Nartiang Jayanti temple near Shillong, Meghalaya. Read the first story based on Tripura Sundari, Tripura [here](https://www.brhat.in/dhiti/matabari)._
