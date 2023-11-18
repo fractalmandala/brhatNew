@@ -7,7 +7,7 @@ tags:
 - northeast
 - devi
 excerpt: "In the second installment of the fiction series inspired by the Nartiang Jayanti temple visit near Shillong, Meghalaya, Shodashi and Lalitha navigate the unpredictable weather, cultural clashes, and the essence of tradition"
-date: "2023-11-17"
+date: "2023-11-18"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/ningolchakouba/ningolchakouba.webp
 ---
 
