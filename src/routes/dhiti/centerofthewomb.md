@@ -22,7 +22,7 @@ We were walking on the very same ‘canal’. Now all tarred up. The freed goats
 
 Jyoti ji is from an old well known Guwahati family  and reminded me of royalty; rooted in the local customs, graceful, refined, with a strong sense of commitment to the public. She invited me home for tea and I was only too glad to meet a local on home ground. She is the author of fourteen books on Assamese cooking and culture, and one of them ‘Ambrosia’ published by Rupa, has a foreword by Victor Banerjee. 
 
-<img class="imageclass2" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/centerofwomb/2.webp" alt="two"/>
+<img class="imageclass1" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/centerofwomb/2.webp" alt="two"/>
 
 Jyoti ji on her own volition called up Prof. Gautam Sarma, HOD English (retd) from Cotton University in my presence, while sipping Assam CTC Tea, and requested him to speak with me for a few minutes. Generous and hospitable as they are in these parts, the good professor ended up inviting me home for a tête-à-tête. Meanwhile CTC Tea versus Leaf tea is a debate that is as serious as Red versus White wine, and if you are visiting this region, please know and cross your teas. 
 
@@ -34,7 +34,7 @@ Mā has blessed this land with ample fertility. The produce here is diverse and 
 
 Guwahati’s similarities with Kerala are aplenty. The munḍu set being similar to the mekhela chador, the cuisine which is coconut and banana heavy, the humidity, the traditional thāravāḍu like houses with a courtyard in the centre, the clean and neat look with bamboo, brass and above all the love for mā, for śākta worship, the heart that beats for Bhagavatī. 
 
-<img class="imageclass2" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/centerofwomb/3.webp" alt="three"/>
+<img class="imageclass1" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/centerofwomb/3.webp" alt="three"/>
 
 Kerala and Assam (along with Bengal and parts of Odisha) share a unique love for tāntrika practices. Bhagavatī temples in Kerala and Kālī, Durgā, Devī temples in the erstwhile greater Assam region all of them follow śākta traditions and customs, which are also known to offer bali. To know more about tantra, Gautam ji suggested I meet his cousin - everyone from Nīlācala is related in one way or another - Śrī. Riju Rajib Sarma.
 
@@ -75,7 +75,7 @@ In the many tantra texts mā is termed as ‘rudhira pāna priya’, one who lov
 
 As per Shivani Hazarika ji, working at McLeod Russel, the traditional families in Guwahati who were śākta worshippers ate only that mutton which had been offered as bhog to mā, i.e. the goat that was offered as bali was the only mutton they consumed in previous generations. Since each family had their own pāṇḍa on the hill, he would indicate to the families when bhog was offered and bring down the prasād to them at Uzan Bazar. Such ancient linkages have been long lost and nowadays all Hindu families who eat mutton are forced to eat halal as there are no Hindu butchers left in the area. Fishermen yes she said, but not goats, that is a trade that is no longer practised by Hindus. 
 
-<img class="imageclass2" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/centerofwomb/4.webp" alt="four"/>
+<img class="imageclass1" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/centerofwomb/4.webp" alt="four"/>
 
 For the lover of animal rights, this news ought to cause grave concern but it does not. Killing an animal such that it is painfully beheaded, literally sawed to death in the name of one religion seems to get a free pass, unlike ‘baliprathā’, which is termed as superstition and a backward practice. In fact halal, a completely religious practice from start to finish ought to cause more concern; in the sense that from the butcher, to the prayer while butchering, to the marketing, the complete production line, all of it is controlled by Muslims only as a religious injunct. It is now a flourishing industry which labels  even snacks, biscuits, and chocolates as halal. Many consumers who happen to be Hindu do not object to this or are ignorant of the same, yet have no qualms about dissing baliprathā and advocating animal rights to Hindus only.
 
@@ -110,7 +110,7 @@ If we want to fight the battle of narratives, and increasingly the battle on the
 
 Unless one is clear that one’s goal is mokṣa and one is actively ‘pursuing’ it, say as a sannyāsi does,  everyone else can and ought to seek help from devatās, this is done via prayer. *And praying for help is the most intelligent thing to do when there is no other solution in sight*, as my guru Pujya Swami Dayananda Saraswati ji would often say.
 
-<img class="imageclass2" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/centerofwomb/6.webp" alt="six"/>
+<img class="imageclass1" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/centerofwomb/6.webp" alt="six"/>
 
 Śākta worship is new to me, although ammā has been chanting Lalita Sahasranamam daily at home ever since I remember and was also a part of a group that chanted it at temples and houses for the well being of those who invited them, the tāntrika aspect is not familiar to me or ammā.  Thus it was with a lot of curiosity and love that my mother and I travelled two months ago to Agartala and Shillong. Both these cities are in close proximity to a śakti pīṭha, and since ammā is a devī upāsaka we decided to do this circuit. Tripura is mostly bāngla culture with a lot of śakti, tantra, devī worship. The Tripura Sundari temple in Udaipur district also called Matabari (mother’s house) is small but neat and tidy built in the Ekaratna style, with beautiful women holding red hibiscus garlands to offer to the mother goddess whose little toe of the left leg fell here. 
 
@@ -120,7 +120,7 @@ Here in the north east, the worship of devī is in the form of tantra. I learnt 
 
 With so much being said about Ambubaci, I wish I could watch the documentary film by Rajib Hari Kaushik who is Founder Director- Luit-Gist Communications and Indigenous Rama Research Foundation. Finding him was serendipitous like all else that happened on this trip. I was climbing up the Navagraha Hill, to pay respects to the nine planets which give the state its ancient name; Pragjyotishpur. At the corner of the mainroad I see a small store decorated with gamsas and with posters on Ambubaci. I walk in to meet Rajib ji. He gently mentions that he was the Chief Minister Himanta Biswa’s classmate in Kamrup Academy and sat on the same bench, and pointed to a photograph on the wall as a proof of his relationship. His film on Ambubaci has made it to the Mumbai Film Festival but unfortunately it is not available on Youtube or any of the OTTs. He is working on another film now which is on the Assamese version of the Rāmāyaṇa.
 
-<img class="imageclass2" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/centerofwomb/7.webp" alt="seven"/>
+<img class="imageclass1" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/centerofwomb/7.webp" alt="seven"/>
 
 Aghoris, Nagas, Siddhas, Tantriks, Shaktas, everyone congregates at  Kāmākhyā to celebrate this momentous event of mā’s menstruation, he said. I shiver with wonder at the very thought of it, that mā’s devotion makes grown men fall flat on the ground. Many fall at the feet of young girls for kumarī pūja. Seeing the goddess in the girls, the men literally worship them with great devotion. Where else in the world is the feminine, the female, and the woman worshipped so viscerally with such śraddhā. And where else but here, is the womb, the vagina, given its due.
 
@@ -136,7 +136,7 @@ Guwahati still is a small town, despite the flyovers and the plush cafes, the mu
 
 This temple hill is an ecosystem in itself with a biosphere that is rare and ancient. Such biodiversity calls for better caretaking and not casual calls to make high rise building and broadening roads. The few shopkeepers who I spoke to were hesitant to say anything or say the wrong thing unwittingly. Many say that if they are compensated they are fine with their shops being cleared. There is talk that new shops will come up in an open plot close to the auto cum bus stand, all together in one area and not as they are now, all along the path leading to the main temple. All news pertaining to development on the hill has been hushed up and I could not get any source for the same. 
 
-<img class="imageclass2" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/centerofwomb/8.webp" alt="eight"/>
+<img class="imageclass1" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/centerofwomb/8.webp" alt="eight"/>
 
 Wondering who else I could talk to, I decided to visit a government building. Walking distance to where I was put up, at Dighalipukhuri, the Assam State Museum is a very well preserved well kept space offering insight into this region’s past. With more than two buildings and a few floors each, it is a lovely space to spend a Sunday afternoon in. This is where I ran into Rituparna, who was back on a break from JNU where she had completed her Masters in Modern History. This is also where I met Eshan, a Phd. student of archaeology at IIT, Guwahati. 
 
