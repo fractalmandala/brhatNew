@@ -151,3 +151,10 @@ On the final evening before our departure, I went next door to Lush for my usual
 When we speak of feminism, of feminine hygiene, or of women’s rights, unfortunately we do not look at our own practices or knowledge systems to appreciate what we have. How we look at the world and how we do things differently is something we must ruminate upon. It is time, with mā’s blessings, that we acknowledge the existence of śākta worship, its necessity, and the grace it bestows upon us. We must allow its bhaktas to continue to practise their faith and customs as they wish to within their fold without outside interference, just as we would eagerly allow any other indigenous community to do so.  
 
 Perhaps if I said that mā is also worshipped by the Khasis, and that the word Kāmākhyā is a distortion of a Khasi word for womb, many might sit up and take notice and leave these practices and their practitioners alone. After all we Indians believe in minority rights wholeheartedly!
+
+<style lang="sass">
+
+.imageclass1
+ margin: 8px 0 16px 0
+ 
+</style> 
