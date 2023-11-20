@@ -9,20 +9,25 @@
 	$metaDescription = 'View our subscription plans and become a paid member.';
 	$metaUrl = 'https://www.brhat.in/members/subscribe';
 	$metaImage = '/images/cover-brhat.webp';
-  $: urlToShare = $page.url.href;
+ let urlToShare;
+ let facebookShareUrl:any;
 	export let form: any;
 	let memType = Array(3).fill(false);
 	let donType = Array(3).fill(false)
 	let alreadySub = false
 	let loading = false;
-  const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(urlToShare)}`;
-  const twitterShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(urlToShare)}`;
-  const linkedInShareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(urlToShare)}`;
-  const whatsappShareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(urlToShare)}`;
+ const twitterShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(urlToShare)}`;
+ const linkedInShareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(urlToShare)}`;
+ const whatsappShareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(urlToShare)}`;
 
-  function share(url:any) {
-    window.open(url, '_blank', 'height=500,width=600');
+ $: if ($page.url) {
+    urlToShare = $page.url.href;
+    facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(urlToShare)}`;
   }
+
+ function share(url:any) {
+   window.open(url, '_blank', 'height=500,width=600');
+ }
 
 	function toggleMemType(index: number) {
 		memType[index] = !memType[index];
