@@ -11,7 +11,7 @@ date: "2023-11-20"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/nartiangjayantione.webp
 ---
 
-Read [Part 1](https://www.brhat.in/dhiti/nartiangjayantione) and [Part 2](https://www.brhat.in/dhiti/matabari).
+Read the first story in this series [here](https://www.brhat.in/dhiti/matabari), and part 1 of this story [here](https://www.brhat.in/dhiti/nartiangjayantione).
 
 Just as they had taken off their slippers, the main door opened, and a young lady came out to welcome them in, she did not look like a local and spoke in Hindi. 
 
