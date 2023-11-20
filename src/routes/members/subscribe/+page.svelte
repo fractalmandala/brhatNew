@@ -11,18 +11,21 @@
 	$metaImage = '/images/cover-brhat.webp';
  let urlToShare;
  let facebookShareUrl:any;
+ let twitterShareUrl:any;
+ let linkedInShareUrl:any;
+ let whatsappShareUrl: any;
 	export let form: any;
 	let memType = Array(3).fill(false);
 	let donType = Array(3).fill(false)
 	let alreadySub = false
 	let loading = false;
- const twitterShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(urlToShare)}`;
- const linkedInShareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(urlToShare)}`;
- const whatsappShareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(urlToShare)}`;
 
  $: if ($page.url) {
     urlToShare = $page.url.href;
     facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(urlToShare)}`;
+    twitterShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(urlToShare)}`;
+    linkedInShareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(urlToShare)}`;
+    whatsappShareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(urlToShare)}`;
   }
 
  function share(url:any) {
