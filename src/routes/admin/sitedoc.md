@@ -34,7 +34,7 @@ themer (id=appbox; type=main)
 - $metaType = 'webpage'
 ##### components
 - Head from '$lib/components/HeadComponent.svelte'
-- Header from '$lib/components/SubHeader.svelte'
+- Header from '$lib/components/NewHeader.svelte'
 - many instances of ButtonEmerge from '$lib/anims/ButtonEmerge.svelte'
 - SVCar from '$lib/components/SVCar.svelte'
 - HomeAccordion from '$lib/components/HomeAccordion.svelte'

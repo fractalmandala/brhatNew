@@ -6,7 +6,6 @@
 	import { page } from '$app/stores';
 	import Header from '$lib/components/NewHeader.svelte';
 	import { breakZero, breakOne, breakTwo, themeMode, innerWidth } from '$lib/stores/globalstores';
-	import ButtonF from '$lib/anims/ButtonFlashes.svelte';
 	import type { PageData } from './$types';
 	import '$lib/styles/tiptap.scss';
 
@@ -64,7 +63,7 @@
 					<input name="password" type="password" placeholder="password" />
 				</div>
 				<div class="rta-row colgap100">
-					<ButtonF>Log In</ButtonF>
+					<button>Log In</button>
 					<!--
 					<button class="glass">Sign Up</button>
 					-->

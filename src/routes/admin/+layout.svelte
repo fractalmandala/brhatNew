@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Header from '$lib/components/SubHeader.svelte';
+	import Header from '$lib/components/NewHeader.svelte';
 	import { themeMode } from '$lib/stores/globalstores';
 </script>
 
@@ -9,7 +9,7 @@
 	</div>
 </Header>
 
-<div class="type" class:light={$themeMode} class:dark={!$themeMode}>
+<div class="type" class:light={!$themeMode} class:dark={$themeMode}>
 	<slot />
 </div>
 

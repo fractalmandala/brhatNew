@@ -59,8 +59,9 @@
     "gsap": "file:gsap-bonus.tgz",
     "lucide-svelte": "^0.206.0",
     "marked": "^5.1.0",
-    "openai": "^3.2.1",
+    "openai": "^3.3.0",
     "prismjs": "^1.29.0",
+    "random-word-slugs": "^0.1.7",
     "rehype-slug": "^5.1.0",
     "see": "^0.0.0",
     "seedrandom": "^3.0.5",
@@ -73,6 +74,7 @@
     "textify.js": "^2.4.3",
     "tippy.js": "^6.3.7",
     "twitter": "^1.7.1",
+    "uuid": "^9.0.1",
     "vanilla-lazyload": "^17.8.3"
   }
 }

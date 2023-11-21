@@ -8,7 +8,6 @@
 	import 'tippy.js/animations/shift-away.css';
 	import { mandalaAll } from '$lib/utils/localpulls';
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte';
-	import HeadLocal from '$lib/components/HeadLocal.svelte';
 
 	let fractals: any;
 	let wide: number;

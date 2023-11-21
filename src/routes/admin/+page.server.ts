@@ -26,7 +26,7 @@ export const actions: Actions = {
 			showChip('invalid credentials!', '#fe4a49');
 		}
 
-		throw redirect(303, '/newsletter');
+		throw redirect(303, '/admin');
 	},
 
 	signup: async({
@@ -51,13 +51,13 @@ export const actions: Actions = {
 			showChip('Error! Please check submitted details again.', '#fe4a49');
 		} 
 
-		throw redirect(303, '/');
+		throw redirect(303, '/admin');
 		},
 
 	signout: async ({ 
 		locals: { supabase } 
 	}) => {
 		await supabase.auth.signOut();
-		throw redirect(303, '/newsletter');
+		throw redirect(303, '/admin');
 	}
 	};

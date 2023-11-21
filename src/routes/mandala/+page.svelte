@@ -3,7 +3,6 @@
 	import Head from '$lib/components/HeadComponent.svelte';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import Parallax from '$lib/components/ParallaxImage.svelte';
-	import VisibilityTrack from '$lib/anims/VisibilityTrack.svelte';
 	let panel3: HTMLElement | null;
 	let panel2: HTMLElement | null;
 	let panel4: HTMLElement | null;

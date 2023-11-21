@@ -12,7 +12,7 @@
 		dictionaryInput,
 		searchInput
 	} from '$lib/stores/metastores';
-	import Header from '$lib/components/SubHeader.svelte';
+	import Header from '$lib/components/NewHeader.svelte';
 	import Head from '$lib/components/HeadComponent.svelte';
 	import Close from '$lib/icons/close.svelte';
 	import { apteDevanagari, apteIAST, apteITRANS, apteRomanized } from '$lib/utils/synaptic';
