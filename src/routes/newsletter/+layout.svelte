@@ -1,15 +1,12 @@
 <script lang="ts">
 	import type { LayoutData } from './$types';
-	import type { ActionData } from './$types';
 	import Header from '$lib/components/NewHeader.svelte';
-	import AuthModal from '$lib/components/AuthModal.svelte';
-	import { showAuth, authState, menuMode } from '$lib/stores/globalstores';
+	import { authState, menuMode } from '$lib/stores/globalstores';
 	import { slide } from 'svelte/transition';
 	import { quintOut, quintIn } from 'svelte/easing';
 	import { clickOutsideAction } from '$lib/utils/clickoutside';
 
 	export let data: LayoutData;
-	export let form: ActionData;
 	let checker: boolean;
 	let fake = false;
 
@@ -58,7 +55,6 @@
 <div class="minH">
 	<slot />
 </div>
-<AuthModal {form} />
 
 <style lang="sass">
 
