@@ -9,6 +9,7 @@
 	import '$lib/styles/types.sass';
 	import '$lib/styles/tokens.sass';
 	import '$lib/styles/standard.sass';
+ import '$lib/styles/splide.sass';
 	import Footer from '$lib/components/Footer.svelte';
 	import UserConfig from '$lib/components/UserConfig.svelte';
 

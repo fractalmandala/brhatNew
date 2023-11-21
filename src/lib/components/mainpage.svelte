@@ -92,7 +92,7 @@
 		>
 			<img src="/images/newpages/nitividhana.webp" alt="nitividhana" />
 		</a>
-		<div class="rest rta-column rowgap400 ybot">
+		<div class="rest rta-column rowgap300 ybot">
 			<p class="mid">
 				This online policy learning program offered by Chinmaya International Foundation and Brhat
 				is an intensive immersive program in today's burning issues.
@@ -115,7 +115,7 @@
 		>
 			<img src="/images/newpages/samikshana.webp" alt="samikshana" />
 		</a>
-		<div class="rest rta-column rowgap400 ybot">
+		<div class="rest rta-column rowgap300 ybot">
 			<h5 style="color: var(--opposite)">
 				“What is the purpose in knowing everything without knowing your own Self?” - Pravrājika
 				Divyanandaprāṇa
@@ -148,7 +148,7 @@
 		>
 			<img src="/images/newpages/bodha.webp" alt="bodha" />
 		</a>
-		<div class="rest rta-column rowgap400 ybot">
+		<div class="rest rta-column rowgap300 ybot">
 			<p class="mid">
 				Essential conversations on culture and civilization. The lenses of svayaṃbodha and
 				śatrubodha explored in video format.
@@ -230,7 +230,7 @@
 		>
 			<img src="/images/newpages/svarnanjali.webp" alt="svarnanjali" />
 		</a>
-		<div class="rest rta-column rowgap400 ybot">
+		<div class="rest rta-column rowgap300 ybot">
 			<p class="mid">
 				Video series to discuss literature, arts, drama, architecture, sculpture and cinema from the
 				point of view of rasikā, in Sanskṛta Niṣṭha Hindī.
@@ -309,13 +309,13 @@
 		>
 			<img src="/images/newpages/anveshi.webp" alt="anveshi" />
 		</a>
-		<div class="rest rta-column rowgap400 ybot">
+		<div class="rest rta-column rowgap300 ybot">
 			<p class="mid">
 				A culture experience and discovery travel program that curates guided temple tours to
 				hitherto rarely explored sites across India.
 			</p>
 			{#if chapters && chapters.length > 0}
-				<div class="rta-grid grid2 stay2 rowgap400 colgap400">
+				<div class="rta-grid grid2 stay2 rowgap300 colgap300">
 					{#each chapters as item}
 						<a
 							class="rta-column anveshichapters back"
@@ -342,7 +342,7 @@
 		>
 			<img src="/images/newpages/drashta.webp" alt="drashta" />
 		</a>
-		<div class="rest rta-column rowgap400 ybot">
+		<div class="rest rta-column rowgap300 ybot">
 			<p class="mid">
 				Shared online learning program and community. Courses on firekeepers of civilization and
 				Indian Knowledge Systems.
@@ -376,7 +376,7 @@
 		>
 			<img src="/images/newpages/mrdanga.webp" alt="mrdanga" />
 		</a>
-		<div class="rest rta-column rowgap400 ybot">
+		<div class="rest rta-column rowgap300 ybot">
 			<p class="mid">
 				The fundamental human aesthetic experience, explored in visual medium. Content that cover
 				kalās, rasas, utsavas and more.
@@ -458,7 +458,7 @@
 		>
 			<img src="/images/newpages/openlibrary.webp" alt="openlibrary" />
 		</a>
-		<div class="rest rta-column rowgap400 ybot">
+		<div class="rest rta-column rowgap300 ybot">
 			<p class="mid">
 				Online repository of Books, Papers, Texts and Scriptures. Gathering point for digitized
 				scripture, civilizational literature and more.
@@ -474,6 +474,9 @@
 					{/each}
 				</div>
 			{/if}
+   <a href="/openlibrary">
+				<button class="buttonmain">Explore Library</button>
+			</a>
 		</div>
 	</div>
 	<div class="sliderbox" id="dhiti">
@@ -489,7 +492,7 @@
 		>
 			<img src="/images/newpages/dhiti.webp" alt="dhiti" />
 		</a>
-		<div class="rest rta-column rowgap400 ybot">
+		<div class="rest rta-column rowgap300 ybot">
 			<p class="mid">
 				Our blog, featuring long-reads, research essays, cinema reviews, historical work, book
 				reviews and much more.
@@ -571,7 +574,7 @@
 		>
 			<img src="/images/newpages/aryavarta.webp" alt="aryavarta" />
 		</a>
-		<div class="rest rta-column rowgap400 ybot">
+		<div class="rest rta-column rowgap300 ybot">
 			<p class="mid">
 				Imaginations of the Bhārata that once was and could have been. Visual storytelling combining
 				AI-art with narrative plot and exploration.
@@ -594,7 +597,7 @@
 		>
 			<img src="/images/newpages/mandala.webp" alt="mandala" />
 		</a>
-		<div class="rest rta-column rowgap400 ybot">
+		<div class="rest rta-column rowgap300 ybot">
 			<p class="mid">
 				Civilization with multi-level coherence. Research, exploration, and furtherance of Indian
 				civilizational consciousness.
@@ -613,7 +616,7 @@
 		<a class="image carries" style="background-image: url('/images/newpages/rta.webp')" href="/rta">
 			<img src="/images/newpages/rta.webp" alt="rta" />
 		</a>
-		<div class="rest rta-column rowgap400 ybot">
+		<div class="rest rta-column rowgap300 ybot">
 			<p class="mid">
 				A new framework for design thinking, centred on the mind of the designer. Inspired by
 				universal principles of Dharma.
@@ -662,8 +665,8 @@
  background-position: center center
 
 .buttonmain
- background: #fe4a49
- border: 1px solid #fe4a49
+ background: var(--peach)
+ border: 1px solid var(--peach)
  color: white
  text-transform: uppercase
  font-size: 15px
@@ -676,7 +679,7 @@
   transform: scale(0.9)
  &:active
   background: transparent
-  color: #fe4a49 
+  color: var(--peach)
 
 .sliderbox
  height: 100vh
@@ -705,7 +708,7 @@
   p
    color: var(--greyish)
  @media screen and (min-width: 1024px)
-  grid-template-columns: 4.5% 23.5% 32% 40%
+  grid-template-columns: 4% 24% 32% 40%
   grid-template-areas: "sliver title image rest"
   padding-top: 64px
   padding-bottom: 64px
@@ -714,7 +717,7 @@
   .title h3, .title p
    text-align: right
  @media screen and (max-width: 1023px) and (min-width: 769px)
-  grid-template-columns: 6% 24% 30% 40%  
+  grid-template-columns: 4% 32% 24% 40%  
   grid-template-areas: "sliver title image rest"
   padding-top: 64px
   padding-bottom: 64px
@@ -723,24 +726,25 @@
   .title h3, .title p
    text-align: right   
  @media screen and (max-width: 768px)
-  grid-template-columns: 36% 64%
-  grid-template-areas: "image title" "rest rest"
+  grid-template-columns: 100%
+  grid-template-areas: "image" "title" "rest"
   height: max-content
   align-content: start
   align-items: start
-  padding-top: 16px
+  padding-top: 64px
   padding-bottom: 16px
   overflow-y: hidden
   row-gap: 16px
+  border-bottom: 1px solid var(--contraster)
   .sliver
    display: none
   .image
    img
-    height: 160px
+    height: 216px
   .rest
    padding: 0
   .title
-   padding: 16px 
+   padding: 0
 
 .anveshichapters
  height: 128px  
@@ -748,7 +752,7 @@
  padding-left: 8px
  justify-content: flex-end
  filter: saturate(0.1)
- border-radius: 6px
+ border-radius: 4px
  transition: all 0.1s
  p
   background: rgba(0,0,0,0.53)

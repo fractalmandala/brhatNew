@@ -2,38 +2,118 @@
 
  import { onMount } from 'svelte'
  import { newPages } from '$lib/utils/supapulls'
+	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
+ import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper';
+ import 'swiper/css';
+ import 'swiper/css/navigation';
+ import 'swiper/css/pagination';
+	import '@splidejs/splide/css/core'; 
 
  let pages:any
+ let swiperInstance;
+ Swiper.use([Navigation, Pagination, Scrollbar]);
 
- onMount(async() => {
-  pages = await newPages();
+ onMount(() => {
+  swiperInstance = new Swiper('.swiper', {
+    modules: [Navigation, Pagination, Scrollbar],
+    speed: 400,
+    spaceBetween: 100,
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
+  (async() => {
+   pages = await newPages();
+  })();
  })
 
 </script>
 
+<div class="swiper">
+ <!-- Additional required wrapper -->
+ <div class="swiper-wrapper">
+   <!-- Slides -->
+   <div class="swiper-slide">Slide 1</div>
+   <div class="swiper-slide">Slide 2</div>
+   <div class="swiper-slide">Slide 3</div>
+   ...
+ </div>
+ <!-- If we need pagination -->
+ <div class="swiper-pagination"></div>
+ <!-- If we need navigation buttons -->
+ <div class="swiper-button-prev"></div>
+ <div class="swiper-button-next"></div>
+
+ <!-- If we need scrollbar -->
+ <div class="swiper-scrollbar"></div>
+</div>
+
 {#if pages && pages.length > 0}
- {#each pages as item}
-  <div class="sliderbox">
-   <div class="sliver carries" style="background-image: url('{item.image}')">
-   </div>
-   <div class="title rta-column rowgap100">
-    <h3>{item.name}</h3>
-    <p class="small bord-top p-top-8">{item.short}</p>
-   </div>
-   <a class="image carries" style="background-image: url('{item.image}')" href={item.link}>
-    <img src={item.image} alt={item.name}/>
-   </a>
-   <div class="rest rta-column rowgap200 ybot">
-    <p>{item.about}</p>
-    <a href={item.link}>
-     <button class="buttonmain">Visit</button>
-    </a>
-   </div>
-  </div>
- {/each}
+<Splide
+hasTrack={false}
+options={{
+ drag: true,
+ wheel: true,
+ arrows: false,
+ easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
+ keyboard: 'global',
+ waitForTransition: true,
+ type: 'loop',
+ gap: '0px',
+ width: '100%',
+ wheelMinThreshold: 1.1,
+ speed: 1100,
+ direction: 'ltr',
+ perPage: 1,
+ pagination: false,
+ breakpoints: {
+  1023: {
+   perPage: 1
+  },
+  768: {
+   perPage: 1
+  }
+ }
+}}
+>
+ <SplideTrack>
+  {#each pages as item}
+   <SplideSlide>
+    <div class="sliderbox">
+     <div class="sliver carries" style="background-image: url('{item.image}')">
+     </div>
+     <div class="title rta-column rowgap100">
+      <h3>{item.name}</h3>
+      <p class="small bord-top p-top-8">{item.short}</p>
+     </div>
+     <a class="image carries" style="background-image: url('{item.image}')" href={item.link}>
+      <img src={item.image} alt={item.name}/>
+     </a>
+     <div class="rest rta-column rowgap200 ybot">
+      <p>{item.about}</p>
+      <a href={item.link}>
+       <button class="buttonmain">Visit</button>
+      </a>
+     </div>
+    </div>
+   </SplideSlide>
+  {/each}
+ </SplideTrack>
+</Splide>
 {/if}
 
 <style lang="sass">
+
+.swiper-slide
+ height: 100vh
+ width: 100vw 
 
 .sliderbox
  .image

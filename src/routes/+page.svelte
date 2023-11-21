@@ -3,15 +3,8 @@
 	import Header from '$lib/components/NewHeader.svelte';
  import MainPage from '$lib/components/mainpage.svelte'
  import Head from '$lib/components/HeadComponent.svelte'
-	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
 	import '@splidejs/splide/css/core';
-	import { slide } from 'svelte/transition';
-	import { quintOut, quintIn } from 'svelte/easing';
-	import Shell from '$lib/components/PageShell.svelte';
-	import Youtuber from '$lib/components/Youtuber.svelte';
-	import Youtuber2 from '$lib/components/Youtuber.svelte';
 	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/stores/metastores';
-	import { breakZero, breakTwo } from '$lib/stores/globalstores';
 	import {
 		svEpisodes,
 		allChapters,
@@ -22,24 +15,12 @@
   newPages
 	} from '$lib/utils/supapulls';
 	import { latestDhitiSix } from '$lib/utils/localpulls';
-	import Chevron from '$lib/icons/chevrond.svelte';
-	import Chevron2 from '$lib/icons/chevrond.svelte';
 	import { reveal, defaultFullBox } from '$lib/reveal/exportReveal';
 
 	$metaTitle = 'Bṛhat';
 	$metaDescription = 'the Culture Engine';
 	$metaUrl = 'https://www.brhat.in';
 	$metaImage = '/images/cover-brhat.webp';
-
-	let title1 = 'Svarṇāñjali';
-	let title2 = 'Bṛhat Anveṣī';
-	let title3 = 'Bṛhat Draṣṭā';
-	let title4 = 'Bṛhadmṛdaṅga';
-	let title5 = 'Dhīti';
-	let title6 = 'Bṛhat Open Library';
-	let title7 = 'Also Explore';
-	let title8 = 'Samīkṣaṇā';
-	let title9 = 'Nītividhāna';
 
  let pages:any;
 	let episodes: any;
@@ -64,27 +45,6 @@
 		opacity: 0,
 		duration: 300
 	});
-
-	function fauxfake() {
-		fake = !fake;
-	}
-
-	function toggleMenu() {
-		expandMenu = !expandMenu;
-	}
-
-	function toggleMenu2() {
-		expandMenu2 = !expandMenu2;
-	}
-
-	function toggleAnveshi(index: number) {
-		anveshiFull[index] = !anveshiFull[index];
-		for (let i = 0; i < anveshiFull.length; i++) {
-			if (i !== index && anveshiFull[i] === true) {
-				anveshiFull[i] = false;
-			}
-		}
-	}
 
 	function toggleDrashta(index: number) {
 		drashtaFull[index] = !drashtaFull[index];
@@ -117,12 +77,12 @@
 
 <Header isSwitch={false} />
 <!--
-<Shell
+ <Shell
 	metaTitle={$metaTitle}
 	metaDescription={$metaDescription}
 	metaImage={$metaImage}
 	metaUrl={$metaUrl}
->
+ >
 	<section class="rta-column rowgap400 p-top-64" id="intro">
 		<h1 use:reveal>Bṛhat is a <span style="color: #fe4a49">Culture Engine</span></h1>
 		<h5 use:reveal={{ delay: 100, duration: 300, transition: 'fade' }}>
@@ -146,7 +106,6 @@
 			<button class="newbutton big">Know More</button>
 		</a>
 	</section>
-
 	<section class="rta-column rowgap400 min100" id="upcoming">
 		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
 			<h2>
@@ -797,92 +756,7 @@
 			</div>
 		</div>
 	</section>
-</Shell>
+ </Shell>
 -->
-<section class="accordion">
- <a class="panel back" id="panel1" href="/about/culturecreatives">
-		<img
-			src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/creative-culture-1024-1.webp"
-			alt="cc"
-		/>
-		<a href="/about/culturecreatives"><button class="newbutton big">Culture Creatives</button></a>
-	</a>
-	<a class="panel back" id="panel2" href="/about/policyresearch">
-		<img
-			src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/research-policy-1024-1.webp"
-			alt="pr"
-		/>
-		<a href="/about/policyresearch"><button class="newbutton big">Policy Research</button></a>
- </a>
-	<a class="panel back" id="panel3" href="/about/leadershipdevelopment">
-		<img
-			src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/develop-leader-1024-1.webp"
-			alt="ld"
-		/>
-		<a href="/about/leadershipdevelopment"
-			><button class="newbutton big">Leadership Development</button></a
-		>
- </a>
-</section>
+
 <MainPage/>
-
-
-<style lang="sass">
-
-.accordion
- display: flex
- flex-direction: row
- height: 100vh
- width: calc(100vw - 64px)
- margin-left: 32px
- column-gap: 32px
- .panel
-  width: calc(33.33% - 21.34px)
-  transition: all 0.4s
- &:hover
-  .panel
-   width: 30%
-   filter: saturate(0.1)
-   &:hover
-    width: 40%
-    filter: saturate(1)
- @media screen and (max-width: 768px)
-  flex-direction: column
-  padding-top: 64px
-  padding-bottom: 16px
-  width: calc(100vw - 32px)
-  margin-left: 16px
-  row-gap: 16px
-  .panel
-   width: 100%
-   height: calc(33.33% - 10.67px)
-  &:hover
-   .panel
-    height: 25%
-    width: 100%
-    &:hover
-     height: 50% 
-     width: 100%
-
-.panel
- padding: 64px 0 32px 0
- position: relative
- align-items: center
- display: flex
- flex-direction: column
- a
-  position: absolute
-  bottom: 96px   
- img
-  border-radius: 6px
-  filter: saturate(1)
-  transition: all 0.2s
- &:hover
-  img
-   filter: saturate(1)
- @media screen and (max-width: 768px)
-  padding: 0
-  a
-   bottom: 24px  
-
-</style>
