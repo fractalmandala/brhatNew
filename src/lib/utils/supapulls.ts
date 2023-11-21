@@ -881,6 +881,16 @@ export async function svEpisodes(){
 	return data
 }
 
+export async function bodhaEpisodes(){
+	const { data, error } = await supabase
+	.from('brhat-youtube')
+	.select()
+	.eq('type','bodha')
+	.order('id', {ascending: false})
+	if ( error ) throw new Error(error.message)
+	return data
+}
+
 export async function listUsers(){
 
 const { data: { users }, error } = await supabase.auth.admin.listUsers()

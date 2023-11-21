@@ -10,7 +10,6 @@
 			src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/creative-culture-1024-1.webp"
 			alt="cc"
 		/>
-
 		<a href="/about/culturecreatives"><button class="newbutton big">Culture Creatives</button></a>
 	</div>
 	<div class="panel back" id="panel2">
@@ -18,7 +17,6 @@
 			src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/research-policy-1024-1.webp"
 			alt="pr"
 		/>
-
 		<a href="/about/policyresearch"><button class="newbutton big">Policy Research</button></a>
 	</div>
 	<div class="panel back" id="panel3">

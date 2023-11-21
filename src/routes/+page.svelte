@@ -838,10 +838,10 @@
   transition: all 0.4s
  &:hover
   .panel
-   width: 25%
+   width: 30%
    filter: saturate(0.1)
    &:hover
-    width: 50%
+    width: 40%
     filter: saturate(1)
  @media screen and (max-width: 768px)
   flex-direction: column
@@ -875,6 +875,8 @@
   img
    filter: saturate(1)
  @media screen and (max-width: 768px)
-  padding: 8px 16px   
+  padding: 8px 16px 
+  a
+   bottom: 24px  
 
 </style>

@@ -231,7 +231,7 @@
 	background: #fafafa
 
 .appsidebar::-webkit-scrollbar
-	width: 2px
+	width: 8px
 
 .appsidebar::-webkit-scrollbar-thumb
 	background: #fe4a49
