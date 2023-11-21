@@ -298,13 +298,13 @@
 	.rta-image
 		img
 			@media screen and (min-width: 1024px)
-				width: 160px
-				height: 160px
-				border-radius: 80px
+				width: 160px !important
+				height: 160px !important
+				border-radius: 80px !important
 			@media screen and (max-width: 1023px)
-				width: 120px
-				height: 120px
-				border-radius: 60px
+				width: 120px !important
+				height: 120px !important
+				border-radius: 60px !important
 	
 
 .x0
