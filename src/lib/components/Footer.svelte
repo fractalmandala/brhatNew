@@ -70,7 +70,6 @@
   </div>
   <div>
    <div class="spacer">
-    <a class="mainlinks" href="/members">Contact Us</a>
     <a class="mainlinks" href="/dhiti">Dhīti</a>
     <a class="mainlinks" href="/openlibrary">Bṛhat Open Library</a>
    </div>

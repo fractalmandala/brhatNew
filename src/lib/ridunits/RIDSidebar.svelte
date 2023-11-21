@@ -193,6 +193,9 @@
     </div>
    {/if}
 		</div>
+  <div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
+   <h5><a href="/members">Members</a></h5>
+  </div>
 	</div>
 {/if}
 

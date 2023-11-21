@@ -1,4 +1,3 @@
-<!-- src/routes/account/+page.svelte -->
 <script lang="ts">
 	import { browser } from '$app/environment';
  import { page } from '$app/stores'
@@ -164,8 +163,16 @@
 		<img src="/images/newpages/members.webp" alt="members area" />
 	</div>
 	<div class="rest rta-column rowgap100 ybot">
+  <p class="small">Write to us:</p>
+  <form class="rta-column rowgap100 contactform">
+   <div class="rta-row colgap100 rowgap100">
+    <input type="email" placeholder="Email Address"/>
+    <input type="text" placeholder="Full Name"/>
+   </div>
+   <textarea placeholder="Your message here..."></textarea>
+  </form>
   {#if !isAuth}
-		<p class="mid p-top-8 bord-top">Not subscribed to Bṛhat yet? Signup here:</p>
+		<p class="mid p-top-8 m-top-32 bord-top">Not subscribed to Bṛhat yet? Signup here:</p>
   <form method="post" action="?signup">
    <div class="rta-column xleft rowgap100 null">
     <div class="rta-row ycenter colgap100">
@@ -359,6 +366,15 @@
 -->
 
 <style lang="sass">
+
+.contactform
+ width: max-content
+ max-width: 100% 
+
+textarea
+ border: 1px solid var(--contraster2) 
+ border-radius: 4px
+ padding: 4px 8px
 
 .iconimage
  object-fit: contain
