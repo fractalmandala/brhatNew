@@ -952,3 +952,12 @@ export async function bodhaVids() {
   if (error) throw new Error(error.message)
   return data
 }
+
+export async function newPages(){
+ const { data, error } = await supabase
+ .from('brhat-newpages')
+ .select()
+ .order('seq')
+ if (error) throw new Error(error.message)
+ return data
+}

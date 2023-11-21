@@ -2,6 +2,8 @@
 	import { onMount } from 'svelte';
 	import Header from '$lib/components/NewHeader.svelte';
 	import Acco from '$lib/components/HomeAccordion.svelte';
+ import MainPage from '$lib/components/mainpage.svelte'
+ import Head from '$lib/components/HeadComponent.svelte'
 	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
 	import '@splidejs/splide/css/core';
 	import { slide } from 'svelte/transition';
@@ -17,7 +19,8 @@
 		allCourses,
 		latestMrdanga,
 		createCurateConsult,
-		BOLLatest
+		BOLLatest,
+  newPages
 	} from '$lib/utils/supapulls';
 	import { latestDhitiSix } from '$lib/utils/localpulls';
 	import Chevron from '$lib/icons/chevrond.svelte';
@@ -39,6 +42,7 @@
 	let title8 = 'Samīkṣaṇā';
 	let title9 = 'Nītividhāna';
 
+ let pages:any;
 	let episodes: any;
 	let threeactions: string | any[];
 	let chapters: any;
@@ -94,6 +98,7 @@
 
 	onMount(() => {
 		(async () => {
+   pages = await newPages();
 			threeactions = await createCurateConsult();
 			episodes = await svEpisodes();
 			chapters = await allChapters();
@@ -105,19 +110,22 @@
 	});
 </script>
 
+<Head title={$metaTitle} metaDescription={$metaDescription} metaUrl={$metaUrl} metaImage={$metaImage}></Head>
+
 <svelte:head>
 	<script src="https://apis.google.com/js/platform.js"></script>
 </svelte:head>
 
 <Header isSwitch={false} />
 <Acco />
+<!--
 <Shell
 	metaTitle={$metaTitle}
 	metaDescription={$metaDescription}
 	metaImage={$metaImage}
 	metaUrl={$metaUrl}
 >
-	<section class="rta-column rowgap400 min100" id="intro">
+	<section class="rta-column rowgap400 p-top-64" id="intro">
 		<h1 use:reveal>Bṛhat is a <span style="color: #fe4a49">Culture Engine</span></h1>
 		<h5 use:reveal={{ delay: 100, duration: 300, transition: 'fade' }}>
 			To power creatives, research and design rooted in the Indian civilizational consciousness. We
@@ -140,7 +148,7 @@
 			<button class="newbutton big">Know More</button>
 		</a>
 	</section>
-	<!--
+
 	<section class="rta-column rowgap400 min100" id="upcoming">
 		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
 			<h2>
@@ -178,8 +186,8 @@
 			</div>
 		</div>
 	</section>
-	-->
-	<section class="rta-column rowgap400 min100" id="nitividhana">
+	--
+ <section class="rta-column rowgap400 min100" id="nitividhana">
 		<div class="rta-column rowgap100 bord-top bord-bot p-top-16 p-bot-24" use:reveal>
 			<h2>
 				<a href="/nitividhana">
@@ -792,6 +800,9 @@
 		</div>
 	</section>
 </Shell>
+-->
+<MainPage/>
+
 
 <style lang="sass">
 
@@ -822,6 +833,7 @@ a
 	50%
 		color: #fe4a49
 	100%
-		color: var(--opposite)
+		color: var(--opposite)   
+
 
 </style>

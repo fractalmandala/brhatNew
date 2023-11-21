@@ -39,7 +39,7 @@
  .image
   img
    filter: saturate(0.1)
-   transition: all 0.1s
+   transition: all 0.2s
  &:hover
   .image
    img
