@@ -21,6 +21,21 @@
 	let searchResults: SearchItem[] = [];
 	let isFocused = false;
 	let showResults = false;
+ let expandDrashta = false
+ let expandAnveshi = false
+ let expandAbout = false
+
+ function toggleAbout(){
+  expandAbout = !expandAbout
+ }
+
+ function toggleDrashta(){
+  expandDrashta = !expandDrashta
+ }
+
+ function toggleAnveshi(){
+  expandAnveshi = !expandAnveshi
+ }
 
 	function fauxfake() {
 		fake = !fake;
@@ -127,14 +142,27 @@
 		<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
 			<h5><a href="/newsletter">Bṛhat Adya</a></h5>
 		</div>
-		<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
-			<h5><a href="/drashta">Bṛhat Draṣṭā</a></h5>
-			<DrashtaLinks flytime={$sideMode} />
+		<div class="linksbox ta-r">
+			<h5 on:click={toggleSideBar} on:keydown={fauxfake}><a href="/drashta">Bṛhat Draṣṭā</a></h5>
+   <button class="blank-button rta-column xright" on:click={toggleDrashta} style="color: var(--greyish)">{#if expandDrashta}Close Courses{:else}Expand All Courses{/if}</button>
+			{#if expandDrashta}
+    <div on:click={toggleSideBar} on:keydown={fauxfake} class="rta-column ta-r rowgap100">
+    <DrashtaLinks flytime={$sideMode} />
+    </div>
+   {/if}
 		</div>
-		<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
-			<h5><a href="/anveshi">Bṛhat Anveṣī</a></h5>
-			<AnveshiLinks />
+		<div class="linksbox ta-r">
+			<h5 on:click={toggleSideBar} on:keydown={fauxfake}><a href="/anveshi">Bṛhat Anveṣī</a></h5>
+   <button class="blank-button rta-column xright" on:click={toggleAnveshi} style="color: var(--greyish)">{#if expandAnveshi}Close Chapters{:else}Expand All Chapters{/if}</button>
+   {#if expandAnveshi}
+    <div on:click={toggleSideBar} on:keydown={fauxfake} class="rta-column ta-r rowgap100">
+     <AnveshiLinks />
+    </div>
+   {/if}
 		</div>
+  <div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
+   <h5><a href="/bodha">Bodha</a></h5>
+  </div> 
 		<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
 			<h5><a href="/svarnanjali">Svarṇāñjali</a></h5>
 		</div>
@@ -156,9 +184,14 @@
 		<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
 			<h5><a href="/rta">Ṛta in Design</a></h5>
 		</div>
-		<div class="linksbox ta-r" on:click={toggleSideBar} on:keydown={fauxfake}>
-			<h5><a href="/about">About</a></h5>
-			<AboutLinks flytime={$sideMode} />
+		<div class="linksbox ta-r">
+			<h5 on:click={toggleSideBar} on:keydown={fauxfake}><a href="/about">About</a></h5>
+   <button class="blank-button rta-column xright" on:click={toggleAbout} style="color: var(--greyish)">{#if expandAbout}Close About Us{:else}Expand All About Us{/if}</button>
+			{#if expandAbout}
+    <div on:click={toggleSideBar} on:keydown={fauxfake} class="rta-column ta-r rowgap100">
+     <AboutLinks flytime={$sideMode} />
+    </div>
+   {/if}
 		</div>
 	</div>
 {/if}
@@ -246,7 +279,7 @@
 		margin: 0
 		text-align: right
 		text-transform: uppercase
-		padding-bottom: 8px
+		padding-bottom: 0px
 		cursor: pointer
 		color: var(--opposite)
 		letter-spacing: -1px
