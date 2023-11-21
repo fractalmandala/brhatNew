@@ -1,5 +1,5 @@
 ---
-title: "NINGOL CHAKOUBA: A Festival From Manipur, in Delhi" 
+title: "Ningol Chakouba: A Festival From Manipur, in Delhi" 
 author: H. Leikoiba
 authortwo: Kavita Krishna Meegama
 category: Svayambodha

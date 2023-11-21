@@ -833,8 +833,11 @@
  display: flex
  flex-direction: row
  height: 100vh
+ width: calc(100vw - 64px)
+ margin-left: 32px
+ column-gap: 32px
  .panel
-  width: 33.33%
+  width: calc(33.33% - 21.34px)
   transition: all 0.4s
  &:hover
   .panel
@@ -846,9 +849,13 @@
  @media screen and (max-width: 768px)
   flex-direction: column
   padding-top: 64px
+  padding-bottom: 16px
+  width: calc(100vw - 32px)
+  margin-left: 16px
+  row-gap: 16px
   .panel
    width: 100%
-   height: 33.33%
+   height: calc(33.33% - 10.67px)
   &:hover
    .panel
     height: 25%
@@ -858,7 +865,7 @@
      width: 100%
 
 .panel
- padding: 64px 24px 32px 24px
+ padding: 64px 0 32px 0
  position: relative
  align-items: center
  display: flex
@@ -867,7 +874,6 @@
   position: absolute
   bottom: 96px   
  img
-  border: 1px solid var(--forline) 
   border-radius: 6px
   filter: saturate(1)
   transition: all 0.2s
@@ -875,7 +881,7 @@
   img
    filter: saturate(1)
  @media screen and (max-width: 768px)
-  padding: 8px 16px 
+  padding: 0
   a
    bottom: 24px  
 

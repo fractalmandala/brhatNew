@@ -584,7 +584,8 @@ p.hideonmobile
 	padding-bottom: 0
 	@media screen and (min-width: 769px)
 		height: 64px
-	@media screen and (max-width: 575px)
+		padding: 0 32px  
+	@media screen and (max-width: 768px)
 		padding-left: 16px
 		padding-right: 16px
 
@@ -599,10 +600,8 @@ p.hideonmobile
 	.menuicon
 		grid-area: menuicon
 	transition: 0.5s cubic-bezier(0.635, 0.405, 0.535, 0.035)
-	@media screen and (min-width: 1200px)
-		width: 1072px
-	@media screen and (min-width: 1024px) and (max-width: 1199px)
-		width: 896px
+	@media screen and (min-width: 769px)
+		width: 100%
 	@media screen and (min-width: 1024px)
 		grid-template-columns: 1fr 24px 24px 144px
 		grid-template-rows: 1fr
@@ -624,7 +623,6 @@ p.hideonmobile
 			flex-direction: row
 			position: relative
 	@media screen and (min-width: 769px) and (max-width: 1023px)
-		width: 640px
 		grid-template-columns: 1fr 24px 24px 144px
 		grid-template-rows: 1fr
 		grid-template-areas: "applogo search midrow menuicon"
@@ -649,9 +647,7 @@ p.hideonmobile
 		.menuicon
 			height: 64px
 			margin-left: 8px
-	@media screen and (max-width: 768px) and (min-width: 576px)
-		width: 512px
-	@media screen and (max-width: 575px)
+	@media screen and (max-width: 768px)
 		width: 100%
 	
 .applogo
