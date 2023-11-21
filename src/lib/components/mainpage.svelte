@@ -43,6 +43,31 @@
 </script>
 
 <section class="mainpagebox pagila rta-column rowgap300">
+ <section class="accordion">
+  <a class="panel back" id="panel1" href="/about/culturecreatives">
+   <img
+    src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/creative-culture-1024-1.webp"
+    alt="cc"
+   />
+   <a href="/about/culturecreatives"><button class="newbutton big">Culture Creatives</button></a>
+  </a>
+  <a class="panel back" id="panel2" href="/about/policyresearch">
+   <img
+    src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/research-policy-1024-1.webp"
+    alt="pr"
+   />
+   <a href="/about/policyresearch"><button class="newbutton big">Policy Research</button></a>
+  </a>
+  <a class="panel back" id="panel3" href="/about/leadershipdevelopment">
+   <img
+    src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/develop-leader-1024-1.webp"
+    alt="ld"
+   />
+   <a href="/about/leadershipdevelopment"
+    ><button class="newbutton big">Leadership Development</button></a
+   >
+  </a>
+ </section>
 	<div class="sliderbox" id="aboutbrhat">
 		<div class="sliver carries" style="background-image: url('/images/newpages/brhat.webp')" />
 		<div class="title rta-column rowgap100">
@@ -788,4 +813,60 @@
 
 .videoboxer
  padding: 0 24px
+
+.accordion
+ display: flex
+ flex-direction: row
+ height: calc(100vh - 48px)
+ width: calc(100vw - 64px)
+ margin-left: 32px
+ column-gap: 32px
+ .panel
+  width: calc(33.33% - 21.34px)
+  transition: all 0.4s
+ &:hover
+  .panel
+   width: 30%
+   filter: saturate(0.1)
+   &:hover
+    width: 40%
+    filter: saturate(1)
+ @media screen and (max-width: 768px)
+  flex-direction: column
+  padding-top: 72px
+  padding-bottom: 16px
+  width: calc(100vw - 32px)
+  margin-left: 16px
+  row-gap: 16px
+  .panel
+   width: 100%
+   height: calc(33.33% - 10.67px)
+  &:hover
+   .panel
+    height: 25%
+    width: 100%
+    &:hover
+     height: 50% 
+     width: 100%
+
+.panel
+ padding: 64px 0 0 0
+ position: relative
+ align-items: center
+ display: flex
+ flex-direction: column
+ a
+  position: absolute
+  bottom: 96px   
+ img
+  border-radius: 6px
+  filter: saturate(1)
+  transition: all 0.2s
+ &:hover
+  img
+   filter: saturate(1)
+ @media screen and (max-width: 768px)
+  padding: 0
+  a
+   bottom: 24px    
 </style>
