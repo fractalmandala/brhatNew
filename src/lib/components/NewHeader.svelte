@@ -507,6 +507,7 @@
 			{#if $menuMode}
 				<slot name="local" />
 			{/if}
+   <slot name="autharea"/>
 		</div>
 		<div
 			class="menuicon colgap100"

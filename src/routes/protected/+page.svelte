@@ -1,9 +1,10 @@
 <script lang="ts">
+ 
 	import { onMount } from 'svelte';
 	import StarterKit from '@tiptap/starter-kit';
 	import { Editor } from '@tiptap/core';
 	import { page } from '$app/stores';
-	import Header from '$lib/components/SubHeader.svelte';
+	import Header from '$lib/components/NewHeader.svelte';
 	import { breakZero, breakOne, breakTwo, themeMode, innerWidth } from '$lib/stores/globalstores';
 	import ButtonF from '$lib/anims/ButtonFlashes.svelte';
 	import type { PageData } from './$types';
@@ -45,7 +46,8 @@
 	});
 </script>
 
-<Header />
+<Header isSwitch={false}>
+</Header> 
 <div
 	class="rta-grid grid2 appshell minH"
 	class:levelzero={$breakZero}
@@ -56,7 +58,7 @@
 >
 	<div class="rta-side rta-column rowgap200">
 		<div class="rta-column">
-			<form method="POST" action="/members?/login" class="loginform rta-column rowgap100">
+			<form method="POST" action="?login" class="loginform rta-column rowgap100">
 				<div class="rta-column rowgap100">
 					<input name="email" type="email" placeholder="email" />
 					<input name="password" type="password" placeholder="password" />
@@ -68,6 +70,9 @@
 					-->
 				</div>
 			</form>
+   <form method="POST" action="?signout">
+    <button class="newbutton red">Log Out</button>
+   </form>
 		</div>
 		{#if !$page.data.session}
 			<button

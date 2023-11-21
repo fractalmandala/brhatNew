@@ -21,15 +21,14 @@ export const load = async ({ locals: { supabase, getSession } }) => {
 }
 
 export const actions: Actions = {
+
   update: async ({ request, locals: { supabase, getSession } }) => {
     const formData = await request.formData()
     const fullName = formData.get('fullName') as string
     const username = formData.get('username') as string
     const website = formData.get('website') as string
     const avatarUrl = formData.get('avatarUrl') as string
-
     const session = await getSession()
-
     const { error } = await supabase.from('profiles').upsert({
       id: session?.user.id,
       full_name: fullName,
@@ -55,6 +54,7 @@ export const actions: Actions = {
       avatarUrl,
     }
   },
+
   signout: async ({ locals: { supabase, getSession } }) => {
     const session = await getSession()
     if (session) {
@@ -68,23 +68,18 @@ export const actions: Actions = {
 		locals: { supabase }
 	}): Promise<ActionFailure<{ error: string; values?: { email: string } }>> => {
 		const formData = await request.formData();
-
 		const email = formData.get('email') as string;
 		const password = formData.get('password') as string;
-
 		if (!email) {
 			showChip('enter email!', '#fe4a49');
 		}
 		if (!password) {
 			showChip('password!', '#fe4a49');
 		}
-
 		const { error } = await supabase.auth.signInWithPassword({ email, password });
-
 		if (error) {
 			showChip('invalid credentials!', '#fe4a49');
 		}
-
 		throw redirect(303, '/members');
 	},
 

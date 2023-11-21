@@ -12,7 +12,7 @@ export const load: LayoutLoad = async ({ fetch, data, url, depends }) => {
 		serverSession: data.session
 	});
 
-  const { pathname } = url 
+ const { pathname } = url 
 	const {
 		data: { session }
 	} = await supabase.auth.getSession();

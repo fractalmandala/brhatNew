@@ -13,6 +13,9 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import UserConfig from '$lib/components/UserConfig.svelte';
 
+ export let data: LayoutData;
+	export let form: ActionData;
+
 	let breakPointOn: boolean;
 	let keyTrigger: any;
 
@@ -24,10 +27,8 @@
 		breakPointOn = false;
 	}
 
-	export let data: LayoutData;
-	export let form: ActionData;
-
 	$: keyTrigger = data.url;
+
 </script>
 
 <svelte:window bind:innerWidth={$innerWidth} />

@@ -85,6 +85,14 @@ export const actions: Actions = {
 			});
 		}
 
-		throw redirect(303, '/members');
-	}
+		throw redirect(303, '/protected');
+	},
+
+ signout: async ({ locals: { supabase, getSession } }) => {
+  const session = await getSession()
+  if (session) {
+    await supabase.auth.signOut()
+    throw redirect(303, '/protected')
+  }
+},
 };
