@@ -100,7 +100,7 @@
   p
    color: var(--greyish)
  @media screen and (min-width: 1024px)
-  grid-template-columns: 6% 22% 32% 40%
+  grid-template-columns: 4.5% 23.5% 32% 40%
   grid-template-areas: "sliver title image rest"
   padding-top: 64px
   padding-bottom: 64px

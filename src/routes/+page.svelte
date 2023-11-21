@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import Header from '$lib/components/NewHeader.svelte';
-	import Acco from '$lib/components/HomeAccordion.svelte';
  import MainPage from '$lib/components/mainpage.svelte'
  import Head from '$lib/components/HeadComponent.svelte'
 	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
@@ -117,7 +116,6 @@
 </svelte:head>
 
 <Header isSwitch={false} />
-<Acco />
 <!--
 <Shell
 	metaTitle={$metaTitle}
@@ -801,39 +799,82 @@
 	</section>
 </Shell>
 -->
+<section class="accordion">
+ <a class="panel back" id="panel1" href="/about/culturecreatives">
+		<img
+			src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/creative-culture-1024-1.webp"
+			alt="cc"
+		/>
+		<a href="/about/culturecreatives"><button class="newbutton big">Culture Creatives</button></a>
+	</a>
+	<a class="panel back" id="panel2" href="/about/policyresearch">
+		<img
+			src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/research-policy-1024-1.webp"
+			alt="pr"
+		/>
+		<a href="/about/policyresearch"><button class="newbutton big">Policy Research</button></a>
+ </a>
+	<a class="panel back" id="panel3" href="/about/leadershipdevelopment">
+		<img
+			src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/04corpimages/develop-leader-1024-1.webp"
+			alt="ld"
+		/>
+		<a href="/about/leadershipdevelopment"
+			><button class="newbutton big">Leadership Development</button></a
+		>
+ </a>
+</section>
 <MainPage/>
 
 
 <style lang="sass">
 
-.drawer-item.open
-	background: var(--hilite)
-	color: white
+.accordion
+ display: flex
+ flex-direction: row
+ height: 100vh
+ .panel
+  width: 33.33%
+  transition: all 0.4s
+ &:hover
+  .panel
+   width: 25%
+   filter: saturate(0.1)
+   &:hover
+    width: 50%
+    filter: saturate(1)
+ @media screen and (max-width: 768px)
+  flex-direction: column
+  padding-top: 64px
+  .panel
+   width: 100%
+   height: 33.33%
+  &:hover
+   .panel
+    height: 25%
+    width: 100%
+    &:hover
+     height: 50% 
+     width: 100%
 
-.drawer-item.open.drawerselection
-	color: var(--hilite)
-	background: none
-
-.drawer-item, .drawer-item.open
-	&:hover
-		border: 1px solid var(--hilite)
-
-.side-l
-	@media screen and (min-width: 769px)
-		padding-top: 24px
-
-a
-	&:hover
-		.text-animation
-			animation: colorchange 0.2s forwards
-
-@keyframes colorchange
-	0%
-		color: var(--opposite)
-	50%
-		color: #fe4a49
-	100%
-		color: var(--opposite)   
-
+.panel
+ padding: 64px 24px 32px 24px
+ position: relative
+ align-items: center
+ display: flex
+ flex-direction: column
+ a
+  position: absolute
+  bottom: 96px   
+ img
+  border: 1px solid var(--forline) 
+  border-radius: 6px
+  filter: saturate(1)
+  transition: all 0.2s
+ &:hover
+  img
+   filter: saturate(1)
+ @media screen and (max-width: 768px)
+  padding: 8px 16px   
 
 </style>
