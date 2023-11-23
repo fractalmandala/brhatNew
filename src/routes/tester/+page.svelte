@@ -1,217 +1,52 @@
 <script lang="ts">
 
- import { onMount } from 'svelte'
- import { newPages } from '$lib/utils/supapulls'
-	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
- import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper';
- import 'swiper/css';
- import 'swiper/css/navigation';
- import 'swiper/css/pagination';
-	import '@splidejs/splide/css/core'; 
+import { onMount } from 'svelte'; 
+import Lenis from '@studio-freight/lenis' 
 
- let pages:any
- let swiperInstance;
- Swiper.use([Navigation, Pagination, Scrollbar]);
-
- onMount(() => {
-  swiperInstance = new Swiper('.swiper', {
-    modules: [Navigation, Pagination, Scrollbar],
-    speed: 400,
-    spaceBetween: 100,
-    pagination: {
-      el: '.swiper-pagination',
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-  });
-  (async() => {
-   pages = await newPages();
-  })();
+onMount(async() => { 
+ const lenis = new Lenis({ 
+  duration: 1.2,
+  direction: 'vertical',
+  gestureDirection: 'vertical',
+  lerp: 0.6,
+  smooth: true,
+  mouseMultiplier: 0.7,
+  smoothTouch: false,
+  touchMultiplier: 1,
+  infinite: false,
  })
+ function raf(time: any) { 
+  lenis.raf(time) 
+  requestAnimationFrame(raf) 
+ } 
+ requestAnimationFrame(raf) })
 
 </script>
 
 <div class="swiper">
- <!-- Additional required wrapper -->
- <div class="swiper-wrapper">
-   <!-- Slides -->
-   <div class="swiper-slide">Slide 1</div>
-   <div class="swiper-slide">Slide 2</div>
-   <div class="swiper-slide">Slide 3</div>
-   ...
- </div>
- <!-- If we need pagination -->
- <div class="swiper-pagination"></div>
- <!-- If we need navigation buttons -->
- <div class="swiper-button-prev"></div>
- <div class="swiper-button-next"></div>
+	<!-- Additional required wrapper -->
+	<div class="swiper-wrapper">
+		<!-- Slides -->
+		<div class="swiper-slide">Slide 1</div>
+		<div class="swiper-slide">Slide 2</div>
+		<div class="swiper-slide">Slide 3</div>
+		...
+	</div>
+	<!-- If we need pagination -->
+	<div class="swiper-pagination" />
 
- <!-- If we need scrollbar -->
- <div class="swiper-scrollbar"></div>
+	<!-- If we need navigation buttons -->
+	<div class="swiper-button-prev" />
+	<div class="swiper-button-next" />
+
+	<!-- If we need scrollbar -->
+	<div class="swiper-scrollbar" />
 </div>
-
-{#if pages && pages.length > 0}
-<Splide
-hasTrack={false}
-options={{
- drag: true,
- wheel: true,
- arrows: false,
- easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
- keyboard: 'global',
- waitForTransition: true,
- type: 'loop',
- gap: '0px',
- width: '100%',
- wheelMinThreshold: 1.1,
- speed: 1100,
- direction: 'ltr',
- perPage: 1,
- pagination: false,
- breakpoints: {
-  1023: {
-   perPage: 1
-  },
-  768: {
-   perPage: 1
-  }
- }
-}}
->
- <SplideTrack>
-  {#each pages as item}
-   <SplideSlide>
-    <div class="sliderbox">
-     <div class="sliver carries" style="background-image: url('{item.image}')">
-     </div>
-     <div class="title rta-column rowgap100">
-      <h3>{item.name}</h3>
-      <p class="small bord-top p-top-8">{item.short}</p>
-     </div>
-     <a class="image carries" style="background-image: url('{item.image}')" href={item.link}>
-      <img src={item.image} alt={item.name}/>
-     </a>
-     <div class="rest rta-column rowgap200 ybot">
-      <p>{item.about}</p>
-      <a href={item.link}>
-       <button class="buttonmain">Visit</button>
-      </a>
-     </div>
-    </div>
-   </SplideSlide>
-  {/each}
- </SplideTrack>
-</Splide>
-{/if}
 
 <style lang="sass">
 
-.swiper-slide
- height: 100vh
- width: 100vw 
-
-.sliderbox
- .image
-  img
-   filter: saturate(0.1)
-   transition: all 0.1s
- &:hover
-  .image
-   img
-    filter: saturate(1)  
-
-.carries
- background-size: cover
- background-repeat: no-repeat
-
-.sliver.carries
- background-position: center left
- filter: saturate(0.1)
-
-.image.carries
- background-position: center center
-
-.buttonmain
- background: #fe4a49
- border: 1px solid #fe4a49
- color: white
- text-transform: uppercase
- font-size: 15px
- padding: 4px 16px
- border-radius: 4px
- transform-origin: center center
- transition: all 0.08s
- cursor: pointer
- &:hover
-  transform: scale(0.9)
- &:active
-  background: transparent
-  color: #fe4a49 
-
-.sliderbox
- height: 100vh
+.swiper
  width: 100vw
- display: grid
- grid-template-rows: auto
- grid-auto-flow: row
- .sliver
-  grid-area: sliver
- .title
-  grid-area: title
-  z-index: 1
-  h3
-   color: var(--opposite)
-   text-transform: uppercase
-  p
-   color: var(--peach) 
- .image
-  grid-area: image
-  img
-   object-fit: cover
-   width: 100%
-   height: 100%
- .rest
-  grid-area: rest  
-  p
-   color: var(--greyish)
- @media screen and (min-width: 1024px)
-  grid-template-columns: 6% 22% 32% 40%
-  grid-template-areas: "sliver title image rest"
-  padding-top: 64px
-  padding-bottom: 64px
-  .title, .rest
-   padding: 32px
-  .title h3, .title p
-   text-align: right
- @media screen and (max-width: 1023px) and (min-width: 769px)
-  grid-template-columns: 6% 24% 30% 40%  
-  grid-template-areas: "sliver title image rest"
-  padding-top: 64px
-  padding-bottom: 64px
-  .title, .rest
-   padding: 32px
-  .title h3, .title p
-   text-align: right   
- @media screen and (max-width: 768px)
-  grid-template-columns: 36% 64%
-  grid-template-areas: "image title" "image rest"
-  height: 40vh
-  align-content: start
-  align-items: start
-  padding-top: 16px
-  padding-bottom: 16px
-  overflow-y: hidden
-  .sliver
-   display: none
-  .image
-   img
-    height: 300px
-  .title, .rest
-   padding: 0 16px  
+ height: 100vh
 
 </style>

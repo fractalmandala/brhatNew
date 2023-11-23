@@ -1,4 +1,5 @@
 <script lang="ts">
+
 	import RIDSidebar from '$lib/ridunits/RIDSidebar.svelte';
 	import type { ActionData } from './$types';
 	import type { LayoutData } from './$types';

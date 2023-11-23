@@ -668,10 +668,6 @@
    img
     filter: saturate(1)  
  @media screen and (min-width: 769px)
-  position: sticky
-  top: 0
-  left: 0
-  background: var(--background) 
   padding-left: 32px
   padding-right: 32px 
  @media screen and (max-width: 768px)
