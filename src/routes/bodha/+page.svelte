@@ -121,6 +121,7 @@
  display: flex
  flex-direction: column
  justify-content: center
+ background: white
  img 
    object-fit: contain
    height: 80%
