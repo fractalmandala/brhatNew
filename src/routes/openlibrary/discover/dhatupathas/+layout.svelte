@@ -110,7 +110,6 @@
 			<button class="blank-button" on:click={loadMore}>More</button>
 		</div>
 	</div>
-
 	<div class="rta-column rowgap50" slot="searchform">
 		<form
 			class="searcher rta-row ycenter colgap100 p-bot-32"

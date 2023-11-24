@@ -93,12 +93,3 @@ _A dharmameter is what helps us churn our minds so that good thoughts and words 
 #### Reference:
 
 1. Merriam-Webster. (n.d.). Dharma. In Merriam-Webster.com dictionary. Retrieved September 6, 2023, from [https://www.merriam-webster.com/dictionary/dharma](https://www.merriam-webster.com/dictionary/dharma)
-
-<style lang="sass">
-
-.imageclass
-	object-fit: contain
-	weight: 200px
-	height: 400px
-
-</style>

@@ -64,17 +64,17 @@
 	metaImage={$metaImage}
 	metaUrl={$metaUrl}
 >
-	<section class="rta-column rowgap400 p-top-128" id="intro">
-		<h4 use:reveal>
+	<section class="rta-column rowgap200 p-top-128" id="intro">
+		<h5 use:reveal>
 			Bṛhat Open Library is an Online Repository for Texts, Papers, Learning Material and More. It
 			is a tribute to the hard labor of people known and unknown that have created for us an
 			unbelievable repository of Indian knowledge.
-		</h4>
-		<h5>
+		</h5>
+		<p class="soft">
 			All material here is sourced from public domains, permitted for resharing, and uploaded under
 			the CC0 1.0 Open License. If you find any material that violates this, please write to us at
 			contact@brhat.in and we will remove it from the collection.
-		</h5>
+  </p>
 	</section>
 	<Library />
 </Shell>

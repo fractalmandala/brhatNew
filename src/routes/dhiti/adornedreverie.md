@@ -97,12 +97,3 @@ In yet another verse, necklaces, made of the radiant pearls and gems illuminate 
 #### Footnotes:
 
 * Image Courtesy: Midjourney by Satyajeet Ojha
-
-<style lang="sass">
-
-.imageclass
-	object-fit: contain
-	weight: 200px
-	height: 400px
-
-</style>

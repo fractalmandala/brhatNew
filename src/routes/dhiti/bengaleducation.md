@@ -76,11 +76,3 @@ In conclusion, the impact of colonial powers on Bengal's pre-colonial learning c
 * Social Development and Colonial Capital: Bengal, 1860-1947 by Rajat Kanta Ray.
 
 * The Bengali Renaissance: The Other Side of the Colonial Story by Debjani Sengupta.
-
-<style lang="sass">
-
-.imageclass
-	object-fit: contain
-	height: 400px
-
-</style>

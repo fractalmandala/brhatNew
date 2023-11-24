@@ -52,11 +52,3 @@ Both children shared a smile and continued their work with cardboard, colors, an
 ##### In reality, it was a celebration of the cultural consciousness of Bhārata.
 
 **Gaṇapati Bappā Morayā!!!**
-
-<style lang="sass">
-
-.imageclass
-	object-fit: contain
-	height: 560px
-
-</style>

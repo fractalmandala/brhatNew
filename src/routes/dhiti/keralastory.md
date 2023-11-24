@@ -158,10 +158,6 @@ Professor Vamsee Juluri rightly [asks](https://www.firstpost.com/opinion/why-hin
 
 <style lang="sass">
 
-.imageclass
-	object-fit: contain
-	height: 400px
-
 .first
 	object-fit: contain
 

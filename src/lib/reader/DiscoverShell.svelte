@@ -71,27 +71,10 @@
 		fake = !fake;
 	}
 
-	function loadMore() {
-		limit += 100;
-	}
-
-	function loadLess() {
-		limit -= 100;
-	}
-
-	$: if (limit) {
-		(async () => {
-			purs = await dbPuranaindex(limit);
-		})();
-	}
-
-	onMount(async () => {
-		purs = await dbPuranaindex(limit);
-	});
 </script>
 
 <div
-	class="official p-top-128"
+	class="official bdr"
 	class:lzero={$breakZero}
 	class:lone={$breakOne}
 	class:ltwo={$breakTwo}
@@ -135,11 +118,3 @@
 		</SecondSide>
 	</div>
 </div>
-
-<style lang="sass">
-
-.official
-	@media screen and (min-width: 1024px)
-		padding-left: 176px
-
-</style>

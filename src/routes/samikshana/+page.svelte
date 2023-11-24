@@ -720,7 +720,7 @@
 			</div>
 		{:else if isOpen[3]}
 			<p>
-				Applications Close: 24 November, 2023 (Friday)<br />
+				Applications Close: 30 November, 2023 (Thursday)<br />
 				Online Exam: 25 November, 2023 (Saturday) <br />
 				Interview: 26 November, Sunday 2023
 			</p>

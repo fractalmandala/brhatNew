@@ -89,11 +89,3 @@ All content and images are copyright of [@MumukshuSavitri](https://twitter.com/M
 - Carpenter, Mary, ed. _The Last Days in England of the Rajah Rammohun Roy_. Trübner & Company, 1866.
 
 - Collet, Sophia Dobson. _The life and letters of Raja Rammohun Roy_. 1914.
-
-<style lang="sass">
-
-.imageclass
-	object-fit: contain
-	height: 400px
-
-</style>
