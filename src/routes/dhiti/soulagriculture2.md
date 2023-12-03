@@ -39,7 +39,7 @@ An overview of some of the most important Vṛkṣāyurvedic texts and related w
 
 These texts collectively provide a foundation for understanding the interplay between agriculture and Āyurveda in traditional Indian knowledge systems. They offer insights into the sustainable and holistic approach to agriculture, which not only focuses on food production but also on the quality of produce and its impact on human health and well-being.
 
-Others worth mentioning include: [Vriṣṭivijñānam](https://www.brhat.in/openlibrary/books/vristhivigyanam), [Kaṣyapiyakṛṣi Sūkti](https://www.brhat.in/openlibrary/books/kasyapiyakrshisukti), [Kṛṣi Gītā](https://www.brhat.in/openlibrary/books/krshigita), Sasyaveda, [Viśvavallabha](https://www.brhat.in/openlibrary/books/vishvavallabha), [Upavana-Vinodaḥ](https://www.brhat.in/openlibrary/books/upavanvinoda), and [Agnihotra Kṛṣi Krānti](https://www.brhat.in/openlibrary/books/agnihotrakrshikranti), among others.
+Others worth mentioning include: [Vriṣṭivijñānam](https://www.brhat.in/openlibrary/books/vristhivigyanam), [Kaṣyapiyakṛṣi Sūkti](https://www.brhat.in/openlibrary/books/kasyapiyakrshisukti), [Kṛṣi Gītā](https://www.brhat.in/openlibrary/books/krshigita), [Sasyaveda](https://esoullyf.in/products/sasya-veda), [Viśvavallabha](https://www.brhat.in/openlibrary/books/vishvavallabha), [Upavana-Vinodaḥ](https://www.brhat.in/openlibrary/books/upavanvinoda), and [Agnihotra Kṛṣi Krānti](https://www.brhat.in/openlibrary/books/agnihotrakrshikranti), among others.
 
 #### Vṛkṣāyurveda: The Ancient Science of Tree Care
 
