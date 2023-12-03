@@ -1,5 +1,5 @@
 ---
-title: SOUL: Agriculture and the Vedas, A Textual Account
+title: "SOUL: Agriculture and the Vedas, A Textual Account"
 author: Sai Priya Chodavarapu
 category: Indian Knowledge Systems
 tags: 
