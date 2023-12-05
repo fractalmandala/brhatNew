@@ -81,8 +81,8 @@ Bhairava Dhāraṇā tapped into the core of our purpose. It directly put our fo
 This retreat took place in the open kṣetra of a farm, in a rural district just outside the busy Hyderabad metroplex. Participants were one with the pañca mahābhūtas and weathered through them, all as part of their sādhanā taken through the saṅkalpa. Though the sādhakas slept in dorms and ate in an open yet covered pavilion - the daily japa, Question and Answer sessions, and finally the Bhairava homa itself were all conducted within a paṇḍal raised specifically for this intention. Heat, mosquitos, rain - walking increased distances - earth, water, fire, space, ether - all of these were a part of the daily sādhanā and experience.
 
 <div class="rta-grid grid2 stay2">
-	<img class="imageclass2" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/bhairavadharana/bhairavadharana3.webp" alt="three"/>
-	<img class="imageclass2" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/bhairavadharana/bhairavadharana4.webp" alt="four"/>
+	<img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/bhairavadharana/bhairavadharana3.webp" alt="three"/>
+	<img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/bhairavadharana/bhairavadharana4.webp" alt="four"/>
 </div>
 
 These elemental factors were not filtered out to create a sterilized and sheltered environment. They were integrated into the sādhanā, as they should be.
