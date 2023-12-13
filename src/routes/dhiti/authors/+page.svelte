@@ -281,6 +281,55 @@
 						>
 							<p class="tt-u">All</p>
 						</button>
+      <button
+      class="blank-button ta-l"
+      on:click={() => setDateband('December, 2023')}
+      class:active={$dateBand === 'December, 2023'}
+     >
+      <p class="tt-u">December 2023</p>
+     </button>
+      <button
+      class="blank-button ta-l"
+      on:click={() => setDateband('November, 2023')}
+      class:active={$dateBand === 'November, 2023'}
+     >
+      <p class="tt-u">November 2023</p>
+     </button>
+      <button
+      class="blank-button ta-l"
+      on:click={() => setDateband('October, 2023')}
+      class:active={$dateBand === 'October, 2023'}
+     >
+      <p class="tt-u">October 2023</p>
+     </button>
+      <button
+      class="blank-button ta-l"
+      on:click={() => setDateband('September, 2023')}
+      class:active={$dateBand === 'September, 2023'}
+     >
+      <p class="tt-u">September 2023</p>
+     </button>
+      <button
+      class="blank-button ta-l"
+      on:click={() => setDateband('August, 2023')}
+      class:active={$dateBand === 'August, 2023'}
+     >
+      <p class="tt-u">August 2023</p>
+     </button>
+      <button
+      class="blank-button ta-l"
+      on:click={() => setDateband('July, 2023')}
+      class:active={$dateBand === 'July, 2023'}
+     >
+      <p class="tt-u">July 2023</p>
+     </button>
+      <button
+      class="blank-button ta-l"
+      on:click={() => setDateband('June, 2023')}
+      class:active={$dateBand === 'June, 2023'}
+     >
+      <p class="tt-u">June 2023</p>
+     </button>
 						<button
 							class="blank-button ta-l"
 							on:click={() => setDateband('May, 2023')}
