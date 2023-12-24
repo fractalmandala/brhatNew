@@ -5,9 +5,10 @@ category: Culture and Policy
 tags:
 - pandemic
 - policy
+- health
 date: "2023-12-24"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/Pandemic%20Analysis.webp
-excerpt: "Kalaripayaṭṭu must be elevated, as a traditional psychophysiological discipline, as a ‘scientific’ system of physical culture, and as an arena of experience and self-transformation: the crucible of the individual’s experience where embodied practice helps shape a self."
+excerpt: "This article critically examines the proposed global pandemic accord, highlighting major issues and advocating for its rejection by India, focusing on sovereignty, WHO's past failures, and potential impacts on health policy and global governance."
 ---
 
 Draft for negotiation by member states can be found [here](https://apps.who.int/gb/inb/pdf_files/inb7/A_INB7_3-en.pdf)
