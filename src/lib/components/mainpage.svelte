@@ -101,65 +101,6 @@
 			</a>
 		</div>
 	</div>
-	<div class="sliderbox" id="nitividhana">
-		<div
-			class="sliver carries"
-			style="background-image: url('/images/newpages/nitividhana.webp')"
-		/>
-		<div class="title rta-column rowgap100">
-			<h3><a href="/nitividhana">N<span class="red">ī</span>tividh<span class="red">ā</span>na</a></h3>
-			<p class="small bord-top p-top-8">civilizational public policy</p>
-		</div>
-		<a
-			class="image carries"
-			style="background-image: url('/images/newpages/nitividhana.webp')"
-			href="/nitividhana"
-		>
-			<img src="/images/newpages/nitividhana.webp" alt="nitividhana" />
-		</a>
-		<div class="rest rta-column rowgap300 ybot">
-			<p class="mid">
-				This online policy learning program offered by Chinmaya International Foundation and Brhat
-				is an intensive immersive program in today's burning issues.
-			</p>
-			<a href="/nitividhana">
-				<button class="buttonmain">Visit</button>
-			</a>
-		</div>
-	</div>
-	<div class="sliderbox" id="samikshana">
-		<div class="sliver carries" style="background-image: url('/images/newpages/samikshana.webp')" />
-		<div class="title rta-column rowgap100">
-			<h3><a href="/samikshana">Samīk<span class="red">ṣ</span>aṇā</a></h3>
-			<p class="small bord-top p-top-8">why are we the way we are</p>
-		</div>
-		<a
-			class="image carries"
-			style="background-image: url('/images/newpages/samikshana.webp')"
-			href="/samikshana"
-		>
-			<img src="/images/newpages/samikshana.webp" alt="samikshana" />
-		</a>
-		<div class="rest rta-column rowgap300 ybot">
-			<h5 style="color: var(--opposite)">
-				“What is the purpose in knowing everything without knowing your own Self?” - Pravrājika
-				Divyanandaprāṇa
-			</h5>
-			<p class="mid">
-				Time and again, scientists from the Orient as well as the Occident have believed that human
-				nature is kaleidoscopic. The study of Human Evolution and Counselling is witnessing an
-				exciting phase of growth; moving beyond the Euro-American theories and thus further
-				exploring culturally rooted perspectives.
-			</p>
-			<p class="mid">
-				A multidisciplinary and innovative study integrating the perspectives of the Orient (Vedic)
-				and the Occident (Modern).
-			</p>
-			<a href="/samikshana">
-				<button class="buttonmain">Learn More</button>
-			</a>
-		</div>
-	</div>
 	<div class="sliderbox" id="bodha">
 		<div class="sliver carries" style="background-image: url('/images/newpages/bodha.webp')" />
 		<div class="title rta-column rowgap100">

@@ -237,7 +237,7 @@
 									</h6>
 								{/if}
 								<p class="small soft">
-									{item.content.slice(0, 250)}...<a
+									{item.excerpt}...<a
 										style="color: var(--betblue)"
 										href="/drashta/course/{item.course}">READ MORE</a
 									>
@@ -268,7 +268,7 @@
 									</h6>
 								{/if}
 								<p class="small soft">
-									{item.content.slice(0, 250)}...<a
+									{item.excerpt}...<a
 										style="color: var(--betblue)"
 										href="/drashta/course/{item.course}">READ MORE</a
 									>
