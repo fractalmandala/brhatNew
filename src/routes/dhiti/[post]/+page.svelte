@@ -272,7 +272,6 @@
 						{/if}
 					{/each}
 				{/if}
-
 				<h3 class="p-top-64 bord-top">Latest Posts:</h3>
 				{#if posts && posts.length > 0}
 					{#each posts as item}
