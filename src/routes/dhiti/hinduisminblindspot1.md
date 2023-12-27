@@ -56,3 +56,5 @@ Imagine if the blind spot were non-existent, whether in AI, its developers, or i
 The above isn't simply a replacement of English terms with Sanskrit ones, it’s a positioning of the contents within an ontology that actually has rooted and contextualized taxonomies for them.
 
 This concludes part 1, where we use a recent instance to illustrate what is meant by Hinduism in the blind spot. In part 2 we will go deeper, examining two more instances of the blind spot, <u>to detail what we can learn from this, and what needs to be done about it.</u>
+
+Read part 2 of this essay [here](/dhiti/hinduisminblindspot2).
