@@ -10,11 +10,13 @@ image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwe
 excerpt: "In the beautiful diary compiled here, students at Vidyakshetra Vidyalaya share their reflections from an immersive field experience trip to Odisha."
 ---
 
-[Viyakshetra Vidyalaya](https://vidyakshetra.org/) is an Indic school and gurukula-based primary education establishment founded by Śrī Muneet Dhiman. Located in Bengaluru, the school integrates Bhāratīya models of education and the Panchakoshatmika Vikas in its holistic curriculum. 
+[Viyakshetra Vidyalaya](https://vidyakshetra.org/) is an Indic school and gurukula-based primary education establishment founded by [Śrī Muneet Dhiman](https://twitter.com/muneetdhiman). Located in Bengaluru, the school integrates Bhāratīya models of education and the Panchakoshatmika Vikas in its holistic curriculum. 
 
-The education provided to its students connects bhāratīya kalās with experiential learning in a sustainable method which also cultivates the culture of Samvāda.
+Muneet ji has developed innovative pedagogies that allow for a holistic & meaningful learning experience for children. The education model connects bhāratīya kalās with experiential learning through a sustainable method, which also cultivates the culture of Samvāda. 
 
-This year, students participated in an immersive learning experience by taking a Field Experience Trip to Odisha. 
+This year - as part of the geography and economics curriculums, students participated in an immersive learning experience by taking a Field Experience Trip to Odisha. They not only learned about geography and economy, but temples and architecture, history, craftsmanship, and sustainability.
+
+Through this type of experiential and practical learning, the conventional ‘knowledge transfer’ goes from shallown data downloading to a deeper connection with the world we live in, empathy with it, and finally toward truth-seeking.
 
 In the beautiful diary compiled below, they share their reflections on the textiles, temples, and artcraft of Utkala region. 
 
