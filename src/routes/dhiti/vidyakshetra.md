@@ -16,7 +16,7 @@ Muneet ji has developed innovative pedagogies that allow for a holistic & meanin
 
 This year - as part of the geography and economics curriculums, students participated in an immersive learning experience by taking a Field Experience Trip to Odisha. They not only learned about geography and economy, but temples and architecture, history, craftsmanship, and sustainability.
 
-Through this type of experiential and practical learning, the conventional ‘knowledge transfer’ goes from shallown data downloading to a deeper connection with the world we live in, empathy with it, and finally toward truth-seeking.
+Through this type of experiential and practical learning, the conventional ‘knowledge transfer’ goes from shallow data downloading to a deeper connection with the world we live in, empathy with it, and finally toward truth-seeking.
 
 In the beautiful diary compiled below, they share their reflections on the textiles, temples, and artcraft of Utkala region. 
 
