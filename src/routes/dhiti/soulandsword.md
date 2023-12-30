@@ -1,5 +1,5 @@
 ---
-title: Walking the Tightrope Between Big Brother and Soma
+title: Book Review | Soul and Sword
 author: Anshuman Panda
 category: Dharma Today
 tags:
