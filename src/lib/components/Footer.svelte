@@ -96,7 +96,7 @@
  </div>
  <div class="footerbot">
   <small class="tt-c"
-   >2023 Bṛhat | All Rights Reserved | <a
+   >2024 Bṛhat | All Rights Reserved | <a
     href="https://www.brhateducation.in"
     target="_blank"
     rel="noreferrer">Bṛhat Education.</a
