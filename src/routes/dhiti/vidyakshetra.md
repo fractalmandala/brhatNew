@@ -1,5 +1,5 @@
 ---
-title: Vidyakṣetra Student Diaries
+title: Vidyakshetra Student Diaries
 author: Bṛhat
 category: Culture and Policy
 tags:
@@ -10,9 +10,9 @@ image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwe
 excerpt: "In the beautiful diary compiled here, students at Vidyakshetra Vidyalaya share their reflections from an immersive field experience trip to Odisha."
 ---
 
-[Viyakshetra Vidyalaya](https://vidyakshetra.org/) is an Indic school and gurukula-based primary education establishment founded by [Śrī Muneet Dhiman](https://twitter.com/muneetdhiman). Located in Bengaluru, the school integrates Bhāratīya models of education and the Panchakoshatmika Vikas in its holistic curriculum. 
+[Vidyakshetra Vidyalaya](https://vidyakshetra.org/) is an Indic school and gurukula-based primary education establishment founded by [Śrī Muneet Dhiman](https://twitter.com/muneetdhiman). Located in Bengaluru, the school integrates Bhāratīya models of education and the Panchakoshatmika Vikas in its holistic curriculum. 
 
-Muneet ji has developed innovative pedagogies that allow for a holistic & meaningful learning experience for children. The education model connects bhāratīya kalās with experiential learning through a sustainable method, which also cultivates the culture of Samvāda. 
+Muneet ji has developed innovative pedagogies that allow for a meaningful learning experience for children. The education model connects bhāratīya kalās with experiential learning through a sustainable method, which also cultivates the culture of Samvāda. 
 
 This year - as part of the geography and economics curriculums, students participated in an immersive learning experience by taking a Field Experience Trip to Odisha. They not only learned about geography and economy, but temples and architecture, history, craftsmanship, and sustainability.
 
