@@ -7,7 +7,6 @@
 	import '@splidejs/splide/css/core';
 	import { slide } from 'svelte/transition';
 	import { quintIn, quintOut } from 'svelte/easing';
-	import Head from '$lib/components/HeadComponent.svelte';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import { ChevronDown } from 'lucide-svelte';
 	import { scale } from 'svelte/transition';
@@ -23,11 +22,7 @@
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte';
 	import PrevIcon from '$lib/icons/previcon.svelte';
 	import NextIcon from '$lib/icons/nexticon.svelte';
-	import Chevron from '$lib/icons/chevrond.svelte';
 	import Chevron2 from '$lib/icons/chevrond.svelte';
-	import CompButton3 from '$lib/ridunits/RIDButton.svelte';
-	import CompButton4 from '$lib/ridunits/RIDButton.svelte';
-	import autoAnimate from '@formkit/auto-animate';
 	import Youtuber from '$lib/components/Youtuber.svelte';
 
 	let fullText = false;
@@ -75,10 +70,6 @@
 		expandMenu = !expandMenu;
 	}
 
-	function expandText() {
-		fullText = !fullText;
-	}
-
 	function toggleCategory(index: number) {
 		selectedCategory[index] = !selectedCategory[index];
 		for (let i = 0; i < selectedCategory.length; i++) {
@@ -92,15 +83,6 @@
 		videoLimit += 4;
 	}
 
-	function toggleArea(index: number) {
-		selectedArea[index] = !selectedArea[index];
-		for (let i = 0; i < selectedArea.length; i++) {
-			if (i !== index && selectedArea[i] === true) {
-				selectedArea[i] = false;
-			}
-		}
-	}
-
 	function toggleFaq(index: number) {
 		isFaqOpen[index] = !isFaqOpen[index];
 		for (let i = 0; i < isFaqOpen.length; i++) {
@@ -111,16 +93,6 @@
 		if (alignGrid === false) {
 			alignGrid = true;
 		}
-	}
-
-	function toggleGen(index: number) {
-		isGenOpen[index] = !isGenOpen[index];
-		for (let i = 0; i < isGenOpen.length; i++) {
-			if (i !== index && isGenOpen[i] === true) {
-				isGenOpen[i] = false;
-			}
-		}
-		readjustedgrid = !readjustedgrid;
 	}
 
 	$: if (videoLimit) {
@@ -188,6 +160,7 @@
 			wanderlust and curiosity, leaving you with an elevated taste of the cultural magic of India.
 		</p>
 	</section>
+
 	<section class="rta-column rowgap400 min100" id="chapters">
 		<h2 use:reveal class="bord-top bord-bot p-top-16 p-bot-24">All Chapters</h2>
 		{#if chapters && chapters.length > 0}
@@ -498,6 +471,7 @@
 			{/if}
 		</div>
 	</section>
+
 	<section class="rta-column rowgap500 p-top-64 p-bot-64" id="tourlead">
 		<h2 use:reveal class="bord-top bord-bot p-top-16 p-bot-24">About the Tour Lead</h2>
 		<div
@@ -523,6 +497,7 @@
 			</div>
 		</div>
 	</section>
+
 	<section class="rta-column rowgap400 min100 p-top-64" id="faqs">
 		<h2 use:reveal class="bord-top bord-bot p-top-16 p-bot-24">FAQs</h2>
 		<div class="rta-column rowgap200 contains-text" id="faqgrid" class:calibrated={anyFaqOpen}>

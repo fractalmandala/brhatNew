@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
-	import { reveal, defaultFullBox } from '$lib/reveal/exportReveal';
+	import { reveal } from '$lib/reveal/exportReveal';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
-	import { allCourses, drashtaTestis } from '$lib/utils/supapulls';
+	import { allCourses, drashtaTestis, drashtaBodha } from '$lib/utils/supapulls';
 	import Shell from '$lib/components/PageShell.svelte';
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte';
 	import '@splidejs/splide/css/core';
@@ -15,6 +15,14 @@
 	let iH: number;
 	let diff: number;
 	let tests: any;
+	let isBodha = Array(3).fill(false);
+	isBodha[0] = true;
+	let bodhasvayam = 'Svayambodha';
+	let bodhashatru = 'Śatrubodha';
+	let bodhasound = 'Sauṃdaryabodha';
+	let svayamCourses: any;
+	let shatruCourses: any;
+	let soundCourses: any;
 
 	$metaTitle = 'Bṛhat Draṣṭā';
 	$metaDescription =
@@ -24,12 +32,17 @@
 		'https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/07herocovers/brhatdrashta.webp';
 	$metaType = 'webpage';
 
-	function fauxfake() {
-		fake = !fake;
-	}
-
 	function toggleFullText() {
 		fullText = !fullText;
+	}
+
+	function toggleBodha(index: number) {
+		isBodha[index] = !isBodha[index];
+		for (let i = 0; i < isBodha.length; i++) {
+			if (i !== index && isBodha[i] === true) {
+				isBodha[i] = false;
+			}
+		}
 	}
 
 	let courses: string | any[];
@@ -44,6 +57,9 @@
 
 	onMount(async () => {
 		courses = await allCourses();
+		svayamCourses = await drashtaBodha('Svayambodha');
+		shatruCourses = await drashtaBodha('Śatrubodha');
+		soundCourses = await drashtaBodha('Sauṃdaryabodha');
 		tests = await drashtaTestis();
 		if (iW <= 1023) {
 			breakPoint = true;
@@ -191,99 +207,305 @@
 	</section>
 	<section class="rta-column rowgap400 min100" id="courses">
 		<h2 class="bord-top bord-bot p-top-16 p-bot-24" use:reveal>All Courses</h2>
-		{#if courses && courses.length > 0}
-			<div class="rta-grid grid2 colgap400 rowgap400">
-				{#each courses as item}
-					{#if item.status === 'upcoming' || item.status === 'Upcoming'}
-						<div class="rta-row stay rowgap300 colgap300 p-bot-32">
-							<div class="rta-image w32 height-40-20">
-								<img src={item.image} alt={item.name} />
-							</div>
-							<div class="rta-column w64 rowgap100">
-								<small class="label upcoming">
-									{item.status}
-								</small>
-								{#if fullText}
-									<h6 class="tt-c title">{item.name}</h6>
-								{:else}
-									<h6 class="tt-c title">{item.name}</h6>
-								{/if}
-								<cite class="sticker-blue"
-									><span>{item.datefrom} | with</span>
-									<span style="color: var(--gren)"> {item.ins}</span></cite
-								>
-							</div>
-						</div>
-					{:else if item.status === 'open now'}
-						<div class="rta-row stay rowgap300 colgap300 p-bot-32">
-							<div class="rta-image w32 height-40-20">
-								<img src={item.image} alt={item.name} />
-							</div>
-							<div class="rta-column w64 rowgap100">
-								<small class="label opennow">
-									{item.status}!
-								</small>
-								{#if fullText}
-									<h6 class="tt-c hover-blue title">
-										<a href="/drashta/course/{item.course}">
-											{item.name}
-										</a>
-									</h6>
-								{:else}
-									<h6 class="tt-c hover-blue title">
-										<a href="/drashta/course/{item.course}">
-											{item.name}
-										</a>
-									</h6>
-								{/if}
-								<p class="small soft">
-									{item.excerpt}...<a
-										style="color: var(--betblue)"
-										href="/drashta/course/{item.course}">READ MORE</a
-									>
-								</p>
-								<cite class="sticker-blue">with {item.ins}</cite>
-							</div>
-						</div>
-					{:else}
-						<div class="rta-row stay rowgap300 colgap300 p-bot-32">
-							<div class="rta-image w32 height-40-20">
-								<img src={item.image} alt={item.name} />
-							</div>
-							<div class="rta-column w64 rowgap100">
-								<small class="label labelelse">
-									{item.status}
-								</small>
-								{#if fullText}
-									<h6 class="tt-c hover-blue title">
-										<a href="/drashta/course/{item.course}">
-											{item.name}
-										</a>
-									</h6>
-								{:else}
-									<h6 class="tt-c hover-blue title">
-										<a href="/drashta/course/{item.course}">
-											{item.name}
-										</a>
-									</h6>
-								{/if}
-								<p class="small soft">
-									{item.excerpt}...<a
-										style="color: var(--betblue)"
-										href="/drashta/course/{item.course}">READ MORE</a
-									>
-								</p>
-								<cite class="sticker-blue">with {item.ins}</cite>
-							</div>
-						</div>
-					{/if}
-				{/each}
+		<div class="rta-column rowgap100 bord-bot p-bot-24" id="bodha">
+			<small>Select Bodha:</small>
+			<div class="rta-row colgap200 rowgap200">
+				<button class="blank-button" class:selected={isBodha[0]} on:click={() => toggleBodha(0)}
+					>Svayambodha</button
+				>
+				<button class="blank-button" class:selected={isBodha[1]} on:click={() => toggleBodha(1)}
+					>Saundaryabodha</button
+				>
+				<button class="blank-button" class:selected={isBodha[2]} on:click={() => toggleBodha(2)}
+					>Śatrubodha</button
+				>
 			</div>
-		{/if}
+		</div>
+		<div class="rta-grid grid2 colgap400 rowgap400">
+			{#if isBodha[0]}
+				{#if svayamCourses && svayamCourses.length > 0}
+					{#each svayamCourses as item}
+						{#if item.status === 'upcoming' || item.status === 'Upcoming'}
+							<div class="rta-row stay rowgap300 colgap300 p-bot-32">
+								<div class="rta-image w32 height-40-20">
+									<img src={item.image} alt={item.name} />
+								</div>
+								<div class="rta-column w64 rowgap100">
+									<small class="label upcoming">
+										{item.status}
+									</small>
+									{#if fullText}
+										<h6 class="tt-c title">{item.name}</h6>
+									{:else}
+										<h6 class="tt-c title">{item.name}</h6>
+									{/if}
+									<cite class="sticker-blue"
+										><span>{item.datefrom} | with</span>
+										<span style="color: var(--gren)"> {item.ins}</span></cite
+									>
+								</div>
+							</div>
+						{:else if item.status === 'open now'}
+							<div class="rta-row stay rowgap300 colgap300 p-bot-32">
+								<div class="rta-image w32 height-40-20">
+									<img src={item.image} alt={item.name} />
+								</div>
+								<div class="rta-column w64 rowgap100">
+									<small class="label opennow">
+										{item.status}!
+									</small>
+									{#if fullText}
+										<h6 class="tt-c hover-blue title">
+											<a href="/drashta/course/{item.course}">
+												{item.name}
+											</a>
+										</h6>
+									{:else}
+										<h6 class="tt-c hover-blue title">
+											<a href="/drashta/course/{item.course}">
+												{item.name}
+											</a>
+										</h6>
+									{/if}
+									<p class="small soft">
+										{item.excerpt}...<a
+											style="color: var(--betblue)"
+											href="/drashta/course/{item.course}">READ MORE</a
+										>
+									</p>
+									<cite class="sticker-blue">with {item.ins}</cite>
+								</div>
+							</div>
+						{:else}
+							<div class="rta-row stay rowgap300 colgap300 p-bot-32">
+								<div class="rta-image w32 height-40-20">
+									<img src={item.image} alt={item.name} />
+								</div>
+								<div class="rta-column w64 rowgap100">
+									<small class="label labelelse">
+										{item.status}
+									</small>
+									{#if fullText}
+										<h6 class="tt-c hover-blue title">
+											<a href="/drashta/course/{item.course}">
+												{item.name}
+											</a>
+										</h6>
+									{:else}
+										<h6 class="tt-c hover-blue title">
+											<a href="/drashta/course/{item.course}">
+												{item.name}
+											</a>
+										</h6>
+									{/if}
+									<p class="small soft">
+										{item.excerpt}...<a
+											style="color: var(--betblue)"
+											href="/drashta/course/{item.course}">READ MORE</a
+										>
+									</p>
+									<cite class="sticker-blue">with {item.ins}</cite>
+								</div>
+							</div>
+						{/if}
+					{/each}
+				{/if}
+			{:else if isBodha[1]}
+				{#if shatruCourses && shatruCourses.length > 0}
+					{#each shatruCourses as item}
+						{#if item.status === 'upcoming' || item.status === 'Upcoming'}
+							<div class="rta-row stay rowgap300 colgap300 p-bot-32">
+								<div class="rta-image w32 height-40-20">
+									<img src={item.image} alt={item.name} />
+								</div>
+								<div class="rta-column w64 rowgap100">
+									<small class="label upcoming">
+										{item.status}
+									</small>
+									{#if fullText}
+										<h6 class="tt-c title">{item.name}</h6>
+									{:else}
+										<h6 class="tt-c title">{item.name}</h6>
+									{/if}
+									<cite class="sticker-blue"
+										><span>{item.datefrom} | with</span>
+										<span style="color: var(--gren)"> {item.ins}</span></cite
+									>
+								</div>
+							</div>
+						{:else if item.status === 'open now'}
+							<div class="rta-row stay rowgap300 colgap300 p-bot-32">
+								<div class="rta-image w32 height-40-20">
+									<img src={item.image} alt={item.name} />
+								</div>
+								<div class="rta-column w64 rowgap100">
+									<small class="label opennow">
+										{item.status}!
+									</small>
+									{#if fullText}
+										<h6 class="tt-c hover-blue title">
+											<a href="/drashta/course/{item.course}">
+												{item.name}
+											</a>
+										</h6>
+									{:else}
+										<h6 class="tt-c hover-blue title">
+											<a href="/drashta/course/{item.course}">
+												{item.name}
+											</a>
+										</h6>
+									{/if}
+									<p class="small soft">
+										{item.excerpt}...<a
+											style="color: var(--betblue)"
+											href="/drashta/course/{item.course}">READ MORE</a
+										>
+									</p>
+									<cite class="sticker-blue">with {item.ins}</cite>
+								</div>
+							</div>
+						{:else}
+							<div class="rta-row stay rowgap300 colgap300 p-bot-32">
+								<div class="rta-image w32 height-40-20">
+									<img src={item.image} alt={item.name} />
+								</div>
+								<div class="rta-column w64 rowgap100">
+									<small class="label labelelse">
+										{item.status}
+									</small>
+									{#if fullText}
+										<h6 class="tt-c hover-blue title">
+											<a href="/drashta/course/{item.course}">
+												{item.name}
+											</a>
+										</h6>
+									{:else}
+										<h6 class="tt-c hover-blue title">
+											<a href="/drashta/course/{item.course}">
+												{item.name}
+											</a>
+										</h6>
+									{/if}
+									<p class="small soft">
+										{item.excerpt}...<a
+											style="color: var(--betblue)"
+											href="/drashta/course/{item.course}">READ MORE</a
+										>
+									</p>
+									<cite class="sticker-blue">with {item.ins}</cite>
+								</div>
+							</div>
+						{/if}
+					{/each}
+				{/if}
+			{:else if isBodha[2]}
+				{#if soundCourses && soundCourses.length > 0}
+					{#each soundCourses as item}
+						{#if item.status === 'upcoming' || item.status === 'Upcoming'}
+							<div class="rta-row stay rowgap300 colgap300 p-bot-32">
+								<div class="rta-image w32 height-40-20">
+									<img src={item.image} alt={item.name} />
+								</div>
+								<div class="rta-column w64 rowgap100">
+									<small class="label upcoming">
+										{item.status}
+									</small>
+									{#if fullText}
+										<h6 class="tt-c title">{item.name}</h6>
+									{:else}
+										<h6 class="tt-c title">{item.name}</h6>
+									{/if}
+									<cite class="sticker-blue"
+										><span>{item.datefrom} | with</span>
+										<span style="color: var(--gren)"> {item.ins}</span></cite
+									>
+								</div>
+							</div>
+						{:else if item.status === 'open now'}
+							<div class="rta-row stay rowgap300 colgap300 p-bot-32">
+								<div class="rta-image w32 height-40-20">
+									<img src={item.image} alt={item.name} />
+								</div>
+								<div class="rta-column w64 rowgap100">
+									<small class="label opennow">
+										{item.status}!
+									</small>
+									{#if fullText}
+										<h6 class="tt-c hover-blue title">
+											<a href="/drashta/course/{item.course}">
+												{item.name}
+											</a>
+										</h6>
+									{:else}
+										<h6 class="tt-c hover-blue title">
+											<a href="/drashta/course/{item.course}">
+												{item.name}
+											</a>
+										</h6>
+									{/if}
+									<p class="small soft">
+										{item.excerpt}...<a
+											style="color: var(--betblue)"
+											href="/drashta/course/{item.course}">READ MORE</a
+										>
+									</p>
+									<cite class="sticker-blue">with {item.ins}</cite>
+								</div>
+							</div>
+						{:else}
+							<div class="rta-row stay rowgap300 colgap300 p-bot-32">
+								<div class="rta-image w32 height-40-20">
+									<img src={item.image} alt={item.name} />
+								</div>
+								<div class="rta-column w64 rowgap100">
+									<small class="label labelelse">
+										{item.status}
+									</small>
+									{#if fullText}
+										<h6 class="tt-c hover-blue title">
+											<a href="/drashta/course/{item.course}">
+												{item.name}
+											</a>
+										</h6>
+									{:else}
+										<h6 class="tt-c hover-blue title">
+											<a href="/drashta/course/{item.course}">
+												{item.name}
+											</a>
+										</h6>
+									{/if}
+									<p class="small soft">
+										{item.excerpt}...<a
+											style="color: var(--betblue)"
+											href="/drashta/course/{item.course}">READ MORE</a
+										>
+									</p>
+									<cite class="sticker-blue">with {item.ins}</cite>
+								</div>
+							</div>
+						{/if}
+					{/each}
+				{/if}
+			{/if}
+		</div>
 	</section>
 </Shell>
 
 <style lang="sass">
+
+#bodha
+	.blank-button
+		background: none
+		border: 1px solid #FE4a49
+		color: #Fe4a49
+		padding: 4px 12px
+		border-radius: 2px
+		&:hover
+			background: #FE4a49
+			color: white
+		&.selected
+			background: #fe4a49
+			color: white
 
 small.label
 	width: max-content

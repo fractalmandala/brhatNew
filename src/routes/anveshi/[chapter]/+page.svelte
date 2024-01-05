@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { onMount, afterUpdate } from 'svelte';
-	import { reveal, defaultFullBox } from '$lib/reveal/exportReveal';
-	import ParallaxImage from '$lib/components/ParallaxImage.svelte';
+	import { reveal } from '$lib/reveal/exportReveal';
 	import Shell from '$lib/components/PageShell.svelte';
   import { breakTwo } from '$lib/stores/globalstores'
 	import { slide, scale } from 'svelte/transition';
@@ -28,7 +27,6 @@
     anveshiTempleArt,
     anveshiVids
 	} from '$lib/utils/supapulls';
-	import { EventInterface } from '@splidejs/splide';
 	import '@splidejs/splide/css/core';
 	import Chevron2 from '$lib/icons/chevrond.svelte';
 

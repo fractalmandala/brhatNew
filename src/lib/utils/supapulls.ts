@@ -971,3 +971,14 @@ export async function newPages(){
  if (error) throw new Error(error.message)
  return data
 }
+
+export async function drashtaBodha(bodha:string){
+  const { data, error } = await supabase
+  .from('brhat-drashta2')
+  .select()
+  .eq('Bodha',bodha)
+  .eq('type', 'overview')
+  .order('sequence', { ascending: false })
+  if (error) throw new Error(error.message)
+  return data
+}

@@ -3,7 +3,6 @@
 	import { onMount } from 'svelte';
 	import Header from '$lib/components/DhitiHeader.svelte';
 	import Head from '$lib/components/HeadComponent.svelte';
-	import { breakZero, breakOne, breakTwo } from '$lib/stores/globalstores';
 	import {
 		latestDhitiFour,
 		allFeaturedPosts,
@@ -14,7 +13,6 @@
 	} from '$lib/utils/localpulls';
 	import { metaTitle, metaDescription, metaUrl, metaImage, metaType } from '$lib/stores/metastores';
 	import { reveal, defaultFullBox } from '$lib/reveal/exportReveal';
-	import { slide } from 'svelte/transition';
 
 	$metaUrl = 'https://www.brhat.in/dhiti';
 	$metaTitle = 'Dhīti at Bṛhat';
@@ -40,10 +38,6 @@
 		opacity: 0,
 		duration: 300
 	});
-
-	function expandCategories() {
-		openCat = !openCat;
-	}
 
 	onMount(async () => {
 		latest = await latestDhitiFour(1, 6);

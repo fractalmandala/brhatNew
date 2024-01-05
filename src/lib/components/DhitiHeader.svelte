@@ -166,7 +166,7 @@
 		padding-right: 80px
 		grid-template-columns: 180px 1fr 180px
 		grid-template-rows: 1fr
-		grid-template-areas: "toggling applogo menuicon"
+		grid-template-areas: "toggling applogo menuicon" "rod rod rod"
 		height: 128px
 		align-content: center
 		align-items: center
