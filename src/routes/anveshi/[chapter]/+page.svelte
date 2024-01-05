@@ -3,6 +3,9 @@
 	import { reveal, defaultFullBox } from '$lib/reveal/exportReveal';
 	import ParallaxImage from '$lib/components/ParallaxImage.svelte';
 	import Shell from '$lib/components/PageShell.svelte';
+  import { breakTwo } from '$lib/stores/globalstores'
+	import { slide, scale } from 'svelte/transition';
+	import { quintIn, quintOut } from 'svelte/easing';
 	import {
 		metaTitle,
 		metaDescription,
@@ -21,10 +24,13 @@
 		chapterFaq,
 		chapterProfiles,
 		anveshiLead,
-		anveshiGeneral
+		anveshiGeneral,
+    anveshiTempleArt,
+    anveshiVids
 	} from '$lib/utils/supapulls';
 	import { EventInterface } from '@splidejs/splide';
 	import '@splidejs/splide/css/core';
+	import Chevron2 from '$lib/icons/chevrond.svelte';
 
 	let p: number;
 	let alignGrid = false;
@@ -36,12 +42,19 @@
 	let lead: string | any[];
 	let profiles: string | any[];
 	let itins: string | any[];
+	let videoLimit = 4;
+	let vids: any;
+	let arts: any;
 	let openedDay: boolean[] = Array(5).fill(false);
 	let temp: any;
 	let area: any = Array(2).fill(false);
 	area[1] = true;
 	let visibleTemple: any = Array(30).fill(false);
 	let fake = false;
+	let expandMenu = false;
+	import Youtuber from '$lib/components/Youtuber.svelte';
+	let selectedCategory: boolean[] = Array(5).fill(false);
+	selectedCategory[3] = true;
 
 	export let data;
 
@@ -55,6 +68,10 @@
 	function fauxfake() {
 		fake = !fake;
 	}
+	function increaseLimit() {
+		videoLimit += 4;
+	}
+
 
 	function toggleFaq(index: number) {
 		isFaqOpen[index] = !isFaqOpen[index];
@@ -89,6 +106,15 @@
 		}
 	}
 
+	function toggleCategory(index: number) {
+		selectedCategory[index] = !selectedCategory[index];
+		for (let i = 0; i < selectedCategory.length; i++) {
+			if (i !== index && selectedCategory[i] === true) {
+				selectedCategory[i] = false;
+			}
+		}
+	}
+
 	$: anyFaqOpen = isFaqOpen.some((item) => item);
 	$: anyTemp = visibleTemple.some((item: any) => item);
 
@@ -109,6 +135,10 @@
 		})();
 	}
 
+	function toggleMenu() {
+		expandMenu = !expandMenu;
+	}
+
 	onMount(async () => {
 		$anveshiChapter = data.chapter;
 		itins = await chapterItinerary($anveshiChapter);
@@ -119,6 +149,8 @@
 		faqs = await allFaq();
 		cfaqs = await chapterFaq($anveshiChapter);
 		gens = await anveshiGeneral();
+		arts = await anveshiTempleArt();
+		vids = await anveshiVids(videoLimit);
 	});
 
 	afterUpdate(() => {
@@ -319,6 +351,134 @@
 						</div>
 					{/if}
 				{/each}
+			{/if}
+		</div>
+	</section>
+	<section class="rta-column rowgap400 min100 p-bot-64" id="diaries">
+		<h2 use:reveal class="bord-top bord-bot p-top-16 p-bot-24">Travel Diaries</h2>
+		<h5 use:reveal={{ delay: 100, duration: 300, transition: 'fade' }}>
+			A collection of traveller images, trip videos, testimonials and writings from our trips. To
+			submit your own experience, please write to anveshi@brhat.in
+		</h5>
+		<div class="rta-column">
+			{#if $breakTwo}
+				<div
+					class="rta-row colgap200 ycenter drawer-select"
+					class:isactive={expandMenu}
+					on:click={toggleMenu}
+					on:keydown={fauxfake}
+					use:reveal={{ transition: 'fade', delay: 100, duration: 100 }}
+				>
+					{#if expandMenu}
+						Close Diaries
+					{:else}
+						Expand Diaries
+					{/if}
+					<div class="rta-row ycenter" class:rotated={expandMenu}>
+						{#if expandMenu}
+							<Chevron2 dimension={24} onToggle={true} />
+						{:else}
+							<Chevron2 dimension={24} />
+						{/if}
+					</div>
+				</div>
+			{/if}
+			{#if expandMenu || !$breakTwo}
+				<div
+					class="rta-row row-col ycenter xleft rta-drawer-items colgap400 rowgap100"
+					in:slide={{ axis: 'y', easing: quintOut }}
+					out:slide={{ axis: 'y', easing: quintIn }}
+					on:click={toggleMenu}
+					on:keydown={fauxfake}
+					use:reveal={{ transition: 'fade', delay: 200, duration: 600 }}
+				>
+					<button
+						class="drawer-item"
+						on:click={() => toggleCategory(3)}
+						class:drawerselection={selectedCategory[3]}>Travelogues</button
+					>
+					<button
+						class="drawer-item"
+						on:click={() => toggleCategory(1)}
+						class:drawerselection={selectedCategory[1]}>Temple Art</button
+					>
+					<button
+						class="drawer-item"
+						on:click={() => toggleCategory(2)}
+						class:drawerselection={selectedCategory[2]}>Video Accounts</button
+					>
+				</div>
+			{/if}
+		</div>
+		<div
+			class="rta-column p-top-8 rowgap200"
+			use:reveal={{ transition: 'fade', delay: 200, duration: 600 }}
+		>
+			{#if selectedCategory[1]}
+				<div class="rta-grid grid4 stay2 rowgap300 colgap300">
+					{#if arts && arts.length > 0}
+						{#each arts as item, i}
+							<div
+								class="rta-image height-20"
+								in:scale={{ duration: 200, delay: i * 25 }}
+								out:scale={{ duration: 100, delay: 0 }}
+							>
+								<img src={item.image} alt={item.id} />
+							</div>
+						{/each}
+					{/if}
+				</div>
+			{/if}
+			{#if selectedCategory[2]}
+				<div class="rta-grid grid4 rowgap400 colgap400" id="videos-section">
+					{#if vids && vids.length > 0}
+						{#each vids as item, i}
+							<div
+								class="rta-column rowgap100"
+								in:scale={{ duration: 200, delay: i * 25 }}
+								out:scale={{ duration: 100, delay: 0 }}
+							>
+								<Youtuber youTubeId={item.videoid} />
+								<p class="mid">{item.name}</p>
+							</div>
+						{/each}
+					{/if}
+				</div>
+				<div class="rta-column xleft">
+					<button on:click={increaseLimit} class="newbutton big"> Load More </button>
+				</div>
+			{/if}
+			{#if selectedCategory[3]}
+				<div class="rta-grid grid2 left colgap600 rowgap300 p-bot-32 bord-bot">
+					<h5 class="title">
+						<a href="/anveshi/posts/kriteesh">Travel Diary by Kriteesh Vajrapani - Karnataka</a>
+					</h5>
+					<div class="rta-column rowgap200">
+						<p class="mid soft">
+							The Bṛhat Anveṣī trip for me started at the airport itself. Instead of going to Hassan
+							by myself, I chose to wait for the Bṛhat team to arrive, so that I could tag along.
+							Interestingly, no one else in the group did this. Whether I am lazy and irresponsible,
+							or extremely aware and smart! Either way, I was just lucky. The wait was more
+							rewarding than I expected. It got me exclusive time with the Bṛhat Team.
+						</p>
+						<a href="/anveshi/posts/kriteesh">
+							<button class="newbutton big">Read More</button>
+						</a>
+					</div>
+				</div>
+				<div class="rta-grid grid2 left colgap600 rowgap300 p-bot-32 bord-bot">
+					<h5 class="title">
+						<a href="/anveshi/posts/hiddentreasure"
+							>Recreation of Hidden Treasure of Ghazni Ganpati</a
+						>
+					</h5>
+					<div class="rta-column rowgap200">
+						<p class="mid soft">An essay by Anushree Sunil Ghisad Ji from the Goa Chapter</p>
+						<a href="/anveshi/posts/hiddentreasure">
+							<button class="newbutton big">Read More</button>
+						</a>
+					</div>
+				</div>
 			{/if}
 		</div>
 	</section>
