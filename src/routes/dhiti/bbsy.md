@@ -29,7 +29,7 @@ A pertinent point to note is that Bhagavān Shiva is also worshipped as Pañcamu
 * Tatpuruṣa - tirodhāna or veiling
 * Īśāna - anugraha or grace
 
-More on these five aspects of Pañcamukha Śiva[ here](https://www.brhat.in/dhiti/panchmukhashiva). 
+More on these five aspects of Pañcamukha Śiva [here](https://www.brhat.in/dhiti/panchmukhashiva). 
 
 <img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/bbsy/2.webp" alt="two"/>
 
