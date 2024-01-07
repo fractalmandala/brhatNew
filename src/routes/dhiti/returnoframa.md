@@ -31,7 +31,7 @@ I knew and met many of them, who had participated in the great Yajña that led t
 
 And in that great loss, they gained the greatest prize that can be: the love of Rājā Rāma. Their only prize, their only goal was to become humble servants of Lord Rāma, the Emperor of Ayodhya and the world. 
 
-It was a breed produced not just once by this country. The soil of this country kept producing generations after generations of these servants of the Lord. While our enemies targeted, destroyed and overtook our elites, they could never imagined that the resistance would rise from some of the most powerless sections of the society. But such is Rāma Cetanā. It rose exactly from there. 
+It was a breed produced not just once by this country. The soil of this country kept producing generations after generations of these servants of the Lord. While our enemies targeted, destroyed and overtook our elites, they could never imagine that the resistance would rise from some of the most powerless sections of the society. But such is Rāma Cetanā. It rose exactly from there. 
 
 I say I know many of them, for these men and women were around me everywhere. Illiterate, and scarcely ever having pursued higher education or knowing any English, they were almost a type: dark skinned, malnourished, underweight, reticent and speaking only in dialects and not even Manaka or standard Hindi. They were the object of absolute scorn by our ‘educated elites’, and they were thought of as a boogeyman for almost all outsiders. Many of the women were mothers and would bring their toddlers with them to rallies, tying them on their backs. 
 
