@@ -1,0 +1,869 @@
+.backgrounder
+  background-size: cover
+  background-position: center center
+  background-repeat: no-repeat
+
+.column
+  display: flex
+  flex-direction: column
+  &.xcenter
+    align-items: center
+    text-align: center
+  &.xspread
+    align-items: stretch
+  &.xleft
+    align-items: flex-start
+  &.xright
+    align-items: flex-end
+    text-align: right
+  &.ycenter
+    justify-content: center
+  &.ybottom
+    justify-content: flex-end
+  &.ystretch
+    justify-content: stretch
+  &.ytop
+    justify-content: flex-start   
+  &.ybetween
+    justify-content: space-between
+  @media screen and (min-width: 769px)  
+    &.centerself
+      align-self: center
+  @media screen and (max-width: 768px)
+    &.xleft.mcent
+      align-items: center
+      text-align: center
+    &.xright.ondesk
+      align-items: flex-start
+      text-align: left
+    &.xcenter.mno
+      align-items: flex-start
+      text-align: left
+
+.row
+  display: flex
+  flex-direction: row
+  &.ycenter
+    align-items: center
+  &.ytop
+    align-items: flex-start
+  &.xcenter
+    justify-content: center
+  &.xleft
+    justify-content: flex-start
+  &.xright
+    justify-content: flex-end
+  &.xbetween
+    justify-content: space-between  
+  &.wrap
+    flex-wrap: wrap 
+  .thin
+    width: 30%
+    height: 200px
+  .thick
+    width: calc(68% - 1rem)
+  @media screen and (max-width: 768px)
+    &.xcenter.mleft
+      justify-content: flex-start
+    &.mobile-col
+      flex-direction: column
+      .thin, .thick
+        width: 100%
+      &.xleft
+        align-items: flex-start
+      &.xbetween
+        justify-content: start 
+        align-items: start
+    &.mobile-col-rev
+      flex-direction: column-reverse
+      &.xbetween
+        justify-content: start 
+        align-items: start
+      &.xleft
+        align-items: flex-start
+
+.grid
+  display: grid
+  grid-auto-flow: row
+  grid-template-rows: auto
+  &.ycenter
+    align-items: center
+    align-content: center
+  &.ytop
+    align-items: start
+    align-content: start 
+  &.xcenter
+    justify-items: center
+  &.stretch
+    justify-items: stretch
+  @media screen and (min-width: 1025px)
+    &.gap2
+      column-gap: var(--grid-gap)
+      row-gap: var(--grid-rowgap)
+    &.tight
+      gap: 1rem
+    &.null
+      gap: 0  
+    &.six
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+      grid-template-areas: ". . . . . ."
+    &.five
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+      grid-template-areas: ". . . . ."         
+    &.four
+      grid-template-columns: 1fr 1fr 1fr 1fr
+      grid-template-areas: ". . . ."  
+    &.three
+      grid-template-columns: 1fr 1fr 1fr
+      grid-template-areas: ". . ."  
+    &.two
+      grid-template-columns: 1fr 1fr
+      grid-template-areas: ". ."
+      &.right40
+        grid-template-columns: 64% 1fr
+        grid-template-areas: ". ."
+    &.two.right
+      grid-template-columns: 60% 1fr
+    &.two.left
+      grid-template-columns: 1fr 75%
+    &.two.hardleft
+      grid-template-columns: 1fr 80%
+    &.two.hardright
+      grid-template-columns: 77% 1fr
+      .sidebar
+        padding-left: 3.2rem
+        border-left: 1px solid var(--color-borders)
+      .mainpager
+        padding-right: 3.2rem
+    &.two.left.forty
+      grid-template-columns: 1fr 60%    
+  @media screen and (max-width: 1024px) and (min-width: 769px)
+    &.gap2
+      column-gap: var(--grid-gap)
+      row-gap: var(--grid-rowgap)
+    &.stay
+      grid-template-columns: 1fr 1fr
+    &.tight
+      gap: 1rem
+    &.null
+      gap: 0
+    &.six
+      grid-template-columns: 1fr 1fr
+      grid-template-areas: ". ."  
+      &.six-three
+        grid-template-columns: 1fr 1fr 1fr
+        grid-template-areas: ". . ."
+    &.five
+      grid-template-columns: 1fr 1fr
+      grid-template-areas: ". ."          
+      &.five-three
+        grid-template-columns: 1fr 1fr 1fr
+        grid-template-areas: ". . ."    
+    &.four
+      grid-template-columns: 1fr 1fr
+      grid-template-areas: ". ."
+    &.three
+      grid-template-columns: 1fr 1fr
+      grid-template-areas: ". ."  
+    &.two
+      grid-template-columns: 1fr 1fr
+      grid-template-areas: ". ."
+      &.right40
+        grid-template-columns: 70% 1fr
+        grid-template-areas: ". ."
+    &.two.hardright
+      grid-template-columns: 75% 1fr
+      .sidebar
+        padding-left: 2rem
+        border-left: 1px solid var(--color-borders)
+      .mainpager
+        padding-right: 2rem
+    &.two.left
+      grid-template-columns: 1fr 75%
+  @media screen and (max-width: 768px)
+    &.gap2
+      column-gap: var(--grid-gap)
+      row-gap: var(--grid-rowgap)
+    &.stay
+      grid-template-columns: 1fr 1fr
+    &.tight
+      gap: 0.5rem
+    &.null
+      gap: 0
+    &.six
+      grid-template-columns: 1fr
+      grid-template-areas: "."
+      &.stay
+        grid-template-columns: 1fr 1fr
+        grid-template-areas: ". ." 
+      &.stay3      
+        grid-template-columns: 1fr 1fr 1fr
+        grid-template-areas: ". . ."   
+      &.six-three
+        grid-template-columns: 1fr 1fr 1fr
+        grid-template-areas: ". . ."   
+    &.five
+      grid-template-columns: 1fr
+      grid-template-areas: "."
+      &.stay
+        grid-template-columns: 1fr 1fr
+        grid-template-areas: ". ."     
+      &.five-three
+        grid-template-columns: 1fr 1fr 1fr
+        grid-template-areas: ". . ."                        
+    &.four
+      grid-template-columns: 1fr
+      grid-template-areas: "."
+      &.stay
+        grid-template-columns: 1fr 1fr
+        grid-template-areas: ". ."
+    &.three
+      grid-template-columns: 1fr
+      grid-template-areas: "."
+      &.stay
+        grid-template-columns: 1fr 1fr
+        grid-template-areas: ". ."
+      &.stay3
+        grid-template-columns: 1fr 1fr 1fr
+        grid-template-areas: ". . ."  
+    &.two
+      grid-template-columns: 1fr
+      grid-template-areas: "up" "down"
+      .up
+        grid-area: up
+      .down
+        grid-area: down
+      &.stay
+        grid-template-columns: 1fr 1fr
+        grid-template-areas: ". ."
+    &.two.hardright
+      grid-template-columns: 1fr
+      grid-template-areas: "." "."
+
+.postheadingarea
+  justify-content: space-between
+  width: 100%
+  margin-bottom: 2rem
+  &.top
+    justify-content: flex-start
+  &.row.xbetween
+    justify-content: space-between
+    align-items: center
+
+.post
+  row-gap: var(--sz-24)
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+
+.postgrid
+  display: grid
+
+.postgrid.paddingpage
+  display: grid
+  align-content: start !important
+  align-items: start !important
+
+.appshell.wide
+  .postheadingarea
+    height: calc(100vh - 64px)
+    padding-bottom: var(--pad-four)
+    &.top
+      height: max-content
+      padding-bottom: var(--sz-32)
+  .topminusheading
+    min-height: calc(100vh - 104px)
+    padding-bottom: var(--sz-32)
+    padding-top: var(--sz-32)
+    &.halftop
+      padding-top: var(--sz-32)
+      min-height: 16vh
+  .postgrid
+    grid-template-columns: 64px 65% 1fr
+    grid-template-areas: "other outpost share"
+    padding-top: var(--px48)
+    .outpost
+      padding-right: var(--sz-128)
+      padding-left: 0
+      height: 100%
+      grid-area: outpost
+      padding-bottom: 48px
+      .grid
+        align-content: start
+        align-items: start
+        row-gap: 16px
+        column-gap: 16px
+        img
+          object-fit: cover
+      .post
+        padding-bottom: 16px
+    .other
+      height: 100%
+      grid-area: other
+    .share
+      position: sticky
+      top: 120px
+      align-items: flex-end
+      text-align: right
+      height: max-content
+      grid-area: share
+      padding-left: var(--sz-64)
+      border-left: 1px solid var(--color-borders)
+      .related
+        row-gap: 8px
+
+.appshell.mid
+  .postheadingarea
+    height: calc(100vh - 160px)
+    padding-bottom: var(--sz-16)
+    &.top
+      height: max-content
+      align-items: flex-start
+      padding-bottom: var(--sz-32)
+  .topminusheading
+    min-height: calc(100vh - 120px)
+    padding-bottom: var(--sz-32)
+    padding-top: var(--sz-32)
+    &.halftop
+      padding-top: var(--sz-32)
+      min-height: 16vh
+  .postgrid
+    grid-template-columns: 0 64% 1fr
+    grid-template-areas: "other outpost share"
+    padding-top: var(--px32)
+    .outpost
+      padding-right: var(--sz-88)
+      padding-bottom: 48px
+      height: 100%
+      grid-area: outpost
+      padding-left: 0
+      .grid
+        align-content: start
+        align-items: start
+        row-gap: 16px
+        column-gap: 16px
+        img
+          object-fit: cover
+      .post
+        padding-bottom: 16px
+    .other
+      height: 100%
+      grid-area: other
+    .share
+      position: sticky
+      top: 120px
+      height: max-content
+      align-items: flex-end
+      text-align: right
+      grid-area: share
+      padding-left: var(--sz-48)
+      border-left: 1px solid var(--color-borders)
+      .related
+        row-gap: 6px
+
+
+.appshell.small
+  .postheadingarea
+    height: max-content
+    padding-bottom: var(--sz-32)
+    &.top
+      height: max-content
+      align-items: flex-start
+      padding-bottom: var(--sz-24)
+  .topminusheading
+    min-height: 24vh
+    height: 100%
+    padding-bottom: var(--px32)
+    padding-top: 0
+    justify-content: center
+    &.halftop
+      padding-top: var(--sz-32)
+      min-height: 16vh
+  .postgrid
+    grid-template-columns: 1fr
+    grid-template-areas: "post"
+    padding-top: var(--px32)
+    .outpost
+      grid-area: post
+      padding-bottom: 0
+      .grid
+        align-content: start
+        align-items: start
+        row-gap: 16px
+        column-gap: 16px
+        img
+          object-fit: cover
+          height: 200px
+      .post
+        padding-bottom: 16px
+    .share
+      display: none
+    .other
+      grid-area: other
+      display: none
+
+.postrow
+  border: 1px solid var(--color-borders)
+  border-radius: 5px
+  box-shadow: 0px 0px 0px var(--color-shadow)
+  padding: 16px 20px
+  transition: all 0.08s cubic-bezier(0.770, 0.100, 0.375, 0.815)
+  .post-image
+    overflow: hidden
+    img
+      transition: all 0.08s ease-out
+      transform-origin: center center
+      filter: saturate(0.01)
+  &:hover
+    border: 1px solid var(--color-background)
+    box-shadow: 4px 4px 12px var(--color-shadow)
+    .post-image
+      img
+        transform: scale(1.04)
+        filter: saturate(1)
+  @media screen and (min-width: 1025px)
+    column-gap: 0
+    .post-text
+      width: calc(100% - 360px)
+      padding-right: 2rem
+    .post-image
+      width: 320px
+  @media screen and (max-width: 1024px) and (min-width: 769px)
+    column-gap: 0
+    .post-text
+      width: calc(100% - 300px)
+      padding-right: 1rem
+    .post-image
+      width: 300px
+  @media screen and (max-width: 768px)
+    column-gap: 0
+    padding: 8px
+    border: none
+    .post-text
+      width: calc(100% - 128px)
+      padding-right: 8px
+    .post-image
+      width: 120px
+
+.standardpage
+  display: flex
+  flex-direction: column
+  padding-left: var(--paddingside)
+  padding-right: var(--paddingside)
+  padding-top: var(--top-cushion)
+  padding-bottom: var(--sz-32)
+
+.widepage
+  display: flex
+  flex-direction: column
+  padding-top: var(--top-cushion)
+  padding-bottom: var(--sz-32)
+  padding-left: var(--paddingthin)
+  padding-right: var(--paddingthin)
+
+.paddingpage
+  padding-left: var(--paddingside)
+  padding-right: var(--paddingside)
+
+.parallaxbox
+  height: calc(100vh - 104px)
+  width: 100%
+  overflow-y: hidden
+  .backgrounder
+    height: 100%
+    width: 100%
+    p, h1, h2, h3, h4, h5, h6
+      background: rgba(0,0,0,0.8)
+      color: #FFFFFF
+      width: max-content
+      max-width: 100%
+      word-wrap: break-word
+      padding-left: 1rem
+      padding-right: 1rem
+      padding-top: 2px
+      padding-bottom: 2px
+  .grid
+    height: calc(100% - 48px)
+  @media screen and (max-width: 768px)
+    .backgrounder
+      .column.gap1
+        max-width: 88%
+      p, h3, h1, h2, h4, h5
+        max-width: 88%
+        text-align: center
+
+.parallaxbox.half
+  @media screen and (max-width: 768px)
+    height: 30vh
+
+.parallaxbox.half.istop
+  height: calc(100vh - 104px)
+  @media screen and (max-width: 768px)
+    height: 30vh
+
+.fullH
+  height: 100vh
+  &.half
+    height: 80vh
+    @media screen and (max-width: 768px)
+      height: 48vh
+
+.maxH
+  height: 100%
+
+.fullW
+  width: 100%
+
+.minW
+  width: max-content
+  max-width: 80%
+
+.width80
+  width: 80%
+
+.minH
+  min-height: 100vh
+  @media screen and (min-width: 769px)
+    padding-top: var(--top-cushion)
+
+.width-manager
+  @media screen and (min-width: 1201px)
+    width: 800px
+  @media screen and (max-width: 1200px) and (min-width: 1025px)
+    max-width: 640px  
+  @media screen and (max-width: 1024px) and (min-width: 769px)
+    width: 100%
+
+.width-manager-two
+  @media screen and (min-width: 1201px)
+    width: 900px
+  @media screen and (max-width: 1200px) and (min-width: 1025px)
+    max-width: 88%  
+  @media screen and (max-width: 1024px) and (min-width: 769px)
+    max-width: 100%
+
+.generaltray
+  align-items: center
+  .label
+    background: var(--color-mid)
+    text-transform: uppercase
+    color: #FFFFFF
+    padding: 3px 8px
+    border-radius: 0
+    font-family: var(--seco)
+    font-weight: 500
+    font-size: 12px
+    transition: all 0.09s cubic-bezier(0.810, 0.080, 0.355, 0.975)
+    transform-origin: center center
+    &:hover
+      background: var(--themecolor)
+      color: var(--color-background)
+      transform: scale(0.95)
+    &.selected
+      background: var(--themecolor)
+      &:hover
+        color: var(--color-background)
+        background: var(--primary-color)
+    &.larger
+      font-size: 14px
+      padding: 4px 8px
+  .label2
+    background: var(--color-text-lowest)
+    text-transform: uppercase
+    color: var(--color-text-primary)
+    padding: 4px 8px
+    border-radius: 0
+    border: 1px solid var(--color-dark-background)
+    font-family: var(--seco)
+    font-weight: 500
+    font-size: 12px
+    transition: all var(--transition1)
+    transform-origin: center center
+    &:hover
+      background: var(--themecolor)
+      color: var(--color-background)
+      transform: scale(1.05)
+      border-radius: 2px
+      border: 1px solid var(--themecolor)
+      box-shadow: var(--label-shadow-1), var(--label-shadow-2)
+    &.selected
+      background: var(--themecolor)
+      color: var(--color-background)
+      &:hover
+        background: var(--themecolor)
+        color: #FFFFFF
+    &.larger
+      font-size: 14px
+      padding: 4px 8px
+      border: 1px solid var(--color-alwaysblack)
+    &.larger.accent
+      color: #121212
+      &:hover
+        background: var(--themecolor)
+        border: 2px solid #121212
+        color: #121212
+  @media screen and (max-width: 768px)
+    .label
+      font-size: 0.8rem
+
+.generaltray.alt
+  column-gap: 16px
+  row-gap: 16px
+
+.socialcontainer
+  display: flex
+  flex-direction: row
+  align-items: center
+  column-gap: var(--sz-16)
+
+.singlepost
+  transition: all 0.08s cubic-bezier(0.770, 0.100, 0.375, 0.815)
+  transform-origin: center center
+  border-radius: 0
+  &:hover
+    h5, h6
+      color: var(--primary-color)
+    h6.accent-title
+      color: var(--primary-color)
+    img
+      transform: scale(1.04)
+  .row
+    column-gap: var(--sz-8)
+    row-gap: 0
+  img
+    height: 172px
+    object-fit: cover
+    transform-origin: center center
+    transition: all 0.08s cubic-bezier(0.770, 0.100, 0.375, 0.815)
+  .for-image
+    height: 180px
+  .hidden.for-image
+    overflow-y: hidden
+  small, h5
+    margin: 0
+  h5, h6
+    text-transform: capitalize
+    line-height: 1.2
+    color: var(--primary-color)
+  .for-image
+    img
+      height: 100%
+      object-fit: cover
+
+//buttons
+
+button
+  cursor: pointer
+
+button.blank
+  background: none
+  border: none
+  padding: 0
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  &.row
+    flex-direction: row
+
+button.standard
+  border: none
+  color: #FFFFFF
+  padding: 5px 16px 5px 16px
+  background: var(--themecolor)
+  cursor: pointer
+  transition: all 0.08s cubic-bezier(0.160, 0.910, 0.530, 1.060)
+  transform-origin: center center
+  text-transform: uppercase
+  border-radius: 4px
+  font-size: 1rem
+  font-weight: 400
+  &:hover
+    transform: scale(0.95)
+    background: var(--themealt)
+  @media screen and (max-width: 768px)
+    font-size: 14px
+
+button.nice
+  border: 1px solid #FFFFFF
+  background: #272727
+  color: #FFFFFF
+  text-transform: uppercase
+  min-height: 24px
+  font-size: 12px
+  padding-left: 12px
+  padding-right: 12px
+  min-width: 48px
+  transition: 0.09s cubic-bezier(0.420, 0.800, 0.000, 0.995)
+  border-radius: 2px
+  &.selected
+    background: var(--themecolor)
+    border: 1px solid var(--themecolor)
+    &:hover
+      background: var(--color-background)
+      border: 1px solid var(--themecolor)
+      color: var(--themecolor)
+  &:hover
+    background: var(--themecolor)
+  &.softer
+    background: var(--color-text-lowest)
+    &:hover
+      background: var(--themecolor)
+
+button.accenter
+  background: var(--themecolor)
+  color: var(--color-background)
+  border: 1px solid var(--themecolor)
+  padding: 0 12px
+
+button.wbuildingnav
+  padding: 0
+  background: none
+
+button.wbuildingnav.navtop
+  border: 1px solid var(--color-background)
+
+button.glowbuttons
+  position: relative
+  background: none
+  border: none
+  &::after
+    position: absolute
+    bottom: -1px
+    left: 0
+    content: ''
+    width: 100%
+    height: 1px
+    background: linear-gradient(90deg, rgba(17,17,17, 0), rgb(64, 192, 87) 10%, rgba(17, 17, 17, 0))
+
+button.card
+  background: none
+  border: none
+  padding: 4px 12px
+  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%)
+  border-radius: 20px
+  transition: all .3s
+  position: relative
+  .card2
+    position: absolute
+    top: 1px
+    left: 1px
+    width: calc(100% - 2px)
+    height: calc(100% - 2px)
+    background-color: #1a1a1a
+    border-radius: 10px
+    transition: all .2s
+    &:hover
+      transform: scale(0.98)
+      border-radius: 20px
+  &:hover
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30)
+
+.postnoimage
+  display: flex
+  transition: all 0.08s cubic-bezier(0.770, 0.100, 0.375, 0.815)
+  flex-direction: column
+  border: 1px solid var(--color-borders)
+  border-radius: 5px
+  box-shadow: 0px 0px 0px var(--color-shadow)
+  padding: 16px 20px
+  &:hover
+    border: 1px solid var(--color-background)
+    box-shadow: 4px 4px 12px var(--color-shadow), -4px -4px 8px var(--color-shadowup)
+    h5, h6
+      color: var(--primary-color)
+  h5, h6
+    color: var(--color-text-underprim)
+    transition: color 0.08s ease
+
+.postnoimage-two 
+  display: flex
+  transition: all 0.08s cubic-bezier(0.770, 0.100, 0.375, 0.815)
+  flex-direction: column
+  &:hover
+    h5, h6
+      color: var(--primary-color)
+      text-decoration: underline
+      text-decoration-color: var(--themecolor)
+  h5, h6
+    color: var(--primary-color)
+    transition: color 0.08s ease
+    text-decoration-color: var(--themecolor)
+
+.embla
+  overflow: hidden
+
+.embla__container
+  display: flex
+
+.embla__slide
+  flex: 0 0 100%
+  min-width: 0
+
+a.linkcontainer
+  h5, h6
+    text-decoration-color: var(--themecolor)
+  &:hover
+    h5, h6
+      text-decoration: underline
+      text-decoration-color: var(--themecolor)
+
+button.textbutton
+  padding: 0 0 2px 0
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: flex-start
+  column-gap: 8px
+  font-size: 10px
+  font-family: var(--seco)
+  font-weight: 600
+  text-transform: lowercase
+  line-height: 1
+  background: transparent
+  border: none
+  min-width: 60px
+  text-align: right
+  color: var(--color-text-grey)
+  svg
+    path
+      fill: var(--themecolor)
+  &:hover
+    color: var(--primary-color)
+
+.imageautofit
+  object-fit: contain
+  height: 30%
+  margin: auto
+
+button.label2
+  background: var(--label2-background)
+  text-transform: uppercase
+  color: #121212
+  padding: 3px 8px
+  border-radius: 0
+  border: 1px solid #121212
+  font-family: var(--seco)
+  font-weight: 500
+  font-size: 12px
+  transition: all 0.08s cubic-bezier(1.000, -0.600, 0.420, 1.200)
+  transform-origin: center center
+
+  &:hover
+    background: var(--themecolor)
+    color: #121212
+    transform: scale(0.95)
+  &.selected
+    background: var(--themecolor)
+  &:hover
+    background: var(--themecolor)
+    color: #FFFFFF
+  &.larger
+    font-size: 14px
+    padding: 4px 8px
+    border: 2px solid var(--primary-color)
+  &.larger.accent
+    color: #121212
+    &:hover
+      background: var(--themecolor)
+      border: 2px solid #121212
+      color: #121212

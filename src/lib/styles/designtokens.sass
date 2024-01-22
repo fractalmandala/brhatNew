@@ -1,0 +1,481 @@
+:root
+  --color-white: #FFFFFF
+  --color-fauxwhite: #F1F1F1
+  --color-nearwhite: #E7E7E7
+  --color-light: #c7c7c7
+  --color-grey: #a7a7a7
+  --color-mid: #878787
+  --color-predark: #515151
+  --color-black: #121212
+  --color-darkline: #191919
+  --color-last: #373737
+  --color-last-back: #272727
+  --color-altblack: #474747
+  --green-mild: #54B435
+  --green-neo: #38E54D
+  --green-dark: #41c813
+  --color-third: #F87666
+  --color-second: #474747
+  --color-neon1: #ff006d
+  --gradcol: #fdfc47
+  --gradback: linear-gradient(to right, #54B435, #42D114)
+  --transition1: var(--durationskip) cubic-bezier(0.100, 0.800, 1.000, 0.790)
+  --transition2: var(--durationskip) cubic-bezier(0.320, 1.170, 1.000, 1.005)
+  --cubica: cubic-bezier(0.100, 0.800, 1.000, 0.790)
+  --cubicb: cubic-bezier(1.000, 0.135, 0.000, 0.460)
+  --smoothease: cubic-bezier(0.765, -0.010, 0.855, 0.585)
+  --durationskip: 0.04s
+  --durationmed: 0.1s
+  --durationlong: 0.17s
+  --durationgrease: 1.65s
+  --transition-long: 0.06s cubic-bezier(0.355, -0.575, 0.970, 0.650)
+  --px2: 2px
+  --px3: 3px
+  --px4: 4px
+  --px6: 6px
+  --px8: 8px
+  --px12: 12px
+  --px16: 16px
+  --px20: 20px
+  --px24: 24px
+  --px32: 32px
+  --px48: 48px
+  --px64: 64px
+  --px80: 80px
+  --px96: 96px
+  --px120: 120px
+  --px128: 128px
+  --font12: 12px
+  --font14: 14px
+  --font500: 500
+  --font700: 700
+
+.light
+  --themecolor: #ff006d
+  --background-rgba: rgba(255, 255, 255, 0.8)
+  --themealt: var(--green-dark)
+  --color-background: var(--color-white)
+  --color-text-primary: var(--color-black)
+  --color-text-secondary: var(--color-mid)
+  --color-text-underprim: var(--color-predark)
+  --color-text-grey: var(--color-grey)
+  --color-text-lowest: var(--color-light)
+  --color-borders: var(--color-nearwhite)
+  --color-faintest: var(--color-fauxwhite)
+  --color-bordersthick: var(--color-black)
+  --color-alwayswhite: var(--color-white)
+  --color-alwaysblack: var(--color-black)
+  --color-dark-background: var(--color-altblack)
+  --label-shadow-1: 0px 4px 9px rgba(0,0,0,0.1)
+  --label-shadow-2: 0px 6px 12px rgba(0,0,0,0.21)
+  --xl-shadow-1: 2px 10px 21px rgba(0,0,0,0.42)
+  --xl-shadow-2: 12px 0 16px rgba(0,0,0,0.15)
+  --genshadow: 1px 3px 9px rgba(0,0,0,0.175)
+  --headshadow: 0px 8px 10px rgba(0,0,0,0.16)
+  --stripshadow: 3px 7px 12px rgba(0,0,0,0.14)
+  --nullshadow: 0 0 0 rgba(0,0,0,0), 0 0 0 rgba(0,0,0,0)
+
+.dark
+  --themecolor: #06FF00
+  --background-rgba: rgba(18, 18, 18, 0.85)
+  --themealt: var(--green-dark)
+  --color-background: var(--color-black)
+  --color-text-primary: var(--color-nearwhite)
+  --color-text-secondary: #878787
+  --color-text-underprim: var(--color-light)
+  --color-text-grey: var(--color-predark)
+  --color-text-lowest: var(--color-last)
+  --color-borders: var(--color-last-back)
+  --color-faintest: var(--color-darkline)
+  --color-bordersthick: var(--color-borders)
+  --color-alwayswhite: var(--color-white)
+  --color-alwaysblack: var(--color-black)
+  --color-dark-background: var(--color-last-back)
+  --label-shadow-1: 0px 4px 9px rgba(0,0,0,0.3)
+  --label-shadow-2: 0px 6px 12px rgba(0,0,0,0.5)
+  --xl-shadow-1: 2px 10px 25px rgba(0,0,0,0.72)
+  --xl-shadow-2: 6px 0 16px rgba(0,0,0,0.75)
+  --genshadow: 1px 3px 9px rgba(0,0,0,0.95)
+  --headshadow: 0px 8px 20px rgba(0,0,0,1)
+  --stripshadow: 3px 10px 12px rgba(0,0,0,1)
+  --nullshadow: 0 0 0 rgba(0,0,0,0), 0 0 0 rgba(0,0,0,0)
+
+.levelzero
+  --strip-height: 56px
+
+.levelone
+  --strip-height: 56px
+
+.leveltwo
+  --strip-height: 56px
+
+
+.bordtop
+  border-top: 1px solid var(--color-borders)
+
+.bordbot
+  border-bottom: 1px solid var(--color-borders)
+
+.white-text
+  color: #FFFFFF
+
+a.blanker.white-text
+  color: #FFFFFF
+
+.prim-text
+  color: var(--color-text-primary)
+
+.dark-text
+  color: var(--color-text-underprim)
+
+.secondary-text
+  color: var(--color-text-secondary)
+
+.light-text
+  color: var(--color-text-lowest)
+
+.grey-text
+  color: var(--color-text-grey)
+
+.theme-text
+  color: var(--themecolor)
+
+.alt-text
+  color: var(--themealt)
+
+.shadow-xl
+  box-shadow: var(--xl-shadow-1), var(--xl-shadow-2)
+  transition: box-shadow var(--transition-long)
+  &:hover
+    box-shadow: 0 0 0 rgba(0,0,0,0), 0 0 0 rgba(0,0,0,0)
+
+.headingtwo
+  text-transform: uppercase
+  background: var(--color-text-lowest)
+  color: var(--color-alwayswhite)
+  padding: var(--px8) var(--px16)
+  border-radius: 4px
+
+.genlabel
+  background: var(--color-text-grey)
+  text-transform: uppercase
+  color: var(--color-alwayswhite)
+  padding: var(--px4) var(--px8)
+  border-radius: 2px
+  font-family: var(--seco)
+  font-weight: var(--font500)
+  font-size: var(--font12)
+  transition: all 0.09s var(--smoothease)
+  transform-origin: center center
+  border: 1px solid var(--color-dark-background)
+  box-shadow: var(--nullshadow)
+  &:hover
+    background: var(--themecolor)
+    color: var(--color-background)
+    transform: scale(1.05)
+    border: 1px solid var(--color-dark-background)
+    border-radius: var(--px2)
+    box-shadow: var(--genshadow)
+  &.big
+    font-size: var(--font14)
+    padding: var(--px6) var(--px16)
+    background: var(--color-text-secondary)
+    box-shadow: 0px -4px 10px rgba(0,0,0,0.32) inset
+    &:hover
+      transform: scale(0.96)
+      background: var(--color-text-underprim)
+  &.selected
+    color: var(--color-background)
+    background: var(--themecolor)
+    box-shadow: -4px -3px 6px rgba(0,0,0,0.32) inset, var(--stripshadow)
+    &:hover
+      color: var(--color-background)
+      background: var(--themecolor)
+      box-shadow: -4px -3px 6px rgba(0,0,0,0.32) inset, var(--nullshadow)
+      transform: scale(0.96)
+  &.shadow
+    box-shadow: var(--label-shadow-1), var(--label-shadow-2)
+    &:hover
+      box-shadow: none
+
+.lightlabel
+  background: var(--color-text-grey)
+  text-transform: uppercase
+  color: var(--color-alwayswhite)
+  padding: var(--px4) var(--px8)
+  border-radius: 2px
+  font-family: var(--seco)
+  font-weight: var(--font500)
+  font-size: var(--font14)
+  transition: all 0.03s cubic-bezier(1.000, 0.020, 1.000, 0.195)
+  transform-origin: center center
+  border: 1px solid var(--color-text-grey)
+  box-shadow: var(--nullshadow)
+  &.big
+    font-size: var(--font14)
+    padding: var(--px4) var(--px8)
+  &:hover
+    background: var(--themecolor)
+    border-radius: var(--px2)
+    box-shadow: var(--stripshadow), var(--headshadow)
+    border: 1px solid var(--themecolor)
+    color: var(--color-background)
+
+.genlabelrev
+  background: var(--themecolor)
+  text-transform: uppercase
+  color: var(--color-alwayswhite)
+  padding: 4px 8px
+  border-radius: 2px
+  border: 1px solid #121212
+  font-family: var(--seco)
+  font-weight: 500
+  font-size: 12px
+  transition: all 0.12s var(--cubica)
+  transform-origin: center center
+  box-shadow: var(--label-shadow-1), var(--label-shadow-2)
+  &:hover
+    background: var(--color-text-lowest)
+    color: var(--color-text-primary)
+    transform: scale(0.96)
+    border-radius: 2px
+    border: 1px solid #121212
+    box-shadow: var(--nullshadow)
+  &.flat
+    box-shadow: var(--nullshadow)
+  &.big
+    font-size: var(--font14)
+    padding: var(--px4) var(--px8)
+
+.greenlabel
+  background: var(--color-background)
+  text-transform: uppercase
+  color: var(--color-text-underprim)
+  padding: 4px 8px
+  border-radius: 2px
+  border: 1px solid var(--color-text-secondary)
+  font-family: var(--seco)
+  font-weight: 500
+  font-size: 12px
+  transition: all 0.06s var(--cubica)
+  transform-origin: center center
+  &:hover
+    color: var(--themecolor)
+    border: 1px solid var(--themecolor)
+    box-shadow: var(--genshadow)
+  &.selected
+    background: var(--themecolor)
+    color: var(--color-background)
+    border: 1px solid var(--themecolor)
+
+.postcan
+  display: flex
+  flex-direction: column
+  transition: all 0.18s cubic-bezier(0.770, 0.100, 0.375, 0.815)
+  transform-origin: center center
+  row-gap: var(--px16)
+  justify-content: space-between
+  border: 1px solid var(--color-borders)
+  border-radius: 16px
+  overflow: hidden
+  p
+    word-wrap: break-word
+    word-break: break-word
+  h5, h6
+    text-decoration-color: var(--themecolor)
+    text-transform: capitalize
+  h5, h6, p, small
+    margin: 0
+  .hidden
+    height: 200px
+  .row
+    column-gap: 4px
+  img
+    object-fit: cover
+    height: 100%
+    width: 100%
+    transform-origin: center center
+    transition: all 0.37s cubic-bezier(0.770, 0.100, 0.375, 0.815)
+    transform: scale(1)
+  &:hover
+    box-shadow: var(--genshadow)
+    border: 1px solid var(--color-background)
+    h5, h6
+      text-decoration: underline
+      text-decoration-color: var(--themecolor)
+    img
+      transform: scale(1.04)
+  .categorylabel
+    font-size: 12px
+    text-transform: uppercase
+    background: var(--color-second)
+    color: #FFFFFF
+    width: max-content
+    max-width: 100%
+    padding: 2px 8px
+    margin-top: 4px
+    &.green
+      background: var(--themecolor)
+  .toptext, .bottomtext
+    padding-left: var(--px20)
+    padding-right: var(--px20)
+  .bottomtext
+    padding-bottom: var(--px16)
+
+.levelzero
+  .container
+    min-height: 100vh
+    padding-top: var(--px80)
+    padding-bottom: var(--px80)
+    row-gap: var(--px48)
+    column-gap: var(--px48)
+    .imagecan
+      height: 72vh
+
+.levelone
+  .container
+    min-height: 100vh
+    padding-top: var(--px64)
+    padding-bottom: var(--px64)
+    row-gap: var(--px32)
+    column-gap: var(--px32)
+    .imagecan
+      height: 64vh
+
+.leveltwo
+  .container
+    padding-top: var(--px64)
+    padding-bottom: var(--px64)
+    row-gap: var(--px32)
+    column-gap: var(--px16)
+    .imagecan
+      height: 48vh
+
+.mother
+  position: relative
+
+.child
+  position: absolute
+  top: -10px
+  left: 0
+  .grandchild
+    background: var(--color-text-primary)
+    min-width: 200px
+    padding-bottom: var(--px32)
+    color: var(--color-background)
+    button
+      color: var(--color-background)
+  .filterbutton
+    transform-origin: center center
+    &:hover
+      transform: scale(1.2)
+      svg
+        path
+          fill: var(--themecolor)
+
+button.fitted
+  svg
+    height: 20px
+    path
+      fill: var(--color-text-secondary)
+  &:hover
+    svg
+      path
+        fill: var(--color-text-primary)
+
+.expandedfilter
+  background: var(--color-background)
+  box-shadow: var(--genshadow)
+  padding: 64px var(--paddingside)
+  border: 1px solid var(--color-borders)
+  height: calc(100% - 128px)
+  @media screen and (max-width: 768px)
+    height: 100%
+    padding: 1rem
+
+.islink
+  &:hover
+    a
+      color: var(--themecolor)
+
+.tiny
+  font-size: 12px
+  padding: 0px 8px
+  background: var(--color-text-lowest)
+  border: 1px solid var(--color-text-lowest)
+  font-family: var(--seco)
+  text-transform: uppercase
+  font-weight: 600
+  color: var(--color-text-primary)
+  transition: all 0.09s var(--cubica)
+  &:hover
+    border: 1px solid var(--color-text-primary)
+    background: var(--color-text-underprim)
+    color: var(--color-background)
+
+
+.newlabel
+  background: none
+  border: none
+  color: var(--color-text-primary)
+  text-transform: uppercase
+  font-size: 14px
+  transition: all 0.06s var(--smoothease)
+  &:hover
+    color: var(--themecolor)
+  &:selected
+    color: var(--themecolor)
+
+.gallerytext
+  .grid
+    margin-bottom: 16px
+
+.levelzero
+  img.postimage
+    width: 100%
+    margin-bottom: 32px
+    height: 360px
+    object-fit: cover
+
+.levelone
+  img.postimage
+    width: 100%
+    margin-bottom: 16px
+    height: 360px
+    object-fit: cover
+
+.leveltwo
+  img.postimage
+    width: 100%
+    margin-bottom: 0
+    height: 240px
+    object-fit: cover
+
+button.new
+  width: max-content
+  max-width: 100%
+  padding: 4px 8px
+  font-size: 12px
+  font-family: var(--seco)
+  text-transform: uppercase
+  font-weight: 500
+  background: var(--themecolor)
+  color: var(--color-background)
+  border: none
+  transition: all 0.06s var(--cubicb)
+  transform-origin: center center
+  &:hover
+    transform: scale(0.95)
+    background: var(--themealt)
+
+button.new.dark
+  background: var(--color-text-secondary)
+  &:hover
+    transform: scale(0.95)
+    background: var(--themealt)
+
+.pagebanner
+  border: 2px solid var(--color-text-primary)
+  margin: 0
+  line-height: 1
+  padding: 8px 32px
