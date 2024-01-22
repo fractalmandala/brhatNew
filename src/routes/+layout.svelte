@@ -10,11 +10,14 @@
 	import '$lib/styles/types.sass';
 	import '$lib/styles/tokens.sass';
 	import '$lib/styles/standard.sass';
- import '$lib/styles/splide.sass';
+  	import '$lib/styles/splide.sass';
+  	import '$lib/styles/containers.sass';
+  	import '$lib/styles/designtokens.sass'
+  	import '$lib/styles/tokenstwo.sass';
 	import Footer from '$lib/components/Footer.svelte';
 	import UserConfig from '$lib/components/UserConfig.svelte';
 
- export let data: LayoutData;
+  	export let data: LayoutData;
 	export let form: ActionData;
 
 	let breakPointOn: boolean;
@@ -63,11 +66,6 @@
 	flex-direction: column
 	align-items: stretch
 	justify-content: flex-start
-
-#appbox.light
-	background: white
-
-#appbox.dark
-	background: #171717
+	background: var(--background)
 
 </style>
