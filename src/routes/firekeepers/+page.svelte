@@ -7,13 +7,13 @@
 	import { metaTitle, metaDescription, metaUrl, metaImage } from '$lib/stores/metastores';
 
 	$metaTitle = 'Firekeepers of Civilization';
-	$metaDescription = 'A learning program designed to instill deep-rooted connection with the Hindu heritage and imbibe participants with the discerning spirit of Dharma Dṛṣṭi.';
+	$metaDescription = 'A learning program designed to instill deep-rooted connection with the Indic heritage and imbibe participants with the discerning spirit of Dharma Dṛṣṭi.';
 	$metaUrl = 'https://www.brhat.in/firekeepers';
 	$metaImage = '/images/fkeepertemp.png';
 
   onMount(() => {
 	  $metaTitle = 'Firekeepers of Civilization';
-	  $metaDescription = 'A learning program designed to instill deep-rooted connection with the Hindu heritage and imbibe participants with the discerning spirit of Dharma Dṛṣṭi.';
+	  $metaDescription = 'A learning program designed to instill deep-rooted connection with the Indic heritage and imbibe participants with the discerning spirit of Dharma Dṛṣṭi.';
 	  $metaUrl = 'https://www.brhat.in/firekeepers';
 	  $metaImage = '/images/fkeepertemp.png';
   })
@@ -34,10 +34,10 @@
     </div>
     <div class="column rowgap200">
     <p>
-      <span class="peach">Firekeepers of Civilization</span> is a learning offering by Amrita Vishwa Vidyapeetham and Bṛhat Educational Trust. The program is designed to instill a deep-rooted connection with the Hindu heritage while imbibing students with the discerning spirit of Dharma Dṛṣṭi.
+      <span class="peach">Firekeepers of Civilization</span> is a learning offering by Amrita Vishwa Vidyapeetham and Bṛhat Educational Trust. The program is designed to instill a deep-rooted connection with the Indic heritage while imbibing students with the discerning spirit of Dharma Dṛṣṭi.
     </p>
     <p>
-      It aims to develop in the Hindu mind four sets of intelligences: spiritual, cognitive, socio-cultural and political. The learners will traverse through the works of luminaries such as Sitaram Goel, Ram Swarup, Sri Aurobindo, Swami Vivekananda, A.K. Saran, etc. among others. Temple visits help connect with the sacred and spiritual dimensions of the civilization.
+      It aims to develop in the mind four sets of intelligences: spiritual, cognitive, socio-cultural and political. The learners will traverse through the works of luminaries such as Sitaram Goel, Ram Swarup, Sri Aurobindo, Swami Vivekananda, A.K. Saran, etc. among others. Temple visits help connect with the sacred and spiritual dimensions of the civilization.
     </p>
     <h5 style="font-weight: bold">
       Through reflective and continuous learning, internships and specialized workshops, participants will be able to locate their civilizational heritage within a rapidly evolving world, <span class="peach">thereby becoming torchbearers and effective contributors</span>.
