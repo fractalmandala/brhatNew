@@ -43,7 +43,7 @@
       Through reflective and continuous learning, internships and specialized workshops, participants will be able to locate their civilizational heritage within a rapidly evolving world, <span class="peach">thereby becoming torchbearers and effective contributors</span>.
     </h5>
     <div class="row wrap gap1 ptop8">
-      <a class="blanker" href="https://drive.google.com/file/d/1UOMjBg2xxVRFMkYX1XQUa-njNL3_3_v4/view?usp=sharing" target="_blank" rel="noreferrer">
+      <a class="blanker" href="https://drive.google.com/file/d/1zCue7afH3RPd10RXjf95MzH7HwLi_Q39/view?usp=sharing" target="_blank" rel="noreferrer">
         <button class="newbutton big">
           Download Program Brochure
         </button>
