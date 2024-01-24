@@ -60,8 +60,8 @@ You don't need to sell everyone a large cyber truck to be pro-climate change, an
 
 On the other hand, you also cannot expect India and Africa to live in poverty and lower standards of living because Europeans want to degrow and impose a carbon tax. Irony might be lost to the West, but the global south will not ignore this new age of imperialism and digital colonialism. So degrowth-ers' affection for the effective/altruists’ control concentration approach will never sit well. They need to fight centralisation, not advocate for it.
 
-<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/samatvartha/2.png" alt="2"/>
-<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/samatvartha/3.png" alt="3"/>
+<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/samatvartha/2.jpg" alt="2"/>
+<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/samatvartha/3.jpg" alt="3"/>
 
 It is not paradoxical to be not against markets but against ‘marketing’; be not against growth but against ecological exploitation; be not against profits but against singular profit motive; be not against stakeholder capitalism but against ESG™; be not against consumption but against hedonism; be not against social governance but against state fascism; be not against pluralism but against universalism and intersectionality. 
 
@@ -77,7 +77,7 @@ In one of his books, Ajay Shah (@ajay_shah) pointed out how it is not always pol
 
 The 2020s are witnessing a significant convergence of scalable technologies, with rapid advancements in trustless data management, interoperable protocols, artificial intelligence, robotics and more. Consequently, Indic Futurism must encompass research mediation, policy advocacy, and the development of technocratic solutions, all aligned with the future envisioned above. To bring to life this collective vision of a solarpunk Indic-futurism, our goal is to accelerate civilizational progress while nourishing nature and ecology, instead of just exploiting it.
 
-<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/samatvartha/4.png" alt="4"/>
+<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/samatvartha/4.jpg" alt="4"/>
 
 #### Tenets for a Solar-punk Indic/accelerationism
 
@@ -89,7 +89,7 @@ One such potential basket is listed below, with a subtle playful retrofitting in
 - Gini's coefficient // to Include (One Family)
 - Doughnut metrics extension // to Sustain (One Future)
 
-<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/samatvartha/5.png" alt="5"/>
+<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/samatvartha/5.jpg" alt="5"/>
 
 Ultimately, money is nothing but an accounting system for social IOUs. All the economic policies - be it fiscal or monetary - thus do not exist in their silo. A policy is not bad in itself, how it interplays with existing boundary conditions and the meta-psychological incentives will decide if it will end up being bad or not. Therefore, while GDP per capita will tell us about the average prosperity, Gini’s coefficient will ensure the averages are not too skewed in favor of power concentration. Doughnut metrics help us internalize the cost of externalities. All three together ensure prosperity, inclusivity and sustainability in simple clear-cut abstractions to apply even simpler taxation - aka fees to operate the civilization without primordial violence and private property operations. 
 
