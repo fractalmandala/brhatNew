@@ -61,7 +61,7 @@ The *Saṃhitās* deal with bhakti (devotion); the *Brāhmaṇas* with karma (wo
 
 The *Upaniṣads *(or Vedānta, the final portion of the Vedas) form the *Jñāna-kāṇḍa — *treatises on the philosophical aspects and deep discussions on the body, mind, soul, nature, consciousness, and the universe. Of the several Upaniṣads (at least 108 of them), ten are most important: *Īśa, Kena, Kaṭha, Praśna, Muṇḍaka, Māṇḍūkya, Taittirīya, Aitareya, Chandogya, and Brhadāraṇyaka.*
 
-Loosely, the Vedic divisions also associate with the āśramas or stages of life: the* Saṃhitās *correspond* to brahmacarya (student) *āśrama; the *Brāhmaṇas *correspond* to gṛhasta (householder) *āśrama; *the Āraṇyakas *correspond to* vānaprastha (forest dweller) *āśrama*;* and the *Upaniṣads *correspond to* saṃnyāsa (the ascetic) *āśrama.  
+Loosely, the Vedic divisions also associate with the āśramas or stages of life: the* Saṃhitās *correspond*  to brahmacarya (student) *āśrama; the *Brāhmaṇas *correspond*  to gṛhasta (householder) *āśrama; *the Āraṇyakas *correspond  to*  vānaprastha (forest dweller) *āśrama*;* and the *Upaniṣads *correspond to*  saṃnyāsa (the ascetic) *āśrama.  
 
 #### The Core Vedic Texts - (1) Upavedas
 
