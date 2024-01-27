@@ -64,3 +64,16 @@ export interface Apte {
 	roman: string;
 	meaning: string;
 }
+
+export interface DhitiPost {
+  title: string;
+  linkpath: string;
+  category?: string;
+  tags?: string[];
+  author?: string[];
+}
+
+export interface SingleTag {
+  tag: string;
+  count: number;
+}
