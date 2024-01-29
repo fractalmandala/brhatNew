@@ -187,7 +187,7 @@ Hence, perception is nothing more than the removal of the covering of maya over 
 17.	THE IMPERISHABLE SEED: How Hindu Mathematics Changed the World and Why this History was Erased (2023) by Bhaskar Kamble and edited by Sankrant Sanu.
 
 18.	INTRODUCTION TO INDIAN KNOWLEDGE SYSTEM: CONCEPTS AND APPLICATIONS (2022) by B. Mahadevan, Nagendra Pavana, Vinayak Rajat Bhat
-19.	
+	
 <style lang="sass">
 .imageclass
 	object-fit: contain
