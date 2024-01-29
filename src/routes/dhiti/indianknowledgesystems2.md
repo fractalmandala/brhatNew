@@ -1,5 +1,5 @@
 ---
-title: Indian Knowledge Systems: An Overview | Part 2
+title: Indian Knowledge Systems | An Overview | Part 2
 author:
   - Dr. Pingali Gopal
 category: Indian Knowledge Systems
