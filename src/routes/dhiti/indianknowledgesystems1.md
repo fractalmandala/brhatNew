@@ -35,6 +35,8 @@ English education is perhaps a major factor in generating and perpetuating this 
 > A single generation of English education suffices to break the threads of tradition and to create a nondescript and superficial being deprived of all roots—a sort of intellectual pariah who does not belong to the East or the West, the past or the future. The greatest danger for India is the loss of her spiritual integrity. Of all Indian problems, the educational is the most difficult and most tragic.
 <cite>The Broad Classification of Indian Texts</cite>
 
+<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/pingaliiks/1.webp" alt="classification"/>
+
 Apart from the non-orthodox Buddhist and Jain corpus of texts, the orthodox Sanātanī texts divide broadly into the *Śruti* (that which is heard) and *Smṛti* (that which is remembered). The Vedas constitute an important part of Indian culture and civilization, but they are by no means the only one. Also, a belief or disbelief in the Vedas does not in any way reflect the status of being a Hindu or belonging to the Indian civilizational heritage.
 
 Five groups of texts — *Veda, Upaveda, Vedāṅga, Purāṇa,* and *Darśana* — lay the foundation for the knowledge and wisdom of our heritage and cover the concrete and the abstract, the so-called 'secular' and the ‘spiritual.’ The separation of the sacred and the profane makes no sense in Indian traditions. 
@@ -63,7 +65,11 @@ The *Upaniṣads *(or Vedānta, the final portion of the Vedas) form the *Jñān
 
 Loosely, the Vedic divisions also associate with the āśramas or stages of life: the *Saṃhitās* correspond to *brahmacarya* (student) āśrama; the *Brāhmaṇas* correspond to *gṛhasta* (householder) āśrama; the *Āraṇyakas* correspond to *vānaprastha* (forest dweller) āśrama; and the *Upaniṣads* correspond to *saṃnyāsa* (the ascetic) āśrama.  
 
+<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/pingaliiks/2.webp" alt="table"/>
+
 #### The Core Vedic Texts - (1) Upavedas
+
+<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/pingaliiks/3.webp" alt="upavedas"/>
 
 *Upavedas* (upa, or 'secondary' to Vedas) are bodies of *aparā* (material) knowledge, though still intimately linked to *parā* (transcendental) insights. Each Upaveda corresponds to one Veda. The Upavedas and Vedas also support the classical concept of *Purusartha*, the four objectives of life: *dharma *(duty), *artha* (material wealth), *kāma* (intellectual desires), and *mokṣa* (liberation, freedom).
 
@@ -91,6 +97,8 @@ Some scholars include *Dhanurveda*, the science of archery, as one of the Upaved
 
 #### The Core Vedic Texts - (2) Vedāṅgas
 
+<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/pingaliiks/4.webp" alt="vedangas"/>
+
 Vedāṅgas are the limbs (*aṅgas*) of knowledge (*veda*). They are the six auxiliary disciplines essential to the study of the Vedas and include the following:
 
 * Śikṣā (phonetics)
@@ -115,6 +123,8 @@ There are four sub-groups in the Jyotiṣa group: *Jyotiṣa (astronomical obser
 *Kalpa*, the study of rituals, covers a vast expanse of knowledge, including ethics, sociology, politics, traditions, and worship.
 
 #### Sub-groups of Kalpas
+
+<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/pingaliiks/5.webp" alt="kalpas"/>
 
 Kalpa texts have again four main sub-groups of texts:
 
