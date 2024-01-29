@@ -126,7 +126,7 @@ _Nyāya_ is not Naïve Realism. This is a caricature that has no bearing on Nyā
 
 #### The Perceptual Process in Indian Traditions
 
-<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/pingaliiks/selfasground.png" alt="1"/>
+<img src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/pingaliiks/selfasground.webp" alt="selfasgroud"/>
 
 At the most primal level, perception is by the removal of the covering of maya over the individual self. In Advaita Vedānta, the covering of maya over the self is _avidya_ or nescience. The removal of the nescience to allow the conscious light of the self to reveal external objects constitutes perception. 
 
