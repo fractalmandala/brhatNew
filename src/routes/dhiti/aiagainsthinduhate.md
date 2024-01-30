@@ -14,7 +14,7 @@ words: "1291"
 
 #### Recognizing the Global Challenge
 
-In an era where digital communication transcends geographical boundaries, the Hindu community globally faces a growing challenge – the rise of anti-Hindu sentiments. Manifesting through misinformation, stereotypes, and online hate speech, these sentiments not only distort the understanding of Hinduism but also propagate biases and incite potential violence [1]. Artificial Intelligence (AI) emerges as a beacon of hope to identify, analyze, and counter these biases effectively. This article delves into how AI can be a powerful ally in this global fight [2].
+In an era where digital communication transcends geographical boundaries, the Hindu community globally faces a growing challenge – the rise of anti-Hindu sentiments. Manifesting through misinformation, stereotypes, and online hate speech, these sentiments not only distort the understanding of Hinduism but also propagate biases and incite potential violence<sup>1</sup>. Artificial Intelligence (AI) emerges as a beacon of hope to identify, analyze, and counter these biases effectively. This article delves into how AI can be a powerful ally in this global fight<sup>2</sup>.
 
 #### The Potential of AI in countering anti-Hindu hate
 
@@ -30,9 +30,9 @@ The most transformative phase in AI's evolution has been the development of deep
 
 Today, AI is a sophisticated tool, capable of absorbing vast amounts of information, recognizing intricate patterns, and making informed decisions. This evolution from basic algorithms to advanced AI reflects the remarkable journey of growth and innovation, opening new frontiers in various fields, including the realm of social and cultural discourse.
 
-The evolutionary journey of AI [3], culminating in its ability to process complex language and identify patterns, paves the way for its critical role in combating anti-Hindu hate.
+The evolutionary journey of AI<sup>3</sup>, culminating in its ability to process complex language and identify patterns, paves the way for its critical role in combating anti-Hindu hate.
 
-hindumisia.ai leveraged improved capabilities in AI, in particular the concept called _Language Model_, to deploy the first ever _The Global Anti-Hindu Scorecard_ in March 2022 [4].
+hindumisia.ai leveraged improved capabilities in AI, in particular the concept called _Language Model_, to deploy the first ever _The Global Anti-Hindu Scorecard_ in March 2022<sup>4</sup>.
 
 #### Strategic Approach to AI
 
@@ -61,7 +61,7 @@ In line with the outlined strategic priorities, we must consider several AI-driv
 
 #### Challenges and Ethical Considerations in AI Deployment
 
-While AI offers significant potential, its deployment is not without challenges. Issues such as volunteerism, funding, and collaboration can limit the scale and effectiveness of initiatives. Tools such as games require multimillion-dollar investments. Ethical considerations, including privacy concerns, the risk of disinformation must be carefully navigated to ensure the responsible use of AI. Balancing technological advancement with ethical considerations is paramount in maintaining the efficacy and trustworthiness of AI-driven initiatives [5].
+While AI offers significant potential, its deployment is not without challenges. Issues such as volunteerism, funding, and collaboration can limit the scale and effectiveness of initiatives. Tools such as games require multimillion-dollar investments. Ethical considerations, including privacy concerns, the risk of disinformation must be carefully navigated to ensure the responsible use of AI. Balancing technological advancement with ethical considerations is paramount in maintaining the efficacy and trustworthiness of AI-driven initiatives<sup>5</sup>.
 
 #### Conclusion
 
