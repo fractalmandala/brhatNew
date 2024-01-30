@@ -67,7 +67,7 @@ While AI offers significant potential, its deployment is not without challenges.
 
 In harnessing AI to counter global anti-Hindu sentiments, we are at the nexus of technology and tradition. This journey is not just about leveraging technological prowess; it is deeply interwoven with cultural understanding and ethical mindfulness. By combining AI's capabilities with an understanding of cultural nuances, we can effectively challenge misconceptions and foster a more accurate understanding of Hindu Dharma. This endeavor transcends mere technological application; it's a step towards a world that values pluralism, encourages respectful dialogue, and promotes harmony across different cultures and beliefs.
 
-_The author is founder of hindumisia.ai, an AI-based platform to counter anti-Hindu hate. He tweets at[ @cm_ram23](https://twitter.com/cm_ram23) and operates[ @hindumisia](https://twitter.com/hindumisia)._
+_The author is founder of hindumisia.ai, an AI-based platform to counter anti-Hindu hate. He tweets at [ @cm_ram23](https://twitter.com/cm_ram23) and operates [ @hindumisia](https://twitter.com/hindumisia)._
 
 _This article is based on author’s address at the World Hindu Congress 2023 held in Bangkok in November 2023._
 
