@@ -72,7 +72,7 @@ In traditional Indian philosophy, assertions about the objects of the world are 
 
 #### Yoga and Knowledge
 
-Yoga _is obtaining knowledge of the immortal Self, which frees man from the shackles of prakṛti. All orthodox and non-orthodox schools (except Cārvāka) give importance to_ Yoga _and meditation in their schemes of things. The first five aṅgas (parts) of Yoga are the preparations for the higher states: _yama, niyama, āsana, prāṇāyāma, and pratyāhāra_. The first two (_yama and niyama_) are for control of desires and emotions; the next two (_āsana and prāṇāyāma_) eliminate disturbances from the physical body. _Pratyāhāra_ detaches the sense organs from the mind, thus cutting the external world and its impressions from the mind.
+Yoga _is obtaining knowledge of the immortal Self, which frees man from the shackles of prakṛti. All orthodox and non-orthodox schools (except Cārvāka) give importance to_ Yoga and meditation in their schemes of things. The first five aṅgas (parts) of Yoga are the preparations for the higher states: _yama, niyama, āsana, prāṇāyāma, and pratyāhāra_. The first two (_yama and niyama_) are for control of desires and emotions; the next two (_āsana and prāṇāyāma_) eliminate disturbances from the physical body. _Pratyāhāra_ detaches the sense organs from the mind, thus cutting the external world and its impressions from the mind.
 
 The last three aṅgas after this preparation are _dhāraṇā, dhyāna, and samādhi_. Dhāraṇā is confining the mind within a limited mental area; dhyāna is uninterrupted flow or contemplation towards an object of meditation; and the final state is samādhi, where there is consciousness only of the object of meditation and not of the mind. The mind dissolves into the final state of samādhi. These last three together constitute the _samayama_, and this can be performed on any object.
 
@@ -141,7 +141,7 @@ In science, we begin with a proposition (a statement) that seeks to fit the fact
 
 When discussing _Vedānta_, we deal with a _‘parā vidyā’_ in sharp contrast to every other science or discipline in the world grouped under the name of _‘aparā vidyā’_. Science endeavors to shed light on, among other things, how this universe originated and how life in the universe originated. _Vedānta_ seeks to reveal the knowledge of a Truth by which billions and billions of cycles of creation and destruction are at once dissolved by an individual’s Self. 
 
-##### When we seek to know the ‘truths’ revealed by science, we use elaborately constructed tools, but when it comes to the Supreme Knowledge of _Vedānta_, _why do we become so blasé that we feel free to disregard the methods that it advocates? Śrī Chittaranjan Naik questions whether such a predisposition on our part can be called ‘rational’?
+##### When we seek to know the ‘truths’ revealed by science, we use elaborately constructed tools, but when it comes to the Supreme Knowledge of _Vedānta_, why do we become so blasé that we feel free to disregard the methods that it advocates? Śrī Chittaranjan Naik questions whether such a predisposition on our part can be called ‘rational’?
 
 #### The Trap Of Maya 
 
