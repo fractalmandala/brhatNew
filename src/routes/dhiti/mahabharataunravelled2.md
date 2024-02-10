@@ -1,5 +1,5 @@
 ---
-title: Book Review | Mahabharata Unravelled II - The Dharma Discourses
+title: Book Review | Mahabharata Unravelled II
 author:
   - Anshuman Panda
 category: Dharma Today
