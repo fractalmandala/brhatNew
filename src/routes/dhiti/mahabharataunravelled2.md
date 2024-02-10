@@ -37,7 +37,7 @@ The Mahābhārata is in a way an encyclopedia, a gateway for understanding what 
 
 >kṣurasya dhārā niśitā duratyayā durgaṃ pathastat…  
 >For sharp as the razor’s edge is the path and hard to traverse…   
-><cite>Kaṭhopaniṣad)</cite>
+><cite>Kaṭhopaniṣad</cite>
 
 But the countless examples of the righteous adhering to dharma, and the fall of the unrighteous, provides solace to the seeker’s mind. 
 
