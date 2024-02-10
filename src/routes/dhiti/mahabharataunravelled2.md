@@ -1,12 +1,12 @@
 ---
-title: "Book Review | Mahabharata Unravelled II - The Dharma Discourses"
+title: Book Review | Mahabharata Unravelled II - The Dharma Discourses
 author:
   - Anshuman Panda
 category: Dharma Today
 tags:
   - reviews
   - dharma
-excerpt: 'Mahabharata Unravelled II: The Dharma Discourses' explores the essence of dharmaśāstras through insightful narratives and conversations within the Mahābhārata, offering readers a profound understanding of timeless wisdom and ethical complexities.
+excerpt: Mahabharata Unravelled II explores the essence of dharmaśāstras through insightful narratives and conversations within the Mahābhārata, offering readers a profound understanding of timeless wisdom and ethical complexities.
 date: 2024-02-10
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/mahabharataunravelled2.webp
 words: "710"
