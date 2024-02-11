@@ -1,0 +1,48 @@
+---
+title: Gudiya Sambhrama 2024
+author:
+  - Kavita Krishna Meegama 
+category: Dharma Today
+tags:
+  - temple
+  - festivals
+  - tradition
+excerpt: A Vibrant Celebration Reigniting Spiritual Essence through Temple Festivities in Bengaluru.
+date: 2024-02-11
+image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/gudiyasambhrama2024.webp
+words: "1476"
+---
+
+#### Why a Gudiya Sambhrama?
+
+Because people say, ‘I am spiritual not religious’, or ‘Religion is irrational’ and so on. **But, one cannot be spiritual without being religious! _Religion concretizes the philosophy of any belief system and also its spiritual path._** Dissing one and preferring another is not to actually understand either. 
+
+When people say they are spiritual but not religious, what does this statement actually mean? It ought to mean that such people are keen on knowing the essence of who they actually are, and are not satisfied by superfluous shenanigans. Their minds ought to crave for a deeper engagement with the source i.e. the spirit. Unfortunately, this sustained research into the heart of the matter does not take place, and many end up simply dismissing all customs, rituals, rites, rites of passage, in fact the whole culture that celebrates this ‘spirit’, as superstitious or unnecessary.   
+This source that we are talking about: some call it divine, while some do not hesitate to label that core as Bhagavan or God, who is everywhere, in everything. And to celebrate this truth is the mark of a spiritual person.
+
+Who and What that ‘God’ is, is a matter of debate in today’s world. Not so for practising Hindus who are keenly aware that their core is within themselves, that this individual-core-self is nothing but a manifestation of that absolute-truth, the total Self, which connects us all in a very subtle manner. Not until we make a cognitive shift from the gross to the subtle, from the name-form, word-meaning, to the essence that we call ‘spirit’, can we actually appreciate the word ‘spiritual’.  Until then it is a mere mouthing of words and a lot of laziness masquerading as intelligence and logic. 
+
+Fortunately despite the naysayers, there are many concrete ways for the believers, the ones who do not doubt that they carry the divine essence within and that there is divine manifestation all around, to connect with this core, with this absolute-truth-Self. One such is the Hindu Temple - a mandir, a kovil, or a guḍi in Kannada and Telugu. To bring back the youth to the kernel of their culture, to evoke empathy in them for their ethos, to take them on a journey to the nub and nucleus of sanatana dharma, this whole idea of [Gudiya Sambhrama ](https://heritageparampara.org/gudiya/)or Temple Festivities, was conceived in Bengaluru, Karnataka 15 years ago.
+
+Ensuring a riveting start to Gudiya Sambhrama 2024 was Rukmini Vijaykumar. To watch her dance is to be lost in the beauty of emotion and precision. A consummate performer who evokes the precise rasa in her audience with dexterity of her bhava, mudra, natya and nritta, Rukmini was [Meera](https://twitter.com/AparnaMSridhar/status/1750734261743923281) personified in this new offering of hers. Her choreography using the sacred space of the temple, its steps, and its surroundings brought in settings of yore to the eager audience of today.
+
+What this fortnight long festival offers is unique and has been honed over decades of experience catering to the changing needs of both the devotees, as well as the social context. For the most part there are offerings of classical dance, music, workshops on flower garlands, floor designs, sacred plants, displays of art, concerts, public talks, textile shows and temple walks. 
+
+This year the theme was Srishti Sthiti Laya - Creation, Sustenance, Dissolution, and it took off with Nritya Kainkaryam in many of Bengaluru’s temples on Jan 20th 2024. Offering dance and music to our deities is part of the elaborate sixteen step worship which has now been relegated to a quick lighting of the diya and a quicker chanting spree, before being done with the ritual. Ever since the 1947 Madras (prevention of dedication) Devadasi Act, which declared temple dancers to be ‘illegal’, this offering of dance to our deities has taken a severe beating. It is only with the stupendous efforts of programs such as Gudiya Sambhrama that we even get to watch Indian Classical Dance in its original space, where it is supposed to be performed and relished; not as much on a proscenium stage. 
+
+The guiding force behind this joyous celebration is none other than Smt. **Vijayalakshmi Vijayakumar**, Director, [Centre for Soft Power](https://www.csp.indica.in/), an [IndicA](https://indica.in/) vertical. She along with few others formed the ‘[Heritage Trust](https://heritageparampara.org/)’ a not-for-profit in 1994; _for the promotion, preservation and dissemination of our heritage and culture through seminars, workshops and cultural festivals to bring us closer to our roots_. Vijji Akka, as she is fondly called by her close associates, is also the author of Forever There, a historical fantasy novel set in Varanasi. Watching her make this spectacular week possible (with another week to go in February), was like watching a very successful CEO of a Fortune 500 company in action. There were roadblocks big and small at every step despite meticulous planning, and Akka bashed on regardless, all the while shimmering in her silks and diamonds with an engaging smile. 
+
+I had the good fortune of being in Bengaluru on the 21st of January and decided to participate in the [Devakula Yatra](https://twitter.com/AparnaMSridhar/status/1748966152666292634) from the Sivabalayogi Ashrama in J.P.Nagar to Ragigudda Anjaneyaswamy Temple in Jayanagar. This was lead by the eloquence of Shri. Vinay Varanasi and mellifluous singing by Kum. Spoorthy Rao. Participants were asked to wear a shade of blue to commemorate, _“......Sri Rama's coronation in Ayodhya Kandam when other kings endorse Rama and tell Dasharatha that his son has the colour of a dark blue lotus flower…”_
+
+To walk along with a group of 200 odd participants chanting Rama’s name just a day before his return to Ayodhya, to his rightful birthplace, was very euphoric. Chants of ‘Jai Shree Rama’ enveloped  the early morning air, while the roads we traversed on were decorated with intricate rangolis, the skies were festooned with orange flags. The mood was festive, and the small encumbrances of crossing roads, giving way to cars, or even pebbles on the path (for the barefooted like us), did nothing to take away from the exhilarating experience of a nagara sankirtana. 
+
+On the 28th of January there was a presentation by Shri. Sushant Bharti, an architect and artist, on Hindu Temples titled; ‘Nirakara to Sakara’, which was scintillating to say the least. He took us on a journey of the Odisha temples and explained their architecture to us in great detail and with greater flair. The audience which kept growing over the course of his two hour presentation ended up wanting more when it concluded. Sushantji kept us all engaged with his interactive style and storytelling. He taught us how to recognize a temple’s main deity by looking at the lintels, and also shared with us rare photographs of temple ruins taken by him during his travels in Odisha. When some photos of grass fields looked incongruous with the rest of the temple photos, he informed us to our surprise  that these fields were temple ponds in their earlier lifetimes. How did he know? Well, traveling and talking to locals help one to get the right information, as well as deciphering inscriptions on pillars in the vicinity which tell the actual tale. All in all it was a very good learning exposure and immersion for all of us in the audience. 
+
+The January week was curated with such gems one after another, all of them being held at the very welcoming Devagiri Devasthana of Shri. Venkateshwara in Banashankari: Sama Veda recitation; Upanyasam by Dr. Rangan ji and also by Shri. Dushyant Shridhar ji; lecture demonstration and dance performance by Odissi dancer and bhakta of Jagannatha of Puri, [Rahul Acharya ji](https://twitter.com/ArunimaGupta03/status/1751025415437869065); as also Kathak by the well-known duo Nirupama and Rajendra along with their famed ensemble, Bhakti Sangeet by Dr. Shubham Kulkarniji; music focused on Shri. Rama by the Trichur Brothers; Hasta Kala with Dr. Dhundurajaji; Shri. GS Sudhindraji, Chanting with Dr. Medhiniji; Traditional Board Games by Kavade Hive; showcase of Divya Varna the Indian Art Exhibition; and many more performances, all of which were  anchored ably by Harshita, a clinical psychologist and a student of puppetry. And there was another week of programs to go, chalked out in a different venue, from Feb 3rd to 11th at Hanumanthnagar!
+
+The future of our temple ecosystem is bright if we can pull off one such event in every major city and town, and bring back the original  glory of our temples, which were centres of learning, art, trade, and commerce apart from being religious and spiritual abodes. Hindu Temples were spaces where creative expression flowered to its fullest be it in sculpture, architecture, or the fine arts. 
+
+##### Temples are not simply religious places that our parents or grandparents go to, these are also spaces that are throbbing and thriving with energy and creativity which need the spirit of the youth to resurrect them in all their glory. 
+
+Read the immersive experience of last year's Gudiya Sambhrama 2023 [here ](https://www.brhat.in/dhiti/gudiyasambhrama).
+
