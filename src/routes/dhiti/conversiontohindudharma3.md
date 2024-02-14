@@ -26,7 +26,7 @@ Such questions are easy to ask, but the answers take time to form, and even long
 Once we got back to our respective cities, we continued to be in touch. We planned to meet up in person, but my plans to visit Kollam and Amritapuri did not come to fruition. Meanwhile Sugama ji fell ill. During her confinement, she texted me saying that she would wish to write for our blog and answer all my queries, and maybe that could inspire one or two youngsters to give Vedanta a chance. Here is her account, and I am forever indebted to her for trusting Brhat with her story.
 
 
-#### Sugamaji’s journey into Sanatana Dharma ,(in her words)
+#### Sugamaji’s journey into Sanatana Dharma (in her words)
 
 My mother was pregnant at 17 and no one in our village knew who my father was. 
 
