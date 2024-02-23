@@ -129,6 +129,9 @@
 		{/if}
 		-->
   <h6 class="title">
+   <a href="/newsletter/7" style="color: #fe4a49">Read </a> Issue 7.1 - January '24
+  </h6>
+  <h6 class="title">
    <a href="/newsletter/6" style="color: #fe4a49">Read </a> Issue 6.1 - December '23
   </h6>
 		<h6 class="title">
