@@ -43,6 +43,7 @@
 				<a href="/drashta/course/ancientindianhistory">Ancient Indian History</a>
 				<a href="/drashta/course/kavyashastras">Introduction to Kāvyaśāstras</a>
 				<a href="/drashta/course/ayurveda">Introduction to Āyurveda</a>
+				<a href="/drashta/course/hindumathematics">History of Hindu Mathematics</a>
 				<a href="/bhairavadharana">Bhairava Dhāraṇā</a>
         <a href="/drashta/course/HI2024">Hindu Iconography 2</a>
 			</div>
