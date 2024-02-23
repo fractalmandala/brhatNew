@@ -38,13 +38,13 @@ In Part 1, we went to a fruit shop to demonstrate the concept of optimal orderin
    </td>
    <td>Book 5
    </td>
-   <td>…
+   <td>...
    </td>
-   <td>…
+   <td>...
    </td>
-   <td>… and so
+   <td>... and so
    </td>
-   <td>on… 
+   <td>on... 
    </td>
   </tr>
 </table>
@@ -75,7 +75,7 @@ AACC
 AAACCC 
 AAAACCCC 
 AAAAACCCCC** 
-…upto 10,000 iterations. 
+...upto 10,000 iterations. 
 
 You might ask initially, what is the point of this exercise? I have chosen a very simple problem to convey a point here, even though it might not seem that practically relevant.
 
@@ -124,7 +124,7 @@ Remember at the time of Pāṇini, the Vedic language was already becoming archa
 
 >A word is a legitimate Saṃskṛta word if and only if it can be derived from the repeated and correct application of some subset of my sūtras.
 
-In other words, he is giving us an algorithm (a generation process, like we saw for the language consisting of the words {AC, AACC, AAACCC, …}) but for the natural language of Saṃskṛta consisting of all Saṃskṛta words! Pāṇini’s sūtras are the transformation steps like seen in the simple A&C language like “ Rewrite **S** => A**S**C” or “Rewrite **S** => **B**” or “Erase **B**”. 
+In other words, he is giving us an algorithm (a generation process, like we saw for the language consisting of the words {AC, AACC, AAACCC, ...}) but for the natural language of Saṃskṛta consisting of all Saṃskṛta words! Pāṇini’s sūtras are the transformation steps like seen in the simple A&C language like “ Rewrite **S** => A**S**C” or “Rewrite **S** => **B**” or “Erase **B**”. 
 
 This technique of using tags or non-terminals or auxiliary symbols was rediscovered in Europe only in the last century.
 
@@ -335,13 +335,13 @@ Remember what we did in the computer science problem, where we had to generate a
 
 For brevity’s sake, I shall state only some of the important sūtras regarding this and I shall not state the original Saṃskṛta sūtra of Pāṇini; because not all of you may be familiar with Saṃskṛta, and also lot of meta-language and contextual issues have to be broken down. So, I shall state only what the sūtras convey in plain English after their decoding. 
 
->1.3.2 In any input data, a nasal-vowel (अनुनासिकः) is a non-terminal (इत्) letter **except in….**
+>1.3.2 In any input data, a nasal-vowel (अनुनासिकः) is a non-terminal (इत्) letter **except in...**
 
 NOTE: A nasal vowel is sometimes denoted in writing, by a dot above the letter with a moon shaped curve. Eg. अँ is the nasal version of अ. 
 
-> 1.3.3 A final consonant in any input data is a non-terminal (इत्) letter **except in….(1.3.4)**
+> 1.3.3 A final consonant in any input data is a non-terminal (इत्) letter **except in...(1.3.4)**
 
-So, here we see that the final consonant of any input data (Śivasūtras, roots, prefixes, suffixes, etc…) is non-terminal; and has to be remembered but omitted, for linguistic purposes. Also, a vowel in the input data is a non-terminal if it is a nasal vowel. But the rule has some exceptions (as stated in bold) and these exceptions are what are spelled out in the sūtra 1.3.4. But I shall not go through this here in this introductory level article. 
+So, here we see that the final consonant of any input data (Śivasūtras, roots, prefixes, suffixes, etc...) is non-terminal; and has to be remembered but omitted, for linguistic purposes. Also, a vowel in the input data is a non-terminal if it is a nasal vowel. But the rule has some exceptions (as stated in bold) and these exceptions are what are spelled out in the sūtra 1.3.4. But I shall not go through this here in this introductory level article. 
 
 > 1.3.5 An initial syllable that is either of ञि, टु, डु in any input data is a non-terminal (इत्) letter
 
