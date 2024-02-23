@@ -28,24 +28,24 @@ In Part 1, we went to a fruit shop to demonstrate the concept of optimal orderin
 
 <table>
   <tr>
-   <td>Book 1
-   </td>
-   <td>Book 2
-   </td>
-   <td>Book 3
-   </td>
-   <td>Book 4
-   </td>
-   <td>Book 5
-   </td>
-   <td>...
-   </td>
-   <td>...
-   </td>
-   <td>... and so
-   </td>
-   <td>on... 
-   </td>
+    <td>Book 1
+    </td>
+    <td>Book 2
+    </td>
+    <td>Book 3
+    </td>
+    <td>Book 4
+    </td>
+    <td>Book 5
+    </td>
+    <td>...
+    </td>
+    <td>...
+    </td>
+    <td>... and so
+    </td>
+    <td>on... 
+    </td>
   </tr>
 </table>
 
@@ -143,11 +143,11 @@ For that, let us look at some Saṃskṛta words with their meanings:
 
 करो<span style="text-decoration:underline;">ति</span> = he/she/it does 
 
-सर<span style="text-decoration:underline;">ति</span>   = he/she/it flows
+सर<span style="text-decoration:underline;">ति</span> = he/she/it flows
 
-चल<span style="text-decoration:underline;">ति</span>  = he/she/it moves or walks
+चल<span style="text-decoration:underline;">ति</span> = he/she/it moves or walks
 
-ए<span style="text-decoration:underline;">ति</span>     = he/she/it goes
+ए<span style="text-decoration:underline;">ति</span> = he/she/it goes
 
 बोध<span style="text-decoration:underline;">ति</span> = he/she/it awakens
 
@@ -162,62 +162,55 @@ Let us change one of these grammatical aspects and we will see the endings chang
 
 Example: Consider the word चल<span style="text-decoration:underline;">ति</span> which is a present indicative active 3rd person singular form of the verb. Let’s see how the endings change when any of these details above change - the factor that is changing is highlighted in yellow. 
 
-- चल<span style="text-decoration:underline;">ति</span>     =_he/she/it_ **moves** (present, indicative, active, 3rd person, singular)
+- चल<span style="text-decoration:underline;">ति</span> =_he/she/it_ **moves** (present, indicative, active, 3rd person, singular)
 - <span style="text-decoration:underline;">अ</span>चल<span style="text-decoration:underline;">त्</span>   = _he/she/it_ **moved** (<span style="text-decoration:underline;">past</span>, indicative, active, 3rd person, singular)
-- चल<span style="text-decoration:underline;">तु</span>      = _he/she/it_ **should move** (present, <span style="text-decoration:underline;">command</span>, active, 3rd person, singular)
-- चल्य<span style="text-decoration:underline;">ते</span>     = _he/she/it_ **is moved** (present, indicative, <span style="text-decoration:underline;">passive</span>, 3rd person, singular)
-- चल<span style="text-decoration:underline;">सि</span>     = _you [singular]_ **move** (present, indicative, active, <span style="text-decoration:underline;">2nd person</span>, singular)
-- चल<span style="text-decoration:underline;">न्ति</span>    = _they_ **move** (present, indicative, active, 3rd person, <span style="text-decoration:underline;">plural</span>)
+- चल<span style="text-decoration:underline;">तु</span> = _he/she/it_ **should move** (present, <span style="text-decoration:underline;">command</span>, active, 3rd person, singular)
+- चल्य<span style="text-decoration:underline;">ते</span> = _he/she/it_ **is moved** (present, indicative, <span style="text-decoration:underline;">passive</span>, 3rd person, singular)
+- चल<span style="text-decoration:underline;">सि</span> = _you [singular]_ **move** (present, indicative, active, <span style="text-decoration:underline;">2nd person</span>, singular)
+- चल<span style="text-decoration:underline;">न्ति</span> = _they_ **move** (present, indicative, active, 3rd person, <span style="text-decoration:underline;">plural</span>)
 
 So we see that the core part of the verb, which conveys the meaning of moving, is the part “**चल्**”. We see that as this part is the barest minimum part which conveys walking - all other endings that come after it (called suffixes) or before it (called prefixes) convey grammatical information like tense, mood, voice, person and number of the subject. Now, let us take some more words for comparison. I have bolded the main part of the word (excluding the prefixes and suffixes) for each word.
 
-
 <table>
   <tr>
-   <td>करोति = does (<strong>कर्</strong>)
-   </td>
-   <td>बोधति = awakens (<strong>बोध्</strong>)
-   </td>
-   <td> वेवेष्टि = pervades (<strong>वेष्</strong>)
-   </td>
-   <td>चलति= moves (<strong>चल्</strong>)
-   </td>
+    <td>करोति = does (<strong>कर्</strong>)
+    </td>
+    <td>बोधति = awakens (<strong>बोध्</strong>)
+    </td>
+    <td> वेवेष्टि = pervades (<strong>वेष्</strong>)
+    </td>
+    <td>चलति= moves (<strong>चल्</strong>)
+    </td>
   </tr>
   <tr>
-   <td>कृतः = done (<strong>कृ</strong>)
-   </td>
-   <td>बुद्धः* = awakened (<strong>बुध्</strong>)
-   </td>
-   <td>विष्टः = pervaded (<strong>विष्</strong>)
-   </td>
-   <td>चलितः = moved (<strong>चल्</strong>)
-   </td>
+    <td>कृतः = done (<strong>कृ</strong>)
+    </td>
+    <td>बुद्धः* = awakened (<strong>बुध्</strong>)
+    </td>
+    <td>विष्टः = pervaded (<strong>विष्</strong>)
+    </td>
+    <td>चलितः = moved (<strong>चल्</strong>)
+    </td>
   </tr>
   <tr>
-   <td>कारणम् = means of  
-<p>
-                doing (<strong>कार्</strong>)  
-   </td>
-   <td>बौद्धः = Buddhist (follower of a Buddha)
-<p>
-(<strong>बौध्</strong>)
-   </td>
-   <td>वैष्णवः = follower of the pervader विष्णुः  (<strong>वैष्</strong>)
-   </td>
-   <td>चालकः = mover(<strong>चाल्</strong>)
-<p>
-               
-   </td>
+    <td>कारणम् = means of doing (<strong>कार्</strong>)  
+    </td>
+    <td>बौद्धः = Buddhist (follower of a Buddha)(<strong>बौध्</strong>)
+    </td>
+    <td>वैष्णवः = follower of the pervader विष्णुः  (<strong>वैष्</strong>)
+    </td>
+    <td>चालकः = mover(<strong>चाल्</strong>)           
+    </td>
   </tr>
   <tr>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>विष्णुः = one who pervades (<strong>विष्</strong>)
-   </td>
-   <td>
-   </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>विष्णुः = one who pervades (<strong>विष्</strong>)
+    </td>
+    <td>
+    </td>
   </tr>
 </table>
 
@@ -225,10 +218,10 @@ So we see that the core part of the verb, which conveys the meaning of moving, i
 
 So, we see something happening here - that will be very familiar if you are a speaker of an Indo-Aryan language, but not at all if you are a speaker of a Dravidian language. What happens here is that the vowel inside the main part of various words conveying the same core meaning changes as it goes through various forms. The exact vowel changes are enumerated below:
 
-- चल् vs चाल्                     (c**a**l vs c**ā**l)
-- विष् vs वेष् vs वैष्            (v**i**ṣ vs v**e**ṣ vs v**ai**ṣ)
-- बुध् vs बोध् vs बौध्          (b**u**dh vs b**o**dh vs b**au**dh)
-- कृ vs कर् vs कार्            (k**ṛ** vs k**ar** vs k**ār**) 
+- चल् vs चाल् (c**a**l vs c**ā**l)
+- विष् vs वेष् vs वैष् (v**i**ṣ vs v**e**ṣ vs v**ai**ṣ)
+- बुध् vs बोध् vs बौध् (b**u**dh vs b**o**dh vs b**au**dh)
+- कृ vs कर् vs कार् (k**ṛ** vs k**ar** vs k**ār**) 
 
 The vowel changes inside the main root cover three varieties and they are:
 
@@ -288,18 +281,18 @@ So, we see that the main part of all the words with the same core meaning remain
 If you think this is too strange for you to handle, you have it in English and Hindi too. For example, consider the words
 
 - s**i**ng, s**a**ng, s**u**ng, s**o**ng  (core meaning: singing)
-- g**i**ve, g**a**ve                    (core meaning: giving)
-- m**a**n, m**e**n                     (core meaning: manliness)
-- dr**i**nk, dr**a**nk, dr**u**nk      (core meaning: drinking)
-- f**oo**d, f**ee**d, f**e**d              (core meaning: eating)
+- g**i**ve, g**a**ve (core meaning: giving)
+- m**a**n, m**e**n (core meaning: manliness)
+- dr**i**nk, dr**a**nk, dr**u**nk (core meaning: drinking)
+- f**oo**d, f**ee**d, f**e**d (core meaning: eating)
 
 So you see that English uses vowel changes inside the main part of the root to convey things like tense, number, and nominal derivation - just that you knew it all along, but didn’t know that you knew it! 
 
 The variation between low and medium grade for इ and उ vowels still survives in the modern Indo-Aryan languages; although the vṛddhi derivation has ceased to be productive in the modern languages, except in learnt Tatsāma borrowings from Saṃskṛta. Examples in Hindi are:
 
-- खुलना vs खोलना     (उ vs ओ) 
+- खुलना vs खोल (उ vs ओ) 
 
-- भेजना vs  भिजवाना   (इ vs ए)
+- भेजना vs भिजवाना (इ vs ए)
 
 In fact, some form of vowel alternation inside a single syllable main part survives, in some form or the other, in all Indo-European languages; and remains one of the key features in characterizing the relatedness of the languages of that family. This is known in technical Indo-European linguistics by the term **ablaut**. 
 
@@ -335,7 +328,7 @@ Remember what we did in the computer science problem, where we had to generate a
 
 For brevity’s sake, I shall state only some of the important sūtras regarding this and I shall not state the original Saṃskṛta sūtra of Pāṇini; because not all of you may be familiar with Saṃskṛta, and also lot of meta-language and contextual issues have to be broken down. So, I shall state only what the sūtras convey in plain English after their decoding. 
 
->1.3.2 In any input data, a nasal-vowel (अनुनासिकः) is a non-terminal (इत्) letter **except in...**
+> 1.3.2 In any input data, a nasal-vowel (अनुनासिकः) is a non-terminal (इत्) letter **except in...**
 
 NOTE: A nasal vowel is sometimes denoted in writing, by a dot above the letter with a moon shaped curve. Eg. अँ is the nasal version of अ. 
 
@@ -351,7 +344,7 @@ In this sūtra, we are told that in any input data, if the initial starting syll
 
 In this sūtra, we are told that only in suffixes (प्रत्ययs), the letter ष् - when it occurs initially in the suffix - is not a part of the suffix, and is just a tag non-terminal. 
 
->1.3.7 An initial consonant that is either of च्, छ्, ज्, झ्, ञ्, ट्, ठ्, ड्, ढ्, ण् at the beginning of a suffix only (प्रत्यय) is a non-terminal (इत्) letter
+> 1.3.7 An initial consonant that is either of च्, छ्, ज्, झ्, ञ्, ट्, ठ्, ड्, ढ्, ण् at the beginning of a suffix only (प्रत्यय) is a non-terminal (इत्) letter
 
 In this sūtra also, we are told that only in the case of suffixes, if the initial letter is among च्, छ्, ज्, झ्, ञ्, ट्, ठ्, ड्, ढ्, ण् - then it ceases to be a part of the suffix, and is a tag non-terminal letter. 
 
@@ -367,7 +360,7 @@ Eg. “deplete” (verb) => “deple**tion**”.
 
 But the suffix “**ic**” acts on not verbs but nouns to convert them into adjectives. 
 
-Eg. “atom” (noun) => “atom**ic**” .
+Eg. “atom” (noun) => “atom**ic**”.
 
 The suffix “**ness**” acts on adjectives and converts them into nouns.
 
@@ -386,17 +379,17 @@ You might ask, what do these tag letters convey? They convey quite a lot of info
 
 There are a lot of suffixes in English taken by lots of words. For example, take the suffix “**ion**” in English that converts a verb ending in a silent “e” into an abstract noun.
 
-dilute            => dilution
+dilute => dilution
 
-substitute     =>  substitution
+substitute => substitution
 
-deplete         =>  depletion
+deplete => depletion
 
 But not all verb roots in English that end in “e” can take this  “**ion**”. As examples, see below. Note that a * above a word indicates that it is not a word of the English language.
 
-take         => taktion* 
+take => taktion* 
 
-make       => maktion*
+make => maktion*
 
 measure  => measurtion*
 
