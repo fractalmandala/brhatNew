@@ -107,4 +107,10 @@
 		out:fly={{ duration: 100, delay: 0, x: 128, y: 0, easing: quintIn }}
 		href="/drashta/course/HI2024">Hindu Iconography 2</a
 	>
+	<a
+		class="insidelink"
+		in:fly={{ duration: 150, delay: 110, x: 128, y: 0, easing: quintIn }}
+		out:fly={{ duration: 100, delay: 0, x: 128, y: 0, easing: quintIn }}
+		href="/drashta/course/hindumathematics">History of Hindu Mathematics</a
+	>
 {/if}
