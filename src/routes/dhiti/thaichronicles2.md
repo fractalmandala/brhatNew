@@ -5,7 +5,7 @@ author:
 category: Svayambodha
 tags:
   - shortstory
-  - northeast
+  - southeastasia
   - devi
 excerpt: Rama is here, there, and everywhere in Ayutthaya, Thailand, a few miles north of Bangkok. Travel with Shodashi to learn more about the Thai Ayutthaya.
 date: 2024-02-27
