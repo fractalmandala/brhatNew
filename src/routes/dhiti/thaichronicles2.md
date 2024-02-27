@@ -10,6 +10,7 @@ tags:
 excerpt: Rama is here, there, and everywhere in Ayutthaya, Thailand, a few miles north of Bangkok. Travel with Shodashi to learn more about the Thai Ayutthaya.
 date: 2024-02-27
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/thaichronicles2/cover.webp
+words: "3567"
 ---
 This piece is Part 2 in a three-part short story series. You may read Part 1 of the Thai Chronicles [here](https://www.brhat.in/dhiti/thaichronicles).
 #### Ayutthaya - Phra Mae Thorani
@@ -17,7 +18,6 @@ This piece is Part 2 in a three-part short story series. You may read Part 1 of 
 According to Suresh Pal Giri, an Indian professor in Thailand, when Burmese soldiers overran this city (Ayutthaya) in the 18th century, a new King rose:
 
 >He called himself Rama I, established the city now known as Bangkok, wrote the epic Ramakien, which is Ramayana in the local language, making it the national epic, and got it painted as murals on the walls of the Temple of the Emerald Buddha, patronised by the royal family, it is believed. Though he was a Buddhist, the king established his royal credentials by identifying himself with Lord Ram, who was as much a hero for Buddhists of Southeast Asia as he was for the Hindus of South Asia.
-
 
 <img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/thaichronicles2/1.webp" alt="one"/>
 
@@ -37,7 +37,7 @@ Look now, she had gotten into reminiscing and she was still in January… she ha
 
 Finally... yes, yes there it is… hmm… Oh! Wow… I knew it, I knew it!! 
 
-<div class="rta-grid grid2 stay2">
+<div class="rta-grid grid2 stay2 colgap200">
 	<img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/thaichronicles2/2.webp" alt="two"/>
 	<img class="imageclass" src="https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/thaichronicles2/3.webp" alt="three"/>
 </div>
