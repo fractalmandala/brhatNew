@@ -7,7 +7,7 @@ date: "2024-01-15"
 image: https://rnfvzaelmwbbvfbsppir.supabase.co/storage/v1/object/public/brhatwebsite/05dhiti/thaichronicles/thaichronicles.webp
 tags: 
 - shortstory
-- northeast
+- southeastasia
 - devi
 ---
 
